@@ -3,727 +3,162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miss Video Ads • Gemini Mega Prompt System - Lớp Video Thực Chiến VietMac</title>
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&family=JetBrains+Mono:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50: '#f0f9ff',
-              100: '#e0f2fe',
-              400: '#38bdf8',
-              500: '#0ea5e9',
-              600: '#0284c7',
-              700: '#0369a1',
-              900: '#0c4a6e',
-              950: '#082f49',
-            },
-            gemini: {
-              blue: '#4285F4',
-              purple: '#9B51E0',
-              pink: '#EA4335',
-              glow: 'rgba(66, 133, 244, 0.25)'
-            }
-          },
-          fontFamily: {
-            sans: ['"Be Vietnam Pro"', 'sans-serif'],
-            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
-          }
-        }
-      }
-    }
-  </script>
-
+  <title>Miss Video Ads Mega Prompt</title>
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     body {
-      background-color: #070b14;
+      background-color: #0b0f19;
       color: #f1f5f9;
-      font-family: 'Be Vietnam Pro', sans-serif;
-      overflow-x: hidden;
-    }
-    
-    .gradient-gemini {
-      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 35%, #c084fc 70%, #f472b6 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .glass-card {
-      background: rgba(15, 23, 42, 0.78);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(56, 189, 248, 0.16);
-      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    .glass-card:hover {
-      border-color: rgba(56, 189, 248, 0.4);
-      box-shadow: 0 20px 40px -15px rgba(56, 189, 248, 0.2);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      overflow: hidden;
+      position: relative;
     }
 
-    .prompt-pre {
-      background: #090d16;
-      border: 1px solid #1e293b;
-      color: #cbd5e1;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 13px;
-      line-height: 1.68;
-      white-space: pre-wrap;
-      word-wrap: break-word;
-      tab-size: 2;
+    /* Background ambient glow */
+    .glow-orb {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(99, 102, 241, 0.08) 50%, transparent 70%);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 1;
     }
 
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar {
-      width: 7px;
-      height: 7px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #070b14;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #1e293b;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #38bdf8;
+    .container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
     }
 
-    .btn-pulse {
-      animation: pulse-glow 2.5s infinite;
-    }
-    @keyframes pulse-glow {
-      0%, 100% {
-        box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
-      }
-      50% {
-        box-shadow: 0 0 28px rgba(129, 140, 248, 0.65);
-      }
-    }
-
-    /* Active tab styling */
-    .tab-btn.active {
-      background: linear-gradient(135deg, #0284c7, #6366f1);
+    /* Giant Copy Button */
+    .copy-btn {
+      background: linear-gradient(135deg, #0284c7 0%, #4f46e5 50%, #9333ea 100%);
       color: #ffffff;
-      border-color: transparent;
-      box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 24px 48px;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      border-radius: 24px;
+      cursor: pointer;
+      box-shadow: 0 12px 35px -5px rgba(79, 70, 229, 0.5), 0 0 20px rgba(56, 189, 248, 0.3);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      user-select: none;
+      outline: none;
     }
 
-    /* Framework Radio Cards */
-    .fw-radio:checked + label {
-      border-color: #38bdf8;
-      background: rgba(14, 165, 233, 0.12);
-      box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+    .copy-btn:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 20px 45px -5px rgba(79, 70, 229, 0.65), 0 0 30px rgba(56, 189, 248, 0.5);
+      border-color: rgba(255, 255, 255, 0.4);
     }
 
-    /* Toast animation */
+    .copy-btn:active {
+      transform: translateY(1px) scale(0.98);
+    }
+
+    .copy-btn.copied {
+      background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+      box-shadow: 0 12px 35px -5px rgba(16, 185, 129, 0.6);
+    }
+
+    .icon-svg {
+      width: 28px;
+      height: 28px;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .sub-link {
+      color: #94a3b8;
+      font-size: 14px;
+      text-decoration: none;
+      transition: color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .sub-link:hover {
+      color: #38bdf8;
+    }
+
+    /* Toast notification */
     #toast {
-      transform: translateY(100px);
+      position: fixed;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid #10b981;
+      color: #34d399;
+      padding: 12px 24px;
+      border-radius: 9999px;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
       opacity: 0;
       transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      z-index: 99;
+      pointer-events: none;
     }
     #toast.show {
-      transform: translateY(0);
+      transform: translateX(-50%) translateY(0);
       opacity: 1;
     }
   </style>
 </head>
-<body class="min-h-screen relative selection:bg-brand-500 selection:text-white">
+<body>
 
-  <!-- Background Orbs -->
-  <div class="fixed top-0 left-1/4 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse"></div>
-  <div class="fixed bottom-10 right-1/4 w-[30rem] h-[30rem] bg-indigo-500/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
-  <div class="fixed top-1/3 right-10 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+  <div class="glow-orb"></div>
 
-  <!-- TOP NAVIGATION BAR -->
-  <nav class="sticky top-0 z-50 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-xl">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 via-indigo-500 to-fuchsia-500 p-0.5 flex items-center justify-center shadow-lg shadow-cyan-500/20">
-          <div class="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
-            <i data-lucide="sparkles" class="w-5 h-5 text-cyan-400"></i>
-          </div>
-        </div>
-        <div>
-          <span class="font-heading font-extrabold text-lg tracking-tight text-white flex items-center gap-2">
-            MISS VIDEO ADS <span class="text-xs px-2 py-0.5 rounded-full bg-cyan-950 border border-cyan-500/40 text-cyan-300 font-mono font-medium">EXTENSION CORE</span>
-          </span>
-          <p class="text-[11px] text-slate-400 font-medium">Trích xuất chính xác từ Miss Video Ads Extension • Lớp Video Thực Chiến VietMac</p>
-        </div>
-      </div>
+  <div class="container">
+    <button class="copy-btn" id="btn-copy" onclick="copyMegaPrompt()">
+      <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+      </svg>
+      <span id="btn-label">COPY MEGA PROMPT MISS VIDEO ADS</span>
+    </button>
 
-      <!-- Quick Actions -->
-      <div class="flex items-center gap-3">
-        <a href="#huong-dan" class="hidden sm:flex items-center gap-1.5 text-xs font-semibold text-slate-300 hover:text-cyan-400 px-3 py-2 rounded-lg hover:bg-slate-900 transition-colors">
-          <i data-lucide="compass" class="w-4 h-4 text-cyan-400"></i>
-          <span>Hướng dẫn 6 Bước</span>
-        </a>
-        <a href="https://gemini.google.com/app" target="_blank" rel="noopener noreferrer" 
-           class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white text-xs font-bold shadow-lg shadow-indigo-600/30 transition-all hover:scale-105 active:scale-95">
-          <span>Mở Google Gemini</span>
-          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-        </a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- MAIN CONTAINER -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
-
-    <!-- HERO SECTION -->
-    <header class="text-center space-y-5 pt-4">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-500/40 text-cyan-300 text-xs font-semibold uppercase tracking-wider shadow-inner">
-        <i data-lucide="cpu" class="w-3.5 h-3.5 text-amber-400"></i>
-        <span>MEGA PROMPT ENGINE • CHÍNH THỨC TỪ MISS VIDEO ADS EXTENSION</span>
-      </div>
-      
-      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight">
-        Gemini Mega Prompt <br class="hidden sm:inline"/>
-        <span class="gradient-gemini">Miss Video Ads Chuyên Nghiệp</span>
-      </h1>
-      
-      <p class="text-slate-400 max-w-3xl mx-auto text-sm sm:text-base leading-relaxed">
-        Hệ thống siêu prompt đồng hành phỏng vấn 6 bước tuyến tính: Tự động cá nhân hóa theo <strong>Tên học viên</strong>, đào sâu <strong>Lợi thế cạnh tranh (USP)</strong>, đập tan <strong>Rào cản tâm lý (ICP Pain Point)</strong>, cắt nhịp Body <strong>[//]</strong> và xuất <strong>Timeline Roadmap dọc</strong> tối ưu quay thực chiến dưới 60 giây!
-      </p>
-
-      <!-- Fast Feature Highlights -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto pt-2 text-left">
-        <div class="glass-card rounded-2xl p-4 flex items-start gap-3">
-          <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0 mt-0.5">
-            <i data-lucide="message-square" class="w-4 h-4"></i>
-          </div>
-          <div>
-            <div class="font-bold text-white text-sm">Hội thoại 6 bước tuyến tính</div>
-            <div class="text-xs text-slate-400">AI phỏng vấn từng câu một kèm phao cứu sinh A, B, C, D.</div>
-          </div>
-        </div>
-
-        <div class="glass-card rounded-2xl p-4 flex items-start gap-3">
-          <div class="w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center shrink-0 mt-0.5">
-            <i data-lucide="shield-check" class="w-4 h-4"></i>
-          </div>
-          <div>
-            <div class="font-bold text-white text-sm">Quy tắc chống văn mẫu</div>
-            <div class="text-xs text-slate-400">Cấm xưng tên trong lời thoại, cấm văn mẫu xác nhận sáo rỗng.</div>
-          </div>
-        </div>
-
-        <div class="glass-card rounded-2xl p-4 flex items-start gap-3">
-          <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
-            <i data-lucide="git-commit" class="w-4 h-4"></i>
-          </div>
-          <div>
-            <div class="font-bold text-white text-sm">Timeline Roadmap Dọc</div>
-            <div class="text-xs text-slate-400">Ký hiệu ① ② ③ nối dọc |, nhịp cắt [//], chuẩn &lt; 200 từ.</div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- STEP-BY-STEP WORKFLOW GUIDE -->
-    <section id="huong-dan" class="glass-card rounded-3xl p-6 sm:p-8 border-cyan-500/20 space-y-6">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
-            <i data-lucide="compass" class="w-5 h-5"></i>
-          </div>
-          <div>
-            <h2 class="text-xl sm:text-2xl font-heading font-bold text-white">Quy Trình Tương Tác 6 Bước Của Miss Video Ads Trong Gemini</h2>
-            <p class="text-xs sm:text-sm text-slate-400">Sau khi dán Mega Prompt vào Gemini, AI sẽ tự động dẫn dắt bạn qua quy trình sau:</p>
-          </div>
-        </div>
-        <div class="flex items-center gap-2">
-          <span class="text-xs text-slate-400">Model khuyên dùng:</span>
-          <span class="px-2.5 py-1 bg-indigo-950 border border-indigo-500/40 text-indigo-300 text-xs font-mono font-bold rounded-lg">Gemini 2.5 Flash / 1.5 Pro</span>
-        </div>
-      </div>
-
-      <!-- 6 STEPS TIMELINE -->
-      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
-        
-        <!-- Step 1 -->
-        <div class="bg-slate-900/90 rounded-2xl p-4 border border-slate-800 flex flex-col justify-between space-y-2">
-          <div class="flex items-center justify-between">
-            <span class="w-6 h-6 rounded-full bg-cyan-500 text-slate-950 font-extrabold text-xs flex items-center justify-center">1</span>
-            <span class="text-[10px] text-cyan-400 font-mono">DỮ LIỆU</span>
-          </div>
-          <h4 class="font-bold text-white text-xs">Nạp Dữ Liệu Ban Đầu</h4>
-          <p class="text-[11px] text-slate-400">Ghi nhận Tên học viên, Sản phẩm & Mô hình (PAS / AIDA / HRR).</p>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="bg-slate-900/90 rounded-2xl p-4 border border-slate-800 flex flex-col justify-between space-y-2">
-          <div class="flex items-center justify-between">
-            <span class="w-6 h-6 rounded-full bg-indigo-500 text-white font-extrabold text-xs flex items-center justify-center">2</span>
-            <span class="text-[10px] text-indigo-400 font-mono">USP</span>
-          </div>
-          <h4 class="font-bold text-white text-xs">Khai Thác Điểm Khác Biệt</h4>
-          <p class="text-[11px] text-slate-400">AI đặt Câu hỏi 4 kèm phao cứu sinh gợi ý [A], [B], [C], [D].</p>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="bg-slate-900/90 rounded-2xl p-4 border border-slate-800 flex flex-col justify-between space-y-2">
-          <div class="flex items-center justify-between">
-            <span class="w-6 h-6 rounded-full bg-purple-500 text-white font-extrabold text-xs flex items-center justify-center">3</span>
-            <span class="text-[10px] text-purple-400 font-mono">ICP PAIN</span>
-          </div>
-          <h4 class="font-bold text-white text-xs">Bẻ Gãy Rào Cản Tâm Lý</h4>
-          <p class="text-[11px] text-slate-400">AI đặt Câu hỏi 5 giải quyết nỗi sợ ngầm của khách hàng.</p>
-        </div>
-
-        <!-- Step 4 -->
-        <div class="bg-slate-900/90 rounded-2xl p-4 border border-slate-800 flex flex-col justify-between space-y-2">
-          <div class="flex items-center justify-between">
-            <span class="w-6 h-6 rounded-full bg-amber-500 text-slate-950 font-extrabold text-xs flex items-center justify-center">4</span>
-            <span class="text-[10px] text-amber-400 font-mono">BODY</span>
-          </div>
-          <h4 class="font-bold text-white text-xs">Dự Thảo & Duyệt Body</h4>
-          <p class="text-[11px] text-slate-400">Xuất thân bài ngắn gọn chia nhỏ từng câu bằng ký hiệu nhịp cắt [//].</p>
-        </div>
-
-        <!-- Step 5 -->
-        <div class="bg-slate-900/90 rounded-2xl p-4 border border-slate-800 flex flex-col justify-between space-y-2">
-          <div class="flex items-center justify-between">
-            <span class="w-6 h-6 rounded-full bg-pink-500 text-white font-extrabold text-xs flex items-center justify-center">5</span>
-            <span class="text-[10px] text-pink-400 font-mono">5 HOOKS</span>
-          </div>
-          <h4 class="font-bold text-white text-xs">Chọn 1 Trong 5 Hook</h4>
-          <p class="text-[11px] text-slate-400">Đâm thẳng nỗi đau, lật ngược định kiến, bằng chứng, POV...</p>
-        </div>
-
-        <!-- Step 6 -->
-        <div class="bg-slate-900/90 rounded-2xl p-4 border border-slate-800 flex flex-col justify-between space-y-2">
-          <div class="flex items-center justify-between">
-            <span class="w-6 h-6 rounded-full bg-emerald-500 text-slate-950 font-extrabold text-xs flex items-center justify-center">6</span>
-            <span class="text-[10px] text-emerald-400 font-mono">ROADMAP</span>
-          </div>
-          <h4 class="font-bold text-white text-xs">Lắp Ráp Timeline Dọc</h4>
-          <p class="text-[11px] text-slate-400">Xuất kịch bản hoàn chỉnh ① ② ③ kèm B-roll & Text dưới 200 từ.</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- INTERACTIVE GENERATOR WORKSPACE -->
-    <section id="bo-tao-prompt" class="space-y-6">
-      
-      <!-- Section Title & Presets -->
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <div>
-          <h2 class="text-2xl sm:text-3xl font-heading font-extrabold text-white flex items-center gap-3">
-            <span>⚡ Tùy Biến Mega Prompt Cá Nhân Hóa</span>
-          </h2>
-          <p class="text-sm text-slate-400 mt-1">Điền thông tin của bạn để tạo ra Mega Prompt chuẩn xác nhất cho Gemini</p>
-        </div>
-        
-        <!-- Preset Badges -->
-        <div class="flex flex-wrap items-center gap-2">
-          <span class="text-xs text-slate-400 font-semibold mr-1">Mẫu nhanh:</span>
-          <button onclick="loadPreset('aivideo')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-cyan-300 text-xs font-medium border border-slate-700 transition-colors">
-            🤖 Khóa Học Video AI
-          </button>
-          <button onclick="loadPreset('spa')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-pink-300 text-xs font-medium border border-slate-700 transition-colors">
-            💄 Mỹ Phẩm / Spa Trị Nám
-          </button>
-          <button onclick="loadPreset('fnb')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-300 text-xs font-medium border border-slate-700 transition-colors">
-            🔌 Phụ Kiện Sạc Đa Năng
-          </button>
-          <button onclick="loadPreset('fashion')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-purple-300 text-xs font-medium border border-slate-700 transition-colors">
-            👗 Đầm Thiết Kế Cao Cấp
-          </button>
-        </div>
-      </div>
-
-      <!-- 2-COLUMNS WORKSPACE -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-        
-        <!-- LEFT COLUMN: FORM INPUT (5 COLS) -->
-        <div class="lg:col-span-5 glass-card rounded-3xl p-6 space-y-5">
-          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-            <h3 class="font-heading font-bold text-white text-base flex items-center gap-2">
-              <i data-lucide="sliders" class="w-4 h-4 text-cyan-400"></i>
-              <span>Cấu Hình Thông Tin Dự Án</span>
-            </h3>
-            <button onclick="resetForm()" class="text-xs text-slate-400 hover:text-slate-200 flex items-center gap-1">
-              <i data-lucide="rotate-ccw" class="w-3 h-3"></i> Đặt lại
-            </button>
-          </div>
-
-          <div class="space-y-4 text-xs">
-            
-            <!-- 1. Tên Học Viên -->
-            <div>
-              <label class="block font-bold text-slate-300 mb-1.5 flex items-center justify-between">
-                <span>1. Tên Bạn / Tên Học Viên (Cá nhân hóa trợ lý)</span>
-                <span class="text-cyan-400 font-mono text-[11px]">studentName</span>
-              </label>
-              <input type="text" id="inp_studentName" 
-                     value="anh Việt" 
-                     oninput="updatePromptPreview()"
-                     placeholder="Ví dụ: anh Việt, Lan, Hùng, Nguyệt..."
-                     class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-white font-medium placeholder-slate-500 outline-none transition-all">
-            </div>
-
-            <!-- 2. Sản phẩm hoặc dịch vụ -->
-            <div>
-              <label class="block font-bold text-slate-300 mb-1.5 flex items-center justify-between">
-                <span>2. Sản Phẩm hoặc Dịch Vụ Của Bạn</span>
-                <span class="text-cyan-400 font-mono text-[11px]">industry</span>
-              </label>
-              <textarea id="inp_industry" rows="3" 
-                        oninput="updatePromptPreview()"
-                        placeholder="Mô tả sản phẩm, tính năng nổi bật, khách hàng mục tiêu..."
-                        class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-white font-medium placeholder-slate-500 outline-none transition-all leading-relaxed">Khóa học sản xuất video ngắn thực chiến bằng AI 1 chạm (Lớp Offline VietMac), giúp chủ shop và người kinh doanh tự tin bấm máy quay có video ngay trong ngày mà không cần máy cơ đắt tiền.</textarea>
-            </div>
-
-            <!-- 3. Mô hình Marketing (Framework Blueprint) -->
-            <div>
-              <label class="block font-bold text-slate-300 mb-2">3. Chọn Mô Hình Marketing Chiến Lược</label>
-              <div class="grid grid-cols-1 gap-2.5">
-                
-                <!-- PAS -->
-                <div class="relative">
-                  <input type="radio" name="fw" id="fw_pas" value="PAS" class="fw-radio hidden" checked onchange="updatePromptPreview()">
-                  <label for="fw_pas" class="block p-3 rounded-xl bg-slate-900/90 border border-slate-800 cursor-pointer hover:border-slate-700 transition-all">
-                    <div class="flex items-center justify-between mb-1">
-                      <span class="font-bold text-white text-xs flex items-center gap-1.5">
-                        <span class="w-2 h-2 rounded-full bg-blue-500"></span> PAS (Problem - Agitate - Solve)
-                      </span>
-                      <span class="text-[10px] px-1.5 py-0.5 rounded bg-blue-950 text-blue-300 border border-blue-800">SP Vật Lý / Tiêu Dùng</span>
-                    </div>
-                    <div class="text-[11px] text-slate-400 leading-snug">
-                      Xoáy sâu nỗi đau bức bối -> Kích động cảm xúc -> Đưa sản phẩm ra làm cứu cánh duy nhất.
-                    </div>
-                  </label>
-                </div>
-
-                <!-- AIDA -->
-                <div class="relative">
-                  <input type="radio" name="fw" id="fw_aida" value="AIDA" class="fw-radio hidden" onchange="updatePromptPreview()">
-                  <label for="fw_aida" class="block p-3 rounded-xl bg-slate-900/90 border border-slate-800 cursor-pointer hover:border-slate-700 transition-all">
-                    <div class="flex items-center justify-between mb-1">
-                      <span class="font-bold text-white text-xs flex items-center gap-1.5">
-                        <span class="w-2 h-2 rounded-full bg-indigo-500"></span> AIDA (Attention - Interest - Desire - Action)
-                      </span>
-                      <span class="text-[10px] px-1.5 py-0.5 rounded bg-indigo-950 text-indigo-300 border border-indigo-800">Khóa Học / Chuyên Gia</span>
-                    </div>
-                    <div class="text-[11px] text-slate-400 leading-snug">
-                      Gây chú ý 3s -> Thích thú xây lòng tin -> Khao khát ưu đãi -> Kêu gọi hành động dứt khoát.
-                    </div>
-                  </label>
-                </div>
-
-                <!-- HRR -->
-                <div class="relative">
-                  <input type="radio" name="fw" id="fw_hrr" value="HRR" class="fw-radio hidden" onchange="updatePromptPreview()">
-                  <label for="fw_hrr" class="block p-3 rounded-xl bg-slate-900/90 border border-slate-800 cursor-pointer hover:border-slate-700 transition-all">
-                    <div class="flex items-center justify-between mb-1">
-                      <span class="font-bold text-white text-xs flex items-center gap-1.5">
-                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span> HRR (Hook - Retain - Reward)
-                      </span>
-                      <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800">Viral / Thương Hiệu</span>
-                    </div>
-                    <div class="text-[11px] text-slate-400 leading-snug">
-                      Móc ngược định kiến -> Dẫn dắt nhịp độ kịch tính giữ chân -> Trao quà/kết quả bất ngờ ở cuối.
-                    </div>
-                  </label>
-                </div>
-
-              </div>
-            </div>
-
-            <!-- 4. Phong Cách Giọng Điệu -->
-            <div>
-              <label class="block font-bold text-slate-300 mb-1.5">4. Phong Cách Giọng Điệu (Tone of Voice)</label>
-              <select id="inp_toneStyle" onchange="updatePromptPreview()" class="w-full px-3 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white font-medium outline-none focus:border-cyan-400">
-                <option value="0">Đanh thép & Thực chiến (Đi thẳng vào vấn đề, động từ mạnh, nhịp dứt khoát)</option>
-                <option value="1">Cuốn hút & Bắt trend (Ngôn từ hiện đại, trẻ trung, hợp video ngắn)</option>
-                <option value="2">Thuyết phục & Chiều sâu (Tập trung giá trị cốt lõi, ngôn ngữ chuyên gia)</option>
-                <option value="3">Hài hước & Châm biếm nhẹ (So sánh phóng đại hóm hỉnh, bất ngờ)</option>
-                <option value="4">Kể chuyện & Gợi mở cảm xúc (Storytelling đồng cảm sâu sắc nỗi đau)</option>
-              </select>
-            </div>
-
-          </div>
-
-          <!-- Bottom Action in Form -->
-          <div class="pt-3 border-t border-slate-800 flex items-center justify-between">
-            <span class="text-[11px] text-slate-400">Trích xuất nguyên bản Extension</span>
-            <button onclick="copyCurrentPrompt()" class="btn-pulse inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs shadow-lg shadow-cyan-500/20 transition-all">
-              <i data-lucide="copy" class="w-4 h-4"></i>
-              <span>Sao Chép Mega Prompt</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- RIGHT COLUMN: PROMPT TABS & LIVE PREVIEW (7 COLS) -->
-        <div class="lg:col-span-7 space-y-4">
-          
-          <!-- TAB HEADERS -->
-          <div class="flex items-center gap-2 overflow-x-auto pb-1 border-b border-slate-800 scrollbar-none">
-            <button onclick="switchTab('extension_master')" id="tab-btn-extension_master" class="tab-btn active px-4 py-2.5 rounded-xl text-xs font-bold font-heading border border-slate-700 transition-all flex items-center gap-2 whitespace-nowrap">
-              <i data-lucide="crown" class="w-3.5 h-3.5 text-amber-300"></i>
-              <span>1. MEGA PROMPT EXTENSION (6 Bước Co-Pilot)</span>
-            </button>
-            <button onclick="switchTab('oneshot_master')" id="tab-btn-oneshot_master" class="tab-btn px-4 py-2.5 rounded-xl text-xs font-bold font-heading bg-slate-900 text-slate-300 hover:text-white border border-slate-800 transition-all flex items-center gap-2 whitespace-nowrap">
-              <i data-lucide="zap" class="w-3.5 h-3.5 text-cyan-400"></i>
-              <span>2. One-Shot Script (Xuất Ngay 1 Lệnh)</span>
-            </button>
-            <button onclick="switchTab('hooks_only')" id="tab-btn-hooks_only" class="tab-btn px-4 py-2.5 rounded-xl text-xs font-bold font-heading bg-slate-900 text-slate-300 hover:text-white border border-slate-800 transition-all flex items-center gap-2 whitespace-nowrap">
-              <i data-lucide="flame" class="w-3.5 h-3.5 text-orange-400"></i>
-              <span>3. 5 Hook Chặn Ngón Tay</span>
-            </button>
-            <button onclick="switchTab('body_cut')" id="tab-btn-body_cut" class="tab-btn px-4 py-2.5 rounded-xl text-xs font-bold font-heading bg-slate-900 text-slate-300 hover:text-white border border-slate-800 transition-all flex items-center gap-2 whitespace-nowrap">
-              <i data-lucide="scissors" class="w-3.5 h-3.5 text-emerald-400"></i>
-              <span>4. Body Cắt Nhịp [//]</span>
-            </button>
-          </div>
-
-          <!-- PROMPT DISPLAY BOX -->
-          <div class="glass-card rounded-3xl p-5 sm:p-6 relative space-y-4">
-            
-            <!-- Box Header with Copy & Open Gemini Buttons -->
-            <div class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-800/80 pb-4">
-              <div class="flex items-center gap-2.5">
-                <div class="w-3 h-3 rounded-full bg-emerald-400 animate-ping"></div>
-                <span id="prompt-tag-title" class="font-mono text-xs font-bold text-cyan-300 uppercase tracking-wider">
-                  🔥 MISS_VIDEO_ADS_EXTENSION_MEGA_PROMPT.TXT
-                </span>
-              </div>
-              
-              <div class="flex items-center gap-2">
-                <button onclick="copyCurrentPrompt()" id="main-copy-btn" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white font-bold text-xs shadow-lg shadow-indigo-600/30 transition-all active:scale-95">
-                  <i data-lucide="copy" class="w-4 h-4"></i>
-                  <span id="copy-btn-text">Sao Chép Prompt Này</span>
-                </button>
-                
-                <a href="https://gemini.google.com/app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition-all">
-                  <span>Mở Gemini</span>
-                  <i data-lucide="external-link" class="w-3.5 h-3.5 text-cyan-400"></i>
-                </a>
-              </div>
-            </div>
-
-            <!-- PROMPT TEXT CONTAINER -->
-            <div class="relative">
-              <pre id="prompt-content" class="prompt-pre rounded-2xl p-5 max-h-[580px] overflow-y-auto border border-slate-800/90"></pre>
-            </div>
-
-            <!-- Hint Bar -->
-            <div class="flex items-center justify-between text-xs text-slate-400 pt-1">
-              <div class="flex items-center gap-2">
-                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
-                <span>Đã nạp quy tắc cấm xưng tên trong lời thoại và chống văn mẫu sáo rỗng.</span>
-              </div>
-              <span class="font-mono text-[11px] text-slate-500" id="prompt-char-count">0 ký tự</span>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- CORE ARCHITECTURE BREAKDOWN -->
-    <section class="glass-card rounded-3xl p-6 sm:p-8 space-y-6">
-      <div class="text-center max-w-3xl mx-auto space-y-2">
-        <h2 class="text-2xl sm:text-3xl font-heading font-extrabold text-white">
-          Bóc Tách Cấu Trúc Lõi <span class="gradient-gemini">Miss Video Ads Extension</span>
-        </h2>
-        <p class="text-xs sm:text-sm text-slate-400">Hệ thống kịch bản quảng cáo tối ưu chuyển đổi được phát triển độc quyền bởi VietMac</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
-        
-        <!-- Pillar 1 -->
-        <div class="bg-slate-900/60 rounded-2xl p-5 border border-slate-800 space-y-3">
-          <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold text-lg">
-            💬
-          </div>
-          <h3 class="font-bold text-white text-base">Hội Thoại Khai Vấn (Co-Pilot)</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            Thay vì ép AI viết bừa một kịch bản chung chung, Miss Video Ads sẽ phỏng vấn bạn từng câu (USP, rào cản khách hàng) kèm 4 gợi ý phao cứu sinh [A], [B], [C], [D] để bạn chọn nhanh trong 3 giây.
-          </p>
-        </div>
-
-        <!-- Pillar 2 -->
-        <div class="bg-slate-900/60 rounded-2xl p-5 border border-slate-800 space-y-3">
-          <div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-lg">
-            ✂️
-          </div>
-          <h3 class="font-bold text-white text-base">Ký Hiệu Nhịp Cắt [//]</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            Mỗi câu thoại ngắn đều kết thúc bằng ký hiệu <code class="text-cyan-300 font-mono bg-slate-800 px-1 py-0.5 rounded">[//]</code>. Đây là quy chuẩn thực chiến giúp học viên đọc không bị hụt hơi và đạo diễn dễ dựng B-roll đè lên.
-          </p>
-        </div>
-
-        <!-- Pillar 3 -->
-        <div class="bg-slate-900/60 rounded-2xl p-5 border border-slate-800 space-y-3">
-          <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-lg">
-            📜
-          </div>
-          <h3 class="font-bold text-white text-base">Timeline Roadmap Dọc</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            Kịch bản được lắp ráp theo cấu trúc trục dọc nối tiếp ① Hook -> ② Body -> ③ CTA. Tuyệt đối không dùng bảng table ngang rườm rà, giúp học viên đọc kịch bản mượt mà ngay trên màn hình điện thoại khi quay.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="text-center text-xs text-slate-500 py-8 border-t border-slate-800/80 space-y-2">
-      <div class="flex items-center justify-center gap-2">
-        <span class="font-bold text-slate-400">HỆ THỐNG GIÁO TRÌNH LỚP VIDEO OFFLINE • VIETMAC AI LAB</span>
-      </div>
-      <p>Trích xuất chuẩn xác từ Miss Video Ads Extension • Đồng bộ trên toàn bộ kho tài nguyên học tập</p>
-    </footer>
-
-  </main>
-
-  <!-- TOAST NOTIFICATION -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-950 border border-cyan-500/50 text-white shadow-2xl shadow-cyan-500/20">
-    <div class="w-8 h-8 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0">
-      <i data-lucide="check-circle-2" class="w-5 h-5"></i>
-    </div>
-    <div>
-      <div class="font-bold text-xs text-cyan-300" id="toast-title">Đã sao chép Mega Prompt thành công! 🎉</div>
-      <div class="text-[11px] text-slate-400" id="toast-desc">Mở tab Google Gemini và dán (Ctrl+V) ngay nhé!</div>
-    </div>
+    <a href="https://gemini.google.com/app" target="_blank" rel="noopener noreferrer" class="sub-link">
+      <span>Mở Google Gemini</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+    </a>
   </div>
 
-  <!-- JAVASCRIPT LOGIC -->
+  <div id="toast">✓ Đã copy Mega Prompt! Dán vào Gemini ngay nhé!</div>
+
   <script>
-    // Initialize Lucide Icons
-    lucide.createIcons();
-
-    // Active Tab State
-    let currentTab = 'extension_master';
-
-    // Framework Details from Extension
-    const FW_DETAILS = {
-      PAS: {
-        name: 'PAS (Problem - Agitate - Solve)',
-        code: 'PAS',
-        desc: 'Xoáy sâu nỗi đau -> Đưa giải pháp. Chỉ thẳng vào vấn đề bức bối -> Mô tả chi tiết hậu quả để kích động cảm xúc -> Đưa sản phẩm ra như cứu cánh duy nhất. Cực kỳ tối ưu cho hàng tiêu dùng nhanh, mỹ phẩm, thời trang, sản phẩm vật lý.'
-      },
-      AIDA: {
-        name: 'AIDA (Attention - Interest - Desire - Action)',
-        code: 'AIDA',
-        desc: 'Gây chú ý -> Thích thú -> Khao khát -> Hành động. Thu hút 3s đầu -> Cung cấp thông tin lôi cuốn xây dựng lòng tin -> Đưa ra ưu đãi kích thích khao khát sở hữu -> Kêu gọi hành động dứt khoát. Phù hợp nhất cho khóa học, dịch vụ chuyên gia, sản phẩm giá trị cao.'
-      },
-      HRR: {
-        name: 'HRR (Hook - Retain - Reward)',
-        code: 'HRR',
-        desc: 'Gây tò mò -> Giữ chân -> Phần thưởng bất ngờ. Móc người xem bằng câu hỏi ngược định kiến -> Dẫn dắt nhịp độ kịch tính kể chuyện giữ chân -> Tặng quà/kết quả bất ngờ ở cuối. Tối ưu cho xây kênh viral giải trí, phát triển thương hiệu cá nhân.'
-      }
-    };
-
-    // Tone Styles from Extension
-    const TONE_STYLES = [
-      { name: 'Đanh thép & Thực chiến', desc: 'đi thẳng vào vấn đề, sử dụng các động từ mạnh mẽ, nhịp độ nhanh và dứt khoát' },
-      { name: 'Cuốn hút & Bắt trend', desc: 'ngôn từ hiện đại, trẻ trung, bắt nhịp nhanh với thị hiếu người xem video ngắn hiện nay' },
-      { name: 'Thuyết phục & Chiều sâu', desc: 'tập trung vào giá trị cốt lõi, lập luận chặt chẽ, tạo niềm tin lớn bằng ngôn ngữ chuyên gia' },
-      { name: 'Hài hước & Châm biếm nhẹ', desc: 'sử dụng phép so sánh phóng đại hóm hỉnh để tạo sự thích thú và bất ngờ cho người xem' },
-      { name: 'Kể chuyện & Gợi mở cảm xúc', desc: 'phong cách storytelling, tạo sự đồng cảm sâu sắc với nỗi đau trước khi giới thiệu giải pháp' }
-    ];
-
-    // Presets
-    const presets = {
-      aivideo: {
-        studentName: "anh Việt",
-        industry: "Khóa học sản xuất video ngắn thực chiến bằng AI 1 chạm (Lớp Offline VietMac), giúp chủ shop và người kinh doanh tự tin bấm máy quay có video ngay trong ngày mà không cần máy cơ đắt tiền.",
-        fw: "AIDA",
-        toneIndex: "0"
-      },
-      spa: {
-        studentName: "Miumiu",
-        industry: "Mỹ phẩm và liệu trình trị nám/tàn nhang chuẩn Y khoa từ thiên nhiên, cam kết dứt điểm chân nám sâu không tái phát, không bào mòn da cho phụ nữ sau tuổi 30.",
-        fw: "PAS",
-        toneIndex: "2"
-      },
-      fnb: {
-        studentName: "Hải",
-        industry: "Củ sạc dự phòng đa năng kiêm sạc nhanh 65W cho laptop và điện thoại, tích hợp sẵn dây cáp và chân cắm gập nhỏ gọn như bao diêm.",
-        fw: "PAS",
-        toneIndex: "1"
-      },
-      fashion: {
-        studentName: "Nguyệt",
-        industry: "Set đầm thiết kế lụa tơ tằm tôn dáng giấu bụng mỡ, đường cắt may may đo cao cấp giúp phụ nữ văn phòng tự tin sang trọng trong mọi sự kiện.",
-        fw: "HRR",
-        toneIndex: "4"
-      }
-    };
-
-    function loadPreset(key) {
-      const data = presets[key];
-      if (!data) return;
-      document.getElementById('inp_studentName').value = data.studentName;
-      document.getElementById('inp_industry').value = data.industry;
-      
-      const fwRadio = document.getElementById('fw_' + data.fw.toLowerCase());
-      if (fwRadio) fwRadio.checked = true;
-
-      document.getElementById('inp_toneStyle').value = data.toneIndex;
-      
-      updatePromptPreview();
-      showToast("Đã tải mẫu: " + data.studentName, "Xem prompt cập nhật bên phải!");
-    }
-
-    function resetForm() {
-      loadPreset('aivideo');
-    }
-
-    function getFormData() {
-      const selectedFwEl = document.querySelector('input[name="fw"]:checked');
-      const fwCode = selectedFwEl ? selectedFwEl.value : 'PAS';
-      const fwObj = FW_DETAILS[fwCode] || FW_DETAILS.PAS;
-      const toneIdx = parseInt(document.getElementById('inp_toneStyle').value, 10) || 0;
-      const toneObj = TONE_STYLES[toneIdx] || TONE_STYLES[0];
-
-      return {
-        studentName: document.getElementById('inp_studentName').value.trim() || 'bạn',
-        industry: document.getElementById('inp_industry').value.trim(),
-        framework: fwObj.name,
-        fwCode: fwObj.code,
-        tone: toneObj
-      };
-    }
-
-    // GENERATE PROMPTS ACCORDING TO TAB
-    function generatePromptText() {
-      const d = getFormData();
-      const div = '═══════════════════════════════════════════';
-
-      if (currentTab === 'extension_master') {
-        // EXACT MEGA PROMPT FROM EXTENSION
-        return `Bạn là Leo — Giám đốc Sáng tạo kiêm Chuyên gia biên kịch Video Quảng cáo chuyển đổi (Conversion Ad Video Director).
+    const MEGA_PROMPT = `Bạn là Leo — Giám đốc Sáng tạo kiêm Chuyên gia biên kịch Video Quảng cáo chuyển đổi (Conversion Ad Video Director).
 Nhiệm vụ của bạn là đồng hành thiết kế kịch bản video ngắn (dưới 60 giây, tối đa 200 từ) có tỷ lệ chuyển đổi cao. 
-Hãy tự xưng là "Miss Video Ads của ${d.studentName}" và gọi tôi là "${d.studentName}" trong suốt cuộc trò chuyện để tạo sự gần gũi.
+Hãy tự xưng là "Miss Video Ads của bạn" và gọi tôi là "bạn" trong suốt cuộc trò chuyện để tạo sự gần gũi.
 
 ⚠️ [QUY TẮC XƯNG HÔ VÀ TÊN RIÊNG TRONG KỊCH BẢN VIDEO - BẮT BUỘC TUÂN THỦ 100%]:
 Trong toàn bộ nội dung kịch bản video quảng cáo (bao gồm cả phần Lời thoại đọc trước máy quay và phần Mô tả hành động/B-roll):
-1. Tuyệt đối KHÔNG được viết tên riêng "${d.studentName}" vào trong lời thoại (Ví dụ: CẤM viết "Với ${d.studentName}...", "${d.studentName} chia sẻ...", "${d.studentName} nghĩ là..."). Lời thoại của người nói trước ống kính phải xưng là "mình", "em", "tôi", hoặc xưng hô linh hoạt, tự nhiên nhất tùy theo ngách nội dung kịch bản để giống người thật nói thường ngày. Tuyệt đối không xưng bằng tên riêng vì nghe rất gượng gạo, sáo rỗng và giả tạo.
-2. Tuyệt đối KHÔNG được viết tên riêng "${d.studentName}" vào trong các ghi chú hành động hoặc B-roll (Ví dụ: CẤM viết "[${d.studentName} nhìn thẳng vào ống kính]", "[${d.studentName} mỉm cười]"). Hãy thay bằng "[Bạn nhìn thẳng vào ống kính]", "[Bạn mỉm cười]", hoặc "[Người nói...]" hoặc ghi hành động khách quan.
-3. Tên riêng "${d.studentName}" chỉ được phép xuất hiện ở phần nhận xét, giải thích, bài học tư duy hoặc câu hỏi khai vấn của bạn (AI) khi đối thoại trực tiếp với tôi ở ngoài kịch bản video.
+1. Tuyệt đối KHÔNG được viết tên riêng vào trong lời thoại (Ví dụ: CẤM viết "Với bạn...", "bạn chia sẻ...", "bạn nghĩ là..."). Lời thoại của người nói trước ống kính phải xưng là "mình", "em", "tôi", hoặc xưng hô linh hoạt, tự nhiên nhất tùy theo ngách nội dung kịch bản để giống người thật nói thường ngày. Tuyệt đối không xưng bằng tên riêng vì nghe rất gượng gạo, sáo rỗng và giả tạo.
+2. Tuyệt đối KHÔNG được viết tên riêng vào trong các ghi chú hành động hoặc B-roll (Ví dụ: CẤM viết "[bạn nhìn thẳng vào ống kính]", "[bạn mỉm cười]"). Hãy thay bằng "[Bạn nhìn thẳng vào ống kính]", "[Bạn mỉm cười]", hoặc "[Người nói...]" hoặc ghi hành động khách quan.
+3. Tên riêng chỉ được phép xuất hiện ở phần nhận xét, giải thích, bài học tư duy hoặc câu hỏi khai vấn của bạn (AI) khi đối thoại trực tiếp với tôi ở ngoài kịch bản video.
 
 ⚠️ [CẤM TUYỆT ĐỐI VIẾT LỜI XÁC NHẬN LUẬT CHƠI / QUY TẮC]:
 Tuyệt đối KHÔNG bao giờ được viết các câu xác nhận, cam kết tuân thủ quy tắc, hoặc thông báo về việc đã nhận được luật giao tiếp/định dạng kịch bản (Ví dụ: CẤM viết "Tôi đã nắm rõ luật...", "Tôi cam kết tuân thủ...", "Chào bạn, tôi đã nhận được thông tin..."). Hãy đi thẳng vào nội dung chuyên môn và bắt đầu giúp tôi ngay lập tức bằng một lời chào ngắn gọn và bắt đầu hỗ trợ. Người dùng không cần biết và không muốn nghe giải thích về luật chơi hay các bước tiếp theo, hãy tập trung 100% vào việc hỗ trợ và đưa thông tin giá trị thực tế.
@@ -734,12 +169,24 @@ Quy trình làm việc của chúng ta gồm 6 bước tương tác tuyến tín
 
 Quy tắc hành xử tự nhiên (Quan trọng): Khi tương tác, hãy trò chuyện với tôi bằng phong cách của một đồng nghiệp/đối tác thân thiện và lịch lãm. Tránh việc liệt kê máy móc hoặc chép nguyên văn các tiêu đề cứng nhắc (ví dụ như "BƯỚC 2: KHAI THÁC USP"), hãy lồng ghép câu hỏi và các phương án gợi ý một cách tự nhiên nhất để tạo cảm giác thảo luận thật.
 
-${div}
-QUY TRÌNH HỘI THOẠI 6 BƯỚC (BẮT ĐẦU TỪ BƯỚC 2)
-${div}
+═══════════════════════════════════════════
+QUY TRÌNH HỘI THOẠI 6 BƯỚC (BẮT ĐẦU TỪ BƯỚC 1)
+═══════════════════════════════════════════
 
-▸ BƯỚC 1: THU THẬP DỮ LIỆU BAN ĐẦU (ĐÃ HOÀN THÀNH)
-Sản phẩm/dịch vụ của tôi là "${d.industry}" và công thức tôi muốn sử dụng là ${d.framework} [${d.fwCode}]. Bạn hãy ghi nhận dữ liệu này và tuyệt đối không hỏi lại. Hãy trực tiếp bắt đầu cuộc trò chuyện từ BƯỚC 2 dưới đây.
+▸ BƯỚC 1: THU THẬP DỮ LIỆU BAN ĐẦU
+Hãy chào tôi ngắn gọn và hỏi:
+"Chào bạn! Tôi là Miss Video Ads — trợ lý sáng tạo kịch bản video quảng cáo của bạn.
+Đầu tiên, hãy cho tôi biết:
+1. Sản phẩm hoặc dịch vụ bạn muốn làm video quảng cáo là gì?
+2. Bạn muốn áp dụng công thức marketing nào trong 3 mô hình sau:
+   - [A] PAS (Problem - Agitate - Solve): Xoáy sâu nỗi đau -> Đưa giải pháp cứu cánh (Phù hợp SP vật lý, tiêu dùng, mỹ phẩm, thời trang)
+   - [B] AIDA (Attention - Interest - Desire - Action): Gây chú ý -> Thích thú -> Khao khát -> Hành động (Phù hợp khóa học, dịch vụ, chuyên gia)
+   - [C] HRR (Hook - Retain - Reward): Gây tò mò -> Giữ chân -> Phần thưởng bất ngờ (Phù hợp viral video, xây kênh cá nhân)
+Bạn hãy chia sẻ sản phẩm và chọn A, B hoặc C nhé!"
+
+(Dừng lại chờ người dùng trả lời Bước 1 trước khi sang Bước 2).
+
+---
 
 ▸ BƯỚC 2: KHAI THÁC USP (AI đặt Câu hỏi 4)
 ### 💡 BƯỚC 2: KHAI THÁC LỢI THẾ CẠNH TRANH (USP)
@@ -750,15 +197,15 @@ Sản phẩm/dịch vụ của tôi là "${d.industry}" và công thức tôi mu
 ---
 
 #### ❓ CÂU HỎI 4:
-* **Lợi thế cạnh tranh lớn nhất (USP) hoặc điểm khác biệt của sản phẩm "${d.industry}" này là gì?**
+* **Lợi thế cạnh tranh lớn nhất (USP) hoặc điểm khác biệt của sản phẩm này là gì?**
 
 ---
 
 #### 💡 PHAO CỨU SINH (GỢI Ý TỪ TRỢ LÝ):
-* **[A]** [AI tự gợi ý mẫu 1 dựa trên sản phẩm "${d.industry}"]
-* **[B]** [AI tự gợi ý mẫu 2 dựa trên sản phẩm "${d.industry}"]
-* **[C]** [AI tự gợi ý mẫu 3 dựa trên sản phẩm "${d.industry}"]
-* **[D]** [AI tự gợi ý mẫu 4 dựa trên sản phẩm "${d.industry}"]
+* **[A]** [AI tự gợi ý mẫu 1 dựa trên sản phẩm đã nhập]
+* **[B]** [AI tự gợi ý mẫu 2 dựa trên sản phẩm đã nhập]
+* **[C]** [AI tự gợi ý mẫu 3 dựa trên sản phẩm đã nhập]
+* **[D]** [AI tự gợi ý mẫu 4 dựa trên sản phẩm đã nhập]
 * **[E]** Nhập mô tả USP của riêng bạn (tự viết).
 👉 *Nhập **A**, **B**, **C**, **D** để chọn nhanh, hoặc gõ trực tiếp câu trả lời của bạn vào ô chat nhé!*
 
@@ -775,7 +222,7 @@ Sản phẩm/dịch vụ của tôi là "${d.industry}" và công thức tôi mu
 ---
 
 #### ❓ CÂU HỎI 5:
-* **Lợi thế đặc biệt đó của sản phẩm sẽ giải quyết rào cản tâm lý hoặc nỗi sợ lớn nhất của khách hàng khi tiếp cận "${d.industry}" như thế nào?**
+* **Lợi thế đặc biệt đó của sản phẩm sẽ giải quyết rào cản tâm lý hoặc nỗi sợ lớn nhất của khách hàng như thế nào?**
 
 ---
 
@@ -795,13 +242,13 @@ Sản phẩm/dịch vụ của tôi là "${d.industry}" và công thức tôi mu
 ### 📝 BƯỚC 4: TẠO THÂN BÀI CHIẾN LƯỢC (BODY)
 
 > 📌 **TƯ DUY THỰC CHIẾN: Cách viết phần Body lõi giữ chân người xem?**
-> Thân bài cần truyền đạt nhanh, gọn các luận điểm đắt giá theo đúng công thức marketing ${d.fwCode} đã chọn. Việc chia nhỏ các câu thoại giúp nhịp điệu video lôi cuốn và dễ dựng B-roll hơn.
+> Thân bài cần truyền đạt nhanh, gọn các luận điểm đắt giá theo đúng công thức marketing đã chọn. Việc chia nhỏ các câu thoại giúp nhịp điệu video lôi cuốn và dễ dựng B-roll hơn.
 
 ---
 
 #### 🎬 BẢN DỰ THẢO THÂN BÀI:
 \`\`\`text
-[BODY - ${d.fwCode}] (xx từ)
+[BODY - PAS / AIDA / HRR] (xx từ)
 ---
 Ý 1... [//]
 Ý 2... [//]
@@ -865,6 +312,8 @@ Sản phẩm/dịch vụ của tôi là "${d.industry}" và công thức tôi mu
 
 (AI dừng lại chờ tôi trả lời).
 
+---
+
 ▸ BƯỚC TRIỂN KHAI: LẮP RÁP KỊCH BẢN QUẢNG CÁO HOÀN CHỈNH
 Lắp ráp Hook + Body + CTA thành một kịch bản hoàn chỉnh dưới dạng **Timeline Roadmap chiều dọc** sử dụng ký tự số khoanh tròn ①, ②, ③... và các nét liên kết thẳng đứng dọc | nối tiếp để tối ưu hiển thị trên di động. Cấu trúc kịch bản bắt buộc tuân thủ đúng mẫu Markdown dưới đây (tuyệt đối không dùng dạng bảng Markdown/table):
 
@@ -873,192 +322,66 @@ Tổng: XX từ | ~XX giây | Nhịp cắt: XX cảnh [//]
 
 ① **HOOK (Mở đầu chặn ngón tay)**
 |
-|  *Lời thoại:* "[Nội dung hook, tuyệt đối không xưng tên riêng "${d.studentName}"]"
-|  *Hướng dẫn quay:* [mô tả góc quay, biểu cảm, không dùng tên "${d.studentName}"]
+|  *Lời thoại:* "[Nội dung hook, tuyệt đối không xưng tên riêng]"
+|  *Hướng dẫn quay:* [mô tả góc quay, biểu cảm, không dùng tên riêng]
 |  *Chữ hiển thị:* [chữ hiện trên màn hình nếu có]
 |
-② **BODY (Thân bài giải pháp) — ${d.fwCode}**
+② **BODY (Thân bài giải pháp)**
 |
-|  *Lời thoại:* "[Nội dung Body chia nhỏ từng câu ngắn kết thúc bằng ký hiệu [//], không xưng tên riêng "${d.studentName}"]"
-|  *B-roll gợi ý:* [các cảnh quay chèn phụ hoạ, không dùng tên "${d.studentName}"]
+|  *Lời thoại:* "[Nội dung Body chia nhỏ từng câu ngắn kết thúc bằng ký hiệu [//], không xưng tên riêng]"
+|  *B-roll gợi ý:* [các cảnh quay chèn phụ hoạ, không dùng tên riêng]
 |
 ③ **CTA (Kêu gọi hành động)**
 |
-|  *Lời thoại:* "[Nội dung CTA, tuyệt đối không xưng tên riêng "${d.studentName}"]"
-|  *Hướng dẫn quay:* [mô tả hành động của nhân vật, không dùng tên "${d.studentName}"]
+|  *Lời thoại:* "[Nội dung CTA, tuyệt đối không xưng tên riêng]"
+|  *Hướng dẫn quay:* [mô tả hành động của nhân vật, không dùng tên riêng]
 
 BẮT BUỘC:
 ▪ Đếm chính xác tổng số từ. Vi phạm giới hạn 200 từ = THẤT BẠI.
-▪ Giọng điệu của bạn: ${d.tone.name} (${d.tone.desc}).
+▪ Giọng điệu của bạn: Đanh thép & Thực chiến (đi thẳng vào vấn đề, sử dụng các động từ mạnh mẽ, nhịp độ nhanh và dứt khoát).
 
-${div}
+═══════════════════════════════════════════
 
-Bây giờ, bạn hãy bỏ qua Bước 1, ghi nhận dữ liệu ban đầu, và trực tiếp bắt đầu BƯỚC 2 bằng cách đặt Câu hỏi 4 kèm các gợi ý phương án A, B, C, D thực tế cho sản phẩm "${d.industry}" của ${d.studentName}!`;
-      }
-      else if (currentTab === 'oneshot_master') {
-        // ONE-SHOT INSTANT SCRIPT
-        return `Bạn là Giám đốc Sáng tạo kiêm Chuyên gia biên kịch Video Quảng Cáo chuyển đổi cao (Conversion Ad Video Director).
-Nhiệm vụ của bạn: Hãy lập tức xuất trọn bộ KỊCH BẢN VIDEO QUẢNG CÁO HOÀN CHỈNH trong 1 lần phản hồi duy nhất cho:
+Bây giờ, hãy bắt đầu ngay BƯỚC 1 bằng cách gửi lời chào ngắn gọn và đặt câu hỏi Bước 1 cho tôi!`;
 
-DỮ LIỆU DỰ ÁN:
-- Tên học viên / Người phụ trách: ${d.studentName}
-- Sản phẩm / Dịch vụ: ${d.industry}
-- Công thức Marketing: ${d.framework} [${d.fwCode}]
-- Tone giọng: ${d.tone.name} (${d.tone.desc})
-
-QUY TẮC SỐNG CÒN:
-1. TUYỆT ĐỐI KHÔNG viết tên riêng "${d.studentName}" vào lời thoại hoặc mô tả B-roll (Người nói xưng "mình", "em", "tôi" tự nhiên).
-2. Lời thoại phần Body phải chia nhỏ từng câu ngắn kết thúc bằng ký hiệu [//] để đánh dấu nhịp cắt cảnh.
-3. Kịch bản dưới dạng Timeline Roadmap dọc sử dụng ký tự ①, ②, ③ và nét liên kết dọc |.
-4. Tổng dung lượng kịch bản dưới 60 giây (tối đa 200 từ).
-
-HÃY XUẤT RA THEO ĐÚNG CẤU TRÚC SAU:
-
-1. PHÂN TÍCH CHIẾN LƯỢC:
-- Lợi thế cạnh tranh cốt lõi (USP): ...
-- Rào cản tâm lý khách hàng (ICP Pain Point): ...
-
-2. 5 PHƯƠNG ÁN HOOK 3 GIÂY ĐẦU (Gợi ý):
-- Hook 1 (Đâm thẳng nỗi đau): ...
-- Hook 2 (Lật ngược định kiến): ...
-- Hook 3 (Bằng chứng thực tế): ...
-- Hook 4 (POV / Storytelling): ...
-- Hook 5 (Câu hỏi tranh cãi): ...
-
-3. === KỊCH BẢN VIDEO QUẢNG CÁO CHUẨN ===
-Tổng: XX từ | ~XX giây | Nhịp cắt: XX cảnh [//]
-
-① **HOOK (Mở đầu chặn ngón tay)**
-|
-|  *Lời thoại:* "[Lời thoại Hook đắt giá nhất]"
-|  *Hướng dẫn quay:* [Góc máy, biểu cảm]
-|  *Chữ hiển thị:* [Text Popup]
-|
-② **BODY (Thân bài giải pháp) — ${d.fwCode}**
-|
-|  *Lời thoại:* "[Câu 1 [//] Câu 2 [//] Câu 3 [//] Câu 4 [//]]"
-|  *B-roll gợi ý:* [Cảnh quay chèn minh họa]
-|
-③ **CTA (Kêu gọi hành động)**
-|
-|  *Lời thoại:* "[Lời thoại CTA dứt khoát ra đơn]"
-|  *Hướng dẫn quay:* [Hành động kết thúc]
-
-Bắt đầu viết kịch bản chi tiết ngay bây giờ!`;
-      }
-      else if (currentTab === 'hooks_only') {
-        // HOOKS ONLY
-        return `Đóng vai Chuyên gia Tối ưu Giữ chân Video Ngắn (Short-form Retention Specialist).
-Nhiệm vụ: Tạo 5 phương án Hook 3 giây đầu tiên cực kỳ giật gân, đập tan thói quen lướt qua của người xem cho sản phẩm: "${d.industry}".
-
-Áp dụng đúng 5 cấu trúc chuẩn từ Miss Video Ads Extension:
-1. Hook 1 [Đâm thẳng nỗi đau]: Đánh trực diện vào vấn đề nhức nhối nhất của khách hàng mục tiêu.
-2. Hook 2 [Lật ngược định kiến]: Phủ định niềm tin sai lầm cũ ("Đừng...", "Bỏ ngay...").
-3. Hook 3 [Bằng chứng thực tế]: Đưa ra con số đo lường hoặc kết quả mắt thấy tai nghe.
-4. Hook 4 [POV / Storytelling]: Bối cảnh đời thường thực tế gây tò mò tức thì.
-5. Hook 5 [Câu hỏi gây tranh cãi]: Đặt câu hỏi kích thích thảo luận và tranh cãi.
-
-LƯU Ý QUAN TRỌNG:
-- Tuyệt đối KHÔNG xưng tên riêng "${d.studentName}" trong lời thoại.
-- Kèm theo mỗi câu hook: Gợi ý hành động hình ảnh 3 giây đầu (Visual Action) để giật mắt người xem.`;
-      }
-      else if (currentTab === 'body_cut') {
-        // BODY CUT ONLY
-        return `Đóng vai Senior Copywriter chuyên trách phần Thân bài Video Ads ngắn dưới 60s.
-Nhiệm vụ: Soạn phần THÂN BÀI (BODY) cho sản phẩm "${d.industry}" theo đúng công thức ${d.framework} [${d.fwCode}].
-
-YÊU CẦU BẮT BUỘC:
-1. Độ dài: Dưới 120 từ.
-2. Ngắt nhịp: Bắt buộc chia nhỏ từng câu ngắn và kết thúc mỗi câu bằng ký hiệu [//] (Ký hiệu này giúp học viên đọc dễ dàng và người dựng video biết chỗ chèn B-roll).
-3. Tuyệt đối KHÔNG viết tên riêng "${d.studentName}" vào lời thoại.
-4. Văn phong: ${d.tone.name} (${d.tone.desc}). Mộc mạc, gần gũi, cấm sáo rỗng.
-
-Xuất ra 2 biến thể Body để tôi lựa chọn!`;
-      }
-
-      return '';
-    }
-
-    // UPDATE PREVIEW
-    function updatePromptPreview() {
-      const text = generatePromptText();
-      const preEl = document.getElementById('prompt-content');
-      preEl.textContent = text;
-      
-      // Update char count
-      document.getElementById('prompt-char-count').textContent = text.length.toLocaleString('vi-VN') + ' ký tự';
-    }
-
-    // SWITCH TAB
-    function switchTab(tab) {
-      currentTab = tab;
-      
-      ['extension_master', 'oneshot_master', 'hooks_only', 'body_cut'].forEach(t => {
-        const btn = document.getElementById('tab-btn-' + t);
-        if (btn) {
-          if (t === tab) {
-            btn.classList.add('active');
-            btn.classList.remove('bg-slate-900', 'text-slate-300');
-          } else {
-            btn.classList.remove('active');
-            btn.classList.add('bg-slate-900', 'text-slate-300');
-          }
-        }
-      });
-
-      const tagMap = {
-        extension_master: '🔥 MISS_VIDEO_ADS_EXTENSION_MEGA_PROMPT.TXT',
-        oneshot_master: '⚡ ONE_SHOT_MASTER_SCRIPT_PROMPT.TXT',
-        hooks_only: '🎯 5_HOOKS_RETENTION_PROMPT.TXT',
-        body_cut: '✂️ BODY_PACING_SLASH_PROMPT.TXT'
-      };
-      document.getElementById('prompt-tag-title').textContent = tagMap[tab] || 'PROMPT.TXT';
-
-      updatePromptPreview();
-    }
-
-    // COPY LOGIC
-    function copyCurrentPrompt() {
-      const text = generatePromptText();
-      navigator.clipboard.writeText(text).then(() => {
-        showToast("Đã sao chép Mega Prompt thành công! 🎉", "Mở tab Google Gemini và dán (Ctrl+V) ngay nhé!");
-        
-        const btnText = document.getElementById('copy-btn-text');
-        const oldText = btnText.textContent;
-        btnText.textContent = "ĐÃ SAO CHÉP! ✓";
-        setTimeout(() => {
-          btnText.textContent = oldText;
-        }, 2000);
-      }).catch(err => {
-        const textarea = document.createElement('textarea');
-        textarea.value = text;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textarea);
-        showToast("Đã sao chép Mega Prompt thành công! 🎉", "Mở tab Google Gemini và dán (Ctrl+V) ngay nhé!");
-      });
-    }
-
-    // TOAST NOTIFICATION
-    let toastTimeout;
-    function showToast(title, desc) {
+    function copyMegaPrompt() {
+      const btn = document.getElementById('btn-copy');
+      const label = document.getElementById('btn-label');
       const toast = document.getElementById('toast');
-      document.getElementById('toast-title').textContent = title;
-      document.getElementById('toast-desc').textContent = desc;
-      
-      toast.classList.add('show');
-      
-      clearTimeout(toastTimeout);
-      toastTimeout = setTimeout(() => {
-        toast.classList.remove('show');
-      }, 3500);
-    }
 
-    // INITIAL LOAD
-    window.addEventListener('DOMContentLoaded', () => {
-      updatePromptPreview();
-    });
+      navigator.clipboard.writeText(MEGA_PROMPT).then(() => {
+        btn.classList.add('copied');
+        label.textContent = "✓ ĐÃ COPY PROMPT THÀNH CÔNG!";
+        
+        toast.classList.add('show');
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 2500);
+
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          label.textContent = "COPY MEGA PROMPT MISS VIDEO ADS";
+        }, 3000);
+      }).catch(() => {
+        const ta = document.createElement('textarea');
+        ta.value = MEGA_PROMPT;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+
+        btn.classList.add('copied');
+        label.textContent = "✓ ĐÃ COPY PROMPT THÀNH CÔNG!";
+        toast.classList.add('show');
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 2500);
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          label.textContent = "COPY MEGA PROMPT MISS VIDEO ADS";
+        }, 3000);
+      });
+    }
   </script>
 </body>
 </html>
