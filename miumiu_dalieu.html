@@ -10,9 +10,9 @@
 <style>
 :root {
   --bg: #09090f;
-  --bg-subtle: #10101a;
-  --card: #151522;
-  --card-hover: #1b1b2d;
+  --bg-subtle: #11111d;
+  --card: #151524;
+  --card-hover: #1c1c30;
   --card-inner: #1c1c2e;
   --accent: #6366f1;
   --accent-light: #818cf8;
@@ -24,8 +24,8 @@
   --rose: #f43f5e;
   --text: #f1f5f9;
   --text-muted: #94a3b8;
-  --border: #26263a;
-  --border-light: #33334d;
+  --border: #26263e;
+  --border-light: #343452;
   --radius-sm: 10px;
   --radius-md: 16px;
   --radius-lg: 24px;
@@ -47,7 +47,7 @@ body {
 }
 
 .wrapper {
-  max-width: 900px;
+  max-width: 860px;
   margin: 0 auto;
   padding: 0 16px;
 }
@@ -57,7 +57,7 @@ body {
   text-align: center;
   padding: 44px 16px 28px;
   background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.22), transparent 70%),
-              linear-gradient(180deg, #131226 0%, var(--bg) 100%);
+              linear-gradient(180deg, #141328 0%, var(--bg) 100%);
   border-radius: 0 0 var(--radius-lg) var(--radius-lg);
   border-bottom: 1px solid var(--border);
   margin-bottom: 24px;
@@ -106,7 +106,7 @@ body {
 }
 
 .hero-stat-card {
-  background: rgba(21, 21, 34, 0.8);
+  background: rgba(21, 21, 36, 0.8);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 12px 8px;
@@ -197,15 +197,11 @@ body {
   line-height: 1.65;
 }
 
-/* Sharp Video Cards */
+/* Detailed Video Cards (Original Rich Breakdown) */
 .video-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 14px;
-}
-
-@media (min-width: 640px) {
-  .video-grid { grid-template-columns: 1fr 1fr; }
+  gap: 16px;
 }
 
 .v-card {
@@ -213,12 +209,10 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
 }
 
 .v-header {
-  padding: 14px 16px;
+  padding: 16px 20px;
   background: var(--bg-subtle);
   border-bottom: 1px solid var(--border);
 }
@@ -227,13 +221,13 @@ body {
   font-size: 10px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
+  letter-spacing: 1px;
   color: var(--cyan);
   margin-bottom: 4px;
 }
 
 .v-title {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   color: #fff;
   line-height: 1.35;
@@ -242,15 +236,15 @@ body {
 .v-stats-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.3);
   border-bottom: 1px solid var(--border);
-  padding: 8px 0;
+  padding: 10px 0;
   text-align: center;
 }
 
 .v-stat .v-num {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   color: #fff;
 }
@@ -262,29 +256,55 @@ body {
 }
 
 .v-content {
-  padding: 16px;
-  flex: 1;
+  padding: 18px 20px;
 }
 
-.sharp-point {
+.v-content h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent-light);
+  margin: 14px 0 6px;
+}
+
+.v-content h4:first-child {
+  margin-top: 0;
+}
+
+.v-content ul {
+  padding-left: 18px;
   margin-bottom: 10px;
-  font-size: 12.5px;
-  color: var(--text-muted);
-  line-height: 1.55;
 }
 
-.sharp-point strong {
+.v-content li {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+
+.v-content li strong {
   color: var(--text);
 }
 
-.takeaway-box {
-  background: rgba(99, 102, 241, 0.08);
-  border-left: 3px solid var(--accent);
-  padding: 8px 12px;
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  font-size: 11.5px;
-  color: var(--accent-light);
-  margin-top: 10px;
+.highlight-box {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(244, 63, 94, 0.04));
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-top: 12px;
+}
+
+.highlight-box h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--amber);
+  margin-bottom: 4px;
+}
+
+.highlight-box p {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.6;
 }
 
 /* 4 Content Types */
@@ -394,52 +414,141 @@ body {
   color: var(--text-muted);
 }
 
-/* Script Master Card */
-.script-container {
+/* Accordion Controls */
+.accordion-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.btn-ctrl {
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
+  color: var(--text-muted);
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-ctrl:hover {
+  color: #fff;
+  border-color: var(--accent);
+  background: var(--accent-glow);
+}
+
+/* Accordion Details Master */
+.script-accordion {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  margin-bottom: 14px;
   overflow: hidden;
-  margin-bottom: 24px;
+  transition: border-color 0.25s ease;
 }
 
-.script-header-bar {
+.script-accordion[open] {
+  border-color: var(--accent);
+}
+
+.script-accordion summary {
   padding: 18px 20px;
-  background: linear-gradient(90deg, #18172c 0%, var(--card) 100%);
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  cursor: pointer;
+  list-style: none;
+  background: var(--card);
+  user-select: none;
+  transition: background 0.2s ease;
 }
 
-.script-num-tag {
-  font-size: 10px;
+.script-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.script-accordion summary:hover {
+  background: var(--card-hover);
+}
+
+.sum-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.sum-num-tag {
+  font-size: 10.5px;
   font-weight: 800;
   color: var(--cyan);
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.2px;
 }
 
-.script-title-text {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 18px;
-  font-weight: 800;
-  color: #fff;
-}
-
-.script-core-formula {
-  font-size: 12px;
-  color: var(--amber);
-  display: flex;
+.sum-toggle-indicator {
+  display: inline-flex;
   align-items: center;
   gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent-light);
+  background: rgba(99, 102, 241, 0.12);
+  padding: 3px 10px;
+  border-radius: 999px;
 }
 
-.script-shots-body {
-  padding: 18px 16px;
+.sum-toggle-indicator::after {
+  content: '▼';
+  font-size: 9px;
+  transition: transform 0.25s ease;
+}
+
+.script-accordion[open] .sum-toggle-indicator::after {
+  transform: rotate(180deg);
+}
+
+.sum-title-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16.5px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+/* Accordion Summary Overview Meta (Visible when closed) */
+.summary-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  margin-top: 8px;
+}
+
+.meta-row {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.meta-row strong {
+  color: var(--text);
+}
+
+.meta-row.formula {
+  color: var(--amber);
+}
+
+/* Accordion Body Content (Hidden until opened) */
+.accordion-body {
+  padding: 16px 18px 20px;
+  border-top: 1px solid var(--border);
+  background: var(--bg-subtle);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 /* Single Shot with 2 Angles Side-by-Side */
@@ -460,14 +569,14 @@ body {
 }
 
 .shot-index {
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 800;
   color: var(--accent-light);
   text-transform: uppercase;
 }
 
 .shot-name {
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 700;
   color: #fff;
 }
@@ -486,7 +595,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .angle-col {
@@ -500,7 +609,7 @@ body {
 
 .angle-badge-bar {
   padding: 6px 8px;
-  font-size: 10px;
+  font-size: 9.5px;
   font-weight: 800;
   display: flex;
   justify-content: space-between;
@@ -530,11 +639,6 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.3s ease;
-}
-
-.angle-img:hover {
-  transform: scale(1.03);
 }
 
 .angle-meta-desc {
@@ -559,7 +663,7 @@ body {
   border-left: 3px solid var(--cyan);
   padding: 10px 12px;
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  font-size: 12px;
+  font-size: 11.5px;
   color: #cbd5e1;
   line-height: 1.5;
 }
@@ -575,8 +679,8 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 900px;
-  background: rgba(16, 16, 26, 0.92);
+  max-width: 860px;
+  background: rgba(15, 15, 26, 0.94);
   backdrop-filter: blur(20px);
   border-top: 1px solid var(--border);
   display: flex;
@@ -611,7 +715,7 @@ body {
   background: rgba(99, 102, 241, 0.12);
 }
 
-/* Summary Card */
+/* Summary Box */
 .summary-box {
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%);
   border: 1px solid rgba(99, 102, 241, 0.4);
@@ -691,82 +795,95 @@ body {
     </div>
   </header>
 
-  <!-- SECTION 1: COMPETITOR & KEY VIDEOS -->
+  <!-- SECTION 1: DETAILED VIDEO ANALYSIS (ORIGINAL RICH BREAKDOWN) -->
   <section class="section" id="sec-analysis">
     <div class="sec-head">
-      <div class="sec-icon">⚡</div>
+      <div class="sec-icon">🎬</div>
       <div>
         <div class="sec-sub">Phần 1</div>
-        <h2 class="sec-title">Phân Tích 2 Video Win Sắc Nét</h2>
+        <h2 class="sec-title">Phân Tích Chi Tiết Video Đối Thủ (@tinanguyen2004)</h2>
       </div>
     </div>
 
     <div class="video-grid">
-      <!-- Video 1 -->
+      <!-- Video 1: Hifu là mê -->
       <div class="v-card">
         <div class="v-header">
-          <div class="v-badge">🏆 TOP WIN: PHỎNG VẤN TỰ NHIÊN</div>
-          <h3 class="v-title">"Hifu là mê" — Lấy Thoại Thực Tế & Cam Giấu Xa</h3>
+          <div class="v-badge">Video #1 — TOP PERFORMER: PHỎNG VẤN TỰ NHIÊN</div>
+          <h3 class="v-title">"Hifu là mê" — Phỏng Vấn Khách Hàng Tự Nhiên & Giấu Cam Xa</h3>
         </div>
         <div class="v-stats-row">
-          <div class="v-stat"><div class="v-num">79.3K</div><div class="v-lbl">Views</div></div>
+          <div class="v-stat"><div class="v-num">79K</div><div class="v-lbl">Views</div></div>
           <div class="v-stat"><div class="v-num">144</div><div class="v-lbl">Likes</div></div>
           <div class="v-stat"><div class="v-num">11</div><div class="v-lbl">Saves</div></div>
-          <div class="v-stat"><div class="v-num">49s</div><div class="v-lbl">Thời lượng</div></div>
+          <div class="v-stat"><div class="v-num">49s</div><div class="v-lbl">Dài</div></div>
         </div>
         <div class="v-content">
-          <div class="sharp-point">
-            <strong>1. Âm thanh mic thu trực tiếp:</strong> Giọng khách khen thật trên mic cài áo phá vỡ 100% rào cản nghi ngờ quảng cáo.
-          </div>
-          <div class="sharp-point">
-            <strong>2. Cú máy Fly-on-the-wall:</strong> Camera cố định đặt xa 2-3m, quay sau lưng/che mặt khách để người trải nghiệm thoải mái chia sẻ không gượng gạo.
-          </div>
-          <div class="sharp-point">
-            <strong>3. Visual Cường Điệu:</strong> Blazer đen sang trọng, ánh mắt cười chủ động tạo độ scroll-stop trong 0.3s đầu lướt feed.
-          </div>
-          <div class="takeaway-box">
-            🎯 <strong>Công thức chốt:</strong> Hỏi trước sự đồng ý + Quay giấu góc sau lưng + Thu âm tiếng thật = Social Proof bất bại.
+          <h4>🎯 Vì Sao Hấp Dẫn?</h4>
+          <ul>
+            <li><strong>Âm thanh là vũ khí #1:</strong> Thu trực tiếp giọng nói khách hàng khen dịch vụ. Lời chứng thực bằng giọng thật > bất kỳ lời quảng cáo nào.</li>
+            <li><strong>Camera đặt xa — Fly-on-the-wall:</strong> Cam cố định góc rộng, quay từ xa tạo cảm giác "quay trộm", khách hàng tự nhiên hơn, không bị gượng.</li>
+            <li><strong>Quay sau lưng khách:</strong> Không lộ mặt → khách thoải mái nói thật, phá vỡ rào cản "sợ bị lộ".</li>
+            <li><strong>Tina ăn mặc nổi bật:</strong> Blazer đen, dáng cao, ánh mắt cười tự tin → thu hút visual scroll-stop.</li>
+          </ul>
+
+          <h4>🎥 Cấu Trúc Shot</h4>
+          <ul>
+            <li><strong>Shot 1 (0-3s):</strong> Wide shot phòng khám bận rộn → "tấp nập = uy tín".</li>
+            <li><strong>Shot 2 (3-15s):</strong> Medium shot — Tina đứng cạnh giường, nói chuyện với khách. Mic cài áo, thu giọng nói trực tiếp.</li>
+            <li><strong>Shot 3 (15-30s):</strong> Close-up da → quy trình HIFU đang thực hiện, ánh đèn y khoa rọi rõ kết cấu.</li>
+            <li><strong>Shot 4 (30-49s):</strong> Medium-close — Khách nói feedback. Cam hướng về phía sau lưng khách, chỉ thấy Tina phía trước đang gật đầu, cười.</li>
+          </ul>
+
+          <div class="highlight-box">
+            <h4>💡 Bài Học Cốt Lõi</h4>
+            <p>Video win <strong>KHÔNG CẦN kịch bản</strong>, chỉ cần: (1) Mic thu âm thanh thật của khách, (2) Camera xa tạo tự nhiên, (3) Hỏi trước, quay sau lưng. Đây là công thức lặp lại được mỗi ngày.</p>
           </div>
         </div>
       </div>
 
-      <!-- Video 2 -->
+      <!-- Video 2: Double Day 8-8 Sale Campaign -->
       <div class="v-card">
         <div class="v-header">
-          <div class="v-badge">🚀 VIRAL 7.3M: CHIẾN DỊCH SALE 8-8</div>
-          <h3 class="v-title">"Double Day Combo 3 Triệu" — Match Cut Trước/Sau</h3>
+          <div class="v-badge">Video #2 — VIRAL SIÊU CHIẾN DỊCH (7.3M VIEWS)</div>
+          <h3 class="v-title">"Double Day luôn là dịp khách hàng lựa được combo" — Chiến Dịch 8-8</h3>
         </div>
         <div class="v-stats-row">
           <div class="v-stat"><div class="v-num">7.3M</div><div class="v-lbl">Views</div></div>
           <div class="v-stat"><div class="v-num">15.6K</div><div class="v-lbl">Likes</div></div>
           <div class="v-stat"><div class="v-num">2.7K</div><div class="v-lbl">Saves</div></div>
-          <div class="v-stat"><div class="v-num">44s</div><div class="v-lbl">Thời lượng</div></div>
+          <div class="v-stat"><div class="v-num">44s</div><div class="v-lbl">Dài</div></div>
         </div>
         <div class="v-content">
-          <div class="sharp-point">
-            <strong>1. Hook bằng con số cụ thể:</strong> "Combo 3 triệu" kích hoạt hiệu ứng tâm lý Loss Aversion (sợ bỏ lỡ ưu đãi lớn).
-          </div>
-          <div class="sharp-point">
-            <strong>2. Bối cảnh sảnh đông đúc:</strong> Cú máy toàn cảnh sảnh chật kín khách khẳng định vị thế uy tín phòng khám.
-          </div>
-          <div class="sharp-point">
-            <strong>3. Đòn bẩy Match Cut:</strong> Cận cảnh da mụn/thâm nhảy ngay sang da căng bóng cùng góc máy tạo độ tương phản cực đại.
-          </div>
-          <div class="takeaway-box">
-            🎯 <strong>Cấu trúc chuyển đổi:</strong> Social Proof Hook ➔ Nêu Offer Tại Chỗ ➔ Match Cut Trước/Sau ➔ Testimonial Bàn Khám.
+          <h4>🎯 Công Thức Viral 7.3M Views</h4>
+          <ul>
+            <li><strong>Hook giá sốc:</strong> "Combo 3 triệu" → con số cụ thể kích hoạt scroll-stop ngay lập tức.</li>
+            <li><strong>Social Proof mở đầu:</strong> Wide shot phòng khám đông nghẹt → bận rộn = đáng tin.</li>
+            <li><strong>Match Cut trước/sau:</strong> Cận da xấu → match cut cùng góc → da đẹp. Độ tương phản trực quan 100%.</li>
+            <li><strong>Testimonial chốt:</strong> Khách nói "% hài lòng" → kêu gọi đặt lịch tại bàn khám.</li>
+          </ul>
+
+          <h4>🏗️ Mô Hình Chuyển Đổi Thực Chiến</h4>
+          <p style="color:var(--cyan); font-weight:600; font-size:12.5px; line-height:1.5;">
+            Social Proof Hook ➔ Offer Presentation ➔ Close-up Pain Point ➔ Match Cut Before/After ➔ Live Consultation Closing
+          </p>
+
+          <div class="highlight-box">
+            <h4>💡 Bài Học Cốt Lõi</h4>
+            <p>Bán hàng không nói lý thuyết: Đứng giữa sảnh đông tuyên bố ưu đãi, quay cận khuyết điểm và match cut sang làn da bóng mịn ngay lập tức.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 2: 4 KIỂU NỘI DUNG -->
+  <!-- SECTION 2: 4 CONTENT TYPES -->
   <section class="section" id="sec-content-types">
     <div class="sec-head">
-      <div class="sec-icon">📊</div>
+      <div class="sec-icon">📋</div>
       <div>
         <div class="sec-sub">Phần 2</div>
-        <h2 class="sec-title">4 Kiểu Nội Dung Chuẩn Hoá Cho Kênh</h2>
+        <h2 class="sec-title">4 Kiểu Nội Dung Rút Từ Kênh Mẫu</h2>
       </div>
     </div>
 
@@ -853,7 +970,7 @@ body {
     </div>
   </section>
 
-  <!-- SECTION 4: 5 KỊCH BẢN QUAY 2 GÓC MÁY -->
+  <!-- SECTION 4: 5 KỊCH BẢN QUAY (ACCORDION UI/UX TỐI ƯU CUỘN) -->
   <section class="section" id="sec-scripts">
     <div class="sec-head">
       <div class="sec-icon">🎬</div>
@@ -863,16 +980,26 @@ body {
       </div>
     </div>
 
-    <!-- KỊCH BẢN 1 -->
-    <div class="script-container">
-      <div class="script-header-bar">
-        <div class="script-num-tag">Kịch Bản 01 • Social Proof</div>
-        <h3 class="script-title-text">🎤 "Chị Ơi, Da Chị Giờ Mịn Quá!" — Lấy Thoại Thực Tế</h3>
-        <div class="script-core-formula">
-          <span>⚡ Cốt lõi:</span> Mic thu giọng thật + Cam xa fly-on-the-wall + Che mặt bảo vệ riêng tư
+    <div class="accordion-controls">
+      <button class="btn-ctrl" onclick="toggleAllAccordions(true)">Mở Tất Cả</button>
+      <button class="btn-ctrl" onclick="toggleAllAccordions(false)">Thu Gọn Tất Cả</button>
+    </div>
+
+    <!-- KỊCH BẢN 1 ACCORDION -->
+    <details class="script-accordion">
+      <summary>
+        <div class="sum-top-row">
+          <span class="sum-num-tag">Kịch Bản 01 • Social Proof</span>
+          <span class="sum-toggle-indicator">Bấm xem 4 Shot (2 góc/shot)</span>
         </div>
-      </div>
-      <div class="script-shots-body">
+        <div class="sum-title-text">🎤 "Chị Ơi, Da Chị Giờ Mịn Quá!" — Lấy Thoại Thực Tế & Cam Giấu Xa</div>
+        <div class="summary-meta-grid">
+          <div class="meta-row"><strong>🎯 Mục đích & Để làm gì:</strong> Phá vỡ 100% nghi ngờ về quảng cáo lừa đảo, xây dựng bằng chứng sống (Social Proof) từ khách hàng thật đang điều trị tại phòng khám.</div>
+          <div class="meta-row"><strong>🧠 Logic tâm lý khán giả:</strong> Lời khen mộc mạc từ giọng nói thật của người nằm trên giường trị liệu có sức thuyết phục cao gấp 10 lần bài thuyết trình của bác sĩ.</div>
+          <div class="meta-row formula"><strong>⚡ Cốt lõi thực thi:</strong> Mic không dây thu âm tiếng thật + Camera góc rộng cố định đặt xa 2-3m + Che mặt/quay sau gáy bảo vệ quyền riêng tư.</div>
+        </div>
+      </summary>
+      <div class="accordion-body">
         
         <!-- Shot 1 -->
         <div class="shot-block">
@@ -888,7 +1015,7 @@ body {
                 <span>Wide 20mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb1_s1_goca_1787445664817.jpg" alt="Góc A Toàn sảnh phòng khám" class="angle-img">
+                <img src="assets/miumiu/kb1_s1_goca_1787445664817.jpg" alt="Góc A Toàn sảnh phòng khám" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Góc rộng trực diện (Eye-level):</strong> Bao quát sảnh đón tiếp đông đúc, nhân viên tiếp đón chuyên nghiệp.
@@ -900,7 +1027,7 @@ body {
                 <span>Medium 50mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb1_s1_gocb_1787445673517.jpg" alt="Góc B Trung cận quầy lễ tân" class="angle-img">
+                <img src="assets/miumiu/kb1_s1_gocb_1787445673517.jpg" alt="Góc B Trung cận quầy lễ tân" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Góc nghiêng 45° quầy lễ tân:</strong> Miu Miu trong trang phục chỉn chu cười rạng rỡ chào đón khách hàng.
@@ -926,7 +1053,7 @@ body {
                 <span>Medium-Wide 28mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb1_s2_goca_1787445683751.jpg" alt="Góc A Cam xa ngoài cửa" class="angle-img">
+                <img src="assets/miumiu/kb1_s2_goca_1787445683751.jpg" alt="Góc A Cam xa ngoài cửa" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Cam đặt xa ngoài cửa phòng:</strong> Khung hình nhìn qua rèm cửa tạo cảm giác chân thật như camera quan sát.
@@ -938,7 +1065,7 @@ body {
                 <span>Medium-Close 50mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb1_s2_gocb_1787445693015.jpg" alt="Góc B Qua vai khách nhìn bác sĩ" class="angle-img">
+                <img src="assets/miumiu/kb1_s2_gocb_1787445693015.jpg" alt="Góc B Qua vai khách nhìn bác sĩ" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Qua vai khách đội mũ y tế:</strong> Giấu mặt khách hoàn toàn, bắt trọn nụ cười ân cần của bác sĩ Miu Miu.
@@ -964,7 +1091,7 @@ body {
                 <span>Macro 100mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb1_s3_goca_1787445713672.jpg" alt="Góc A Macro tia laser" class="angle-img">
+                <img src="assets/miumiu/kb1_s3_goca_1787445713672.jpg" alt="Góc A Macro tia laser" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Cực cận đầu máy Thulium Laser:</strong> Ánh sáng quang học vi điểm tác động nhẹ nhàng trên bề mặt da.
@@ -976,7 +1103,7 @@ body {
                 <span>Medium 35mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb1_s3_gocb_1787445724386.jpg" alt="Góc B Bác sĩ chỉnh màn hình laser" class="angle-img">
+                <img src="assets/miumiu/kb1_s3_gocb_1787445724386.jpg" alt="Góc B Bác sĩ chỉnh màn hình laser" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Góc cao nhìn xuống toàn bàn thao tác:</strong> Miu Miu đeo kính bảo hộ chuẩn y khoa, điều chỉnh thông số chuẩn xác.
@@ -1002,7 +1129,7 @@ body {
                 <span>Medium 50mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb1_s4_goca_1787445736662.jpg" alt="Góc A Sau lưng khách bàn khám" class="angle-img">
+                <img src="assets/miumiu/kb1_s4_goca_1787445736662.jpg" alt="Góc A Sau lưng khách bàn khám" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Cam đặt sau lưng ghế khách:</strong> Thu trọn câu nói: <em>"Làm êm lắm em, da chị đỡ sần hẳn rồi!"</em>.
@@ -1014,7 +1141,7 @@ body {
                 <span>Medium 45°</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb1_s4_gocb_1787445749977.jpg" alt="Góc B Hai người cùng xem kết quả" class="angle-img">
+                <img src="assets/miumiu/kb1_s4_gocb_1787445749977.jpg" alt="Góc B Hai người cùng xem kết quả" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Góc nghiêng 45° ấm cúng:</strong> Hai người cùng nhìn vào màn hình tablet so sánh ảnh da căng bóng rạng ngời.
@@ -1027,18 +1154,23 @@ body {
         </div>
 
       </div>
-    </div>
+    </details>
 
-    <!-- KỊCH BẢN 2 -->
-    <div class="script-container">
-      <div class="script-header-bar">
-        <div class="script-num-tag">Kịch Bản 02 • Personal Branding</div>
-        <h3 class="script-title-text">🚶‍♀️ Walk & Talk Nạp Trend — "Một Ngày Năng Động Của Bác Sĩ"</h3>
-        <div class="script-core-formula">
-          <span>⚡ Cốt lõi:</span> Visual sang xịn + Nhịp cắt match cut + Bắt sóng trend âm thanh Instagram
+    <!-- KỊCH BẢN 2 ACCORDION -->
+    <details class="script-accordion">
+      <summary>
+        <div class="sum-top-row">
+          <span class="sum-num-tag">Kịch Bản 02 • Personal Branding</span>
+          <span class="sum-toggle-indicator">Bấm xem 4 Shot (2 góc/shot)</span>
         </div>
-      </div>
-      <div class="script-shots-body">
+        <div class="sum-title-text">🚶‍♀️ Walk & Talk Nạp Trend — "Một Ngày Năng Động Của Bác Sĩ"</div>
+        <div class="summary-meta-grid">
+          <div class="meta-row"><strong>🎯 Mục đích & Để làm gì:</strong> Xây dựng thương hiệu cá nhân Miu Miu với hình tượng nữ bác sĩ hiện đại, quyến rũ, thành đạt và năng động. Kéo reach tự nhiên từ thuật toán TikTok/Instagram.</div>
+          <div class="meta-row"><strong>🧠 Logic tâm lý khán giả:</strong> Người xem dừng lại 0.3s vì visual bắt mắt (outfit đẹp, nụ cười tự tin), sau đó bị cuốn theo nhịp chuyển cảnh nhanh, tạo cảm giác ngưỡng mộ và tin tưởng phong thái chuyên gia.</div>
+          <div class="meta-row formula"><strong>⚡ Cốt lõi thực thi:</strong> Visual sắc sảo (blazer đen/áo blouse tôn dáng) + Cắt ghép match cut theo beat nhạc trend thịnh hành + Bước đi tự tin trong không gian clinic cao cấp.</div>
+        </div>
+      </summary>
+      <div class="accordion-body">
 
         <!-- Shot 1 -->
         <div class="shot-block">
@@ -1054,7 +1186,7 @@ body {
                 <span>Wide 24mm Tracking</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb2_s1_goca_1787445769943.jpg" alt="Góc A Low angle bước vào sảnh" class="angle-img">
+                <img src="assets/miumiu/kb2_s1_goca_1787445769943.jpg" alt="Góc A Low angle bước vào sảnh" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Góc thấp bước đi trực diện:</strong> Tôn vóc dáng cao ráo, blazer đen thời thượng, ánh sáng ngược sang trọng.
@@ -1066,7 +1198,7 @@ body {
                 <span>Medium 45°</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb2_s1_gocb_1787445779729.jpg" alt="Góc B Nghiêng 45 độ quay đầu cười" class="angle-img">
+                <img src="assets/miumiu/kb2_s1_gocb_1787445779729.jpg" alt="Góc B Nghiêng 45 độ quay đầu cười" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Góc nghiêng 45° cửa kính:</strong> Miu Miu quay đầu nhìn camera mỉm cười tự tin, ăn khớp beat nhạc mở đầu.
@@ -1092,7 +1224,7 @@ body {
                 <span>Medium 35mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb2_s2_goca_1787445791101.jpg" alt="Góc A Tracking lùi hành lang" class="angle-img">
+                <img src="assets/miumiu/kb2_s2_goca_1787445791101.jpg" alt="Góc A Tracking lùi hành lang" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Tracking lùi chính diện:</strong> Miu Miu vừa rảo bước vừa check hồ sơ điều trị trên iPad, bác sĩ phụ tá làm việc sau lưng.
@@ -1104,7 +1236,7 @@ body {
                 <span>Medium 50mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb2_s2_gocb_1787445798921.jpg" alt="Góc B Khung cửa kính bước qua" class="angle-img">
+                <img src="assets/miumiu/kb2_s2_gocb_1787445798921.jpg" alt="Góc B Khung cửa kính bước qua" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Framing qua cửa kính:</strong> Bắt góc nhìn từ bên trong phòng khám nhìn ra hành lang Miu Miu sải bước nhanh nhẹn.
@@ -1130,7 +1262,7 @@ body {
                 <span>Close-up 70mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb2_s3_goca_1787445819683.jpg" alt="Góc A Chạm màn hình Pico Laser" class="angle-img">
+                <img src="assets/miumiu/kb2_s3_goca_1787445819683.jpg" alt="Góc A Chạm màn hình Pico Laser" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Cận cảnh ngón tay chạm màn hình:</strong> Giao diện laser Pico phát sáng công nghệ cao, đồ họa hiện đại.
@@ -1142,7 +1274,7 @@ body {
                 <span>Medium 50mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb2_s3_gocb_1787445828616.jpg" alt="Góc B Đứng cạnh cỗ máy laser bạc" class="angle-img">
+                <img src="assets/miumiu/kb2_s3_gocb_1787445828616.jpg" alt="Góc B Đứng cạnh cỗ máy laser bạc" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Góc ngang bên cạnh máy laser:</strong> Miu Miu trong áo blouse trắng đặt tay lên tay cầm điều trị, thần thái sắc bén.
@@ -1168,7 +1300,7 @@ body {
                 <span>Medium-Close 85mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb2_s4_goca_1787445838539.jpg" alt="Góc A Chân dung cười tự tin" class="angle-img">
+                <img src="assets/miumiu/kb2_s4_goca_1787445838539.jpg" alt="Góc A Chân dung cười tự tin" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Chân dung trực diện ánh nhìn ấm áp:</strong> Miu Miu nhìn thẳng vào ống kính với nụ cười thân thiện, gần gũi.
@@ -1180,7 +1312,7 @@ body {
                 <span>Medium 50mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb2_s4_gocb_1787445848884.jpg" alt="Góc B Power Pose logo phòng khám" class="angle-img">
+                <img src="assets/miumiu/kb2_s4_gocb_1787445848884.jpg" alt="Góc B Power Pose logo phòng khám" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Góc 45° khoanh tay tự tin:</strong> Tựa nhẹ cột sảnh với logo phòng khám mạ vàng lung linh phía sau.
@@ -1193,18 +1325,23 @@ body {
         </div>
 
       </div>
-    </div>
+    </details>
 
-    <!-- KỊCH BẢN 3 -->
-    <div class="script-container">
-      <div class="script-header-bar">
-        <div class="script-num-tag">Kịch Bản 03 • High Conversion Sale</div>
-        <h3 class="script-title-text">⚡ Siêu Combo "Laser + Peel" — Đòn Bẩy Match Cut</h3>
-        <div class="script-core-formula">
-          <span>⚡ Cốt lõi:</span> Giá sốc định danh + Cặp đôi Before/After cùng góc + Đánh vào tâm lý sợ lỡ cơ hội
+    <!-- KỊCH BẢN 3 ACCORDION -->
+    <details class="script-accordion">
+      <summary>
+        <div class="sum-top-row">
+          <span class="sum-num-tag">Kịch Bản 03 • High Conversion Sale</span>
+          <span class="sum-toggle-indicator">Bấm xem 4 Shot (2 góc/shot)</span>
         </div>
-      </div>
-      <div class="script-shots-body">
+        <div class="sum-title-text">⚡ Siêu Combo "Laser + Peel" — Đòn Bẩy Match Cut Trước/Sau</div>
+        <div class="summary-meta-grid">
+          <div class="meta-row"><strong>🎯 Mục đích & Để làm gì:</strong> Chuyển đổi doanh thu trực tiếp, tung các gói combo điều trị (2 triệu / 3 triệu) cho các dịp Siêu Sale Double Day hoặc tuần lễ tri ân.</div>
+          <div class="meta-row"><strong>🧠 Logic tâm lý khán giả:</strong> Kích hoạt tâm lý sợ mất món hời (Loss Aversion) qua con số giá cụ thể, kết hợp Match cut trước sau chứng minh hiệu quả mắt thấy tai nghe.</div>
+          <div class="meta-row formula"><strong>⚡ Cốt lõi thực thi:</strong> Tuyên bố giá sốc mở đầu + Match cut macro cùng góc máy (da nám ➔ da căng bóng) + Chốt hạ kêu gọi đặt lịch tại bàn tư vấn.</div>
+        </div>
+      </summary>
+      <div class="accordion-body">
 
         <!-- Shot 1 -->
         <div class="shot-block">
@@ -1220,7 +1357,7 @@ body {
                 <span>Medium 35mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb3_s1_goca_1787445891313.jpg" alt="Góc A Chỉ tay bảng ưu đãi" class="angle-img">
+                <img src="assets/miumiu/kb3_s1_goca_1787445891313.jpg" alt="Góc A Chỉ tay bảng ưu đãi" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Chính diện chỉ tay bảng ưu đãi:</strong> Miu Miu vui tươi: <em>"Tuần này săn ngay Combo Laser tặng Peel nha!"</em>.
@@ -1232,7 +1369,7 @@ body {
                 <span>Close-up 70mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb3_s1_gocb_1787445901718.jpg" alt="Góc B Cận mic năng lượng cao" class="angle-img">
+                <img src="assets/miumiu/kb3_s1_gocb_1787445901718.jpg" alt="Góc B Cận mic năng lượng cao" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Cận cảnh cầm mic không dây:</strong> Năng lượng cao, giọng dõng dạc, ánh mắt hút chặt sự chú ý.
@@ -1258,7 +1395,7 @@ body {
                 <span>Macro 100mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb3_s2_goca_1787445958998.jpg" alt="Góc A Da trước điều trị" class="angle-img">
+                <img src="assets/miumiu/kb3_s2_goca_1787445958998.jpg" alt="Góc A Da trước điều trị" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Cận má da sạm thâm, lỗ chân lông:</strong> Ánh sáng y khoa rọi rõ chân thực các đốm nám và khuyết điểm.
@@ -1270,7 +1407,7 @@ body {
                 <span>Macro 100mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb3_s2_gocb_1787445914191.jpg" alt="Góc B Da sau điều trị căng bóng" class="angle-img">
+                <img src="assets/miumiu/kb3_s2_gocb_1787445914191.jpg" alt="Góc B Da sau điều trị căng bóng" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Match cut cùng góc sau liệu trình:</strong> Làn da mịn màng, đều màu, lỗ chân lông se khít căng mọng.
@@ -1296,7 +1433,7 @@ body {
                 <span>Medium-Wide 35mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb3_s3_goca_1787445970043.jpg" alt="Góc A Bác sĩ ghi chép hồ sơ" class="angle-img">
+                <img src="assets/miumiu/kb3_s3_goca_1787445970043.jpg" alt="Góc A Bác sĩ ghi chép hồ sơ" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Toàn cảnh phòng điều trị:</strong> Miu Miu cầm sổ bệnh án kiểm tra độ phục hồi cùng khách hàng.
@@ -1308,7 +1445,7 @@ body {
                 <span>Medium 50mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb3_s3_gocb_1787445981439.jpg" alt="Góc B Khách cầm gương cười tươi" class="angle-img">
+                <img src="assets/miumiu/kb3_s3_gocb_1787445981439.jpg" alt="Góc B Khách cầm gương cười tươi" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Cận biểu cảm khách cầm gương tròn:</strong> Nụ cười vỡ òa khi thấy da mình láng mịn không tì vết.
@@ -1334,7 +1471,7 @@ body {
                 <span>Medium 45°</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb3_s4_goca_1787445991667.jpg" alt="Góc A Chỉ tay bảng giá combo" class="angle-img">
+                <img src="assets/miumiu/kb3_s4_goca_1787445991667.jpg" alt="Góc A Chỉ tay bảng giá combo" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Miu Miu chỉ tay vào phác đồ điều trị:</strong> Biển tên bác sĩ và sản phẩm y khoa cao cấp bày trí trang nhã.
@@ -1346,7 +1483,7 @@ body {
                 <span>Close-up 70mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb3_s4_gocb_1787446017506.jpg" alt="Góc B Màn hình đặt lịch hẹn" class="angle-img">
+                <img src="assets/miumiu/kb3_s4_gocb_1787446017506.jpg" alt="Góc B Màn hình đặt lịch hẹn" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Cận tay xác nhận lịch hẹn trên iPad:</strong> Khung giờ hẹn được chốt rõ ràng, tạo cảm giác slot trống sắp hết.
@@ -1359,18 +1496,23 @@ body {
         </div>
 
       </div>
-    </div>
+    </details>
 
-    <!-- KỊCH BẢN 4 -->
-    <div class="script-container">
-      <div class="script-header-bar">
-        <div class="script-num-tag">Kịch Bản 04 • ASMR Treatment</div>
-        <h3 class="script-title-text">🔬 ASMR Quy Trình Y Khoa — "Trải Nghiệm Thư Giãn Chuẩn Clinic"</h3>
-        <div class="script-core-formula">
-          <span>⚡ Cốt lõi:</span> Âm thanh gốc sống động + Cận cảnh mịn màng + Minh bạch từng bước vô trùng
+    <!-- KỊCH BẢN 4 ACCORDION -->
+    <details class="script-accordion">
+      <summary>
+        <div class="sum-top-row">
+          <span class="sum-num-tag">Kịch Bản 04 • ASMR Treatment</span>
+          <span class="sum-toggle-indicator">Bấm xem 4 Shot (2 góc/shot)</span>
         </div>
-      </div>
-      <div class="script-shots-body">
+        <div class="sum-title-text">🔬 ASMR Quy Trình Y Khoa — "Trải Nghiệm Thư Giãn Chuẩn Clinic"</div>
+        <div class="summary-meta-grid">
+          <div class="meta-row"><strong>🎯 Mục đích & Để làm gì:</strong> Kéo dài thời gian xem video (Watch Time), giải quyết nỗi sợ hãi về đau đớn khi can thiệp laser và khẳng định quy trình chuẩn y khoa vô trùng 100%.</div>
+          <div class="meta-row"><strong>🧠 Logic tâm lý khán giả:</strong> Âm thanh ASMR giòn tan cùng hình ảnh thao tác tỉ mỉ mang lại cảm giác dễ chịu, thỏa mãn giác quan, biến điều trị da liễu thành trải nghiệm nghỉ dưỡng.</div>
+          <div class="meta-row formula"><strong>⚡ Cốt lõi thực thi:</strong> Âm thanh micro thu sát đầu máy/cọ quét + Không lồng tiếng chen ngang + Khung hình cận cảnh ánh sáng sinh học êm ái.</div>
+        </div>
+      </summary>
+      <div class="accordion-body">
 
         <!-- Shot 1 -->
         <div class="shot-block">
@@ -1386,7 +1528,7 @@ body {
                 <span>Wide 24mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb4_s1_goca_1787446029865.jpg" alt="Góc A Phòng khám sạch bóng vô trùng" class="angle-img">
+                <img src="assets/miumiu/kb4_s1_goca_1787446029865.jpg" alt="Góc A Phòng khám sạch bóng vô trùng" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Toàn cảnh phòng thủ thuật sạch sẽ:</strong> Khay inox, đèn mổ chuyên dụng, Miu Miu chuẩn bị máy soi da.
@@ -1398,7 +1540,7 @@ body {
                 <span>Macro 90mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb4_s1_gocb_1787446037671.jpg" alt="Góc B Bóc túi dụng cụ vô trùng" class="angle-img">
+                <img src="assets/miumiu/kb4_s1_gocb_1787446037671.jpg" alt="Góc B Bóc túi dụng cụ vô trùng" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Cận cảnh bóc bao dụng cụ vô khuẩn:</strong> Âm thanh sột soạt ASMR của túi đóng gói y tế mở ra sắc nét.
@@ -1424,7 +1566,7 @@ body {
                 <span>Medium 45°</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb4_s2_goca_1787446049491.jpg" alt="Góc A Khách ngồi trong vòm soi da" class="angle-img">
+                <img src="assets/miumiu/kb4_s2_goca_1787446049491.jpg" alt="Góc A Khách ngồi trong vòm soi da" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Góc trung nghiêng bên máy soi:</strong> Miu Miu ân cần hướng dẫn khách định vị gương mặt vào vòm kính cảm biến.
@@ -1436,7 +1578,7 @@ body {
                 <span>Close-up 85mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb4_s2_gocb_1787446104031.jpg" alt="Góc B Màn hình phân tích sắc tố da" class="angle-img">
+                <img src="assets/miumiu/kb4_s2_gocb_1787446104031.jpg" alt="Góc B Màn hình phân tích sắc tố da" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Cận cảnh màn hình 3D Topography:</strong> Bản đồ nhiệt phân tích mật độ hắc sắc tố và độ ẩm tầng đáy biểu bì.
@@ -1462,7 +1604,7 @@ body {
                 <span>Macro 100mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb4_s3_goca_1787446115129.jpg" alt="Góc A Cận tia laser vi điểm" class="angle-img">
+                <img src="assets/miumiu/kb4_s3_goca_1787446115129.jpg" alt="Góc A Cận tia laser vi điểm" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Cực cận tia đỏ phát quang:</strong> Tiếng tích tắc giòn giã của xung laser trên bề mặt da đều đặn, chuẩn xác.
@@ -1474,7 +1616,7 @@ body {
                 <span>Medium-Close 50mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb4_s3_gocb_1787446126855.jpg" alt="Góc B Quét dung dịch êm ái" class="angle-img">
+                <img src="assets/miumiu/kb4_s3_gocb_1787446126855.jpg" alt="Góc B Quét dung dịch êm ái" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Góc qua vai bác sĩ quét cọ:</strong> Đầu cọ mềm mại lướt nhẹ đưa dưỡng chất thẩm thấu làm dịu da lập tức.
@@ -1500,7 +1642,7 @@ body {
                 <span>Macro 85mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb4_s4_goca_1787446136657.jpg" alt="Góc A Thoa dưỡng chất căng bóng" class="angle-img">
+                <img src="assets/miumiu/kb4_s4_goca_1787446136657.jpg" alt="Góc A Thoa dưỡng chất căng bóng" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Cận cảnh lớp dưỡng căng bóng:</strong> Làn da phủ lớp màng ẩm trong suốt, phản chiếu ánh đèn clinic long lanh.
@@ -1512,7 +1654,7 @@ body {
                 <span>Medium 45°</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb4_s4_gocb_1787446165866.jpg" alt="Góc B Khách nằm thư giãn vòm LED" class="angle-img">
+                <img src="assets/miumiu/kb4_s4_gocb_1787446165866.jpg" alt="Góc B Khách nằm thư giãn vòm LED" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Góc trung trong không gian êm dịu:</strong> Khách đeo kính bảo hộ thư thái dưới ánh sáng vàng - cam phục hồi collagen.
@@ -1525,18 +1667,23 @@ body {
         </div>
 
       </div>
-    </div>
+    </details>
 
-    <!-- KỊCH BẢN 5 -->
-    <div class="script-container">
-      <div class="script-header-bar">
-        <div class="script-num-tag">Kịch Bản 05 • Keynote & BTS Authority</div>
-        <h3 class="script-title-text">🎤 Diễn Thuyết Hội Nghị & Hậu Trường Thực Chiến</h3>
-        <div class="script-core-formula">
-          <span>⚡ Cốt lõi:</span> Vị thế diễn giả sân khấu + Hậu trường gần gũi + Cầu nối kiến thức về phòng khám
+    <!-- KỊCH BẢN 5 ACCORDION -->
+    <details class="script-accordion">
+      <summary>
+        <div class="sum-top-row">
+          <span class="sum-num-tag">Kịch Bản 05 • Keynote & BTS Authority</span>
+          <span class="sum-toggle-indicator">Bấm xem 4 Shot (2 góc/shot)</span>
         </div>
-      </div>
-      <div class="script-shots-body">
+        <div class="sum-title-text">🎤 Diễn Thuyết Hội Nghị & Hậu Trường Thực Chiến</div>
+        <div class="summary-meta-grid">
+          <div class="meta-row"><strong>🎯 Mục đích & Để làm gì:</strong> Định vị vị thế chuyên gia đầu ngành thông qua hình ảnh diễn giả tại các hội nghị y khoa da liễu lớn, đồng thời tạo cầu nối tin cậy đưa khách về phòng khám.</div>
+          <div class="meta-row"><strong>🧠 Logic tâm lý khán giả:</strong> Người đứng trên bục giảng chia sẻ cho hàng trăm bác sĩ khác nghiễm nhiên được xem là "bậc thầy tay nghề", khiến khách hàng yên tâm trao trọn gương mặt.</div>
+          <div class="meta-row formula"><strong>⚡ Cốt lõi thực thi:</strong> Đại cảnh hội trường hoành tráng + Cận cảnh thẻ đại biểu/hậu trường VIP + Match cut từ sân khấu hội nghị về ngay bàn tiếp đón khách hàng.</div>
+        </div>
+      </summary>
+      <div class="accordion-body">
 
         <!-- Shot 1 -->
         <div class="shot-block">
@@ -1552,7 +1699,7 @@ body {
                 <span>Wide 18mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb5_s1_goca_1787446176415.jpg" alt="Góc A Toàn cảnh hội trường hàng trăm bác sĩ" class="angle-img">
+                <img src="assets/miumiu/kb5_s1_goca_1787446176415.jpg" alt="Góc A Toàn cảnh hội trường hàng trăm bác sĩ" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Toàn cảnh hội trường lộng lẫy:</strong> Hàng trăm bác sĩ và chuyên gia ngồi kín khán phòng chăm chú theo dõi.
@@ -1564,7 +1711,7 @@ body {
                 <span>Medium 70mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb5_s1_gocb_1787446186667.jpg" alt="Góc B Miu Miu cầm mic diễn thuyết" class="angle-img">
+                <img src="assets/miumiu/kb5_s1_gocb_1787446186667.jpg" alt="Góc B Miu Miu cầm mic diễn thuyết" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Góc 45° Miu Miu trên bục phát biểu:</strong> Blazer đen sang trọng, cầm mic tự tin trình bày trước màn hình LED lớn.
@@ -1590,7 +1737,7 @@ body {
                 <span>Medium 35mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb5_s2_goca_1787446195804.jpg" alt="Góc A Thảo luận tài liệu cùng bác sĩ" class="angle-img">
+                <img src="assets/miumiu/kb5_s2_goca_1787446195804.jpg" alt="Góc A Thảo luận tài liệu cùng bác sĩ" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Góc trung sảnh VIP Lounge:</strong> Miu Miu cầm tài liệu nghiên cứu sôi nổi trao đổi cùng các giáo sư, đồng nghiệp.
@@ -1602,7 +1749,7 @@ body {
                 <span>Close-up 85mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb5_s2_gocb_1787446228032.jpg" alt="Góc B Cận thẻ đại biểu chính thức" class="angle-img">
+                <img src="assets/miumiu/kb5_s2_gocb_1787446228032.jpg" alt="Góc B Cận thẻ đại biểu chính thức" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Cận cảnh thẻ Speaker hội nghị:</strong> Thẻ tên kim loại sáng bóng in rõ danh xưng diễn giả uy tín.
@@ -1628,7 +1775,7 @@ body {
                 <span>Medium-Close 50mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb5_s3_goca_1787446237199.jpg" alt="Góc A Chỉ tay biểu đồ lâm sàng" class="angle-img">
+                <img src="assets/miumiu/kb5_s3_goca_1787446237199.jpg" alt="Góc A Chỉ tay biểu đồ lâm sàng" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Cận Miu Miu phân tích dữ liệu lâm sàng:</strong> Ngón tay dứt khoát chỉ vào biểu đồ phục hồi da trên slide.
@@ -1640,7 +1787,7 @@ body {
                 <span>Medium 45°</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb5_s3_gocb_1787446250344.jpg" alt="Góc B Khán phòng bác sĩ ghi chép" class="angle-img">
+                <img src="assets/miumiu/kb5_s3_gocb_1787446250344.jpg" alt="Góc B Khán phòng bác sĩ ghi chép" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Bắt góc khán phòng chăm chú:</strong> Các y bác sĩ chăm chỉ ghi chép vào sổ tay và máy tính bảng.
@@ -1666,7 +1813,7 @@ body {
                 <span>Medium 50mm</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb5_s4_goca_1787446261425.jpg" alt="Góc A Cúi chào tràng pháo tay" class="angle-img">
+                <img src="assets/miumiu/kb5_s4_goca_1787446261425.jpg" alt="Góc A Cúi chào tràng pháo tay" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Cúi chào giữa tràng pháo tay:</strong> Ánh đèn sân khấu lung linh soi rọi nụ cười mãn nguyện, kết thúc bài giảng.
@@ -1678,7 +1825,7 @@ body {
                 <span>Medium 45°</span>
               </div>
               <div class="angle-img-wrap">
-                <img src="assets/miumiu/kb5_s4_gocb_1787446295083.jpg" alt="Góc B Bắt tay đón khách tại phòng khám" class="angle-img">
+                <img src="assets/miumiu/kb5_s4_gocb_1787446295083.jpg" alt="Góc B Bắt tay đón khách tại phòng khám" class="angle-img" loading="lazy">
               </div>
               <div class="angle-meta-desc">
                 <strong>Match cut về quầy lễ tân:</strong> Bắt tay ấm áp đón khách: <em>"Công nghệ mới nhất, em dành trọn cho làn da của chị!"</em>.
@@ -1691,7 +1838,7 @@ body {
         </div>
 
       </div>
-    </div>
+    </details>
 
   </section>
 
@@ -1784,6 +1931,12 @@ function scrollToSection(id) {
     document.querySelectorAll('.nav-item').forEach(btn => btn.classList.remove('active'));
     event.currentTarget.classList.add('active');
   }
+}
+
+function toggleAllAccordions(isOpen) {
+  document.querySelectorAll('.script-accordion').forEach(acc => {
+    acc.open = isOpen;
+  });
 }
 
 // Auto highlight nav item on scroll
