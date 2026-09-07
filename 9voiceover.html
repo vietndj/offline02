@@ -1,0 +1,2786 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 1 • Thực Hành 1 Kịch Bản Với 9 Phong Cách Voiceover | FEDU AI Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-main: #060911;
+      --bg-surface: #0c121e;
+      --bg-card: #111a2b;
+      --bg-card-hover: #162238;
+      --card-inner: #152035;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(56, 189, 248, 0.35);
+      --border-glow: rgba(56, 189, 248, 0.6);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --cyan: #38bdf8;
+      --cyan-glow: rgba(56, 189, 248, 0.16);
+      --amber: #f59e0b;
+      --amber-glow: rgba(245, 158, 11, 0.16);
+      --emerald: #10b981;
+      --emerald-glow: rgba(16, 185, 129, 0.16);
+      --rose: #f43f5e;
+      --purple: #a855f7;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-main);
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.08) 0%, transparent 65%),
+        radial-gradient(circle at 10% 40%, rgba(168, 85, 247, 0.05) 0%, transparent 45%),
+        radial-gradient(circle at 90% 70%, rgba(16, 185, 129, 0.05) 0%, transparent 45%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 120px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* STICKY TOP BAR */
+    .top-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(6, 9, 17, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-badge {
+      background: linear-gradient(135deg, #0284c7, #2563eb);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: var(--radius-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .header-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .nav-pill {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .nav-pill:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    .nav-pill.active {
+      background: var(--cyan);
+      color: #000;
+      font-weight: 800;
+      border-color: var(--cyan);
+    }
+
+    /* HERO BANNER */
+    .hero-banner {
+      padding: 50px 0 35px;
+      text-align: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 6px 16px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-size: 34px;
+      font-weight: 900;
+      line-height: 1.25;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 850px;
+      margin: 0 auto 28px;
+      line-height: 1.6;
+    }
+
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 35px;
+    }
+
+    .stat-badge {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      padding: 8px 18px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .stat-badge b { color: var(--cyan); font-family: 'JetBrains Mono', monospace; }
+
+    /* FILTER & CONTROLS */
+    .filter-bar {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 35px;
+    }
+
+    .filter-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 7px 14px;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .tab-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .tab-btn.active {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+
+    .search-box {
+      position: relative;
+      min-width: 280px;
+    }
+
+    .search-box input {
+      width: 100%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 9999px;
+      padding: 9px 18px 9px 36px;
+      color: #fff;
+      font-size: 13px;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-box input:focus {
+      border-color: var(--cyan);
+    }
+
+    .search-box::before {
+      content: "🔍";
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 12px;
+      opacity: 0.6;
+    }
+
+    /* STYLES LIST */
+    .styles-container {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    /* CARD STRUCTURE */
+    .pk-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .pk-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-2px);
+    }
+
+    .pk-card-inner {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 28px;
+      padding: 28px;
+    }
+
+    @media (max-width: 960px) {
+      .pk-card-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* CỘT TRÁI */
+    .pk-visual-col {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .avatar-9-16 {
+      position: relative;
+      aspect-ratio: 9/16;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: #020408;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      cursor: zoom-in;
+    }
+
+    .avatar-9-16 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .avatar-9-16:hover img {
+      transform: scale(1.03);
+    }
+
+    .avatar-tag-top {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+    }
+
+    .dna-badge {
+      background: rgba(16, 185, 129, 0.9);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .avatar-tag-bottom {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      right: 12px;
+    }
+
+    .outfit-badge {
+      background: rgba(6, 9, 17, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #e2e8f0;
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 6px;
+      display: block;
+      line-height: 1.4;
+    }
+
+    .zoom-hint {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #cbd5e1;
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .avatar-9-16:hover .zoom-hint {
+      opacity: 1;
+    }
+
+    .quick-action-col {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .btn-primary-glow {
+      background: linear-gradient(135deg, #0284c7, #2563eb);
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .btn-primary-glow:hover {
+      opacity: 0.95;
+      transform: translateY(-1px);
+    }
+
+    .btn-copy-voice {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-copy-voice:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    /* CỘT PHẢI */
+    .pk-content-col {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .pk-badge-row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .code-pill {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 2px 10px;
+      border-radius: 6px;
+    }
+
+    .category-pill {
+      background: rgba(168, 85, 247, 0.15);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      color: #c084fc;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .pk-title {
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.35;
+      margin-bottom: 8px;
+    }
+
+    .pk-title a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .pk-title a:hover {
+      color: var(--cyan);
+    }
+
+    .pk-meta-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .meta-item b {
+      color: #cbd5e1;
+    }
+
+    /* SECTION BOXES */
+    .section-box {
+      background: var(--card-inner);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+    }
+
+    .box-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: #cbd5e1;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* FLAWS SECTION */
+    .flaws-box {
+      border-left: 3px solid var(--amber);
+    }
+
+    .flaws-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .flaw-item {
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+    }
+
+    .flaw-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .flaw-num {
+      background: rgba(245, 158, 11, 0.2);
+      color: var(--amber);
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .flaw-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #f1f5f9;
+    }
+
+    .flaw-comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      font-size: 12.5px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 640px) {
+      .flaw-comparison {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .flaw-old {
+      background: rgba(244, 63, 94, 0.06);
+      border: 1px solid rgba(244, 63, 94, 0.18);
+      padding: 8px 10px;
+      border-radius: 6px;
+    }
+
+    .flaw-new {
+      background: rgba(16, 185, 129, 0.06);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      padding: 8px 10px;
+      border-radius: 6px;
+    }
+
+    .badge-old {
+      font-size: 10.5px;
+      font-weight: 800;
+      color: #fb7185;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .badge-new {
+      font-size: 10.5px;
+      font-weight: 800;
+      color: #34d399;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .flaw-old p, .flaw-new p {
+      margin: 0;
+      color: #cbd5e1;
+    }
+
+    /* VOICE BOX */
+    .voice-box {
+      border-left: 3px solid var(--cyan);
+    }
+
+    .hook-line {
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px dashed rgba(56, 189, 248, 0.3);
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: #e0f2fe;
+      margin-bottom: 10px;
+    }
+
+    .voice-text {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: #cbd5e1;
+      font-style: italic;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 12px 14px;
+      border-radius: 6px;
+    }
+
+    /* SHOTS BOX */
+    .shots-box {
+      border-left: 3px solid var(--purple);
+    }
+
+    .accordion-toggle {
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .shots-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .shot-row {
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: 6px;
+      padding: 10px 14px;
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 14px;
+      align-items: center;
+    }
+
+    @media (max-width: 720px) {
+      .shot-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+    }
+
+    .shot-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .shot-idx {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--cyan);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .shot-time {
+      font-size: 11px;
+      color: var(--text-dim);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .shot-size-pill {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--cyan);
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      width: fit-content;
+    }
+
+    .shot-name {
+      font-size: 13px;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+
+    .shot-dir-line {
+      font-size: 11.5px;
+      color: #94a3b8;
+      margin-bottom: 4px;
+    }
+
+    .shot-desc-line {
+      font-size: 12px;
+      color: #cbd5e1;
+      margin-bottom: 2px;
+    }
+
+    .shot-voice-line {
+      font-size: 11.5px;
+      color: #38bdf8;
+    }
+
+    /* LIGHTBOX MODAL */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 2000;
+      background: rgba(2, 4, 8, 0.94);
+      backdrop-filter: blur(12px);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .lightbox-modal.active {
+      display: flex;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 550px;
+      width: 100%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+    }
+
+    .lightbox-img-wrap {
+      aspect-ratio: 9/16;
+      max-height: 75vh;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .lightbox-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .lightbox-footer {
+      padding: 16px 20px;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .lightbox-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .lightbox-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .btn-close-lightbox {
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 800;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      cursor: pointer;
+    }
+
+    /* TOAST NOTIFICATION */
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #10b981;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      z-index: 3000;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP STICKY BAR -->
+  <header class="top-header">
+    <div class="brand-group">
+      <a href="index.html" style="text-decoration:none; display:flex; align-items:center; gap:10px;">
+        <span class="brand-badge">FEDU OFFLINE 2.0</span>
+        <span class="header-title">Bài 1 • Thực Hành 1 Kịch Bản Với 9 Phong Cách Voiceover</span>
+      </a>
+    </div>
+    <div class="header-controls">
+      <a href="index.html" class="nav-pill">🏛️ Hub Tổng</a>
+      <a href="9voiceover.html" class="nav-pill active">🎙️ Bài 1: 9 Voiceover (Active)</a>
+      <a href="12canhtram.html" class="nav-pill">📹 Bài 2: 12 Cảnh Trám</a>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- HERO BANNER -->
+    <div class="hero-banner">
+      <div class="hero-eyebrow">
+        <span>🎙️ Master Hub • Phân Cảnh & Thần Thái Voiceover</span>
+      </div>
+      <h1 class="hero-title">1 Kịch Bản • 9 Phong Cách Biểu Đạt Thực Chiến</h1>
+      <p class="hero-subtitle">
+        Cùng một câu chuyện bế tắc trong kinh doanh, khi thay đổi <b>9 góc nhìn tâm lý, 9 phục trang độc bản</b> và <b>cỡ cảnh băm nhịp</b>, bạn sẽ tạo ra 9 định vị hoàn toàn khác nhau để chạm tới từng tệp khán giả riêng biệt.
+      </p>
+
+      <div class="stats-row">
+        <div class="stat-badge">🎭 <b>9</b> Phong Cách Biểu Đạt</div>
+        <div class="stat-badge">👔 <b>9</b> Phục Trang Độc Bản</div>
+        <div class="stat-badge">🎞️ <b>45</b> Cú Máy Phân Cảnh</div>
+        <div class="stat-badge">✨ <b>99%</b> Độ Giống Face DNA Anh Việt</div>
+      </div>
+    </div>
+
+    <!-- FILTER & SEARCH BAR -->
+    <div class="filter-bar">
+      <div class="filter-tabs" id="filterTabs">
+        <button type="button" class="tab-btn active" onclick="filterCategory('all', this)">Tất Cả (9)</button>
+        <button type="button" class="tab-btn" onclick="filterCategory('pressure', this)">Áp Lực Cày Đêm</button>
+        <button type="button" class="tab-btn" onclick="filterCategory('finance', this)">Vốn & Tiền Ads</button>
+        <button type="button" class="tab-btn" onclick="filterCategory('career', this)">Tuổi Tác & Bảo Thủ</button>
+        <button type="button" class="tab-btn" onclick="filterCategory('craftsman', this)">Nghề & Chuyên Môn</button>
+        <button type="button" class="tab-btn" onclick="filterCategory('pricing', this)">Cạnh Tranh Giá</button>
+        <button type="button" class="tab-btn" onclick="filterCategory('restart', this)">Làm Lại Từ Số 0</button>
+      </div>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Tìm theo từ khóa, phục trang, bối cảnh..." onkeyup="handleSearch()">
+      </div>
+    </div>
+
+    <!-- 9 STYLES CARDS LIST -->
+    <div class="styles-container" id="stylesContainer">
+      
+    <!-- CARD PK 01 -->
+    <article class="pk-card" data-category="pressure" data-search="ngồi cà phê 10h tối không dám về nhà góc quán cà phê đêm • ánh đèn vàng ấm • ly cà phê tan đá • màn hình laptop chủ kinh doanh nhỏ, người làm nghề cày cuốc trong đêm vì bất an tài chính áo len cổ tròn xám than (charcoal knit) mộc mạc pk 01">
+      <div class="pk-card-inner">
+        
+        <!-- CỘT TRÁI: HERO AVATAR 9:16 -->
+        <div class="pk-visual-col">
+          <div class="avatar-9-16" onclick="openLightbox('assets/voiceover_9phongcach/pk01_cafe_dem_charcoalknit.jpg', 'PK 01 • Ngồi Cà Phê 10h Tối Không Dám Về Nhà', 'Áo len cổ tròn xám than (Charcoal Knit) mộc mạc')">
+            <img src="assets/voiceover_9phongcach/pk01_cafe_dem_charcoalknit.jpg" alt="Ngồi Cà Phê 10h Tối Không Dám Về Nhà" loading="lazy">
+            <div class="avatar-tag-top">
+              <span class="dna-badge">✨ Face DNA 99%</span>
+            </div>
+            <div class="avatar-tag-bottom">
+              <span class="outfit-badge">👔 Áo len cổ tròn xám than (Charcoal Knit) mộc mạc</span>
+            </div>
+            <div class="zoom-hint">🔍 Chạm để phóng to</div>
+          </div>
+          
+          <div class="quick-action-col">
+            <a href="kich_ban_01_ngoi_ca_phe_10h_toi.html" class="btn-primary-glow">
+              <span>📖 Xem Toàn Bộ Phân Cảnh</span>
+              <span>→</span>
+            </a>
+            <button type="button" class="btn-copy-voice" onclick="copyVoice(`10h đêm rồi... ngồi ở góc quán này không phải vì chăm chỉ đâu anh em ạ. Ở nhà nằm lướt điện thoại thì thấy tội lỗi, ra đây nhìn vào máy tính cho đỡ bất an. Thấy bạn bè kiếm tiền kinh quá, mình mệt lả rồi mà không dám ngủ. Càng cố cày đêm thì càng thấy mình tụt lại phía sau... Đến khi nào mới thoát được cái vòng lặp này?`)">
+              📋 Sao Chép Thoại
+            </button>
+          </div>
+        </div>
+
+        <!-- CỘT PHẢI: CHI TIẾT & BÓC TÁCH -->
+        <div class="pk-content-col">
+          
+          <!-- HEADER THÔNG TIN -->
+          <div class="pk-header">
+            <div class="pk-badge-row">
+              <span class="code-pill">PK 01</span>
+              <span class="category-pill">TÂM LÝ & ÁP LỰC CÀY ĐÊM</span>
+            </div>
+            <h2 class="pk-title"><a href="kich_ban_01_ngoi_ca_phe_10h_toi.html">Ngồi Cà Phê 10h Tối Không Dám Về Nhà</a></h2>
+            <div class="pk-meta-grid">
+              <div class="meta-item">📍 <b>Bối cảnh:</b> Góc quán cà phê đêm • Ánh đèn vàng ấm • Ly cà phê tan đá • Màn hình laptop</div>
+              <div class="meta-item">🎯 <b>Tệp khán giả:</b> Chủ kinh doanh nhỏ, người làm nghề cày cuốc trong đêm vì bất an tài chính</div>
+            </div>
+          </div>
+
+          <!-- PHÂN TÍCH 3 ĐIỂM CHƯA ĐƯỢC & NÂNG CẤP THỰC CHIẾN -->
+          <div class="section-box flaws-box">
+            <div class="box-title">
+              <span>🛠️ Phân Tích 3 Điểm Nâng Cấp • "Nhìn Là Quay Được Theo Luôn"</span>
+            </div>
+            <div class="flaws-list">
+              
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 1</span>
+                <span class="flaw-title">Cỡ cảnh & Góc máy</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Cỡ cảnh trung tính (bán thân lơ lửng), góc máy đặt ngang mặt dead-center thiếu chiều sâu, không gợi được sự cô đơn lẻ loi.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Chuyển sang MCU (Trung cận) góc chéo 45° kết hợp Low Angle 15° hắt nhẹ, đặt ly cafe tan đá ở tiền cảnh làm mờ (blur foreground) để tạo độ sâu thị giác và cảm giác bơ vơ giữa quán vắng.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 2</span>
+                <span class="flaw-title">Bối cảnh & Đạo cụ</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Bối cảnh quán cà phê chung chung, đồ đạc xếp ngay ngắn giả tạo, thiếu các chi tiết thể hiện một đêm làm việc kiệt sức.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Bổ sung đạo cụ chuẩn đời thực: Ly cà phê đá tan nước đọng thành vũng quanh đế ly, quai balo vắt hờ trên lưng ghế, ánh sáng xanh từ màn hình laptop hắt trực diện vào sống mũi và mắt.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 3</span>
+                <span class="flaw-title">Thần thái & Văn phong</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Diễn viên nhìn máy quay cười gượng gạo, văn phong cũ dùng từ ngữ AI đao to búa lớn làm mất đi sự đồng cảm.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Biểu cảm tự nhiên: Mắt hơi nheo mỏi mệt, ngón tay day nhẹ khóe mắt trước khi ngẩng lên nhìn ống kính với nụ cười tự trào mộc mạc; thoại xưng 'anh em' gần gũi, chia sẻ thẳng thắn nỗi bất an.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+          <!-- VOICEOVER THOẠI -->
+          <div class="section-box voice-box">
+            <div class="box-title">
+              <span>🎙️ Thoại Voiceover Mộc Mạc (Chuẩn Giọng Anh Việt)</span>
+            </div>
+            <div class="hook-line">
+              <b>Hook mở màn:</b> "10h đêm rồi... ngồi ở góc quán này không phải vì chăm chỉ đâu anh em ạ."
+            </div>
+            <div class="voice-text">
+              "10h đêm rồi... ngồi ở góc quán này không phải vì chăm chỉ đâu anh em ạ. Ở nhà nằm lướt điện thoại thì thấy tội lỗi, ra đây nhìn vào máy tính cho đỡ bất an. Thấy bạn bè kiếm tiền kinh quá, mình mệt lả rồi mà không dám ngủ. Càng cố cày đêm thì càng thấy mình tụt lại phía sau... Đến khi nào mới thoát được cái vòng lặp này?"
+            </div>
+          </div>
+
+          <!-- 5 CÚ MÁY PHÂN CẢNH BĂM NHỊP -->
+          <div class="section-box shots-box">
+            <div class="box-title accordion-toggle" onclick="toggleShots(this)">
+              <span>🎞️ 5 Cú Máy Băm Nhịp Phân Cảnh (Storyboard Beats)</span>
+              <span class="arrow-indicator">▼</span>
+            </div>
+            <div class="shots-list">
+              
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 1</span>
+                <span class="shot-time">00:00 - 00:03</span>
+                <span class="shot-size-pill">Cận cảnh (CU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>A-Roll 1 (Selfie quán vắng)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang tầm mắt 0° • <b>Hướng:</b> Cầm tay chéo 30°</div>
+                <div class="shot-desc-line">🎬 Cầm máy selfie lia một vòng góc quán cafe đêm vắng người, cười trừ tự sự.</div>
+                <div class="shot-voice-line">🎙️ <i>"10h đêm rồi... ngồi đây không phải vì chăm đâu anh em ạ."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 2</span>
+                <span class="shot-time">00:03 - 00:07</span>
+                <span class="shot-size-pill">Trung cận (MCU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>A-Roll 2 (Tại bàn làm việc)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Hơi chúc 15° • <b>Hướng:</b> Chính diện đối diện</div>
+                <div class="shot-desc-line">🎬 Đặt máy xuống bàn cà phê, mặt trầm lại chân thành kể chuyện.</div>
+                <div class="shot-voice-line">🎙️ <i>"Ở nhà nằm lướt điện thoại thì thấy tội lỗi, ra đây nhìn vào máy tính cho đỡ bất an."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 3</span>
+                <span class="shot-time">00:07 - 00:12</span>
+                <span class="shot-size-pill">Cận đặc tả (CU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 1 (Cận tay day trán)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang mắt 10° • <b>Hướng:</b> Chếch vai trái</div>
+                <div class="shot-desc-line">🎬 Bàn tay vuốt trán mệt mỏi, màn hình laptop sáng giữa không gian phòng tối.</div>
+                <div class="shot-voice-line">🎙️ <i>"Thấy bạn bè kiếm tiền kinh quá, mình mệt lả rồi mà không dám ngủ."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 4</span>
+                <span class="shot-time">00:12 - 00:16</span>
+                <span class="shot-size-pill">Cận cảnh (CU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 2 (Góc nghiêng gọng kính)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang tai 0° • <b>Hướng:</b> Cắt nghiêng 90°</div>
+                <div class="shot-desc-line">🎬 Khóa nét tròng kính phản chiếu các tab báo cáo doanh số tụt giảm.</div>
+                <div class="shot-voice-line">🎙️ <i>"Càng cố cày đêm thì càng thấy mình tụt lại phía sau..."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 5</span>
+                <span class="shot-time">00:16 - 00:20</span>
+                <span class="shot-size-pill">Trung cảnh (MS)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>A-Roll 3 (Khép nắp laptop thở dài)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Hạ thấp 20° • <b>Hướng:</b> Từ dưới hắt lên</div>
+                <div class="shot-desc-line">🎬 Hai tay từ từ gập nắp máy tính lại, thở hắt ra một hơi, tự cười nhẹ nhõm chấp nhận.</div>
+                <div class="shot-voice-line">🎙️ <i>"Đến khi nào mới thoát được cái vòng lặp này?"</i></div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- CARD PK 02 -->
+    <article class="pk-card" data-category="finance" data-search="tiền mặt bằng & cửa hàng vắng khách cửa hàng mặt phố vắng khách • đồng hồ treo tường chạy • camera an ninh • quầy thu ngân chủ shop offline, chủ tiệm gánh áp lực tiền nhà 20-30 triệu/tháng sơ mi oxford sọc xanh xắn tay áo kiểu chủ tiệm thực chiến pk 02">
+      <div class="pk-card-inner">
+        
+        <!-- CỘT TRÁI: HERO AVATAR 9:16 -->
+        <div class="pk-visual-col">
+          <div class="avatar-9-16" onclick="openLightbox('assets/voiceover_9phongcach/pk02_chu_shop_oxfordstripes.jpg', 'PK 02 • Tiền Mặt Bằng & Cửa Hàng Vắng Khách', 'Sơ mi Oxford sọc xanh xắn tay áo kiểu chủ tiệm thực chiến')">
+            <img src="assets/voiceover_9phongcach/pk02_chu_shop_oxfordstripes.jpg" alt="Tiền Mặt Bằng & Cửa Hàng Vắng Khách" loading="lazy">
+            <div class="avatar-tag-top">
+              <span class="dna-badge">✨ Face DNA 99%</span>
+            </div>
+            <div class="avatar-tag-bottom">
+              <span class="outfit-badge">👔 Sơ mi Oxford sọc xanh xắn tay áo kiểu chủ tiệm thực chiến</span>
+            </div>
+            <div class="zoom-hint">🔍 Chạm để phóng to</div>
+          </div>
+          
+          <div class="quick-action-col">
+            <a href="kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach.html" class="btn-primary-glow">
+              <span>📖 Xem Toàn Bộ Phân Cảnh</span>
+              <span>→</span>
+            </a>
+            <button type="button" class="btn-copy-voice" onclick="copyVoice(`Sáng mở mắt ra là bay mất một triệu tiền mặt bằng... Khách thì đi ngang qua nhìn vào rồi lướt tiếp, mình thì ngồi sau quầy thu ngân bấm máy tính đếm chi phí. Tiền điện, tiền nhân viên, tiền cọc tháng sau... Cứ ngỡ mở quán ra là khách tự vào, ai ngờ ngoài kia họ mua trên sàn với xem video hết rồi.`)">
+              📋 Sao Chép Thoại
+            </button>
+          </div>
+        </div>
+
+        <!-- CỘT PHẢI: CHI TIẾT & BÓC TÁCH -->
+        <div class="pk-content-col">
+          
+          <!-- HEADER THÔNG TIN -->
+          <div class="pk-header">
+            <div class="pk-badge-row">
+              <span class="code-pill">PK 02</span>
+              <span class="category-pill">VỐN & CHI PHÍ MẶT BẰNG</span>
+            </div>
+            <h2 class="pk-title"><a href="kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach.html">Tiền Mặt Bằng & Cửa Hàng Vắng Khách</a></h2>
+            <div class="pk-meta-grid">
+              <div class="meta-item">📍 <b>Bối cảnh:</b> Cửa hàng mặt phố vắng khách • Đồng hồ treo tường chạy • Camera an ninh • Quầy thu ngân</div>
+              <div class="meta-item">🎯 <b>Tệp khán giả:</b> Chủ shop offline, chủ tiệm gánh áp lực tiền nhà 20-30 triệu/tháng</div>
+            </div>
+          </div>
+
+          <!-- PHÂN TÍCH 3 ĐIỂM CHƯA ĐƯỢC & NÂNG CẤP THỰC CHIẾN -->
+          <div class="section-box flaws-box">
+            <div class="box-title">
+              <span>🛠️ Phân Tích 3 Điểm Nâng Cấp • "Nhìn Là Quay Được Theo Luôn"</span>
+            </div>
+            <div class="flaws-list">
+              
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 1</span>
+                <span class="flaw-title">Cỡ cảnh & Góc máy</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Ảnh cũ chụp một người đứng ở quầy hàng như người mẫu thời trang, không toát lên gánh nặng của người làm chủ tiệm đang bị tiền nhà đè nặng.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Chuyển tư thế ngồi tựa quầy thu ngân xắn tay áo mộc mạc, một tay cầm xấp hóa đơn tiền điện/nhà, mắt nhìn chênh chếch ra ngoài cửa kính với vẻ mặt tính toán căng thẳng nhưng điềm tĩnh.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 2</span>
+                <span class="flaw-title">Bối cảnh & Đạo cụ</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Cửa hàng quá sáng trưng, kệ hàng trống trơn vô lý hoặc tràn ngập hàng hiệu xa lạ, không đúng chất tiệm bán lẻ thực tế.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Thiết lập bối cảnh quầy thu ngân thực tế với máy POS cà thẻ, cuộn giấy in bill, đồng hồ treo tường đang nhích từng giây; ánh sáng ban ngày hắt qua kính cửa mặt tiền vắng bóng khách.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 3</span>
+                <span class="flaw-title">Thần thái & Văn phong</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Góc máy tĩnh không có sự đối lập giữa không gian tiệm rộng mênh mông và bóng dáng đơn độc của người chủ tiệm.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Thiết kế góc Wide OTS (từ trong quầy nhìn ra cửa kính vắng bóng người) đối lập với Extreme Close-up màn hình máy tính bỏ túi đang cộng dồn chi phí tiền triệu mỗi ngày.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+          <!-- VOICEOVER THOẠI -->
+          <div class="section-box voice-box">
+            <div class="box-title">
+              <span>🎙️ Thoại Voiceover Mộc Mạc (Chuẩn Giọng Anh Việt)</span>
+            </div>
+            <div class="hook-line">
+              <b>Hook mở màn:</b> "Sáng mở mắt ra là bay mất một triệu tiền mặt bằng... khách thì lướt mạng, mình thì ngồi ngáp vặt."
+            </div>
+            <div class="voice-text">
+              "Sáng mở mắt ra là bay mất một triệu tiền mặt bằng... Khách thì đi ngang qua nhìn vào rồi lướt tiếp, mình thì ngồi sau quầy thu ngân bấm máy tính đếm chi phí. Tiền điện, tiền nhân viên, tiền cọc tháng sau... Cứ ngỡ mở quán ra là khách tự vào, ai ngờ ngoài kia họ mua trên sàn với xem video hết rồi."
+            </div>
+          </div>
+
+          <!-- 5 CÚ MÁY PHÂN CẢNH BĂM NHỊP -->
+          <div class="section-box shots-box">
+            <div class="box-title accordion-toggle" onclick="toggleShots(this)">
+              <span>🎞️ 5 Cú Máy Băm Nhịp Phân Cảnh (Storyboard Beats)</span>
+              <span class="arrow-indicator">▼</span>
+            </div>
+            <div class="shots-list">
+              
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 1</span>
+                <span class="shot-time">00:00 - 00:03</span>
+                <span class="shot-size-pill">Trung cảnh (MCU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>A-Roll 1 (Quầy thu ngân)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang tầm ngực • <b>Hướng:</b> Chính diện quầy</div>
+                <div class="shot-desc-line">🎬 Đứng sau quầy thu ngân xắn tay áo, tay cầm xấp hóa đơn, nhìn vào ống kính chia sẻ.</div>
+                <div class="shot-voice-line">🎙️ <i>"Sáng mở mắt ra là bay mất một triệu tiền mặt bằng..."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 2</span>
+                <span class="shot-time">00:03 - 00:07</span>
+                <span class="shot-size-pill">Toàn cảnh (Wide)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 1 (Đồng hồ & Cửa vắng)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Góc cao 45° • <b>Hướng:</b> Nhìn từ góc trần</div>
+                <div class="shot-desc-line">🎬 Góc nhìn camera an ninh từ góc tường: cửa hàng sáng đèn nhưng không một bóng khách ghé.</div>
+                <div class="shot-voice-line">🎙️ <i>"Khách thì đi ngang qua nhìn vào rồi lướt tiếp..."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 3</span>
+                <span class="shot-time">00:07 - 00:11</span>
+                <span class="shot-size-pill">Đặc tả (Macro ECU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 2 (Máy tính tính tiền)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Thẳng đứng 80° • <b>Hướng:</b> Từ trên xuống</div>
+                <div class="shot-desc-line">🎬 Ngón tay bấm liên tục trên bàn phím máy tính cầm tay: cộng dồn từng khoản chi phí đỏ rực.</div>
+                <div class="shot-voice-line">🎙️ <i>"Tiền điện, tiền nhân viên, tiền cọc tháng sau..."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 4</span>
+                <span class="shot-time">00:11 - 00:15</span>
+                <span class="shot-size-pill">Cận qua vai (OTS)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 3 (Lướt xem video shop khác)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang vai 15° • <b>Hướng:</b> Sau lưng chếch phải</div>
+                <div class="shot-desc-line">🎬 Cầm điện thoại soi video livestream của đối thủ nườm nượp đơn hàng trên sàn.</div>
+                <div class="shot-voice-line">🎙️ <i>"Cứ ngỡ mở quán ra là khách tự vào, ai ngờ ngoài kia họ xem video hết rồi."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 5</span>
+                <span class="shot-time">00:15 - 00:20</span>
+                <span class="shot-size-pill">Cận cảnh (CU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>A-Roll 2 (Gật đầu tự vấn)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang tầm mắt 0° • <b>Hướng:</b> Chính diện</div>
+                <div class="shot-desc-line">🎬 Nhìn thẳng vào ống kính, khẽ thở ra mỉm cười quyết tâm thay đổi tư duy bán hàng.</div>
+                <div class="shot-voice-line">🎙️ <i>"Không lên mạng làm video thì làm sao người ta biết mình ở đâu?"</i></div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- CARD PK 03 -->
+    <article class="pk-card" data-category="career" data-search="chững lại sau tuổi 30 & nhìn đối thủ triệu view bàn làm việc đêm • màn hình soi kênh tiktok đối thủ trẻ • nếp nhăn khóe mắt • ánh đèn vàng người làm nghề 30+, có chuyên môn nhưng ngại xuất hiện video ngắn vì sợ mất hình ảnh áo polo dệt kim đen tuyền tối giản, đứng đắn tuổi 30+ pk 03">
+      <div class="pk-card-inner">
+        
+        <!-- CỘT TRÁI: HERO AVATAR 9:16 -->
+        <div class="pk-visual-col">
+          <div class="avatar-9-16" onclick="openLightbox('assets/voiceover_9phongcach/pk03_tuoi_30_blackpolo.jpg', 'PK 03 • Chững Lại Sau Tuổi 30 & Nhìn Đối Thủ Triệu View', 'Áo polo dệt kim đen tuyền tối giản, đứng đắn tuổi 30+')">
+            <img src="assets/voiceover_9phongcach/pk03_tuoi_30_blackpolo.jpg" alt="Chững Lại Sau Tuổi 30 & Nhìn Đối Thủ Triệu View" loading="lazy">
+            <div class="avatar-tag-top">
+              <span class="dna-badge">✨ Face DNA 99%</span>
+            </div>
+            <div class="avatar-tag-bottom">
+              <span class="outfit-badge">👔 Áo polo dệt kim đen tuyền tối giản, đứng đắn tuổi 30+</span>
+            </div>
+            <div class="zoom-hint">🔍 Chạm để phóng to</div>
+          </div>
+          
+          <div class="quick-action-col">
+            <a href="kich_ban_03_chung_lai_sau_tuoi_30.html" class="btn-primary-glow">
+              <span>📖 Xem Toàn Bộ Phân Cảnh</span>
+              <span>→</span>
+            </a>
+            <button type="button" class="btn-copy-voice" onclick="copyVoice(`Hơn 30 tuổi, làm nghề cả chục năm... Nhìn mấy bạn trẻ mới vào nghề họ quay video ngắn hút hết khách, trong lòng vừa tức vừa ngượng. Mình có tay nghề thật thì giấu kín trong phòng, người ta nói hay hơn thì lên xu hướng mỗi ngày. Cái tôi bảo thủ nó giết chết mình từ lúc nào không biết!`)">
+              📋 Sao Chép Thoại
+            </button>
+          </div>
+        </div>
+
+        <!-- CỘT PHẢI: CHI TIẾT & BÓC TÁCH -->
+        <div class="pk-content-col">
+          
+          <!-- HEADER THÔNG TIN -->
+          <div class="pk-header">
+            <div class="pk-badge-row">
+              <span class="code-pill">PK 03</span>
+              <span class="category-pill">TUỔI TÁC & BẢO THỦ NGHỀ</span>
+            </div>
+            <h2 class="pk-title"><a href="kich_ban_03_chung_lai_sau_tuoi_30.html">Chững Lại Sau Tuổi 30 & Nhìn Đối Thủ Triệu View</a></h2>
+            <div class="pk-meta-grid">
+              <div class="meta-item">📍 <b>Bối cảnh:</b> Bàn làm việc đêm • Màn hình soi kênh TikTok đối thủ trẻ • Nếp nhăn khóe mắt • Ánh đèn vàng</div>
+              <div class="meta-item">🎯 <b>Tệp khán giả:</b> Người làm nghề 30+, có chuyên môn nhưng ngại xuất hiện video ngắn vì sợ mất hình ảnh</div>
+            </div>
+          </div>
+
+          <!-- PHÂN TÍCH 3 ĐIỂM CHƯA ĐƯỢC & NÂNG CẤP THỰC CHIẾN -->
+          <div class="section-box flaws-box">
+            <div class="box-title">
+              <span>🛠️ Phân Tích 3 Điểm Nâng Cấp • "Nhìn Là Quay Được Theo Luôn"</span>
+            </div>
+            <div class="flaws-list">
+              
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 1</span>
+                <span class="flaw-title">Cỡ cảnh & Góc máy</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Ảnh cũ thể hiện sự già nua mệt mỏi tiêu cực, ánh mắt nhìn vào khoảng không vô định thiếu tính kết nối với người xem.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Tạo hình người đàn ông ngoài 30 chững chạc, áo polo đen dệt kim lịch thiệp, ánh mắt sâu sắc đối diện camera với nụ cười chua chát nhưng cầu thị, dám nhìn thẳng vào sự thật bảo thủ của mình.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 2</span>
+                <span class="flaw-title">Bối cảnh & Đạo cụ</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Thiếu sự đối chiếu trực quan giữa chuyên môn lâu năm và thế giới video ngắn của giới trẻ.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Sử dụng màn hình điện thoại/iPad đặt nghiêng trên bàn gỗ phản chiếu video TikTok đối thủ, bên cạnh là cuốn giáo trình hoặc dụng cụ nghề lâu năm có dấu vết thời gian.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 3</span>
+                <span class="flaw-title">Thần thái & Văn phong</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Ánh sáng đơn điệu, không tạo được chiều sâu tâm lý của người đứng ở ngã ba đường sự nghiệp.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Bố trí ánh sáng Key Light ấm một bên mặt, phần còn lại chìm nhẹ trong bóng đổ (chiaroscuro) nhấn mạnh sự trăn trở nội tâm và khoảnh khắc thức tỉnh.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+          <!-- VOICEOVER THOẠI -->
+          <div class="section-box voice-box">
+            <div class="box-title">
+              <span>🎙️ Thoại Voiceover Mộc Mạc (Chuẩn Giọng Anh Việt)</span>
+            </div>
+            <div class="hook-line">
+              <b>Hook mở màn:</b> "Hơn 30 tuổi, làm nghề cả chục năm... nhìn đứa mới vào nghề nó hốt hết khách nhờ video ngắn."
+            </div>
+            <div class="voice-text">
+              "Hơn 30 tuổi, làm nghề cả chục năm... Nhìn mấy bạn trẻ mới vào nghề họ quay video ngắn hút hết khách, trong lòng vừa tức vừa ngượng. Mình có tay nghề thật thì giấu kín trong phòng, người ta nói hay hơn thì lên xu hướng mỗi ngày. Cái tôi bảo thủ nó giết chết mình từ lúc nào không biết!"
+            </div>
+          </div>
+
+          <!-- 5 CÚ MÁY PHÂN CẢNH BĂM NHỊP -->
+          <div class="section-box shots-box">
+            <div class="box-title accordion-toggle" onclick="toggleShots(this)">
+              <span>🎞️ 5 Cú Máy Băm Nhịp Phân Cảnh (Storyboard Beats)</span>
+              <span class="arrow-indicator">▼</span>
+            </div>
+            <div class="shots-list">
+              
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 1</span>
+                <span class="shot-time">00:00 - 00:03</span>
+                <span class="shot-size-pill">Trung cận (MCU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>A-Roll 1 (Tâm sự tuổi 30)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang tầm mắt 0° • <b>Hướng:</b> Chính diện trực tiếp</div>
+                <div class="shot-desc-line">🎬 Ngồi thẳng lưng trước bàn làm việc, ánh mắt tự sự nhìn thẳng người xem.</div>
+                <div class="shot-voice-line">🎙️ <i>"Hơn 30 tuổi, làm nghề cả chục năm..."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 2</span>
+                <span class="shot-time">00:03 - 00:07</span>
+                <span class="shot-size-pill">Cận qua vai (OTS)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 1 (Màn hình soi đối thủ)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang vai 20° • <b>Hướng:</b> Chếch lưng phải</div>
+                <div class="shot-desc-line">🎬 Màn hình điện thoại hiển thị kênh TikTok của bạn trẻ với hàng triệu lượt xem.</div>
+                <div class="shot-voice-line">🎙️ <i>"...nhìn đứa mới vào nghề nó hốt hết khách nhờ video ngắn."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 3</span>
+                <span class="shot-time">00:07 - 00:11</span>
+                <span class="shot-size-pill">Đặc tả (Macro ECU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 2 (Khóe mắt & Nếp nhăn)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang trán 0° • <b>Hướng:</b> Cắt góc nghiêng 45°</div>
+                <div class="shot-desc-line">🎬 Cận cảnh khóe mắt và nếp nhăn trăn trở, biểu cảm vừa tiếc nuối vừa thức tỉnh.</div>
+                <div class="shot-voice-line">🎙️ <i>"Mình có tay nghề thật thì giấu kín trong phòng..."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 4</span>
+                <span class="shot-time">00:11 - 00:15</span>
+                <span class="shot-size-pill">Cận cảnh (CU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 3 (Gõ nhẹ ngón tay)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Sát mặt bàn • <b>Hướng:</b> Chính diện tay</div>
+                <div class="shot-desc-line">🎬 Ngón tay đeo nhẫn gõ nhẹ nhịp nhàng xuống mặt bàn gỗ, nhịp điệu của sự dứt khoát.</div>
+                <div class="shot-voice-line">🎙️ <i>"...cái tôi bảo thủ nó giết chết mình từ lúc nào không biết!"</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 5</span>
+                <span class="shot-time">00:15 - 00:20</span>
+                <span class="shot-size-pill">Trung cảnh (MS)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>A-Roll 2 (Cười buông bỏ cái tôi)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Hơi ngửa nhẹ 10° • <b>Hướng:</b> Chính diện</div>
+                <div class="shot-desc-line">🎬 Nở nụ cười thanh thản, tay vươn ra chạm vào chiếc điện thoại trên giá đỡ.</div>
+                <div class="shot-voice-line">🎙️ <i>"Hạ cái tôi xuống, cầm máy lên quay... thì có sao đâu?"</i></div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- CARD PK 04 -->
+    <article class="pk-card" data-category="finance" data-search="tiền quảng cáo ăn hết tiền lãi trình quản lý ads manager đỏ lòm chỉ số chi phí • đèn bàn studio • biểu đồ cắn tiền chủ shop online phụ thuộc vào facebook/tiktok ads, chi phí cắn sạch lợi nhuận casual navy blazer mặc ngoài áo thun trắng tối giản pk 04">
+      <div class="pk-card-inner">
+        
+        <!-- CỘT TRÁI: HERO AVATAR 9:16 -->
+        <div class="pk-visual-col">
+          <div class="avatar-9-16" onclick="openLightbox('assets/voiceover_9phongcach/pk04_tien_ads_navyblazer.jpg', 'PK 04 • Tiền Quảng Cáo Ăn Hết Tiền Lãi', 'Casual navy blazer mặc ngoài áo thun trắng tối giản')">
+            <img src="assets/voiceover_9phongcach/pk04_tien_ads_navyblazer.jpg" alt="Tiền Quảng Cáo Ăn Hết Tiền Lãi" loading="lazy">
+            <div class="avatar-tag-top">
+              <span class="dna-badge">✨ Face DNA 99%</span>
+            </div>
+            <div class="avatar-tag-bottom">
+              <span class="outfit-badge">👔 Casual navy blazer mặc ngoài áo thun trắng tối giản</span>
+            </div>
+            <div class="zoom-hint">🔍 Chạm để phóng to</div>
+          </div>
+          
+          <div class="quick-action-col">
+            <a href="kich_ban_04_tien_quang_cao_an_het_tien_lai.html" class="btn-primary-glow">
+              <span>📖 Xem Toàn Bộ Phân Cảnh</span>
+              <span>→</span>
+            </a>
+            <button type="button" class="btn-copy-voice" onclick="copyVoice(`Cứ 5 phút tôi lại mở màn hình kiểm tra một lần... Tiền quảng cáo trừ đều đặn từng phút mà tin nhắn về toàn hỏi dạo rồi im lặng. Doanh thu nhìn thì hoành tráng mấy trăm triệu, trừ tiền ads, tiền hoàn hàng, tiền kho bãi... mở két ra chả còn được bao nhiêu. Mình làm thuê cho các nền tảng quảng cáo mất rồi!`)">
+              📋 Sao Chép Thoại
+            </button>
+          </div>
+        </div>
+
+        <!-- CỘT PHẢI: CHI TIẾT & BÓC TÁCH -->
+        <div class="pk-content-col">
+          
+          <!-- HEADER THÔNG TIN -->
+          <div class="pk-header">
+            <div class="pk-badge-row">
+              <span class="code-pill">PK 04</span>
+              <span class="category-pill">VỐN & CHI PHÍ MẶT BẰNG</span>
+            </div>
+            <h2 class="pk-title"><a href="kich_ban_04_tien_quang_cao_an_het_tien_lai.html">Tiền Quảng Cáo Ăn Hết Tiền Lãi</a></h2>
+            <div class="pk-meta-grid">
+              <div class="meta-item">📍 <b>Bối cảnh:</b> Trình quản lý Ads Manager đỏ lòm chỉ số chi phí • Đèn bàn studio • Biểu đồ cắn tiền</div>
+              <div class="meta-item">🎯 <b>Tệp khán giả:</b> Chủ shop online phụ thuộc vào Facebook/TikTok Ads, chi phí cắn sạch lợi nhuận</div>
+            </div>
+          </div>
+
+          <!-- PHÂN TÍCH 3 ĐIỂM CHƯA ĐƯỢC & NÂNG CẤP THỰC CHIẾN -->
+          <div class="section-box flaws-box">
+            <div class="box-title">
+              <span>🛠️ Phân Tích 3 Điểm Nâng Cấp • "Nhìn Là Quay Được Theo Luôn"</span>
+            </div>
+            <div class="flaws-list">
+              
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 1</span>
+                <span class="flaw-title">Cỡ cảnh & Góc máy</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Ảnh cũ chụp chung chung trước máy tính như lập trình viên, không thấy rõ nỗi đau của người chạy ads bị cắn tiền.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Nâng cấp góc MCU với navy blazer phối thun trắng chỉn chu, tay chống cằm suy tư, màn hình hiển thị trực tiếp đồ thị chiến dịch quảng cáo đỏ rực chỉ số CPM/CPA tăng vọt.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 2</span>
+                <span class="flaw-title">Bối cảnh & Đạo cụ</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Ánh sáng màn hình quá chói lòa làm cháy sáng mặt, mất hết chi tiết da và biểu cảm đôi mắt.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Cân bằng ánh sáng viền xanh (screen glow) nhẹ nhàng ở cạnh mặt, phối hợp đèn key light studio vàng ấm tạo độ nổi khối khuôn mặt chuẩn 8K.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 3</span>
+                <span class="flaw-title">Thần thái & Văn phong</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Không có điểm nhấn hành động để người quay hình học viên thực hành theo được ngay.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Chia rõ động tác cụ thể: Tay cuộn chuột liên tục -> Mắt nheo lại nhìn số tiền trừ -> Thở dài tựa lưng -> Bấm nút tắt chiến dịch đốt tiền.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+          <!-- VOICEOVER THOẠI -->
+          <div class="section-box voice-box">
+            <div class="box-title">
+              <span>🎙️ Thoại Voiceover Mộc Mạc (Chuẩn Giọng Anh Việt)</span>
+            </div>
+            <div class="hook-line">
+              <b>Hook mở màn:</b> "Cứ 5 phút tôi lại mở màn hình kiểm tra một lần... tiền nạp thì trừ đều mà đơn không thấy đâu."
+            </div>
+            <div class="voice-text">
+              "Cứ 5 phút tôi lại mở màn hình kiểm tra một lần... Tiền quảng cáo trừ đều đặn từng phút mà tin nhắn về toàn hỏi dạo rồi im lặng. Doanh thu nhìn thì hoành tráng mấy trăm triệu, trừ tiền ads, tiền hoàn hàng, tiền kho bãi... mở két ra chả còn được bao nhiêu. Mình làm thuê cho các nền tảng quảng cáo mất rồi!"
+            </div>
+          </div>
+
+          <!-- 5 CÚ MÁY PHÂN CẢNH BĂM NHỊP -->
+          <div class="section-box shots-box">
+            <div class="box-title accordion-toggle" onclick="toggleShots(this)">
+              <span>🎞️ 5 Cú Máy Băm Nhịp Phân Cảnh (Storyboard Beats)</span>
+              <span class="arrow-indicator">▼</span>
+            </div>
+            <div class="shots-list">
+              
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 1</span>
+                <span class="shot-time">00:00 - 00:03</span>
+                <span class="shot-size-pill">Trung cận (MCU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>A-Roll 1 (Soi màn hình ads)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang mắt 0° • <b>Hướng:</b> Chếch 30° màn hình</div>
+                <div class="shot-desc-line">🎬 Ngồi trước màn hình máy tính hiển thị Ads Manager, tay vuốt cằm trầm tư.</div>
+                <div class="shot-voice-line">🎙️ <i>"Cứ 5 phút tôi lại mở màn hình kiểm tra một lần..."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 2</span>
+                <span class="shot-time">00:03 - 00:07</span>
+                <span class="shot-size-pill">Đặc tả (Macro ECU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 1 (Số dư trừ liên tục)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang màn hình • <b>Hướng:</b> Chính diện số liệu</div>
+                <div class="shot-desc-line">🎬 Cận cảnh dòng tiền nạp và số tiền đã chi tiêu nhảy số liên tục, đơn hàng = 0.</div>
+                <div class="shot-voice-line">🎙️ <i>"...tiền nạp thì trừ đều mà đơn không thấy đâu."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 3</span>
+                <span class="shot-time">00:07 - 00:11</span>
+                <span class="shot-size-pill">Cận cảnh (CU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 2 (Điện thoại tin nhắn rác)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Sát mặt bàn • <b>Hướng:</b> Từ trên chúc xuống</div>
+                <div class="shot-desc-line">🎬 Màn hình điện thoại hiện danh sách tin nhắn hỏi giá rồi 'đã xem' không phản hồi.</div>
+                <div class="shot-voice-line">🎙️ <i>"Tin nhắn về toàn hỏi dạo rồi im lặng..."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 4</span>
+                <span class="shot-time">00:11 - 00:15</span>
+                <span class="shot-size-pill">Trung cảnh (MS)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 3 (Gập sổ tính lãi lỗ)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang ngực • <b>Hướng:</b> Chếch vai trái</div>
+                <div class="shot-desc-line">🎬 Bàn tay ném bút xuống cuốn sổ chi phí, hai tay xoa mặt ngao ngán.</div>
+                <div class="shot-voice-line">🎙️ <i>"Mở két ra chẳng còn được bao nhiêu, làm thuê cho nền tảng rồi!"</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 5</span>
+                <span class="shot-time">00:15 - 00:20</span>
+                <span class="shot-size-pill">Cận cảnh (CU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>A-Roll 2 (Thức tỉnh tự làm kênh)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang tầm mắt • <b>Hướng:</b> Chính diện</div>
+                <div class="shot-desc-line">🎬 Ngẩng đầu lên, ánh mắt sắc sảo, dứt khoát tìm hướng đi mới.</div>
+                <div class="shot-voice-line">🎙️ <i>"Thay vì nuôi ads, sao mình không tự làm video kéo khách tự nhiên?"</i></div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- CARD PK 05 -->
+    <article class="pk-card" data-category="relationships" data-search="hết khách từ mối quan hệ quen danh bạ điện thoại • tin nhắn zalo đã nhắn hết một lượt • bàn gỗ ấm áp • ánh sáng cửa sổ người làm dịch vụ, tư vấn, bảo hiểm, bất động sản, bán hàng đa kênh sơ mi linen đũi màu be mở cúc cổ tự nhiên mộc mạc pk 05">
+      <div class="pk-card-inner">
+        
+        <!-- CỘT TRÁI: HERO AVATAR 9:16 -->
+        <div class="pk-visual-col">
+          <div class="avatar-9-16" onclick="openLightbox('assets/voiceover_9phongcach/pk05_khach_quen_beigelinen.jpg', 'PK 05 • Hết Khách Từ Mối Quan Hệ Quen', 'Sơ mi linen đũi màu be mở cúc cổ tự nhiên mộc mạc')">
+            <img src="assets/voiceover_9phongcach/pk05_khach_quen_beigelinen.jpg" alt="Hết Khách Từ Mối Quan Hệ Quen" loading="lazy">
+            <div class="avatar-tag-top">
+              <span class="dna-badge">✨ Face DNA 99%</span>
+            </div>
+            <div class="avatar-tag-bottom">
+              <span class="outfit-badge">👔 Sơ mi linen đũi màu be mở cúc cổ tự nhiên mộc mạc</span>
+            </div>
+            <div class="zoom-hint">🔍 Chạm để phóng to</div>
+          </div>
+          
+          <div class="quick-action-col">
+            <a href="kich_ban_05_het_khach_tu_moi_quan_he_quen.html" class="btn-primary-glow">
+              <span>📖 Xem Toàn Bộ Phân Cảnh</span>
+              <span>→</span>
+            </a>
+            <button type="button" class="btn-copy-voice" onclick="copyVoice(`Lướt danh bạ từ trên xuống dưới mà không biết nhắn cho ai... Ban đầu mở ra thì bạn bè, người thân ủng hộ nhiệt tình lắm. Nhưng người quen thì mua được mấy lần? Nhắn mãi người ta ngại, người ta lảng đi lúc nào không hay. Không tìm được tệp khách lạ ngoài kia thì sớm muộn cũng đóng cửa!`)">
+              📋 Sao Chép Thoại
+            </button>
+          </div>
+        </div>
+
+        <!-- CỘT PHẢI: CHI TIẾT & BÓC TÁCH -->
+        <div class="pk-content-col">
+          
+          <!-- HEADER THÔNG TIN -->
+          <div class="pk-header">
+            <div class="pk-badge-row">
+              <span class="code-pill">PK 05</span>
+              <span class="category-pill">TỆP KHÁCH & QUAN HỆ QUEN</span>
+            </div>
+            <h2 class="pk-title"><a href="kich_ban_05_het_khach_tu_moi_quan_he_quen.html">Hết Khách Từ Mối Quan Hệ Quen</a></h2>
+            <div class="pk-meta-grid">
+              <div class="meta-item">📍 <b>Bối cảnh:</b> Danh bạ điện thoại • Tin nhắn Zalo đã nhắn hết một lượt • Bàn gỗ ấm áp • Ánh sáng cửa sổ</div>
+              <div class="meta-item">🎯 <b>Tệp khán giả:</b> Người làm dịch vụ, tư vấn, bảo hiểm, bất động sản, bán hàng đa kênh</div>
+            </div>
+          </div>
+
+          <!-- PHÂN TÍCH 3 ĐIỂM CHƯA ĐƯỢC & NÂNG CẤP THỰC CHIẾN -->
+          <div class="section-box flaws-box">
+            <div class="box-title">
+              <span>🛠️ Phân Tích 3 Điểm Nâng Cấp • "Nhìn Là Quay Được Theo Luôn"</span>
+            </div>
+            <div class="flaws-list">
+              
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 1</span>
+                <span class="flaw-title">Cỡ cảnh & Góc máy</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Hình ảnh cũ quá kịch, tạo dáng cầm điện thoại giả tạo như chụp ảnh stock ngân hàng ảnh miễn phí.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Nâng cấp áo sơ mi linen đũi be ấm áp, ngồi tại bàn làm việc gỗ tự nhiên, hai tay cầm điện thoại ngón cái cuộn danh bạ Zalo thật, ánh mắt đăm chiêu chân thực.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 2</span>
+                <span class="flaw-title">Bối cảnh & Đạo cụ</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Thiếu tính đời thường, không gian xa hoa không phản ánh được sự đơn độc của người bán hàng tự thân.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Bối cảnh ánh sáng cửa sổ tự nhiên dịu nhẹ (soft window light), điểm xuyết cây xanh góc phòng, tạo bầu không khí tĩnh lặng sâu sắc.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 3</span>
+                <span class="flaw-title">Thần thái & Văn phong</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Không có góc quay thể hiện chi tiết màn hình tin nhắn khách hàng một cách tinh tế.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Thiết lập góc máy POV màn hình điện thoại mờ danh sách tên liên hệ, bắt trọn khoảnh khắc ngón tay dừng lại không dám bấm gửi.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+          <!-- VOICEOVER THOẠI -->
+          <div class="section-box voice-box">
+            <div class="box-title">
+              <span>🎙️ Thoại Voiceover Mộc Mạc (Chuẩn Giọng Anh Việt)</span>
+            </div>
+            <div class="hook-line">
+              <b>Hook mở màn:</b> "Lướt danh bạ từ trên xuống dưới mà không biết nhắn cho ai... bán cho người quen hết cửa rồi."
+            </div>
+            <div class="voice-text">
+              "Lướt danh bạ từ trên xuống dưới mà không biết nhắn cho ai... Ban đầu mở ra thì bạn bè, người thân ủng hộ nhiệt tình lắm. Nhưng người quen thì mua được mấy lần? Nhắn mãi người ta ngại, người ta lảng đi lúc nào không hay. Không tìm được tệp khách lạ ngoài kia thì sớm muộn cũng đóng cửa!"
+            </div>
+          </div>
+
+          <!-- 5 CÚ MÁY PHÂN CẢNH BĂM NHỊP -->
+          <div class="section-box shots-box">
+            <div class="box-title accordion-toggle" onclick="toggleShots(this)">
+              <span>🎞️ 5 Cú Máy Băm Nhịp Phân Cảnh (Storyboard Beats)</span>
+              <span class="arrow-indicator">▼</span>
+            </div>
+            <div class="shots-list">
+              
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 1</span>
+                <span class="shot-time">00:00 - 00:03</span>
+                <span class="shot-size-pill">Trung cận (MCU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>A-Roll 1 (Cuộn danh bạ ngập ngừng)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang tầm ngực • <b>Hướng:</b> Chính diện</div>
+                <div class="shot-desc-line">🎬 Cầm điện thoại, ngón tay cuộn chậm danh bạ, ánh mắt ngập ngừng suy tư.</div>
+                <div class="shot-voice-line">🎙️ <i>"Lướt danh bạ từ trên xuống dưới mà không biết nhắn cho ai..."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 2</span>
+                <span class="shot-time">00:03 - 00:07</span>
+                <span class="shot-size-pill">Đặc tả (Macro ECU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 1 (Màn hình tin nhắn Zalo)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Thẳng đứng 60° • <b>Hướng:</b> Vào màn hình</div>
+                <div class="shot-desc-line">🎬 Cận cảnh tin nhắn cũ 'Dạo này thế nào bạn?' đã xem nhưng không trả lời.</div>
+                <div class="shot-voice-line">🎙️ <i>"...người quen ủng hộ mãi sao được, nhắn thêm thì người ta ngại."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 3</span>
+                <span class="shot-time">00:07 - 00:11</span>
+                <span class="shot-size-pill">Cận cảnh (CU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 2 (Cốc nước trên bàn gỗ)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Sát mặt bàn • <b>Hướng:</b> Góc ngang 0°</div>
+                <div class="shot-desc-line">🎬 Bàn tay cầm cốc nước xoay nhẹ, nhìn dòng người vội vã qua khung kính.</div>
+                <div class="shot-voice-line">🎙️ <i>"Khách quen mua một lần rồi thôi, còn khách lạ thì không biết mình là ai."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 4</span>
+                <span class="shot-time">00:11 - 00:15</span>
+                <span class="shot-size-pill">Cận thấp (Low Angle)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 3 (Đặt điện thoại úp xuống)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Mặt bàn hất nhẹ 15° • <b>Hướng:</b> Chéo bàn tay</div>
+                <div class="shot-desc-line">🎬 Dứt khoát úp màn hình điện thoại xuống mặt bàn gỗ.</div>
+                <div class="shot-voice-line">🎙️ <i>"Không chủ động hút tệp khách mới thì sớm muộn cũng cạn đường."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 5</span>
+                <span class="shot-time">00:15 - 00:20</span>
+                <span class="shot-size-pill">Cận cảnh (CU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>A-Roll 2 (Mỉm cười thấu hiểu)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang tầm mắt • <b>Hướng:</b> Chính diện ấm áp</div>
+                <div class="shot-desc-line">🎬 Ngẩng lên nở nụ cười điềm tĩnh, ấm áp, sẵn sàng kết nối cộng đồng mới.</div>
+                <div class="shot-voice-line">🎙️ <i>"Phải xuất hiện ngoài kia để khách lạ tự tìm đến mình thôi!"</i></div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- CARD PK 06 -->
+    <article class="pk-card" data-category="craftsman" data-search="tay nghề tốt nhưng vẫn vắng khách xưởng chế tác thủ công • đồ nghề sáng bóng • mẫu thiết kế tỉ mỉ • đèn vàng xưởng thợ thợ thủ công, kỹ thuật viên, chuyên gia có chuyên môn sâu nhưng yếu truyền thông áo khoác thợ canvas màu caramel/nâu đất, lót thun xám pk 06">
+      <div class="pk-card-inner">
+        
+        <!-- CỘT TRÁI: HERO AVATAR 9:16 -->
+        <div class="pk-visual-col">
+          <div class="avatar-9-16" onclick="openLightbox('assets/voiceover_9phongcach/pk06_gioi_nghe_workwear.jpg', 'PK 06 • Tay Nghề Tốt Nhưng Vẫn Vắng Khách', 'Áo khoác thợ canvas màu caramel/nâu đất, lót thun xám')">
+            <img src="assets/voiceover_9phongcach/pk06_gioi_nghe_workwear.jpg" alt="Tay Nghề Tốt Nhưng Vẫn Vắng Khách" loading="lazy">
+            <div class="avatar-tag-top">
+              <span class="dna-badge">✨ Face DNA 99%</span>
+            </div>
+            <div class="avatar-tag-bottom">
+              <span class="outfit-badge">👔 Áo khoác thợ canvas màu caramel/nâu đất, lót thun xám</span>
+            </div>
+            <div class="zoom-hint">🔍 Chạm để phóng to</div>
+          </div>
+          
+          <div class="quick-action-col">
+            <a href="kich_ban_06_tay_nghe_tot_nhung_van_vang_khach.html" class="btn-primary-glow">
+              <span>📖 Xem Toàn Bộ Phân Cảnh</span>
+              <span>→</span>
+            </a>
+            <button type="button" class="btn-copy-voice" onclick="copyVoice(`Làm nghề mười mấy năm, đồ mình làm ra tự tin không thua ai... Thế mà cái tiệm đối diện làm ẩu hơn mình, dùng đồ rẻ tiền hơn mà khách cứ nườm nượp. Hóa ra trong thời buổi này, làm giỏi mà không biết kể chuyện thì coi như giấu nghề dưới đáy giếng. Khách hàng họ đâu có mắt thần để biết mình tâm huyết thế nào!`)">
+              📋 Sao Chép Thoại
+            </button>
+          </div>
+        </div>
+
+        <!-- CỘT PHẢI: CHI TIẾT & BÓC TÁCH -->
+        <div class="pk-content-col">
+          
+          <!-- HEADER THÔNG TIN -->
+          <div class="pk-header">
+            <div class="pk-badge-row">
+              <span class="code-pill">PK 06</span>
+              <span class="category-pill">NGHỀ & CHUYÊN MÔN SÂU</span>
+            </div>
+            <h2 class="pk-title"><a href="kich_ban_06_tay_nghe_tot_nhung_van_vang_khach.html">Tay Nghề Tốt Nhưng Vẫn Vắng Khách</a></h2>
+            <div class="pk-meta-grid">
+              <div class="meta-item">📍 <b>Bối cảnh:</b> Xưởng chế tác thủ công • Đồ nghề sáng bóng • Mẫu thiết kế tỉ mỉ • Đèn vàng xưởng thợ</div>
+              <div class="meta-item">🎯 <b>Tệp khán giả:</b> Thợ thủ công, kỹ thuật viên, chuyên gia có chuyên môn sâu nhưng yếu truyền thông</div>
+            </div>
+          </div>
+
+          <!-- PHÂN TÍCH 3 ĐIỂM CHƯA ĐƯỢC & NÂNG CẤP THỰC CHIẾN -->
+          <div class="section-box flaws-box">
+            <div class="box-title">
+              <span>🛠️ Phân Tích 3 Điểm Nâng Cấp • "Nhìn Là Quay Được Theo Luôn"</span>
+            </div>
+            <div class="flaws-list">
+              
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 1</span>
+                <span class="flaw-title">Cỡ cảnh & Góc máy</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Ảnh cũ mặc sơ mi trắng đứng trong xưởng thợ trông hoàn toàn lạc quẻ, không ra chất nghệ nhân/thợ làm nghề.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Nâng cấp áo khoác thợ canvas màu caramel/nâu đất phong trần, ngồi bên bàn gỗ mộc xưởng thủ công với dụng cụ thước kẹp, dao tỉa, bản vẽ phác thảo.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 2</span>
+                <span class="flaw-title">Bối cảnh & Đạo cụ</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Gương mặt nghiêm nghị kiểu trừng phạt, tạo cảm giác cay cú hằn học thay vì sự chiêm nghiệm sâu sắc của người làm nghề.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Ánh mắt ấm áp, nụ cười tự trào rạng rỡ của một người thợ lành nghề nhận ra chân lý: Kỹ năng giỏi phải đi đôi với khả năng truyền thông chân thực.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 3</span>
+                <span class="flaw-title">Thần thái & Văn phong</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Bối cảnh xưởng thiếu chi tiết bề mặt vật liệu, ánh sáng phẳng dẹt.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Đèn vàng tungsten chiếu rọi chi tiết thớ gỗ, đường may và các công cụ thủ công sáng bóng, tạo cảm giác xưởng nghề thực thụ.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+          <!-- VOICEOVER THOẠI -->
+          <div class="section-box voice-box">
+            <div class="box-title">
+              <span>🎙️ Thoại Voiceover Mộc Mạc (Chuẩn Giọng Anh Việt)</span>
+            </div>
+            <div class="hook-line">
+              <b>Hook mở màn:</b> "Làm nghề mười mấy năm, đồ mình làm ra tự tin không thua ai... thế mà quán đối diện làm dở lại đông hơn."
+            </div>
+            <div class="voice-text">
+              "Làm nghề mười mấy năm, đồ mình làm ra tự tin không thua ai... Thế mà cái tiệm đối diện làm ẩu hơn mình, dùng đồ rẻ tiền hơn mà khách cứ nườm nượp. Hóa ra trong thời buổi này, làm giỏi mà không biết kể chuyện thì coi như giấu nghề dưới đáy giếng. Khách hàng họ đâu có mắt thần để biết mình tâm huyết thế nào!"
+            </div>
+          </div>
+
+          <!-- 5 CÚ MÁY PHÂN CẢNH BĂM NHỊP -->
+          <div class="section-box shots-box">
+            <div class="box-title accordion-toggle" onclick="toggleShots(this)">
+              <span>🎞️ 5 Cú Máy Băm Nhịp Phân Cảnh (Storyboard Beats)</span>
+              <span class="arrow-indicator">▼</span>
+            </div>
+            <div class="shots-list">
+              
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 1</span>
+                <span class="shot-time">00:00 - 00:03</span>
+                <span class="shot-size-pill">Trung cận (MCU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>A-Roll 1 (Tâm sự bên bàn thợ)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang tầm ngực • <b>Hướng:</b> Chính diện</div>
+                <div class="shot-desc-line">🎬 Ngồi cạnh bàn làm việc xưởng thợ, cười tự sự chia sẻ nỗi lòng.</div>
+                <div class="shot-voice-line">🎙️ <i>"Làm nghề mười mấy năm, đồ mình làm ra không thua ai..."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 2</span>
+                <span class="shot-time">00:03 - 00:07</span>
+                <span class="shot-size-pill">Đặc tả (Macro ECU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 1 (Bàn tay vuốt đường kim mũi chỉ)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Góc nghiêng 45° • <b>Hướng:</b> Vào phôi sản phẩm</div>
+                <div class="shot-desc-line">🎬 Đôi bàn tay thô ráp tỉ mỉ nắn nót từng góc cạnh sản phẩm thủ công tinh xảo.</div>
+                <div class="shot-voice-line">🎙️ <i>"...từng đường cắt, từng mối nối đều làm kỹ đến từng milimet."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 3</span>
+                <span class="shot-time">00:07 - 00:11</span>
+                <span class="shot-size-pill">Cận qua vai (OTS)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 2 (Nhìn qua cửa tiệm đối diện)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang vai 10° • <b>Hướng:</b> Hướng ra đường</div>
+                <div class="shot-desc-line">🎬 Ánh mắt nhìn qua khung cửa kính sang quán đối diện tấp nập xe cộ qua lại.</div>
+                <div class="shot-voice-line">🎙️ <i>"Thế mà tiệm đối diện làm dở hơn lại đông khách hơn mình..."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 4</span>
+                <span class="shot-time">00:11 - 00:15</span>
+                <span class="shot-size-pill">Cận cảnh (CU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 3 (Cầm đồ nghề ngẫm nghĩ)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Hạ thấp 15° • <b>Hướng:</b> Chính diện bàn tay</div>
+                <div class="shot-desc-line">🎬 Bàn tay đặt chiếc búa thợ xuống mặt bàn gỗ, tiếng 'cộc' dứt khoát thức tỉnh.</div>
+                <div class="shot-voice-line">🎙️ <i>"Khách đâu có mắt thần để thấy được cái tâm của người làm nghề!"</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 5</span>
+                <span class="shot-time">00:15 - 00:20</span>
+                <span class="shot-size-pill">Trung cận (MCU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>A-Roll 2 (Nụ cười người thợ thức thời)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang tầm mắt • <b>Hướng:</b> Chính diện rạng rỡ</div>
+                <div class="shot-desc-line">🎬 Nụ cười bừng sáng, cầm chiếc điện thoại lên chuẩn bị quay quá trình chế tác.</div>
+                <div class="shot-voice-line">🎙️ <i>"Phải tự cầm máy quay lại từng công đoạn cho người ta thấy thôi!"</i></div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- CARD PK 07 -->
+    <article class="pk-card" data-category="pricing" data-search="bị cạnh tranh bởi tổng kho & giá gốc kho hàng hiện đại • kệ thép cao tầng • thùng carton • máy quét mã vạch cửa hàng bán lẻ, đại lý phân phối truyền thống bị tổng kho livestream bóp nghẹt áo thun đen streetwear phom suông dày dặn, đứng đắn pk 07">
+      <div class="pk-card-inner">
+        
+        <!-- CỘT TRÁI: HERO AVATAR 9:16 -->
+        <div class="pk-visual-col">
+          <div class="avatar-9-16" onclick="openLightbox('assets/voiceover_9phongcach/pk07_tong_kho_blacktee.jpg', 'PK 07 • Bị Cạnh Tranh Bởi Tổng Kho & Giá Gốc', 'Áo thun đen streetwear phom suông dày dặn, đứng đắn')">
+            <img src="assets/voiceover_9phongcach/pk07_tong_kho_blacktee.jpg" alt="Bị Cạnh Tranh Bởi Tổng Kho & Giá Gốc" loading="lazy">
+            <div class="avatar-tag-top">
+              <span class="dna-badge">✨ Face DNA 99%</span>
+            </div>
+            <div class="avatar-tag-bottom">
+              <span class="outfit-badge">👔 Áo thun đen streetwear phom suông dày dặn, đứng đắn</span>
+            </div>
+            <div class="zoom-hint">🔍 Chạm để phóng to</div>
+          </div>
+          
+          <div class="quick-action-col">
+            <a href="kich_ban_07_bi_canh_tranh_boi_tong_kho_va_gia_goc.html" class="btn-primary-glow">
+              <span>📖 Xem Toàn Bộ Phân Cảnh</span>
+              <span>→</span>
+            </a>
+            <button type="button" class="btn-copy-voice" onclick="copyVoice(`Khách cầm điện thoại vào hỏi: 'Sao trên mạng bán rẻ hơn anh mấy chục ngàn?'... Cứng họng luôn! Người ta xả kho trực tiếp từ xưởng, mình ôm một đống hàng tồn ở đây thì làm sao mà đọ nổi giá? Đâm đầu vào cuộc chiến giá rẻ là con đường chết nhanh nhất. Mình phải bán giá trị, bán sự phục vụ chứ không thể bán rẻ mãi được!`)">
+              📋 Sao Chép Thoại
+            </button>
+          </div>
+        </div>
+
+        <!-- CỘT PHẢI: CHI TIẾT & BÓC TÁCH -->
+        <div class="pk-content-col">
+          
+          <!-- HEADER THÔNG TIN -->
+          <div class="pk-header">
+            <div class="pk-badge-row">
+              <span class="code-pill">PK 07</span>
+              <span class="category-pill">CẠNH TRANH & GIÁ GỐC</span>
+            </div>
+            <h2 class="pk-title"><a href="kich_ban_07_bi_canh_tranh_boi_tong_kho_va_gia_goc.html">Bị Cạnh Tranh Bởi Tổng Kho & Giá Gốc</a></h2>
+            <div class="pk-meta-grid">
+              <div class="meta-item">📍 <b>Bối cảnh:</b> Kho hàng hiện đại • Kệ thép cao tầng • Thùng carton • Máy quét mã vạch</div>
+              <div class="meta-item">🎯 <b>Tệp khán giả:</b> Cửa hàng bán lẻ, đại lý phân phối truyền thống bị tổng kho livestream bóp nghẹt</div>
+            </div>
+          </div>
+
+          <!-- PHÂN TÍCH 3 ĐIỂM CHƯA ĐƯỢC & NÂNG CẤP THỰC CHIẾN -->
+          <div class="section-box flaws-box">
+            <div class="box-title">
+              <span>🛠️ Phân Tích 3 Điểm Nâng Cấp • "Nhìn Là Quay Được Theo Luôn"</span>
+            </div>
+            <div class="flaws-list">
+              
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 1</span>
+                <span class="flaw-title">Cỡ cảnh & Góc máy</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Ảnh cũ chụp trong phòng họp máy chiếu, hoàn toàn sai bối cảnh kho vận và bán buôn.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Nâng cấp bối cảnh kho hàng thực tế: Kệ thép xanh công nghiệp xếp tầng tầng lớp lớp thùng carton, máy quét mã vạch cầm tay, ánh sáng LED công nghiệp kết hợp rim light vàng ấm.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 2</span>
+                <span class="flaw-title">Bối cảnh & Đạo cụ</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Trang phục áo sơ mi vest công sở giả tạo, không đúng thực tế người đứng kho kiểm kê đơn hàng.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Áo thun đen tối giản vải cotton dày dặn, phom suông năng động của người chủ kho thực chiến lăn xả với hàng hóa.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 3</span>
+                <span class="flaw-title">Thần thái & Văn phong</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Biểu cảm hoang mang bất lực tiêu cực, không tạo được động lực bứt phá giải pháp cho người học.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Ánh mắt kiên định, rắn rỏi, đối diện trực diện camera; thể hiện bản lĩnh của người nhìn thấu cuộc chiến giá rẻ và chọn lối đi khác biệt về chất lượng phục vụ.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+          <!-- VOICEOVER THOẠI -->
+          <div class="section-box voice-box">
+            <div class="box-title">
+              <span>🎙️ Thoại Voiceover Mộc Mạc (Chuẩn Giọng Anh Việt)</span>
+            </div>
+            <div class="hook-line">
+              <b>Hook mở màn:</b> "Khách cầm điện thoại vào hỏi: 'Sao trên mạng bán rẻ hơn anh mấy chục ngàn?'... cứng họng luôn!"
+            </div>
+            <div class="voice-text">
+              "Khách cầm điện thoại vào hỏi: 'Sao trên mạng bán rẻ hơn anh mấy chục ngàn?'... Cứng họng luôn! Người ta xả kho trực tiếp từ xưởng, mình ôm một đống hàng tồn ở đây thì làm sao mà đọ nổi giá? Đâm đầu vào cuộc chiến giá rẻ là con đường chết nhanh nhất. Mình phải bán giá trị, bán sự phục vụ chứ không thể bán rẻ mãi được!"
+            </div>
+          </div>
+
+          <!-- 5 CÚ MÁY PHÂN CẢNH BĂM NHỊP -->
+          <div class="section-box shots-box">
+            <div class="box-title accordion-toggle" onclick="toggleShots(this)">
+              <span>🎞️ 5 Cú Máy Băm Nhịp Phân Cảnh (Storyboard Beats)</span>
+              <span class="arrow-indicator">▼</span>
+            </div>
+            <div class="shots-list">
+              
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 1</span>
+                <span class="shot-time">00:00 - 00:03</span>
+                <span class="shot-size-pill">Trung cảnh (MS)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>A-Roll 1 (Đứng giữa kho hàng)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang tầm ngực • <b>Hướng:</b> Chính diện lối đi kho</div>
+                <div class="shot-desc-line">🎬 Đứng giữa lối đi kho hàng cao tầng, cầm máy quét mã vạch chia sẻ.</div>
+                <div class="shot-voice-line">🎙️ <i>"Khách cầm điện thoại hỏi: Sao trên mạng bán rẻ thế anh?"</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 2</span>
+                <span class="shot-time">00:03 - 00:07</span>
+                <span class="shot-size-pill">Cận cảnh (CU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 1 (Màn hình livestream xả kho)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang mắt • <b>Hướng:</b> Vào điện thoại</div>
+                <div class="shot-desc-line">🎬 Màn hình điện thoại hiển thị phiên live hò hét bán phá giá '99k 3 cái'.</div>
+                <div class="shot-voice-line">🎙️ <i>"...người ta livestream xả kho giá sốc, bóp nghẹt các shop nhỏ."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 3</span>
+                <span class="shot-time">00:07 - 00:11</span>
+                <span class="shot-size-pill">Toàn cảnh (Wide)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 2 (Thùng hàng xếp kín kệ)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Góc cao 30° • <b>Hướng:</b> Nhìn xuống dãy kệ</div>
+                <div class="shot-desc-line">🎬 Camera lia chậm dọc theo các tầng kệ thép chứa đầy thùng carton đóng gói cẩn thận.</div>
+                <div class="shot-voice-line">🎙️ <i>"Hàng hóa nhập về nằm im trên kệ, đọng vốn cả trăm triệu."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 4</span>
+                <span class="shot-time">00:11 - 00:15</span>
+                <span class="shot-size-pill">Đặc tả (Macro ECU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 3 (Máy quét tít một tiếng)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang tay • <b>Hướng:</b> Vào tia laser đỏ</div>
+                <div class="shot-desc-line">🎬 Tia laser đỏ từ máy quét quét qua mã barcode trên thùng hàng kêu một tiếng 'tít' dứt khoát.</div>
+                <div class="shot-voice-line">🎙️ <i>"Đua giảm giá là tự thắt cổ mình, phải bán giá trị khác biệt!"</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 5</span>
+                <span class="shot-time">00:15 - 00:20</span>
+                <span class="shot-size-pill">Trung cận (MCU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>A-Roll 2 (Khẳng định bản lĩnh)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang tầm mắt • <b>Hướng:</b> Chính diện kiên định</div>
+                <div class="shot-desc-line">🎬 Nhìn thẳng vào ống kính, ánh mắt rắn rỏi, tự tin định vị thương hiệu uy tín.</div>
+                <div class="shot-voice-line">🎙️ <i>"Họ bán giá rẻ, còn mình bán sự an tâm và bảo hành chu đáo!"</i></div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- CARD PK 08 -->
+    <article class="pk-card" data-category="restart" data-search="bắt đầu lại từ con số 0 bàn làm việc gỗ sáng màu • sổ tay mới tinh • tia nắng ban mai chiếu xiên • không gian tối giản người từng vấp ngã thất bại, phải làm lại từ đầu sau khi mất vốn hoặc dừng dự án cũ áo hoodie mỏng màu xanh rêu (olive green) trẻ trung, tinh thần khởi đầu mới pk 08">
+      <div class="pk-card-inner">
+        
+        <!-- CỘT TRÁI: HERO AVATAR 9:16 -->
+        <div class="pk-visual-col">
+          <div class="avatar-9-16" onclick="openLightbox('assets/voiceover_9phongcach/pk08_so_khong_olivehoodie.jpg', 'PK 08 • Bắt Đầu Lại Từ Con Số 0', 'Áo hoodie mỏng màu xanh rêu (Olive Green) trẻ trung, tinh thần khởi đầu mới')">
+            <img src="assets/voiceover_9phongcach/pk08_so_khong_olivehoodie.jpg" alt="Bắt Đầu Lại Từ Con Số 0" loading="lazy">
+            <div class="avatar-tag-top">
+              <span class="dna-badge">✨ Face DNA 99%</span>
+            </div>
+            <div class="avatar-tag-bottom">
+              <span class="outfit-badge">👔 Áo hoodie mỏng màu xanh rêu (Olive Green) trẻ trung, tinh thần khởi đầu mới</span>
+            </div>
+            <div class="zoom-hint">🔍 Chạm để phóng to</div>
+          </div>
+          
+          <div class="quick-action-col">
+            <a href="kich_ban_08_bat_dau_lai_tu_con_so_0.html" class="btn-primary-glow">
+              <span>📖 Xem Toàn Bộ Phân Cảnh</span>
+              <span>→</span>
+            </a>
+            <button type="button" class="btn-copy-voice" onclick="copyVoice(`Đóng cửa tiệm cũ, trong tay gần như về lại số 0... Sợ nhất lúc đó không phải là thiếu tiền, mà là sợ người quen hỏi han, sợ bạn bè họ cười vào mặt mình. Nhưng nằm buồn mãi thì ai nuôi mình? Còn đôi bàn tay, còn khối óc, mở cuốn sổ mới ra viết lại từ đầu. Vấp một lần để khôn ra cả đời!`)">
+              📋 Sao Chép Thoại
+            </button>
+          </div>
+        </div>
+
+        <!-- CỘT PHẢI: CHI TIẾT & BÓC TÁCH -->
+        <div class="pk-content-col">
+          
+          <!-- HEADER THÔNG TIN -->
+          <div class="pk-header">
+            <div class="pk-badge-row">
+              <span class="code-pill">PK 08</span>
+              <span class="category-pill">LÀM LẠI TỪ CON SỐ 0</span>
+            </div>
+            <h2 class="pk-title"><a href="kich_ban_08_bat_dau_lai_tu_con_so_0.html">Bắt Đầu Lại Từ Con Số 0</a></h2>
+            <div class="pk-meta-grid">
+              <div class="meta-item">📍 <b>Bối cảnh:</b> Bàn làm việc gỗ sáng màu • Sổ tay mới tinh • Tia nắng ban mai chiếu xiên • Không gian tối giản</div>
+              <div class="meta-item">🎯 <b>Tệp khán giả:</b> Người từng vấp ngã thất bại, phải làm lại từ đầu sau khi mất vốn hoặc dừng dự án cũ</div>
+            </div>
+          </div>
+
+          <!-- PHÂN TÍCH 3 ĐIỂM CHƯA ĐƯỢC & NÂNG CẤP THỰC CHIẾN -->
+          <div class="section-box flaws-box">
+            <div class="box-title">
+              <span>🛠️ Phân Tích 3 Điểm Nâng Cấp • "Nhìn Là Quay Được Theo Luôn"</span>
+            </div>
+            <div class="flaws-list">
+              
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 1</span>
+                <span class="flaw-title">Cỡ cảnh & Góc máy</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Ảnh cũ u ám quá mức như phim kinh dị, người gục đầu xuống bàn tạo cảm giác tuyệt vọng tiêu cực.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Thay đổi hoàn toàn sang tông màu tươi sáng buổi sáng (warm morning sunlight), người ngồi thẳng lưng tự tin trong áo hoodie olive mỏng, mở trang sổ trắng tinh chuẩn bị kế hoạch mới.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 2</span>
+                <span class="flaw-title">Bối cảnh & Đạo cụ</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Cỡ cảnh bị đóng khung quá chật chội, không có khoảng thở (headroom & breathing space).</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Khung hình MCU cân đối, ánh nắng ban mai rọi qua cửa sổ tạo viền sáng (rim light) tượng trưng cho hy vọng và năng lượng tái sinh.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 3</span>
+                <span class="flaw-title">Thần thái & Văn phong</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Nụ cười gượng hoặc mặt đăm đăm vô hồn.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Nụ cười rạng rỡ, tự tin, đôi mắt sáng rực nhìn về phía trước; ngôn ngữ cơ thể tràn đầy nội lực của người đã vượt qua đáy vực và đang đi lên.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+          <!-- VOICEOVER THOẠI -->
+          <div class="section-box voice-box">
+            <div class="box-title">
+              <span>🎙️ Thoại Voiceover Mộc Mạc (Chuẩn Giọng Anh Việt)</span>
+            </div>
+            <div class="hook-line">
+              <b>Hook mở màn:</b> "Đóng cửa tiệm cũ, trong tay gần như về lại số 0... Sợ nhất không phải nghèo, mà là sợ bạn bè cười chê."
+            </div>
+            <div class="voice-text">
+              "Đóng cửa tiệm cũ, trong tay gần như về lại số 0... Sợ nhất lúc đó không phải là thiếu tiền, mà là sợ người quen hỏi han, sợ bạn bè họ cười vào mặt mình. Nhưng nằm buồn mãi thì ai nuôi mình? Còn đôi bàn tay, còn khối óc, mở cuốn sổ mới ra viết lại từ đầu. Vấp một lần để khôn ra cả đời!"
+            </div>
+          </div>
+
+          <!-- 5 CÚ MÁY PHÂN CẢNH BĂM NHỊP -->
+          <div class="section-box shots-box">
+            <div class="box-title accordion-toggle" onclick="toggleShots(this)">
+              <span>🎞️ 5 Cú Máy Băm Nhịp Phân Cảnh (Storyboard Beats)</span>
+              <span class="arrow-indicator">▼</span>
+            </div>
+            <div class="shots-list">
+              
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 1</span>
+                <span class="shot-time">00:00 - 00:03</span>
+                <span class="shot-size-pill">Trung cận (MCU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>A-Roll 1 (Mở trang sổ trắng)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang tầm ngực • <b>Hướng:</b> Chính diện bàn gỗ</div>
+                <div class="shot-desc-line">🎬 Ngồi bên bàn gỗ ban mai, mở trang sổ tay trắng tinh, mỉm cười tự sự.</div>
+                <div class="shot-voice-line">🎙️ <i>"Đóng cửa tiệm cũ, về lại số 0... sợ nhất người ta cười chê."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 2</span>
+                <span class="shot-time">00:03 - 00:07</span>
+                <span class="shot-size-pill">Toàn cảnh (Wide)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 1 (Nắng sớm qua khung cửa)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang tầm mắt • <b>Hướng:</b> Hướng cửa sổ</div>
+                <div class="shot-desc-line">🎬 Ánh nắng vàng ban mai tràn qua ô cửa kính, chiếu ấm góc phòng làm việc tinh gọn.</div>
+                <div class="shot-voice-line">🎙️ <i>"Nhưng nằm lì một chỗ thì ai nuôi mình? Phải tự đứng dậy thôi!"</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 3</span>
+                <span class="shot-time">00:07 - 00:11</span>
+                <span class="shot-size-pill">Cận cảnh (CU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 2 (Cây bút đặt lên trang giấy)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Hạ thấp 20° • <b>Hướng:</b> Chính diện ngòi bút</div>
+                <div class="shot-desc-line">🎬 Bàn tay cầm bút máy đặt nét mực đầu tiên lên trang giấy trắng muốt.</div>
+                <div class="shot-voice-line">🎙️ <i>"Còn đôi bàn tay, còn khối óc, viết lại từ bài học đầu tiên."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 4</span>
+                <span class="shot-time">00:11 - 00:15</span>
+                <span class="shot-size-pill">Cận cảnh (CU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 3 (Uống ngụm trà sớm)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang cằm • <b>Hướng:</b> Chếch bên phải</div>
+                <div class="shot-desc-line">🎬 Nhấp một ngụm trà sớm, nhìn ra xa với ánh mắt trong trẻo, an yên.</div>
+                <div class="shot-voice-line">🎙️ <i>"Vấp ngã một lần để khôn ra cả đời, không có gì phải ngượng!"</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 5</span>
+                <span class="shot-time">00:15 - 00:20</span>
+                <span class="shot-size-pill">Cận cảnh (CU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>A-Roll 2 (Nụ cười tái sinh)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang tầm mắt • <b>Hướng:</b> Chính diện rạng ngời</div>
+                <div class="shot-desc-line">🎬 Nở nụ cười rạng rỡ, tràn ngập năng lượng tích cực truyền cảm hứng mạnh mẽ.</div>
+                <div class="shot-voice-line">🎙️ <i>"Làm lại từ đầu với một cái đầu tỉnh táo hơn nhiều!"</i></div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- CARD PK 09 -->
+    <article class="pk-card" data-category="craftsman" data-search="hàng làm kỹ nhưng bị so sánh giá showroom thủ công tinh tế • sản phẩm da thật hoàn thiện • ánh sáng gallery spot chủ xưởng sản xuất, người làm hàng thủ công / kỹ nghệ tâm huyết bị khách chê đắt sơ mi cổ lãnh tụ màu trắng ngà cao cấp (mandarin collar shirt) pk 09">
+      <div class="pk-card-inner">
+        
+        <!-- CỘT TRÁI: HERO AVATAR 9:16 -->
+        <div class="pk-visual-col">
+          <div class="avatar-9-16" onclick="openLightbox('assets/voiceover_9phongcach/pk09_hang_ky_mandarin.jpg', 'PK 09 • Hàng Làm Kỹ Nhưng Bị So Sánh Giá', 'Sơ mi cổ lãnh tụ màu trắng ngà cao cấp (Mandarin Collar Shirt)')">
+            <img src="assets/voiceover_9phongcach/pk09_hang_ky_mandarin.jpg" alt="Hàng Làm Kỹ Nhưng Bị So Sánh Giá" loading="lazy">
+            <div class="avatar-tag-top">
+              <span class="dna-badge">✨ Face DNA 99%</span>
+            </div>
+            <div class="avatar-tag-bottom">
+              <span class="outfit-badge">👔 Sơ mi cổ lãnh tụ màu trắng ngà cao cấp (Mandarin Collar Shirt)</span>
+            </div>
+            <div class="zoom-hint">🔍 Chạm để phóng to</div>
+          </div>
+          
+          <div class="quick-action-col">
+            <a href="kich_ban_09_hang_lam_ky_nhung_bi_so_sanh_gia.html" class="btn-primary-glow">
+              <span>📖 Xem Toàn Bộ Phân Cảnh</span>
+              <span>→</span>
+            </a>
+            <button type="button" class="btn-copy-voice" onclick="copyVoice(`Mất 3 ngày gia công từng đường kim mũi chỉ, khách vào phán một câu: 'Trên mạng bán có nửa giá'... Nghe mà đau quặn ruột! Nhưng trách ai được? Mình không cho họ thấy loại da mình dùng là thảo mộc tự nhiên, không cho họ thấy từng đường khâu tay mất bao nhiêu giọt mồ hôi... Thì họ so sánh với hàng dập máy công nghiệp là phải. Người mua hàng kỹ luôn ở đó, chỉ chờ mình kể đúng câu chuyện thôi!`)">
+              📋 Sao Chép Thoại
+            </button>
+          </div>
+        </div>
+
+        <!-- CỘT PHẢI: CHI TIẾT & BÓC TÁCH -->
+        <div class="pk-content-col">
+          
+          <!-- HEADER THÔNG TIN -->
+          <div class="pk-header">
+            <div class="pk-badge-row">
+              <span class="code-pill">PK 09</span>
+              <span class="category-pill">NGHỀ & CHUYÊN MÔN SÂU</span>
+            </div>
+            <h2 class="pk-title"><a href="kich_ban_09_hang_lam_ky_nhung_bi_so_sanh_gia.html">Hàng Làm Kỹ Nhưng Bị So Sánh Giá</a></h2>
+            <div class="pk-meta-grid">
+              <div class="meta-item">📍 <b>Bối cảnh:</b> Showroom thủ công tinh tế • Sản phẩm da thật hoàn thiện • Ánh sáng gallery spot</div>
+              <div class="meta-item">🎯 <b>Tệp khán giả:</b> Chủ xưởng sản xuất, người làm hàng thủ công / kỹ nghệ tâm huyết bị khách chê đắt</div>
+            </div>
+          </div>
+
+          <!-- PHÂN TÍCH 3 ĐIỂM CHƯA ĐƯỢC & NÂNG CẤP THỰC CHIẾN -->
+          <div class="section-box flaws-box">
+            <div class="box-title">
+              <span>🛠️ Phân Tích 3 Điểm Nâng Cấp • "Nhìn Là Quay Được Theo Luôn"</span>
+            </div>
+            <div class="flaws-list">
+              
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 1</span>
+                <span class="flaw-title">Cỡ cảnh & Góc máy</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Ảnh cũ cầm sản phẩm giơ lên ống kính như nhân viên bán hàng tiếp thị đa cấp, làm giảm giá trị món đồ thủ công cao cấp.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Nâng cấp tư thế nâng niu sản phẩm da thuộc trước ngực bằng hai tay trân trọng, mặc sơ mi cổ lãnh tụ trắng ngà nhã nhặn, ánh mắt tự hào và trân quý sản phẩm của mình.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 2</span>
+                <span class="flaw-title">Bối cảnh & Đạo cụ</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Bối cảnh xưởng bừa bộn rác và phôi vụn làm mất đi tính cao cấp của dòng sản phẩm kỹ nghệ.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Không gian showroom studio mộc mạc phong cách tối giản Bắc Âu, ánh sáng gallery dịu nhẹ làm nổi bật màu da bò sáp tự nhiên và từng đường may thủ công.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flaw-item">
+              <div class="flaw-header">
+                <span class="flaw-num">Điểm 3</span>
+                <span class="flaw-title">Thần thái & Văn phong</span>
+              </div>
+              <div class="flaw-comparison">
+                <div class="flaw-old">
+                  <span class="badge-old">❌ Chưa Được (Cũ)</span>
+                  <p>Biểu cảm cay cú vì bị chê giá đắt.</p>
+                </div>
+                <div class="flaw-new">
+                  <span class="badge-new">✅ Nâng Cấp (Quay Theo Luôn)</span>
+                  <p>Biểu cảm điềm đạm, nụ cười nhẹ nhàng thấu hiểu tâm lý khách hàng: Khách chê đắt là vì họ chưa thấy được quá trình, việc của mình là làm video mở tung quy trình cho họ xem.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+          <!-- VOICEOVER THOẠI -->
+          <div class="section-box voice-box">
+            <div class="box-title">
+              <span>🎙️ Thoại Voiceover Mộc Mạc (Chuẩn Giọng Anh Việt)</span>
+            </div>
+            <div class="hook-line">
+              <b>Hook mở màn:</b> "Mất 3 ngày gia công từng đường kim mũi chỉ, khách vào phán một câu: 'Trên mạng bán có nửa giá'..."
+            </div>
+            <div class="voice-text">
+              "Mất 3 ngày gia công từng đường kim mũi chỉ, khách vào phán một câu: 'Trên mạng bán có nửa giá'... Nghe mà đau quặn ruột! Nhưng trách ai được? Mình không cho họ thấy loại da mình dùng là thảo mộc tự nhiên, không cho họ thấy từng đường khâu tay mất bao nhiêu giọt mồ hôi... Thì họ so sánh với hàng dập máy công nghiệp là phải. Người mua hàng kỹ luôn ở đó, chỉ chờ mình kể đúng câu chuyện thôi!"
+            </div>
+          </div>
+
+          <!-- 5 CÚ MÁY PHÂN CẢNH BĂM NHỊP -->
+          <div class="section-box shots-box">
+            <div class="box-title accordion-toggle" onclick="toggleShots(this)">
+              <span>🎞️ 5 Cú Máy Băm Nhịp Phân Cảnh (Storyboard Beats)</span>
+              <span class="arrow-indicator">▼</span>
+            </div>
+            <div class="shots-list">
+              
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 1</span>
+                <span class="shot-time">00:00 - 00:03</span>
+                <span class="shot-size-pill">Trung cận (MCU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>A-Roll 1 (Nâng niu sản phẩm trước ngực)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang tầm ngực • <b>Hướng:</b> Chính diện</div>
+                <div class="shot-desc-line">🎬 Mặc sơ mi cổ lãnh tụ, tay nâng niu chiếc ví da bò thủ công, chia sẻ với nụ cười điềm đạm.</div>
+                <div class="shot-voice-line">🎙️ <i>"Mất 3 ngày gia công, khách bảo trên mạng bán nửa giá..."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 2</span>
+                <span class="shot-time">00:03 - 00:07</span>
+                <span class="shot-size-pill">Đặc tả (Macro ECU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 1 (Soi đường khâu tay tỉ mỉ)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang mặt da • <b>Hướng:</b> Sát đường chỉ</div>
+                <div class="shot-desc-line">🎬 Ống kính macro bắt nét từng mũi chỉ dập tay đều tăm tắp trên nền da thảo mộc mộc mạc.</div>
+                <div class="shot-voice-line">🎙️ <i>"...từng mũi kim khâu tay thủ công, chỉ sáp nhập khẩu bền cả chục năm."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 3</span>
+                <span class="shot-time">00:07 - 00:11</span>
+                <span class="shot-size-pill">Cận cảnh (CU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 2 (Khách lướt sàn so giá)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang vai 15° • <b>Hướng:</b> Vào điện thoại</div>
+                <div class="shot-desc-line">🎬 Màn hình điện thoại hiển thị sản phẩm da simili công nghiệp giá rẻ ngoài sàn.</div>
+                <div class="shot-voice-line">🎙️ <i>"Họ nhìn bề ngoài thấy giống nhau nên so sánh là điều dễ hiểu..."</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 4</span>
+                <span class="shot-time">00:11 - 00:15</span>
+                <span class="shot-size-pill">Đặc tả (Macro ECU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>B-Roll 3 (Ấn ngón tay thử độ đàn hồi)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Thẳng đứng 60° • <b>Hướng:</b> Vào vân da</div>
+                <div class="shot-desc-line">🎬 Ngón tay ấn nhẹ vào miếng da thật, vân da đàn hồi trở lại tự nhiên mềm mịn.</div>
+                <div class="shot-voice-line">🎙️ <i>"Mình không mở quy trình cho họ thấy thì trách ai được!"</i></div>
+              </div>
+            </div>
+
+            <div class="shot-row">
+              <div class="shot-meta">
+                <span class="shot-idx">Shot 5</span>
+                <span class="shot-time">00:15 - 00:20</span>
+                <span class="shot-size-pill">Trung cận (MCU)</span>
+              </div>
+              <div class="shot-details">
+                <div class="shot-name"><b>A-Roll 2 (Tự tin vào khách hàng kỹ tính)</b></div>
+                <div class="shot-dir-line">📐 <b>Góc máy:</b> Ngang tầm mắt • <b>Hướng:</b> Chính diện uy tín</div>
+                <div class="shot-desc-line">🎬 Mỉm cười tự tin, ánh mắt sáng rực niềm tự hào về giá trị thực của sản phẩm.</div>
+                <div class="shot-voice-line">🎙️ <i>"Khách quý đồ kỹ luôn ở đó, việc của mình là làm video kể cho đúng!"</i></div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </article>
+    </div>
+
+  </div>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <div class="lightbox-img-wrap">
+        <img src="" id="lightboxImg" alt="Phóng to ảnh">
+      </div>
+      <div class="lightbox-footer">
+        <div>
+          <div class="lightbox-title" id="lightboxTitle"></div>
+          <div class="lightbox-desc" id="lightboxDesc"></div>
+        </div>
+        <button type="button" class="btn-close-lightbox" onclick="closeLightbox()">Đóng ✕</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">Đã sao chép kịch bản thoại vào khay nhớ tạm!</div>
+
+  <script>
+    // FILTER CATEGORY
+    function filterCategory(cat, btn) {
+      const tabs = document.querySelectorAll('.tab-btn');
+      tabs.forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.pk-card');
+      cards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-category') === cat) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // REALTIME SEARCH
+    function handleSearch() {
+      const query = document.getElementById('searchInput').value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.pk-card');
+      
+      cards.forEach(card => {
+        const searchData = card.getAttribute('data-search');
+        if (!query || searchData.includes(query)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // TOGGLE SHOTS ACCORDION
+    function toggleShots(header) {
+      const list = header.nextElementSibling;
+      const arrow = header.querySelector('.arrow-indicator');
+      if (list.style.display === 'none') {
+        list.style.display = 'flex';
+        arrow.textContent = '▼';
+      } else {
+        list.style.display = 'none';
+        arrow.textContent = '▶';
+      }
+    }
+
+    // COPY VOICE TO CLIPBOARD
+    function copyVoice(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 2200);
+      });
+    }
+
+    // LIGHTBOX FUNCTIONS
+    function openLightbox(src, title, desc) {
+      document.getElementById('lightboxImg').src = src;
+      document.getElementById('lightboxTitle').textContent = title;
+      document.getElementById('lightboxDesc').textContent = desc;
+      document.getElementById('lightboxModal').classList.add('active');
+    }
+
+    function closeLightbox(e) {
+      document.getElementById('lightboxModal').classList.remove('active');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>

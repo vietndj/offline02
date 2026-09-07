@@ -1,0 +1,2723 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 2 • B-Roll 12 Bài Tập Băm Cảnh Trám Marketing | FEDU AI Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-main: #060911;
+      --bg-surface: #0c121e;
+      --bg-card: #121a2b;
+      --bg-card-hover: #18233a;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(56, 189, 248, 0.35);
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --cyan: #38bdf8;
+      --cyan-glow: rgba(56, 189, 248, 0.15);
+      --amber: #f59e0b;
+      --amber-glow: rgba(245, 158, 11, 0.15);
+      --emerald: #10b981;
+      --emerald-glow: rgba(16, 185, 129, 0.15);
+      --purple: #a855f7;
+      --purple-glow: rgba(168, 85, 247, 0.15);
+      --rose: #f43f5e;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding-bottom: 80px;
+    }
+    
+    .top-header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(6, 9, 17, 0.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 12px 24px;
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    }
+    .brand-group { display: flex; align-items: center; gap: 12px; }
+    .brand-badge {
+      background: linear-gradient(135deg, #0284c7, #2563eb);
+      color: #fff; font-size: 11px; font-weight: 800; padding: 5px 12px; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .header-title { font-size: 14.5px; font-weight: 700; color: var(--text-primary); }
+    .header-controls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .nav-pill {
+      background: var(--bg-card); border: 1px solid var(--border-subtle); color: var(--text-secondary);
+      font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: var(--radius-sm); text-decoration: none; cursor: pointer; transition: all 0.2s;
+    }
+    .nav-pill:hover, .nav-pill.active { background: var(--cyan); color: #000; font-weight: 700; border-color: var(--cyan); }
+
+    .container { max-width: 1400px; margin: 0 auto; padding: 24px 20px; }
+
+    /* Hero Banner */
+    .hero {
+      background: linear-gradient(180deg, #101827 0%, #090e17 100%);
+      border: 1px solid rgba(56, 189, 248, 0.22); border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 30px;
+    }
+    .hero-tags { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+    .tag { font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 6px; display: inline-flex; align-items: center; gap: 5px; }
+    .tag-cyan { background: var(--cyan-glow); color: var(--cyan); border: 1px solid rgba(56, 189, 248, 0.3); }
+    .tag-amber { background: var(--amber-glow); color: var(--amber); border: 1px solid rgba(245, 158, 11, 0.3); }
+    .tag-emerald { background: rgba(16, 185, 129, 0.15); color: var(--emerald); border: 1px solid rgba(16, 185, 129, 0.3); }
+    
+    .hero h1 { font-size: 26px; font-weight: 800; margin-bottom: 12px; color: #fff; line-height: 1.35; }
+    .hero-lead { font-size: 14.5px; color: #cbd5e1; line-height: 1.7; max-width: 1050px; margin-bottom: 20px; }
+    .hero-lead b { color: var(--cyan); }
+
+    .metrics-bar {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;
+      background: rgba(0, 0, 0, 0.4); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 14px 18px;
+    }
+    .metric-label { font-size: 10.5px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; margin-bottom: 2px; }
+    .metric-value { font-size: 16px; font-weight: 800; color: var(--text-primary); }
+
+    /* Emotion Filter Bar */
+    .filter-bar {
+      display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; align-items: center;
+    }
+    .filter-btn {
+      background: var(--bg-card); border: 1px solid var(--border-subtle); color: var(--text-secondary);
+      font-size: 12.5px; font-weight: 700; padding: 7px 16px; border-radius: 100px; cursor: pointer; transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--cyan); color: #000; border-color: var(--cyan);
+    }
+
+    /* Exercise Overview Grid */
+    .overview-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 36px;
+    }
+    @media (max-width: 1200px) { .overview-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 850px) { .overview-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 550px) { .overview-grid { grid-template-columns: 1fr; } }
+
+    .overview-card {
+      background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md);
+      overflow: hidden; display: flex; flex-direction: column; cursor: pointer; transition: all 0.25s ease;
+      position: relative;
+    }
+    .overview-card:hover { transform: translateY(-4px); border-color: var(--cyan); box-shadow: 0 12px 30px rgba(0,0,0,0.5); }
+    .overview-card.active-tab { border-color: var(--cyan); box-shadow: 0 0 20px rgba(56, 189, 248, 0.25); }
+
+    .overview-img-box {
+      width: 100%; aspect-ratio: 9 / 16; overflow: hidden; position: relative; background: #000; max-height: 280px;
+    }
+    .overview-img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+    .overview-card:hover .overview-img-box img { transform: scale(1.05); }
+
+    .card-badge-top {
+      position: absolute; top: 10px; left: 10px; z-index: 2; font-size: 10px; font-weight: 800;
+      padding: 4px 9px; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .card-outfit-tag {
+      position: absolute; bottom: 8px; right: 8px; z-index: 2;
+      background: rgba(0, 0, 0, 0.85); border: 1px solid rgba(255,255,255,0.15);
+      font-size: 10px; font-weight: 700; color: #f8fafc; padding: 3px 8px; border-radius: 4px;
+    }
+
+    .overview-body { padding: 16px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+    .overview-card-title { font-size: 14px; font-weight: 800; color: var(--text-primary); line-height: 1.35; }
+    .overview-quote {
+      font-size: 12px; color: #fde047; font-style: italic; background: rgba(253, 224, 71, 0.06);
+      padding: 8px 10px; border-radius: 6px; border-left: 3px solid #fde047; line-height: 1.5;
+    }
+    .overview-t25 { font-size: 11.5px; color: var(--text-secondary); line-height: 1.5; }
+    .overview-btn {
+      background: rgba(56, 189, 248, 0.12); color: var(--cyan); border: 1px solid rgba(56, 189, 248, 0.3);
+      font-size: 11px; font-weight: 700; padding: 6px 10px; border-radius: 6px; text-align: center; text-decoration: none; transition: 0.2s; cursor: pointer;
+    }
+    .overview-btn:hover { background: var(--cyan); color: #000; }
+
+    /* Detailed Exercise Section */
+    .exercise-detail-wrap { display: none; margin-bottom: 40px; }
+    .exercise-detail-wrap.active { display: block; animation: fadeIn 0.3s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* Master Audio / Voiceover Box */
+    .master-audio-box {
+      background: linear-gradient(90deg, rgba(56, 189, 248, 0.1) 0%, rgba(20, 31, 51, 0.7) 100%);
+      border: 1px solid rgba(56, 189, 248, 0.3); border-radius: var(--radius-lg); padding: 20px 26px; margin-bottom: 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    }
+    .master-audio-content { display: flex; align-items: center; gap: 16px; flex: 1; min-width: 280px; }
+    .master-voice-icon {
+      font-size: 22px; background: var(--cyan-glow); color: var(--cyan); width: 48px; height: 48px;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid var(--cyan);
+    }
+    .master-voice-title { font-size: 11px; color: var(--cyan); font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .master-voice-text { font-size: 15px; font-weight: 700; color: #fde047; font-style: italic; line-height: 1.6; }
+    .copy-btn {
+      background: #1a2538; color: #f8fafc; border: 1px solid var(--cyan); padding: 8px 16px;
+      border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all 0.2s;
+    }
+    .copy-btn:hover { background: var(--cyan); color: #000; }
+
+    /* 4 Tiers of Truth Section */
+    .tiers-section {
+      background: linear-gradient(180deg, #101929 0%, #0a0f19 100%);
+      border: 1px solid rgba(56, 189, 248, 0.22); border-radius: var(--radius-lg); padding: 22px 26px; margin-bottom: 24px;
+    }
+    .tiers-header {
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+      margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .tiers-title { font-size: 14.5px; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 8px; }
+    .tiers-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    @media (max-width: 1180px) { .tiers-grid-4 { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 650px) { .tiers-grid-4 { grid-template-columns: 1fr; } }
+    
+    .tier-card {
+      background: #080d16; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px 14px;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .tier-card.t1 { border-left: 4px solid #ef4444; }
+    .tier-card.t2 { border-left: 4px solid #f59e0b; }
+    .tier-card.t25 { border-left: 4px solid #a855f7; background: linear-gradient(180deg, rgba(168, 85, 247, 0.08) 0%, #080d16 100%); }
+    .tier-card.t3 { border-left: 4px solid #10b981; }
+
+    .tier-card-head { font-size: 10.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; }
+    .tier-card.t1 .tier-card-head { color: #f87171; }
+    .tier-card.t2 .tier-card-head { color: #fbbf24; }
+    .tier-card.t25 .tier-card-head { color: #c084fc; }
+    .tier-card.t3 .tier-card-head { color: #34d399; }
+    
+    .tier-card-content { font-size: 12.5px; color: #f1f5f9; line-height: 1.6; flex: 1; }
+    .tier-sub {
+      font-size: 11px; color: var(--text-muted); line-height: 1.45; border-top: 1px dashed rgba(255,255,255,0.08); padding-top: 6px; margin-top: 4px;
+    }
+
+    /* 5-Beats Storyboard Grid */
+    .storyboard-grid-5 {
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-bottom: 24px;
+    }
+    @media (max-width: 1280px) { .storyboard-grid-5 { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 850px) { .storyboard-grid-5 { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 540px) { .storyboard-grid-5 { grid-template-columns: 1fr; } }
+
+    .beat-card {
+      background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md);
+      overflow: hidden; display: flex; flex-direction: column; transition: transform 0.2s, border-color 0.2s;
+    }
+    .beat-card:hover { border-color: var(--border-accent); transform: translateY(-2px); }
+
+    .beat-img-container {
+      position: relative; width: 100%; aspect-ratio: 9 / 16; background: #000; overflow: hidden; cursor: pointer;
+    }
+    .beat-img-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+    .beat-img-container:hover img { transform: scale(1.04); }
+
+    .beat-badge-top {
+      position: absolute; top: 8px; left: 8px; z-index: 2; font-size: 9px; font-weight: 800;
+      padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .badge-action { background: rgba(56, 189, 248, 0.9); color: #000; }
+
+    .beat-time-tag {
+      position: absolute; top: 8px; right: 8px; z-index: 2; background: rgba(0, 0, 0, 0.85);
+      border: 1px solid rgba(255,255,255,0.15); color: var(--cyan); font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px; font-weight: 700; padding: 2px 6px; border-radius: 4px;
+    }
+
+    .beat-content { padding: 12px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+    .beat-id-title { font-size: 13px; font-weight: 800; color: var(--text-primary); line-height: 1.3; }
+    .beat-voice-pill {
+      background: rgba(253, 224, 71, 0.08); border-left: 3px solid #fde047; padding: 5px 8px;
+      border-radius: 0 4px 4px 0; font-size: 11px; font-weight: 600; color: #fef08a; line-height: 1.45;
+    }
+
+    .specs-table {
+      width: 100%; font-size: 10.5px; border-collapse: collapse; background: rgba(0, 0, 0, 0.28);
+      border-radius: 6px; overflow: hidden; margin-top: 2px;
+    }
+    .specs-table tr { border-bottom: 1px solid rgba(255, 255, 255, 0.04); }
+    .specs-table tr:last-child { border-bottom: none; }
+    .specs-table td { padding: 4px 7px; }
+    .specs-table td.spec-name { color: var(--text-muted); font-weight: 600; width: 40%; }
+
+    /* Lightbox Modal */
+    .lightbox-overlay {
+      position: fixed; inset: 0; z-index: 1000; background: rgba(0, 0, 0, 0.88); backdrop-filter: blur(12px);
+      display: none; align-items: center; justify-content: center; padding: 20px;
+    }
+    .lightbox-overlay.active { display: flex; }
+    .lightbox-card {
+      background: var(--bg-surface); border: 1px solid var(--border-accent); border-radius: var(--radius-lg);
+      max-width: 880px; width: 100%; max-height: 90vh; overflow: hidden; display: flex; flex-direction: row;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    }
+    @media (max-width: 768px) { .lightbox-card { flex-direction: column; max-height: 85vh; overflow-y: auto; } }
+    .lightbox-media { flex: 1.1; background: #000; position: relative; aspect-ratio: 9/16; max-height: 80vh; }
+    .lightbox-media img { width: 100%; height: 100%; object-fit: cover; }
+    .lightbox-sidebar { flex: 1; padding: 24px; display: flex; flex-direction: column; gap: 14px; overflow-y: auto; }
+    .lightbox-close-btn {
+      align-self: flex-end; background: rgba(255,255,255,0.1); border: none; color: #fff;
+      width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 16px;
+    }
+
+    .toast {
+      position: fixed; bottom: 24px; right: 24px; z-index: 1000; background: var(--emerald); color: #fff;
+      font-weight: 700; font-size: 13px; padding: 10px 18px; border-radius: 8px; display: none;
+    }
+    .toast.show { display: block; }
+  </style>
+</head>
+<body>
+
+  <header class="top-header">
+    <div class="brand-group">
+      <a href="index.html" style="text-decoration:none; display:flex; align-items:center; gap:10px;">
+        <span class="brand-badge" style="background: linear-gradient(135deg, #0284c7, #2563eb);">FEDU OFFLINE 2.0</span>
+        <span class="header-title">Bài 2 • 12 Bài Tập B-Roll Cảnh Trám Marketing</span>
+      </a>
+    </div>
+    <div class="header-controls" style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+      <a href="index.html" class="nav-pill" style="text-decoration:none;">🏛️ Hub Tổng</a>
+      <a href="9voiceover.html" class="nav-pill" style="text-decoration:none; color:#38bdf8; border-color:rgba(56,189,248,0.4);">🎙️ Bài 1: 9 Voiceover</a>
+      <a href="12canhtram.html" class="nav-pill active" style="text-decoration:none; background:#38bdf8; color:#000; font-weight:800; border-color:#38bdf8;">📹 Bài 2: 12 Cảnh Trám (Active)</a>
+    </div>
+  </header>
+
+  <div class="container">
+    
+    <!-- Hero Banner -->
+    <div class="hero">
+      <div class="hero-tags">
+        <span class="tag tag-cyan">MARKETING PT</span>
+        <span class="tag tag-amber">12 BÀI TẬP BĂM CẢNH</span>
+        <span class="tag tag-emerald">12 PHONG CÁCH TRANG PHỤC</span>
+      </div>
+      <h1>KHO BÀI TẬP THỰC HÀNH QUAY CẢNH TRÁM TẠI LỚP (B-ROLL)</h1>
+      <p class="hero-lead">
+        Nguyên tắc sống còn: <b>Không bao giờ để khung hình chết dí một chỗ</b>. 
+        Mỗi bài tập dưới đây hướng dẫn học viên băm nhỏ 1 hành động bình thường thành 5 cỡ cảnh khác nhau (MCU, CU, Macro, POV/OTS, Low angle) ngay tại bàn học, 
+        tải trọn vẹn từng trạng thái tâm lý trong video voice-over. Sau khi thành thạo, học viên có thể mang về quay lại ở các bối cảnh đời thực tương đương.
+      </p>
+      <div class="metrics-bar">
+        <div>
+          <div class="metric-label">Tổng số bài tập</div>
+          <div class="metric-value">12 Bài tập thực chiến</div>
+        </div>
+        <div>
+          <div class="metric-label">Tổng số cỡ cảnh</div>
+          <div class="metric-value">60 Cú máy băm nhỏ</div>
+        </div>
+        <div>
+          <div class="metric-label">Trang phục anh Việt</div>
+          <div class="metric-value">12 Phong cách khác nhau</div>
+        </div>
+        <div>
+          <div class="metric-label">Trục thay đổi</div>
+          <div class="metric-value">Cỡ cảnh • Góc máy • Hướng</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Emotion Filter Bar -->
+    <div class="filter-bar">
+      <span style="font-size:12px; font-weight:700; color:var(--text-muted); margin-right:4px;">LỌC TÂM LÝ:</span>
+      <button class="filter-btn active" onclick="filterCards('all')">Tất cả (12)</button>
+      <button class="filter-btn" onclick="filterCards('pressure')">Áp lực & Bế tắc (3)</button>
+      <button class="filter-btn" onclick="filterCards('insight')">Giác ngộ & Thức tỉnh (2)</button>
+      <button class="filter-btn" onclick="filterCards('action')">Thực chiến & Thử nghiệm (4)</button>
+      <button class="filter-btn" onclick="filterCards('calm')">Thành quả & Lắng đọng (3)</button>
+    </div>
+
+    <!-- Overview Grid -->
+    <div class="overview-grid" id="master-grid">
+
+        <div class="overview-card" data-category="pressure" onclick="showExercise('01')" id="card-tab-01">
+          <div class="overview-img-box">
+            <img src="assets/marketing_baitap/viet_bt1_smartsuit.jpg" alt="Soi chỉ số Ads & Cày bài tập trên laptop" loading="lazy">
+            <span class="card-badge-top" style="background:#1a73e8; color:#fff;">Bài tập 01</span>
+            <span class="card-outfit-tag">Âu phục blazer may đo navy</span>
+          </div>
+          <div class="overview-body">
+            <div class="overview-card-title">Soi chỉ số Ads & Cày bài tập trên laptop</div>
+            <div class="overview-quote">"Đứng một chỗ bấm máy thì nhàn thật......"</div>
+            <div class="overview-t25"><b>Tâm lý:</b> Áp lực & Tập trung cao độ</div>
+            <div style="display:flex; gap:8px; margin-top:auto;">
+              <a href="baitap01_laptop_ads.html" target="_blank" class="overview-btn" style="flex:1;">Mở Trang Riêng ↗</a>
+              <button type="button" class="overview-btn" style="background:#0284c7; color:#fff; border:none;" onclick="event.stopPropagation(); showExercise('01')">Xem 5 Shot ↓</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-card" data-category="pressure" onclick="showExercise('02')" id="card-tab-02">
+          <div class="overview-img-box">
+            <img src="assets/marketing_baitap/viet_bt2_tshirt.jpg" alt="Cuốn sổ tay & Kịch bản gạch xóa tan nát" loading="lazy">
+            <span class="card-badge-top" style="background:#1a73e8; color:#fff;">Bài tập 02</span>
+            <span class="card-outfit-tag">Áo phông đen tối giản trẻ trung</span>
+          </div>
+          <div class="overview-body">
+            <div class="overview-card-title">Cuốn sổ tay & Kịch bản gạch xóa tan nát</div>
+            <div class="overview-quote">"Cứ tưởng đặt bút xuống là có triệu view......"</div>
+            <div class="overview-t25"><b>Tâm lý:</b> Bế tắc & Tìm tòi nội tâm</div>
+            <div style="display:flex; gap:8px; margin-top:auto;">
+              <a href="baitap02_sotay_kichban.html" target="_blank" class="overview-btn" style="flex:1;">Mở Trang Riêng ↗</a>
+              <button type="button" class="overview-btn" style="background:#0284c7; color:#fff; border:none;" onclick="event.stopPropagation(); showExercise('02')">Xem 5 Shot ↓</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-card" data-category="action" onclick="showExercise('03')" id="card-tab-03">
+          <div class="overview-img-box">
+            <img src="assets/marketing_baitap/viet_bt3_sporty.jpg" alt="Cầm điện thoại test góc quay tại bàn" loading="lazy">
+            <span class="card-badge-top" style="background:#1a73e8; color:#fff;">Bài tập 03</span>
+            <span class="card-outfit-tag">Đồ thể thao polo navy năng động</span>
+          </div>
+          <div class="overview-body">
+            <div class="overview-card-title">Cầm điện thoại test góc quay tại bàn</div>
+            <div class="overview-quote">"Bảo giơ máy lên quay thì ai cũng ngại......"</div>
+            <div class="overview-t25"><b>Tâm lý:</b> Quyết liệt, Thử nghiệm & Dám làm</div>
+            <div style="display:flex; gap:8px; margin-top:auto;">
+              <a href="baitap03_test_goc_quay.html" target="_blank" class="overview-btn" style="flex:1;">Mở Trang Riêng ↗</a>
+              <button type="button" class="overview-btn" style="background:#0284c7; color:#fff; border:none;" onclick="event.stopPropagation(); showExercise('03')">Xem 5 Shot ↓</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-card" data-category="insight" onclick="showExercise('04')" id="card-tab-04">
+          <div class="overview-img-box">
+            <img src="assets/marketing_baitap/viet_bt4_shirt.jpg" alt="Ngẩng nhìn slide giảng bài & Giật mình" loading="lazy">
+            <span class="card-badge-top" style="background:#1a73e8; color:#fff;">Bài tập 04</span>
+            <span class="card-outfit-tag">Sơ mi xanh nhạt xắn tay áo kiểu giảng viên</span>
+          </div>
+          <div class="overview-body">
+            <div class="overview-card-title">Ngẩng nhìn slide giảng bài & Giật mình</div>
+            <div class="overview-quote">"Đang cắm đầu lướt điện thoại tưởng mình biết tuốt rồi......"</div>
+            <div class="overview-t25"><b>Tâm lý:</b> Vỡ òa, Thức tỉnh (Aha moment)</div>
+            <div style="display:flex; gap:8px; margin-top:auto;">
+              <a href="baitap04_slide_giatminh.html" target="_blank" class="overview-btn" style="flex:1;">Mở Trang Riêng ↗</a>
+              <button type="button" class="overview-btn" style="background:#0284c7; color:#fff; border:none;" onclick="event.stopPropagation(); showExercise('04')">Xem 5 Shot ↓</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-card" data-category="calm" onclick="showExercise('05')" id="card-tab-05">
+          <div class="overview-img-box">
+            <img src="assets/marketing_baitap/viet_bt5_sweater.jpg" alt="Nhấp ngụm nước ấm & Tựa lưng ghế" loading="lazy">
+            <span class="card-badge-top" style="background:#1a73e8; color:#fff;">Bài tập 05</span>
+            <span class="card-outfit-tag">Áo len dệt kim mỏng màu be ấm áp</span>
+          </div>
+          <div class="overview-body">
+            <div class="overview-card-title">Nhấp ngụm nước ấm & Tựa lưng ghế</div>
+            <div class="overview-quote">"Quay dựng cho đã tay rồi cũng đến lúc phải ngồi lại......"</div>
+            <div class="overview-t25"><b>Tâm lý:</b> Lắng đọng, Chiêm nghiệm & Kết nối chân tình</div>
+            <div style="display:flex; gap:8px; margin-top:auto;">
+              <a href="baitap05_cocnuoc_langdong.html" target="_blank" class="overview-btn" style="flex:1;">Mở Trang Riêng ↗</a>
+              <button type="button" class="overview-btn" style="background:#0284c7; color:#fff; border:none;" onclick="event.stopPropagation(); showExercise('05')">Xem 5 Shot ↓</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-card" data-category="action" onclick="showExercise('06')" id="card-tab-06">
+          <div class="overview-img-box">
+            <img src="assets/marketing_baitap/viet_bt6_denim.jpg" alt="Ngón tay ngập ngừng trước nút Đăng bài" loading="lazy">
+            <span class="card-badge-top" style="background:#1a73e8; color:#fff;">Bài tập 06</span>
+            <span class="card-outfit-tag">Áo khoác denim bụi bặm</span>
+          </div>
+          <div class="overview-body">
+            <div class="overview-card-title">Ngón tay ngập ngừng trước nút Đăng bài</div>
+            <div class="overview-quote">"Người lớn mình buồn cười lắm......"</div>
+            <div class="overview-t25"><b>Tâm lý:</b> Do dự, Nghi ngờ & Đấu tranh nội tâm</div>
+            <div style="display:flex; gap:8px; margin-top:auto;">
+              <a href="baitap06_do_du_nut_dang.html" target="_blank" class="overview-btn" style="flex:1;">Mở Trang Riêng ↗</a>
+              <button type="button" class="overview-btn" style="background:#0284c7; color:#fff; border:none;" onclick="event.stopPropagation(); showExercise('06')">Xem 5 Shot ↓</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-card" data-category="pressure" onclick="showExercise('07')" id="card-tab-07">
+          <div class="overview-img-box">
+            <img src="assets/marketing_baitap/viet_bt7_hoodie.jpg" alt="Mở máy kiểm tra thấy 0 view, tụt mood" loading="lazy">
+            <span class="card-badge-top" style="background:#1a73e8; color:#fff;">Bài tập 07</span>
+            <span class="card-outfit-tag">Áo hoodie xám tối giản</span>
+          </div>
+          <div class="overview-body">
+            <div class="overview-card-title">Mở máy kiểm tra thấy 0 view, tụt mood</div>
+            <div class="overview-quote">"Lúc mới làm, ai cũng mơ về video triệu view với nghìn đơn...."</div>
+            <div class="overview-t25"><b>Tâm lý:</b> Hụt hẫng, Thất vọng & Va vào thực tế</div>
+            <div style="display:flex; gap:8px; margin-top:auto;">
+              <a href="baitap07_hut_hang_0view.html" target="_blank" class="overview-btn" style="flex:1;">Mở Trang Riêng ↗</a>
+              <button type="button" class="overview-btn" style="background:#0284c7; color:#fff; border:none;" onclick="event.stopPropagation(); showExercise('07')">Xem 5 Shot ↓</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-card" data-category="insight" onclick="showExercise('08')" id="card-tab-08">
+          <div class="overview-img-box">
+            <img src="assets/marketing_baitap/viet_bt8_plaid.jpg" alt="Ting ting thông báo tin nhắn & Đơn đầu tiên" loading="lazy">
+            <span class="card-badge-top" style="background:#1a73e8; color:#fff;">Bài tập 08</span>
+            <span class="card-outfit-tag">Áo sơ mi kẻ caro nhã nhặn</span>
+          </div>
+          <div class="overview-body">
+            <div class="overview-card-title">Ting ting thông báo tin nhắn & Đơn đầu tiên</div>
+            <div class="overview-quote">"Tiếng ting ting nổ tin nhắn đầu tiên... giá trị nó chẳng đáng bao nhiêu tiề..."</div>
+            <div class="overview-t25"><b>Tâm lý:</b> Tự hào, Nhẹ nhõm & Quả ngọt đầu tiên</div>
+            <div style="display:flex; gap:8px; margin-top:auto;">
+              <a href="baitap08_qua_ngot_tingting.html" target="_blank" class="overview-btn" style="flex:1;">Mở Trang Riêng ↗</a>
+              <button type="button" class="overview-btn" style="background:#0284c7; color:#fff; border:none;" onclick="event.stopPropagation(); showExercise('08')">Xem 5 Shot ↓</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-card" data-category="action" onclick="showExercise('09')" id="card-tab-09">
+          <div class="overview-img-box">
+            <img src="assets/marketing_baitap/viet_bt9_headphones.jpg" alt="Đeo tai nghe soi timeline CapCut cắt gọt" loading="lazy">
+            <span class="card-badge-top" style="background:#1a73e8; color:#fff;">Bài tập 09</span>
+            <span class="card-outfit-tag">Áo thun đen tối giản + Tai nghe over-ear</span>
+          </div>
+          <div class="overview-body">
+            <div class="overview-card-title">Đeo tai nghe soi timeline CapCut cắt gọt</div>
+            <div class="overview-quote">"Cắt đi nửa giây thừa, kéo lại một nhịp thở......"</div>
+            <div class="overview-t25"><b>Tâm lý:</b> Tỉ mỉ, Cầu toàn & Tận tâm kỹ thuật</div>
+            <div style="display:flex; gap:8px; margin-top:auto;">
+              <a href="baitap09_timeline_capcut.html" target="_blank" class="overview-btn" style="flex:1;">Mở Trang Riêng ↗</a>
+              <button type="button" class="overview-btn" style="background:#0284c7; color:#fff; border:none;" onclick="event.stopPropagation(); showExercise('09')">Xem 5 Shot ↓</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-card" data-category="insight" onclick="showExercise('10')" id="card-tab-10">
+          <div class="overview-img-box">
+            <img src="assets/marketing_baitap/viet_bt10_blazer.jpg" alt="Chụm đầu tranh luận sơ đồ kịch bản với bạn học" loading="lazy">
+            <span class="card-badge-top" style="background:#1a73e8; color:#fff;">Bài tập 10</span>
+            <span class="card-outfit-tag">Áo blazer linen trẻ trung</span>
+          </div>
+          <div class="overview-body">
+            <div class="overview-card-title">Chụm đầu tranh luận sơ đồ kịch bản với bạn học</div>
+            <div class="overview-quote">"Ngồi một mình thì tưởng ý tưởng của mình là nhất......"</div>
+            <div class="overview-t25"><b>Tâm lý:</b> Va chạm quan điểm & Phản biện xây dựng</div>
+            <div style="display:flex; gap:8px; margin-top:auto;">
+              <a href="baitap10_tranh_luan_nhom.html" target="_blank" class="overview-btn" style="flex:1;">Mở Trang Riêng ↗</a>
+              <button type="button" class="overview-btn" style="background:#0284c7; color:#fff; border:none;" onclick="event.stopPropagation(); showExercise('10')">Xem 5 Shot ↓</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-card" data-category="action" onclick="showExercise('11')" id="card-tab-11">
+          <div class="overview-img-box">
+            <img src="assets/marketing_baitap/viet_bt11_whiteshirt.jpg" alt="Đứng trước lớp tập nói đúp quay đầu tiên" loading="lazy">
+            <span class="card-badge-top" style="background:#1a73e8; color:#fff;">Bài tập 11</span>
+            <span class="card-outfit-tag">Áo sơ mi trắng cổ bẻ lịch thiệp</span>
+          </div>
+          <div class="overview-body">
+            <div class="overview-card-title">Đứng trước lớp tập nói đúp quay đầu tiên</div>
+            <div class="overview-quote">"Đứng trước ống kính mà run chân run tay... thì ai mới đầu cũng thế...."</div>
+            <div class="overview-t25"><b>Tâm lý:</b> Vượt qua nỗi sợ & Can đảm trước đám đông</div>
+            <div style="display:flex; gap:8px; margin-top:auto;">
+              <a href="baitap11_tap_noi_truoc_lop.html" target="_blank" class="overview-btn" style="flex:1;">Mở Trang Riêng ↗</a>
+              <button type="button" class="overview-btn" style="background:#0284c7; color:#fff; border:none;" onclick="event.stopPropagation(); showExercise('11')">Xem 5 Shot ↓</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-card" data-category="action" onclick="showExercise('12')" id="card-tab-12">
+          <div class="overview-img-box">
+            <img src="assets/marketing_baitap/viet_bt12_windbreaker.jpg" alt="Gập laptop, đeo balo sải bước rời lớp học" loading="lazy">
+            <span class="card-badge-top" style="background:#1a73e8; color:#fff;">Bài tập 12</span>
+            <span class="card-outfit-tag">Áo gió thể thao / Bomber jacket năng động</span>
+          </div>
+          <div class="overview-body">
+            <div class="overview-card-title">Gập laptop, đeo balo sải bước rời lớp học</div>
+            <div class="overview-quote">"Học xong một buổi, đầu nảy số bao nhiêu ý tưởng...."</div>
+            <div class="overview-t25"><b>Tâm lý:</b> Giải phóng áp lực & Tự tin thực hành</div>
+            <div style="display:flex; gap:8px; margin-top:auto;">
+              <a href="baitap12_thu_don_buoc_di.html" target="_blank" class="overview-btn" style="flex:1;">Mở Trang Riêng ↗</a>
+              <button type="button" class="overview-btn" style="background:#0284c7; color:#fff; border:none;" onclick="event.stopPropagation(); showExercise('12')">Xem 5 Shot ↓</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Detail Sections Container -->
+    <div id="details-container">
+
+      <!-- EXERCISE 01 DETAIL -->
+      <div class="exercise-detail-wrap active" id="detail-bt01">
+        <div class="master-audio-box">
+          <div class="master-audio-content">
+            <div class="master-voice-icon">🎙️</div>
+            <div>
+              <div class="master-voice-title">Bài tập 01 • Lời thoại Voice-Over ngầm</div>
+              <div class="master-voice-text" id="voice-text-01">"Đứng một chỗ bấm máy thì nhàn thật...<br>Nhưng lười đổi góc, khung hình nó đơ ra...<br>...thì đến mình xem lại còn muốn lướt, trách gì người ta!"</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <button class="copy-btn" onclick="copyVoice('01')">Sao chép kịch bản</button>
+            <a href="baitap01_laptop_ads.html" target="_blank" class="copy-btn" style="background:#0284c7; border-color:#0284c7; text-decoration:none;">Mở trang riêng ↗</a>
+          </div>
+        </div>
+
+        <!-- 5 Beats Grid -->
+        <div style="margin-bottom:14px; display:flex; justify-content:space-between; align-items:center;">
+          <h3 style="font-size:16px; font-weight:800; color:#fff;">🎬 CHI TIẾT 5 CÚ MÁY BĂM NHỎ (BÀI TẬP 01)</h3>
+          <span style="font-size:12px; color:var(--cyan);">Bấm vào ảnh để phóng to chi tiết</span>
+        </div>
+        <div class="storyboard-grid-5">
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_01/shot1.jpg', 'Shot 1 • Ngồi chăm chú trước màn hình laptop', '00:00 - 02.5s', 'Đứng một chỗ bấm máy thì nhàn thật...', 'Ngồi ké bên cạnh bàn, đưa máy ngang tầm mắt cách một sải tay. Khóa nét tròng kính, lấy ánh sáng xanh màn hình hắt nhẹ lên mặt.')">
+              <img src="assets/frames_bai_tap_01/shot1.jpg" alt="Ngồi chăm chú trước màn hình laptop" loading="lazy">
+              <span class="beat-badge-top badge-action">Trung cảnh (MCU)</span>
+              <span class="beat-time-tag">00:00 - 02.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">1. Ngồi chăm chú trước màn hình laptop</div>
+              <div class="beat-voice-pill">🎙️ "Đứng một chỗ bấm máy thì nhàn thật..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Trung cảnh (MCU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang tầm mắt (0°)</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chếch 45° bên trái</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Ngồi ké bên cạnh bàn, đưa máy ngang tầm mắt cách một sải tay. Khóa nét tròng kính, lấy ánh sáng xanh màn hình hắt nhẹ lên mặt.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Thiết lập không gian làm việc áp lực thực tế.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Cảnh người làm việc đêm, dân văn phòng cày deadline.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_01/shot2.jpg', 'Shot 2 • Ánh mắt nheo lại soi biểu đồ', '02.5s - 04.5s', '...bấm một cái là xong.', 'Bước sang đối diện, hạ máy ngang mép trên màn hình laptop. Canh đúng lúc bạn nhíu mày nhìn số liệu thì bấm máy.')">
+              <img src="assets/frames_bai_tap_01/shot2.jpg" alt="Ánh mắt nheo lại soi biểu đồ" loading="lazy">
+              <span class="beat-badge-top badge-action">Cận cảnh (CU)</span>
+              <span class="beat-time-tag">02.5s - 04.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">2. Ánh mắt nheo lại soi biểu đồ</div>
+              <div class="beat-voice-pill">🎙️ "...bấm một cái là xong."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Cận cảnh (CU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Hất nhẹ 15° từ dưới lên</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chính diện xuyên mép laptop</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Bước sang đối diện, hạ máy ngang mép trên màn hình laptop. Canh đúng lúc bạn nhíu mày nhìn số liệu thì bấm máy.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Bộc lộ sự căng thẳng khi đối diện sự thật số liệu.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Thể hiện sự suy tư, nghi ngờ, phân tích dữ liệu.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_01/shot3.jpg', 'Shot 3 • Bàn phím nhấn lì nút Backspace', '04.5s - 07.0s', 'Nhưng lười dịch cái chân, để khung hình đơ ra...', 'Đưa camera sát bàn phím một gang tay, bật zoom 2x. Bắt trọn ngón tay nhấn lì nút Backspace xóa dòng chữ vừa gõ.')">
+              <img src="assets/frames_bai_tap_01/shot3.jpg" alt="Bàn phím nhấn lì nút Backspace" loading="lazy">
+              <span class="beat-badge-top badge-action">Đặc tả (Macro ECU)</span>
+              <span class="beat-time-tag">04.5s - 07.0s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">3. Bàn phím nhấn lì nút Backspace</div>
+              <div class="beat-voice-pill">🎙️ "Nhưng lười dịch cái chân, để khung hình đơ ra..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Đặc tả (Macro ECU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Góc cao 60° chúc xuống</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Từ trên xuống chếch phải</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Đưa camera sát bàn phím một gang tay, bật zoom 2x. Bắt trọn ngón tay nhấn lì nút Backspace xóa dòng chữ vừa gõ.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Xóa đi làm lại, sự bế tắc trong phương án cũ.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Diễn tả việc sửa sai, bế tắc, làm lại từ đầu.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_01/shot4.jpg', 'Shot 4 • Màn hình hiển thị đồ thị đỏ lòm', '07.0s - 09.5s', '...thì video dựng lên...', 'Đứng chếch sau vai phải, ghé camera qua khe vai áo. Lấy nét căng vào đồ thị đỏ lòm trên màn hình.')">
+              <img src="assets/frames_bai_tap_01/shot4.jpg" alt="Màn hình hiển thị đồ thị đỏ lòm" loading="lazy">
+              <span class="beat-badge-top badge-action">Cận qua vai (OTS)</span>
+              <span class="beat-time-tag">07.0s - 09.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">4. Màn hình hiển thị đồ thị đỏ lòm</div>
+              <div class="beat-voice-pill">🎙️ "...thì video dựng lên..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Cận qua vai (OTS)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang vai cao 20°</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Sau lưng chếch vai phải</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Đứng chếch sau vai phải, ghé camera qua khe vai áo. Lấy nét căng vào đồ thị đỏ lòm trên màn hình.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Bằng chứng thực tế của áp lực chi phí.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Cảnh báo chi phí tăng, cảnh báo nguy cơ tài chính.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_01/shot5.jpg', 'Shot 5 • Đẩy nhẹ chuột & Thở hắt một hơi', '09.5s - 12.0s', '...đến mình xem lại còn lướt vội, trách gì người ta!', 'Đặt cạnh dưới điện thoại chạm hẳn xuống mặt bàn gỗ làm tiền cảnh. Bàn tay rời chuột, ngực xẹp xuống thở dài, khẽ cười nhẹ nhõm.')">
+              <img src="assets/frames_bai_tap_01/shot5.jpg" alt="Đẩy nhẹ chuột & Thở hắt một hơi" loading="lazy">
+              <span class="beat-badge-top badge-action">Cận góc thấp (Low ECU)</span>
+              <span class="beat-time-tag">09.5s - 12.0s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">5. Đẩy nhẹ chuột & Thở hắt một hơi</div>
+              <div class="beat-voice-pill">🎙️ "...đến mình xem lại còn lướt vội, trách gì người ta!"</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Cận góc thấp (Low ECU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Sát mặt bàn (0°)</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Ngang mặt bàn bên phải</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Đặt cạnh dưới điện thoại chạm hẳn xuống mặt bàn gỗ làm tiền cảnh. Bàn tay rời chuột, ngực xẹp xuống thở dài, khẽ cười nhẹ nhõm.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Hạ cánh tâm lý: chấp nhận buông bỏ để tìm cách mới.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Kết thúc buổi làm việc, sự buông bỏ nhẹ nhõm.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reshoot Box -->
+        <div style="background:#090e17; border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:18px 22px; margin-top:20px;">
+          <h4 style="font-size:14px; font-weight:800; color:#fde047; margin-bottom:10px;">📍 3 Gợi Ý Bối Cảnh Quay Lại Ngoài Lớp Học:</h4>
+          <ul style="padding-left:20px; font-size:13px; color:#cbd5e1; line-height:1.6;">
+            <li style="margin-bottom:8px;"><b>Bàn làm việc tại nhà ban đêm:</b> Chỉ bật đúng 1 bóng đèn bàn, xung quanh phòng tối om, trên bàn có cốc nước đá tan chảy hết.</li>
+<li style="margin-bottom:8px;"><b>Quầy thu ngân cửa hàng / kho hàng:</b> Đứng giữa đống thùng carton, tay cầm tập hóa đơn đối soát với màn hình máy POS.</li>
+<li style="margin-bottom:8px;"><b>Trên xe ô tô dừng bên lề đường:</b> Một tay cầm vô lăng, một tay cầm điện thoại lướt xem báo cáo doanh thu dưới ánh đèn đường vàng vọt.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- EXERCISE 02 DETAIL -->
+      <div class="exercise-detail-wrap" id="detail-bt02">
+        <div class="master-audio-box">
+          <div class="master-audio-content">
+            <div class="master-voice-icon">🎙️</div>
+            <div>
+              <div class="master-voice-title">Bài tập 02 • Lời thoại Voice-Over ngầm</div>
+              <div class="master-voice-text" id="voice-text-02">"Cứ tưởng đặt bút xuống là có triệu view...<br>Đến lúc ngồi viết, gạch nát cả trang giấy...<br>...mới thấm câu: Viết cho hay thì khó, chứ viết văn mẫu thì ai cũng làm được!"</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <button class="copy-btn" onclick="copyVoice('02')">Sao chép kịch bản</button>
+            <a href="baitap02_sotay_kichban.html" target="_blank" class="copy-btn" style="background:#0284c7; border-color:#0284c7; text-decoration:none;">Mở trang riêng ↗</a>
+          </div>
+        </div>
+
+        <!-- 5 Beats Grid -->
+        <div style="margin-bottom:14px; display:flex; justify-content:space-between; align-items:center;">
+          <h3 style="font-size:16px; font-weight:800; color:#fff;">🎬 CHI TIẾT 5 CÚ MÁY BĂM NHỎ (BÀI TẬP 02)</h3>
+          <span style="font-size:12px; color:var(--cyan);">Bấm vào ảnh để phóng to chi tiết</span>
+        </div>
+        <div class="storyboard-grid-5">
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_02/shot1.jpg', 'Shot 1 • Ngồi cắn đuôi bút nhìn trang sổ trắng', '00:00 - 02.5s', 'Cứ tưởng đặt bút xuống là có triệu view...', 'Đặt máy ngang mép bàn bên phải, bắt trọn dáng ngồi hơi gù lưng của bạn học, mắt nhìn chằm chằm trang giấy trắng.')">
+              <img src="assets/frames_bai_tap_02/shot1.jpg" alt="Ngồi cắn đuôi bút nhìn trang sổ trắng" loading="lazy">
+              <span class="beat-badge-top badge-action">Trung cận (MCU)</span>
+              <span class="beat-time-tag">00:00 - 02.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">1. Ngồi cắn đuôi bút nhìn trang sổ trắng</div>
+              <div class="beat-voice-pill">🎙️ "Cứ tưởng đặt bút xuống là có triệu view..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Trung cận (MCU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang tầm mắt (0°)</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chếch 30° bên phải</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Đặt máy ngang mép bàn bên phải, bắt trọn dáng ngồi hơi gù lưng của bạn học, mắt nhìn chằm chằm trang giấy trắng.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Sự trống rỗng trong đầu trước trang giấy trắng.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Cảnh người sáng tạo nội dung cạn ý tưởng, bế tắc.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_02/shot2.jpg', 'Shot 2 • Đầu bút bi gõ nhịp xuống mặt bàn', '02.5s - 04.5s', '...Đến lúc ngồi viết...', 'Dí máy sát tay cầm bút một gang tay, lấy nét vào đầu bút bi đang gõ cộc cộc xuống mặt gỗ theo nhịp bối rối vô thức.')">
+              <img src="assets/frames_bai_tap_02/shot2.jpg" alt="Đầu bút bi gõ nhịp xuống mặt bàn" loading="lazy">
+              <span class="beat-badge-top badge-action">Cận cảnh (CU)</span>
+              <span class="beat-time-tag">02.5s - 04.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">2. Đầu bút bi gõ nhịp xuống mặt bàn</div>
+              <div class="beat-voice-pill">🎙️ "...Đến lúc ngồi viết..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Cận cảnh (CU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang mặt bàn 15°</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chính diện ngón tay</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Dí máy sát tay cầm bút một gang tay, lấy nét vào đầu bút bi đang gõ cộc cộc xuống mặt gỗ theo nhịp bối rối vô thức.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Nhịp thở bối rối, thời gian trôi vô ích.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Thể hiện sự sốt ruột, căng thẳng, chờ đợi.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_02/shot3.jpg', 'Shot 3 • Ngòi bút gạch nát chữ Triệu View', '04.5s - 07.0s', '...gạch nát cả trang giấy...', 'Chĩa máy từ trên cao chúc xuống, zoom 2x bắt nét vết mực gạch chéo dứt khoát đè lên dòng chữ 'Triệu view' viết hoa.')">
+              <img src="assets/frames_bai_tap_02/shot3.jpg" alt="Ngòi bút gạch nát chữ Triệu View" loading="lazy">
+              <span class="beat-badge-top badge-action">Đặc tả (Macro ECU)</span>
+              <span class="beat-time-tag">04.5s - 07.0s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">3. Ngòi bút gạch nát chữ Triệu View</div>
+              <div class="beat-voice-pill">🎙️ "...gạch nát cả trang giấy..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Đặc tả (Macro ECU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Góc cao 70° chúc xuống</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Thẳng đứng trên trang sổ</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Chĩa máy từ trên cao chúc xuống, zoom 2x bắt nét vết mực gạch chéo dứt khoát đè lên dòng chữ 'Triệu view' viết hoa.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Phủ định ảo tưởng, bóc trần sự thật ngượng miệng.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Từ bỏ ảo tưởng, vứt bỏ mục tiêu viển vông.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_02/shot4.jpg', 'Shot 4 • Liếc trộm trang sổ của bạn bên cạnh', '07.0s - 09.5s', '...mới thấm câu: Viết cho hay thì khó...', 'Đặt camera sau gáy bạn bên phải, lia chậm từ trang giấy lem luốc sang trang vở ngay ngắn của bạn ngồi kế bên.')">
+              <img src="assets/frames_bai_tap_02/shot4.jpg" alt="Liếc trộm trang sổ của bạn bên cạnh" loading="lazy">
+              <span class="beat-badge-top badge-action">Góc qua vai (OTS)</span>
+              <span class="beat-time-tag">07.0s - 09.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">4. Liếc trộm trang sổ của bạn bên cạnh</div>
+              <div class="beat-voice-pill">🎙️ "...mới thấm câu: Viết cho hay thì khó..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Góc qua vai (OTS)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Cao ngang vai 25°</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Từ sau lưng nhìn chéo sang</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Đặt camera sau gáy bạn bên phải, lia chậm từ trang giấy lem luốc sang trang vở ngay ngắn của bạn ngồi kế bên.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Nỗi tự ti ngầm khi so sánh mình với người khác.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Sự ghen tị ngầm, so sánh bản thân với đồng nghiệp.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_02/shot5.jpg', 'Shot 5 • Buông rơi cây bút & Tựa lưng cười trừ', '09.5s - 12.0s', '...chứ viết văn mẫu thì ai cũng làm được!', 'Máy đặt nằm trên mặt bàn, bắt cú buông rơi cây bút xuống sổ và nụ cười tự trào mộc mạc khi nhận ra mình đang bị kẹt văn mẫu.')">
+              <img src="assets/frames_bai_tap_02/shot5.jpg" alt="Buông rơi cây bút & Tựa lưng cười trừ" loading="lazy">
+              <span class="beat-badge-top badge-action">Góc thấp (Low Angle)</span>
+              <span class="beat-time-tag">09.5s - 12.0s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">5. Buông rơi cây bút & Tựa lưng cười trừ</div>
+              <div class="beat-voice-pill">🎙️ "...chứ viết văn mẫu thì ai cũng làm được!"</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Góc thấp (Low Angle)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Sát mặt bàn hất lên 20°</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chính diện khuôn mặt</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Máy đặt nằm trên mặt bàn, bắt cú buông rơi cây bút xuống sổ và nụ cười tự trào mộc mạc khi nhận ra mình đang bị kẹt văn mẫu.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Chấp nhận sự thật mình đang kẹt, không gồng nữa.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Giải phóng áp lực, nụ cười bình thản chấp nhận va vấp.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reshoot Box -->
+        <div style="background:#090e17; border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:18px 22px; margin-top:20px;">
+          <h4 style="font-size:14px; font-weight:800; color:#fde047; margin-bottom:10px;">📍 3 Gợi Ý Bối Cảnh Quay Lại Ngoài Lớp Học:</h4>
+          <ul style="padding-left:20px; font-size:13px; color:#cbd5e1; line-height:1.6;">
+            <li style="margin-bottom:8px;"><b>Bàn góc khuất quán cà phê:</b> Ngồi trước cuốn sổ da mở sẵn, nhìn dòng người đi lại qua ô cửa kính mà không viết nổi một chữ.</li>
+<li style="margin-bottom:8px;"><b>Phòng làm việc cá nhân ban đêm:</b> Giấy nháp vo tròn vứt rải rác dưới chân ghế, ngồi gục trán vào hai bàn tay mỏi mệt.</li>
+<li style="margin-bottom:8px;"><b>Bồn rửa mặt soi gương:</b> Vốc một vốc nước lạnh lên mặt, ngẩng lên nhìn thẳng vào bóng mình trong gương với ánh mắt tự vấn.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- EXERCISE 03 DETAIL -->
+      <div class="exercise-detail-wrap" id="detail-bt03">
+        <div class="master-audio-box">
+          <div class="master-audio-content">
+            <div class="master-voice-icon">🎙️</div>
+            <div>
+              <div class="master-voice-title">Bài tập 03 • Lời thoại Voice-Over ngầm</div>
+              <div class="master-voice-text" id="voice-text-03">"Bảo giơ máy lên quay thì ai cũng ngại...<br>Sợ run tay, sợ góc xấu, sợ người ta nhìn làm màu.<br>Nhưng cứ bấm thử một đúp xem... xấu cũng được, miễn là mình dám bấm nút REC!"</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <button class="copy-btn" onclick="copyVoice('03')">Sao chép kịch bản</button>
+            <a href="baitap03_test_goc_quay.html" target="_blank" class="copy-btn" style="background:#0284c7; border-color:#0284c7; text-decoration:none;">Mở trang riêng ↗</a>
+          </div>
+        </div>
+
+        <!-- 5 Beats Grid -->
+        <div style="margin-bottom:14px; display:flex; justify-content:space-between; align-items:center;">
+          <h3 style="font-size:16px; font-weight:800; color:#fff;">🎬 CHI TIẾT 5 CÚ MÁY BĂM NHỎ (BÀI TẬP 03)</h3>
+          <span style="font-size:12px; color:var(--cyan);">Bấm vào ảnh để phóng to chi tiết</span>
+        </div>
+        <div class="storyboard-grid-5">
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_03/shot1.jpg', 'Shot 1 • Xoay điện thoại ngắm khung hình', '00:00 - 02.5s', 'Bảo giơ máy lên quay thì ai cũng ngại...', 'Quay góc ngang ngực, bắt cử chỉ hai tay cầm điện thoại xoay ngang xoay dọc tìm góc máy chuẩn trong lớp học.')">
+              <img src="assets/frames_bai_tap_03/shot1.jpg" alt="Xoay điện thoại ngắm khung hình" loading="lazy">
+              <span class="beat-badge-top badge-action">Trung cận (MCU)</span>
+              <span class="beat-time-tag">00:00 - 02.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">1. Xoay điện thoại ngắm khung hình</div>
+              <div class="beat-voice-pill">🎙️ "Bảo giơ máy lên quay thì ai cũng ngại..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Trung cận (MCU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang ngực 0°</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chếch 30° trực diện</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Quay góc ngang ngực, bắt cử chỉ hai tay cầm điện thoại xoay ngang xoay dọc tìm góc máy chuẩn trong lớp học.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Hành động thực chiến cầm máy, bắt đầu hành động.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Cảnh người sáng tạo bắt đầu ghi hình, khảo sát bối cảnh.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_03/shot2.jpg', 'Shot 2 • Ngón tay chạm dứt khoát nút REC đỏ', '02.5s - 04.5s', '...sợ run tay, sợ góc xấu, sợ người ta nhìn.', 'Dí sát vào ngón tay cái tiếp xúc với màn hình cảm ứng, bắt trọn khoảnh khắc nút REC đỏ chuyển sang đếm giây 00:01.')">
+              <img src="assets/frames_bai_tap_03/shot2.jpg" alt="Ngón tay chạm dứt khoát nút REC đỏ" loading="lazy">
+              <span class="beat-badge-top badge-action">Cận cảnh (CU)</span>
+              <span class="beat-time-tag">02.5s - 04.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">2. Ngón tay chạm dứt khoát nút REC đỏ</div>
+              <div class="beat-voice-pill">🎙️ "...sợ run tay, sợ góc xấu, sợ người ta nhìn."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Cận cảnh (CU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang màn hình 20°</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chính diện ngón cái</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Dí sát vào ngón tay cái tiếp xúc với màn hình cảm ứng, bắt trọn khoảnh khắc nút REC đỏ chuyển sang đếm giây 00:01.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Khoảnh khắc dấn thân, vượt qua ranh giới chần chừ.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Ra quyết định, bắt đầu hành động, bấm máy.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_03/shot3.jpg', 'Shot 3 • Đặc tả cụm 3 camera phản chiếu đèn', '04.5s - 07.0s', 'Nhưng cứ bấm thử một đúp xem...', 'Chĩa thẳng vào cụm camera sau lưng điện thoại, lấy nét căng bóng đèn tuýp lớp học phản chiếu trong tròng kính máy ảnh.')">
+              <img src="assets/frames_bai_tap_03/shot3.jpg" alt="Đặc tả cụm 3 camera phản chiếu đèn" loading="lazy">
+              <span class="beat-badge-top badge-action">Đặc tả (Macro ECU)</span>
+              <span class="beat-time-tag">04.5s - 07.0s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">3. Đặc tả cụm 3 camera phản chiếu đèn</div>
+              <div class="beat-voice-pill">🎙️ "Nhưng cứ bấm thử một đúp xem..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Đặc tả (Macro ECU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang lưng máy</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chĩa thẳng ống kính</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Chĩa thẳng vào cụm camera sau lưng điện thoại, lấy nét căng bóng đèn tuýp lớp học phản chiếu trong tròng kính máy ảnh.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Ống kính như con mắt soi chiếu sự thật.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Công nghệ, góc nhìn điện ảnh, sự quan sát tỉ mỉ.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_03/shot4.jpg', 'Shot 4 • Màn hình POV quay bạn học cười ngượng', '07.0s - 09.5s', '...xấu cũng được...', 'Góc nhìn từ người quay, thấy rõ màn hình điện thoại đang bắt nét vào bạn học đối diện đang lấy tay che miệng cười ngượng.')">
+              <img src="assets/frames_bai_tap_03/shot4.jpg" alt="Màn hình POV quay bạn học cười ngượng" loading="lazy">
+              <span class="beat-badge-top badge-action">Góc nhìn chủ quan (POV)</span>
+              <span class="beat-time-tag">07.0s - 09.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">4. Màn hình POV quay bạn học cười ngượng</div>
+              <div class="beat-voice-pill">🎙️ "...xấu cũng được..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Góc nhìn chủ quan (POV)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang tầm mắt</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Khung hình điện thoại</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Góc nhìn từ người quay, thấy rõ màn hình điện thoại đang bắt nét vào bạn học đối diện đang lấy tay che miệng cười ngượng.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Sự ngượng ngùng đời thực giữa người với người.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Cảnh hậu trường vui vẻ, tương tác người thật việc thật.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_03/shot5.jpg', 'Shot 5 • Hạ máy vẫy tay cười động viên', '09.5s - 12.0s', '...miễn là mình dám bấm nút REC!', 'Đặt máy sát mặt bàn nhìn lên, bắt nụ cười rạng rỡ và bàn tay vẫy nhẹ ra hiệu: 'Được rồi đấy, đúp này tự nhiên lắm!'')">
+              <img src="assets/frames_bai_tap_03/shot5.jpg" alt="Hạ máy vẫy tay cười động viên" loading="lazy">
+              <span class="beat-badge-top badge-action">Góc thấp (Low Angle)</span>
+              <span class="beat-time-tag">09.5s - 12.0s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">5. Hạ máy vẫy tay cười động viên</div>
+              <div class="beat-voice-pill">🎙️ "...miễn là mình dám bấm nút REC!"</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Góc thấp (Low Angle)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Mặt bàn hất lên 25°</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chính diện người quay</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Đặt máy sát mặt bàn nhìn lên, bắt nụ cười rạng rỡ và bàn tay vẫy nhẹ ra hiệu: 'Được rồi đấy, đúp này tự nhiên lắm!'
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Tự tin sau khi vượt qua rào cản ban đầu.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Niềm vui khi hoàn thành một việc khó, động viên đồng đội.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reshoot Box -->
+        <div style="background:#090e17; border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:18px 22px; margin-top:20px;">
+          <h4 style="font-size:14px; font-weight:800; color:#fde047; margin-bottom:10px;">📍 3 Gợi Ý Bối Cảnh Quay Lại Ngoài Lớp Học:</h4>
+          <ul style="padding-left:20px; font-size:13px; color:#cbd5e1; line-height:1.6;">
+            <li style="margin-bottom:8px;"><b>Phòng khách tại nhà:</b> Tự tay xoay ốc vặn chiếc chân máy tripod, gắn kẹp điện thoại và bấm nút đếm ngược 3-2-1.</li>
+<li style="margin-bottom:8px;"><b>Ban công ngập nắng:</b> Cầm sản phẩm trên tay xoay tròn trước ống kính dưới ánh nắng tự nhiên buổi sáng.</li>
+<li style="margin-bottom:8px;"><b>Góc phố đi bộ / quán ăn:</b> Đứng giữa dòng người, tự tin cầm điện thoại quay món ăn bốc khói mà không sợ ai nhìn ngó.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- EXERCISE 04 DETAIL -->
+      <div class="exercise-detail-wrap" id="detail-bt04">
+        <div class="master-audio-box">
+          <div class="master-audio-content">
+            <div class="master-voice-icon">🎙️</div>
+            <div>
+              <div class="master-voice-title">Bài tập 04 • Lời thoại Voice-Over ngầm</div>
+              <div class="master-voice-text" id="voice-text-04">"Đang cắm đầu lướt điện thoại tưởng mình biết tuốt rồi...<br>Nghe một câu chạm đúng tim đen mà giật thót cả mình!<br>Ghi vội lại... chứ không mai lại đâu đóng đấy."</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <button class="copy-btn" onclick="copyVoice('04')">Sao chép kịch bản</button>
+            <a href="baitap04_slide_giatminh.html" target="_blank" class="copy-btn" style="background:#0284c7; border-color:#0284c7; text-decoration:none;">Mở trang riêng ↗</a>
+          </div>
+        </div>
+
+        <!-- 5 Beats Grid -->
+        <div style="margin-bottom:14px; display:flex; justify-content:space-between; align-items:center;">
+          <h3 style="font-size:16px; font-weight:800; color:#fff;">🎬 CHI TIẾT 5 CÚ MÁY BĂM NHỎ (BÀI TẬP 04)</h3>
+          <span style="font-size:12px; color:var(--cyan);">Bấm vào ảnh để phóng to chi tiết</span>
+        </div>
+        <div class="storyboard-grid-5">
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_04/shot1.jpg', 'Shot 1 • Cúi đầu lén lướt feed dưới hộc bàn', '00:00 - 02.5s', 'Đang cắm đầu lướt điện thoại tưởng mình biết tuốt rồi...', 'Quay góc từ trên chúc xuống, thấy nửa người và mép điện thoại đang được lướt giấu dưới ngăn bàn học.')">
+              <img src="assets/frames_bai_tap_04/shot1.jpg" alt="Cúi đầu lén lướt feed dưới hộc bàn" loading="lazy">
+              <span class="beat-badge-top badge-action">Trung cận (MCU)</span>
+              <span class="beat-time-tag">00:00 - 02.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">1. Cúi đầu lén lướt feed dưới hộc bàn</div>
+              <div class="beat-voice-pill">🎙️ "Đang cắm đầu lướt điện thoại tưởng mình biết tuốt rồi..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Trung cận (MCU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Góc chúc 35° xuống</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chếch phải 45°</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Quay góc từ trên chúc xuống, thấy nửa người và mép điện thoại đang được lướt giấu dưới ngăn bàn học.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Thói quen mất tập trung, tự mãn ngầm.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Thói quen xấu, lãng phí thời gian, phân tâm.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_04/shot2.jpg', 'Shot 2 • Ngón tay cuộn lướt bỗng khựng đơ', '02.5s - 04.5s', '...nghe một câu chạm đúng tim đen...', 'Cận cảnh ngón tay đang vuốt nhanh bỗng dừng khựng lại bất động, ánh sáng trắng của app hắt lên ngón tay.')">
+              <img src="assets/frames_bai_tap_04/shot2.jpg" alt="Ngón tay cuộn lướt bỗng khựng đơ" loading="lazy">
+              <span class="beat-badge-top badge-action">Cận cảnh (CU)</span>
+              <span class="beat-time-tag">02.5s - 04.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">2. Ngón tay cuộn lướt bỗng khựng đơ</div>
+              <div class="beat-voice-pill">🎙️ "...nghe một câu chạm đúng tim đen..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Cận cảnh (CU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang mép bàn</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chính diện màn hình</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Cận cảnh ngón tay đang vuốt nhanh bỗng dừng khựng lại bất động, ánh sáng trắng của app hắt lên ngón tay.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Tín hiệu bất ngờ từ âm thanh bên ngoài lọt vào tai.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Điểm dừng chú ý, giật mình, nghe thấy điều chấn động.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_04/shot3.jpg', 'Shot 3 • Ngẩng phắt nhìn slide giật thót mình', '04.5s - 07.0s', '...giật thót cả mình!', 'Máy đặt sát mặt bàn hất lên, bắt trọn biểu cảm mắt mở to, lông mày nhướn lên ngơ ngác khi vừa nghe một câu đâm trúng tim đen.')">
+              <img src="assets/frames_bai_tap_04/shot3.jpg" alt="Ngẩng phắt nhìn slide giật thót mình" loading="lazy">
+              <span class="beat-badge-top badge-action">Cận góc thấp (Low CU)</span>
+              <span class="beat-time-tag">04.5s - 07.0s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">3. Ngẩng phắt nhìn slide giật thót mình</div>
+              <div class="beat-voice-pill">🎙️ "...giật thót cả mình!"</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Cận góc thấp (Low CU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Hất lên 30° từ bàn</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chếch trái nhìn bảng</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Máy đặt sát mặt bàn hất lên, bắt trọn biểu cảm mắt mở to, lông mày nhướn lên ngơ ngác khi vừa nghe một câu đâm trúng tim đen.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Đánh trúng tim đen, rụng bỏ lớp mặt nạ biết tuốt.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Biểu cảm ngộ ra (Aha moment), bất ngờ, giật mình tỉnh ngộ.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_04/shot4.jpg', 'Shot 4 • Hí hoáy gạch chân từ khóa vào sổ', '07.0s - 09.5s', 'Ghi vội lại...', 'Góc nhìn từ trên xuống ngòi bút lia nhanh 2 nét gạch chân thật đậm dưới từ khóa 'GIẢI QUYẾT TẬN GỐC' vừa ghi vội.')">
+              <img src="assets/frames_bai_tap_04/shot4.jpg" alt="Hí hoáy gạch chân từ khóa vào sổ" loading="lazy">
+              <span class="beat-badge-top badge-action">Đặc tả (Macro ECU)</span>
+              <span class="beat-time-tag">07.0s - 09.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">4. Hí hoáy gạch chân từ khóa vào sổ</div>
+              <div class="beat-voice-pill">🎙️ "Ghi vội lại..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Đặc tả (Macro ECU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Góc cao 80° thẳng đứng</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Ngòi bút trên trang vở</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Góc nhìn từ trên xuống ngòi bút lia nhanh 2 nét gạch chân thật đậm dưới từ khóa 'GIẢI QUYẾT TẬN GỐC' vừa ghi vội.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Hành động ghi nhớ cốt tử, sợ quên mất bài học.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Ghi chép bài học, đúc kết kinh nghiệm, chú ý trọng tâm.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_04/shot5.jpg', 'Shot 5 • Cất hẳn máy vào balo & Ngồi thẳng lưng', '09.5s - 12.0s', '...chứ không mai lại đâu đóng đấy.', 'Ngang tầm mắt, bắt cử chỉ cất hẳn chiếc điện thoại vào balo, kéo thẳng lưng áo và ngồi ngay ngắn nghe giảng.')">
+              <img src="assets/frames_bai_tap_04/shot5.jpg" alt="Cất hẳn máy vào balo & Ngồi thẳng lưng" loading="lazy">
+              <span class="beat-badge-top badge-action">Trung cận (MCU)</span>
+              <span class="beat-time-tag">09.5s - 12.0s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">5. Cất hẳn máy vào balo & Ngồi thẳng lưng</div>
+              <div class="beat-voice-pill">🎙️ "...chứ không mai lại đâu đóng đấy."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Trung cận (MCU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang tầm mắt</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chếch 30° trực diện</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Ngang tầm mắt, bắt cử chỉ cất hẳn chiếc điện thoại vào balo, kéo thẳng lưng áo và ngồi ngay ngắn nghe giảng.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Thái độ nghiêm túc hoàn toàn sau khi thức tỉnh.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Chuyển đổi thái độ, nghiêm túc tập trung vào việc lớn.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reshoot Box -->
+        <div style="background:#090e17; border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:18px 22px; margin-top:20px;">
+          <h4 style="font-size:14px; font-weight:800; color:#fde047; margin-bottom:10px;">📍 3 Gợi Ý Bối Cảnh Quay Lại Ngoài Lớp Học:</h4>
+          <ul style="padding-left:20px; font-size:13px; color:#cbd5e1; line-height:1.6;">
+            <li style="margin-bottom:8px;"><b>Đang lật mở trang sách cũ:</b> Ngón tay lật trang sách bỗng khựng lại ở một câu trích dẫn in đậm, mắt sáng bừng lên.</li>
+<li style="margin-bottom:8px;"><b>Đi dạo ngoài công viên:</b> Bỗng dừng bước đứng khựng lại bên vỉa hè, rút vội điện thoại bật ghi âm lưu lại ý tưởng vừa nảy ra.</li>
+<li style="margin-bottom:8px;"><b>Bàn làm việc văn phòng:</b> Đang lục chồng tài liệu cũ, rút phắt ra bản kế hoạch năm ngoái và vỗ đùi đánh đét.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- EXERCISE 05 DETAIL -->
+      <div class="exercise-detail-wrap" id="detail-bt05">
+        <div class="master-audio-box">
+          <div class="master-audio-content">
+            <div class="master-voice-icon">🎙️</div>
+            <div>
+              <div class="master-voice-title">Bài tập 05 • Lời thoại Voice-Over ngầm</div>
+              <div class="master-voice-text" id="voice-text-05">"Quay dựng cho đã tay rồi cũng đến lúc phải ngồi lại...<br>Nhấp ngụm nước, nhìn lại những thước phim vụng về đầu tiên.<br>Làm video không phải để chứng tỏ mình tài giỏi... mà là để tìm thấy những người bạn cùng tần số."</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <button class="copy-btn" onclick="copyVoice('05')">Sao chép kịch bản</button>
+            <a href="baitap05_cocnuoc_langdong.html" target="_blank" class="copy-btn" style="background:#0284c7; border-color:#0284c7; text-decoration:none;">Mở trang riêng ↗</a>
+          </div>
+        </div>
+
+        <!-- 5 Beats Grid -->
+        <div style="margin-bottom:14px; display:flex; justify-content:space-between; align-items:center;">
+          <h3 style="font-size:16px; font-weight:800; color:#fff;">🎬 CHI TIẾT 5 CÚ MÁY BĂM NHỎ (BÀI TẬP 05)</h3>
+          <span style="font-size:12px; color:var(--cyan);">Bấm vào ảnh để phóng to chi tiết</span>
+        </div>
+        <div class="storyboard-grid-5">
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_05/shot1.jpg', 'Shot 1 • Ngồi tựa lưng ghế bên khung cửa sổ', '00:00 - 02.5s', 'Quay dựng cho đã tay rồi cũng đến lúc phải ngồi lại...', 'Bắt trọn dáng ngồi thư thái của anh Việt trong chiếc áo len be, nắng chiều rọi xiên vào khung cửa sổ ấm áp.')">
+              <img src="assets/frames_bai_tap_05/shot1.jpg" alt="Ngồi tựa lưng ghế bên khung cửa sổ" loading="lazy">
+              <span class="beat-badge-top badge-action">Trung cảnh (MCU)</span>
+              <span class="beat-time-tag">00:00 - 02.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">1. Ngồi tựa lưng ghế bên khung cửa sổ</div>
+              <div class="beat-voice-pill">🎙️ "Quay dựng cho đã tay rồi cũng đến lúc phải ngồi lại..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Trung cảnh (MCU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang ngực 0°</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chếch 30° đón nắng</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Bắt trọn dáng ngồi thư thái của anh Việt trong chiếc áo len be, nắng chiều rọi xiên vào khung cửa sổ ấm áp.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Sự thư thái sau một chuỗi nỗ lực căng thẳng.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Khoảng lặng nghỉ ngơi, phục hồi năng lượng, thư giãn.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_05/shot2.jpg', 'Shot 2 • Hai bàn tay ôm trọn cốc nước ấm', '02.5s - 04.5s', '...Nhấp ngụm nước, nhìn lại những thước phim vụng về đầu tiên.', 'Dí sát camera bắt hai bàn tay đang ủ ấm quanh chiếc cốc, những ngón tay khẽ miết nhẹ thân cốc thong thả.')">
+              <img src="assets/frames_bai_tap_05/shot2.jpg" alt="Hai bàn tay ôm trọn cốc nước ấm" loading="lazy">
+              <span class="beat-badge-top badge-action">Cận cảnh (CU)</span>
+              <span class="beat-time-tag">02.5s - 04.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">2. Hai bàn tay ôm trọn cốc nước ấm</div>
+              <div class="beat-voice-pill">🎙️ "...Nhấp ngụm nước, nhìn lại những thước phim vụng về đầu tiên."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Cận cảnh (CU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang mặt bàn</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chính diện hai tay</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Dí sát camera bắt hai bàn tay đang ủ ấm quanh chiếc cốc, những ngón tay khẽ miết nhẹ thân cốc thong thả.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Cảm giác ấm áp, an toàn, tự vỗ về bản thân.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Sự chăm sóc bản thân, tìm lại bình yên, hơi ấm.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_05/shot3.jpg', 'Shot 3 • Đặc tả làn khói nước mỏng bốc hơi nhẹ', '04.5s - 07.0s', 'Làm video không phải để chứng tỏ mình tài giỏi...', 'Lấy nét căng vào làn khói mỏng bốc lên từ miệng cốc dưới vệt nắng chiều, tạo điểm dừng thị giác êm đềm.')">
+              <img src="assets/frames_bai_tap_05/shot3.jpg" alt="Đặc tả làn khói nước mỏng bốc hơi nhẹ" loading="lazy">
+              <span class="beat-badge-top badge-action">Đặc tả (Macro ECU)</span>
+              <span class="beat-time-tag">04.5s - 07.0s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">3. Đặc tả làn khói nước mỏng bốc hơi nhẹ</div>
+              <div class="beat-voice-pill">🎙️ "Làm video không phải để chứng tỏ mình tài giỏi..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Đặc tả (Macro ECU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang miệng cốc</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chếch ngược sáng</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Lấy nét căng vào làn khói mỏng bốc lên từ miệng cốc dưới vệt nắng chiều, tạo điểm dừng thị giác êm đềm.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Ẩn dụ về sự tĩnh tâm, lắng đọng như nước trà ngấm.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Thời gian lắng đọng, chiêm nghiệm sâu sắc, thiền định.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_05/shot4.jpg', 'Shot 4 • Khung cảnh lớp học dần vắng người', '07.0s - 09.5s', '...mà là để tìm thấy những người bạn...', 'Góc nhìn từ sau lưng nhân vật nhìn bao quát không gian phòng học sau giờ tan lớp, bàn ghế ngay ngắn tĩnh lặng.')">
+              <img src="assets/frames_bai_tap_05/shot4.jpg" alt="Khung cảnh lớp học dần vắng người" loading="lazy">
+              <span class="beat-badge-top badge-action">Góc nhìn rộng (Wide OTS)</span>
+              <span class="beat-time-tag">07.0s - 09.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">4. Khung cảnh lớp học dần vắng người</div>
+              <div class="beat-voice-pill">🎙️ "...mà là để tìm thấy những người bạn..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Góc nhìn rộng (Wide OTS)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang vai</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Hướng ra dãy bàn ghế</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Góc nhìn từ sau lưng nhân vật nhìn bao quát không gian phòng học sau giờ tan lớp, bàn ghế ngay ngắn tĩnh lặng.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Sự đối lập giữa lúc huyên náo và lúc chỉ còn lại chính mình.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Kết thúc một hành trình, không gian tĩnh lặng, cô đơn tích cực.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_05/shot5.jpg', 'Shot 5 • Nụ cười nhẹ nhõm bình an nhìn thẳng', '09.5s - 12.0s', '...cùng tần số với mình!', 'Bắt trọn nụ cười mộc mạc không phòng thủ, ánh mắt chân thành như đang ngồi đối diện trò chuyện cùng một người bạn tri kỷ.')">
+              <img src="assets/frames_bai_tap_05/shot5.jpg" alt="Nụ cười nhẹ nhõm bình an nhìn thẳng" loading="lazy">
+              <span class="beat-badge-top badge-action">Cận cảnh khuôn mặt (CU)</span>
+              <span class="beat-time-tag">09.5s - 12.0s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">5. Nụ cười nhẹ nhõm bình an nhìn thẳng</div>
+              <div class="beat-voice-pill">🎙️ "...cùng tần số với mình!"</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Cận cảnh khuôn mặt (CU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang tầm mắt</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chính diện ống kính</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Bắt trọn nụ cười mộc mạc không phòng thủ, ánh mắt chân thành như đang ngồi đối diện trò chuyện cùng một người bạn tri kỷ.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Sự thấu hiểu và kết nối chân thành từ tâm can.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Lời chào tạm biệt ấm áp, kết nối tri kỷ, tin tưởng.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reshoot Box -->
+        <div style="background:#090e17; border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:18px 22px; margin-top:20px;">
+          <h4 style="font-size:14px; font-weight:800; color:#fde047; margin-bottom:10px;">📍 3 Gợi Ý Bối Cảnh Quay Lại Ngoài Lớp Học:</h4>
+          <ul style="padding-left:20px; font-size:13px; color:#cbd5e1; line-height:1.6;">
+            <li style="margin-bottom:8px;"><b>Ban công chung cư lúc hoàng hôn:</b> Ngồi tựa ghế mây, hai tay cầm tách trà nóng nhìn dòng xe cộ phía dưới, gió thổi nhẹ vạt áo.</li>
+<li style="margin-bottom:8px;"><b>Bàn ăn gia đình buổi tối:</b> Sau khi dọn dẹp bát đĩa xong, ngồi tựa vào ghế nhâm nhi một tách trà thảo mộc bên ngọn đèn trần ấm áp.</li>
+<li style="margin-bottom:8px;"><b>Ghế đá công viên sáng sớm:</b> Ngồi một mình thong thả hít thở không khí trong lành dưới tán cây xanh mát, gác lại mọi âu lo.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- EXERCISE 06 DETAIL -->
+      <div class="exercise-detail-wrap" id="detail-bt06">
+        <div class="master-audio-box">
+          <div class="master-audio-content">
+            <div class="master-voice-icon">🎙️</div>
+            <div>
+              <div class="master-voice-title">Bài tập 06 • Lời thoại Voice-Over ngầm</div>
+              <div class="master-voice-text" id="voice-text-06">"Người lớn mình buồn cười lắm...<br>Soạn xong kịch bản rồi, ngón tay đặt lên nút Đăng thì cứ run lên vì sợ.<br>Không bấm thì an toàn thật... nhưng sẽ mãi đứng nguyên một chỗ!"</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <button class="copy-btn" onclick="copyVoice('06')">Sao chép kịch bản</button>
+            <a href="baitap06_do_du_nut_dang.html" target="_blank" class="copy-btn" style="background:#0284c7; border-color:#0284c7; text-decoration:none;">Mở trang riêng ↗</a>
+          </div>
+        </div>
+
+        <!-- 5 Beats Grid -->
+        <div style="margin-bottom:14px; display:flex; justify-content:space-between; align-items:center;">
+          <h3 style="font-size:16px; font-weight:800; color:#fff;">🎬 CHI TIẾT 5 CÚ MÁY BĂM NHỎ (BÀI TẬP 06)</h3>
+          <span style="font-size:12px; color:var(--cyan);">Bấm vào ảnh để phóng to chi tiết</span>
+        </div>
+        <div class="storyboard-grid-5">
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_06/shot1.jpg', 'Shot 1 • Ngồi trầm ngâm cầm điện thoại hai tay', '00:00 - 02.5s', 'Người lớn mình buồn cười lắm...', 'Bắt trọn ánh mắt đăm chiêu giằng xé của anh Việt trong chiếc áo khoác denim, hai tay nâng điện thoại sát mặt bàn.')">
+              <img src="assets/frames_bai_tap_06/shot1.jpg" alt="Ngồi trầm ngâm cầm điện thoại hai tay" loading="lazy">
+              <span class="beat-badge-top badge-action">Trung cận (MCU)</span>
+              <span class="beat-time-tag">00:00 - 02.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">1. Ngồi trầm ngâm cầm điện thoại hai tay</div>
+              <div class="beat-voice-pill">🎙️ "Người lớn mình buồn cười lắm..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Trung cận (MCU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang tầm mắt</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chếch 35° bên trái</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Bắt trọn ánh mắt đăm chiêu giằng xé của anh Việt trong chiếc áo khoác denim, hai tay nâng điện thoại sát mặt bàn.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Trạng thái lưỡng lự trước một ngưỡng cửa mới.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Chuẩn bị ra quyết định lớn, sự cân nhắc thận trọng.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_06/shot2.jpg', 'Shot 2 • Ngón tay trỏ ngập ngừng cách nút Đăng 1mm', '02.5s - 04.5s', '...Soạn xong kịch bản rồi, ngón tay đặt lên nút Đăng...', 'Dí sát vào ngón tay đang run nhẹ, nhấp nhả 2 nhịp ngay trên nút bấm màu xanh nhưng không dám chạm xuống.')">
+              <img src="assets/frames_bai_tap_06/shot2.jpg" alt="Ngón tay trỏ ngập ngừng cách nút Đăng 1mm" loading="lazy">
+              <span class="beat-badge-top badge-action">Cận cảnh (CU)</span>
+              <span class="beat-time-tag">02.5s - 04.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">2. Ngón tay trỏ ngập ngừng cách nút Đăng 1mm</div>
+              <div class="beat-voice-pill">🎙️ "...Soạn xong kịch bản rồi, ngón tay đặt lên nút Đăng..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Cận cảnh (CU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang màn hình</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chính diện ngón trỏ</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Dí sát vào ngón tay đang run nhẹ, nhấp nhả 2 nhịp ngay trên nút bấm màu xanh nhưng không dám chạm xuống.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Sự va chạm giữa mong muốn hành động và nỗi sợ thể diện.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Sự do dự, trì hoãn, ngập ngừng trước rủi ro.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_06/shot3.jpg', 'Shot 3 • Đặc tả nút Đăng nhấp nháy trên màn hình', '04.5s - 07.0s', '...thì cứ run lên vì sợ: Người ta chê mình làm màu...', 'Khóa nét vào chữ 'Đăng video' sắc nét trên giao diện ứng dụng, tạo cảm giác nghẹt thở của khoảnh khắc quyết định.')">
+              <img src="assets/frames_bai_tap_06/shot3.jpg" alt="Đặc tả nút Đăng nhấp nháy trên màn hình" loading="lazy">
+              <span class="beat-badge-top badge-action">Đặc tả (Macro ECU)</span>
+              <span class="beat-time-tag">04.5s - 07.0s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">3. Đặc tả nút Đăng nhấp nháy trên màn hình</div>
+              <div class="beat-voice-pill">🎙️ "...thì cứ run lên vì sợ: Người ta chê mình làm màu..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Đặc tả (Macro ECU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Thẳng đứng màn hình</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Cận cảnh giao diện</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Khóa nét vào chữ 'Đăng video' sắc nét trên giao diện ứng dụng, tạo cảm giác nghẹt thở của khoảnh khắc quyết định.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Ngưỡng cửa bước ngoặt đưa sản phẩm đến với công chúng.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Ranh giới giữa ý tưởng và hành động thực tế.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_06/shot4.jpg', 'Shot 4 • Liếc mắt nhìn quanh phòng học', '07.0s - 09.5s', 'Không bấm thì an toàn thật...', 'Góc nhìn từ sau lưng liếc nhẹ sang những bạn học xung quanh đang trò chuyện, phản ánh nỗi sợ bị dòm ngó.')">
+              <img src="assets/frames_bai_tap_06/shot4.jpg" alt="Liếc mắt nhìn quanh phòng học" loading="lazy">
+              <span class="beat-badge-top badge-action">Góc nhìn môi trường (OTS)</span>
+              <span class="beat-time-tag">07.0s - 09.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">4. Liếc mắt nhìn quanh phòng học</div>
+              <div class="beat-voice-pill">🎙️ "Không bấm thì an toàn thật..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Góc nhìn môi trường (OTS)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang cằm</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Quét sang bạn bè</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Góc nhìn từ sau lưng liếc nhẹ sang những bạn học xung quanh đang trò chuyện, phản ánh nỗi sợ bị dòm ngó.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Tâm lý sợ bị phán xét, sợ mang tiếng 'làm màu'.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Nỗi sợ dư luận, ánh nhìn soi mói của đám đông.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_06/shot5.jpg', 'Shot 5 • Hạ máy úp màn hình xuống mặt bàn', '09.5s - 12.0s', '...nhưng sẽ mãi đứng nguyên một chỗ!', 'Úp mạnh chiếc điện thoại xuống mặt bàn gỗ cạch một cái, ngẩng mặt lên thở dài tự vấn: 'Rốt cuộc mình đang sợ cái gì?'')">
+              <img src="assets/frames_bai_tap_06/shot5.jpg" alt="Hạ máy úp màn hình xuống mặt bàn" loading="lazy">
+              <span class="beat-badge-top badge-action">Góc thấp (Low Angle)</span>
+              <span class="beat-time-tag">09.5s - 12.0s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">5. Hạ máy úp màn hình xuống mặt bàn</div>
+              <div class="beat-voice-pill">🎙️ "...nhưng sẽ mãi đứng nguyên một chỗ!"</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Góc thấp (Low Angle)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Mặt bàn hất lên 15°</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chính diện khuôn mặt</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Úp mạnh chiếc điện thoại xuống mặt bàn gỗ cạch một cái, ngẩng mặt lên thở dài tự vấn: 'Rốt cuộc mình đang sợ cái gì?'
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Cảm giác bực bội vì chính sự hèn nhát của bản thân.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Bế tắc tâm lý, sự bực dọc tự trách, đấu tranh tư tưởng.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reshoot Box -->
+        <div style="background:#090e17; border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:18px 22px; margin-top:20px;">
+          <h4 style="font-size:14px; font-weight:800; color:#fde047; margin-bottom:10px;">📍 3 Gợi Ý Bối Cảnh Quay Lại Ngoài Lớp Học:</h4>
+          <ul style="padding-left:20px; font-size:13px; color:#cbd5e1; line-height:1.6;">
+            <li style="margin-bottom:8px;"><b>Trước cửa phòng họp công ty:</b> Tay cầm tập hồ sơ đưa lên định gõ cửa gặp sếp đề xuất ý tưởng mới rồi lại rụt tay xuống chỉnh áo.</li>
+<li style="margin-bottom:8px;"><b>Ngồi trong xe ô tô trước sự kiện:</b> Nhìn vào gương chiếu hậu chỉnh lại tóc tai, hít sâu một hơi rồi chần chừ mở cửa xe.</li>
+<li style="margin-bottom:8px;"><b>Màn hình máy tính thanh toán:</b> Con chuột máy tính di qua di lại giữa hai nút 'Xác nhận thanh toán' và 'Hủy bỏ' khóa học.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- EXERCISE 07 DETAIL -->
+      <div class="exercise-detail-wrap" id="detail-bt07">
+        <div class="master-audio-box">
+          <div class="master-audio-content">
+            <div class="master-voice-icon">🎙️</div>
+            <div>
+              <div class="master-voice-title">Bài tập 07 • Lời thoại Voice-Over ngầm</div>
+              <div class="master-voice-text" id="voice-text-07">"Lúc mới làm, ai cũng mơ về video triệu view với nghìn đơn.<br>Mở máy ra thấy đúng 3 lượt xem, trong đó có 2 lượt mình tự bấm...<br>Lúc ấy mới hiểu: Nghề này không có chỗ cho kẻ há miệng chờ sung!"</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <button class="copy-btn" onclick="copyVoice('07')">Sao chép kịch bản</button>
+            <a href="baitap07_hut_hang_0view.html" target="_blank" class="copy-btn" style="background:#0284c7; border-color:#0284c7; text-decoration:none;">Mở trang riêng ↗</a>
+          </div>
+        </div>
+
+        <!-- 5 Beats Grid -->
+        <div style="margin-bottom:14px; display:flex; justify-content:space-between; align-items:center;">
+          <h3 style="font-size:16px; font-weight:800; color:#fff;">🎬 CHI TIẾT 5 CÚ MÁY BĂM NHỎ (BÀI TẬP 07)</h3>
+          <span style="font-size:12px; color:var(--cyan);">Bấm vào ảnh để phóng to chi tiết</span>
+        </div>
+        <div class="storyboard-grid-5">
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_07/shot1.jpg', 'Shot 1 • Ngồi gục vai nhìn màn hình điện thoại', '00:00 - 02.5s', 'Lúc mới làm, ai cũng mơ về video triệu view với nghìn đơn.', 'Anh Việt trong chiếc áo hoodie xám ngồi trĩu hai vai xuống bàn, ánh sáng yếu ớt của màn hình chiếu lên khuôn mặt bất động.')">
+              <img src="assets/frames_bai_tap_07/shot1.jpg" alt="Ngồi gục vai nhìn màn hình điện thoại" loading="lazy">
+              <span class="beat-badge-top badge-action">Trung cận (MCU)</span>
+              <span class="beat-time-tag">00:00 - 02.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">1. Ngồi gục vai nhìn màn hình điện thoại</div>
+              <div class="beat-voice-pill">🎙️ "Lúc mới làm, ai cũng mơ về video triệu view với nghìn đơn."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Trung cận (MCU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang ngực</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chính diện bàn học</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Anh Việt trong chiếc áo hoodie xám ngồi trĩu hai vai xuống bàn, ánh sáng yếu ớt của màn hình chiếu lên khuôn mặt bất động.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Năng lượng sụt giảm hoàn toàn, va vào thực tế phũ phàng.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Thất bại ban đầu, cảm giác kiệt sức, mất phương hướng.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_07/shot2.jpg', 'Shot 2 • Hai cánh tay buông thõng trên mặt bàn', '02.5s - 04.5s', '...Mở máy ra thấy đúng 3 lượt xem...', 'Góc máy dọc theo hai cánh tay buông xuôi bất lực trên mặt bàn gỗ, những ngón tay xòe ra không còn chút sức lực.')">
+              <img src="assets/frames_bai_tap_07/shot2.jpg" alt="Hai cánh tay buông thõng trên mặt bàn" loading="lazy">
+              <span class="beat-badge-top badge-action">Cận cảnh (CU)</span>
+              <span class="beat-time-tag">02.5s - 04.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">2. Hai cánh tay buông thõng trên mặt bàn</div>
+              <div class="beat-voice-pill">🎙️ "...Mở máy ra thấy đúng 3 lượt xem..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Cận cảnh (CU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Góc nghiêng 20°</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Dọc theo cánh tay</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Góc máy dọc theo hai cánh tay buông xuôi bất lực trên mặt bàn gỗ, những ngón tay xòe ra không còn chút sức lực.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Cố bám víu một tia hy vọng mong manh.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Thói quen kiểm tra số liệu trong vô vọng, lo âu.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_07/shot3.jpg', 'Shot 3 • Đặc tả màn hình hiển thị 0 Lượt xem', '04.5s - 07.0s', '...trong đó có 2 lượt mình tự bấm...', 'Lấy nét căng vào dòng chữ '0 Lượt xem • 0 Bình luận' trơ trọi trên nền trắng của ứng dụng, sự thật phũ phàng.')">
+              <img src="assets/frames_bai_tap_07/shot3.jpg" alt="Đặc tả màn hình hiển thị 0 Lượt xem" loading="lazy">
+              <span class="beat-badge-top badge-action">Đặc tả (Macro ECU)</span>
+              <span class="beat-time-tag">04.5s - 07.0s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">3. Đặc tả màn hình hiển thị 0 Lượt xem</div>
+              <div class="beat-voice-pill">🎙️ "...trong đó có 2 lượt mình tự bấm..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Đặc tả (Macro ECU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Thẳng đứng màn hình</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chính diện con số</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Lấy nét căng vào dòng chữ '0 Lượt xem • 0 Bình luận' trơ trọi trên nền trắng của ứng dụng, sự thật phũ phàng.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Bằng chứng sắt đá bóc trần ảo tưởng sức mạnh.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Sự thờ ơ của thị trường, kết quả tệ hại, vỡ mộng.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_07/shot4.jpg', 'Shot 4 • Không gian lớp học vắng lặng bao quanh', '07.0s - 09.5s', 'Lúc ấy mới hiểu: Nghề này...', 'Máy đặt trên cao nhìn xuống chiếc điện thoại nằm đơn độc giữa mặt bàn học rộng thênh thang, cảm giác lạc lõng cùng cực.')">
+              <img src="assets/frames_bai_tap_07/shot4.jpg" alt="Không gian lớp học vắng lặng bao quanh" loading="lazy">
+              <span class="beat-badge-top badge-action">Góc cao (High Angle)</span>
+              <span class="beat-time-tag">07.0s - 09.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">4. Không gian lớp học vắng lặng bao quanh</div>
+              <div class="beat-voice-pill">🎙️ "Lúc ấy mới hiểu: Nghề này..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Góc cao (High Angle)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Chúc 45° từ trên xuống</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Toàn cảnh bàn học</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Máy đặt trên cao nhìn xuống chiếc điện thoại nằm đơn độc giữa mặt bàn học rộng thênh thang, cảm giác lạc lõng cùng cực.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Sự cô độc và nhỏ bé trước quy luật thị trường.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Cảm giác đơn độc, lạc lõng, bị bỏ rơi.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_07/shot5.jpg', 'Shot 5 • Khuôn mặt nghệt ra rồi khẽ lắc đầu', '09.5s - 12.0s', '...không có chỗ cho kẻ há miệng chờ sung!', 'Bắt trọn cái lắc đầu nhẹ, khóe môi khẽ nhếch cười tự giễu: 'Tốt lắm, coi như ăn một cái tát để tỉnh ngủ mà làm lại từ đầu!'')">
+              <img src="assets/frames_bai_tap_07/shot5.jpg" alt="Khuôn mặt nghệt ra rồi khẽ lắc đầu" loading="lazy">
+              <span class="beat-badge-top badge-action">Cận cảnh khuôn mặt (CU)</span>
+              <span class="beat-time-tag">09.5s - 12.0s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">5. Khuôn mặt nghệt ra rồi khẽ lắc đầu</div>
+              <div class="beat-voice-pill">🎙️ "...không có chỗ cho kẻ há miệng chờ sung!"</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Cận cảnh khuôn mặt (CU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang tầm mắt</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chính diện</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Bắt trọn cái lắc đầu nhẹ, khóe môi khẽ nhếch cười tự giễu: 'Tốt lắm, coi như ăn một cái tát để tỉnh ngủ mà làm lại từ đầu!'
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Tỉnh ngủ khỏi ảo tưởng, chuẩn bị làm lại bằng thái độ mới.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Sự thức tỉnh sau cú tát thực tế, tinh thần tự trào đứng dậy.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reshoot Box -->
+        <div style="background:#090e17; border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:18px 22px; margin-top:20px;">
+          <h4 style="font-size:14px; font-weight:800; color:#fde047; margin-bottom:10px;">📍 3 Gợi Ý Bối Cảnh Quay Lại Ngoài Lớp Học:</h4>
+          <ul style="padding-left:20px; font-size:13px; color:#cbd5e1; line-height:1.6;">
+            <li style="margin-bottom:8px;"><b>Cửa hàng vắng khách ngày mưa:</b> Đứng tựa quầy thu ngân nhìn ra ngoài trời mưa tầm tã, không một bóng khách ghé vào.</li>
+<li style="margin-bottom:8px;"><b>Bàn làm việc cuối tháng:</b> Cầm tờ sao kê tài khoản hoặc hóa đơn tiền thuê mặt bằng, ánh mắt đờ đẫn nhìn vào khoảng không vô định.</li>
+<li style="margin-bottom:8px;"><b>Băng ghế đá công viên:</b> Ngồi nhìn xuống đôi giày dính bụi sau một ngày dài đi chào hàng nhưng toàn bị từ chối thẳng thừng.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- EXERCISE 08 DETAIL -->
+      <div class="exercise-detail-wrap" id="detail-bt08">
+        <div class="master-audio-box">
+          <div class="master-audio-content">
+            <div class="master-voice-icon">🎙️</div>
+            <div>
+              <div class="master-voice-title">Bài tập 08 • Lời thoại Voice-Over ngầm</div>
+              <div class="master-voice-text" id="voice-text-08">"Tiếng ting ting nổ tin nhắn đầu tiên... giá trị nó chẳng đáng bao nhiêu tiền đâu.<br>Nhưng nó đập tan mọi nỗi sợ trước đó:<br>...Phương pháp này có thật, và mình hoàn toàn làm được!"</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <button class="copy-btn" onclick="copyVoice('08')">Sao chép kịch bản</button>
+            <a href="baitap08_qua_ngot_tingting.html" target="_blank" class="copy-btn" style="background:#0284c7; border-color:#0284c7; text-decoration:none;">Mở trang riêng ↗</a>
+          </div>
+        </div>
+
+        <!-- 5 Beats Grid -->
+        <div style="margin-bottom:14px; display:flex; justify-content:space-between; align-items:center;">
+          <h3 style="font-size:16px; font-weight:800; color:#fff;">🎬 CHI TIẾT 5 CÚ MÁY BĂM NHỎ (BÀI TẬP 08)</h3>
+          <span style="font-size:12px; color:var(--cyan);">Bấm vào ảnh để phóng to chi tiết</span>
+        </div>
+        <div class="storyboard-grid-5">
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_08/shot1.jpg', 'Shot 1 • Ngồi thẳng lưng mắt dán vào màn hình sáng', '00:00 - 02.5s', 'Tiếng ting ting nổ tin nhắn đầu tiên...', 'Anh Việt trong áo sơ mi kẻ caro ngồi thẳng thớm, ánh mắt bỗng mở to ngạc nhiên nhìn chằm chằm vào chiếc điện thoại vừa rung lên.')">
+              <img src="assets/frames_bai_tap_08/shot1.jpg" alt="Ngồi thẳng lưng mắt dán vào màn hình sáng" loading="lazy">
+              <span class="beat-badge-top badge-action">Trung cận (MCU)</span>
+              <span class="beat-time-tag">00:00 - 02.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">1. Ngồi thẳng lưng mắt dán vào màn hình sáng</div>
+              <div class="beat-voice-pill">🎙️ "Tiếng ting ting nổ tin nhắn đầu tiên..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Trung cận (MCU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang tầm mắt</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chếch 30° bên phải</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Anh Việt trong áo sơ mi kẻ caro ngồi thẳng thớm, ánh mắt bỗng mở to ngạc nhiên nhìn chằm chằm vào chiếc điện thoại vừa rung lên.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Tín hiệu bất ngờ phá tan không khí tĩnh lặng.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Đón nhận tin vui bất ngờ, tia sáng hy vọng.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_08/shot2.jpg', 'Shot 2 • Hai bàn tay nâng vội chiếc điện thoại', '02.5s - 04.5s', '...giá trị nó chẳng đáng bao nhiêu tiền đâu.', 'Cận cảnh hai bàn tay vội vã nhấc máy lên, ngón tay cái lướt nhẹ mở khóa màn hình với vẻ nâng niu trân trọng.')">
+              <img src="assets/frames_bai_tap_08/shot2.jpg" alt="Hai bàn tay nâng vội chiếc điện thoại" loading="lazy">
+              <span class="beat-badge-top badge-action">Cận cảnh (CU)</span>
+              <span class="beat-time-tag">02.5s - 04.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">2. Hai bàn tay nâng vội chiếc điện thoại</div>
+              <div class="beat-voice-pill">🎙️ "...giá trị nó chẳng đáng bao nhiêu tiền đâu."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Cận cảnh (CU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang ngực</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chính diện hai bàn tay</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Cận cảnh hai bàn tay vội vã nhấc máy lên, ngón tay cái lướt nhẹ mở khóa màn hình với vẻ nâng niu trân trọng.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Sự trân quý tột cùng đối với phản hồi đầu tiên của khách.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Sự quý trọng từng khách hàng, phản xạ chớp cơ hội.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_08/shot3.jpg', 'Shot 3 • Đặc tả banner tin nhắn khách hàng chốt đơn', '04.5s - 07.0s', 'Nhưng nó đập tan mọi nỗi sợ trước đó...', 'Lấy nét căng vào dòng thông báo: 'Tin nhắn mới từ Khách hàng: Em muốn đăng ký học ngay ạ...' nổi bật trên nền màn hình khóa.')">
+              <img src="assets/frames_bai_tap_08/shot3.jpg" alt="Đặc tả banner tin nhắn khách hàng chốt đơn" loading="lazy">
+              <span class="beat-badge-top badge-action">Đặc tả (Macro ECU)</span>
+              <span class="beat-time-tag">04.5s - 07.0s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">3. Đặc tả banner tin nhắn khách hàng chốt đơn</div>
+              <div class="beat-voice-pill">🎙️ "Nhưng nó đập tan mọi nỗi sợ trước đó..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Đặc tả (Macro ECU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Thẳng đứng màn hình</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Lấy nét banner thông báo</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Lấy nét căng vào dòng thông báo: 'Tin nhắn mới từ Khách hàng: Em muốn đăng ký học ngay ạ...' nổi bật trên nền màn hình khóa.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Minh chứng thực tế của kết quả chuyển đổi có thật.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Bằng chứng kết quả, bằng chứng đơn hàng, tin nhắn chốt đơn.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_08/shot4.jpg', 'Shot 4 • Xoay màn hình khoe bạn ngồi bên cạnh', '07.0s - 09.5s', 'Phương pháp này có thật...', 'Lia máy bắt khoảnh khắc anh Việt huých nhẹ vai bạn học bên cạnh, xoay chiếc điện thoại sang khoe: 'Này, có khách nhắn thật rồi!'')">
+              <img src="assets/frames_bai_tap_08/shot4.jpg" alt="Xoay màn hình khoe bạn ngồi bên cạnh" loading="lazy">
+              <span class="beat-badge-top badge-action">Góc nhìn hai người (Two-shot)</span>
+              <span class="beat-time-tag">07.0s - 09.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">4. Xoay màn hình khoe bạn ngồi bên cạnh</div>
+              <div class="beat-voice-pill">🎙️ "Phương pháp này có thật..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Góc nhìn hai người (Two-shot)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang vai</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Lia sang bạn kế bên</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Lia máy bắt khoảnh khắc anh Việt huých nhẹ vai bạn học bên cạnh, xoay chiếc điện thoại sang khoe: 'Này, có khách nhắn thật rồi!'
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Nhu cầu được công nhận và chia sẻ niềm vui với đồng đội.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Tinh thần đồng đội, chia sẻ quả ngọt, tự hào chính đáng.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_08/shot5.jpg', 'Shot 5 • Nụ cười rạng rỡ nắm chặt tay ăn mừng', '09.5s - 12.0s', '...và mình hoàn toàn làm được!', 'Bắt trọn nụ cười rạng rỡ hạnh phúc, bàn tay nắm chặt kéo giật về phía sau theo phản xạ ăn mừng thầm lặng đầy kiêu hãnh.')">
+              <img src="assets/frames_bai_tap_08/shot5.jpg" alt="Nụ cười rạng rỡ nắm chặt tay ăn mừng" loading="lazy">
+              <span class="beat-badge-top badge-action">Cận cảnh khuôn mặt (CU)</span>
+              <span class="beat-time-tag">09.5s - 12.0s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">5. Nụ cười rạng rỡ nắm chặt tay ăn mừng</div>
+              <div class="beat-voice-pill">🎙️ "...và mình hoàn toàn làm được!"</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Cận cảnh khuôn mặt (CU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang tầm mắt hất nhẹ</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chính diện</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Bắt trọn nụ cười rạng rỡ hạnh phúc, bàn tay nắm chặt kéo giật về phía sau theo phản xạ ăn mừng thầm lặng đầy kiêu hãnh.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Giải phóng sự tự ti, tự hào vì mình đã làm được.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Chiến thắng bản thân, niềm hạnh phúc khi có thành tựu.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reshoot Box -->
+        <div style="background:#090e17; border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:18px 22px; margin-top:20px;">
+          <h4 style="font-size:14px; font-weight:800; color:#fde047; margin-bottom:10px;">📍 3 Gợi Ý Bối Cảnh Quay Lại Ngoài Lớp Học:</h4>
+          <ul style="padding-left:20px; font-size:13px; color:#cbd5e1; line-height:1.6;">
+            <li style="margin-bottom:8px;"><b>Quán cà phê sáng sớm:</b> Nghe tiếng chuông ting ting báo tiền về tài khoản, mỉm cười nhấc ly cà phê lên nhấp một ngụm đầy sảng khoái.</li>
+<li style="margin-bottom:8px;"><b>Bàn đóng gói hàng tại nhà:</b> Tự tay dán băng dính lên thùng hàng đầu tiên gửi đi cho khách, cẩn thận miết phẳng từng mép hộp carton.</li>
+<li style="margin-bottom:8px;"><b>Góc ban công ngập nắng:</b> Cầm điện thoại xem video của mình vừa cán mốc 10.000 view đầu tiên, gió lay nhẹ vạt áo, nụ cười tự hào bình dị.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- EXERCISE 09 DETAIL -->
+      <div class="exercise-detail-wrap" id="detail-bt09">
+        <div class="master-audio-box">
+          <div class="master-audio-content">
+            <div class="master-voice-icon">🎙️</div>
+            <div>
+              <div class="master-voice-title">Bài tập 09 • Lời thoại Voice-Over ngầm</div>
+              <div class="master-voice-text" id="voice-text-09">"Cắt đi nửa giây thừa, kéo lại một nhịp thở...<br>Người xem không biết bạn tỉ mỉ thế nào sau bàn dựng đâu.<br>Nhưng họ sẽ ở lại trọn vẹn video, đơn giản vì không có một giây nào bị thừa thãi!"</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <button class="copy-btn" onclick="copyVoice('09')">Sao chép kịch bản</button>
+            <a href="baitap09_timeline_capcut.html" target="_blank" class="copy-btn" style="background:#0284c7; border-color:#0284c7; text-decoration:none;">Mở trang riêng ↗</a>
+          </div>
+        </div>
+
+        <!-- 5 Beats Grid -->
+        <div style="margin-bottom:14px; display:flex; justify-content:space-between; align-items:center;">
+          <h3 style="font-size:16px; font-weight:800; color:#fff;">🎬 CHI TIẾT 5 CÚ MÁY BĂM NHỎ (BÀI TẬP 09)</h3>
+          <span style="font-size:12px; color:var(--cyan);">Bấm vào ảnh để phóng to chi tiết</span>
+        </div>
+        <div class="storyboard-grid-5">
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_09/shot1.jpg', 'Shot 1 • Ngồi chăm chú bên laptop và tai nghe chụp tai', '00:00 - 02.5s', 'Cắt đi nửa giây thừa, kéo lại một nhịp thở...', 'Bắt trọn thần thái tập trung cao độ của anh Việt với chiếc tai nghe Sony trùm đầu, màn hình laptop hiển thị giao diện dựng phim chuyên nghiệp.')">
+              <img src="assets/frames_bai_tap_09/shot1.jpg" alt="Ngồi chăm chú bên laptop và tai nghe chụp tai" loading="lazy">
+              <span class="beat-badge-top badge-action">Trung cận (MCU)</span>
+              <span class="beat-time-tag">00:00 - 02.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">1. Ngồi chăm chú bên laptop và tai nghe chụp tai</div>
+              <div class="beat-voice-pill">🎙️ "Cắt đi nửa giây thừa, kéo lại một nhịp thở..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Trung cận (MCU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang tầm mắt</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chếch 45° bên trái</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Bắt trọn thần thái tập trung cao độ của anh Việt với chiếc tai nghe Sony trùm đầu, màn hình laptop hiển thị giao diện dựng phim chuyên nghiệp.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Sự nhập định, tách biệt khỏi tiếng ồn xung quanh để tập trung.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Cảnh thợ lành nghề, chuyên gia làm việc sâu (Deep Work).
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_09/shot2.jpg', 'Shot 2 • Màn hình laptop với timeline nhiều layer', '02.5s - 04.5s', '...Người xem không biết bạn tỉ mỉ thế nào...', 'Lấy nét vào màn hình MacBook hiển thị timeline CapCut với các dải màu tím, xanh lá của âm thanh và video được cắt gọt tinh xảo.')">
+              <img src="assets/frames_bai_tap_09/shot2.jpg" alt="Màn hình laptop với timeline nhiều layer" loading="lazy">
+              <span class="beat-badge-top badge-action">Cận cảnh (CU)</span>
+              <span class="beat-time-tag">02.5s - 04.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">2. Màn hình laptop với timeline nhiều layer</div>
+              <div class="beat-voice-pill">🎙️ "...Người xem không biết bạn tỉ mỉ thế nào..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Cận cảnh (CU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang bàn phím</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chếch nhìn màn hình</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Lấy nét vào màn hình MacBook hiển thị timeline CapCut với các dải màu tím, xanh lá của âm thanh và video được cắt gọt tinh xảo.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Bàn dựng - xưởng thủ công của người làm nội dung.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Thao tác kỹ thuật số, quy trình sản xuất hậu kỳ.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_09/shot3.jpg', 'Shot 3 • Đặc tả ngón tay bấm phím cắt đúp thừa', '04.5s - 07.0s', '...sau bàn dựng đâu...', 'Khóa nét ngón trỏ và ngón cái nhấn tổ hợp phím Command + B, nhát cắt sắc lẹm chia đôi đoạn video thừa thãi trên timeline.')">
+              <img src="assets/frames_bai_tap_09/shot3.jpg" alt="Đặc tả ngón tay bấm phím cắt đúp thừa" loading="lazy">
+              <span class="beat-badge-top badge-action">Đặc tả (Macro ECU)</span>
+              <span class="beat-time-tag">04.5s - 07.0s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">3. Đặc tả ngón tay bấm phím cắt đúp thừa</div>
+              <div class="beat-voice-pill">🎙️ "...sau bàn dựng đâu..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Đặc tả (Macro ECU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Góc cao 60°</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chính diện bàn phím</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Khóa nét ngón trỏ và ngón cái nhấn tổ hợp phím Command + B, nhát cắt sắc lẹm chia đôi đoạn video thừa thãi trên timeline.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Nhát cắt dứt khoát loại bỏ phần rác rưởi/dông dài.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Sự chọn lọc, tinh giản, loại bỏ những thứ thừa thãi.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_09/shot4.jpg', 'Shot 4 • Ánh mắt tập trung soi chuyển động từng frame', '07.0s - 09.5s', 'Nhưng họ sẽ ở lại trọn vẹn video...', 'Cận cảnh đôi mắt chăm chú phản chiếu ánh sáng nhấp nháy từ màn hình máy tính, lông mày giãn nhẹ khi tìm đúng điểm nối cảnh raccord.')">
+              <img src="assets/frames_bai_tap_09/shot4.jpg" alt="Ánh mắt tập trung soi chuyển động từng frame" loading="lazy">
+              <span class="beat-badge-top badge-action">Cận cảnh ánh mắt (CU Eyes)</span>
+              <span class="beat-time-tag">07.0s - 09.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">4. Ánh mắt tập trung soi chuyển động từng frame</div>
+              <div class="beat-voice-pill">🎙️ "Nhưng họ sẽ ở lại trọn vẹn video..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Cận cảnh ánh mắt (CU Eyes)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang tầm mắt</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chính diện</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Cận cảnh đôi mắt chăm chú phản chiếu ánh sáng nhấp nháy từ màn hình máy tính, lông mày giãn nhẹ khi tìm đúng điểm nối cảnh raccord.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Sự tập trung cao độ, soi từng chuyển động nhỏ nhất.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Con mắt nghề nghiệp, sự tỉ mỉ, đánh giá chất lượng.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_09/shot5.jpg', 'Shot 5 • Gật gù nhịp chân theo tiếng nhạc nền', '09.5s - 12.0s', '...vì không có một giây nào bị thừa thãi!', 'Bắt cử chỉ gật gù hài lòng theo nhịp điệu âm thanh trong tai nghe, ngón tay gõ nhẹ lên mép máy tính báo hiệu một đúp dựng hoàn hảo.')">
+              <img src="assets/frames_bai_tap_09/shot5.jpg" alt="Gật gù nhịp chân theo tiếng nhạc nền" loading="lazy">
+              <span class="beat-badge-top badge-action">Góc thấp (Low Angle)</span>
+              <span class="beat-time-tag">09.5s - 12.0s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">5. Gật gù nhịp chân theo tiếng nhạc nền</div>
+              <div class="beat-voice-pill">🎙️ "...vì không có một giây nào bị thừa thãi!"</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Góc thấp (Low Angle)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Sát mặt bàn hất lên</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chếch 30°</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Bắt cử chỉ gật gù hài lòng theo nhịp điệu âm thanh trong tai nghe, ngón tay gõ nhẹ lên mép máy tính báo hiệu một đúp dựng hoàn hảo.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Sự hài lòng khi sản phẩm đạt độ hoàn thiện cao nhất.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Sản phẩm hoàn tất mượt mà, cảm giác thỏa mãn của người làm nghề.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reshoot Box -->
+        <div style="background:#090e17; border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:18px 22px; margin-top:20px;">
+          <h4 style="font-size:14px; font-weight:800; color:#fde047; margin-bottom:10px;">📍 3 Gợi Ý Bối Cảnh Quay Lại Ngoài Lớp Học:</h4>
+          <ul style="padding-left:20px; font-size:13px; color:#cbd5e1; line-height:1.6;">
+            <li style="margin-bottom:8px;"><b>Phòng dựng phim tại nhà ban đêm:</b> Ngồi trước màn hình đôi 27 inch trong phòng tối, bàn phím cơ phát sáng lung linh, tay lia chuột mượt mà.</li>
+<li style="margin-bottom:8px;"><b>Quán cà phê yên tĩnh:</b> Ngồi góc bàn dài, cắm tai nghe vào laptop cặm cụi dựng video giữa tiếng nhạc nền du dương của quán.</li>
+<li style="margin-bottom:8px;"><b>Băng ghế chờ sân bay:</b> Mở laptop tranh thủ render nốt video trước giờ lên máy bay, ánh mắt chạy đua với thời gian.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- EXERCISE 10 DETAIL -->
+      <div class="exercise-detail-wrap" id="detail-bt10">
+        <div class="master-audio-box">
+          <div class="master-audio-content">
+            <div class="master-voice-icon">🎙️</div>
+            <div>
+              <div class="master-voice-title">Bài tập 10 • Lời thoại Voice-Over ngầm</div>
+              <div class="master-voice-text" id="voice-text-10">"Ngồi một mình thì tưởng ý tưởng của mình là nhất...<br>Đến lúc đem ra trao đổi, người ta chỉ cho vài điểm mới thấy lủng củng.<br>...Nhưng có va chạm thì mới gọt sắc được thông điệp!"</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <button class="copy-btn" onclick="copyVoice('10')">Sao chép kịch bản</button>
+            <a href="baitap10_tranh_luan_nhom.html" target="_blank" class="copy-btn" style="background:#0284c7; border-color:#0284c7; text-decoration:none;">Mở trang riêng ↗</a>
+          </div>
+        </div>
+
+        <!-- 5 Beats Grid -->
+        <div style="margin-bottom:14px; display:flex; justify-content:space-between; align-items:center;">
+          <h3 style="font-size:16px; font-weight:800; color:#fff;">🎬 CHI TIẾT 5 CÚ MÁY BĂM NHỎ (BÀI TẬP 10)</h3>
+          <span style="font-size:12px; color:var(--cyan);">Bấm vào ảnh để phóng to chi tiết</span>
+        </div>
+        <div class="storyboard-grid-5">
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_10/shot1.jpg', 'Shot 1 • Cúi người chỉ tay vào trang kịch bản', '00:00 - 02.5s', 'Ngồi một mình thì tưởng ý tưởng của mình là nhất...', 'Anh Việt áo blazer linen cúi người trên bàn học, tay chỉ thẳng vào trang giấy kịch bản đang mở sẵn trước mặt bạn học.')">
+              <img src="assets/frames_bai_tap_10/shot1.jpg" alt="Cúi người chỉ tay vào trang kịch bản" loading="lazy">
+              <span class="beat-badge-top badge-action">Trung cảnh (MCU)</span>
+              <span class="beat-time-tag">00:00 - 02.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">1. Cúi người chỉ tay vào trang kịch bản</div>
+              <div class="beat-voice-pill">🎙️ "Ngồi một mình thì tưởng ý tưởng của mình là nhất..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Trung cảnh (MCU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang ngực</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chếch 35° giữa 2 người</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Anh Việt áo blazer linen cúi người trên bàn học, tay chỉ thẳng vào trang giấy kịch bản đang mở sẵn trước mặt bạn học.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Hành động chủ động giải thích, khơi mào cuộc thảo luận.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Thảo luận chiến lược, trao đổi công việc, hướng dẫn 1-1.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_10/shot2.jpg', 'Shot 2 • Ngón tay gõ nhịp lên dòng tiêu đề phản biện', '02.5s - 04.5s', 'Đến lúc đem ra trao đổi...', 'Dí sát camera bắt ngón tay trỏ đang gõ nhẹ lên dòng chữ tiêu đề phản biện, bạn ngồi bên cạnh chống cằm lắng nghe.')">
+              <img src="assets/frames_bai_tap_10/shot2.jpg" alt="Ngón tay gõ nhịp lên dòng tiêu đề phản biện" loading="lazy">
+              <span class="beat-badge-top badge-action">Cận cảnh (CU)</span>
+              <span class="beat-time-tag">02.5s - 04.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">2. Ngón tay gõ nhịp lên dòng tiêu đề phản biện</div>
+              <div class="beat-voice-pill">🎙️ "Đến lúc đem ra trao đổi..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Cận cảnh (CU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Góc nghiêng 45°</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Mặt bàn học</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Dí sát camera bắt ngón tay trỏ đang gõ nhẹ lên dòng chữ tiêu đề phản biện, bạn ngồi bên cạnh chống cằm lắng nghe.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Điểm nghẽn cần mổ xẻ, sự tập trung vào vấn đề cốt lõi.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Mổ xẻ vấn đề, tìm lỗi sai, phản biện chuyên môn.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_10/shot3.jpg', 'Shot 3 • Ngòi bút vẽ nét mũi tên nối sơ đồ 4 bước', '04.5s - 07.0s', '...người ta chỉ cho vài điểm mới thấy lủng củng...', 'Lấy nét căng vào sơ đồ mũi tên vẽ tay nối các ô 'Hook ➔ Nỗi đau ➔ Bẻ lái ➔ Hành động' đầy sống động trên trang giấy kẻ ô.')">
+              <img src="assets/frames_bai_tap_10/shot3.jpg" alt="Ngòi bút vẽ nét mũi tên nối sơ đồ 4 bước" loading="lazy">
+              <span class="beat-badge-top badge-action">Đặc tả (Macro ECU)</span>
+              <span class="beat-time-tag">04.5s - 07.0s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">3. Ngòi bút vẽ nét mũi tên nối sơ đồ 4 bước</div>
+              <div class="beat-voice-pill">🎙️ "...người ta chỉ cho vài điểm mới thấy lủng củng..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Đặc tả (Macro ECU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Thẳng đứng 80°</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chính diện trang sổ</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Lấy nét căng vào sơ đồ mũi tên vẽ tay nối các ô 'Hook ➔ Nỗi đau ➔ Bẻ lái ➔ Hành động' đầy sống động trên trang giấy kẻ ô.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Biến ý tưởng lộn xộn thành cấu trúc logic mạch lạc.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Tư duy hệ thống, sơ đồ hóa giải pháp, cấu trúc nội dung.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_10/shot4.jpg', 'Shot 4 • Hai khuôn mặt cùng hướng về một trang giấy', '07.0s - 09.5s', '...Nhưng có va chạm...', 'Bắt biểu cảm của bạn học đang gật gù ngẫm nghĩ, đối chiếu với nụ cười cởi mở đầy năng lượng của anh Việt đang giải thích.')">
+              <img src="assets/frames_bai_tap_10/shot4.jpg" alt="Hai khuôn mặt cùng hướng về một trang giấy" loading="lazy">
+              <span class="beat-badge-top badge-action">Góc hai người (Two-shot)</span>
+              <span class="beat-time-tag">07.0s - 09.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">4. Hai khuôn mặt cùng hướng về một trang giấy</div>
+              <div class="beat-voice-pill">🎙️ "...Nhưng có va chạm..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Góc hai người (Two-shot)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang cằm</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Bắt tương tác hai bên</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Bắt biểu cảm của bạn học đang gật gù ngẫm nghĩ, đối chiếu với nụ cười cởi mở đầy năng lượng của anh Việt đang giải thích.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Sự đồng điệu và thấu hiểu sau khi cởi bỏ định kiến.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Sự thấu hiểu, thống nhất quan điểm giữa đồng đội.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_10/shot5.jpg', 'Shot 5 • Hai bàn tay đập nhẹ (High-five) trên mặt bàn', '09.5s - 12.0s', '...thì mới gọt sắc được thông điệp!', 'Bắt trọn khoảnh khắc hai bàn tay đập nhẹ vào nhau (High-five) ngay trên cuốn sổ kịch bản, nụ cười đồng thuận rạng rỡ.')">
+              <img src="assets/frames_bai_tap_10/shot5.jpg" alt="Hai bàn tay đập nhẹ (High-five) trên mặt bàn" loading="lazy">
+              <span class="beat-badge-top badge-action">Góc thấp (Low Angle)</span>
+              <span class="beat-time-tag">09.5s - 12.0s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">5. Hai bàn tay đập nhẹ (High-five) trên mặt bàn</div>
+              <div class="beat-voice-pill">🎙️ "...thì mới gọt sắc được thông điệp!"</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Góc thấp (Low Angle)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Hất lên từ mép bàn</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chính diện</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Bắt trọn khoảnh khắc hai bàn tay đập nhẹ vào nhau (High-five) ngay trên cuốn sổ kịch bản, nụ cười đồng thuận rạng rỡ.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Chốt xong phương án hoàn hảo, tinh thần đồng đội thăng hoa.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Chốt thỏa thuận, ăn mừng đồng thuận, hoàn thành hợp tác.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reshoot Box -->
+        <div style="background:#090e17; border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:18px 22px; margin-top:20px;">
+          <h4 style="font-size:14px; font-weight:800; color:#fde047; margin-bottom:10px;">📍 3 Gợi Ý Bối Cảnh Quay Lại Ngoài Lớp Học:</h4>
+          <ul style="padding-left:20px; font-size:13px; color:#cbd5e1; line-height:1.6;">
+            <li style="margin-bottom:8px;"><b>Phòng họp brainstorm công ty:</b> Đứng trước tấm bảng kính vẽ đầy sơ đồ mindmap, cùng đồng nghiệp tranh luận về chiến dịch ra mắt sản phẩm.</li>
+<li style="margin-bottom:8px;"><b>Bàn tròn quán trà sữa / cafe:</b> 3-4 bạn trẻ ngồi quây quần cùng chiếc laptop, vừa ăn bánh vừa hào hứng vẽ storyboard lên khăn giấy.</li>
+<li style="margin-bottom:8px;"><b>Góc ban công thảo luận ngoài trời:</b> Hai người đứng tựa lan can, một người cầm kịch bản đọc to, người kia góp ý từng câu thoại.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- EXERCISE 11 DETAIL -->
+      <div class="exercise-detail-wrap" id="detail-bt11">
+        <div class="master-audio-box">
+          <div class="master-audio-content">
+            <div class="master-voice-icon">🎙️</div>
+            <div>
+              <div class="master-voice-title">Bài tập 11 • Lời thoại Voice-Over ngầm</div>
+              <div class="master-voice-text" id="voice-text-11">"Đứng trước ống kính mà run chân run tay... thì ai mới đầu cũng thế.<br>Nhưng nuốt nước bọt một cái, nhìn thẳng vào mắt camera và mở lời...<br>...Bước qua được cái ngại ban đầu là đã nhẹ cả người rồi!"</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <button class="copy-btn" onclick="copyVoice('11')">Sao chép kịch bản</button>
+            <a href="baitap11_tap_noi_truoc_lop.html" target="_blank" class="copy-btn" style="background:#0284c7; border-color:#0284c7; text-decoration:none;">Mở trang riêng ↗</a>
+          </div>
+        </div>
+
+        <!-- 5 Beats Grid -->
+        <div style="margin-bottom:14px; display:flex; justify-content:space-between; align-items:center;">
+          <h3 style="font-size:16px; font-weight:800; color:#fff;">🎬 CHI TIẾT 5 CÚ MÁY BĂM NHỎ (BÀI TẬP 11)</h3>
+          <span style="font-size:12px; color:var(--cyan);">Bấm vào ảnh để phóng to chi tiết</span>
+        </div>
+        <div class="storyboard-grid-5">
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_11/shot1.jpg', 'Shot 1 • Đứng cạnh bảng trắng đối diện chân máy phone', '00:00 - 02.5s', 'Đứng trước ống kính mà run chân run tay...', 'Anh Việt trong chiếc áo sơ mi trắng tinh tươm đứng bên bảng lớp học, hai tay mở nhẹ với cử chỉ tự nhiên, đối diện chiếc điện thoại kẹp tripod.')">
+              <img src="assets/frames_bai_tap_11/shot1.jpg" alt="Đứng cạnh bảng trắng đối diện chân máy phone" loading="lazy">
+              <span class="beat-badge-top badge-action">Trung cảnh (MCU)</span>
+              <span class="beat-time-tag">00:00 - 02.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">1. Đứng cạnh bảng trắng đối diện chân máy phone</div>
+              <div class="beat-voice-pill">🎙️ "Đứng trước ống kính mà run chân run tay..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Trung cảnh (MCU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang ngực</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chếch 30° trực diện</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Anh Việt trong chiếc áo sơ mi trắng tinh tươm đứng bên bảng lớp học, hai tay mở nhẹ với cử chỉ tự nhiên, đối diện chiếc điện thoại kẹp tripod.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Thiết lập tư thế sẵn sàng đối mặt thử thách.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Thuyết trình, giảng dạy, chia sẻ trước công chúng.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_11/shot2.jpg', 'Shot 2 • Chiếc điện thoại kẹp ngay ngắn trên tripod mini', '02.5s - 04.5s', '...thì ai mới đầu cũng thế.', 'Lấy nét căng vào chiếc chân máy tripod 3 chân nhỏ gọn đặt vững chãi trên mặt bàn, kẹp chiếc điện thoại đang ở chế độ chờ.')">
+              <img src="assets/frames_bai_tap_11/shot2.jpg" alt="Chiếc điện thoại kẹp ngay ngắn trên tripod mini" loading="lazy">
+              <span class="beat-badge-top badge-action">Cận cảnh (CU)</span>
+              <span class="beat-time-tag">02.5s - 04.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">2. Chiếc điện thoại kẹp ngay ngắn trên tripod mini</div>
+              <div class="beat-voice-pill">🎙️ "...thì ai mới đầu cũng thế."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Cận cảnh (CU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang mặt bàn</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chính diện chân máy</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Lấy nét căng vào chiếc chân máy tripod 3 chân nhỏ gọn đặt vững chãi trên mặt bàn, kẹp chiếc điện thoại đang ở chế độ chờ.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Điểm tựa kỹ thuật giúp người nói bớt chông chênh.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Công cụ hỗ trợ, sự chuẩn bị chu đáo trước giờ hành động.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_11/shot3.jpg', 'Shot 3 • Đặc tả camera điện thoại đếm ngược 3... 2... 1', '04.5s - 07.0s', 'Nhưng nuốt nước bọt một cái, nhìn thẳng vào mắt camera...', 'Khóa nét vào cụm mắt camera điện thoại phản chiếu ánh sáng phòng học, chấm đèn đỏ nhấp nháy báo hiệu chuẩn bị ghi hình.')">
+              <img src="assets/frames_bai_tap_11/shot3.jpg" alt="Đặc tả camera điện thoại đếm ngược 3... 2... 1" loading="lazy">
+              <span class="beat-badge-top badge-action">Đặc tả (Macro ECU)</span>
+              <span class="beat-time-tag">04.5s - 07.0s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">3. Đặc tả camera điện thoại đếm ngược 3... 2... 1</div>
+              <div class="beat-voice-pill">🎙️ "Nhưng nuốt nước bọt một cái, nhìn thẳng vào mắt camera..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Đặc tả (Macro ECU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang ống kính</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chĩa thẳng mắt camera</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Khóa nét vào cụm mắt camera điện thoại phản chiếu ánh sáng phòng học, chấm đèn đỏ nhấp nháy báo hiệu chuẩn bị ghi hình.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Con mắt phán xét vô hình mà ai cũng phải học cách đối diện.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Áp lực thời gian thực, sự tập trung vào khoảnh khắc vàng.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_11/shot4.jpg', 'Shot 4 • Không gian phòng học nhìn từ bục giảng', '07.0s - 09.5s', '...và mở lời...', 'Góc nhìn từ sau lưng nhân vật bao quát các dãy bàn học và các bạn sinh viên đang chăm chú dõi theo, không gian rộng mở.')">
+              <img src="assets/frames_bai_tap_11/shot4.jpg" alt="Không gian phòng học nhìn từ bục giảng" loading="lazy">
+              <span class="beat-badge-top badge-action">Góc toàn qua vai (Wide OTS)</span>
+              <span class="beat-time-tag">07.0s - 09.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">4. Không gian phòng học nhìn từ bục giảng</div>
+              <div class="beat-voice-pill">🎙️ "...và mở lời..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Góc toàn qua vai (Wide OTS)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Từ sau vai người nói</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Hướng xuống lớp học</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Góc nhìn từ sau lưng nhân vật bao quát các dãy bàn học và các bạn sinh viên đang chăm chú dõi theo, không gian rộng mở.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Sự hiện diện của khán giả thực tế ngoài đời.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Đối diện với đám đông, kết nối với cộng đồng người xem.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_11/shot5.jpg', 'Shot 5 • Thở phào nhẹ nhõm mỉm cười tự tin', '09.5s - 12.0s', '...Bước qua được cái ngại ban đầu là đã nhẹ cả người rồi!', 'Bắt trọn nụ cười bừng sáng và hơi thở phào nhẹ nhõm của anh Việt ngay sau khi hoàn thành đúp nói: 'Thấy chưa, có chết ai đâu!'')">
+              <img src="assets/frames_bai_tap_11/shot5.jpg" alt="Thở phào nhẹ nhõm mỉm cười tự tin" loading="lazy">
+              <span class="beat-badge-top badge-action">Cận cảnh khuôn mặt (CU)</span>
+              <span class="beat-time-tag">09.5s - 12.0s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">5. Thở phào nhẹ nhõm mỉm cười tự tin</div>
+              <div class="beat-voice-pill">🎙️ "...Bước qua được cái ngại ban đầu là đã nhẹ cả người rồi!"</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Cận cảnh khuôn mặt (CU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang tầm mắt</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chính diện</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Bắt trọn nụ cười bừng sáng và hơi thở phào nhẹ nhõm của anh Việt ngay sau khi hoàn thành đúp nói: 'Thấy chưa, có chết ai đâu!'
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Vượt ngưỡng thành công, cảm giác chiến thắng nỗi sợ bản thân.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Nhẹ nhõm sau áp lực, tự tin bước tiếp trên con đường mới.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reshoot Box -->
+        <div style="background:#090e17; border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:18px 22px; margin-top:20px;">
+          <h4 style="font-size:14px; font-weight:800; color:#fde047; margin-bottom:10px;">📍 3 Gợi Ý Bối Cảnh Quay Lại Ngoài Lớp Học:</h4>
+          <ul style="padding-left:20px; font-size:13px; color:#cbd5e1; line-height:1.6;">
+            <li style="margin-bottom:8px;"><b>Phòng khách tại nhà tự quay:</b> Đứng trước góc tường trắng phòng khách, tự bấm máy quay clip chia sẻ kinh nghiệm đầu tiên trong đời.</li>
+<li style="margin-bottom:8px;"><b>Hội trường / Sân khấu nhỏ:</b> Đứng trên bục phát biểu cầm micro, nhìn xuống hàng ghế khán giả và tự tin chia sẻ câu chuyện của mình.</li>
+<li style="margin-bottom:8px;"><b>Góc vườn / Công viên ngoài trời:</b> Cầm gậy selfie đi dạo vừa đi vừa nói chuyện với camera một cách tự nhiên như tâm sự với bạn hiền.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- EXERCISE 12 DETAIL -->
+      <div class="exercise-detail-wrap" id="detail-bt12">
+        <div class="master-audio-box">
+          <div class="master-audio-content">
+            <div class="master-voice-icon">🎙️</div>
+            <div>
+              <div class="master-voice-title">Bài tập 12 • Lời thoại Voice-Over ngầm</div>
+              <div class="master-voice-text" id="voice-text-12">"Học xong một buổi, đầu nảy số bao nhiêu ý tưởng.<br>Gập máy lại, dọn đồ vào balo...<br>...Giờ không còn là bài tập trên lớp nữa, mà là mang về nhà làm ra kết quả thật cho mình."</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <button class="copy-btn" onclick="copyVoice('12')">Sao chép kịch bản</button>
+            <a href="baitap12_thu_don_buoc_di.html" target="_blank" class="copy-btn" style="background:#0284c7; border-color:#0284c7; text-decoration:none;">Mở trang riêng ↗</a>
+          </div>
+        </div>
+
+        <!-- 5 Beats Grid -->
+        <div style="margin-bottom:14px; display:flex; justify-content:space-between; align-items:center;">
+          <h3 style="font-size:16px; font-weight:800; color:#fff;">🎬 CHI TIẾT 5 CÚ MÁY BĂM NHỎ (BÀI TẬP 12)</h3>
+          <span style="font-size:12px; color:var(--cyan);">Bấm vào ảnh để phóng to chi tiết</span>
+        </div>
+        <div class="storyboard-grid-5">
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_12/shot1.jpg', 'Shot 1 • Đứng bên cánh cửa lớp khoác balo trên vai', '00:00 - 02.5s', 'Học xong một buổi, đầu nảy số bao nhiêu ý tưởng.', 'Anh Việt trong chiếc áo gió thể thao năng động, một bên vai đeo chiếc balo đen, đứng ngay mép cửa lớp học với ánh mắt hướng về phía trước.')">
+              <img src="assets/frames_bai_tap_12/shot1.jpg" alt="Đứng bên cánh cửa lớp khoác balo trên vai" loading="lazy">
+              <span class="beat-badge-top badge-action">Trung cảnh (MCU)</span>
+              <span class="beat-time-tag">00:00 - 02.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">1. Đứng bên cánh cửa lớp khoác balo trên vai</div>
+              <div class="beat-voice-pill">🎙️ "Học xong một buổi, đầu nảy số bao nhiêu ý tưởng."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Trung cảnh (MCU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang ngực</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chếch 30° khung cửa</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Anh Việt trong chiếc áo gió thể thao năng động, một bên vai đeo chiếc balo đen, đứng ngay mép cửa lớp học với ánh mắt hướng về phía trước.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Tư thế sẵn sàng rời khỏi vùng an toàn của lớp học.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Bắt đầu hành trình mới, người làm nghề lên đường tác nghiệp.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_12/shot2.jpg', 'Shot 2 • Bàn tay hạ nắp MacBook xuống dứt khoát', '02.5s - 04.5s', 'Gập máy lại...', 'Cận cảnh đặt camera ngang mép bàn, bàn tay hạ nắp máy tính MacBook nhôm màu xám không gian xuống mặt phím nghe tiếng hít nam châm.')">
+              <img src="assets/frames_bai_tap_12/shot2.jpg" alt="Bàn tay hạ nắp MacBook xuống dứt khoát" loading="lazy">
+              <span class="beat-badge-top badge-action">Cận cảnh (CU)</span>
+              <span class="beat-time-tag">02.5s - 04.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">2. Bàn tay hạ nắp MacBook xuống dứt khoát</div>
+              <div class="beat-voice-pill">🎙️ "Gập máy lại..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Cận cảnh (CU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang mép bàn</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chính diện nắp máy</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Cận cảnh đặt camera ngang mép bàn, bàn tay hạ nắp máy tính MacBook nhôm màu xám không gian xuống mặt phím nghe tiếng hít nam châm.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Khép lại phiên làm việc/học tập lý thuyết.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Hoàn thành công việc, đóng gói dự án, rời bàn làm việc.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_12/shot3.jpg', 'Shot 3 • Ngón tay kéo chiếc khóa zip kim loại của balo', '04.5s - 07.0s', '...dọn đồ vào balo...', 'Dí sát camera bắt ngón tay cái và ngón trỏ kẹp chiếc khóa kéo kim loại của balo đen, kéo trượt một đường dứt khoát.')">
+              <img src="assets/frames_bai_tap_12/shot3.jpg" alt="Ngón tay kéo chiếc khóa zip kim loại của balo" loading="lazy">
+              <span class="beat-badge-top badge-action">Đặc tả (Macro ECU)</span>
+              <span class="beat-time-tag">04.5s - 07.0s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">3. Ngón tay kéo chiếc khóa zip kim loại của balo</div>
+              <div class="beat-voice-pill">🎙️ "...dọn đồ vào balo..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Đặc tả (Macro ECU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang thân balo</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Chính diện đường khóa</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Dí sát camera bắt ngón tay cái và ngón trỏ kẹp chiếc khóa kéo kim loại của balo đen, kéo trượt một đường dứt khoát.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Thu dọn hành trang gọn gàng, sẵn sàng di chuyển.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Chuẩn bị đồ đạc, đóng gói tư trang, chuẩn bị lên đường.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_12/shot4.jpg', 'Shot 4 • Hành lang trường học dài ngập tràn ánh nắng', '07.0s - 09.5s', '...Giờ không còn là bài tập trên lớp nữa...', 'Khung cảnh hành lang trường học dài thênh thang ngập nắng ban ngày, sàn gạch bóng loáng mở ra con đường phía trước.')">
+              <img src="assets/frames_bai_tap_12/shot4.jpg" alt="Hành lang trường học dài ngập tràn ánh nắng" loading="lazy">
+              <span class="beat-badge-top badge-action">Góc nhìn phối cảnh (POV/Wide)</span>
+              <span class="beat-time-tag">07.0s - 09.5s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">4. Hành lang trường học dài ngập tràn ánh nắng</div>
+              <div class="beat-voice-pill">🎙️ "...Giờ không còn là bài tập trên lớp nữa..."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Góc nhìn phối cảnh (POV/Wide)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang tầm mắt</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Hướng ra hành lang</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Khung cảnh hành lang trường học dài thênh thang ngập nắng ban ngày, sàn gạch bóng loáng mở ra con đường phía trước.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Con đường thực tế rộng mở đang chờ đón phía trước.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Tương lai rộng mở, con đường dài phía trước, cơ hội mới.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="beat-card">
+            <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_12/shot5.jpg', 'Shot 5 • Quay người lại mỉm cười vẫy tay chào tạm biệt', '09.5s - 12.0s', '...mà là mang về nhà làm ra kết quả thật cho mình.', 'Anh Việt một bên vai đeo balo, quay nửa người lại bên cửa lớp, nở nụ cười hào sảng, vẫy tay chào lớp học đầy năng lượng.')">
+              <img src="assets/frames_bai_tap_12/shot5.jpg" alt="Quay người lại mỉm cười vẫy tay chào tạm biệt" loading="lazy">
+              <span class="beat-badge-top badge-action">Trung cận (MCU)</span>
+              <span class="beat-time-tag">09.5s - 12.0s</span>
+            </div>
+            <div class="beat-content">
+              <div class="beat-id-title">5. Quay người lại mỉm cười vẫy tay chào tạm biệt</div>
+              <div class="beat-voice-pill">🎙️ "...mà là mang về nhà làm ra kết quả thật cho mình."</div>
+              <table class="specs-table">
+                <tr><td class="spec-name">Cỡ cảnh:</td><td>Trung cận (MCU)</td></tr>
+                <tr><td class="spec-name">Góc máy:</td><td>Ngang tầm mắt</td></tr>
+                <tr><td class="spec-name">Hướng:</td><td>Nhìn lại ống kính</td></tr>
+              </table>
+              <div style="font-size:11px; color:#94a3b8; margin-top:auto; padding-top:6px; border-top:1px dashed rgba(255,255,255,0.08);">
+                💡 Anh Việt một bên vai đeo balo, quay nửa người lại bên cửa lớp, nở nụ cười hào sảng, vẫy tay chào lớp học đầy năng lượng.
+              </div>
+              <div style="font-size:10.5px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px 6px; border-radius:4px; margin-top:4px;">
+                🎯 <b>Ẩn dụ:</b> Lời tạm biệt mộc mạc, sự tin tưởng vào chặng đường phía trước.
+              </div>
+              <div style="margin-top:4px;">
+                <span style="font-size:9.5px; font-weight:700; color:#34d399; background:rgba(16,185,129,0.15); padding:2px 6px; border-radius:4px;">
+                  🔄 Kết bài, chào tạm biệt khán giả, hẹn gặp lại ở dự án mới.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reshoot Box -->
+        <div style="background:#090e17; border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:18px 22px; margin-top:20px;">
+          <h4 style="font-size:14px; font-weight:800; color:#fde047; margin-bottom:10px;">📍 3 Gợi Ý Bối Cảnh Quay Lại Ngoài Lớp Học:</h4>
+          <ul style="padding-left:20px; font-size:13px; color:#cbd5e1; line-height:1.6;">
+            <li style="margin-bottom:8px;"><b>Rời khỏi quán cà phê sau buổi làm việc:</b> Đứng dậy đeo túi, cầm cốc nước trả quầy rồi bước ra đường phố tấp nập trong ánh chiều buông.</li>
+<li style="margin-bottom:8px;"><b>Cửa thang máy tòa nhà văn phòng:</b> Bước vào thang máy bấm nút xuống tầng hầm, ngắm nhìn hình ảnh mình tràn đầy quyết tâm trong gương thang máy.</li>
+<li style="margin-bottom:8px;"><b>Sải bước trên cầu vượt bộ hành:</b> Đeo tai nghe, sải bước dài trên cầu vượt nhìn xuống dòng xe cộ hối hả, tâm thế sẵn sàng chinh phục mục tiêu mới.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-card" onclick="event.stopPropagation()">
+      <div class="lightbox-media">
+        <img id="lb-img" src="" alt="Frame Detail">
+      </div>
+      <div class="lightbox-sidebar">
+        <button class="lightbox-close-btn" onclick="closeLightbox()">✕</button>
+        <span class="tag tag-cyan" id="lb-time">00:00</span>
+        <h3 id="lb-title" style="font-size:16px; font-weight:800; color:#fff;">Tiêu đề</h3>
+        <div class="beat-voice-pill" id="lb-voice" style="font-size:13px;">Lời thoại</div>
+        <div style="font-size:12.5px; color:#94a3b8; line-height:1.6; border-top:1px dashed rgba(255,255,255,0.1); padding-top:10px;" id="lb-tip">Mẹo đạo diễn</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast-msg">Đã sao chép kịch bản voice-over!</div>
+
+  <script>
+    let currentActiveBt = "01";
+
+    function showExercise(id, doScroll = true) {
+      // Update tabs
+      document.querySelectorAll('.overview-card').forEach(c => c.classList.remove('active-tab'));
+      const activeCard = document.getElementById('card-tab-' + id);
+      if (activeCard) activeCard.classList.add('active-tab');
+
+      // Update detail sections
+      document.querySelectorAll('.exercise-detail-wrap').forEach(d => d.classList.remove('active'));
+      const activeDetail = document.getElementById('detail-bt' + id);
+      if (activeDetail) {
+        activeDetail.classList.add('active');
+        if (doScroll) {
+          activeDetail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+      currentActiveBt = id;
+    }
+
+    function filterCards(cat) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+
+      document.querySelectorAll('.overview-card').forEach(card => {
+        if (cat === 'all' || card.dataset.category === cat) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function copyVoice(id) {
+      const el = document.getElementById('voice-text-' + id);
+      if (!el) return;
+      const text = el.innerText.replace(/^"|"$/g, '').trim();
+      navigator.clipboard.writeText(text).then(() => {
+        const toast = document.getElementById('toast-msg');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2200);
+      });
+    }
+
+    function openLightbox(imgSrc, title, time, voice, tip) {
+      document.getElementById('lb-img').src = imgSrc;
+      document.getElementById('lb-title').innerText = title;
+      document.getElementById('lb-time').innerText = time;
+      document.getElementById('lb-voice').innerText = '🎙️ ' + voice;
+      document.getElementById('lb-tip').innerHTML = '💡 <b>Mẹo quay:</b> ' + tip;
+      document.getElementById('lightbox').classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+
+    // Default activate BT01 without smooth scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      showExercise('01', false);
+    });
+  </script>
+</body>
+</html>

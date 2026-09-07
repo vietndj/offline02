@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+# -*- coding: utf-8 -*-
+"""
+Generate index.html - Master Portal for FEDU Offline Course
+"""
+import os
+
+html_content = """<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
@@ -605,15 +611,15 @@
             <span class="avatar-mini-tag">BT 03</span>
           </div>
           <div class="avatar-preview-item">
-            <img src="assets/marketing_baitap/viet_bt4_shirt.jpg" alt="BT04" loading="lazy">
+            <img src="assets/marketing_baitap/viet_bt4_smartcasual.jpg" alt="BT04" loading="lazy">
             <span class="avatar-mini-tag">BT 04</span>
           </div>
           <div class="avatar-preview-item">
-            <img src="assets/marketing_baitap/viet_bt5_sweater.jpg" alt="BT05" loading="lazy">
+            <img src="assets/marketing_baitap/viet_bt5_lightknit.jpg" alt="BT05" loading="lazy">
             <span class="avatar-mini-tag">BT 05</span>
           </div>
           <div class="avatar-preview-item">
-            <img src="assets/marketing_baitap/viet_bt6_denim.jpg" alt="BT06" loading="lazy">
+            <img src="assets/marketing_baitap/viet_bt6_blackpolo.jpg" alt="BT06" loading="lazy">
             <span class="avatar-mini-tag">BT 06</span>
           </div>
           <div class="avatar-preview-item">
@@ -621,19 +627,19 @@
             <span class="avatar-mini-tag">BT 07</span>
           </div>
           <div class="avatar-preview-item">
-            <img src="assets/marketing_baitap/viet_bt8_plaid.jpg" alt="BT08" loading="lazy">
+            <img src="assets/marketing_baitap/viet_bt8_bomber.jpg" alt="BT08" loading="lazy">
             <span class="avatar-mini-tag">BT 08</span>
           </div>
           <div class="avatar-preview-item">
-            <img src="assets/marketing_baitap/viet_bt9_headphones.jpg" alt="BT09" loading="lazy">
+            <img src="assets/marketing_baitap/viet_bt9_denim.jpg" alt="BT09" loading="lazy">
             <span class="avatar-mini-tag">BT 09</span>
           </div>
           <div class="avatar-preview-item">
-            <img src="assets/marketing_baitap/viet_bt10_blazer.jpg" alt="BT10" loading="lazy">
+            <img src="assets/marketing_baitap/viet_bt10_flannel.jpg" alt="BT10" loading="lazy">
             <span class="avatar-mini-tag">BT 10</span>
           </div>
           <div class="avatar-preview-item">
-            <img src="assets/marketing_baitap/viet_bt11_whiteshirt.jpg" alt="BT11" loading="lazy">
+            <img src="assets/marketing_baitap/viet_bt11_vest.jpg" alt="BT11" loading="lazy">
             <span class="avatar-mini-tag">BT 11</span>
           </div>
           <div class="avatar-preview-item">
@@ -731,4 +737,9 @@
   </div>
 
 </body>
-</html>
+</html>"""
+
+with open("/Users/vietmac/Documents/CODE/offline02/index.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print("Generated /Users/vietmac/Documents/CODE/offline02/index.html successfully!")
