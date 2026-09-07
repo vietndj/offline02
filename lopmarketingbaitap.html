@@ -23,10 +23,7 @@
       --amber: #f59e0b;
       --amber-glow: rgba(245, 158, 11, 0.15);
       --emerald: #10b981;
-      --emerald-glow: rgba(16, 185, 129, 0.15);
       --purple: #a855f7;
-      --purple-glow: rgba(168, 85, 247, 0.15);
-      --rose: #f43f5e;
       --radius-sm: 8px;
       --radius-md: 14px;
       --radius-lg: 20px;
@@ -40,10 +37,9 @@
       padding-bottom: 80px;
     }
     
-    /* Top Sticky Header */
     .top-header {
       position: sticky; top: 0; z-index: 100;
-      background: rgba(6, 9, 17, 0.92);
+      background: rgba(6, 9, 17, 0.94);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border-subtle);
       padding: 12px 24px;
@@ -64,7 +60,6 @@
 
     .container { max-width: 1400px; margin: 0 auto; padding: 24px 20px; }
 
-    /* Hero Banner */
     .hero {
       background: linear-gradient(180deg, #101827 0%, #090e17 100%);
       border: 1px solid rgba(56, 189, 248, 0.22); border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 30px;
@@ -86,7 +81,6 @@
     .metric-label { font-size: 10.5px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; margin-bottom: 2px; }
     .metric-value { font-size: 16px; font-weight: 800; color: var(--text-primary); }
 
-    /* Exercise Overview Grid */
     .section-title {
       font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;
     }
@@ -114,10 +108,10 @@
       position: absolute; top: 10px; left: 10px; z-index: 2; font-size: 10px; font-weight: 800;
       padding: 4px 9px; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.5px;
     }
-    .badge-suit { background: #0284c7; color: #fff; }
-    .badge-tshirt { background: #e11d48; color: #fff; }
-    .badge-sporty { background: #16a34a; color: #fff; }
-    .badge-shirt { background: #7c3aed; color: #fff; }
+    .badge-1 { background: #0284c7; color: #fff; }
+    .badge-2 { background: #e11d48; color: #fff; }
+    .badge-3 { background: #16a34a; color: #fff; }
+    .badge-4 { background: #7c3aed; color: #fff; }
 
     .card-outfit-tag {
       position: absolute; bottom: 8px; right: 8px; z-index: 2;
@@ -138,12 +132,10 @@
     }
     .overview-btn:hover { background: var(--cyan); color: #000; }
 
-    /* Detailed Exercise Section */
     .exercise-detail-wrap { display: none; margin-bottom: 40px; }
     .exercise-detail-wrap.active { display: block; animation: fadeIn 0.3s ease; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
-    /* Master Audio / Voiceover Box */
     .master-audio-box {
       background: linear-gradient(90deg, rgba(56, 189, 248, 0.1) 0%, rgba(20, 31, 51, 0.7) 100%);
       border: 1px solid rgba(56, 189, 248, 0.3); border-radius: var(--radius-lg); padding: 20px 26px; margin-bottom: 24px;
@@ -162,7 +154,6 @@
     }
     .copy-btn:hover { background: var(--cyan); color: #000; }
 
-    /* 4 Tiers of Truth Section */
     .tiers-section {
       background: linear-gradient(180deg, #101929 0%, #0a0f19 100%);
       border: 1px solid rgba(56, 189, 248, 0.22); border-radius: var(--radius-lg); padding: 22px 26px; margin-bottom: 24px;
@@ -196,7 +187,6 @@
       font-size: 11px; color: var(--text-muted); line-height: 1.45; border-top: 1px dashed rgba(255,255,255,0.08); padding-top: 6px; margin-top: 4px;
     }
 
-    /* 5-Beats Storyboard Grid */
     .storyboard-grid-5 {
       display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-bottom: 24px;
     }
@@ -219,13 +209,8 @@
     .beat-badge-top {
       position: absolute; top: 8px; left: 8px; z-index: 2; font-size: 9px; font-weight: 800;
       padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;
+      background: rgba(56, 189, 248, 0.9); color: #000;
     }
-    .badge-in { background: rgba(16, 185, 129, 0.9); color: #fff; }
-    .badge-action { background: rgba(56, 189, 248, 0.9); color: #000; }
-    .badge-macro { background: rgba(245, 158, 11, 0.9); color: #000; }
-    .badge-pov { background: rgba(168, 85, 247, 0.9); color: #fff; }
-    .badge-out { background: rgba(244, 63, 94, 0.9); color: #fff; }
-
     .beat-time-tag {
       position: absolute; top: 8px; right: 8px; z-index: 2; background: rgba(0, 0, 0, 0.85);
       border: 1px solid rgba(255,255,255,0.15); color: var(--cyan); font-family: 'JetBrains Mono', monospace;
@@ -255,7 +240,6 @@
       padding: 8px; border-radius: 6px; font-size: 10.5px; color: #fde68a; line-height: 1.45; margin-top: auto;
     }
 
-    /* Comparison Matrix Table */
     .matrix-section {
       background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);
       padding: 20px 24px; margin-bottom: 30px;
@@ -271,7 +255,6 @@
     .tag-angle { background: rgba(245, 158, 11, 0.15); color: var(--amber); border: 1px solid rgba(245, 158, 11, 0.3); padding: 2px 6px; border-radius: 4px; font-size: 10.5px; font-weight: 700; }
     .tag-dir { background: rgba(16, 185, 129, 0.15); color: var(--emerald); border: 1px solid rgba(16, 185, 129, 0.3); padding: 2px 6px; border-radius: 4px; font-size: 10.5px; font-weight: 700; }
 
-    /* Lightbox Modal */
     .lightbox {
       display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
       background: rgba(0, 0, 0, 0.94); backdrop-filter: blur(10px); z-index: 1000; align-items: center; justify-content: center; padding: 20px;
@@ -293,7 +276,6 @@
     }
     .lightbox-close:hover { background: #ef4444; border-color: #ef4444; }
 
-    /* Toast Notification */
     .toast {
       position: fixed; bottom: 24px; right: 24px; z-index: 2000;
       background: #10b981; color: #fff; font-size: 13px; font-weight: 700;
@@ -309,7 +291,6 @@
 </head>
 <body>
 
-  <!-- TOP STICKY HEADER -->
   <header class="top-header">
     <div class="brand-group">
       <span class="brand-badge">MARKETING THỰC CHIẾN</span>
@@ -325,7 +306,6 @@
 
   <div class="container">
 
-    <!-- HERO BANNER -->
     <section class="hero">
       <div class="hero-tags">
         <span class="tag tag-cyan">⚡ THỰC HÀNH TẠI LỚP</span>
@@ -340,26 +320,13 @@
       </p>
 
       <div class="metrics-bar">
-        <div>
-          <div class="metric-label">Số Lượng Bài Tập</div>
-          <div class="metric-value">4 Tình Huống</div>
-        </div>
-        <div>
-          <div class="metric-label">Số Cú Máy Mỗi Bài</div>
-          <div class="metric-value">5 Micro-Beats</div>
-        </div>
-        <div>
-          <div class="metric-label">Thời Lượng Mỗi Cú</div>
-          <div class="metric-value">2.0s – 2.5s</div>
-        </div>
-        <div>
-          <div class="metric-label">Hệ Thống Nhận Thức</div>
-          <div class="metric-value">4 Tầng Sự Thật</div>
-        </div>
+        <div><div class="metric-label">Số Lượng Bài Tập</div><div class="metric-value">4 Tình Huống</div></div>
+        <div><div class="metric-label">Số Cú Máy Mỗi Bài</div><div class="metric-value">5 Cú Máy Độc Lập</div></div>
+        <div><div class="metric-label">Thời Lượng Mỗi Cú</div><div class="metric-value">2.0s – 2.5s</div></div>
+        <div><div class="metric-label">Hệ Thống Nhận Thức</div><div class="metric-value">4 Tầng Sự Thật</div></div>
       </div>
     </section>
 
-    <!-- 4 EXERCISES SHOWCASE OVERVIEW -->
     <div class="section-title">
       <span>📌 4 CHỦ ĐỀ BÀI TẬP THỰC HÀNH TẠI LỚP (CHỌN ĐỂ XEM CHI TIẾT)</span>
       <span style="font-size: 12px; color: var(--text-muted); font-weight: 500;">Bấm vào card để chuyển nhanh kịch bản phân cảnh</span>
@@ -367,71 +334,65 @@
 
     <div class="overview-grid">
       
-      <!-- CARD 1 -->
       <div class="overview-card active-tab" id="card-tab-1" onclick="switchExerciseTab(1)">
         <div class="overview-img-box">
-          <img src="assets/marketing_baitap/viet_bt1_smartsuit.jpg" alt="Bài tập 1" loading="lazy">
-          <span class="card-badge-top badge-suit">BÀI TẬP 01</span>
-          <span class="card-outfit-tag">👔 Đồ âu may đo</span>
+          <img src="assets/marketing_baitap/viet_bt1_smartsuit.jpg" alt="Soi chỉ số ads & Cày bài tập trên laptop" loading="lazy">
+          <span class="card-badge-top badge-1">BÀI TẬP 01</span>
+          <span class="card-outfit-tag">Đồ âu may đo (Smart suit)</span>
         </div>
         <div class="overview-body">
-          <div class="overview-card-title">Soi Chỉ Số Ads & Cày Bài Trên Laptop</div>
-          <div class="overview-quote">"Đứng một góc bấm máy thì nhàn thật... Nhưng lười đổi góc, khung hình nó đơ ra... ...thì đến mình xem lại còn muốn lướt, trách gì người ta!"</div>
-          <div class="overview-t25">🎭 <b>Tầng 2.5:</b> Sợ người khác nhìn vào bảo làm màu nên ngại cúi/kiễng chân, chọn đứng yên bấm 1 góc tĩnh cho an toàn.</div>
-          <div class="overview-btn">Xem Phân Cảnh Bài 01 ➔</div>
+          <div class="overview-card-title">Soi chỉ số ads & Cày bài tập trên laptop</div>
+          <div class="overview-quote">"Đứng một chỗ bấm máy thì nhàn thật... ... ...thì đến mình xem lại còn lướt vội, trách gì người ta! 😄"</div>
+          <div class="overview-t25">🎭 <b>Tầng 2.5:</b> Cái cớ giữ thể diện: thà chịu khung hình chết dí còn hơn bị chê làm màu.</div>
+          <div class="overview-btn">Xem 5 Phân Cảnh Bài 01 ➔</div>
         </div>
       </div>
-
-      <!-- CARD 2 -->
-      <div class="overview-card" id="card-tab-2" onclick="switchExerciseTab(2)">
+    
+      <div class="overview-card " id="card-tab-2" onclick="switchExerciseTab(2)">
         <div class="overview-img-box">
-          <img src="assets/marketing_baitap/viet_bt2_tshirt.jpg" alt="Bài tập 2" loading="lazy">
-          <span class="card-badge-top badge-tshirt">BÀI TẬP 02</span>
-          <span class="card-outfit-tag">👕 Áo phông + Quần bò</span>
+          <img src="assets/marketing_baitap/viet_bt2_tshirt.jpg" alt="Cuốn sổ tay & Kịch bản gạch xóa nát bét" loading="lazy">
+          <span class="card-badge-top badge-2">BÀI TẬP 02</span>
+          <span class="card-outfit-tag">Áo phông cộc tay đen + Quần bò (Casual t-shirt)</span>
         </div>
         <div class="overview-body">
-          <div class="overview-card-title">Cuốn Sổ Tay & Kịch Bản Gạch Xóa</div>
-          <div class="overview-quote">"Cố rặn từng chữ cho nó kêu... viết ra rồi lại tự tay gạch xóa. Thấy người ta làm video triệu view tưởng dễ... ...đến lúc cầm bút mới biết mình toàn văn mẫu!"</div>
-          <div class="overview-t25">🎭 <b>Tầng 2.5:</b> Sợ viết mộc bị chê nông cạn, cố gồng nhét chữ sang chảnh rồi ngượng mồm tự gạch xóa giả vờ đang khó tính biên tập.</div>
-          <div class="overview-btn">Xem Phân Cảnh Bài 02 ➔</div>
+          <div class="overview-card-title">Cuốn sổ tay & Kịch bản gạch xóa nát bét</div>
+          <div class="overview-quote">"Cố rặn từng chữ cho nó kêu... ... ...hóa ra cầm bút mới biết mình nhiễm văn mẫu nặng quá rồi! 😄"</div>
+          <div class="overview-t25">🎭 <b>Tầng 2.5:</b> Cái cớ giữ thể diện: gạch xóa để che đậy sự lúng túng khi gồng chữ giả tạo.</div>
+          <div class="overview-btn">Xem 5 Phân Cảnh Bài 02 ➔</div>
         </div>
       </div>
-
-      <!-- CARD 3 -->
-      <div class="overview-card" id="card-tab-3" onclick="switchExerciseTab(3)">
+    
+      <div class="overview-card " id="card-tab-3" onclick="switchExerciseTab(3)">
         <div class="overview-img-box">
-          <img src="assets/marketing_baitap/viet_bt3_sporty.jpg" alt="Bài tập 3" loading="lazy">
-          <span class="card-badge-top badge-sporty">BÀI TẬP 03</span>
-          <span class="card-outfit-tag">🏃 Đồ thể thao polo</span>
+          <img src="assets/marketing_baitap/viet_bt3_sporty.jpg" alt="Cầm điện thoại test góc quay tại bàn" loading="lazy">
+          <span class="card-badge-top badge-3">BÀI TẬP 03</span>
+          <span class="card-outfit-tag">Đồ thể thao polo năng động (Sporty polo)</span>
         </div>
         <div class="overview-body">
-          <div class="overview-card-title">Cầm Điện Thoại Test Góc Quay Tại Bàn</div>
-          <div class="overview-quote">"Bảo giơ máy lên quay thì ai cũng ngại... sợ run tay, sợ góc xấu, sợ người ta nhìn. Nhưng cứ bấm thử một đúp xem... xấu cũng được, miễn là dám bấm nút REC!"</div>
-          <div class="overview-t25">🎭 <b>Tầng 2.5:</b> Lấy cớ thiết bị chưa chuẩn để trì hoãn, đứng ngắm app cả buổi diễn vẻ chuyên nghiệp chứ không dám bấm REC vì sợ quê.</div>
-          <div class="overview-btn">Xem Phân Cảnh Bài 03 ➔</div>
+          <div class="overview-card-title">Cầm điện thoại test góc quay tại bàn</div>
+          <div class="overview-quote">"Bảo giơ máy lên quay thì ai cũng ngại... ... ...thôi bấm đại một đúp đi, xấu thì xóa, ngại gì vết bẩn! 😄"</div>
+          <div class="overview-t25">🎭 <b>Tầng 2.5:</b> Cái cớ giữ thể diện: diễn vai sành đồ nghề soi app để che đậy nỗi sợ bấm máy.</div>
+          <div class="overview-btn">Xem 5 Phân Cảnh Bài 03 ➔</div>
         </div>
       </div>
-
-      <!-- CARD 4 -->
-      <div class="overview-card" id="card-tab-4" onclick="switchExerciseTab(4)">
+    
+      <div class="overview-card " id="card-tab-4" onclick="switchExerciseTab(4)">
         <div class="overview-img-box">
-          <img src="assets/marketing_baitap/viet_bt4_shirt.jpg" alt="Bài tập 4" loading="lazy">
-          <span class="card-badge-top badge-shirt">BÀI TẬP 04</span>
-          <span class="card-outfit-tag">👔 Sơ mi xắn tay</span>
+          <img src="assets/marketing_baitap/viet_bt4_shirt.jpg" alt="Ngẩng nhìn slide giảng bài & Giật mình" loading="lazy">
+          <span class="card-badge-top badge-4">BÀI TẬP 04</span>
+          <span class="card-outfit-tag">Sơ mi xanh dài tay xắn gấu cao (Smart casual shirt)</span>
         </div>
         <div class="overview-body">
-          <div class="overview-card-title">Ngẩng Nhìn Slide Giảng & Giật Mình</div>
-          <div class="overview-quote">"Đang cắm đầu lướt điện thoại tưởng mình biết hết rồi... nghe thầy nói một câu chạm đúng tim đen, giật thót cả mình! Ghi vội lại... chứ không mai lại đâu đóng đấy!"</div>
-          <div class="overview-t25">🎭 <b>Tầng 2.5:</b> Tỏ vẻ sành sỏi không ghi chép vì sợ bị coi là gà mờ, đến khi bị điểm trúng lỗi sai tuần trước thì mặt nóng bừng mở sổ ghi vội.</div>
-          <div class="overview-btn">Xem Phân Cảnh Bài 04 ➔</div>
+          <div class="overview-card-title">Ngẩng nhìn slide giảng bài & Giật mình</div>
+          <div class="overview-quote">"Ngồi dưới lớp lướt máy, bụng bảo dạ mấy trò này mình biết thừa... ... Thôi cất máy, ghi vội lại... không mai về lại đâu vào đấy! 😄"</div>
+          <div class="overview-t25">🎭 <b>Tầng 2.5:</b> Cái cớ giữ thể diện: diễn kịch sành sỏi đến khi bị đánh trúng điểm yếu.</div>
+          <div class="overview-btn">Xem 5 Phân Cảnh Bài 04 ➔</div>
         </div>
       </div>
-
+    
     </div>
 
-    <!-- ============================================================= -->
-    <!-- DETAILED DRILL-DOWN: EXERCISE 01 -->
-    <!-- ============================================================= -->
+    
     <div class="exercise-detail-wrap active" id="detail-exercise-1">
       
       <!-- Master Audio Box -->
@@ -439,151 +400,148 @@
         <div class="master-audio-content">
           <div class="master-voice-icon">🎙️</div>
           <div>
-            <div class="master-voice-title">BÀI TẬP 01 • LỜI THOẠI DUY NHẤT CHUẨN ÔNG GIÁO (VOICEOVER RUN NGẦM DƯỚI 5 SHOT):</div>
+            <div class="master-voice-title">BÀI TẬP 01 • LỜI THOẠI DUY NHẤT CHUẨN ÔNG GIÁO:</div>
             <div class="master-voice-text" id="script-bt1">
-              "Đứng một góc bấm máy thì nhàn thật...<br>
-              Nhưng lười đổi góc, khung hình nó đơ ra...<br>
-              ...thì đến mình xem lại còn muốn lướt, trách gì người ta!"
+              Đứng một chỗ bấm máy thì nhàn thật...<br>nhưng lười dịch cái chân, để khung hình đơ ra...<br>...thì đến mình xem lại còn lướt vội, trách gì người ta! 😄
             </div>
           </div>
         </div>
-        <button class="copy-btn" onclick="copyVoice('script-bt1')">📋 Copy Lời Thoại</button>
+        <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+          <button class="copy-btn" onclick="copyVoice('script-bt1')">📋 Copy Lời Thoại</button>
+          <a href="baitap01_laptop_ads.html" target="_blank" class="nav-pill" style="border-color:var(--cyan); color:var(--cyan);">🔗 Mở Trang Độc Lập Chuẩn 30NgayViral (HTML Light) ↗</a>
+        </div>
       </section>
 
-      <!-- 4 Tiers of Truth -->
+      <!-- 4 Tiers -->
       <section class="tiers-section">
         <div class="tiers-header">
           <div class="tiers-title">
-            <span>💡 BẢN ĐỒ 4 TẦNG SỰ THẬT • BÀI TẬP 01: SOI CHỈ SỐ ADS & LAPTOP</span>
-          <a href="baitap01_laptop_ads.html" target="_blank" class="nav-pill" style="font-size:11px; margin-left:10px;">Mở Trang Riêng ↗</a>
+            <span>💡 BẢN ĐỒ 4 TẦNG SỰ THẬT • BÀI TẬP 01: SOI CHỈ SỐ ADS & CÀY BÀI TẬP TRÊN LAPTOP</span>
           </div>
-          <span class="tag tag-cyan">👔 Nhân vật: Đồ âu may đo</span>
+          <span class="tag tag-cyan">Đồ âu may đo (Smart suit)</span>
         </div>
         <div class="tiers-grid-4">
           <div class="tier-card t1">
-            <div class="tier-card-head">❌ TẦNG 1: NÓI ĐÃI BÔI</div>
-            <div class="tier-card-content">"Em đi học quay dựng là để làm video triệu view, học kỹ thuật điện ảnh cao siêu."</div>
-            <div class="tier-sub">👉 Văn mẫu nói miệng cho sang, khán giả lướt qua sau 1 giây.</div>
+            <div class="tier-card-head">❌ Tầng 1 • Nói đãi bôi (Văn mẫu an toàn)</div>
+            <div class="tier-card-content">Em đi học quay dựng là để làm video triệu view,<br>phải dùng kỹ thuật điện ảnh cao siêu người ta mới xem.</div>
+            <div class="tier-sub">👉 Lời nói đãi bôi bề nổi, nghe cho sang miệng chứ rỗng tuếch.</div>
           </div>
           <div class="tier-card t2">
-            <div class="tier-card-head">⚠️ TẦNG 2: CẢM GIÁC THẬT</div>
-            <div class="tier-card-content">"Cầm điện thoại quay bạn học gõ máy thì lóng ngóng, chân chôn chặt một chỗ, bấm 10 giây cho xong rồi về ghép nhạc đè lên."</div>
-            <div class="tier-sub">👉 Thao tác thực tế: ngại đổi góc, quay 1 đúp tĩnh lấy lệ.</div>
+            <div class="tier-card-head">⚠️ Tầng 2 • Cảm giác thật (Thao tác lúng túng)</div>
+            <div class="tier-card-content">Cầm máy quay bạn học thì chân chôn chặt một chỗ,<br>bấm đại mười giây cho xong bài rồi về ghép nhạc đè lên.</div>
+            <div class="tier-sub">👉 Thao tác thực tế tại lớp: lười đổi góc, quay một đúp tĩnh lấy lệ.</div>
           </div>
           <div class="tier-card t25">
-            <div class="tier-card-head">🎭 TẦNG 2.5: VỊ THẾ & THỂ DIỆN</div>
-            <div class="tier-card-content">"Biết thừa là khung hình đang đơ, xem lại nhạt toẹt... Nhưng ngại di chuyển, ngại cúi thấp hay kiễng chân vì sợ người xung quanh bảo làm màu. Thôi cứ đứng yên bấm một góc cho an toàn."</div>
-            <div class="tier-sub">👉 Điểm nghẽn then chốt: sợ bị phán xét nên cam chịu khung hình chết dí.</div>
+            <div class="tier-card-head">🎭 Tầng 2.5 • Vị thế & Thể diện (Điểm nghẽn cốt tử)</div>
+            <div class="tier-card-content">Biết thừa khung hình đang đơ, xem lại nhạt toẹt...<br>nhưng ngại cúi thấp hay kiễng chân, sợ người ta bảo làm màu.<br>Thôi thì cứ đứng yên bấm một góc tĩnh cho nó an toàn!</div>
+            <div class="tier-sub">👉 Cái cớ giữ thể diện: thà chịu khung hình chết dí còn hơn bị chê làm màu.</div>
           </div>
           <div class="tier-card t3">
-            <div class="tier-card-head">🔥 TẦNG 3: SỰ THẬT NGƯỢNG MIỆNG</div>
-            <div class="tier-card-content">"Lười đổi góc thì video chết dí. Cái video mà ngay cả bản thân mình xem lại còn muốn lướt vội, thì đăng lên mạng chẳng ai thèm dừng lại xem quá 2 giây!"</div>
-            <div class="tier-sub">👉 Đâm trúng tim đen: đến mình còn chán video của mình thì trách gì người ta.</div>
+            <div class="tier-card-head">🔥 Tầng 3 • Sự thật ngượng miệng (Tim đen bóc trần)</div>
+            <div class="tier-card-content">Lười dịch cái chân thì khung hình chết dí.<br>Đến chính mình xem lại còn muốn lướt qua cho nhanh,<br>thì đăng lên mạng làm sao giữ chân được người xem!</div>
+            <div class="tier-sub">👉 Sự thật ngượng miệng: cái video mình còn chán ngấy thì ai dừng lại xem.</div>
           </div>
         </div>
       </section>
 
-      <!-- 5-Beats Grid -->
+      <!-- 5 Beats Grid -->
       <div class="section-title">
         <span>🎬 CHI TIẾT 5 CÚ MÁY BĂM NHỎ (BÀI TẬP 01)</span>
-        <span style="font-size: 11.5px; color: var(--cyan);">Nhấp vào khung hình để phóng to chi tiết</span>
+        <span style="font-size: 11.5px; color: var(--cyan);">5 ảnh phân cảnh 9:16 riêng biệt • Nhấp vào ảnh để xem chi tiết</span>
       </div>
 
       <div class="storyboard-grid-5">
-        <!-- SHOT 1 -->
+        
         <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_01/shot1.jpg', 'Shot 1 • Trung Cảnh 45° (MCU)', 'Thiết lập bối cảnh ngồi làm bài tập marketing.', '00:00 - 02.5s', 'Đứng một góc bấm máy thì nhàn thật...', 'Giữ góc máy nghiêng 45 độ ngang tầm mắt, thấy rõ nửa thân trên và góc laptop.')">
-            <img src="assets/frames_bai_tap_01/shot1.jpg" alt="Shot 1" loading="lazy">
-            <span class="beat-badge-top badge-in">IN • SETUP</span>
+          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_01/shot1.jpg', '1. Thiết lập áp lực bài tập', '00:00 - 02.5s', 'Đứng một chỗ bấm máy thì nhàn thật...', 'Ngồi ké bên cạnh bàn, đưa máy ngang tầm mắt cách một sải tay. Khóa nét tròng kính, lấy ánh sáng xanh màn hình hắt nhẹ lên mặt.')">
+            <img src="assets/frames_bai_tap_01/shot1.jpg" alt="Thiết lập áp lực bài tập" loading="lazy">
+            <span class="beat-badge-top">Trung cận (MCU)</span>
             <span class="beat-time-tag">00:00 - 02.5s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-id-title">1. Trung Cảnh 45° (MCU)</div>
-            <div class="beat-voice-pill">🎙️ "Đứng một góc bấm máy thì nhàn thật..."</div>
+            <div class="beat-id-title">1. Thiết lập áp lực bài tập</div>
+            <div class="beat-voice-pill">🎙️ "Đứng một chỗ bấm máy thì nhàn thật..."</div>
             <table class="specs-table">
               <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Trung cận (MCU)</td></tr>
-              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Ngang mắt (Eye level)</td></tr>
-              <tr><td class="spec-name">Hướng</td><td class="spec-val">Chếch phải 45°</td></tr>
+              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Ngang tầm mắt (0°)</td></tr>
+              <tr><td class="spec-name">Hướng</td><td class="spec-val">Chếch 45° bên hông trái</td></tr>
             </table>
-            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Đừng quay chính diện, góc 45° tạo chiều sâu lớp học và ánh sáng ven.</div>
+            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Ngồi ké bên cạnh bàn, đưa máy ngang tầm mắt cách một sải tay. Khóa nét tròng kính, lấy ánh sáng xanh màn hình hắt nhẹ lên mặt.</div>
           </div>
         </div>
-
-        <!-- SHOT 2 -->
+        
         <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_01/shot2.jpg', 'Shot 2 • Cận Cảnh Mắt (CU)', 'Ánh mắt căng thẳng nhìn qua mép trên laptop.', '02.5s - 04.5s', 'Nhưng lười đổi góc...', 'Dí sát ống kính qua mép màn hình laptop để lấy trọn ánh mắt tập trung.')">
-            <img src="assets/frames_bai_tap_01/shot2.jpg" alt="Shot 2" loading="lazy">
-            <span class="beat-badge-top badge-action">FOCUS</span>
+          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_01/shot2.jpg', '2. Ánh mắt nhíu mày sốt ruột', '02.5s - 04.5s', '...bấm một cái là xong.', 'Bước sang đối diện, hạ máy ngang mép trên màn hình laptop. Canh đúng lúc bạn nhíu mày nhìn số liệu thì bấm máy, biểu cảm thật này không diễn được đâu.')">
+            <img src="assets/frames_bai_tap_01/shot2.jpg" alt="Ánh mắt nhíu mày sốt ruột" loading="lazy">
+            <span class="beat-badge-top">Cận cảnh (CU)</span>
             <span class="beat-time-tag">02.5s - 04.5s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-id-title">2. Cận Cảnh Mắt (CU)</div>
-            <div class="beat-voice-pill">🎙️ "Nhưng lười đổi góc..."</div>
+            <div class="beat-id-title">2. Ánh mắt nhíu mày sốt ruột</div>
+            <div class="beat-voice-pill">🎙️ "...bấm một cái là xong."</div>
             <table class="specs-table">
               <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Cận cảnh (CU)</td></tr>
-              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Ngang tầm mắt</td></tr>
-              <tr><td class="spec-name">Hướng</td><td class="spec-val">Trực diện (Frontal)</td></tr>
+              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Hất nhẹ 15° từ dưới lên</td></tr>
+              <tr><td class="spec-name">Hướng</td><td class="spec-val">Chính diện xuyên mép laptop</td></tr>
             </table>
-            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Điểm cắt vào ánh mắt tạo sự kết nối cảm xúc tức thì với người xem.</div>
+            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Bước sang đối diện, hạ máy ngang mép trên màn hình laptop. Canh đúng lúc bạn nhíu mày nhìn số liệu thì bấm máy, biểu cảm thật này không diễn được đâu.</div>
           </div>
         </div>
-
-        <!-- SHOT 3 -->
+        
         <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_01/shot3.jpg', 'Shot 3 • Macro Bàn Phím (ECU)', 'Ngón tay gõ phím và ấn lặp phím Backspace xóa chữ.', '04.5s - 07.0s', '...khung hình nó đơ ra...', 'Hạ máy từ trên cao 60 độ chĩa thẳng vào cụm phím đang gõ lách cách.')">
-            <img src="assets/frames_bai_tap_01/shot3.jpg" alt="Shot 3" loading="lazy">
-            <span class="beat-badge-top badge-macro">DETAIL</span>
+          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_01/shot3.jpg', '3. Bàn phím nhấn lì nút xóa', '04.5s - 07.0s', 'Nhưng lười dịch cái chân, để khung hình đơ ra...', 'Đưa camera sát bàn phím một gang tay, bật zoom 2x chống bóng lưng. Bắt trọn ngón tay nhấn lì nút Backspace xóa dòng chữ vừa gõ — chi tiết bế tắc đắt giá nhất.')">
+            <img src="assets/frames_bai_tap_01/shot3.jpg" alt="Bàn phím nhấn lì nút xóa" loading="lazy">
+            <span class="beat-badge-top">Đặc tả (Macro ECU)</span>
             <span class="beat-time-tag">04.5s - 07.0s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-id-title">3. Macro Bàn Phím (ECU)</div>
-            <div class="beat-voice-pill">🎙️ "...khung hình nó đơ ra..."</div>
+            <div class="beat-id-title">3. Bàn phím nhấn lì nút xóa</div>
+            <div class="beat-voice-pill">🎙️ "Nhưng lười dịch cái chân, để khung hình đơ ra..."</div>
             <table class="specs-table">
-              <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Đặc tả (ECU)</td></tr>
-              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Góc cao 60° (High)</td></tr>
-              <tr><td class="spec-name">Hướng</td><td class="spec-val">Từ trên chúc xuống</td></tr>
+              <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Đặc tả (Macro ECU)</td></tr>
+              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Góc cao 60° chúc xuống</td></tr>
+              <tr><td class="spec-name">Hướng</td><td class="spec-val">Từ trên xuống chếch phải</td></tr>
             </table>
-            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Cú máy đặc tả ngón tay bấm xóa tăng cảm giác bế tắc và nhịp điệu.</div>
+            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Đưa camera sát bàn phím một gang tay, bật zoom 2x chống bóng lưng. Bắt trọn ngón tay nhấn lì nút Backspace xóa dòng chữ vừa gõ — chi tiết bế tắc đắt giá nhất.</div>
           </div>
         </div>
-
-        <!-- SHOT 4 -->
+        
         <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_01/shot4.jpg', 'Shot 4 • Qua Vai (OTS)', 'Góc nhìn POV qua vai xuống bảng số liệu Ads hoặc timeline dựng.', '07.0s - 09.5s', '...thì đến mình xem lại còn muốn lướt...', 'Đứng chéo sau lưng vai người ngồi, lấy bờ vai mờ làm tiền đề cho màn hình nét căng.')">
-            <img src="assets/frames_bai_tap_01/shot4.jpg" alt="Shot 4" loading="lazy">
-            <span class="beat-badge-top badge-pov">POV</span>
+          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_01/shot4.jpg', '4. Soi màn hình số liệu đỏ lòm', '07.0s - 09.5s', '...thì video dựng lên...', 'Đứng chếch sau vai phải, ghé camera qua khe giữa cổ và vai áo. Lấy nét căng vào đồ thị đỏ lòm trên màn hình, tạo cảm giác nhìn lén vào áp lực thật.')">
+            <img src="assets/frames_bai_tap_01/shot4.jpg" alt="Soi màn hình số liệu đỏ lòm" loading="lazy">
+            <span class="beat-badge-top">Cận qua vai (OTS)</span>
             <span class="beat-time-tag">07.0s - 09.5s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-id-title">4. Qua Vai (OTS)</div>
-            <div class="beat-voice-pill">🎙️ "...thì đến mình xem lại còn muốn lướt..."</div>
+            <div class="beat-id-title">4. Soi màn hình số liệu đỏ lòm</div>
+            <div class="beat-voice-pill">🎙️ "...thì video dựng lên..."</div>
             <table class="specs-table">
-              <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Qua vai (OTS)</td></tr>
-              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Hơi chúc xuống 20°</td></tr>
-              <tr><td class="spec-name">Hướng</td><td class="spec-val">Góc 30° sau lưng</td></tr>
+              <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Cận qua vai (OTS)</td></tr>
+              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Ngang vai cao 20°</td></tr>
+              <tr><td class="spec-name">Hướng</td><td class="spec-val">Sau lưng chếch vai phải</td></tr>
             </table>
-            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Đổi hoàn toàn góc sang sau lưng để người xem nhập vai vào nhân vật.</div>
+            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Đứng chếch sau vai phải, ghé camera qua khe giữa cổ và vai áo. Lấy nét căng vào đồ thị đỏ lòm trên màn hình, tạo cảm giác nhìn lén vào áp lực thật.</div>
           </div>
         </div>
-
-        <!-- SHOT 5 -->
+        
         <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_01/shot5.jpg', 'Shot 5 • Cận Góc Thấp (Low)', 'Ngón tay cuộn chuột liên tục, ngả người thở dài bất lực.', '09.5s - 12.0s', '...trách gì người ta!', 'Đặt mép điện thoại sát mặt bàn bên phải, hất nhẹ lên ngón tay cầm chuột và cằm.')">
-            <img src="assets/frames_bai_tap_01/shot5.jpg" alt="Shot 5" loading="lazy">
-            <span class="beat-badge-top badge-out">OUT • PUNCH</span>
+          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_01/shot5.jpg', '5. Cuộn chuột & Thở dài nhẹ nhõm', '09.5s - 12.0s', '...đến mình xem lại còn lướt vội, trách gì người ta! 😄', 'Đặt cạnh dưới điện thoại chạm hẳn xuống mặt bàn gỗ làm tiền cảnh. Nhắc bạn ngả người ra ghế thở hắt một hơi, kết thúc cú máy tự nhiên nhẹ nhõm.')">
+            <img src="assets/frames_bai_tap_01/shot5.jpg" alt="Cuộn chuột & Thở dài nhẹ nhõm" loading="lazy">
+            <span class="beat-badge-top">Cận góc thấp (Low ECU)</span>
             <span class="beat-time-tag">09.5s - 12.0s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-id-title">5. Cận Góc Thấp (Low)</div>
-            <div class="beat-voice-pill">🎙️ "...trách gì người ta!"</div>
+            <div class="beat-id-title">5. Cuộn chuột & Thở dài nhẹ nhõm</div>
+            <div class="beat-voice-pill">🎙️ "...đến mình xem lại còn lướt vội, trách gì người ta! 😄"</div>
             <table class="specs-table">
-              <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Cận góc thấp</td></tr>
-              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Sát mặt bàn (0°)</td></tr>
+              <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Cận góc thấp (Low ECU)</td></tr>
+              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Sát mặt bàn (Worm-eye 0°)</td></tr>
               <tr><td class="spec-name">Hướng</td><td class="spec-val">Ngang mặt bàn bên phải</td></tr>
             </table>
-            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Cú out góc thấp chốt hạ câu nói với nụ cười tự trào mộc mạc.</div>
+            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Đặt cạnh dưới điện thoại chạm hẳn xuống mặt bàn gỗ làm tiền cảnh. Nhắc bạn ngả người ra ghế thở hắt một hơi, kết thúc cú máy tự nhiên nhẹ nhõm.</div>
           </div>
         </div>
+        
       </div>
 
       <!-- Matrix Table -->
@@ -597,42 +555,65 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td><b>Shot 1</b></td><td>Ngồi nhìn laptop tập trung</td><td>2.5s</td>
-                <td><span class="tag-shot">Trung cận (MCU)</span></td><td><span class="tag-angle">Ngang mắt</span></td><td><span class="tag-dir">Chếch phải 45°</span></td>
-                <td><em>"Đứng một góc bấm máy thì nhàn thật..."</em></td>
-              </tr>
-              <tr>
-                <td><b>Shot 2</b></td><td>Mắt đăm chiêu qua mép máy</td><td>2.0s</td>
-                <td><span class="tag-shot">Cận cảnh (CU)</span></td><td><span class="tag-angle">Ngang tầm mắt</span></td><td><span class="tag-dir">Trực diện</span></td>
-                <td><em>"Nhưng lười đổi góc..."</em></td>
-              </tr>
-              <tr>
-                <td><b>Shot 3</b></td><td>Gõ phím lách cách & xóa</td><td>2.5s</td>
-                <td><span class="tag-shot">Đặc tả (ECU)</span></td><td><span class="tag-angle">Góc cao 60°</span></td><td><span class="tag-dir">Từ trên xuống</span></td>
-                <td><em>"...khung hình nó đơ ra..."</em></td>
-              </tr>
-              <tr>
-                <td><b>Shot 4</b></td><td>Góc nhìn qua vai xuống Ads</td><td>2.5s</td>
-                <td><span class="tag-shot">Qua vai (OTS)</span></td><td><span class="tag-angle">Hơi chúc 20°</span></td><td><span class="tag-dir">Sau lưng 30°</span></td>
-                <td><em>"...thì đến mình xem lại còn muốn lướt..."</em></td>
-              </tr>
-              <tr>
-                <td><b>Shot 5</b></td><td>Cuộn chuột & ngả người thở dài</td><td>2.5s</td>
-                <td><span class="tag-shot">Cận góc thấp</span></td><td><span class="tag-angle">Sát mặt bàn (0°)</span></td><td><span class="tag-dir">Mặt bàn bên phải</span></td>
-                <td><em>"...trách gì người ta!"</em></td>
-              </tr>
+              
+        <tr>
+          <td><b>Shot 1</b></td>
+          <td>Thiết lập áp lực bài tập</td>
+          <td>00:00 - 02.5s</td>
+          <td><span class="tag-shot">Trung cận (MCU)</span></td>
+          <td><span class="tag-angle">Ngang tầm mắt (0°)</span></td>
+          <td><span class="tag-dir">Chếch 45° bên hông trái</span></td>
+          <td><em>"Đứng một chỗ bấm máy thì nhàn thật..."</em></td>
+        </tr>
+        
+        <tr>
+          <td><b>Shot 2</b></td>
+          <td>Ánh mắt nhíu mày sốt ruột</td>
+          <td>02.5s - 04.5s</td>
+          <td><span class="tag-shot">Cận cảnh (CU)</span></td>
+          <td><span class="tag-angle">Hất nhẹ 15° từ dưới lên</span></td>
+          <td><span class="tag-dir">Chính diện xuyên mép laptop</span></td>
+          <td><em>"...bấm một cái là xong."</em></td>
+        </tr>
+        
+        <tr>
+          <td><b>Shot 3</b></td>
+          <td>Bàn phím nhấn lì nút xóa</td>
+          <td>04.5s - 07.0s</td>
+          <td><span class="tag-shot">Đặc tả (Macro ECU)</span></td>
+          <td><span class="tag-angle">Góc cao 60° chúc xuống</span></td>
+          <td><span class="tag-dir">Từ trên xuống chếch phải</span></td>
+          <td><em>"Nhưng lười dịch cái chân, để khung hình đơ ra..."</em></td>
+        </tr>
+        
+        <tr>
+          <td><b>Shot 4</b></td>
+          <td>Soi màn hình số liệu đỏ lòm</td>
+          <td>07.0s - 09.5s</td>
+          <td><span class="tag-shot">Cận qua vai (OTS)</span></td>
+          <td><span class="tag-angle">Ngang vai cao 20°</span></td>
+          <td><span class="tag-dir">Sau lưng chếch vai phải</span></td>
+          <td><em>"...thì video dựng lên..."</em></td>
+        </tr>
+        
+        <tr>
+          <td><b>Shot 5</b></td>
+          <td>Cuộn chuột & Thở dài nhẹ nhõm</td>
+          <td>09.5s - 12.0s</td>
+          <td><span class="tag-shot">Cận góc thấp (Low ECU)</span></td>
+          <td><span class="tag-angle">Sát mặt bàn (Worm-eye 0°)</span></td>
+          <td><span class="tag-dir">Ngang mặt bàn bên phải</span></td>
+          <td><em>"...đến mình xem lại còn lướt vội, trách gì người ta! 😄"</em></td>
+        </tr>
+        
             </tbody>
           </table>
         </div>
       </section>
 
     </div>
-
-    <!-- ============================================================= -->
-    <!-- DETAILED DRILL-DOWN: EXERCISE 02 -->
-    <!-- ============================================================= -->
-    <div class="exercise-detail-wrap" id="detail-exercise-2">
+    
+    <div class="exercise-detail-wrap " id="detail-exercise-2">
       
       <!-- Master Audio Box -->
       <section class="master-audio-box">
@@ -641,149 +622,146 @@
           <div>
             <div class="master-voice-title">BÀI TẬP 02 • LỜI THOẠI DUY NHẤT CHUẨN ÔNG GIÁO:</div>
             <div class="master-voice-text" id="script-bt2">
-              "Cố rặn từng chữ cho nó kêu... viết ra rồi lại tự tay gạch xóa.<br>
-              Thấy người ta làm video triệu view tưởng dễ...<br>
-              ...đến lúc mình cầm bút viết, mới biết mình đang nói văn mẫu!"
+              Cố rặn từng chữ cho nó kêu...<br>viết ra thấy ngượng mồm lại tự tay gạch xóa.<br>Cứ tưởng mình là người khó tính biên tập...<br>...hóa ra cầm bút mới biết mình nhiễm văn mẫu nặng quá rồi! 😄
             </div>
           </div>
         </div>
-        <button class="copy-btn" onclick="copyVoice('script-bt2')">📋 Copy Lời Thoại</button>
+        <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+          <button class="copy-btn" onclick="copyVoice('script-bt2')">📋 Copy Lời Thoại</button>
+          <a href="baitap02_sotay_kichban.html" target="_blank" class="nav-pill" style="border-color:var(--cyan); color:var(--cyan);">🔗 Mở Trang Độc Lập Chuẩn 30NgayViral (HTML Light) ↗</a>
+        </div>
       </section>
 
-      <!-- 4 Tiers of Truth -->
+      <!-- 4 Tiers -->
       <section class="tiers-section">
         <div class="tiers-header">
           <div class="tiers-title">
-            <span>💡 BẢN ĐỒ 4 TẦNG SỰ THẬT • BÀI TẬP 02: CUỐN SỔ TAY & KỊCH BẢN GẠCH XÓA</span>
-          <a href="baitap02_sotay_kichban.html" target="_blank" class="nav-pill" style="font-size:11px; margin-left:10px;">Mở Trang Riêng ↗</a>
+            <span>💡 BẢN ĐỒ 4 TẦNG SỰ THẬT • BÀI TẬP 02: CUỐN SỔ TAY & KỊCH BẢN GẠCH XÓA NÁT BÉT</span>
           </div>
-          <span class="tag tag-amber">👕 Nhân vật: Áo phông cộc tay đen + Quần bò</span>
+          <span class="tag tag-cyan">Áo phông cộc tay đen + Quần bò (Casual t-shirt)</span>
         </div>
         <div class="tiers-grid-4">
           <div class="tier-card t1">
-            <div class="tier-card-head">❌ TẦNG 1: NÓI ĐÃI BÔI</div>
-            <div class="tier-card-content">"Em đang lên dàn ý kịch bản viral, tìm kiếm insight sâu sắc để chạm đúng cảm xúc khách hàng."</div>
-            <div class="tier-sub">👉 Lý do bề nổi, đạo mạo như sách giáo khoa marketing.</div>
+            <div class="tier-card-head">❌ Tầng 1 • Nói đãi bôi (Văn mẫu an toàn)</div>
+            <div class="tier-card-content">Em đang lên dàn ý kịch bản chạm đúng cảm xúc,<br>phải dùng từ ngữ thật kêu để video dễ lên xu hướng.</div>
+            <div class="tier-sub">👉 Lời nói đãi bôi: nhét chữ hoa mỹ để tự trấn an bản thân.</div>
           </div>
           <div class="tier-card t2">
-            <div class="tier-card-head">⚠️ TẦNG 2: CẢM GIÁC THẬT</div>
-            <div class="tier-card-content">"Cầm bút ngồi cắn đuôi bút suốt 20 phút không rặn nổi một câu mở đầu, viết được vài từ lại gạch chéo nát bét trang giấy."</div>
-            <div class="tier-sub">👉 Bế tắc thực tế: bí từ, viết không ra chữ, sốt ruột.</div>
+            <div class="tier-card-head">⚠️ Tầng 2 • Cảm giác thật (Thao tác lúng túng)</div>
+            <div class="tier-card-content">Cầm bút cắn đuôi bút suốt hai mươi phút không xong mở đầu,<br>viết được dăm ba chữ lại gạch chéo nát bét trang giấy.</div>
+            <div class="tier-sub">👉 Bế tắc thực tế: bí từ, sốt ruột, sổ tay gạch xóa be bét.</div>
           </div>
           <div class="tier-card t25">
-            <div class="tier-card-head">🎭 TẦNG 2.5: VỊ THẾ & THỂ DIỆN</div>
-            <div class="tier-card-content">"Sợ viết mộc mạc đời thường thì bị bạn bè chê là câu từ nông cạn. Cố gồng nhét thuật ngữ đao to búa lớn vào cho nó sang... nhưng viết xong đọc lại thấy ngượng mồm, đành lấy bút gạch xóa để ngụy trang là mình đang 'khó tính biên tập'."</div>
-            <div class="tier-sub">👉 Cái cớ giữ thể diện: dùng động tác gạch xóa để che đậy sự lúng túng.</div>
+            <div class="tier-card-head">🎭 Tầng 2.5 • Vị thế & Thể diện (Điểm nghẽn cốt tử)</div>
+            <div class="tier-card-content">Sợ viết mộc mạc đời thường thì bị chê là câu từ nông cạn.<br>Cố nhét mấy chữ đao to búa lớn vào cho sang miệng...<br>đọc lại thấy ngượng mồm, đành gạch xóa lia lịa để vờ như mình đang khó tính!</div>
+            <div class="tier-sub">👉 Cái cớ giữ thể diện: gạch xóa để che đậy sự lúng túng khi gồng chữ giả tạo.</div>
           </div>
           <div class="tier-card t3">
-            <div class="tier-card-head">🔥 TẦNG 3: SỰ THẬT NGƯỢNG MIỆNG</div>
-            <div class="tier-card-content">"Bản thân mình còn không dám nói những lời hoa mỹ đấy với người thật ngoài đời, thì viết ra ai người ta tin? Cái bệnh gồng chữ văn mẫu nó bóp nghẹt sự chân thật từ trong trứng nước!"</div>
-            <div class="tier-sub">👉 Đâm trúng tim đen: chữ giả tạo thì người xem ngửi thấy ngay từ giây đầu.</div>
+            <div class="tier-card-head">🔥 Tầng 3 • Sự thật ngượng miệng (Tim đen bóc trần)</div>
+            <div class="tier-card-content">Chính mình nói ra mấy câu đó ngoài đời còn thấy ngượng,<br>thì viết kịch bản làm sao khiến người xem tin được!<br>Cái bệnh thích nói văn mẫu nó bóp nghẹt sự chân thật từ trong trứng nước.</div>
+            <div class="tier-sub">👉 Sự thật ngượng miệng: chữ mình viết ra mình còn không dám nói thì ai mà tin.</div>
           </div>
         </div>
       </section>
 
-      <!-- 5-Beats Grid -->
+      <!-- 5 Beats Grid -->
       <div class="section-title">
         <span>🎬 CHI TIẾT 5 CÚ MÁY BĂM NHỎ (BÀI TẬP 02)</span>
-        <span style="font-size: 11.5px; color: var(--amber);">Nhấp vào khung hình để phóng to chi tiết</span>
+        <span style="font-size: 11.5px; color: var(--cyan);">5 ảnh phân cảnh 9:16 riêng biệt • Nhấp vào ảnh để xem chi tiết</span>
       </div>
 
       <div class="storyboard-grid-5">
-        <!-- SHOT 1 -->
+        
         <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/marketing_baitap/viet_bt2_tshirt.jpg', 'Shot 1 • Trung Cảnh Cầm Bút (MCU)', 'Ngồi tựa lưng ghế, ngón tay gõ đuôi bút bi cộc cộc xuống mặt bàn.', '00:00 - 02.5s', 'Cố rặn từng chữ cho nó kêu...', 'Quay góc nghiêng 45 độ bên trái, thấy tư thế ngồi bế tắc trước cuốn sổ trắng.')">
-            <img src="assets/marketing_baitap/viet_bt2_tshirt.jpg" alt="Shot 1" loading="lazy">
-            <span class="beat-badge-top badge-in">IN • SETUP</span>
+          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_02/shot1.jpg', '1. Gõ đuôi bút bi sốt ruột', '00:00 - 02.5s', 'Cố rặn từng chữ cho nó kêu...', 'Ngồi chéo góc bàn, hướng ống kính vào nửa thân trên và quyển sổ mở rộng. Bắt nhịp đuôi bút bi gõ cộc cộc xuống mặt gỗ tạo âm thanh sốt ruột rất đời.')">
+            <img src="assets/frames_bai_tap_02/shot1.jpg" alt="Gõ đuôi bút bi sốt ruột" loading="lazy">
+            <span class="beat-badge-top">Trung cận (MCU)</span>
             <span class="beat-time-tag">00:00 - 02.5s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-id-title">1. Trung Cảnh Gõ Bút (MCU)</div>
+            <div class="beat-id-title">1. Gõ đuôi bút bi sốt ruột</div>
             <div class="beat-voice-pill">🎙️ "Cố rặn từng chữ cho nó kêu..."</div>
             <table class="specs-table">
               <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Trung cận (MCU)</td></tr>
-              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Ngang tầm mắt</td></tr>
+              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Ngang tầm mắt (0°)</td></tr>
               <tr><td class="spec-name">Hướng</td><td class="spec-val">Chếch trái 45°</td></tr>
             </table>
-            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Tiếng cộc cộc của đuôi bút chạm bàn tạo nhịp âm thanh sốt ruột.</div>
+            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Ngồi chéo góc bàn, hướng ống kính vào nửa thân trên và quyển sổ mở rộng. Bắt nhịp đuôi bút bi gõ cộc cộc xuống mặt gỗ tạo âm thanh sốt ruột rất đời.</div>
           </div>
         </div>
-
-        <!-- SHOT 2 -->
+        
         <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/marketing_baitap/viet_bt2_tshirt.jpg', 'Shot 2 • Cận Cảnh Vò Thái Dương (CU)', 'Một tay vò nhẹ thái dương, mắt nhíu lại nhìn chằm chằm xuống trang giấy.', '02.5s - 04.5s', '...viết ra rồi lại tự tay gạch xóa.', 'Dí máy cận mặt trực diện, bắt trọn nếp nhăn trán và sự bối rối thật thà.')">
-            <img src="assets/marketing_baitap/viet_bt2_tshirt.jpg" alt="Shot 2" loading="lazy">
-            <span class="beat-badge-top badge-action">TENSION</span>
+          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_02/shot2.jpg', '2. Tay xoa thái dương mặt nhăn nhó', '02.5s - 04.5s', '...viết ra thấy ngượng mồm lại tự tay gạch xóa.', 'Hạ máy ngang ngực hất nhẹ lên mặt, bắt trọn bàn tay xoa thái dương. Người bí ý tưởng hay có thói quen nhíu mày, sờ trán hoặc cắn môi vô thức.')">
+            <img src="assets/frames_bai_tap_02/shot2.jpg" alt="Tay xoa thái dương mặt nhăn nhó" loading="lazy">
+            <span class="beat-badge-top">Cận cảnh (CU)</span>
             <span class="beat-time-tag">02.5s - 04.5s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-id-title">2. Cận Cảnh Vò Trán (CU)</div>
-            <div class="beat-voice-pill">🎙️ "...viết ra rồi lại tự tay gạch xóa."</div>
+            <div class="beat-id-title">2. Tay xoa thái dương mặt nhăn nhó</div>
+            <div class="beat-voice-pill">🎙️ "...viết ra thấy ngượng mồm lại tự tay gạch xóa."</div>
             <table class="specs-table">
-              <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Cận cảnh mặt (CU)</td></tr>
-              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Ngang ngực nhìn lên</td></tr>
-              <tr><td class="spec-name">Hướng</td><td class="spec-val">Trực diện (Frontal)</td></tr>
+              <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Cận cảnh (CU)</td></tr>
+              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Ngang ngực nhìn hất nhẹ lên</td></tr>
+              <tr><td class="spec-name">Hướng</td><td class="spec-val">Chính diện (Frontal)</td></tr>
             </table>
-            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Bắt trọn động tác cơ thể vô thức: người bí ý tưởng hay bóp trán hoặc vò tóc.</div>
+            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Hạ máy ngang ngực hất nhẹ lên mặt, bắt trọn bàn tay xoa thái dương. Người bí ý tưởng hay có thói quen nhíu mày, sờ trán hoặc cắn môi vô thức.</div>
           </div>
         </div>
-
-        <!-- SHOT 3 -->
+        
         <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/marketing_baitap/viet_bt2_tshirt.jpg', 'Shot 3 • Đặc Tả Ngòi Bút Gạch Xóa (ECU)', 'Ngòi bút bi gạch xoẹt nhiều đường đè nát chữ TRIỆU VIEW trên trang giấy.', '04.5s - 07.0s', 'Thấy người ta làm video triệu view tưởng dễ...', 'Chĩa máy từ trên cao 70 độ nhìn thẳng xuống ngòi bút đang gạch chéo dứt khoát.')">
-            <img src="assets/marketing_baitap/viet_bt2_tshirt.jpg" alt="Shot 3" loading="lazy">
-            <span class="beat-badge-top badge-macro">CLIMAX</span>
+          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_02/shot3.jpg', '3. Nét bút gạch chéo chữ triệu view', '04.5s - 07.0s', 'Cứ tưởng mình là người khó tính biên tập...', 'Đặt máy cách trang giấy hai mươi phân, góc chúc bảy mươi độ từ trên xuống. Chữ \'triệu view\' bị gạch chéo càng mạnh tay thì độ giằng xé nội tâm càng chân thật.')">
+            <img src="assets/frames_bai_tap_02/shot3.jpg" alt="Nét bút gạch chéo chữ triệu view" loading="lazy">
+            <span class="beat-badge-top">Đặc tả (Macro ECU)</span>
             <span class="beat-time-tag">04.5s - 07.0s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-id-title">3. Đặc Tả Gạch Xóa (ECU)</div>
-            <div class="beat-voice-pill">🎙️ "Thấy người ta làm video triệu view tưởng dễ..."</div>
+            <div class="beat-id-title">3. Nét bút gạch chéo chữ triệu view</div>
+            <div class="beat-voice-pill">🎙️ "Cứ tưởng mình là người khó tính biên tập..."</div>
             <table class="specs-table">
-              <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Đặc tả (ECU)</td></tr>
-              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Góc cao 70°</td></tr>
-              <tr><td class="spec-name">Hướng</td><td class="spec-val">Từ trên chúc xuống</td></tr>
+              <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Đặc tả (Macro ECU)</td></tr>
+              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Góc cao 70° chúc xuống</td></tr>
+              <tr><td class="spec-name">Hướng</td><td class="spec-val">Từ trên chúc xuống trang sổ</td></tr>
             </table>
-            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Chữ bị gạch càng to, nỗi ngượng miệng của Tầng 2.5 càng lộ rõ.</div>
+            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Đặt máy cách trang giấy hai mươi phân, góc chúc bảy mươi độ từ trên xuống. Chữ 'triệu view' bị gạch chéo càng mạnh tay thì độ giằng xé nội tâm càng chân thật.</div>
           </div>
         </div>
-
-        <!-- SHOT 4 -->
+        
         <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/marketing_baitap/viet_bt2_tshirt.jpg', 'Shot 4 • Liếc Trộm Bàn Bên (OTS)', 'Ánh mắt lén nhìn sang cuốn sổ của bạn cùng nhóm xem bạn viết được gì.', '07.0s - 09.5s', '...đến lúc mình cầm bút viết...', 'Đặt máy sau gáy bên phải, lấy khóe mắt liếc sang cuốn sổ bạn học bên cạnh.')">
-            <img src="assets/marketing_baitap/viet_bt2_tshirt.jpg" alt="Shot 4" loading="lazy">
-            <span class="beat-badge-top badge-pov">PEEK</span>
+          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_02/shot4.jpg', '4. Liếc trộm trang sổ bạn bên cạnh', '07.0s - 09.5s', '...hóa ra cầm bút...', 'Đứng sau lưng chếch vai trái, bắt khoảnh khắc mắt liếc sang sổ bạn bên cạnh. Cảnh liếc trộm này cực kỳ đắt vì đánh trúng tâm lý tò mò và bất an trong lớp học.')">
+            <img src="assets/frames_bai_tap_02/shot4.jpg" alt="Liếc trộm trang sổ bạn bên cạnh" loading="lazy">
+            <span class="beat-badge-top">Cận qua vai (OTS)</span>
             <span class="beat-time-tag">07.0s - 09.5s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-id-title">4. Liếc Trộm Sổ Bạn (OTS)</div>
-            <div class="beat-voice-pill">🎙️ "...đến lúc mình cầm bút viết..."</div>
+            <div class="beat-id-title">4. Liếc trộm trang sổ bạn bên cạnh</div>
+            <div class="beat-voice-pill">🎙️ "...hóa ra cầm bút..."</div>
             <table class="specs-table">
-              <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Qua vai (OTS)</td></tr>
-              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Ngang tai</td></tr>
-              <tr><td class="spec-name">Hướng</td><td class="spec-val">Chếch sau sang phải</td></tr>
+              <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Cận qua vai (OTS)</td></tr>
+              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Ngang tai hơi chúc 15°</td></tr>
+              <tr><td class="spec-name">Hướng</td><td class="spec-val">Chếch sau sang vai phải</td></tr>
             </table>
-            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Cảnh liếc trộm sổ cực kỳ đời, đánh tan không khí đạo mạo của lớp học.</div>
+            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Đứng sau lưng chếch vai trái, bắt khoảnh khắc mắt liếc sang sổ bạn bên cạnh. Cảnh liếc trộm này cực kỳ đắt vì đánh trúng tâm lý tò mò và bất an trong lớp học.</div>
           </div>
         </div>
-
-        <!-- SHOT 5 -->
+        
         <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/marketing_baitap/viet_bt2_tshirt.jpg', 'Shot 5 • Ném Bút Cười Trừ (Low)', 'Buông rơi cây bút cạch một cái xuống sổ, bật cười trừ bất lực.', '09.5s - 12.0s', '...mới biết mình đang nói văn mẫu!', 'Đặt điện thoại sát mặt bàn hất lên, bắt nụ cười tự trào mộc mạc.')">
-            <img src="assets/marketing_baitap/viet_bt2_tshirt.jpg" alt="Shot 5" loading="lazy">
-            <span class="beat-badge-top badge-out">OUT • SMILE</span>
+          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_02/shot5.jpg', '5. Thả bút bi ngửa mặt cười trừ', '09.5s - 12.0s', '...mới biết mình nhiễm văn mẫu nặng quá rồi! 😄', 'Đặt máy nằm sát mặt bàn nhìn lên, bắt trọn tiếng thả bút bi cạch một cái. Bạn lắc đầu cười trừ một cái, giải phóng hoàn toàn áp lực gồng chữ trước ống kính.')">
+            <img src="assets/frames_bai_tap_02/shot5.jpg" alt="Thả bút bi ngửa mặt cười trừ" loading="lazy">
+            <span class="beat-badge-top">Cận góc thấp (Low CU)</span>
             <span class="beat-time-tag">09.5s - 12.0s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-id-title">5. Ném Bút Cười Trừ (Low)</div>
-            <div class="beat-voice-pill">🎙️ "...mới biết mình đang nói văn mẫu!"</div>
+            <div class="beat-id-title">5. Thả bút bi ngửa mặt cười trừ</div>
+            <div class="beat-voice-pill">🎙️ "...mới biết mình nhiễm văn mẫu nặng quá rồi! 😄"</div>
             <table class="specs-table">
-              <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Cận góc thấp</td></tr>
+              <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Cận góc thấp (Low CU)</td></tr>
               <tr><td class="spec-name">Góc máy</td><td class="spec-val">Sát mặt bàn (0°)</td></tr>
-              <tr><td class="spec-name">Hướng</td><td class="spec-val">Chếch trước mặt bàn</td></tr>
+              <tr><td class="spec-name">Hướng</td><td class="spec-val">Mặt bàn hất lên cằm</td></tr>
             </table>
-            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Cú out buông bút cười trừ giải phóng hoàn toàn cảm giác căng thẳng.</div>
+            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Đặt máy nằm sát mặt bàn nhìn lên, bắt trọn tiếng thả bút bi cạch một cái. Bạn lắc đầu cười trừ một cái, giải phóng hoàn toàn áp lực gồng chữ trước ống kính.</div>
           </div>
         </div>
+        
       </div>
 
       <!-- Matrix Table -->
@@ -797,42 +775,65 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td><b>Shot 1</b></td><td>Gõ đuôi bút bi sốt ruột</td><td>2.5s</td>
-                <td><span class="tag-shot">Trung cận (MCU)</span></td><td><span class="tag-angle">Ngang mắt</span></td><td><span class="tag-dir">Chếch trái 45°</span></td>
-                <td><em>"Cố rặn từng chữ cho nó kêu..."</em></td>
-              </tr>
-              <tr>
-                <td><b>Shot 2</b></td><td>Vò thái dương bế tắc</td><td>2.0s</td>
-                <td><span class="tag-shot">Cận cảnh (CU)</span></td><td><span class="tag-angle">Ngang ngực nhìn lên</span></td><td><span class="tag-dir">Trực diện</span></td>
-                <td><em>"...viết ra rồi lại tự tay gạch xóa."</em></td>
-              </tr>
-              <tr>
-                <td><b>Shot 3</b></td><td>Gạch chéo chữ TRIỆU VIEW</td><td>2.5s</td>
-                <td><span class="tag-shot">Đặc tả (ECU)</span></td><td><span class="tag-angle">Góc cao 70°</span></td><td><span class="tag-dir">Từ trên xuống</span></td>
-                <td><em>"Thấy người ta làm video triệu view tưởng dễ..."</em></td>
-              </tr>
-              <tr>
-                <td><b>Shot 4</b></td><td>Liếc nhìn trộm sổ bạn bên cạnh</td><td>2.5s</td>
-                <td><span class="tag-shot">Qua vai (OTS)</span></td><td><span class="tag-angle">Ngang tai</span></td><td><span class="tag-dir">Chếch sau sang phải</span></td>
-                <td><em>"...đến lúc mình cầm bút viết..."</em></td>
-              </tr>
-              <tr>
-                <td><b>Shot 5</b></td><td>Ném bút xuống sổ cười trừ</td><td>2.5s</td>
-                <td><span class="tag-shot">Cận góc thấp</span></td><td><span class="tag-angle">Sát mặt bàn (0°)</span></td><td><span class="tag-dir">Mặt bàn hất lên</span></td>
-                <td><em>"...mới biết mình đang nói văn mẫu!"</em></td>
-              </tr>
+              
+        <tr>
+          <td><b>Shot 1</b></td>
+          <td>Gõ đuôi bút bi sốt ruột</td>
+          <td>00:00 - 02.5s</td>
+          <td><span class="tag-shot">Trung cận (MCU)</span></td>
+          <td><span class="tag-angle">Ngang tầm mắt (0°)</span></td>
+          <td><span class="tag-dir">Chếch trái 45°</span></td>
+          <td><em>"Cố rặn từng chữ cho nó kêu..."</em></td>
+        </tr>
+        
+        <tr>
+          <td><b>Shot 2</b></td>
+          <td>Tay xoa thái dương mặt nhăn nhó</td>
+          <td>02.5s - 04.5s</td>
+          <td><span class="tag-shot">Cận cảnh (CU)</span></td>
+          <td><span class="tag-angle">Ngang ngực nhìn hất nhẹ lên</span></td>
+          <td><span class="tag-dir">Chính diện (Frontal)</span></td>
+          <td><em>"...viết ra thấy ngượng mồm lại tự tay gạch xóa."</em></td>
+        </tr>
+        
+        <tr>
+          <td><b>Shot 3</b></td>
+          <td>Nét bút gạch chéo chữ triệu view</td>
+          <td>04.5s - 07.0s</td>
+          <td><span class="tag-shot">Đặc tả (Macro ECU)</span></td>
+          <td><span class="tag-angle">Góc cao 70° chúc xuống</span></td>
+          <td><span class="tag-dir">Từ trên chúc xuống trang sổ</span></td>
+          <td><em>"Cứ tưởng mình là người khó tính biên tập..."</em></td>
+        </tr>
+        
+        <tr>
+          <td><b>Shot 4</b></td>
+          <td>Liếc trộm trang sổ bạn bên cạnh</td>
+          <td>07.0s - 09.5s</td>
+          <td><span class="tag-shot">Cận qua vai (OTS)</span></td>
+          <td><span class="tag-angle">Ngang tai hơi chúc 15°</span></td>
+          <td><span class="tag-dir">Chếch sau sang vai phải</span></td>
+          <td><em>"...hóa ra cầm bút..."</em></td>
+        </tr>
+        
+        <tr>
+          <td><b>Shot 5</b></td>
+          <td>Thả bút bi ngửa mặt cười trừ</td>
+          <td>09.5s - 12.0s</td>
+          <td><span class="tag-shot">Cận góc thấp (Low CU)</span></td>
+          <td><span class="tag-angle">Sát mặt bàn (0°)</span></td>
+          <td><span class="tag-dir">Mặt bàn hất lên cằm</span></td>
+          <td><em>"...mới biết mình nhiễm văn mẫu nặng quá rồi! 😄"</em></td>
+        </tr>
+        
             </tbody>
           </table>
         </div>
       </section>
 
     </div>
-
-    <!-- ============================================================= -->
-    <!-- DETAILED DRILL-DOWN: EXERCISE 03 -->
-    <!-- ============================================================= -->
-    <div class="exercise-detail-wrap" id="detail-exercise-3">
+    
+    <div class="exercise-detail-wrap " id="detail-exercise-3">
       
       <!-- Master Audio Box -->
       <section class="master-audio-box">
@@ -841,149 +842,146 @@
           <div>
             <div class="master-voice-title">BÀI TẬP 03 • LỜI THOẠI DUY NHẤT CHUẨN ÔNG GIÁO:</div>
             <div class="master-voice-text" id="script-bt3">
-              "Bảo giơ máy lên quay thì ai cũng ngại... sợ run tay, sợ góc xấu, sợ người ta nhìn.<br>
-              Nhưng cứ bấm thử một đúp xem...<br>
-              ...xấu cũng được, miễn là mình dám bấm nút REC!"
+              Bảo giơ máy lên quay thì ai cũng ngại...<br>sợ rung tay, sợ góc xấu, sợ người ta nhìn chằm chằm.<br>Cứ đứng ngắm app cho có vẻ chuyên nghiệp...<br>...thôi bấm đại một đúp đi, xấu thì xóa, ngại gì vết bẩn! 😄
             </div>
           </div>
         </div>
-        <button class="copy-btn" onclick="copyVoice('script-bt3')">📋 Copy Lời Thoại</button>
+        <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+          <button class="copy-btn" onclick="copyVoice('script-bt3')">📋 Copy Lời Thoại</button>
+          <a href="baitap03_test_goc_quay.html" target="_blank" class="nav-pill" style="border-color:var(--cyan); color:var(--cyan);">🔗 Mở Trang Độc Lập Chuẩn 30NgayViral (HTML Light) ↗</a>
+        </div>
       </section>
 
-      <!-- 4 Tiers of Truth -->
+      <!-- 4 Tiers -->
       <section class="tiers-section">
         <div class="tiers-header">
           <div class="tiers-title">
-            <span>💡 BẢN ĐỒ 4 TẦNG SỰ THẬT • BÀI TẬP 03: TEST GÓC QUAY TẠI BÀN</span>
-          <a href="baitap03_test_goc_quay.html" target="_blank" class="nav-pill" style="font-size:11px; margin-left:10px;">Mở Trang Riêng ↗</a>
+            <span>💡 BẢN ĐỒ 4 TẦNG SỰ THẬT • BÀI TẬP 03: CẦM ĐIỆN THOẠI TEST GÓC QUAY TẠI BÀN</span>
           </div>
-          <span class="tag tag-emerald">🏃 Nhân vật: Đồ thể thao polo năng động</span>
+          <span class="tag tag-cyan">Đồ thể thao polo năng động (Sporty polo)</span>
         </div>
         <div class="tiers-grid-4">
           <div class="tier-card t1">
-            <div class="tier-card-head">❌ TẦNG 1: NÓI ĐÃI BÔI</div>
-            <div class="tier-card-content">"Điện thoại em đời cũ camera mờ quá, không có gimbal chống rung nên em chưa quay được."</div>
-            <div class="tier-sub">👉 Đổ lỗi cho thiết bị để che đậy sự ngại ngùng.</div>
+            <div class="tier-card-head">❌ Tầng 1 • Nói đãi bôi (Văn mẫu an toàn)</div>
+            <div class="tier-card-content">Điện thoại em máy cũ camera mờ quá,<br>không có chân chống rung nên em chưa quay được.</div>
+            <div class="tier-sub">👉 Lời nói đãi bôi: đổ lỗi cho thiết bị để trì hoãn việc bấm máy.</div>
           </div>
           <div class="tier-card t2">
-            <div class="tier-card-head">⚠️ TẦNG 2: CẢM GIÁC THẬT</div>
-            <div class="tier-card-content">"Giơ máy lên chĩa vào mặt bạn thì cả hai cùng cười ngượng, tay cầm rung bần bật, bấm được 3 giây vội vàng hạ máy xuống vì ngại."</div>
-            <div class="tier-sub">👉 Rào cản sinh học: sợ người xung quanh dòm ngó.</div>
+            <div class="tier-card-head">⚠️ Tầng 2 • Cảm giác thật (Thao tác lúng túng)</div>
+            <div class="tier-card-content">Chĩa máy vào mặt bạn thì cả hai đứa cùng cười ngượng,<br>tay cầm run bần bật, bấm được vài giây vội hạ máy xuống.</div>
+            <div class="tier-sub">👉 Lúng túng thực tế: ngượng ngùng, sợ người ta nhìn chằm chằm vào mình.</div>
           </div>
           <div class="tier-card t25">
-            <div class="tier-card-head">🎭 TẦNG 2.5: VỊ THẾ & THỂ DIỆN</div>
-            <div class="tier-card-content">"Lấy cớ 'thiết bị chưa chuẩn / ánh sáng lớp học chưa đủ' để trì hoãn, đứng ngắm nghía chỉnh app suốt nửa tiếng chỉ để diễn vẻ chuyên nghiệp chứ không dám bấm REC vì sợ bị chê làm màu."</div>
-            <div class="tier-sub">👉 Nỗi sợ mất uy tín: sợ người ta thấy mình ngây ngô khi bấm máy.</div>
+            <div class="tier-card-head">🎭 Tầng 2.5 • Vị thế & Thể diện (Điểm nghẽn cốt tử)</div>
+            <div class="tier-card-content">Lấy cớ ánh sáng lớp học chưa chuẩn để trì hoãn,<br>đứng ngắm nghía chỉnh app suốt buổi cho có vẻ chuyên nghiệp,<br>chứ trong bụng sợ bấm máy lóng ngóng thì bị bạn bè chê cười!</div>
+            <div class="tier-sub">👉 Cái cớ giữ thể diện: diễn vai sành đồ nghề soi app để che đậy nỗi sợ bấm máy.</div>
           </div>
           <div class="tier-card t3">
-            <div class="tier-card-head">🔥 TẦNG 3: SỰ THẬT NGƯỢNG MIỆNG</div>
-            <div class="tier-card-content">"Sợ quê, sợ xấu, sợ người ta cười. Cứ đợi máy xịn với góc quay hoàn hảo thì cả đời này cũng không bao giờ có nổi một thước phim thực chiến nào!"</div>
-            <div class="tier-sub">👉 Đâm trúng tim đen: sự hoàn hảo là cái cớ hoàn hảo của sự lười biếng.</div>
+            <div class="tier-card-head">🔥 Tầng 3 • Sự thật ngượng miệng (Tim đen bóc trần)</div>
+            <div class="tier-card-content">Sợ xấu, sợ ngượng, sợ người ta đánh giá mình làm không tới.<br>Cứ đợi có máy xịn với góc quay hoàn hảo,<br>thì cả đời này chẳng bao giờ có nổi một thước phim thực chiến ra hồn!</div>
+            <div class="tier-sub">👉 Sự thật ngượng miệng: cầu toàn chỉ là cái cớ che đậy sự nhát tay.</div>
           </div>
         </div>
       </section>
 
-      <!-- 5-Beats Grid -->
+      <!-- 5 Beats Grid -->
       <div class="section-title">
         <span>🎬 CHI TIẾT 5 CÚ MÁY BĂM NHỎ (BÀI TẬP 03)</span>
-        <span style="font-size: 11.5px; color: var(--emerald);">Nhấp vào khung hình để phóng to chi tiết</span>
+        <span style="font-size: 11.5px; color: var(--cyan);">5 ảnh phân cảnh 9:16 riêng biệt • Nhấp vào ảnh để xem chi tiết</span>
       </div>
 
       <div class="storyboard-grid-5">
-        <!-- SHOT 1 -->
+        
         <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/marketing_baitap/viet_bt3_sporty.jpg', 'Shot 1 • Xoay Điện Thoại Tìm Khung (MCU)', 'Hai tay xoay ngang dọc điện thoại, ngắm nghía góc quay bạn ngồi đối diện.', '00:00 - 02.5s', 'Bảo giơ máy lên quay thì ai cũng ngại...', 'Quay góc nghiêng 30 độ ngang ngực, bắt cử chỉ xoay máy tìm khung hình.')">
-            <img src="assets/marketing_baitap/viet_bt3_sporty.jpg" alt="Shot 1" loading="lazy">
-            <span class="beat-badge-top badge-in">IN • FRAMING</span>
+          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_03/shot1.jpg', '1. Hai tay xoay ngang xoay dọc máy', '00:00 - 02.5s', 'Bảo giơ máy lên quay thì ai cũng ngại...', 'Đứng cách bạn nửa mét, quay hai bàn tay đang xoay lúng túng chiếc điện thoại. Động tác xoay ngang rồi xoay dọc lột tả trọn vẹn sự bối rối lúc mới cầm máy.')">
+            <img src="assets/frames_bai_tap_03/shot1.jpg" alt="Hai tay xoay ngang xoay dọc máy" loading="lazy">
+            <span class="beat-badge-top">Trung cận (MCU)</span>
             <span class="beat-time-tag">00:00 - 02.5s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-id-title">1. Xoay Máy Tìm Góc (MCU)</div>
+            <div class="beat-id-title">1. Hai tay xoay ngang xoay dọc máy</div>
             <div class="beat-voice-pill">🎙️ "Bảo giơ máy lên quay thì ai cũng ngại..."</div>
             <table class="specs-table">
               <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Trung cận (MCU)</td></tr>
-              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Ngang ngực</td></tr>
+              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Ngang ngực (0°)</td></tr>
               <tr><td class="spec-name">Hướng</td><td class="spec-val">Chếch nghiêng 30°</td></tr>
             </table>
-            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Động tác xoay ngang xoay dọc phản ánh đúng sự lúng túng ban đầu.</div>
+            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Đứng cách bạn nửa mét, quay hai bàn tay đang xoay lúng túng chiếc điện thoại. Động tác xoay ngang rồi xoay dọc lột tả trọn vẹn sự bối rối lúc mới cầm máy.</div>
           </div>
         </div>
-
-        <!-- SHOT 2 -->
+        
         <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/marketing_baitap/viet_bt3_sporty.jpg', 'Shot 2 • Ngón Tay Chạm Nút REC (CU)', 'Ngón tay cái ngập ngừng 1 giây rồi dứt khoát ấn nút tròn đỏ trên màn hình.', '02.5s - 04.5s', '...sợ run tay, sợ góc xấu, sợ người ta nhìn.', 'Cận cảnh ngón tay cái tiếp xúc với màn hình cảm ứng, nút REC đỏ chuyển sang đếm giây.')">
-            <img src="assets/marketing_baitap/viet_bt3_sporty.jpg" alt="Shot 2" loading="lazy">
-            <span class="beat-badge-top badge-action">ACTION</span>
+          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_03/shot2.jpg', '2. Ngón tay cái ngập ngừng ấn REC', '02.5s - 04.5s', '...sợ rung tay, sợ góc xấu, sợ người ta nhìn chằm chằm.', 'Đưa máy sau lưng điện thoại bạn diễn, canh ngón tay cái ngập ngừng trên màn hình. Điểm chạm ngón tay chuyển chấm đỏ sang nút vuông REC là nhịp bẻ hành động then chốt.')">
+            <img src="assets/frames_bai_tap_03/shot2.jpg" alt="Ngón tay cái ngập ngừng ấn REC" loading="lazy">
+            <span class="beat-badge-top">Cận cảnh (CU)</span>
             <span class="beat-time-tag">02.5s - 04.5s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-id-title">2. Ấn Nút REC Đỏ (CU)</div>
-            <div class="beat-voice-pill">🎙️ "...sợ run tay, sợ góc xấu, sợ người ta nhìn."</div>
+            <div class="beat-id-title">2. Ngón tay cái ngập ngừng ấn REC</div>
+            <div class="beat-voice-pill">🎙️ "...sợ rung tay, sợ góc xấu, sợ người ta nhìn chằm chằm."</div>
             <table class="specs-table">
               <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Cận cảnh (CU)</td></tr>
-              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Ngang tầm tay</td></tr>
-              <tr><td class="spec-name">Hướng</td><td class="spec-val">Chếch sau lưng điện thoại</td></tr>
+              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Ngang tầm tay bấm</td></tr>
+              <tr><td class="spec-name">Hướng</td><td class="spec-val">Sau lưng điện thoại</td></tr>
             </table>
-            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Điểm rơi ngón tay ấn nút REC là nhịp chuyển đổi hành động then chốt.</div>
+            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Đưa máy sau lưng điện thoại bạn diễn, canh ngón tay cái ngập ngừng trên màn hình. Điểm chạm ngón tay chuyển chấm đỏ sang nút vuông REC là nhịp bẻ hành động then chốt.</div>
           </div>
         </div>
-
-        <!-- SHOT 3 -->
+        
         <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/marketing_baitap/viet_bt3_sporty.jpg', 'Shot 3 • Đặc Tả Cụm Camera (ECU)', 'Cụm 3 mắt camera điện thoại phản chiếu ánh đèn tuýp lớp học.', '04.5s - 07.0s', 'Nhưng cứ bấm thử một đúp xem...', 'Chĩa thẳng vào cụm camera sau lưng điện thoại, tạo điểm nhấn quang học sắc lạnh.')">
-            <img src="assets/marketing_baitap/viet_bt3_sporty.jpg" alt="Shot 3" loading="lazy">
-            <span class="beat-badge-top badge-macro">LENS</span>
+          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_03/shot3.jpg', '3. Đặc tả cụm camera điện thoại', '04.5s - 07.0s', 'Cứ đứng ngắm app cho có vẻ chuyên nghiệp...', 'Ghé sát ống kính máy mình vào cụm ba camera của bạn, bật zoom hai chấm năm lần. Khóa nét vào mắt kính camera phản chiếu ánh đèn neon trần lớp học — góc nhìn nghề nghiệp sắc sảo.')">
+            <img src="assets/frames_bai_tap_03/shot3.jpg" alt="Đặc tả cụm camera điện thoại" loading="lazy">
+            <span class="beat-badge-top">Đặc tả (Macro ECU)</span>
             <span class="beat-time-tag">04.5s - 07.0s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-id-title">3. Đặc Tả Ống Kính (ECU)</div>
-            <div class="beat-voice-pill">🎙️ "Nhưng cứ bấm thử một đúp xem..."</div>
+            <div class="beat-id-title">3. Đặc tả cụm camera điện thoại</div>
+            <div class="beat-voice-pill">🎙️ "Cứ đứng ngắm app cho có vẻ chuyên nghiệp..."</div>
             <table class="specs-table">
-              <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Đặc tả (ECU)</td></tr>
+              <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Đặc tả (Macro ECU)</td></tr>
               <tr><td class="spec-name">Góc máy</td><td class="spec-val">Ngang ống kính</td></tr>
               <tr><td class="spec-name">Hướng</td><td class="spec-val">Trực diện ống kính</td></tr>
             </table>
-            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Cú zoom ống kính đại diện cho hành động "bắt đầu nhìn thế giới qua lăng kính".</div>
+            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Ghé sát ống kính máy mình vào cụm ba camera của bạn, bật zoom hai chấm năm lần. Khóa nét vào mắt kính camera phản chiếu ánh đèn neon trần lớp học — góc nhìn nghề nghiệp sắc sảo.</div>
           </div>
         </div>
-
-        <!-- SHOT 4 -->
+        
         <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/marketing_baitap/viet_bt3_sporty.jpg', 'Shot 4 • Màn Hình Quay Bạn Học (POV)', 'Màn hình điện thoại hiển thị bạn học đang ngượng ngùng che mặt cười.', '07.0s - 09.5s', '...xấu cũng được...', 'Góc nhìn qua vai người quay, màn hình hiển thị sống động nụ cười ngượng của bạn diễn.')">
-            <img src="assets/marketing_baitap/viet_bt3_sporty.jpg" alt="Shot 4" loading="lazy">
-            <span class="beat-badge-top badge-pov">POV</span>
+          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_03/shot4.jpg', '4. Bạn đối diện cười ngượng ngùng', '07.0s - 09.5s', '...thôi bấm đại một đúp đi, xấu thì xóa...', 'Góc nhìn chủ quan qua vai người quay, hướng thẳng vào màn hình điện thoại đang bật. Bắt trọn bạn đối diện lấy tay che miệng cười ngượng ngùng — khoảnh khắc đời thực vô giá.')">
+            <img src="assets/frames_bai_tap_03/shot4.jpg" alt="Bạn đối diện cười ngượng ngùng" loading="lazy">
+            <span class="beat-badge-top">Góc nhìn chủ quan (POV)</span>
             <span class="beat-time-tag">07.0s - 09.5s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-id-title">4. Bạn Diễn Ngượng (POV)</div>
-            <div class="beat-voice-pill">🎙️ "...xấu cũng được..."</div>
+            <div class="beat-id-title">4. Bạn đối diện cười ngượng ngùng</div>
+            <div class="beat-voice-pill">🎙️ "...thôi bấm đại một đúp đi, xấu thì xóa..."</div>
             <table class="specs-table">
-              <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Góc nhìn (POV)</td></tr>
+              <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Góc nhìn chủ quan (POV)</td></tr>
               <tr><td class="spec-name">Góc máy</td><td class="spec-val">Ngang tầm mắt</td></tr>
               <tr><td class="spec-name">Hướng</td><td class="spec-val">Từ mắt người quay</td></tr>
             </table>
-            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Nụ cười ngượng ngùng của bạn diễn là chất liệu chân thật nhất của lớp học.</div>
+            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Góc nhìn chủ quan qua vai người quay, hướng thẳng vào màn hình điện thoại đang bật. Bắt trọn bạn đối diện lấy tay che miệng cười ngượng ngùng — khoảnh khắc đời thực vô giá.</div>
           </div>
         </div>
-
-        <!-- SHOT 5 -->
+        
         <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/marketing_baitap/viet_bt3_sporty.jpg', 'Shot 5 • Hạ Máy Vẫy Tay (Low)', 'Hạ điện thoại xuống mép bàn, cười tươi và vẫy tay ra hiệu làm lại đúp khác.', '09.5s - 12.0s', '...miễn là mình dám bấm nút REC!', 'Đặt góc thấp sát mặt bàn, nhìn lên cử chỉ vẫy tay đầy hào sảng.')">
-            <img src="assets/marketing_baitap/viet_bt3_sporty.jpg" alt="Shot 5" loading="lazy">
-            <span class="beat-badge-top badge-out">OUT • CHEER</span>
+          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_03/shot5.jpg', '5. Hạ máy vẫy tay bảo đúp nữa', '09.5s - 12.0s', '...ngại gì vết bẩn! 😄', 'Đặt máy từ mặt bàn hất nhẹ ba mươi độ lên ngực áo bạn diễn. Bạn hạ điện thoại xuống vẫy tay cười bảo \'Lại đúp nữa nào!\' — kết thúc ấm áp và tràn năng lượng.')">
+            <img src="assets/frames_bai_tap_03/shot5.jpg" alt="Hạ máy vẫy tay bảo đúp nữa" loading="lazy">
+            <span class="beat-badge-top">Cận góc thấp (Low CU)</span>
             <span class="beat-time-tag">09.5s - 12.0s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-id-title">5. Hạ Máy Vẫy Tay (Low)</div>
-            <div class="beat-voice-pill">🎙️ "...miễn là mình dám bấm nút REC!"</div>
+            <div class="beat-id-title">5. Hạ máy vẫy tay bảo đúp nữa</div>
+            <div class="beat-voice-pill">🎙️ "...ngại gì vết bẩn! 😄"</div>
             <table class="specs-table">
-              <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Cận góc thấp</td></tr>
-              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Sát mặt bàn hất lên</td></tr>
+              <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Cận góc thấp (Low CU)</td></tr>
+              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Sát mặt bàn hất lên 30°</td></tr>
               <tr><td class="spec-name">Hướng</td><td class="spec-val">Chếch trước 30°</td></tr>
             </table>
-            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Kết đúp bằng cử chỉ động viên bạn diễn: "Làm lại đúp nữa, tự nhiên lên nào!".</div>
+            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Đặt máy từ mặt bàn hất nhẹ ba mươi độ lên ngực áo bạn diễn. Bạn hạ điện thoại xuống vẫy tay cười bảo 'Lại đúp nữa nào!' — kết thúc ấm áp và tràn năng lượng.</div>
           </div>
         </div>
+        
       </div>
 
       <!-- Matrix Table -->
@@ -997,42 +995,65 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td><b>Shot 1</b></td><td>Hai tay xoay máy tìm khung</td><td>2.5s</td>
-                <td><span class="tag-shot">Trung cận (MCU)</span></td><td><span class="tag-angle">Ngang ngực</span></td><td><span class="tag-dir">Chếch nghiêng 30°</span></td>
-                <td><em>"Bảo giơ máy lên quay thì ai cũng ngại..."</em></td>
-              </tr>
-              <tr>
-                <td><b>Shot 2</b></td><td>Ngón tay cái ấn nút REC đỏ</td><td>2.0s</td>
-                <td><span class="tag-shot">Cận cảnh (CU)</span></td><td><span class="tag-angle">Ngang tầm tay</span></td><td><span class="tag-dir">Sau lưng điện thoại</span></td>
-                <td><em>"...sợ run tay, sợ góc xấu, sợ người ta nhìn."</em></td>
-              </tr>
-              <tr>
-                <td><b>Shot 3</b></td><td>Đặc tả cụm camera phản chiếu đèn</td><td>2.5s</td>
-                <td><span class="tag-shot">Đặc tả (ECU)</span></td><td><span class="tag-angle">Ngang ống kính</span></td><td><span class="tag-dir">Trực diện ống kính</span></td>
-                <td><em>"Nhưng cứ bấm thử một đúp xem..."</em></td>
-              </tr>
-              <tr>
-                <td><b>Shot 4</b></td><td>Màn hình quay bạn cười ngượng</td><td>2.5s</td>
-                <td><span class="tag-shot">Góc nhìn (POV)</span></td><td><span class="tag-angle">Ngang mắt</span></td><td><span class="tag-dir">Từ mắt người quay</span></td>
-                <td><em>"...xấu cũng được..."</em></td>
-              </tr>
-              <tr>
-                <td><b>Shot 5</b></td><td>Hạ máy xuống bàn vẫy tay</td><td>2.5s</td>
-                <td><span class="tag-shot">Cận góc thấp</span></td><td><span class="tag-angle">Sát mặt bàn hất lên</span></td><td><span class="tag-dir">Chếch trước 30°</span></td>
-                <td><em>"...miễn là mình dám bấm nút REC!"</em></td>
-              </tr>
+              
+        <tr>
+          <td><b>Shot 1</b></td>
+          <td>Hai tay xoay ngang xoay dọc máy</td>
+          <td>00:00 - 02.5s</td>
+          <td><span class="tag-shot">Trung cận (MCU)</span></td>
+          <td><span class="tag-angle">Ngang ngực (0°)</span></td>
+          <td><span class="tag-dir">Chếch nghiêng 30°</span></td>
+          <td><em>"Bảo giơ máy lên quay thì ai cũng ngại..."</em></td>
+        </tr>
+        
+        <tr>
+          <td><b>Shot 2</b></td>
+          <td>Ngón tay cái ngập ngừng ấn REC</td>
+          <td>02.5s - 04.5s</td>
+          <td><span class="tag-shot">Cận cảnh (CU)</span></td>
+          <td><span class="tag-angle">Ngang tầm tay bấm</span></td>
+          <td><span class="tag-dir">Sau lưng điện thoại</span></td>
+          <td><em>"...sợ rung tay, sợ góc xấu, sợ người ta nhìn chằm chằm."</em></td>
+        </tr>
+        
+        <tr>
+          <td><b>Shot 3</b></td>
+          <td>Đặc tả cụm camera điện thoại</td>
+          <td>04.5s - 07.0s</td>
+          <td><span class="tag-shot">Đặc tả (Macro ECU)</span></td>
+          <td><span class="tag-angle">Ngang ống kính</span></td>
+          <td><span class="tag-dir">Trực diện ống kính</span></td>
+          <td><em>"Cứ đứng ngắm app cho có vẻ chuyên nghiệp..."</em></td>
+        </tr>
+        
+        <tr>
+          <td><b>Shot 4</b></td>
+          <td>Bạn đối diện cười ngượng ngùng</td>
+          <td>07.0s - 09.5s</td>
+          <td><span class="tag-shot">Góc nhìn chủ quan (POV)</span></td>
+          <td><span class="tag-angle">Ngang tầm mắt</span></td>
+          <td><span class="tag-dir">Từ mắt người quay</span></td>
+          <td><em>"...thôi bấm đại một đúp đi, xấu thì xóa..."</em></td>
+        </tr>
+        
+        <tr>
+          <td><b>Shot 5</b></td>
+          <td>Hạ máy vẫy tay bảo đúp nữa</td>
+          <td>09.5s - 12.0s</td>
+          <td><span class="tag-shot">Cận góc thấp (Low CU)</span></td>
+          <td><span class="tag-angle">Sát mặt bàn hất lên 30°</span></td>
+          <td><span class="tag-dir">Chếch trước 30°</span></td>
+          <td><em>"...ngại gì vết bẩn! 😄"</em></td>
+        </tr>
+        
             </tbody>
           </table>
         </div>
       </section>
 
     </div>
-
-    <!-- ============================================================= -->
-    <!-- DETAILED DRILL-DOWN: EXERCISE 04 -->
-    <!-- ============================================================= -->
-    <div class="exercise-detail-wrap" id="detail-exercise-4">
+    
+    <div class="exercise-detail-wrap " id="detail-exercise-4">
       
       <!-- Master Audio Box -->
       <section class="master-audio-box">
@@ -1041,149 +1062,146 @@
           <div>
             <div class="master-voice-title">BÀI TẬP 04 • LỜI THOẠI DUY NHẤT CHUẨN ÔNG GIÁO:</div>
             <div class="master-voice-text" id="script-bt4">
-              "Đang cắm đầu lướt điện thoại tưởng mình biết hết rồi...<br>
-              ...nghe thầy nói một câu chạm đúng tim đen, giật thót cả mình!<br>
-              Ghi vội lại... chứ không mai lại đâu đóng đấy!"
+              Ngồi dưới lớp lướt máy, bụng bảo dạ mấy trò này mình biết thừa...<br>Nghe ông giáo bóc đúng cái dở của mình tuần trước, giật thót cả người!<br>Thôi cất máy, ghi vội lại... không mai về lại đâu vào đấy! 😄
             </div>
           </div>
         </div>
-        <button class="copy-btn" onclick="copyVoice('script-bt4')">📋 Copy Lời Thoại</button>
+        <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+          <button class="copy-btn" onclick="copyVoice('script-bt4')">📋 Copy Lời Thoại</button>
+          <a href="baitap04_slide_giatminh.html" target="_blank" class="nav-pill" style="border-color:var(--cyan); color:var(--cyan);">🔗 Mở Trang Độc Lập Chuẩn 30NgayViral (HTML Light) ↗</a>
+        </div>
       </section>
 
-      <!-- 4 Tiers of Truth -->
+      <!-- 4 Tiers -->
       <section class="tiers-section">
         <div class="tiers-header">
           <div class="tiers-title">
-            <span>💡 BẢN ĐỒ 4 TẦNG SỰ THẬT • BÀI TẬP 04: NGẨNG NHÌN SLIDE GIẬT MÌNH</span>
-          <a href="baitap04_slide_giatminh.html" target="_blank" class="nav-pill" style="font-size:11px; margin-left:10px;">Mở Trang Riêng ↗</a>
+            <span>💡 BẢN ĐỒ 4 TẦNG SỰ THẬT • BÀI TẬP 04: NGẨNG NHÌN SLIDE GIẢNG BÀI & GIẬT MÌNH</span>
           </div>
-          <span class="tag tag-purple">👔 Nhân vật: Sơ mi xanh dài tay xắn gấu cao</span>
+          <span class="tag tag-cyan">Sơ mi xanh dài tay xắn gấu cao (Smart casual shirt)</span>
         </div>
         <div class="tiers-grid-4">
           <div class="tier-card t1">
-            <div class="tier-card-head">❌ TẦNG 1: NÓI ĐÃI BÔI</div>
-            <div class="tier-card-content">"Mấy kiến thức này em xem trên mạng suốt rồi, marketing căn bản thì có gì lạ đâu mà phải note."</div>
-            <div class="tier-sub">👉 Tỏ vẻ biết tuốt, hạ thấp kiến thức để bao biện cho sự lơ là.</div>
+            <div class="tier-card-head">❌ Tầng 1 • Nói đãi bôi (Văn mẫu an toàn)</div>
+            <div class="tier-card-content">Mấy kiến thức này em xem trên mạng suốt rồi,<br>toàn lý thuyết cơ bản có gì đâu mà phải ghi chép.</div>
+            <div class="tier-sub">👉 Lời nói đãi bôi: tỏ vẻ biết tuốt để bao biện cho sự lơ là.</div>
           </div>
           <div class="tier-card t2">
-            <div class="tier-card-head">⚠️ TẦNG 2: CẢM GIÁC THẬT</div>
-            <div class="tier-card-content">"Ngồi trong lớp tay lướt mạng xã hội dưới mép bàn, tai nghe câu được câu chăng, tỏ vẻ thong dong như người từng trải."</div>
-            <div class="tier-sub">👉 Hành vi thực tế: mất tập trung, phân tâm nhưng giả vờ hiểu hết.</div>
+            <div class="tier-card-head">⚠️ Tầng 2 • Cảm giác thật (Thao tác lúng túng)</div>
+            <div class="tier-card-content">Ngồi trong lớp tay giấu điện thoại dưới gầm bàn lướt mạng,<br>tai nghe câu được câu chăng, mặt cố giữ vẻ thong dong từng trải.</div>
+            <div class="tier-sub">👉 Hành vi thực tế: mất tập trung nhưng cố giữ vẻ ngoài thong thả.</div>
           </div>
           <div class="tier-card t25">
-            <div class="tier-card-head">🎭 TẦNG 2.5: VỊ THẾ & THỂ DIỆN</div>
-            <div class="tier-card-content">"Cố tỏ ra mình đã sành sỏi, không thèm mở sổ ghi chép vì sợ bạn bè bảo mọt sách. Nhưng nghe thầy điểm đúng cái lỗi ngớ ngẩn mình vừa làm tuần trước, tim đập thình thịch, mặt nóng bừng... lén mở sổ vờ như chăm chú nghe từ đầu."</div>
-            <div class="tier-sub">👉 Sự giằng xé thể diện: diễn kịch biết hết đến khi bị điểm trúng tim đen.</div>
+            <div class="tier-card-head">🎭 Tầng 2.5 • Vị thế & Thể diện (Điểm nghẽn cốt tử)</div>
+            <div class="tier-card-content">Sợ mở sổ ghi chép cặm cụi thì bị bạn bè nghĩ mình gà mờ.<br>Nghe ông giáo điểm trúng cái lỗi ngớ ngẩn mình vừa làm tuần trước,<br>mặt nóng bừng, lén cất máy rồi vờ như đang chăm chú nghe từ đầu!</div>
+            <div class="tier-sub">👉 Cái cớ giữ thể diện: diễn kịch sành sỏi đến khi bị đánh trúng điểm yếu.</div>
           </div>
           <div class="tier-card t3">
-            <div class="tier-card-head">🔥 TẦNG 3: SỰ THẬT NGƯỢNG MIỆNG</div>
-            <div class="tier-card-content">"Cái tôi quá lớn, tưởng mình giỏi hơn người khác nên khép tai lại. Đến khi bị bóc trần sự thật thì mới thấy mình dốt thật mà không dám thừa nhận!"</div>
-            <div class="tier-sub">👉 Đâm trúng tim đen: sự tự mãn là liều thuốc độc giết chết sự tiến bộ.</div>
+            <div class="tier-card-head">🔥 Tầng 3 • Sự thật ngượng miệng (Tim đen bóc trần)</div>
+            <div class="tier-card-content">Cứ ngỡ mình biết tuốt nên hai tai tự động khép lại.<br>Đến khi bị bóc trần sự thật mới thấy mình chỉ giỏi lý thuyết trên ngọn,<br>còn bắt tay vào thực chiến thì vẫn lóng ngóng hổng toang hoác!</div>
+            <div class="tier-sub">👉 Sự thật ngượng miệng: cái tôi tự mãn che mờ sự thiếu hụt thực tế.</div>
           </div>
         </div>
       </section>
 
-      <!-- 5-Beats Grid -->
+      <!-- 5 Beats Grid -->
       <div class="section-title">
         <span>🎬 CHI TIẾT 5 CÚ MÁY BĂM NHỎ (BÀI TẬP 04)</span>
-        <span style="font-size: 11.5px; color: var(--purple);">Nhấp vào khung hình để phóng to chi tiết</span>
+        <span style="font-size: 11.5px; color: var(--cyan);">5 ảnh phân cảnh 9:16 riêng biệt • Nhấp vào ảnh để xem chi tiết</span>
       </div>
 
       <div class="storyboard-grid-5">
-        <!-- SHOT 1 -->
+        
         <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/marketing_baitap/viet_bt4_shirt.jpg', 'Shot 1 • Lướt Điện Thoại Dưới Bàn (MCU)', 'Cúi đầu giấu mặt dưới mép bàn, ngón tay lướt feed mạng xã hội.', '00:00 - 02.5s', 'Đang cắm đầu lướt điện thoại tưởng mình biết hết rồi...', 'Quay góc chếch 45 độ chúc xuống, thấy nửa người và mép điện thoại lén lút.')">
-            <img src="assets/marketing_baitap/viet_bt4_shirt.jpg" alt="Shot 1" loading="lazy">
-            <span class="beat-badge-top badge-in">IN • SLACK</span>
+          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_04/shot1.jpg', '1. Cắm cúi lướt máy dưới gầm bàn', '00:00 - 02.5s', 'Ngồi dưới lớp lướt máy, bụng bảo dạ mấy trò này mình biết thừa...', 'Đứng chéo bàn, chúc máy ba mươi lăm độ nhìn xuống khoảng tối dưới mép bàn. Ánh sáng màn hình hắt ngược lên cằm làm nổi bật hành vi lén lút bấm máy trong giờ học.')">
+            <img src="assets/frames_bai_tap_04/shot1.jpg" alt="Cắm cúi lướt máy dưới gầm bàn" loading="lazy">
+            <span class="beat-badge-top">Trung cận (MCU)</span>
             <span class="beat-time-tag">00:00 - 02.5s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-id-title">1. Lướt Máy Dưới Bàn (MCU)</div>
-            <div class="beat-voice-pill">🎙️ "Đang cắm đầu lướt điện thoại..."</div>
+            <div class="beat-id-title">1. Cắm cúi lướt máy dưới gầm bàn</div>
+            <div class="beat-voice-pill">🎙️ "Ngồi dưới lớp lướt máy, bụng bảo dạ mấy trò này mình biết thừa..."</div>
             <table class="specs-table">
               <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Trung cận (MCU)</td></tr>
-              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Góc chúc xuống 35°</td></tr>
+              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Góc chúc 35°</td></tr>
               <tr><td class="spec-name">Hướng</td><td class="spec-val">Chếch phải 45°</td></tr>
             </table>
-            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Góc chúc từ trên xuống lột tả trọn vẹn hành vi lén lút lướt máy dưới gầm bàn.</div>
+            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Đứng chéo bàn, chúc máy ba mươi lăm độ nhìn xuống khoảng tối dưới mép bàn. Ánh sáng màn hình hắt ngược lên cằm làm nổi bật hành vi lén lút bấm máy trong giờ học.</div>
           </div>
         </div>
-
-        <!-- SHOT 2 -->
+        
         <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/marketing_baitap/viet_bt4_shirt.jpg', 'Shot 2 • Ngón Tay Khựng Lại (CU)', 'Ngón tay đang cuộn lướt bỗng khựng lại cứng đơ trên màn hình.', '02.5s - 04.5s', '...nghe thầy nói một câu chạm đúng tim đen...', 'Cận cảnh ngón tay dừng giữa màn hình, phản chiếu ánh sáng trắng của app.')">
-            <img src="assets/marketing_baitap/viet_bt4_shirt.jpg" alt="Shot 2" loading="lazy">
-            <span class="beat-badge-top badge-action">FREEZE</span>
+          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_04/shot2.jpg', '2. Ngón tay cái khựng đơ giữa chừng', '02.5s - 04.5s', 'Nghe ông giáo bóc đúng cái dở của mình tuần trước...', 'Hạ máy sát mép bàn, bắt trọn ngón tay cái đang vuốt màn hình bỗng khựng lại giữa chừng. Một nhịp đứng hình vô cùng đắt giá báo hiệu sự thức tỉnh khi nghe chạm đúng tim đen.')">
+            <img src="assets/frames_bai_tap_04/shot2.jpg" alt="Ngón tay cái khựng đơ giữa chừng" loading="lazy">
+            <span class="beat-badge-top">Cận cảnh (CU)</span>
             <span class="beat-time-tag">02.5s - 04.5s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-id-title">2. Ngón Tay Khựng Đơ (CU)</div>
-            <div class="beat-voice-pill">🎙️ "...chạm đúng tim đen..."</div>
+            <div class="beat-id-title">2. Ngón tay cái khựng đơ giữa chừng</div>
+            <div class="beat-voice-pill">🎙️ "Nghe ông giáo bóc đúng cái dở của mình tuần trước..."</div>
             <table class="specs-table">
               <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Cận cảnh (CU)</td></tr>
               <tr><td class="spec-name">Góc máy</td><td class="spec-val">Ngang mép bàn</td></tr>
               <tr><td class="spec-name">Hướng</td><td class="spec-val">Trực diện ngón tay</td></tr>
             </table>
-            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Động tác dừng tay đột ngột là tín hiệu thị giác báo hiệu sự "giật mình nhận ra".</div>
+            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Hạ máy sát mép bàn, bắt trọn ngón tay cái đang vuốt màn hình bỗng khựng lại giữa chừng. Một nhịp đứng hình vô cùng đắt giá báo hiệu sự thức tỉnh khi nghe chạm đúng tim đen.</div>
           </div>
         </div>
-
-        <!-- SHOT 3 -->
+        
         <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/marketing_baitap/viet_bt4_shirt.jpg', 'Shot 3 • Ngẩng Phắt Nhìn Slide (CU Low)', 'Đầu ngẩng phắt lên nhìn bảng máy chiếu, mắt mở to, miệng hơi hé vì giật mình.', '04.5s - 07.0s', '...giật thót cả mình!', 'Góc thấp từ mặt bàn hất lên mặt, bắt trọn biểu cảm bừng tỉnh ngơ ngác.')">
-            <img src="assets/marketing_baitap/viet_bt4_shirt.jpg" alt="Shot 3" loading="lazy">
-            <span class="beat-badge-top badge-macro">SHOCK</span>
+          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_04/shot3.jpg', '3. Ngẩng nhìn màn chiếu mắt mở to', '04.5s - 07.0s', '...giật thót cả người!', 'Đặt máy thấp ngang ngực hất lên hai mươi lăm độ, bắt trọn ánh mắt ngơ ngác ngẩng lên. Đồng tử giãn ra, vẻ sành sỏi biến mất, thay bằng nét giật mình chân thật nhìn lên bảng.')">
+            <img src="assets/frames_bai_tap_04/shot3.jpg" alt="Ngẩng nhìn màn chiếu mắt mở to" loading="lazy">
+            <span class="beat-badge-top">Cận thấp khuôn mặt (CU Low)</span>
             <span class="beat-time-tag">04.5s - 07.0s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-id-title">3. Ngẩng Nhìn Slide (CU Low)</div>
-            <div class="beat-voice-pill">🎙️ "...giật thót cả mình!"</div>
+            <div class="beat-id-title">3. Ngẩng nhìn màn chiếu mắt mở to</div>
+            <div class="beat-voice-pill">🎙️ "...giật thót cả người!"</div>
             <table class="specs-table">
-              <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Cận cảnh khuôn mặt</td></tr>
+              <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Cận thấp khuôn mặt (CU Low)</td></tr>
               <tr><td class="spec-name">Góc máy</td><td class="spec-val">Góc thấp hất lên 25°</td></tr>
               <tr><td class="spec-name">Hướng</td><td class="spec-val">Chếch trái nhìn bảng</td></tr>
             </table>
-            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Ánh mắt mở to nhìn lên slide là cú đinh thị giác của cả bài tập.</div>
+            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Đặt máy thấp ngang ngực hất lên hai mươi lăm độ, bắt trọn ánh mắt ngơ ngác ngẩng lên. Đồng tử giãn ra, vẻ sành sỏi biến mất, thay bằng nét giật mình chân thật nhìn lên bảng.</div>
           </div>
         </div>
-
-        <!-- SHOT 4 -->
+        
         <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/marketing_baitap/viet_bt4_shirt.jpg', 'Shot 4 • Hí Hoáy Ghi Sổ (ECU)', 'Bàn tay vội vã cầm bút gạch chân 2 đường dưới từ khóa LỖI CHẾT DÍ KHUNG HÌNH.', '07.0s - 09.5s', 'Ghi vội lại...', 'Góc cao 80 độ nhìn thẳng xuống ngòi bút đang viết nguệch ngoạc nhưng vội vã.')">
-            <img src="assets/marketing_baitap/viet_bt4_shirt.jpg" alt="Shot 4" loading="lazy">
-            <span class="beat-badge-top badge-pov">NOTE</span>
+          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_04/shot4.jpg', '4. Hí hoáy gạch chân từ khóa sổ tay', '07.0s - 09.5s', 'Thôi cất máy, ghi vội lại...', 'Chĩa máy vuông góc tám mươi độ từ trên xuống trang sổ tay. Bắt nét ngòi bút lia nhanh vẽ hai đường gạch chân dưới từ khóa — nét vẽ vội vàng nhưng thật.')">
+            <img src="assets/frames_bai_tap_04/shot4.jpg" alt="Hí hoáy gạch chân từ khóa sổ tay" loading="lazy">
+            <span class="beat-badge-top">Đặc tả (Macro ECU)</span>
             <span class="beat-time-tag">07.0s - 09.5s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-id-title">4. Vội Vã Note Sổ (ECU)</div>
-            <div class="beat-voice-pill">🎙️ "Ghi vội lại..."</div>
+            <div class="beat-id-title">4. Hí hoáy gạch chân từ khóa sổ tay</div>
+            <div class="beat-voice-pill">🎙️ "Thôi cất máy, ghi vội lại..."</div>
             <table class="specs-table">
-              <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Đặc tả (ECU)</td></tr>
-              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Góc cao 80°</td></tr>
-              <tr><td class="spec-name">Hướng</td><td class="spec-val">Thẳng đứng xuống</td></tr>
+              <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Đặc tả (Macro ECU)</td></tr>
+              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Góc cao 80° thẳng đứng</td></tr>
+              <tr><td class="spec-name">Hướng</td><td class="spec-val">Thẳng đứng chúc xuống</td></tr>
             </table>
-            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Nét gạch chân vội thể hiện sự thức tỉnh: không ghi là mai quên sạch.</div>
+            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Chĩa máy vuông góc tám mươi độ từ trên xuống trang sổ tay. Bắt nét ngòi bút lia nhanh vẽ hai đường gạch chân dưới từ khóa — nét vẽ vội vàng nhưng thật.</div>
           </div>
         </div>
-
-        <!-- SHOT 5 -->
+        
         <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/marketing_baitap/viet_bt4_shirt.jpg', 'Shot 5 • Gật Gù Cười Trừ (MCU)', 'Ngồi thẳng lưng lại, khẽ gật gù cười trừ một mình, cất hẳn điện thoại vào balo.', '09.5s - 12.0s', '...chứ không mai lại đâu đóng đấy!', 'Ngang tầm mắt, bắt cử chỉ gật đầu cười thấu suốt và chỉnh tề lại tư thế ngồi.')">
-            <img src="assets/marketing_baitap/viet_bt4_shirt.jpg" alt="Shot 5" loading="lazy">
-            <span class="beat-badge-top badge-out">OUT • NOD</span>
+          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_04/shot5.jpg', '5. Cất điện thoại túi áo gật gù cười', '09.5s - 12.0s', '...không mai về lại đâu vào đấy! 😄', 'Quay ngang tầm mắt, bắt động tác úp màn hình điện thoại bỏ vào túi áo. Bạn diễn gật gù tự cười trừ một cái — sự chuyển biến nhận thức trọn vẹn và rất đỗi đời thường.')">
+            <img src="assets/frames_bai_tap_04/shot5.jpg" alt="Cất điện thoại túi áo gật gù cười" loading="lazy">
+            <span class="beat-badge-top">Trung cận (MCU)</span>
             <span class="beat-time-tag">09.5s - 12.0s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-id-title">5. Gật Gù Cười Trừ (MCU)</div>
-            <div class="beat-voice-pill">🎙️ "...chứ không mai lại đâu đóng đấy!"</div>
+            <div class="beat-id-title">5. Cất điện thoại túi áo gật gù cười</div>
+            <div class="beat-voice-pill">🎙️ "...không mai về lại đâu vào đấy! 😄"</div>
             <table class="specs-table">
               <tr><td class="spec-name">Cỡ cảnh</td><td class="spec-val">Trung cận (MCU)</td></tr>
-              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Ngang tầm mắt</td></tr>
+              <tr><td class="spec-name">Góc máy</td><td class="spec-val">Ngang tầm mắt (0°)</td></tr>
               <tr><td class="spec-name">Hướng</td><td class="spec-val">Chếch nghiêng 30°</td></tr>
             </table>
-            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Cú out khép lại bằng cử chỉ cất điện thoại, khẳng định sự thay đổi trong nhận thức.</div>
+            <div class="director-note-box">💡 <b>Mẹo Ông Giáo:</b> Quay ngang tầm mắt, bắt động tác úp màn hình điện thoại bỏ vào túi áo. Bạn diễn gật gù tự cười trừ một cái — sự chuyển biến nhận thức trọn vẹn và rất đỗi đời thường.</div>
           </div>
         </div>
+        
       </div>
 
       <!-- Matrix Table -->
@@ -1197,39 +1215,65 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td><b>Shot 1</b></td><td>Cúi mặt lướt máy dưới gầm bàn</td><td>2.5s</td>
-                <td><span class="tag-shot">Trung cận (MCU)</span></td><td><span class="tag-angle">Góc chúc 35°</span></td><td><span class="tag-dir">Chếch phải 45°</span></td>
-                <td><em>"Đang cắm đầu lướt điện thoại tưởng mình biết hết rồi..."</em></td>
-              </tr>
-              <tr>
-                <td><b>Shot 2</b></td><td>Ngón tay đang cuộn bỗng khựng đơ</td><td>2.0s</td>
-                <td><span class="tag-shot">Cận cảnh (CU)</span></td><td><span class="tag-angle">Ngang mép bàn</span></td><td><span class="tag-dir">Trực diện ngón tay</span></td>
-                <td><em>"...nghe thầy nói một câu chạm đúng tim đen..."</em></td>
-              </tr>
-              <tr>
-                <td><b>Shot 3</b></td><td>Ngẩng phắt nhìn slide giật mình</td><td>2.5s</td>
-                <td><span class="tag-shot">Cận cảnh (CU)</span></td><td><span class="tag-angle">Góc thấp hất lên 25°</span></td><td><span class="tag-dir">Chếch trái nhìn bảng</span></td>
-                <td><em>"...giật thót cả mình!"</em></td>
-              </tr>
-              <tr>
-                <td><b>Shot 4</b></td><td>Hí hoáy gạch chân từ khóa trong sổ</td><td>2.5s</td>
-                <td><span class="tag-shot">Đặc tả (ECU)</span></td><td><span class="tag-angle">Góc cao 80°</span></td><td><span class="tag-dir">Thẳng đứng xuống</span></td>
-                <td><em>"Ghi vội lại..."</em></td>
-              </tr>
-              <tr>
-                <td><b>Shot 5</b></td><td>Ngồi thẳng gật gù cười trừ, cất máy</td><td>2.5s</td>
-                <td><span class="tag-shot">Trung cận (MCU)</span></td><td><span class="tag-angle">Ngang tầm mắt</span></td><td><span class="tag-dir">Chếch nghiêng 30°</span></td>
-                <td><em>"...chứ không mai lại đâu đóng đấy!"</em></td>
-              </tr>
+              
+        <tr>
+          <td><b>Shot 1</b></td>
+          <td>Cắm cúi lướt máy dưới gầm bàn</td>
+          <td>00:00 - 02.5s</td>
+          <td><span class="tag-shot">Trung cận (MCU)</span></td>
+          <td><span class="tag-angle">Góc chúc 35°</span></td>
+          <td><span class="tag-dir">Chếch phải 45°</span></td>
+          <td><em>"Ngồi dưới lớp lướt máy, bụng bảo dạ mấy trò này mình biết thừa..."</em></td>
+        </tr>
+        
+        <tr>
+          <td><b>Shot 2</b></td>
+          <td>Ngón tay cái khựng đơ giữa chừng</td>
+          <td>02.5s - 04.5s</td>
+          <td><span class="tag-shot">Cận cảnh (CU)</span></td>
+          <td><span class="tag-angle">Ngang mép bàn</span></td>
+          <td><span class="tag-dir">Trực diện ngón tay</span></td>
+          <td><em>"Nghe ông giáo bóc đúng cái dở của mình tuần trước..."</em></td>
+        </tr>
+        
+        <tr>
+          <td><b>Shot 3</b></td>
+          <td>Ngẩng nhìn màn chiếu mắt mở to</td>
+          <td>04.5s - 07.0s</td>
+          <td><span class="tag-shot">Cận thấp khuôn mặt (CU Low)</span></td>
+          <td><span class="tag-angle">Góc thấp hất lên 25°</span></td>
+          <td><span class="tag-dir">Chếch trái nhìn bảng</span></td>
+          <td><em>"...giật thót cả người!"</em></td>
+        </tr>
+        
+        <tr>
+          <td><b>Shot 4</b></td>
+          <td>Hí hoáy gạch chân từ khóa sổ tay</td>
+          <td>07.0s - 09.5s</td>
+          <td><span class="tag-shot">Đặc tả (Macro ECU)</span></td>
+          <td><span class="tag-angle">Góc cao 80° thẳng đứng</span></td>
+          <td><span class="tag-dir">Thẳng đứng chúc xuống</span></td>
+          <td><em>"Thôi cất máy, ghi vội lại..."</em></td>
+        </tr>
+        
+        <tr>
+          <td><b>Shot 5</b></td>
+          <td>Cất điện thoại túi áo gật gù cười</td>
+          <td>09.5s - 12.0s</td>
+          <td><span class="tag-shot">Trung cận (MCU)</span></td>
+          <td><span class="tag-angle">Ngang tầm mắt (0°)</span></td>
+          <td><span class="tag-dir">Chếch nghiêng 30°</span></td>
+          <td><em>"...không mai về lại đâu vào đấy! 😄"</em></td>
+        </tr>
+        
             </tbody>
           </table>
         </div>
       </section>
 
     </div>
+    
 
-    <!-- FOOTER -->
     <footer>
       <p><b>Hệ Thống Phân Cảnh Điện Ảnh AI • Bộ Môn Marketing Thực Chiến</b></p>
       <p style="margin-top: 4px; color: var(--text-muted);">Biên soạn & Giảng dạy bởi Nguyễn Đức Việt • Nền tảng thực hành quay dựng video smartphone</p>
@@ -1248,33 +1292,28 @@
         <div>
           <span id="lb-time" class="tag tag-cyan" style="margin-bottom: 8px;">⏱️ 00:00 - 02.5s</span>
           <h2 id="lb-title" style="font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 6px;">Tiêu đề phân cảnh</h2>
-          <p id="lb-desc" style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">Mô tả hành động visual của cú máy.</p>
         </div>
         <div style="background: rgba(0,0,0,0.35); padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border-subtle);">
           <div style="font-size: 10.5px; color: var(--cyan); font-weight: 800; text-transform: uppercase; margin-bottom: 4px;">Lời thoại khớp hình:</div>
           <div id="lb-voice" style="font-size: 13.5px; font-weight: 700; color: #fde047; font-style: italic;">"..."</div>
         </div>
         <div style="background: rgba(245, 158, 11, 0.08); border-left: 3px solid var(--amber); padding: 12px; border-radius: 0 6px 6px 0; font-size: 11.5px; color: #fde68a;">
-          <span id="lb-tip"><b>💡 Mẹo Ông Giáo:</b> Giữ vững điện thoại chắc tay, thay đổi vị trí đứng của chân trước khi bấm máy.</span>
+          <span id="lb-tip">💡 Mẹo Ông Giáo</span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- TOAST FEEDBACK -->
   <div class="toast" id="toast-msg">Đã copy kịch bản nói vào bộ nhớ tạm!</div>
 
   <script>
-    // Tab switching logic
     function switchExerciseTab(index) {
-      // Update nav pills
       const pills = document.querySelectorAll('.nav-pill');
       pills.forEach((p, idx) => {
         if (idx === (index - 1)) p.classList.add('active');
         else p.classList.remove('active');
       });
 
-      // Update overview cards
       for (let i = 1; i <= 4; i++) {
         const card = document.getElementById('card-tab-' + i);
         if (card) {
@@ -1283,7 +1322,6 @@
         }
       }
 
-      // Update detail sections
       for (let i = 1; i <= 4; i++) {
         const detail = document.getElementById('detail-exercise-' + i);
         if (detail) {
@@ -1292,7 +1330,6 @@
         }
       }
 
-      // Smooth scroll to active detail section
       const activeDetail = document.getElementById('detail-exercise-' + index);
       if (activeDetail) {
         const yOffset = -70;
@@ -1301,19 +1338,15 @@
       }
     }
 
-    // Copy voiceover script
     function copyVoice(elementId) {
       const el = document.getElementById(elementId);
       if (!el) return;
       const text = el.innerText.trim();
       navigator.clipboard.writeText(text).then(() => {
         showToast('Đã copy kịch bản nói vào bộ nhớ tạm!');
-      }).catch(err => {
-        console.error('Không thể copy: ', err);
       });
     }
 
-    // Show toast
     function showToast(msg) {
       const toast = document.getElementById('toast-msg');
       toast.innerText = msg;
@@ -1321,35 +1354,28 @@
       setTimeout(() => { toast.classList.remove('show'); }, 2500);
     }
 
-    // Lightbox modal logic
     const lightbox = document.getElementById('lightbox');
     const lbImg = document.getElementById('lb-img');
     const lbTitle = document.getElementById('lb-title');
-    const lbDesc = document.getElementById('lb-desc');
     const lbTime = document.getElementById('lb-time');
     const lbVoice = document.getElementById('lb-voice');
     const lbTip = document.getElementById('lb-tip');
 
-    function openLightbox(imgSrc, title, desc, time, voice, tip) {
+    function openLightbox(imgSrc, title, time, voice, tip) {
       lbImg.src = imgSrc;
       lbTitle.innerText = title;
-      lbDesc.innerText = desc;
       lbTime.innerText = '⏱️ ' + time;
       lbVoice.innerText = voice || '';
-      lbTip.innerHTML = '<b>💡 Mẹo Ông Giáo:</b> ' + (tip || 'Di chuyển góc đứng của bạn trước khi bấm máy.');
+      lbTip.innerHTML = '<b>💡 Mẹo Ông Giáo:</b> ' + (tip || '');
       lightbox.classList.add('active');
     }
 
     function closeLightbox(e) {
-      if (e.target === lightbox) {
-        lightbox.classList.remove('active');
-      }
+      if (e.target === lightbox) lightbox.classList.remove('active');
     }
-
     function closeLightboxDirect() {
       lightbox.classList.remove('active');
     }
-
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeLightboxDirect();
     });

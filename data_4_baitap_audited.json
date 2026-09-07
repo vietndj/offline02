@@ -1,0 +1,433 @@
+{
+  "project": {
+    "title": "Hệ thống 4 Bài tập Thực chiến • Băm Cảnh Trám Lớp Marketing PT",
+    "mentor": "Nguyễn Đức Việt",
+    "style_guide": "Chuẩn văn phong Ông Giáo chân thật, mộc mạc, tôn trọng, tự trào nhẹ nhàng, kết bài có nụ cười",
+    "format": "9:16 Vertical Smartphone Cinematic (Băm 1 hành động gốc thành 5 cú máy ngắn 2.0s - 2.5s)",
+    "version": "2.0-Audited-DeFluffed"
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "code": "BT01",
+      "slug": "soi-chi-so-ads-laptop",
+      "page_filename": "baitap01_laptop_ads.html",
+      "title": "Soi chỉ số ads & Cày bài tập trên laptop",
+      "character": {
+        "outfit": "Đồ âu may đo (Smart suit)",
+        "role": "Nam mentor / học viên marketing nghiêm túc",
+        "image_thumb": "assets/marketing_baitap/viet_bt1_smartsuit.jpg"
+      },
+      "root_action": "Một bạn học viên ngồi cắm cúi trước laptop làm bài tập marketing, mắt dán vào màn hình, gõ phím, cuộn chuột và thở dài.",
+      "voiceover": {
+        "raw_text": "Đứng một chỗ bấm máy thì nhàn thật... nhưng lười dịch cái chân, để khung hình đơ ra... ...thì đến mình xem lại còn lướt vội, trách gì người ta! 😄",
+        "formatted_lines": [
+          "Đứng một chỗ bấm máy thì nhàn thật...",
+          "nhưng lười dịch cái chân, để khung hình đơ ra...",
+          "...thì đến mình xem lại còn lướt vội, trách gì người ta! 😄"
+        ],
+        "formatted_html": "Đứng một chỗ bấm máy thì nhàn thật...<br>nhưng lười dịch cái chân, để khung hình đơ ra...<br>...thì đến mình xem lại còn lướt vội, trách gì người ta! 😄"
+      },
+      "four_tiers": {
+        "t1_safe": {
+          "label": "Tầng 1 • Nói đãi bôi (Văn mẫu an toàn)",
+          "quote": "Em đi học quay dựng là để làm video triệu view, phải dùng kỹ thuật điện ảnh cao siêu người ta mới xem.",
+          "formatted_html": "Em đi học quay dựng là để làm video triệu view,<br>phải dùng kỹ thuật điện ảnh cao siêu người ta mới xem.",
+          "badge": "Lời nói đãi bôi bề nổi, nghe cho sang miệng chứ rỗng tuếch."
+        },
+        "t2_real": {
+          "label": "Tầng 2 • Cảm giác thật (Thao tác lúng túng)",
+          "quote": "Cầm máy quay bạn học thì chân chôn chặt một chỗ, bấm đại mười giây cho xong bài rồi về ghép nhạc đè lên.",
+          "formatted_html": "Cầm máy quay bạn học thì chân chôn chặt một chỗ,<br>bấm đại mười giây cho xong bài rồi về ghép nhạc đè lên.",
+          "badge": "Thao tác thực tế tại lớp: lười đổi góc, quay một đúp tĩnh lấy lệ."
+        },
+        "t25_friction": {
+          "label": "Tầng 2.5 • Vị thế & Thể diện (Điểm nghẽn cốt tử)",
+          "quote": "Biết thừa khung hình đang đơ, xem lại nhạt toẹt... nhưng ngại cúi thấp hay kiễng chân, sợ người ta bảo làm màu. Thôi thì cứ đứng yên bấm một góc tĩnh cho nó an toàn!",
+          "formatted_html": "Biết thừa khung hình đang đơ, xem lại nhạt toẹt...<br>nhưng ngại cúi thấp hay kiễng chân, sợ người ta bảo làm màu.<br>Thôi thì cứ đứng yên bấm một góc tĩnh cho nó an toàn!",
+          "badge": "Cái cớ giữ thể diện: thà chịu khung hình chết dí còn hơn bị chê làm màu."
+        },
+        "t3_raw": {
+          "label": "Tầng 3 • Sự thật ngượng miệng (Tim đen bóc trần)",
+          "quote": "Lười dịch cái chân thì khung hình chết dí. Đến chính mình xem lại còn muốn lướt qua cho nhanh, thì đăng lên mạng làm sao giữ chân được người xem!",
+          "formatted_html": "Lười dịch cái chân thì khung hình chết dí.<br>Đến chính mình xem lại còn muốn lướt qua cho nhanh,<br>thì đăng lên mạng làm sao giữ chân được người xem!",
+          "badge": "Sự thật ngượng miệng: cái video mình còn chán ngấy thì ai dừng lại xem."
+        }
+      },
+      "shots": [
+        {
+          "shot_id": 1,
+          "name": "Thiết lập áp lực bài tập",
+          "time_range": "00:00 - 02.5s",
+          "shot_type": "Trung cận (MCU)",
+          "angle": "Ngang tầm mắt (0°)",
+          "direction": "Chếch 45° bên hông trái",
+          "voice_sync": "Đứng một chỗ bấm máy thì nhàn thật...",
+          "director_note": "Ngồi ké bên cạnh bàn, đưa máy ngang tầm mắt cách một sải tay. Khóa nét tròng kính, lấy ánh sáng xanh màn hình hắt nhẹ lên mặt.",
+          "img_path": "assets/frames_bai_tap_01/shot1.jpg"
+        },
+        {
+          "shot_id": 2,
+          "name": "Ánh mắt nhíu mày sốt ruột",
+          "time_range": "02.5s - 04.5s",
+          "shot_type": "Cận cảnh (CU)",
+          "angle": "Hất nhẹ 15° từ dưới lên",
+          "direction": "Chính diện xuyên mép laptop",
+          "voice_sync": "...bấm một cái là xong.",
+          "director_note": "Bước sang đối diện, hạ máy ngang mép trên màn hình laptop. Canh đúng lúc bạn nhíu mày nhìn số liệu thì bấm máy, biểu cảm thật này không diễn được đâu.",
+          "img_path": "assets/frames_bai_tap_01/shot2.jpg"
+        },
+        {
+          "shot_id": 3,
+          "name": "Bàn phím nhấn lì nút xóa",
+          "time_range": "04.5s - 07.0s",
+          "shot_type": "Đặc tả (Macro ECU)",
+          "angle": "Góc cao 60° chúc xuống",
+          "direction": "Từ trên xuống chếch phải",
+          "voice_sync": "Nhưng lười dịch cái chân, để khung hình đơ ra...",
+          "director_note": "Đưa camera sát bàn phím một gang tay, bật zoom 2x chống bóng lưng. Bắt trọn ngón tay nhấn lì nút Backspace xóa dòng chữ vừa gõ — chi tiết bế tắc đắt giá nhất.",
+          "img_path": "assets/frames_bai_tap_01/shot3.jpg"
+        },
+        {
+          "shot_id": 4,
+          "name": "Soi màn hình số liệu đỏ lòm",
+          "time_range": "07.0s - 09.5s",
+          "shot_type": "Cận qua vai (OTS)",
+          "angle": "Ngang vai cao 20°",
+          "direction": "Sau lưng chếch vai phải",
+          "voice_sync": "...thì video dựng lên...",
+          "director_note": "Đứng chếch sau vai phải, ghé camera qua khe giữa cổ và vai áo. Lấy nét căng vào đồ thị đỏ lòm trên màn hình, tạo cảm giác nhìn lén vào áp lực thật.",
+          "img_path": "assets/frames_bai_tap_01/shot4.jpg"
+        },
+        {
+          "shot_id": 5,
+          "name": "Cuộn chuột & Thở dài nhẹ nhõm",
+          "time_range": "09.5s - 12.0s",
+          "shot_type": "Cận góc thấp (Low ECU)",
+          "angle": "Sát mặt bàn (Worm-eye 0°)",
+          "direction": "Ngang mặt bàn bên phải",
+          "voice_sync": "...đến mình xem lại còn lướt vội, trách gì người ta! 😄",
+          "director_note": "Đặt cạnh dưới điện thoại chạm hẳn xuống mặt bàn gỗ làm tiền cảnh. Nhắc bạn ngả người ra ghế thở hắt một hơi, kết thúc cú máy tự nhiên nhẹ nhõm.",
+          "img_path": "assets/frames_bai_tap_01/shot5.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "code": "BT02",
+      "slug": "cuon-so-tay-kich-ban-gach-xoa",
+      "page_filename": "baitap02_sotay_kichban.html",
+      "title": "Cuốn sổ tay & Kịch bản gạch xóa nát bét",
+      "character": {
+        "outfit": "Áo phông cộc tay đen + Quần bò (Casual t-shirt)",
+        "role": "Nam học viên trẻ trung, năng động nhưng đang bí từ",
+        "image_thumb": "assets/marketing_baitap/viet_bt2_tshirt.jpg"
+      },
+      "root_action": "Bạn học ngồi viết nháp kịch bản video marketing vào sổ tay nhưng bị bí từ, cố nặn từng chữ hoa mỹ rồi ngượng mồm tự gạch xóa tanh bành.",
+      "voiceover": {
+        "raw_text": "Cố rặn từng chữ cho nó kêu... viết ra thấy ngượng mồm lại tự tay gạch xóa. Cứ tưởng mình là người khó tính biên tập... ...hóa ra cầm bút mới biết mình nhiễm văn mẫu nặng quá rồi! 😄",
+        "formatted_lines": [
+          "Cố rặn từng chữ cho nó kêu...",
+          "viết ra thấy ngượng mồm lại tự tay gạch xóa.",
+          "Cứ tưởng mình là người khó tính biên tập...",
+          "...hóa ra cầm bút mới biết mình nhiễm văn mẫu nặng quá rồi! 😄"
+        ],
+        "formatted_html": "Cố rặn từng chữ cho nó kêu...<br>viết ra thấy ngượng mồm lại tự tay gạch xóa.<br>Cứ tưởng mình là người khó tính biên tập...<br>...hóa ra cầm bút mới biết mình nhiễm văn mẫu nặng quá rồi! 😄"
+      },
+      "four_tiers": {
+        "t1_safe": {
+          "label": "Tầng 1 • Nói đãi bôi (Văn mẫu an toàn)",
+          "quote": "Em đang lên dàn ý kịch bản chạm đúng cảm xúc, phải dùng từ ngữ thật kêu để video dễ lên xu hướng.",
+          "formatted_html": "Em đang lên dàn ý kịch bản chạm đúng cảm xúc,<br>phải dùng từ ngữ thật kêu để video dễ lên xu hướng.",
+          "badge": "Lời nói đãi bôi: nhét chữ hoa mỹ để tự trấn an bản thân."
+        },
+        "t2_real": {
+          "label": "Tầng 2 • Cảm giác thật (Thao tác lúng túng)",
+          "quote": "Cầm bút cắn đuôi bút suốt hai mươi phút không xong mở đầu, viết được dăm ba chữ lại gạch chéo nát bét trang giấy.",
+          "formatted_html": "Cầm bút cắn đuôi bút suốt hai mươi phút không xong mở đầu,<br>viết được dăm ba chữ lại gạch chéo nát bét trang giấy.",
+          "badge": "Bế tắc thực tế: bí từ, sốt ruột, sổ tay gạch xóa be bét."
+        },
+        "t25_friction": {
+          "label": "Tầng 2.5 • Vị thế & Thể diện (Điểm nghẽn cốt tử)",
+          "quote": "Sợ viết mộc mạc đời thường thì bị chê là câu từ nông cạn. Cố nhét mấy chữ đao to búa lớn vào cho sang miệng... đọc lại thấy ngượng mồm, đành gạch xóa lia lịa để vờ như mình đang khó tính!",
+          "formatted_html": "Sợ viết mộc mạc đời thường thì bị chê là câu từ nông cạn.<br>Cố nhét mấy chữ đao to búa lớn vào cho sang miệng...<br>đọc lại thấy ngượng mồm, đành gạch xóa lia lịa để vờ như mình đang khó tính!",
+          "badge": "Cái cớ giữ thể diện: gạch xóa để che đậy sự lúng túng khi gồng chữ giả tạo."
+        },
+        "t3_raw": {
+          "label": "Tầng 3 • Sự thật ngượng miệng (Tim đen bóc trần)",
+          "quote": "Chính mình nói ra mấy câu đó ngoài đời còn thấy ngượng, thì viết kịch bản làm sao khiến người xem tin được! Cái bệnh thích nói văn mẫu nó bóp nghẹt sự chân thật từ trong trứng nước.",
+          "formatted_html": "Chính mình nói ra mấy câu đó ngoài đời còn thấy ngượng,<br>thì viết kịch bản làm sao khiến người xem tin được!<br>Cái bệnh thích nói văn mẫu nó bóp nghẹt sự chân thật từ trong trứng nước.",
+          "badge": "Sự thật ngượng miệng: chữ mình viết ra mình còn không dám nói thì ai mà tin."
+        }
+      },
+      "shots": [
+        {
+          "shot_id": 1,
+          "name": "Gõ đuôi bút bi sốt ruột",
+          "time_range": "00:00 - 02.5s",
+          "shot_type": "Trung cận (MCU)",
+          "angle": "Ngang tầm mắt (0°)",
+          "direction": "Chếch trái 45°",
+          "voice_sync": "Cố rặn từng chữ cho nó kêu...",
+          "director_note": "Ngồi chéo góc bàn, hướng ống kính vào nửa thân trên và quyển sổ mở rộng. Bắt nhịp đuôi bút bi gõ cộc cộc xuống mặt gỗ tạo âm thanh sốt ruột rất đời.",
+          "img_path": "assets/frames_bai_tap_02/shot1.jpg"
+        },
+        {
+          "shot_id": 2,
+          "name": "Tay xoa thái dương mặt nhăn nhó",
+          "time_range": "02.5s - 04.5s",
+          "shot_type": "Cận cảnh (CU)",
+          "angle": "Ngang ngực nhìn hất nhẹ lên",
+          "direction": "Chính diện (Frontal)",
+          "voice_sync": "...viết ra thấy ngượng mồm lại tự tay gạch xóa.",
+          "director_note": "Hạ máy ngang ngực hất nhẹ lên mặt, bắt trọn bàn tay xoa thái dương. Người bí ý tưởng hay có thói quen nhíu mày, sờ trán hoặc cắn môi vô thức.",
+          "img_path": "assets/frames_bai_tap_02/shot2.jpg"
+        },
+        {
+          "shot_id": 3,
+          "name": "Nét bút gạch chéo chữ triệu view",
+          "time_range": "04.5s - 07.0s",
+          "shot_type": "Đặc tả (Macro ECU)",
+          "angle": "Góc cao 70° chúc xuống",
+          "direction": "Từ trên chúc xuống trang sổ",
+          "voice_sync": "Cứ tưởng mình là người khó tính biên tập...",
+          "director_note": "Đặt máy cách trang giấy hai mươi phân, góc chúc bảy mươi độ từ trên xuống. Chữ 'triệu view' bị gạch chéo càng mạnh tay thì độ giằng xé nội tâm càng chân thật.",
+          "img_path": "assets/frames_bai_tap_02/shot3.jpg"
+        },
+        {
+          "shot_id": 4,
+          "name": "Liếc trộm trang sổ bạn bên cạnh",
+          "time_range": "07.0s - 09.5s",
+          "shot_type": "Cận qua vai (OTS)",
+          "angle": "Ngang tai hơi chúc 15°",
+          "direction": "Chếch sau sang vai phải",
+          "voice_sync": "...hóa ra cầm bút...",
+          "director_note": "Đứng sau lưng chếch vai trái, bắt khoảnh khắc mắt liếc sang sổ bạn bên cạnh. Cảnh liếc trộm này cực kỳ đắt vì đánh trúng tâm lý tò mò và bất an trong lớp học.",
+          "img_path": "assets/frames_bai_tap_02/shot4.jpg"
+        },
+        {
+          "shot_id": 5,
+          "name": "Thả bút bi ngửa mặt cười trừ",
+          "time_range": "09.5s - 12.0s",
+          "shot_type": "Cận góc thấp (Low CU)",
+          "angle": "Sát mặt bàn (0°)",
+          "direction": "Mặt bàn hất lên cằm",
+          "voice_sync": "...mới biết mình nhiễm văn mẫu nặng quá rồi! 😄",
+          "director_note": "Đặt máy nằm sát mặt bàn nhìn lên, bắt trọn tiếng thả bút bi cạch một cái. Bạn lắc đầu cười trừ một cái, giải phóng hoàn toàn áp lực gồng chữ trước ống kính.",
+          "img_path": "assets/frames_bai_tap_02/shot5.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "code": "BT03",
+      "slug": "cam-dien-thoai-test-goc-quay",
+      "page_filename": "baitap03_test_goc_quay.html",
+      "title": "Cầm điện thoại test góc quay tại bàn",
+      "character": {
+        "outfit": "Đồ thể thao polo năng động (Sporty polo)",
+        "role": "Nam học viên thực chiến, muốn thử góc máy thực tế",
+        "image_thumb": "assets/marketing_baitap/viet_bt3_sporty.jpg"
+      },
+      "root_action": "Một bạn sinh viên cầm điện thoại thực hành quay thử bạn cùng nhóm ngay tại bàn học, tay lóng ngóng, xoay ngang xoay dọc ngập ngừng không dám ấn REC.",
+      "voiceover": {
+        "raw_text": "Bảo giơ máy lên quay thì ai cũng ngại... sợ rung tay, sợ góc xấu, sợ người ta nhìn chằm chằm. Cứ đứng ngắm app cho có vẻ chuyên nghiệp... ...thôi bấm đại một đúp đi, xấu thì xóa, ngại gì vết bẩn! 😄",
+        "formatted_lines": [
+          "Bảo giơ máy lên quay thì ai cũng ngại...",
+          "sợ rung tay, sợ góc xấu, sợ người ta nhìn chằm chằm.",
+          "Cứ đứng ngắm app cho có vẻ chuyên nghiệp...",
+          "...thôi bấm đại một đúp đi, xấu thì xóa, ngại gì vết bẩn! 😄"
+        ],
+        "formatted_html": "Bảo giơ máy lên quay thì ai cũng ngại...<br>sợ rung tay, sợ góc xấu, sợ người ta nhìn chằm chằm.<br>Cứ đứng ngắm app cho có vẻ chuyên nghiệp...<br>...thôi bấm đại một đúp đi, xấu thì xóa, ngại gì vết bẩn! 😄"
+      },
+      "four_tiers": {
+        "t1_safe": {
+          "label": "Tầng 1 • Nói đãi bôi (Văn mẫu an toàn)",
+          "quote": "Điện thoại em máy cũ camera mờ quá, không có chân chống rung nên em chưa quay được.",
+          "formatted_html": "Điện thoại em máy cũ camera mờ quá,<br>không có chân chống rung nên em chưa quay được.",
+          "badge": "Lời nói đãi bôi: đổ lỗi cho thiết bị để trì hoãn việc bấm máy."
+        },
+        "t2_real": {
+          "label": "Tầng 2 • Cảm giác thật (Thao tác lúng túng)",
+          "quote": "Chĩa máy vào mặt bạn thì cả hai đứa cùng cười ngượng, tay cầm run bần bật, bấm được vài giây vội hạ máy xuống.",
+          "formatted_html": "Chĩa máy vào mặt bạn thì cả hai đứa cùng cười ngượng,<br>tay cầm run bần bật, bấm được vài giây vội hạ máy xuống.",
+          "badge": "Lúng túng thực tế: ngượng ngùng, sợ người ta nhìn chằm chằm vào mình."
+        },
+        "t25_friction": {
+          "label": "Tầng 2.5 • Vị thế & Thể diện (Điểm nghẽn cốt tử)",
+          "quote": "Lấy cớ ánh sáng lớp học chưa chuẩn để trì hoãn, đứng ngắm nghía chỉnh app suốt buổi cho có vẻ chuyên nghiệp, chứ trong bụng sợ bấm máy lóng ngóng thì bị bạn bè chê cười!",
+          "formatted_html": "Lấy cớ ánh sáng lớp học chưa chuẩn để trì hoãn,<br>đứng ngắm nghía chỉnh app suốt buổi cho có vẻ chuyên nghiệp,<br>chứ trong bụng sợ bấm máy lóng ngóng thì bị bạn bè chê cười!",
+          "badge": "Cái cớ giữ thể diện: diễn vai sành đồ nghề soi app để che đậy nỗi sợ bấm máy."
+        },
+        "t3_raw": {
+          "label": "Tầng 3 • Sự thật ngượng miệng (Tim đen bóc trần)",
+          "quote": "Sợ xấu, sợ ngượng, sợ người ta đánh giá mình làm không tới. Cứ đợi có máy xịn với góc quay hoàn hảo, thì cả đời này chẳng bao giờ có nổi một thước phim thực chiến ra hồn!",
+          "formatted_html": "Sợ xấu, sợ ngượng, sợ người ta đánh giá mình làm không tới.<br>Cứ đợi có máy xịn với góc quay hoàn hảo,<br>thì cả đời này chẳng bao giờ có nổi một thước phim thực chiến ra hồn!",
+          "badge": "Sự thật ngượng miệng: cầu toàn chỉ là cái cớ che đậy sự nhát tay."
+        }
+      },
+      "shots": [
+        {
+          "shot_id": 1,
+          "name": "Hai tay xoay ngang xoay dọc máy",
+          "time_range": "00:00 - 02.5s",
+          "shot_type": "Trung cận (MCU)",
+          "angle": "Ngang ngực (0°)",
+          "direction": "Chếch nghiêng 30°",
+          "voice_sync": "Bảo giơ máy lên quay thì ai cũng ngại...",
+          "director_note": "Đứng cách bạn nửa mét, quay hai bàn tay đang xoay lúng túng chiếc điện thoại. Động tác xoay ngang rồi xoay dọc lột tả trọn vẹn sự bối rối lúc mới cầm máy.",
+          "img_path": "assets/frames_bai_tap_03/shot1.jpg"
+        },
+        {
+          "shot_id": 2,
+          "name": "Ngón tay cái ngập ngừng ấn REC",
+          "time_range": "02.5s - 04.5s",
+          "shot_type": "Cận cảnh (CU)",
+          "angle": "Ngang tầm tay bấm",
+          "direction": "Sau lưng điện thoại",
+          "voice_sync": "...sợ rung tay, sợ góc xấu, sợ người ta nhìn chằm chằm.",
+          "director_note": "Đưa máy sau lưng điện thoại bạn diễn, canh ngón tay cái ngập ngừng trên màn hình. Điểm chạm ngón tay chuyển chấm đỏ sang nút vuông REC là nhịp bẻ hành động then chốt.",
+          "img_path": "assets/frames_bai_tap_03/shot2.jpg"
+        },
+        {
+          "shot_id": 3,
+          "name": "Đặc tả cụm camera điện thoại",
+          "time_range": "04.5s - 07.0s",
+          "shot_type": "Đặc tả (Macro ECU)",
+          "angle": "Ngang ống kính",
+          "direction": "Trực diện ống kính",
+          "voice_sync": "Cứ đứng ngắm app cho có vẻ chuyên nghiệp...",
+          "director_note": "Ghé sát ống kính máy mình vào cụm ba camera của bạn, bật zoom hai chấm năm lần. Khóa nét vào mắt kính camera phản chiếu ánh đèn neon trần lớp học — góc nhìn nghề nghiệp sắc sảo.",
+          "img_path": "assets/frames_bai_tap_03/shot3.jpg"
+        },
+        {
+          "shot_id": 4,
+          "name": "Bạn đối diện cười ngượng ngùng",
+          "time_range": "07.0s - 09.5s",
+          "shot_type": "Góc nhìn chủ quan (POV)",
+          "angle": "Ngang tầm mắt",
+          "direction": "Từ mắt người quay",
+          "voice_sync": "...thôi bấm đại một đúp đi, xấu thì xóa...",
+          "director_note": "Góc nhìn chủ quan qua vai người quay, hướng thẳng vào màn hình điện thoại đang bật. Bắt trọn bạn đối diện lấy tay che miệng cười ngượng ngùng — khoảnh khắc đời thực vô giá.",
+          "img_path": "assets/frames_bai_tap_03/shot4.jpg"
+        },
+        {
+          "shot_id": 5,
+          "name": "Hạ máy vẫy tay bảo đúp nữa",
+          "time_range": "09.5s - 12.0s",
+          "shot_type": "Cận góc thấp (Low CU)",
+          "angle": "Sát mặt bàn hất lên 30°",
+          "direction": "Chếch trước 30°",
+          "voice_sync": "...ngại gì vết bẩn! 😄",
+          "director_note": "Đặt máy từ mặt bàn hất nhẹ ba mươi độ lên ngực áo bạn diễn. Bạn hạ điện thoại xuống vẫy tay cười bảo 'Lại đúp nữa nào!' — kết thúc ấm áp và tràn năng lượng.",
+          "img_path": "assets/frames_bai_tap_03/shot5.jpg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "code": "BT04",
+      "slug": "luot-dien-thoai-giat-minh-nhin-slide",
+      "page_filename": "baitap04_slide_giatminh.html",
+      "title": "Ngẩng nhìn slide giảng bài & Giật mình",
+      "character": {
+        "outfit": "Sơ mi xanh dài tay xắn gấu cao (Smart casual shirt)",
+        "role": "Nam học viên tự tin, tưởng mình biết hết kiến thức",
+        "image_thumb": "assets/marketing_baitap/viet_bt4_shirt.jpg"
+      },
+      "root_action": "Học viên đang cắm cúi lướt điện thoại dưới gầm bàn thì nghe thầy giảng chạm trúng tim đen lỗi sai của mình, ngón tay khựng lại, ngẩng phắt mặt nhìn slide ghi chép.",
+      "voiceover": {
+        "raw_text": "Ngồi dưới lớp lướt máy, bụng bảo dạ mấy trò này mình biết thừa... Nghe ông giáo bóc đúng cái dở của mình tuần trước, giật thót cả người! Thôi cất máy, ghi vội lại... không mai về lại đâu vào đấy! 😄",
+        "formatted_lines": [
+          "Ngồi dưới lớp lướt máy, bụng bảo dạ mấy trò này mình biết thừa...",
+          "Nghe ông giáo bóc đúng cái dở của mình tuần trước, giật thót cả người!",
+          "Thôi cất máy, ghi vội lại... không mai về lại đâu vào đấy! 😄"
+        ],
+        "formatted_html": "Ngồi dưới lớp lướt máy, bụng bảo dạ mấy trò này mình biết thừa...<br>Nghe ông giáo bóc đúng cái dở của mình tuần trước, giật thót cả người!<br>Thôi cất máy, ghi vội lại... không mai về lại đâu vào đấy! 😄"
+      },
+      "four_tiers": {
+        "t1_safe": {
+          "label": "Tầng 1 • Nói đãi bôi (Văn mẫu an toàn)",
+          "quote": "Mấy kiến thức này em xem trên mạng suốt rồi, toàn lý thuyết cơ bản có gì đâu mà phải ghi chép.",
+          "formatted_html": "Mấy kiến thức này em xem trên mạng suốt rồi,<br>toàn lý thuyết cơ bản có gì đâu mà phải ghi chép.",
+          "badge": "Lời nói đãi bôi: tỏ vẻ biết tuốt để bao biện cho sự lơ là."
+        },
+        "t2_real": {
+          "label": "Tầng 2 • Cảm giác thật (Thao tác lúng túng)",
+          "quote": "Ngồi trong lớp tay giấu điện thoại dưới gầm bàn lướt mạng, tai nghe câu được câu chăng, mặt cố giữ vẻ thong dong từng trải.",
+          "formatted_html": "Ngồi trong lớp tay giấu điện thoại dưới gầm bàn lướt mạng,<br>tai nghe câu được câu chăng, mặt cố giữ vẻ thong dong từng trải.",
+          "badge": "Hành vi thực tế: mất tập trung nhưng cố giữ vẻ ngoài thong thả."
+        },
+        "t25_friction": {
+          "label": "Tầng 2.5 • Vị thế & Thể diện (Điểm nghẽn cốt tử)",
+          "quote": "Sợ mở sổ ghi chép cặm cụi thì bị bạn bè nghĩ mình gà mờ. Nghe ông giáo điểm trúng cái lỗi ngớ ngẩn mình vừa làm tuần trước, mặt nóng bừng, lén cất máy rồi vờ như đang chăm chú nghe từ đầu!",
+          "formatted_html": "Sợ mở sổ ghi chép cặm cụi thì bị bạn bè nghĩ mình gà mờ.<br>Nghe ông giáo điểm trúng cái lỗi ngớ ngẩn mình vừa làm tuần trước,<br>mặt nóng bừng, lén cất máy rồi vờ như đang chăm chú nghe từ đầu!",
+          "badge": "Cái cớ giữ thể diện: diễn kịch sành sỏi đến khi bị đánh trúng điểm yếu."
+        },
+        "t3_raw": {
+          "label": "Tầng 3 • Sự thật ngượng miệng (Tim đen bóc trần)",
+          "quote": "Cứ ngỡ mình biết tuốt nên hai tai tự động khép lại. Đến khi bị bóc trần sự thật mới thấy mình chỉ giỏi lý thuyết trên ngọn, còn bắt tay vào thực chiến thì vẫn lóng ngóng hổng toang hoác!",
+          "formatted_html": "Cứ ngỡ mình biết tuốt nên hai tai tự động khép lại.<br>Đến khi bị bóc trần sự thật mới thấy mình chỉ giỏi lý thuyết trên ngọn,<br>còn bắt tay vào thực chiến thì vẫn lóng ngóng hổng toang hoác!",
+          "badge": "Sự thật ngượng miệng: cái tôi tự mãn che mờ sự thiếu hụt thực tế."
+        }
+      },
+      "shots": [
+        {
+          "shot_id": 1,
+          "name": "Cắm cúi lướt máy dưới gầm bàn",
+          "time_range": "00:00 - 02.5s",
+          "shot_type": "Trung cận (MCU)",
+          "angle": "Góc chúc 35°",
+          "direction": "Chếch phải 45°",
+          "voice_sync": "Ngồi dưới lớp lướt máy, bụng bảo dạ mấy trò này mình biết thừa...",
+          "director_note": "Đứng chéo bàn, chúc máy ba mươi lăm độ nhìn xuống khoảng tối dưới mép bàn. Ánh sáng màn hình hắt ngược lên cằm làm nổi bật hành vi lén lút bấm máy trong giờ học.",
+          "img_path": "assets/frames_bai_tap_04/shot1.jpg"
+        },
+        {
+          "shot_id": 2,
+          "name": "Ngón tay cái khựng đơ giữa chừng",
+          "time_range": "02.5s - 04.5s",
+          "shot_type": "Cận cảnh (CU)",
+          "angle": "Ngang mép bàn",
+          "direction": "Trực diện ngón tay",
+          "voice_sync": "Nghe ông giáo bóc đúng cái dở của mình tuần trước...",
+          "director_note": "Hạ máy sát mép bàn, bắt trọn ngón tay cái đang vuốt màn hình bỗng khựng lại giữa chừng. Một nhịp đứng hình vô cùng đắt giá báo hiệu sự thức tỉnh khi nghe chạm đúng tim đen.",
+          "img_path": "assets/frames_bai_tap_04/shot2.jpg"
+        },
+        {
+          "shot_id": 3,
+          "name": "Ngẩng nhìn màn chiếu mắt mở to",
+          "time_range": "04.5s - 07.0s",
+          "shot_type": "Cận thấp khuôn mặt (CU Low)",
+          "angle": "Góc thấp hất lên 25°",
+          "direction": "Chếch trái nhìn bảng",
+          "voice_sync": "...giật thót cả người!",
+          "director_note": "Đặt máy thấp ngang ngực hất lên hai mươi lăm độ, bắt trọn ánh mắt ngơ ngác ngẩng lên. Đồng tử giãn ra, vẻ sành sỏi biến mất, thay bằng nét giật mình chân thật nhìn lên bảng.",
+          "img_path": "assets/frames_bai_tap_04/shot3.jpg"
+        },
+        {
+          "shot_id": 4,
+          "name": "Hí hoáy gạch chân từ khóa sổ tay",
+          "time_range": "07.0s - 09.5s",
+          "shot_type": "Đặc tả (Macro ECU)",
+          "angle": "Góc cao 80° thẳng đứng",
+          "direction": "Thẳng đứng chúc xuống",
+          "voice_sync": "Thôi cất máy, ghi vội lại...",
+          "director_note": "Chĩa máy vuông góc tám mươi độ từ trên xuống trang sổ tay. Bắt nét ngòi bút lia nhanh vẽ hai đường gạch chân dưới từ khóa — nét vẽ vội vàng nhưng thật.",
+          "img_path": "assets/frames_bai_tap_04/shot4.jpg"
+        },
+        {
+          "shot_id": 5,
+          "name": "Cất điện thoại túi áo gật gù cười",
+          "time_range": "09.5s - 12.0s",
+          "shot_type": "Trung cận (MCU)",
+          "angle": "Ngang tầm mắt (0°)",
+          "direction": "Chếch nghiêng 30°",
+          "voice_sync": "...không mai về lại đâu vào đấy! 😄",
+          "director_note": "Quay ngang tầm mắt, bắt động tác úp màn hình điện thoại bỏ vào túi áo. Bạn diễn gật gù tự cười trừ một cái — sự chuyển biến nhận thức trọn vẹn và rất đỗi đời thường.",
+          "img_path": "assets/frames_bai_tap_04/shot5.jpg"
+        }
+      ]
+    }
+  ]
+}

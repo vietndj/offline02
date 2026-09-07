@@ -2,673 +2,602 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bài Tập 01 • Băm Nhỏ Cảnh Trám Lớp Học (Chuẩn Văn Phong Ông Giáo) | Storyboard Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Bài Tập 01 • Soi chỉ số ads & Cày bài tập trên laptop | 30NgayViral Storyboard Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-main: #070a12;
-      --bg-surface: #0e1524;
-      --bg-card: #141f33;
-      --bg-card-hover: #1b2a45;
-      --border-subtle: rgba(255, 255, 255, 0.08);
-      --border-accent: rgba(56, 189, 248, 0.4);
-      --text-primary: #f8fafc;
-      --text-secondary: #94a3b8;
-      --text-muted: #64748b;
-      --accent: #38bdf8;
-      --accent-glow: rgba(56, 189, 248, 0.15);
-      --cyan: #38bdf8;
-      --cyan-glow: rgba(56, 189, 248, 0.15);
-      --amber: #f59e0b;
-      --amber-glow: rgba(245, 158, 11, 0.15);
-      --emerald: #10b981;
-      --emerald-glow: rgba(16, 185, 129, 0.15);
-      --purple: #a855f7;
-      --purple-glow: rgba(168, 85, 247, 0.15);
-      --rose: #f43f5e;
-      --radius-sm: 8px;
-      --radius-md: 14px;
-      --radius-lg: 20px;
+      --cl-bg-light: #ffffff;
+      --cl-bg-tint: #f8fafc;
+      --cl-text-main: #0f172a;
+      --cl-text-sub: #334155;
+      --cl-text-muted: #64748b;
+      --cl-accent: #1a73e8;
+      --cl-accent-hover: #1557b0;
+      --cl-border: rgba(0, 0, 0, 0.08);
+      --cl-card-bg: #ffffff;
+      --apple-spring: cubic-bezier(0.25, 1, 0.35, 1.05);
+      --apple-ease: cubic-bezier(0.16, 1, 0.3, 1);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
     body {
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: var(--bg-main);
-      color: var(--text-primary);
+      background-color: var(--cl-bg-light);
+      color: var(--cl-text-main);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Zebra Sections */
+    .cl-zebra-section {
+      width: 100%;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 24px;
+      position: relative;
+    }
+    .cl-zebra--light { background-color: var(--cl-bg-light); }
+    .cl-zebra--tint {
+      background-color: var(--cl-bg-tint);
+      border-top: 1px solid var(--cl-border);
+      border-bottom: 1px solid var(--cl-border);
+    }
+
+    .cl-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* Typography */
+    .cl-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      background: rgba(26, 115, 232, 0.08);
+      color: var(--cl-accent);
+      border: 1px solid rgba(26, 115, 232, 0.2);
+      margin-bottom: 18px;
+    }
+    .title-short {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      line-height: 1.25;
+      color: var(--cl-text-main);
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+    .title-long {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(22px, 2.8vw, 32px);
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--cl-text-main);
+      margin-bottom: 14px;
+    }
+    .editorial-quote {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(18px, 2vw, 22px);
       line-height: 1.6;
-      padding-bottom: 80px;
+      color: #b45309;
+      background: #fffbeb;
+      padding: 16px 20px;
+      border-radius: 12px;
+      border-left: 4px solid #f59e0b;
+      margin: 18px 0;
     }
-    .top-header {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(7, 10, 18, 0.94);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border-subtle);
-      padding: 12px 24px;
-      display: flex; justify-content: space-between; align-items: center; gap: 16px;
-    }
-    .brand-group { display: flex; align-items: center; gap: 12px; }
-    .brand-badge {
-      background: linear-gradient(135deg, #0284c7, #2563eb);
-      color: #fff; font-size: 11px; font-weight: 800; padding: 5px 12px; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.5px;
-    }
-    .header-title { font-size: 15px; font-weight: 700; color: var(--text-primary); }
-    .header-controls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-    .nav-btn {
-      background: var(--bg-card); border: 1px solid var(--border-subtle); color: var(--text-secondary);
-      font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: var(--radius-sm); text-decoration: none; transition: all 0.2s;
-    }
-    .nav-btn:hover { background: var(--accent); color: #000; font-weight: 700; }
-    .hub-link {
-      background: rgba(56, 189, 248, 0.15); border: 1px solid var(--cyan); color: var(--cyan);
-      font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: var(--radius-sm); text-decoration: none;
-    }
-    .hub-link:hover { background: var(--cyan); color: #000; }
-    .action-btn {
-      background: linear-gradient(135deg, #f59e0b, #d97706); color: #000; font-weight: 700; border: none;
-      padding: 6px 14px; border-radius: var(--radius-sm); cursor: pointer; font-size: 12px;
+    .cl-lead {
+      font-size: clamp(16px, 1.4vw, 18px);
+      color: var(--cl-text-sub);
+      max-width: 880px;
+      line-height: 1.8;
+      margin-bottom: 24px;
     }
 
-    .container { max-width: 1400px; margin: 0 auto; padding: 24px 20px; }
-
-    /* Hero Section */
-    .hero {
-      background: linear-gradient(180deg, #111a2d 0%, #0c121e 100%);
-      border: 1px solid rgba(56, 189, 248, 0.22); border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 28px;
+    /* Apple Reveal Animation */
+    .apple-reveal {
+      opacity: 0;
+      transform: translate3d(0, 24px, 0);
+      transition: opacity 0.6s var(--apple-ease), transform 0.65s var(--apple-spring);
+      will-change: opacity, transform;
     }
-    .hero-tags { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
-    .tag { font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 6px; display: inline-flex; align-items: center; gap: 5px; }
-    .tag-cyan { background: var(--cyan-glow); color: var(--cyan); border: 1px solid rgba(56, 189, 248, 0.3); }
-    .tag-amber { background: var(--amber-glow); color: var(--amber); border: 1px solid rgba(245, 158, 11, 0.3); }
-    .tag-emerald { background: rgba(16, 185, 129, 0.15); color: var(--emerald); border: 1px solid rgba(16, 185, 129, 0.3); }
-    .tag-accent { background: var(--accent-glow); color: var(--accent); border: 1px solid var(--accent); }
-    
-    .hero h1 { font-size: 26px; font-weight: 800; margin-bottom: 10px; color: #fff; line-height: 1.35; }
-    .hero-lead { font-size: 14.5px; color: #cbd5e1; line-height: 1.7; max-width: 960px; margin-bottom: 16px; }
-    .hero-lead b { color: var(--cyan); }
-
-    .metrics-bar {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;
-      background: rgba(0, 0, 0, 0.4); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 14px 18px;
-    }
-    .metric-label { font-size: 10.5px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; margin-bottom: 2px; }
-    .metric-value { font-size: 16px; font-weight: 800; color: var(--text-primary); }
-
-    /* 4 Tiers of Truth Section */
-    .tiers-section {
-      background: linear-gradient(180deg, #101929 0%, #0a0f19 100%);
-      border: 1px solid rgba(56, 189, 248, 0.25); border-radius: var(--radius-lg); padding: 24px 28px; margin-bottom: 28px;
-    }
-    .tiers-header {
-      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
-      margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-    .tiers-title-group { font-size: 15px; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-    .tiers-badge { background: var(--cyan-glow); color: var(--cyan); font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 4px; border: 1px solid var(--cyan); }
-    .tiers-meta { font-size: 12px; color: var(--text-muted); display: flex; gap: 16px; flex-wrap: wrap; }
-    
-    .tiers-grid-4 {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
-    }
-    @media (max-width: 1180px) { .tiers-grid-4 { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 650px) { .tiers-grid-4 { grid-template-columns: 1fr; } }
-    
-    .tier-card {
-      background: #080d16; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 18px 16px;
-      display: flex; flex-direction: column; gap: 10px; transition: transform 0.2s, border-color 0.2s;
-    }
-    .tier-card:hover { transform: translateY(-2px); border-color: rgba(255,255,255,0.22); }
-    .tier-card.t1 { border-left: 4px solid #ef4444; }
-    .tier-card.t2 { border-left: 4px solid #f59e0b; }
-    .tier-card.t25 { border-left: 4px solid #a855f7; background: linear-gradient(180deg, rgba(168, 85, 247, 0.08) 0%, #080d16 100%); }
-    .tier-card.t3 { border-left: 4px solid #10b981; }
-
-    .tier-card-head { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; }
-    .tier-card.t1 .tier-card-head { color: #f87171; }
-    .tier-card.t2 .tier-card-head { color: #fbbf24; }
-    .tier-card.t25 .tier-card-head { color: #c084fc; }
-    .tier-card.t3 .tier-card-head { color: #34d399; }
-    
-    .tier-card-content { font-size: 13px; color: #f1f5f9; line-height: 1.6; flex: 1; font-weight: 500; }
-    .tier-sub {
-      font-size: 11px; color: var(--text-muted); line-height: 1.45; border-top: 1px dashed rgba(255,255,255,0.08); padding-top: 8px; margin-top: 2px;
+    .apple-reveal.is-visible {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      will-change: auto;
     }
 
-    /* Master Audio / Voiceover Box */
-    .master-audio-box {
-      background: linear-gradient(90deg, rgba(56, 189, 248, 0.1) 0%, rgba(20, 31, 51, 0.65) 100%);
-      border: 1px solid rgba(56, 189, 248, 0.3); border-radius: var(--radius-lg); padding: 20px 26px; margin-bottom: 28px;
-      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    /* 4 Tiers Grid */
+    .tiers-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 24px;
     }
-    .master-audio-content { display: flex; align-items: center; gap: 16px; flex: 1; min-width: 280px; }
-    .master-voice-icon {
-      font-size: 22px; background: var(--cyan-glow); color: var(--cyan); width: 48px; height: 48px;
-      border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid var(--cyan);
-    }
-    .master-voice-title { font-size: 11px; color: var(--cyan); font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
-    .master-voice-text { font-size: 15.5px; font-weight: 700; color: #fde047; font-style: italic; line-height: 1.6; }
-    .copy-script-btn {
-      background: #1a2538; color: #f8fafc; border: 1px solid var(--accent); padding: 8px 16px;
-      border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all 0.2s;
-    }
-    .copy-script-btn:hover { background: var(--accent); color: #000; }
+    @media (max-width: 1024px) { .tiers-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) { .tiers-grid { grid-template-columns: 1fr; } }
 
-    /* Filmstrip Horizontal Preview */
-    .filmstrip-section {
-      background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 20px 24px; margin-bottom: 30px;
+    .tier-apple-card {
+      background: #ffffff;
+      border: 1px solid var(--cl-border);
+      border-radius: 16px;
+      padding: 22px 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: transform 0.3s var(--apple-spring), box-shadow 0.3s ease;
     }
-    .filmstrip-title { font-size: 14px; font-weight: 800; color: #fff; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
-    .filmstrip-bar {
-      display: flex; gap: 14px; overflow-x: auto; padding-bottom: 10px; scroll-snap-type: x mandatory;
+    .tier-apple-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
     }
-    .filmstrip-bar::-webkit-scrollbar { height: 6px; }
-    .filmstrip-bar::-webkit-scrollbar-thumb { background: var(--border-accent); border-radius: 3px; }
-    .filmstrip-item {
-      flex: 0 0 140px; aspect-ratio: 9 / 16; background: #000; border-radius: var(--radius-sm); overflow: hidden;
-      border: 1px solid var(--border-subtle); cursor: pointer; position: relative; scroll-snap-align: start; transition: transform 0.2s, border-color 0.2s;
-    }
-    .filmstrip-item:hover { transform: translateY(-4px); border-color: var(--cyan); }
-    .filmstrip-item img { width: 100%; height: 100%; object-fit: cover; }
-    .filmstrip-label {
-      position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.85);
-      font-size: 10px; font-weight: 700; text-align: center; padding: 4px 2px; color: #fff;
-    }
-
-    /* 5-Beats Grid */
-    .storyboard-container { margin-bottom: 36px; }
-    .section-head-title {
-      font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;
-    }
-    .beats-grid-5 {
-      display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;
-    }
-    @media (max-width: 1200px) { .beats-grid-5 { grid-template-columns: repeat(3, 1fr); } }
-    @media (max-width: 768px) { .beats-grid-5 { grid-template-columns: 1fr; } }
-
-    .beat-card {
-      background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md);
-      overflow: hidden; display: flex; flex-direction: column; transition: transform 0.2s, border-color 0.2s;
-    }
-    .beat-card:hover { border-color: var(--border-accent); transform: translateY(-2px); }
-    
-    .beat-img-container {
-      position: relative; width: 100%; aspect-ratio: 9 / 16; background: #000; overflow: hidden; cursor: pointer;
-    }
-    .beat-img-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
-    .beat-img-container:hover img { transform: scale(1.04); }
-    
-    .beat-badge-top {
-      position: absolute; top: 8px; left: 8px; z-index: 2; font-size: 9px; font-weight: 800;
-      padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;
-    }
-    .badge-in { background: rgba(16, 185, 129, 0.9); color: #fff; }
-    .badge-action { background: rgba(56, 189, 248, 0.9); color: #000; }
-    .badge-macro { background: rgba(245, 158, 11, 0.9); color: #000; }
-    .badge-pov { background: rgba(168, 85, 247, 0.9); color: #fff; }
-    .badge-out { background: rgba(244, 63, 94, 0.9); color: #fff; }
-
-    .beat-time-tag {
-      position: absolute; top: 8px; right: 8px; z-index: 2; background: rgba(0, 0, 0, 0.8);
-      border: 1px solid rgba(255,255,255,0.15); color: var(--cyan); font-family: 'JetBrains Mono', monospace;
-      font-size: 9.5px; font-weight: 700; padding: 2px 6px; border-radius: 4px;
+    .tier-label { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; }
+    .tier-t1 .tier-label { color: #dc2626; }
+    .tier-t2 .tier-label { color: #d97706; }
+    .tier-t25 .tier-label { color: #7c3aed; }
+    .tier-t3 .tier-label { color: #059669; }
+    .tier-body { font-size: 14px; color: var(--cl-text-main); font-weight: 500; line-height: 1.65; flex: 1; }
+    .tier-subnote {
+      font-size: 11.5px;
+      color: var(--cl-text-muted);
+      border-top: 1px dashed var(--cl-border);
+      padding-top: 10px;
+      line-height: 1.5;
     }
 
-    .beat-content { padding: 14px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
-    .beat-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 6px; }
-    .beat-id-title { font-size: 13.5px; font-weight: 800; color: var(--text-primary); line-height: 1.3; }
-    .beat-shot-type { font-size: 10.5px; color: var(--cyan); font-weight: 700; }
+    /* 5 Beats Storyboard Cards Grid */
+    .storyboard-grid-5 {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+    @media (max-width: 1200px) { .storyboard-grid-5 { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 800px) { .storyboard-grid-5 { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px) { .storyboard-grid-5 { grid-template-columns: 1fr; } }
 
-    .beat-voice-pill {
-      background: rgba(253, 224, 71, 0.08); border-left: 3px solid #fde047; padding: 6px 8px;
-      border-radius: 0 4px 4px 0; font-size: 11px; font-weight: 600; color: #fef08a; line-height: 1.45;
+    .beat-card-apple {
+      background: #ffffff;
+      border: 1px solid var(--cl-border);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+      transition: transform 0.3s var(--apple-spring), box-shadow 0.3s ease;
+    }
+    .beat-card-apple:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+    }
+    .beat-img-box {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      background: #0f172a;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .beat-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .beat-img-box:hover img { transform: scale(1.04); }
+    .beat-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 2;
+      font-size: 9.5px;
+      font-weight: 800;
+      padding: 4px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: rgba(15, 23, 42, 0.85);
+      color: #fff;
+    }
+    .beat-time {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 2;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      font-weight: 700;
+      padding: 3px 6px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.9);
+      color: #0f172a;
+    }
+    .beat-content {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+    .beat-title { font-size: 13.5px; font-weight: 700; color: var(--cl-text-main); }
+    .beat-voice {
+      font-size: 12px;
+      color: #92400e;
+      background: #fef3c7;
+      padding: 6px 8px;
+      border-radius: 6px;
+      border-left: 3px solid #f59e0b;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+    .beat-specs {
+      width: 100%;
+      font-size: 11px;
+      border-collapse: collapse;
+      margin-top: 4px;
+    }
+    .beat-specs td { padding: 3px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.04); }
+    .beat-specs .spec-label { color: var(--cl-text-muted); width: 38%; }
+    .beat-specs .spec-val { color: var(--cl-text-main); font-weight: 600; }
+    .director-tip {
+      font-size: 11px;
+      color: #0369a1;
+      background: #f0f9ff;
+      border: 1px dashed rgba(3, 105, 161, 0.3);
+      padding: 8px;
+      border-radius: 6px;
+      margin-top: auto;
+      line-height: 1.45;
     }
 
-    .specs-table {
-      width: 100%; font-size: 11px; border-collapse: collapse; background: rgba(0, 0, 0, 0.28);
-      border-radius: 6px; overflow: hidden; margin-top: 2px;
+    /* Matrix Table */
+    .table-responsive {
+      overflow-x: auto;
+      border: 1px solid var(--cl-border);
+      border-radius: 12px;
+      background: #ffffff;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+      margin-top: 20px;
     }
-    .specs-table tr { border-bottom: 1px solid rgba(255, 255, 255, 0.04); }
-    .specs-table tr:last-child { border-bottom: none; }
-    .specs-table td { padding: 5px 8px; }
-    .specs-table td.spec-name { color: var(--text-muted); font-weight: 600; width: 38%; }
-    .specs-table td.spec-val { color: var(--text-primary); font-weight: 500; }
+    .matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      min-width: 760px;
+    }
+    .matrix-table th, .matrix-table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--cl-border);
+    }
+    .matrix-table th {
+      background: #f1f5f9;
+      color: var(--cl-text-muted);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .matrix-table tr:hover { background: #f8fafc; }
 
-    .director-note-box {
-      background: rgba(245, 158, 11, 0.07); border: 1px dashed rgba(245, 158, 11, 0.35);
-      padding: 9px 10px; border-radius: 6px; font-size: 11px; color: #fde68a; line-height: 1.5; margin-top: auto;
+    /* Buttons */
+    .cl-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--cl-accent);
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
     }
-
-    /* Comparison Matrix Table */
-    .matrix-section {
-      background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);
-      padding: 24px 28px; margin-bottom: 30px;
+    .cl-btn:hover { background: var(--cl-accent-hover); transform: translateY(-1px); }
+    .cl-btn--secondary {
+      background: #ffffff;
+      color: var(--cl-text-main);
+      border: 1px solid var(--cl-border);
     }
-    .matrix-title { font-size: 16px; font-weight: 800; color: #fff; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
-    .matrix-sub { font-size: 13px; color: var(--text-secondary); margin-bottom: 16px; }
-    .table-responsive { overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); }
-    .matrix-table { width: 100%; border-collapse: collapse; font-size: 12.5px; min-width: 760px; }
-    .matrix-table th, .matrix-table td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border-subtle); }
-    .matrix-table th { background: #080d16; color: var(--text-muted); font-weight: 700; text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; }
-    .matrix-table tr:hover { background: rgba(56, 189, 248, 0.04); }
-    .matrix-table .tag-axis {
-      display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700;
-    }
-    .tag-shot { background: rgba(56, 189, 248, 0.15); color: var(--cyan); border: 1px solid rgba(56, 189, 248, 0.3); }
-    .tag-angle { background: rgba(245, 158, 11, 0.15); color: var(--amber); border: 1px solid rgba(245, 158, 11, 0.3); }
-    .tag-dir { background: rgba(16, 185, 129, 0.15); color: var(--emerald); border: 1px solid rgba(16, 185, 129, 0.3); }
+    .cl-btn--secondary:hover { background: #f1f5f9; }
 
     /* Lightbox Modal */
     .lightbox {
       display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.94); backdrop-filter: blur(10px); z-index: 1000; align-items: center; justify-content: center; padding: 20px;
+      background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px); z-index: 1000;
+      align-items: center; justify-content: center; padding: 20px;
     }
     .lightbox.active { display: flex; }
     .lightbox-content {
-      background: var(--bg-card); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: var(--radius-lg);
-      max-width: 920px; width: 100%; max-height: 92vh; overflow: hidden; display: flex; gap: 24px; padding: 24px; position: relative;
+      background: #ffffff; border-radius: 20px; max-width: 900px; width: 100%;
+      max-height: 90vh; overflow: hidden; display: flex; gap: 24px; padding: 24px; position: relative;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     }
-    @media (max-width: 750px) { .lightbox-content { flex-direction: column; overflow-y: auto; } }
+    @media (max-width: 720px) { .lightbox-content { flex-direction: column; overflow-y: auto; } }
     .lightbox-img-box {
-      flex: 1; max-width: 360px; aspect-ratio: 9 / 16; background: #000; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center;
+      flex: 1; max-width: 360px; aspect-ratio: 9 / 16; background: #000; border-radius: 12px;
+      overflow: hidden; display: flex; align-items: center; justify-content: center;
     }
-    .lightbox-img-box img { width: 100%; height: 100%; object-fit: contain; background: #000; display: block; }
+    .lightbox-img-box img { width: 100%; height: 100%; object-fit: contain; }
     .lightbox-details { flex: 1.2; display: flex; flex-direction: column; gap: 14px; overflow-y: auto; }
     .lightbox-close {
-      position: absolute; top: 12px; right: 14px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
-      font-size: 20px; color: #fff; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.2s;
+      position: absolute; top: 14px; right: 14px; background: #f1f5f9; border: none;
+      font-size: 18px; color: #0f172a; width: 34px; height: 34px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; cursor: pointer;
     }
-    .lightbox-close:hover { background: #ef4444; border-color: #ef4444; }
+    .lightbox-close:hover { background: #ef4444; color: #fff; }
+
+    .toast {
+      position: fixed; bottom: 24px; right: 24px; z-index: 2000;
+      background: #059669; color: #fff; font-size: 13px; font-weight: 700;
+      padding: 10px 18px; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      opacity: 0; pointer-events: none; transform: translateY(10px); transition: all 0.25s ease;
+    }
+    .toast.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
 
     footer {
-      text-align: center; color: var(--text-muted); font-size: 12px; border-top: 1px solid var(--border-subtle); padding-top: 24px; margin-top: 40px;
-    }
-
-    @media print {
-      .top-header, .copy-script-btn, .action-btn { display: none; }
-      body { background: #fff; color: #000; }
-      .beat-card { border: 1px solid #ccc; break-inside: avoid; }
+      background: #0f172a; color: #94a3b8; padding: 40px 24px; text-align: center; font-size: 12.5px;
     }
   </style>
 </head>
 <body>
 
-  <!-- TOP STICKY HEADER -->
-  <header class="top-header">
-    <div class="brand-group">
-      <span class="brand-badge">BÀI TẬP 01 • THỰC CHIẾN</span>
-      <div class="header-title">🎬 Băm Nhỏ 1 Cảnh Trám Lớp Học Thành 5 Cú Máy Đổi Góc</div>
-    </div>
-    <div class="header-controls">
-      <a href="#tiers-section" class="nav-btn">💡 4 Tầng Sự Thật</a>
-      <a href="#master-voice" class="nav-btn">🎙️ Kịch Bản Nói</a>
-      <a href="#storyboard-grid" class="nav-btn">🎯 5 Phân Cảnh</a>
-      <a href="#matrix-table" class="nav-btn">📊 Ma Trận Góc Máy</a>
-      <button class="action-btn" onclick="window.print()">📄 In / PDF</button>
-    </div>
-  </header>
-
-  <div class="container">
-
-    <!-- HERO SECTION -->
-    <section class="hero">
-      <div class="hero-tags">
-        <span class="tag tag-accent">⚡ 9:16 Vertical Cinematic</span>
-        <span class="tag tag-cyan">🎯 Băm 1 Cảnh Trám ➔ 5 Micro-Shots</span>
-        <span class="tag tag-amber">📐 Đổi: Cỡ Cảnh • Góc Máy • Hướng Máy</span>
-        <span class="tag tag-emerald">🏫 Thực Hành Tại Lớp Marketing PT</span>
+  <!-- KHỐI 1: HERO (LIGHT) -->
+  <section class="cl-zebra-section cl-zebra--light" id="sec-hero">
+    <div class="cl-container apple-reveal">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 8px;">
+        <span class="cl-badge">BT01 • MARKETING THỰC CHIẾN</span>
+        <a href="lopmarketingbaitap.html" class="cl-btn cl-btn--secondary" style="font-size: 11.5px; padding: 6px 14px;">⬅️ Quay Lại Master Hub</a>
       </div>
-      <h1>Bài Tập 01: Băm Nhỏ Cảnh Trám "Ngồi Cày Bài Tập Laptop" Tại Lớp</h1>
-      <p class="hero-lead">
-        Thay vì giơ máy quay bạn học ngồi gõ máy tính suốt 10 giây buồn ngủ...<br>
-        Mình <b>băm nhỏ hành động đó thành 5 cú máy ngắn</b> (2 giây/cảnh): đổi cỡ cảnh, đổi góc máy và lệch trục liên tục.<br>
-        Khung hình có nhịp thở tự nhiên, người xem lướt qua màn hình là bị cuốn vào ngay.
-      </p>
+      <h1 class="title-short">BĂM CẢNH TRÁM: SOI CHỈ SỐ ADS & CÀY BÀI TẬP TRÊN LAPTOP</h1>
+      <p class="cl-lead">Một bạn học viên ngồi cắm cúi trước laptop làm bài tập marketing, mắt dán vào màn hình, gõ phím, cuộn chuột và thở dài.</p>
       
-      <div class="metrics-bar">
+      <div class="editorial-quote">
+        "Đứng một chỗ bấm máy thì nhàn thật... nhưng lười dịch cái chân, để khung hình đơ ra... ...thì đến mình xem lại còn lướt vội, trách gì người ta! 😄"
+      </div>
+
+      <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 16px;">
+        <a href="#sec-storyboard" class="cl-btn">Xem 5 Cú Máy Phân Cảnh 🎬</a>
+        <button class="cl-btn cl-btn--secondary" onclick="copyVoiceScript()">📋 Sao Chép Kịch Bản Nói</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- KHỐI 2: 4 TẦNG SỰ THẬT (TINT) -->
+  <section class="cl-zebra-section cl-zebra--tint" id="sec-tiers">
+    <div class="cl-container apple-reveal">
+      <span class="cl-badge">02 / BÓC TÁCH TÂM LÝ 4 TẦNG</span>
+      <h2 class="title-long">Bản Đồ Nhận Thức & Điểm Nghẽn Thể Diện</h2>
+      <p class="cl-lead">Đối chiếu tâm lý học viên khi quay video: từ lời bao biện bề nổi đến rào cản xã giao Tầng 2.5 và nỗi sợ thật sự giấu kín.</p>
+
+      <div class="tiers-grid">
+        <div class="tier-apple-card tier-t1">
+          <span class="tier-label">❌ Tầng 1 • Nói Đãi Bôi</span>
+          <div class="tier-body">Em đi học quay dựng là để làm video triệu view,<br>phải dùng kỹ thuật điện ảnh cao siêu người ta mới xem.</div>
+          <div class="tier-subnote">Lời nói đãi bôi bề nổi, nghe cho sang miệng chứ rỗng tuếch.</div>
+        </div>
+        <div class="tier-apple-card tier-t2">
+          <span class="tier-label">⚠️ Tầng 2 • Cảm Giác Thật</span>
+          <div class="tier-body">Cầm máy quay bạn học thì chân chôn chặt một chỗ,<br>bấm đại mười giây cho xong bài rồi về ghép nhạc đè lên.</div>
+          <div class="tier-subnote">Thao tác thực tế tại lớp: lười đổi góc, quay một đúp tĩnh lấy lệ.</div>
+        </div>
+        <div class="tier-apple-card tier-t25">
+          <span class="tier-label">🎭 Tầng 2.5 • Sợ Bị Bảo Làm Màu</span>
+          <div class="tier-body">Biết thừa khung hình đang đơ, xem lại nhạt toẹt...<br>nhưng ngại cúi thấp hay kiễng chân, sợ người ta bảo làm màu.<br>Thôi thì cứ đứng yên bấm một góc tĩnh cho nó an toàn!</div>
+          <div class="tier-subnote">Cái cớ giữ thể diện: thà chịu khung hình chết dí còn hơn bị chê làm màu.</div>
+        </div>
+        <div class="tier-apple-card tier-t3">
+          <span class="tier-label">🔥 Tầng 3 • Tim Đen Ngượng Miệng</span>
+          <div class="tier-body">Lười dịch cái chân thì khung hình chết dí.<br>Đến chính mình xem lại còn muốn lướt qua cho nhanh,<br>thì đăng lên mạng làm sao giữ chân được người xem!</div>
+          <div class="tier-subnote">Sự thật ngượng miệng: cái video mình còn chán ngấy thì ai dừng lại xem.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KHỐI 3: CHI TIẾT 5 CÚ MÁY PHÂN CẢNH (LIGHT) -->
+  <section class="cl-zebra-section cl-zebra--light" id="sec-storyboard">
+    <div class="cl-container apple-reveal">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
         <div>
-          <div class="metric-label">Thời Lượng Video</div>
-          <div class="metric-value">10 - 12 Giây</div>
+          <span class="cl-badge">03 / STORYBOARD STUDIO 9:16</span>
+          <h2 class="title-long">5 Cú Máy Băm Cảnh Trám Đổi 3 Trục</h2>
         </div>
-        <div>
-          <div class="metric-label">Số Cú Máy Băm Nhỏ</div>
-          <div class="metric-value">5 Micro-Shots</div>
-        </div>
-        <div>
-          <div class="metric-label">Thời Lượng Mỗi Cảnh</div>
-          <div class="metric-value">2.0 - 2.5 Giây</div>
-        </div>
-        <div>
-          <div class="metric-label">Kịch Bản Thoại</div>
-          <div class="metric-value">1 Thoại Duy Nhất</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4 TẦNG SỰ THẬT (BAO GỒM TẦNG 2.5) -->
-    <section class="tiers-section" id="tiers-section">
-      <div class="tiers-header">
-        <div class="tiers-title-group">
-          <span>💡 BẢN ĐỒ 4 TẦNG SỰ THẬT • BÓC TÁCH TÂM LÝ LÀM VIDEO MARKETING</span>
-          <span class="tiers-badge">CHUẨN TẦNG 1 ➔ 2 ➔ 2.5 ➔ 3</span>
-        </div>
-        <div class="tiers-meta">
-          <span>Bối cảnh: <b>Lớp học Marketing PT</b></span>
-          <span>Mentor: <b>Nguyễn Đức Việt</b></span>
-        </div>
+        <span style="font-size: 12px; color: var(--cl-text-muted);">Bấm vào ảnh để xem ghi chú góc máy đạo diễn</span>
       </div>
 
-      <div class="tiers-grid-4">
-        <!-- TẦNG 1 -->
-        <div class="tier-card t1">
-          <div class="tier-card-head">❌ TẦNG 1: NÓI ĐÃI BÔI (VĂN MẪU BỀ NỔI)</div>
-          <div class="tier-card-content">
-            "Em đi học quay dựng là để làm video triệu view, học kỹ thuật cao siêu góc máy điện ảnh."
-          </div>
-          <div class="tier-sub">👉 Văn mẫu nói ngoài miệng cho sang, người nghe lướt qua sau 1 giây.</div>
-        </div>
-
-        <!-- TẦNG 2 -->
-        <div class="tier-card t2">
-          <div class="tier-card-head">⚠️ TẦNG 2: CẢM GIÁC THẬT (THAO TÁC ĐỜI THỰC)</div>
-          <div class="tier-card-content">
-            "Cầm điện thoại lên quay bạn học thì lóng ngóng, chân chôn chặt một chỗ, bấm máy quay 10 giây cho xong rồi về ghép nhạc đè lên."
-          </div>
-          <div class="tier-sub">👉 Thao tác thực tế khi bắt tay vào làm: ngại đổi góc, quay 1 đúp tĩnh lấy lệ.</div>
-        </div>
-
-        <!-- TẦNG 2.5 -->
-        <div class="tier-card t25">
-          <div class="tier-card-head">🎭 TẦNG 2.5: XUNG ĐỘT VỊ THẾ & LÒNG TỰ TRỌNG</div>
-          <div class="tier-card-content">
-            "Biết thừa là khung hình đang đơ, xem lại nhạt toẹt...<br><br>
-            Nhưng ngại di chuyển, ngại cúi thấp hay kiễng chân đổi góc vì sợ người xung quanh nhìn vào thấy mình làm màu. Thôi thì cứ đứng yên bấm một góc cho nó an toàn."
-          </div>
-          <div class="tier-sub">👉 Cái cớ giữ thể diện: sợ bị chê làm màu nên chấp nhận quay một góc chết dí.</div>
-        </div>
-
-        <!-- TẦNG 3 -->
-        <div class="tier-card t3">
-          <div class="tier-card-head">🔥 TẦNG 3: SỰ THẬT NGƯỢNG MIỆNG (TIM ĐEN THẬT SỰ)</div>
-          <div class="tier-card-content">
-            "Lười đổi góc thì video chết dí.<br><br>
-            Cái video mà ngay cả bản thân mình xem lại còn muốn lướt vội, thì đăng lên mạng chẳng ma nào thèm dừng lại xem quá 2 giây!"
-          </div>
-          <div class="tier-sub">👉 Đâm trúng tim đen: đến mình còn chán video của mình thì trách gì người ta.</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MASTER AUDIO / VOICEOVER SCRIPT -->
-    <section class="master-audio-box" id="master-voice">
-      <div class="master-audio-content">
-        <div class="master-voice-icon">🎙️</div>
-        <div>
-          <div class="master-voice-title">KỊCH BẢN NÓI DUY NHẤT (VOICEOVER RUN NGẦM DƯỚI 5 SHOT):</div>
-          <div class="master-voice-text" id="voice-script-text">
-            "Đứng một góc bấm máy thì nhàn thật...<br>
-            Nhưng lười đổi góc, khung hình nó đơ ra...<br>
-            ...thì đến mình xem lại còn muốn lướt, trách gì người ta!"
-          </div>
-        </div>
-      </div>
-      <button class="copy-script-btn" onclick="copyVoiceScript()">📋 Copy Lời Thoại</button>
-    </section>
-
-    <!-- FILMSTRIP HORIZONTAL PREVIEW -->
-    <section class="filmstrip-section">
-      <div class="filmstrip-title">🎞️ DẢI FILMSTRIP LIÊN HOÀN 5 CÚ MÁY (9:16 VERTICAL WORKFLOW)</div>
-      <div class="filmstrip-bar">
-        <div class="filmstrip-item" onclick="openLightbox('assets/frames_bai_tap_01/shot1.jpg', 'Shot 1 • Trung Cảnh 45°', 'Thiết lập áp lực ngồi cày bài tập.', '00:00 - 00:02.5')">
-          <img src="assets/frames_bai_tap_01/shot1.jpg" alt="Shot 1" loading="lazy">
-          <div class="filmstrip-label">1. Trung Cảnh 45°</div>
-        </div>
-        <div class="filmstrip-item" onclick="openLightbox('assets/frames_bai_tap_01/shot2.jpg', 'Shot 2 • Cận Cảnh Mắt', 'Đặc tả ánh mắt căng thẳng nhìn qua mép laptop.', '00:02.5 - 00:04.5')">
-          <img src="assets/frames_bai_tap_01/shot2.jpg" alt="Shot 2" loading="lazy">
-          <div class="filmstrip-label">2. Cận Cảnh Mắt</div>
-        </div>
-        <div class="filmstrip-item" onclick="openLightbox('assets/frames_bai_tap_01/shot3.jpg', 'Shot 3 • Đặc Tả Phím Xóa', 'Ngón tay gõ phím và nhấn Backspace liên tục.', '00:04.5 - 00:07.0')">
-          <img src="assets/frames_bai_tap_01/shot3.jpg" alt="Shot 3" loading="lazy">
-          <div class="filmstrip-label">3. Macro Bàn Phím</div>
-        </div>
-        <div class="filmstrip-item" onclick="openLightbox('assets/frames_bai_tap_01/shot4.jpg', 'Shot 4 • Qua Vai Màn Hình Ads', 'Góc nhìn POV qua vai xuống bảng số liệu ads.', '00:07.0 - 00:09.5')">
-          <img src="assets/frames_bai_tap_01/shot4.jpg" alt="Shot 4" loading="lazy">
-          <div class="filmstrip-label">4. Qua Vai (OTS)</div>
-        </div>
-        <div class="filmstrip-item" onclick="openLightbox('assets/frames_bai_tap_01/shot5.jpg', 'Shot 5 • Góc Thấp Mặt Bàn', 'Cuộn chuột sốt ruột và ngả người thở dài.', '00:09.5 - 00:12.0')">
-          <img src="assets/frames_bai_tap_01/shot5.jpg" alt="Shot 5" loading="lazy">
-          <div class="filmstrip-label">5. Cận Góc Thấp</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5-BEATS STORYBOARD GRID -->
-    <section class="storyboard-container" id="storyboard-grid">
-      <div class="section-head-title">
-        <span>🎬 CHI TIẾT 5 PHÂN CẢNH BĂM NHỎ (CHẾ ĐỘ STUDIO STORYBOARD)</span>
-        <span style="font-size: 12px; color: var(--cyan); font-weight: 600;">Nhấp vào ảnh để xem chi tiết thông số đạo diễn</span>
-      </div>
-
-      <div class="beats-grid-5">
-
-        <!-- SHOT 1 -->
-        <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_01/shot1.jpg', 'Shot 1 • Thiết Lập Áp Lực', 'Sinh viên ngồi đăm chiêu bên laptop, lớp học cặm cụi.', '00:00 - 00:02.5')">
-            <span class="beat-badge-top badge-in">Shot 1 • In-Point</span>
-            <span class="beat-time-tag">⏱️ 00:00 - 00:02.5</span>
-            <img src="assets/frames_bai_tap_01/shot1.jpg" alt="Shot 1" loading="lazy">
+      <div class="storyboard-grid-5">
+        
+        <div class="beat-card-apple">
+          <div class="beat-img-box" onclick="openLightbox('assets/frames_bai_tap_01/shot1.jpg', 'Thiết lập áp lực bài tập', '00:00 - 02.5s', 'Đứng một chỗ bấm máy thì nhàn thật...', 'Ngồi ké bên cạnh bàn, đưa máy ngang tầm mắt cách một sải tay. Khóa nét tròng kính, lấy ánh sáng xanh màn hình hắt nhẹ lên mặt.')">
+            <img src="assets/frames_bai_tap_01/shot1.jpg" alt="Thiết lập áp lực bài tập" loading="lazy">
+            <span class="beat-badge">Trung cận (MCU)</span>
+            <span class="beat-time">00:00 - 02.5s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-header">
-              <div class="beat-id-title">1. Thiết Lập Áp Lực</div>
-              <div class="beat-shot-type">Trung Cảnh</div>
-            </div>
-            <div class="beat-voice-pill">
-              🎙️ "Đứng một góc bấm máy thì nhàn thật..."
-            </div>
-            <table class="specs-table">
-              <tr><td class="spec-name">Cỡ cảnh:</td><td class="spec-val">Trung cảnh (MCU)</td></tr>
-              <tr><td class="spec-name">Góc máy:</td><td class="spec-val">Ngang mắt (0°)</td></tr>
-              <tr><td class="spec-name">Hướng máy:</td><td class="spec-val">Chếch 45° bên hông trái</td></tr>
-              <tr><td class="spec-name">Động tác:</td><td class="spec-val">Cầm tay thở tự nhiên</td></tr>
+            <div class="beat-title">1. Thiết lập áp lực bài tập</div>
+            <div class="beat-voice">🎙️ "Đứng một chỗ bấm máy thì nhàn thật..."</div>
+            <table class="beat-specs">
+              <tr><td class="spec-label">Cỡ cảnh</td><td class="spec-val">Trung cận (MCU)</td></tr>
+              <tr><td class="spec-label">Góc máy</td><td class="spec-val">Ngang tầm mắt (0°)</td></tr>
+              <tr><td class="spec-label">Hướng</td><td class="spec-val">Chếch 45° bên hông trái</td></tr>
             </table>
-            <div class="director-note-box">
-              💡 <b>Ghi chú Ông Giáo:</b> Ngồi ké bên cạnh bàn, đưa máy lên ngang mắt bạn diễn cách tầm một sải tay. Khóa nét tròng kính, để ánh sáng xanh màn hình hắt nhẹ lên mặt.
-            </div>
+            <div class="director-tip">💡 <b>Mẹo Ông Giáo:</b> Ngồi ké bên cạnh bàn, đưa máy ngang tầm mắt cách một sải tay. Khóa nét tròng kính, lấy ánh sáng xanh màn hình hắt nhẹ lên mặt.</div>
           </div>
         </div>
-
-        <!-- SHOT 2 -->
-        <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_01/shot2.jpg', 'Shot 2 • Đặc Tả Ánh Mắt', 'Ánh mắt căng thẳng nhìn qua mép trên laptop, nhíu mày.', '00:02.5 - 00:04.5')">
-            <span class="beat-badge-top badge-action">Shot 2 • Biểu Cảm</span>
-            <span class="beat-time-tag">⏱️ 00:02.5 - 00:04.5</span>
-            <img src="assets/frames_bai_tap_01/shot2.jpg" alt="Shot 2" loading="lazy">
+        
+        <div class="beat-card-apple">
+          <div class="beat-img-box" onclick="openLightbox('assets/frames_bai_tap_01/shot2.jpg', 'Ánh mắt nhíu mày sốt ruột', '02.5s - 04.5s', '...bấm một cái là xong.', 'Bước sang đối diện, hạ máy ngang mép trên màn hình laptop. Canh đúng lúc bạn nhíu mày nhìn số liệu thì bấm máy, biểu cảm thật này không diễn được đâu.')">
+            <img src="assets/frames_bai_tap_01/shot2.jpg" alt="Ánh mắt nhíu mày sốt ruột" loading="lazy">
+            <span class="beat-badge">Cận cảnh (CU)</span>
+            <span class="beat-time">02.5s - 04.5s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-header">
-              <div class="beat-id-title">2. Ánh Mắt Nhíu Mày</div>
-              <div class="beat-shot-type">Cận Cảnh</div>
-            </div>
-            <div class="beat-voice-pill">
-              🎙️ "...bấm một cái là xong."
-            </div>
-            <table class="specs-table">
-              <tr><td class="spec-name">Cỡ cảnh:</td><td class="spec-val">Cận cảnh (Close-Up)</td></tr>
-              <tr><td class="spec-name">Góc máy:</td><td class="spec-val">Thấp hất nhẹ 15°</td></tr>
-              <tr><td class="spec-name">Hướng máy:</td><td class="spec-val">Chính diện xuyên mép máy</td></tr>
-              <tr><td class="spec-name">Động tác:</td><td class="spec-val">Máy tĩnh, bắt trọn ánh mắt</td></tr>
+            <div class="beat-title">2. Ánh mắt nhíu mày sốt ruột</div>
+            <div class="beat-voice">🎙️ "...bấm một cái là xong."</div>
+            <table class="beat-specs">
+              <tr><td class="spec-label">Cỡ cảnh</td><td class="spec-val">Cận cảnh (CU)</td></tr>
+              <tr><td class="spec-label">Góc máy</td><td class="spec-val">Hất nhẹ 15° từ dưới lên</td></tr>
+              <tr><td class="spec-label">Hướng</td><td class="spec-val">Chính diện xuyên mép laptop</td></tr>
             </table>
-            <div class="director-note-box">
-              💡 <b>Ghi chú Ông Giáo:</b> Bước sang đối diện bên kia bàn, hạ máy sát mép trên laptop. Canh đúng lúc bạn nhíu mày nhìn số liệu thì bấm máy, biểu cảm thật này diễn không ra đâu!
-            </div>
+            <div class="director-tip">💡 <b>Mẹo Ông Giáo:</b> Bước sang đối diện, hạ máy ngang mép trên màn hình laptop. Canh đúng lúc bạn nhíu mày nhìn số liệu thì bấm máy, biểu cảm thật này không diễn được đâu.</div>
           </div>
         </div>
-
-        <!-- SHOT 3 -->
-        <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_01/shot3.jpg', 'Shot 3 • Thao Tác Bàn Phím', 'Mười đầu ngón tay gõ phím và nhấn Backspace liên tục.', '00:04.5 - 00:07.0')">
-            <span class="beat-badge-top badge-macro">Shot 3 • Đặc Tả</span>
-            <span class="beat-time-tag">⏱️ 00:04.5 - 00:07.0</span>
-            <img src="assets/frames_bai_tap_01/shot3.jpg" alt="Shot 3" loading="lazy">
+        
+        <div class="beat-card-apple">
+          <div class="beat-img-box" onclick="openLightbox('assets/frames_bai_tap_01/shot3.jpg', 'Bàn phím nhấn lì nút xóa', '04.5s - 07.0s', 'Nhưng lười dịch cái chân, để khung hình đơ ra...', 'Đưa camera sát bàn phím một gang tay, bật zoom 2x chống bóng lưng. Bắt trọn ngón tay nhấn lì nút Backspace xóa dòng chữ vừa gõ — chi tiết bế tắc đắt giá nhất.')">
+            <img src="assets/frames_bai_tap_01/shot3.jpg" alt="Bàn phím nhấn lì nút xóa" loading="lazy">
+            <span class="beat-badge">Đặc tả (Macro ECU)</span>
+            <span class="beat-time">04.5s - 07.0s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-header">
-              <div class="beat-id-title">3. Bàn Phím Xóa Bài</div>
-              <div class="beat-shot-type">Đặc Tả Macro</div>
-            </div>
-            <div class="beat-voice-pill">
-              🎙️ "Nhưng lười đổi góc máy, khung hình nó đơ ra..."
-            </div>
-            <table class="specs-table">
-              <tr><td class="spec-name">Cỡ cảnh:</td><td class="spec-val">Cực cận (Macro ECU)</td></tr>
-              <tr><td class="spec-name">Góc máy:</td><td class="spec-val">Góc cao 60° chúc xuống</td></tr>
-              <tr><td class="spec-name">Hướng máy:</td><td class="spec-val">Từ trên xuống chếch phải</td></tr>
-              <tr><td class="spec-name">Động tác:</td><td class="spec-val">Lia theo ngón tay gõ</td></tr>
+            <div class="beat-title">3. Bàn phím nhấn lì nút xóa</div>
+            <div class="beat-voice">🎙️ "Nhưng lười dịch cái chân, để khung hình đơ ra..."</div>
+            <table class="beat-specs">
+              <tr><td class="spec-label">Cỡ cảnh</td><td class="spec-val">Đặc tả (Macro ECU)</td></tr>
+              <tr><td class="spec-label">Góc máy</td><td class="spec-val">Góc cao 60° chúc xuống</td></tr>
+              <tr><td class="spec-label">Hướng</td><td class="spec-val">Từ trên xuống chếch phải</td></tr>
             </table>
-            <div class="director-note-box">
-              💡 <b>Ghi chú Ông Giáo:</b> Đưa camera sát bàn phím tầm một gang tay, bật zoom 2x lên để bóng mình không đè lên phím. Bắt trọn ngón tay nhấn lì nút Backspace xóa bài — chi tiết này đắt nhất!
-            </div>
+            <div class="director-tip">💡 <b>Mẹo Ông Giáo:</b> Đưa camera sát bàn phím một gang tay, bật zoom 2x chống bóng lưng. Bắt trọn ngón tay nhấn lì nút Backspace xóa dòng chữ vừa gõ — chi tiết bế tắc đắt giá nhất.</div>
           </div>
         </div>
-
-        <!-- SHOT 4 -->
-        <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_01/shot4.jpg', 'Shot 4 • Màn Hình Số Liệu Ads', 'Góc nhìn qua vai nhìn xuống biểu đồ Facebook Ads đỏ lòm.', '00:07.0 - 00:09.5')">
-            <span class="beat-badge-top badge-pov">Shot 4 • Điểm Nhìn</span>
-            <span class="beat-time-tag">⏱️ 00:07.0 - 00:09.5</span>
-            <img src="assets/frames_bai_tap_01/shot4.jpg" alt="Shot 4" loading="lazy">
+        
+        <div class="beat-card-apple">
+          <div class="beat-img-box" onclick="openLightbox('assets/frames_bai_tap_01/shot4.jpg', 'Soi màn hình số liệu đỏ lòm', '07.0s - 09.5s', '...thì video dựng lên...', 'Đứng chếch sau vai phải, ghé camera qua khe giữa cổ và vai áo. Lấy nét căng vào đồ thị đỏ lòm trên màn hình, tạo cảm giác nhìn lén vào áp lực thật.')">
+            <img src="assets/frames_bai_tap_01/shot4.jpg" alt="Soi màn hình số liệu đỏ lòm" loading="lazy">
+            <span class="beat-badge">Cận qua vai (OTS)</span>
+            <span class="beat-time">07.0s - 09.5s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-header">
-              <div class="beat-id-title">4. Soi Màn Hình Ads</div>
-              <div class="beat-shot-type">Qua Vai (OTS)</div>
-            </div>
-            <div class="beat-voice-pill">
-              🎙️ "...thì video dựng lên..."
-            </div>
-            <table class="specs-table">
-              <tr><td class="spec-name">Cỡ cảnh:</td><td class="spec-val">Cận qua vai (OTS)</td></tr>
-              <tr><td class="spec-name">Góc máy:</td><td class="spec-val">Ngang vai hơi cao 20°</td></tr>
-              <tr><td class="spec-name">Hướng máy:</td><td class="spec-val">Sau lưng chếch vai phải</td></tr>
-              <tr><td class="spec-name">Động tác:</td><td class="spec-val">Đẩy nhẹ tiến tới (Slow Push)</td></tr>
+            <div class="beat-title">4. Soi màn hình số liệu đỏ lòm</div>
+            <div class="beat-voice">🎙️ "...thì video dựng lên..."</div>
+            <table class="beat-specs">
+              <tr><td class="spec-label">Cỡ cảnh</td><td class="spec-val">Cận qua vai (OTS)</td></tr>
+              <tr><td class="spec-label">Góc máy</td><td class="spec-val">Ngang vai cao 20°</td></tr>
+              <tr><td class="spec-label">Hướng</td><td class="spec-val">Sau lưng chếch vai phải</td></tr>
             </table>
-            <div class="director-note-box">
-              💡 <b>Ghi chú Ông Giáo:</b> Đứng sau lưng ghế, ghé camera qua khe giữa đầu và vai. Lấy nét sắc lẹm vào đồ thị đỏ lòm trên màn hình, tạo cảm giác 'nhìn lén' vào áp lực thật.
-            </div>
+            <div class="director-tip">💡 <b>Mẹo Ông Giáo:</b> Đứng chếch sau vai phải, ghé camera qua khe giữa cổ và vai áo. Lấy nét căng vào đồ thị đỏ lòm trên màn hình, tạo cảm giác nhìn lén vào áp lực thật.</div>
           </div>
         </div>
-
-        <!-- SHOT 5 -->
-        <div class="beat-card">
-          <div class="beat-img-container" onclick="openLightbox('assets/frames_bai_tap_01/shot5.jpg', 'Shot 5 • Cú Thở Dài Bất Lực', 'Đặt máy sát mặt bàn, tiền cảnh chuột máy tính, hậu cảnh bóp trán.', '00:09.5 - 00:12.0')">
-            <span class="beat-badge-top badge-out">Shot 5 • Out-Point</span>
-            <span class="beat-time-tag">⏱️ 00:09.5 - 00:12.0</span>
-            <img src="assets/frames_bai_tap_01/shot5.jpg" alt="Shot 5" loading="lazy">
+        
+        <div class="beat-card-apple">
+          <div class="beat-img-box" onclick="openLightbox('assets/frames_bai_tap_01/shot5.jpg', 'Cuộn chuột & Thở dài nhẹ nhõm', '09.5s - 12.0s', '...đến mình xem lại còn lướt vội, trách gì người ta! 😄', 'Đặt cạnh dưới điện thoại chạm hẳn xuống mặt bàn gỗ làm tiền cảnh. Nhắc bạn ngả người ra ghế thở hắt một hơi, kết thúc cú máy tự nhiên nhẹ nhõm.')">
+            <img src="assets/frames_bai_tap_01/shot5.jpg" alt="Cuộn chuột & Thở dài nhẹ nhõm" loading="lazy">
+            <span class="beat-badge">Cận góc thấp (Low ECU)</span>
+            <span class="beat-time">09.5s - 12.0s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-header">
-              <div class="beat-id-title">5. Cuộn Chuột & Bóp Trán</div>
-              <div class="beat-shot-type">Cận Góc Thấp</div>
-            </div>
-            <div class="beat-voice-pill">
-              🎙️ "...đến mình xem lại còn muốn lướt, trách gì người ta!"
-            </div>
-            <table class="specs-table">
-              <tr><td class="spec-name">Cỡ cảnh:</td><td class="spec-val">Cận trung góc thấp</td></tr>
-              <tr><td class="spec-name">Góc máy:</td><td class="spec-val">Sát mặt bàn (Worm-eye 0°)</td></tr>
-              <tr><td class="spec-name">Hướng máy:</td><td class="spec-val">Ngang mặt bàn bên phải</td></tr>
-              <tr><td class="spec-name">Động tác:</td><td class="spec-val">Tĩnh sát bàn, tiền cảnh bàn tay</td></tr>
+            <div class="beat-title">5. Cuộn chuột & Thở dài nhẹ nhõm</div>
+            <div class="beat-voice">🎙️ "...đến mình xem lại còn lướt vội, trách gì người ta! 😄"</div>
+            <table class="beat-specs">
+              <tr><td class="spec-label">Cỡ cảnh</td><td class="spec-val">Cận góc thấp (Low ECU)</td></tr>
+              <tr><td class="spec-label">Góc máy</td><td class="spec-val">Sát mặt bàn (Worm-eye 0°)</td></tr>
+              <tr><td class="spec-label">Hướng</td><td class="spec-val">Ngang mặt bàn bên phải</td></tr>
             </table>
-            <div class="director-note-box">
-              💡 <b>Ghi chú Ông Giáo:</b> Áp cạnh dưới điện thoại chạm hẳn xuống mặt bàn gỗ làm tiền cảnh. Nhắc bạn diễn ngả lưng ra ghế thở hắt một hơi — thế là kết thúc cú máy ngọt lịm!
-            </div>
+            <div class="director-tip">💡 <b>Mẹo Ông Giáo:</b> Đặt cạnh dưới điện thoại chạm hẳn xuống mặt bàn gỗ làm tiền cảnh. Nhắc bạn ngả người ra ghế thở hắt một hơi, kết thúc cú máy tự nhiên nhẹ nhõm.</div>
           </div>
         </div>
-
+        
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- MATRIX COMPARISON TABLE -->
-    <section class="matrix-section" id="matrix-table">
-      <div class="matrix-title">📊 MA TRẬN ĐỐI CHIẾU 3 BIẾN SỐ THỊ GIÁC (CHIẾU SLIDE GIẢNG BÀI)</div>
-      <p class="matrix-sub">
-        Không có bất kỳ 2 cú máy nào liền kề bị trùng lặp cả 3 biến số thị giác, đảm bảo nhịp cắt liên tục cuốn mắt người xem.
-      </p>
+  <!-- KHỐI 4: MA TRẬN RACCORD 3 TRỤC (TINT) -->
+  <section class="cl-zebra-section cl-zebra--tint" id="sec-matrix">
+    <div class="cl-container apple-reveal">
+      <span class="cl-badge">04 / KIỂM ĐỊNH RACCORD</span>
+      <h2 class="title-long">Ma Trận Đổi Đồng Thời 3 Trục Thị Giác</h2>
+      <p class="cl-lead">Chứng minh tuyệt đối không có 2 cảnh liên tiếp nào trùng lặp cả Cỡ cảnh, Góc máy lẫn Hướng máy.</p>
+
       <div class="table-responsive">
         <table class="matrix-table">
           <thead>
             <tr>
-              <th>Shot #</th>
-              <th>Tên Phân Cảnh</th>
+              <th>Cú Máy</th>
               <th>Thời Lượng</th>
-              <th>1. Cỡ Cảnh (Shot Size)</th>
-              <th>2. Góc Máy (Angle)</th>
-              <th>3. Hướng Máy (Direction)</th>
-              <th>Khớp Thoại Voiceover</th>
+              <th>Trục 1: Cỡ Cảnh</th>
+              <th>Trục 2: Góc Máy</th>
+              <th>Trục 3: Hướng Máy</th>
+              <th>Khớp Lời Thoại</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td><strong>Shot 1</strong></td>
-              <td>Thiết lập áp lực</td>
-              <td>2.5s</td>
-              <td><span class="tag-axis tag-shot">Trung cảnh (MCU)</span></td>
-              <td><span class="tag-axis tag-angle">Ngang mắt (0°)</span></td>
-              <td><span class="tag-axis tag-dir">Chếch 45° bên hông</span></td>
-              <td><em>"Đứng một góc bấm máy thì nhàn thật..."</em></td>
-            </tr>
-            <tr>
-              <td><strong>Shot 2</strong></td>
-              <td>Ánh mắt nhíu mày</td>
-              <td>2.0s</td>
-              <td><span class="tag-axis tag-shot">Cận cảnh (Close-up)</span></td>
-              <td><span class="tag-axis tag-angle">Hất nhẹ 15°</span></td>
-              <td><span class="tag-axis tag-dir">Chính diện xuyên laptop</span></td>
-              <td><em>"...bấm một cái là xong."</em></td>
-            </tr>
-            <tr>
-              <td><strong>Shot 3</strong></td>
-              <td>Bàn phím xóa bài</td>
-              <td>2.5s</td>
-              <td><span class="tag-axis tag-shot">Đặc tả (Macro ECU)</span></td>
-              <td><span class="tag-axis tag-angle">Góc cao 60° nhìn xuống</span></td>
-              <td><span class="tag-axis tag-dir">Từ trên xuống chếch phải</span></td>
-              <td><em>"Nhưng lười đổi góc máy, khung hình nó đơ ra..."</em></td>
-            </tr>
-            <tr>
-              <td><strong>Shot 4</strong></td>
-              <td>Soi màn hình ads</td>
-              <td>2.5s</td>
-              <td><span class="tag-axis tag-shot">Qua vai (OTS)</span></td>
-              <td><span class="tag-axis tag-angle">Ngang vai cao 20°</span></td>
-              <td><span class="tag-axis tag-dir">Sau lưng chếch vai phải</span></td>
-              <td><em>"...thì video dựng lên..."</em></td>
-            </tr>
-            <tr>
-              <td><strong>Shot 5</strong></td>
-              <td>Cuộn chuột & bóp trán</td>
-              <td>2.5s</td>
-              <td><span class="tag-axis tag-shot">Cận góc thấp</span></td>
-              <td><span class="tag-axis tag-angle">Sát mặt bàn (0°)</span></td>
-              <td><span class="tag-axis tag-dir">Ngang mặt bàn bên phải</span></td>
-              <td><em>"...đến mình xem lại còn muốn lướt, trách gì người ta!"</em></td>
-            </tr>
+            
+        <tr>
+          <td><b>Shot 1</b></td>
+          <td>00:00 - 02.5s</td>
+          <td><span style="background:#e0f2fe; color:#0369a1; padding:3px 8px; border-radius:4px; font-weight:700;">Trung cận (MCU)</span></td>
+          <td><span style="background:#fef3c7; color:#92400e; padding:3px 8px; border-radius:4px; font-weight:700;">Ngang tầm mắt (0°)</span></td>
+          <td><span style="background:#d1fae5; color:#065f46; padding:3px 8px; border-radius:4px; font-weight:700;">Chếch 45° bên hông trái</span></td>
+          <td><em>"Đứng một chỗ bấm máy thì nhàn thật..."</em></td>
+        </tr>
+        
+        <tr>
+          <td><b>Shot 2</b></td>
+          <td>02.5s - 04.5s</td>
+          <td><span style="background:#e0f2fe; color:#0369a1; padding:3px 8px; border-radius:4px; font-weight:700;">Cận cảnh (CU)</span></td>
+          <td><span style="background:#fef3c7; color:#92400e; padding:3px 8px; border-radius:4px; font-weight:700;">Hất nhẹ 15° từ dưới lên</span></td>
+          <td><span style="background:#d1fae5; color:#065f46; padding:3px 8px; border-radius:4px; font-weight:700;">Chính diện xuyên mép laptop</span></td>
+          <td><em>"...bấm một cái là xong."</em></td>
+        </tr>
+        
+        <tr>
+          <td><b>Shot 3</b></td>
+          <td>04.5s - 07.0s</td>
+          <td><span style="background:#e0f2fe; color:#0369a1; padding:3px 8px; border-radius:4px; font-weight:700;">Đặc tả (Macro ECU)</span></td>
+          <td><span style="background:#fef3c7; color:#92400e; padding:3px 8px; border-radius:4px; font-weight:700;">Góc cao 60° chúc xuống</span></td>
+          <td><span style="background:#d1fae5; color:#065f46; padding:3px 8px; border-radius:4px; font-weight:700;">Từ trên xuống chếch phải</span></td>
+          <td><em>"Nhưng lười dịch cái chân, để khung hình đơ ra..."</em></td>
+        </tr>
+        
+        <tr>
+          <td><b>Shot 4</b></td>
+          <td>07.0s - 09.5s</td>
+          <td><span style="background:#e0f2fe; color:#0369a1; padding:3px 8px; border-radius:4px; font-weight:700;">Cận qua vai (OTS)</span></td>
+          <td><span style="background:#fef3c7; color:#92400e; padding:3px 8px; border-radius:4px; font-weight:700;">Ngang vai cao 20°</span></td>
+          <td><span style="background:#d1fae5; color:#065f46; padding:3px 8px; border-radius:4px; font-weight:700;">Sau lưng chếch vai phải</span></td>
+          <td><em>"...thì video dựng lên..."</em></td>
+        </tr>
+        
+        <tr>
+          <td><b>Shot 5</b></td>
+          <td>09.5s - 12.0s</td>
+          <td><span style="background:#e0f2fe; color:#0369a1; padding:3px 8px; border-radius:4px; font-weight:700;">Cận góc thấp (Low ECU)</span></td>
+          <td><span style="background:#fef3c7; color:#92400e; padding:3px 8px; border-radius:4px; font-weight:700;">Sát mặt bàn (Worm-eye 0°)</span></td>
+          <td><span style="background:#d1fae5; color:#065f46; padding:3px 8px; border-radius:4px; font-weight:700;">Ngang mặt bàn bên phải</span></td>
+          <td><em>"...đến mình xem lại còn lướt vội, trách gì người ta! 😄"</em></td>
+        </tr>
+        
           </tbody>
         </table>
       </div>
-    </section>
 
-    <!-- FOOTER -->
-    <footer>
-      <p><b>Hệ Thống Phân Cảnh Điện Ảnh AI • Bộ Môn Marketing Thực Chiến</b></p>
-      <p style="margin-top: 4px; color: var(--text-muted);">Phát triển bởi Giảng viên Nguyễn Đức Việt • Kho bài tập thực hành quay dựng smartphone</p>
-    </footer>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 30px; flex-wrap: wrap; gap: 12px;">
+        <span style="font-size: 13px; color: var(--cl-text-muted);">Học phần Marketing Thực Chiến • Mentor Nguyễn Đức Việt</span>
+        <a href="lopmarketingbaitap.html" class="cl-btn">Xem Cả 4 Bài Tập Tại Master Hub ➔</a>
+      </div>
+    </div>
+  </section>
 
-  </div>
-
-  <!-- INTERACTIVE LIGHTBOX MODAL -->
+  <!-- LIGHTBOX -->
   <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
     <div class="lightbox-content" onclick="event.stopPropagation()">
       <button class="lightbox-close" onclick="closeLightboxDirect()">✕</button>
@@ -677,61 +606,83 @@
       </div>
       <div class="lightbox-details">
         <div>
-          <span id="lb-time" class="tiers-badge" style="margin-bottom: 8px; display: inline-block;">⏱️ 00:00 - 00:02.5</span>
-          <h2 id="lb-title" style="font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 6px;">Tiêu đề phân cảnh</h2>
-          <p id="lb-desc" style="font-size: 13.5px; color: var(--text-secondary); line-height: 1.5;">Mô tả hành động visual của cú máy.</p>
+          <span id="lb-time" class="cl-badge" style="margin-bottom: 8px;">00:00 - 02.5s</span>
+          <h3 id="lb-title" style="font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 8px;">Tiêu đề phân cảnh</h3>
         </div>
-        <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 8px; border: 1px solid var(--border-subtle);">
-          <div style="font-size: 11px; color: var(--cyan); font-weight: 800; text-transform: uppercase; margin-bottom: 6px;">Lời thoại khớp hình:</div>
-          <div id="lb-voice" style="font-size: 14px; font-weight: 700; color: #fde047; font-style: italic;">"Đứng một góc bấm máy thì nhàn thật..."</div>
+        <div style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 14px; border-radius: 8px;">
+          <div style="font-size: 11px; color: #b45309; font-weight: 700; text-transform: uppercase; margin-bottom: 4px;">Lời thoại khớp hình:</div>
+          <div id="lb-voice" style="font-size: 14px; font-weight: 600; color: #92400e; font-style: italic;">"..."</div>
         </div>
-        <div style="background: rgba(245, 158, 11, 0.08); border-left: 3px solid var(--amber); padding: 12px; border-radius: 0 6px 6px 0; font-size: 12px; color: #fde68a;">
-          <b>💡 Mẹo Ông Giáo:</b> Giữ điện thoại chắc tay, thay đổi vị trí đứng của chân trước khi bấm máy.
+        <div style="background: #f0f9ff; border: 1px dashed rgba(3, 105, 161, 0.3); padding: 14px; border-radius: 8px; font-size: 13px; color: #0369a1;">
+          <div style="font-weight: 700; margin-bottom: 4px;">💡 Mẹo Ông Giáo:</div>
+          <div id="lb-tip">...</div>
         </div>
       </div>
     </div>
   </div>
 
+  <div class="toast" id="toast-msg">Đã copy kịch bản nói!</div>
+
   <script>
-    // Copy Voice Script
+    // Copy script
     function copyVoiceScript() {
-      const text = document.getElementById('voice-script-text').innerText.trim();
+      const text = `Đứng một chỗ bấm máy thì nhàn thật... nhưng lười dịch cái chân, để khung hình đơ ra... ...thì đến mình xem lại còn lướt vội, trách gì người ta! 😄`;
       navigator.clipboard.writeText(text).then(() => {
-        alert('Đã copy kịch bản nói vào bộ nhớ tạm!');
-      }).catch(err => {
-        console.error('Không thể copy: ', err);
+        showToast('Đã sao chép kịch bản nói vào bộ nhớ tạm!');
       });
     }
 
-    // Lightbox Logic
+    function showToast(msg) {
+      const toast = document.getElementById('toast-msg');
+      toast.innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => { toast.classList.remove('show'); }, 2500);
+    }
+
+    // Lightbox
     const lightbox = document.getElementById('lightbox');
     const lbImg = document.getElementById('lb-img');
     const lbTitle = document.getElementById('lb-title');
-    const lbDesc = document.getElementById('lb-desc');
     const lbTime = document.getElementById('lb-time');
+    const lbVoice = document.getElementById('lb-voice');
+    const lbTip = document.getElementById('lb-tip');
 
-    function openLightbox(imgSrc, title, desc, time) {
+    function openLightbox(imgSrc, title, time, voice, tip) {
       lbImg.src = imgSrc;
       lbTitle.innerText = title;
-      lbDesc.innerText = desc;
       lbTime.innerText = '⏱️ ' + time;
+      lbVoice.innerText = voice;
+      lbTip.innerText = tip;
       lightbox.classList.add('active');
     }
 
     function closeLightbox(e) {
-      if (e.target === lightbox) {
-        lightbox.classList.remove('active');
-      }
+      if (e.target === lightbox) lightbox.classList.remove('active');
     }
-
     function closeLightboxDirect() {
       lightbox.classList.remove('active');
     }
-
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeLightboxDirect();
     });
+
+    // Apple Reveal Observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.apple-reveal').forEach(el => observer.observe(el));
   </script>
+
+  <footer>
+    <p><b>Hệ Thống Phân Cảnh Điện Ảnh AI • Bộ Môn Marketing Thực Chiến</b></p>
+    <p style="margin-top: 6px;">Giảng viên: Nguyễn Đức Việt • Kho bài tập thực hành quay dựng video smartphone</p>
+  </footer>
 
 </body>
 </html>
