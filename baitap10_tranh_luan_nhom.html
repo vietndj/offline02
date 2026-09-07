@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Bài Tập 10 • Chụm đầu tranh luận kịch bản với bạn học | Kho Kịch Bản Marketing Thực Chiến</title>
+  <title>Bài Tập 10 • Chụm đầu tranh luận sơ đồ kịch bản với bạn học | Kho Kịch Bản Marketing Thực Chiến</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
@@ -131,285 +131,237 @@
     .cl-lead {
       font-size: clamp(16px, 1.4vw, 18px);
       color: var(--cl-text-sub);
-      max-width: 880px;
-      line-height: 1.8;
-      margin-bottom: 24px;
+      line-height: 1.75;
+      max-width: 800px;
     }
 
-    /* Apple Reveal Animation */
-    .apple-reveal {
-      opacity: 0;
-      transform: translate3d(0, 24px, 0);
-      transition: opacity 0.6s var(--apple-ease), transform 0.65s var(--apple-spring);
-      will-change: opacity, transform;
-    }
-    .apple-reveal.is-visible {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
-    }
-
-    /* Hero Layout */
-    .hero-split {
+    /* Hero Section */
+    .hero-grid {
       display: grid;
-      grid-template-columns: 1fr 380px;
-      gap: 40px;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 48px;
       align-items: center;
     }
-    @media (max-width: 980px) {
-      .hero-split { grid-template-columns: 1fr; }
-    }
-
     .hero-avatar-box {
       position: relative;
       border-radius: 20px;
       overflow: hidden;
-      aspect-ratio: 9 / 16;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+      aspect-ratio: 9/16;
+      max-height: 70vh;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
       border: 1px solid var(--cl-border);
-      background: #000;
+      background: #e2e8f0;
     }
     .hero-avatar-box img {
       width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.6s var(--apple-ease);
     }
-    .hero-avatar-badge {
-      position: absolute; bottom: 14px; left: 14px; right: 14px;
-      background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 10px;
-      padding: 10px 14px; color: #fff;
-    }
-    .avatar-tag { font-size: 10px; font-weight: 700; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.5px; }
-    .avatar-name { font-size: 13px; font-weight: 800; }
-
-    /* Master Voice Card */
-    .voice-action-card {
-      background: #ffffff;
-      border: 1px solid #bfdbfe;
-      border-radius: 16px;
-      padding: 20px 24px;
-      margin-top: 24px;
-      box-shadow: 0 4px 20px rgba(26, 115, 232, 0.08);
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .voice-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .voice-badge {
-      font-size: 11px;
-      font-weight: 800;
-      color: var(--cl-accent);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .copy-voice-btn {
-      background: var(--cl-accent);
-      color: #ffffff;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 8px;
-      font-size: 12px;
-      font-weight: 700;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: background 0.2s;
-    }
-    .copy-voice-btn:hover { background: var(--cl-accent-hover); }
-    .voice-text-box {
-      font-size: 16px;
-      font-weight: 600;
-      color: #1e293b;
-      line-height: 1.6;
-      font-style: italic;
+    .hero-avatar-box:hover img { transform: scale(1.02); }
+    .hero-avatar-tag {
+      position: absolute; bottom: 16px; left: 16px; right: 16px;
+      background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(10px);
+      color: #fff; padding: 10px 14px; border-radius: 10px;
+      font-size: 12px; font-weight: 600;
     }
 
-    /* 4 Tiers of Truth Cards Grid */
+    /* 4 Tiers Grid */
     .tiers-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      margin-top: 28px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 32px;
     }
-    @media (max-width: 1024px) { .tiers-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 600px) { .tiers-grid { grid-template-columns: 1fr; } }
-
-    .tier-apple-card {
+    .tier-card {
       background: var(--cl-card-bg);
       border: 1px solid var(--cl-border);
       border-radius: 16px;
-      padding: 22px 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-      transition: transform 0.2s var(--apple-spring), box-shadow 0.2s;
+      padding: 24px;
+      position: relative;
+      transition: transform 0.3s var(--apple-spring), box-shadow 0.3s var(--apple-ease);
     }
-    .tier-apple-card:hover {
+    .tier-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
     }
-    .tier-apple-card.t1 { border-top: 4px solid #ef4444; }
-    .tier-apple-card.t2 { border-top: 4px solid #f59e0b; }
-    .tier-apple-card.t25 { border-top: 4px solid #8b5cf6; background: linear-gradient(180deg, #faf5ff 0%, #ffffff 100%); }
-    .tier-apple-card.t3 { border-top: 4px solid #10b981; }
-
-    .tier-label { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; }
-    .t1 .tier-label { color: #dc2626; }
-    .t2 .tier-label { color: #d97706; }
-    .t25 .tier-label { color: #7c3aed; }
-    .t3 .tier-label { color: #059669; }
-
-    .tier-desc { font-size: 14px; color: var(--cl-text-sub); line-height: 1.6; flex: 1; }
-    .tier-subnote {
-      font-size: 11.5px; color: var(--cl-text-muted); line-height: 1.5; border-top: 1px dashed var(--cl-border); padding-top: 8px; margin-top: 4px;
+    .tier-card-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 14px;
     }
+    .tier-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; font-weight: 700;
+      padding: 4px 10px; border-radius: 6px;
+    }
+    .tier-pill-t1 { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+    .tier-pill-t2 { background: #fffbeb; color: #d97706; border: 1px solid #fde68a; }
+    .tier-pill-t25 { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
+    .tier-pill-t3 { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
+    .tier-title { font-size: 15px; font-weight: 700; color: var(--cl-text-main); margin-bottom: 8px; }
+    .tier-desc { font-size: 13.5px; color: var(--cl-text-sub); line-height: 1.65; }
 
-    /* 5 Beats Storyboard Grid */
-    .storyboard-grid-5 {
+    /* Storyboard Beats (5 Cú Máy) */
+    .beats-grid-apple {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 16px;
-      margin-top: 24px;
+      margin-top: 32px;
     }
-    @media (max-width: 1200px) { .storyboard-grid-5 { grid-template-columns: repeat(3, 1fr); } }
-    @media (max-width: 800px) { .storyboard-grid-5 { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 500px) { .storyboard-grid-5 { grid-template-columns: 1fr; } }
-
     .beat-card-apple {
       background: var(--cl-card-bg);
       border: 1px solid var(--cl-border);
-      border-radius: 16px;
+      border-radius: 14px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-      transition: transform 0.25s var(--apple-spring), border-color 0.2s, box-shadow 0.25s;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      transition: transform 0.3s var(--apple-spring), box-shadow 0.3s;
     }
     .beat-card-apple:hover {
       transform: translateY(-5px);
-      border-color: var(--cl-accent);
-      box-shadow: 0 16px 36px rgba(26, 115, 232, 0.14);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
     }
-
     .beat-img-box {
       position: relative;
-      width: 100%;
-      aspect-ratio: 9 / 16;
-      background: #000;
+      aspect-ratio: 9/16;
+      background: #0f172a;
       overflow: hidden;
-      cursor: pointer;
+      cursor: zoom-in;
     }
     .beat-img-box img {
       width: 100%; height: 100%; object-fit: cover;
-      transition: transform 0.4s ease;
+      transition: transform 0.5s var(--apple-ease);
     }
-    .beat-card-apple:hover .beat-img-box img {
-      transform: scale(1.05);
-    }
+    .beat-img-box:hover img { transform: scale(1.04); }
     .beat-badge {
       position: absolute; top: 10px; left: 10px;
-      background: rgba(0, 0, 0, 0.75); backdrop-filter: blur(8px);
-      color: #fff; font-size: 10px; font-weight: 700;
-      padding: 3px 8px; border-radius: 6px;
+      background: rgba(26, 115, 232, 0.9); color: #fff;
+      font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 6px;
     }
     .beat-time {
       position: absolute; top: 10px; right: 10px;
-      background: rgba(26, 115, 232, 0.9);
-      color: #fff; font-family: 'JetBrains Mono', monospace;
-      font-size: 10px; font-weight: 700;
-      padding: 3px 8px; border-radius: 6px;
+      background: rgba(0, 0, 0, 0.65); color: #fff;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px; font-weight: 600; padding: 3px 6px; border-radius: 4px;
     }
-
     .beat-content {
-      padding: 16px;
+      padding: 14px 12px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
       flex: 1;
+      gap: 8px;
     }
-    .beat-title { font-size: 14.5px; font-weight: 800; color: var(--cl-text-main); line-height: 1.35; }
+    .beat-title {
+      font-size: 13px; font-weight: 700; color: var(--cl-text-main);
+      line-height: 1.4;
+    }
     .beat-voice {
-      font-size: 12px; font-weight: 600; color: #b45309; background: #fffbeb;
-      padding: 6px 10px; border-radius: 6px; border-left: 3px solid #f59e0b; line-height: 1.5;
+      font-size: 12px; color: #b45309; background: #fffbeb;
+      padding: 6px 8px; border-radius: 6px; font-style: italic; line-height: 1.5;
     }
     .beat-specs {
-      width: 100%; font-size: 11px; border-collapse: collapse; margin-top: 4px;
+      width: 100%; font-size: 11px; border-collapse: collapse; margin-top: 2px;
     }
-    .beat-specs tr { border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
-    .beat-specs tr:last-child { border-bottom: none; }
-    .beat-specs td { padding: 3px 0; }
-    .spec-label { color: var(--cl-text-muted); font-weight: 600; width: 42%; }
-    .spec-val { color: var(--cl-text-sub); font-weight: 700; }
+    .beat-specs td { padding: 3px 0; border-bottom: 1px solid #f1f5f9; }
+    .spec-label { color: var(--cl-text-muted); width: 45%; }
+    .spec-val { color: var(--cl-text-main); font-weight: 600; }
     .director-tip {
-      font-size: 11.5px; color: var(--cl-text-sub); background: var(--cl-bg-tint);
-      padding: 8px 10px; border-radius: 8px; border: 1px solid var(--cl-border); line-height: 1.5; margin-top: auto;
+      font-size: 11px; color: var(--cl-text-sub); background: var(--cl-bg-tint);
+      padding: 8px; border-radius: 6px; border-left: 3px solid var(--cl-accent);
+      line-height: 1.55; margin-top: auto;
+    }
+    .visual-logic-box {
+      font-size: 10.5px; color: #1e3a8a; background: #eff6ff;
+      padding: 6px 8px; border-radius: 6px; border: 1px solid #bfdbfe;
+      line-height: 1.45; margin-top: 4px;
+    }
+    .reusability-tag {
+      display: inline-block; font-size: 9.5px; font-weight: 700;
+      color: #065f46; background: #d1fae5; padding: 2px 6px; border-radius: 4px;
+      margin-top: 4px; border: 1px solid #a7f3d0;
     }
 
-    /* Reshoot Suggestions */
+    /* Reshoot Table */
     .reshoot-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      margin-top: 28px;
     }
-    @media (max-width: 860px) { .reshoot-grid { grid-template-columns: 1fr; } }
-
     .reshoot-card {
       background: var(--cl-card-bg);
       border: 1px solid var(--cl-border);
-      border-radius: 16px;
+      border-radius: 14px;
       padding: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+      display: flex; flex-direction: column; gap: 8px;
     }
     .reshoot-icon { font-size: 24px; }
-    .reshoot-title { font-size: 15px; font-weight: 800; color: var(--cl-text-main); }
-    .reshoot-desc { font-size: 13.5px; color: var(--cl-text-sub); line-height: 1.6; }
+    .reshoot-title { font-size: 15px; font-weight: 700; color: var(--cl-text-main); }
+    .reshoot-desc { font-size: 13px; color: var(--cl-text-sub); line-height: 1.6; }
+
+    /* Apple Spring Motion */
+    .apple-reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s var(--apple-ease), transform 0.8s var(--apple-spring);
+    }
+    .apple-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     /* Lightbox Modal */
     .lightbox-modal {
-      position: fixed; inset: 0; z-index: 999;
-      background: rgba(0, 0, 0, 0.88); backdrop-filter: blur(16px);
+      position: fixed; inset: 0; z-index: 9999;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(12px);
       display: none; align-items: center; justify-content: center;
-      padding: 24px;
+      padding: 20px;
     }
     .lightbox-modal.active { display: flex; }
     .lightbox-wrap {
-      max-width: 900px; width: 100%; max-height: 92vh;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
-      background: #111827; border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 20px; overflow: hidden; padding: 20px; color: #fff;
-    }
-    @media (max-width: 768px) {
-      .lightbox-wrap { grid-template-columns: 1fr; max-height: 85vh; overflow-y: auto; }
+      max-width: 900px; width: 100%; max-height: 90vh;
+      background: #1e293b; border-radius: 20px; overflow: hidden;
+      display: grid; grid-template-columns: 1fr 1fr;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #fff;
     }
     .lightbox-img-box {
-      width: 100%; aspect-ratio: 9 / 16; max-height: 70vh;
-      background: #000; border-radius: 12px; overflow: hidden;
+      background: #000; display: flex; align-items: center; justify-content: center;
+      max-height: 85vh;
     }
-    .lightbox-img-box img { width: 100%; height: 100%; object-fit: cover; }
-    .lightbox-info { display: flex; flex-direction: column; gap: 12px; justify-content: center; }
+    .lightbox-img-box img { max-width: 100%; max-height: 85vh; object-fit: contain; }
+    .lightbox-info {
+      padding: 32px; display: flex; flex-direction: column; justify-content: center;
+      overflow-y: auto;
+    }
     .lightbox-close {
-      align-self: flex-end; background: rgba(255, 255, 255, 0.1); border: none;
-      color: #fff; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 16px;
+      align-self: flex-end; background: none; border: none; color: #94a3b8;
+      font-size: 24px; cursor: pointer; padding: 4px;
     }
+    .lightbox-close:hover { color: #fff; }
 
     /* Toast */
     .toast {
       position: fixed; bottom: 24px; right: 24px; z-index: 1000;
-      background: #10b981; color: #fff; font-weight: 700; font-size: 13px;
-      padding: 10px 18px; border-radius: 8px; box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
-      display: none; transform: translateY(10px); transition: all 0.3s ease;
+      background: #0f172a; color: #fff; font-size: 13px; font-weight: 600;
+      padding: 12px 20px; border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      transform: translateY(100px); opacity: 0; transition: all 0.3s var(--apple-spring);
     }
-    .toast.show { display: block; transform: translateY(0); }
+    .toast.show { transform: translateY(0); opacity: 1; }
+
+    @media (max-width: 1024px) {
+      .beats-grid-apple { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .beats-grid-apple { grid-template-columns: repeat(2, 1fr); }
+      .lightbox-wrap { grid-template-columns: 1fr; }
+      .lightbox-img-box { max-height: 50vh; }
+    }
+    @media (max-width: 480px) {
+      .beats-grid-apple { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -417,211 +369,220 @@
   <!-- STICKY TOP NAV -->
   <header class="sticky-nav">
     <a href="lopmarketingbaitap.html" class="nav-brand">
-      <span class="brand-badge">FEDU COURSE</span>
-      <span class="nav-title">Bài tập 10: Chụm đầu tranh luận kịch bản với bạn học</span>
+      <span class="brand-badge">BÀI TẬP 10</span>
+      <span class="nav-title">Chụm đầu tranh luận sơ đồ kịch bản với bạn học</span>
     </a>
     <div class="nav-actions">
-      <a href="lopmarketingbaitap.html" class="nav-link-btn">← Trang tổng 12 bài tập</a>
-      <select class="nav-select" onchange="if(this.value) window.location.href=this.value;">
-        <option value="baitap01_laptop_ads.html" >Bài 01: Soi chỉ số ads & Cày bài tập...</option>
-        <option value="baitap02_sotay_kichban.html" >Bài 02: Cuốn sổ tay & Kịch bản gạch ...</option>
-        <option value="baitap03_test_goc_quay.html" >Bài 03: Cầm điện thoại test góc quay...</option>
-        <option value="baitap04_slide_giatminh.html" >Bài 04: Ngẩng nhìn slide giảng bài &...</option>
-        <option value="baitap05_cocnuoc_langdong.html" >Bài 05: Nhấp ngụm nước ấm & Tựa lưng...</option>
-        <option value="baitap06_do_du_nut_dang.html" >Bài 06: Ngón tay ngập ngừng trước nú...</option>
-        <option value="baitap07_hut_hang_0view.html" >Bài 07: Mở máy kiểm tra thấy 0 view,...</option>
-        <option value="baitap08_qua_ngot_tingting.html" >Bài 08: Ting ting thông báo tin nhắn...</option>
-        <option value="baitap09_timeline_capcut.html" >Bài 09: Đeo tai nghe soi timeline Ca...</option>
-        <option value="baitap10_tranh_luan_nhom.html" selected>Bài 10: Chụm đầu tranh luận kịch bản...</option>
-        <option value="baitap11_tap_noi_truoc_lop.html" >Bài 11: Đứng trước lớp tập nói đúp q...</option>
-        <option value="baitap12_thu_don_buoc_di.html" >Bài 12: Gập laptop, đeo balo bước ra...</option>
+      <a href="lopmarketingbaitap.html" class="nav-link-btn">← Master Hub (12 Bài)</a>
+      <select class="nav-select" onchange="if(this.value) location.href=this.value;">
+        <option value="baitap01_laptop_ads.html" >Bài 01: Soi chỉ số Ads & Cày bài t...</option>
+        <option value="baitap02_sotay_kichban.html" >Bài 02: Cuốn sổ tay & Kịch bản gạc...</option>
+        <option value="baitap03_test_goc_quay.html" >Bài 03: Cầm điện thoại test góc qu...</option>
+        <option value="baitap04_slide_giatminh.html" >Bài 04: Ngẩng nhìn slide giảng bài...</option>
+        <option value="baitap05_cocnuoc_langdong.html" >Bài 05: Nhấp ngụm nước ấm & Tựa lư...</option>
+        <option value="baitap06_do_du_nut_dang.html" >Bài 06: Ngón tay ngập ngừng trước ...</option>
+        <option value="baitap07_hut_hang_0view.html" >Bài 07: Mở máy kiểm tra thấy 0 vie...</option>
+        <option value="baitap08_qua_ngot_tingting.html" >Bài 08: Ting ting thông báo tin nh...</option>
+        <option value="baitap09_timeline_capcut.html" >Bài 09: Đeo tai nghe soi timeline ...</option>
+        <option value="baitap10_tranh_luan_nhom.html" selected>Bài 10: Chụm đầu tranh luận sơ đồ ...</option>
+        <option value="baitap11_tap_noi_truoc_lop.html" >Bài 11: Đứng trước lớp tập nói đúp...</option>
+        <option value="baitap12_thu_don_buoc_di.html" >Bài 12: Gập laptop, đeo balo sải b...</option>
       </select>
     </div>
   </header>
 
-  <!-- KHỐI 1: HERO & VOICE-OVER CỐT LÕI (LIGHT) -->
-  <section class="cl-zebra-section cl-zebra--light" id="sec-hero">
-    <div class="cl-container apple-reveal">
-      <div class="hero-split">
-        <div>
-          <span class="cl-badge">BÀI TẬP THỰC HÀNH 10 / 12 • LỚP MARKETING PT</span>
-          <h1 class="title-short">Chụm đầu tranh luận kịch bản với bạn học</h1>
-          <p class="editorial-quote">"Trạng thái tâm lý chủ đạo: Va chạm quan điểm & Tinh thần đồng đội"</p>
-          <p class="cl-lead">
-            Thực hành ngay tại bàn học: băm nhỏ một hành động bình thường thành 5 cỡ cảnh và góc máy khác nhau.
-            Khi mắt nhìn thấy chi tiết, tai nghe thấy nhịp thở, video tự khắc chạm vào lòng người mà không cần gồng mình diễn xuất.
-          </p>
-
-          <div class="voice-action-card">
-            <div class="voice-head">
-              <span class="voice-badge">🎙️ Kịch bản Voice-Over ngầm (Khớp 5 cú máy)</span>
-              <button class="copy-voice-btn" onclick="copyVoiceText()">
-                <span>Sao chép kịch bản</span>
-              </button>
-            </div>
-            <div class="voice-text-box" id="voice-text">
-              "Ngồi một mình thì tưởng ý tưởng của mình là nhất. Đến lúc đem ra bàn luận với anh em, người ta bóc cho vài câu mới thấy hổng toe toét. Nhưng có cọ xát thì mới gọt sắc được thông điệp!"
-            </div>
+  <!-- MÀN 1: HERO VIEWPORT -->
+  <section class="cl-zebra-section cl-zebra--light apple-reveal">
+    <div class="cl-container">
+      <div class="hero-grid">
+        <div class="hero-avatar-box">
+          <img src="assets/marketing_baitap/viet_bt10_blazer.jpg" alt="Hero Chụm đầu tranh luận sơ đồ kịch bản với bạn học">
+          <div class="hero-avatar-tag">
+            <span>👤 Phục trang: Áo blazer linen trẻ trung</span>
           </div>
         </div>
-
-        <div>
-          <div class="hero-avatar-box">
-            <img src="assets/marketing_baitap/viet_bt10_blazer.jpg" alt="Chụm đầu tranh luận kịch bản với bạn học" loading="lazy">
-            <div class="hero-avatar-badge">
-              <div class="avatar-tag">Trang phục thực chiến</div>
-              <div class="avatar-name">Anh Việt • Áo blazer linen trẻ trung</div>
-            </div>
+        <div class="hero-text-content">
+          <span class="cl-badge">Bài Tập Thực Chiến 10 • Lớp Marketing PT</span>
+          <h1 class="title-short">Chụm đầu tranh luận sơ đồ kịch bản với bạn học</h1>
+          <p class="cl-lead">
+            <b>Trạng thái tâm lý cốt lõi:</b> Va chạm quan điểm & Phản biện xây dựng<br>
+            Khóa một hành động gốc đời thực và băm nhỏ thành 5 cú máy điện ảnh. Đổi đồng thời cả 3 trục: Cỡ cảnh, Góc máy và Hướng máy.
+          </p>
+          <div class="editorial-quote">
+            "Ngồi một mình thì tưởng ý tưởng của mình là nhất...
+Đến lúc đem ra trao đổi, người ta chỉ cho vài điểm mới thấy lủng củng.
+...Nhưng có va chạm thì mới gọt sắc được thông điệp!"
+          </div>
+          <div style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="#section-beats" class="nav-link-btn active" style="padding: 10px 20px; font-size: 13px;">Khám Phá 5 Cú Máy ↓</a>
+            <button type="button" class="nav-link-btn" onclick="copyVoiceText()" style="padding: 10px 20px; font-size: 13px; cursor: pointer;">📋 Sao Chép Thoại</button>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- KHỐI 2: BÓC TÁCH 4 TẦNG SỰ THẬT (TINT) -->
-  <section class="cl-zebra-section cl-zebra--tint" id="sec-truth">
-    <div class="cl-container apple-reveal">
-      <span class="cl-badge">02 / BẢN ĐỒ TÂM LÝ HỌC HÀNH VI</span>
-      <h2 class="title-long">Bóc Tách 4 Tầng Nhận Thức Khi Quay Cảnh Này</h2>
-      <p class="cl-lead">Mỗi khung hình sinh ra đều mang một trọng lượng tâm lý. Đừng quay bề nổi, hãy chạm vào sự giằng xé bên trong người lớn.</p>
+  <!-- MÀN 2: 4 TẦNG NHẬN THỨC -->
+  <section class="cl-zebra-section cl-zebra--tint apple-reveal">
+    <div class="cl-container">
+      <span class="cl-badge">Tâm Lý Học Sáng Tạo Nội Dung</span>
+      <h2 class="title-long">Bóc Tách 4 Tầng Sự Thật Của Hành Động Này</h2>
+      <p class="cl-lead">Tại sao người học hay bị "chết dí khung hình"? Vấn đề không nằm ở cái máy, mà nằm ở rào cản tâm lý bên trong.</p>
 
       <div class="tiers-grid">
-        <div class="tier-apple-card t1">
-          <div class="tier-label">Tầng 1 • Nói đãi bôi (Safe)</div>
-          <div class="tier-desc">"Ý tưởng của em độc quyền, em không muốn chia sẻ vì sợ bị người khác sao chép."</div>
-          <div class="tier-subnote">Lý do bề nổi: cái cớ an toàn ai cũng nói được để lấp liếm.</div>
+        <div class="tier-card">
+          <div class="tier-card-header">
+            <span class="tier-pill tier-pill-t1">TẦNG 1 • AN TOÀN</span>
+          </div>
+          <div class="tier-title">Văn Mẫu Đãi Bôi</div>
+          <div class="tier-desc">Ý tưởng của em độc quyền, em không muốn chia sẻ vì sợ bị người khác sao chép.</div>
         </div>
-        <div class="tier-apple-card t2">
-          <div class="tier-label">Tầng 2 • Cảm giác thật (Real)</div>
-          <div class="tier-desc">"Mấy anh em chụm đầu vào nhau quanh bàn học, ngón tay chỉ lia lịa vào từng dòng chữ, cãi nhau chí choé về đoạn mở đầu."</div>
-          <div class="tier-subnote">Hành vi thật: thao tác vụng về đời thường diễn ra trước mắt.</div>
+
+        <div class="tier-card">
+          <div class="tier-card-header">
+            <span class="tier-pill tier-pill-t2">TẦNG 2 • HÀNH VI</span>
+          </div>
+          <div class="tier-title">Thao Tác Bề Mặt</div>
+          <div class="tier-desc">Mấy anh em chụm đầu vào nhau quanh bàn học, ngón tay chỉ lia lịa vào từng dòng chữ, tranh luận sôi nổi về đoạn mở đầu.</div>
         </div>
-        <div class="tier-apple-card t25">
-          <div class="tier-label">Tầng 2.5 • Thể diện người lớn (Friction)</div>
-          <div class="tier-desc">"Ban đầu gồng lên bảo vệ ý kiến của mình vì sợ nhận sai trước mặt mọi người, nhưng trong bụng biết thừa luận điểm của bạn có lý hơn."</div>
-          <div class="tier-subnote">Giằng xé nội tâm: sợ bị người ngoài đánh giá làm màu hoặc thiếu chuyên nghiệp.</div>
+
+        <div class="tier-card">
+          <div class="tier-card-header">
+            <span class="tier-pill tier-pill-t25">TẦNG 2.5 • THỂ DIỆN</span>
+          </div>
+          <div class="tier-title">Mặt Nạ Người Lớn</div>
+          <div class="tier-desc">Ban đầu gồng lên bảo vệ ý kiến của mình vì sợ nhận sai trước mặt mọi người, nhưng trong bụng biết thừa luận điểm của bạn có lý hơn.</div>
         </div>
-        <div class="tier-apple-card t3">
-          <div class="tier-label">Tầng 3 • Tim đen ngượng miệng (Raw)</div>
-          <div class="tier-desc">"Sự thật ngượng miệng: cái tôi bảo thủ, sợ bị bóc mẽ là tư duy non nớt; nhưng khi dám mở lòng lắng nghe thì mới vỡ lẽ ra bao nhiêu điều hay ho."</div>
-          <div class="tier-subnote">Nỗi bất an sâu thẳm: điểm nghẽn cốt tử khiến người ta dừng lại xem video.</div>
+
+        <div class="tier-card">
+          <div class="tier-card-header">
+            <span class="tier-pill tier-pill-t3">TẦNG 3 • SỰ THẬT RAW</span>
+          </div>
+          <div class="tier-title">Nỗi Sợ Thầm Kín</div>
+          <div class="tier-desc">Sự thật ngượng miệng: cái tôi bảo thủ, sợ bị bóc mẽ là tư duy non nớt; nhưng khi dám mở lòng lắng nghe thì mới vỡ lẽ ra bao nhiêu điều hay ho.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- KHỐI 3: CHI TIẾT 5 CÚ MÁY PHÂN CẢNH (LIGHT) -->
-  <section class="cl-zebra-section cl-zebra--light" id="sec-storyboard">
-    <div class="cl-container apple-reveal">
-      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
-        <div>
-          <span class="cl-badge">03 / STORYBOARD STUDIO 9:16</span>
-          <h2 class="title-long">5 Cú Máy Băm Cảnh Trám Đổi 3 Trục</h2>
-        </div>
-        <span style="font-size: 12px; color: var(--cl-text-muted);">Bấm vào ảnh để xem chi tiết góc máy đạo diễn</span>
-      </div>
+  <!-- MÀN 3: 5 CÚ MÁY BĂM NHỎ -->
+  <section class="cl-zebra-section cl-zebra--light apple-reveal" id="section-beats">
+    <div class="cl-container">
+      <span class="cl-badge">Phân Cảnh Kỹ Thuật Đổi 3 Trục</span>
+      <h2 class="title-long">5 Cú Máy Băm Nhỏ • Chuẩn Khả Năng Tái Sử Dụng B-Roll</h2>
+      <p class="cl-lead">Mỗi shot là một lát cắt hành động độc lập mang tính ẩn dụ thị giác cao, phục vụ cho nhiều video marketing khác nhau.</p>
 
-      <div class="storyboard-grid-5">
+      <div class="beats-grid-apple">
         
         <div class="beat-card-apple">
-          <div class="beat-img-box" onclick="openLightbox('assets/frames_bai_tap_10/shot1.jpg', '1. Cúi người đứng chỉ tay vào trang kịch bản', '00:00 - 02.5s', 'Ngồi một mình thì tưởng ý tưởng của mình là nhất.', 'Anh Việt trong chiếc áo blazer linen cúi người trên bàn học, tay chỉ thẳng vào trang giấy kịch bản đang mở sẵn trước mặt bạn học.')">
-            <img src="assets/frames_bai_tap_10/shot1.jpg" alt="Cúi người đứng chỉ tay vào trang kịch bản" loading="lazy">
+          <div class="beat-img-box" onclick="openLightbox('assets/frames_bai_tap_10/shot1.jpg', '1. Cúi người chỉ tay vào trang kịch bản', '00:00 - 02.5s', 'Ngồi một mình thì tưởng ý tưởng của mình là nhất...', 'Anh Việt áo blazer linen cúi người trên bàn học, tay chỉ thẳng vào trang giấy kịch bản đang mở sẵn trước mặt bạn học.')">
+            <img src="assets/frames_bai_tap_10/shot1.jpg" alt="Cúi người chỉ tay vào trang kịch bản" loading="lazy">
             <span class="beat-badge">Trung cảnh (MCU)</span>
             <span class="beat-time">00:00 - 02.5s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-title">1. Cúi người đứng chỉ tay vào trang kịch bản</div>
-            <div class="beat-voice">🎙️ "Ngồi một mình thì tưởng ý tưởng của mình là nhất."</div>
+            <div class="beat-title">1. Cúi người chỉ tay vào trang kịch bản</div>
+            <div class="beat-voice">🎙️ "Ngồi một mình thì tưởng ý tưởng của mình là nhất..."</div>
             <table class="beat-specs">
               <tr><td class="spec-label">Cỡ cảnh</td><td class="spec-val">Trung cảnh (MCU)</td></tr>
               <tr><td class="spec-label">Góc máy</td><td class="spec-val">Ngang ngực</td></tr>
-              <tr><td class="spec-label">Hướng</td><td class="spec-val">Chếch 35° giữa hai người</td></tr>
+              <tr><td class="spec-label">Hướng</td><td class="spec-val">Chếch 35° giữa 2 người</td></tr>
             </table>
-            <div class="director-tip">💡 <b>Mẹo quay:</b> Anh Việt trong chiếc áo blazer linen cúi người trên bàn học, tay chỉ thẳng vào trang giấy kịch bản đang mở sẵn trước mặt bạn học.</div>
+            <div class="director-tip">💡 <b>Mẹo:</b> Anh Việt áo blazer linen cúi người trên bàn học, tay chỉ thẳng vào trang giấy kịch bản đang mở sẵn trước mặt bạn học.</div>
+            <div class="visual-logic-box">🎯 <b>Ẩn dụ:</b> Hành động chủ động giải thích, khơi mào cuộc thảo luận.</div>
+            <div><span class="reusability-tag">🔄 Tái sử dụng: Thảo luận chiến lược, trao đổi công việc, hướng dẫn 1-1.</span></div>
           </div>
         </div>
 
         <div class="beat-card-apple">
-          <div class="beat-img-box" onclick="openLightbox('assets/frames_bai_tap_10/shot2.jpg', '2. Bàn tay chỉ vào dòng chữ gạch đầu dòng', '02.5s - 04.5s', 'Đến lúc đem ra bàn luận với anh em...', 'Dí sát camera bắt ngón tay trỏ đang gõ nhẹ vào một dòng chữ chìa khóa, bạn ngồi bên cạnh cũng đặt tay lên mép vở lắng nghe.')">
-            <img src="assets/frames_bai_tap_10/shot2.jpg" alt="Bàn tay chỉ vào dòng chữ gạch đầu dòng" loading="lazy">
+          <div class="beat-img-box" onclick="openLightbox('assets/frames_bai_tap_10/shot2.jpg', '2. Ngón tay gõ nhịp lên dòng tiêu đề phản biện', '02.5s - 04.5s', 'Đến lúc đem ra trao đổi...', 'Dí sát camera bắt ngón tay trỏ đang gõ nhẹ lên dòng chữ tiêu đề phản biện, bạn ngồi bên cạnh chống cằm lắng nghe.')">
+            <img src="assets/frames_bai_tap_10/shot2.jpg" alt="Ngón tay gõ nhịp lên dòng tiêu đề phản biện" loading="lazy">
             <span class="beat-badge">Cận cảnh (CU)</span>
             <span class="beat-time">02.5s - 04.5s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-title">2. Bàn tay chỉ vào dòng chữ gạch đầu dòng</div>
-            <div class="beat-voice">🎙️ "Đến lúc đem ra bàn luận với anh em..."</div>
+            <div class="beat-title">2. Ngón tay gõ nhịp lên dòng tiêu đề phản biện</div>
+            <div class="beat-voice">🎙️ "Đến lúc đem ra trao đổi..."</div>
             <table class="beat-specs">
               <tr><td class="spec-label">Cỡ cảnh</td><td class="spec-val">Cận cảnh (CU)</td></tr>
               <tr><td class="spec-label">Góc máy</td><td class="spec-val">Góc nghiêng 45°</td></tr>
               <tr><td class="spec-label">Hướng</td><td class="spec-val">Mặt bàn học</td></tr>
             </table>
-            <div class="director-tip">💡 <b>Mẹo quay:</b> Dí sát camera bắt ngón tay trỏ đang gõ nhẹ vào một dòng chữ chìa khóa, bạn ngồi bên cạnh cũng đặt tay lên mép vở lắng nghe.</div>
+            <div class="director-tip">💡 <b>Mẹo:</b> Dí sát camera bắt ngón tay trỏ đang gõ nhẹ lên dòng chữ tiêu đề phản biện, bạn ngồi bên cạnh chống cằm lắng nghe.</div>
+            <div class="visual-logic-box">🎯 <b>Ẩn dụ:</b> Điểm nghẽn cần mổ xẻ, sự tập trung vào vấn đề cốt lõi.</div>
+            <div><span class="reusability-tag">🔄 Tái sử dụng: Mổ xẻ vấn đề, tìm lỗi sai, phản biện chuyên môn.</span></div>
           </div>
         </div>
 
         <div class="beat-card-apple">
-          <div class="beat-img-box" onclick="openLightbox('assets/frames_bai_tap_10/shot3.jpg', '3. Đặc tả nét vẽ sơ đồ 4 bước trên giấy', '04.5s - 07.0s', '...người ta bóc cho vài câu mới thấy hổng toe toét...', 'Lấy nét căng vào sơ đồ mũi tên vẽ tay nối các ô 'Hook ➔ Nỗi đau ➔ Bẻ lái ➔ Hành động' đầy sống động trên trang giấy kẻ ô.')">
-            <img src="assets/frames_bai_tap_10/shot3.jpg" alt="Đặc tả nét vẽ sơ đồ 4 bước trên giấy" loading="lazy">
+          <div class="beat-img-box" onclick="openLightbox('assets/frames_bai_tap_10/shot3.jpg', '3. Ngòi bút vẽ nét mũi tên nối sơ đồ 4 bước', '04.5s - 07.0s', '...người ta chỉ cho vài điểm mới thấy lủng củng...', 'Lấy nét căng vào sơ đồ mũi tên vẽ tay nối các ô 'Hook ➔ Nỗi đau ➔ Bẻ lái ➔ Hành động' đầy sống động trên trang giấy kẻ ô.')">
+            <img src="assets/frames_bai_tap_10/shot3.jpg" alt="Ngòi bút vẽ nét mũi tên nối sơ đồ 4 bước" loading="lazy">
             <span class="beat-badge">Đặc tả (Macro ECU)</span>
             <span class="beat-time">04.5s - 07.0s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-title">3. Đặc tả nét vẽ sơ đồ 4 bước trên giấy</div>
-            <div class="beat-voice">🎙️ "...người ta bóc cho vài câu mới thấy hổng toe toét..."</div>
+            <div class="beat-title">3. Ngòi bút vẽ nét mũi tên nối sơ đồ 4 bước</div>
+            <div class="beat-voice">🎙️ "...người ta chỉ cho vài điểm mới thấy lủng củng..."</div>
             <table class="beat-specs">
               <tr><td class="spec-label">Cỡ cảnh</td><td class="spec-val">Đặc tả (Macro ECU)</td></tr>
               <tr><td class="spec-label">Góc máy</td><td class="spec-val">Thẳng đứng 80°</td></tr>
               <tr><td class="spec-label">Hướng</td><td class="spec-val">Chính diện trang sổ</td></tr>
             </table>
-            <div class="director-tip">💡 <b>Mẹo quay:</b> Lấy nét căng vào sơ đồ mũi tên vẽ tay nối các ô 'Hook ➔ Nỗi đau ➔ Bẻ lái ➔ Hành động' đầy sống động trên trang giấy kẻ ô.</div>
+            <div class="director-tip">💡 <b>Mẹo:</b> Lấy nét căng vào sơ đồ mũi tên vẽ tay nối các ô 'Hook ➔ Nỗi đau ➔ Bẻ lái ➔ Hành động' đầy sống động trên trang giấy kẻ ô.</div>
+            <div class="visual-logic-box">🎯 <b>Ẩn dụ:</b> Biến ý tưởng lộn xộn thành cấu trúc logic mạch lạc.</div>
+            <div><span class="reusability-tag">🔄 Tái sử dụng: Tư duy hệ thống, sơ đồ hóa giải pháp, cấu trúc nội dung.</span></div>
           </div>
         </div>
 
         <div class="beat-card-apple">
-          <div class="beat-img-box" onclick="openLightbox('assets/frames_bai_tap_10/shot4.jpg', '4. Góc nhìn hai khuôn mặt cùng hướng về một điểm', '07.0s - 09.5s', 'Nhưng có cọ xát...', 'Bắt biểu cảm của bạn học đang gật gù ngẫm nghĩ, đối chiếu với nụ cười cởi mở đầy năng lượng của anh Việt đang giải thích.')">
-            <img src="assets/frames_bai_tap_10/shot4.jpg" alt="Góc nhìn hai khuôn mặt cùng hướng về một điểm" loading="lazy">
+          <div class="beat-img-box" onclick="openLightbox('assets/frames_bai_tap_10/shot4.jpg', '4. Hai khuôn mặt cùng hướng về một trang giấy', '07.0s - 09.5s', '...Nhưng có va chạm...', 'Bắt biểu cảm của bạn học đang gật gù ngẫm nghĩ, đối chiếu với nụ cười cởi mở đầy năng lượng của anh Việt đang giải thích.')">
+            <img src="assets/frames_bai_tap_10/shot4.jpg" alt="Hai khuôn mặt cùng hướng về một trang giấy" loading="lazy">
             <span class="beat-badge">Góc hai người (Two-shot)</span>
             <span class="beat-time">07.0s - 09.5s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-title">4. Góc nhìn hai khuôn mặt cùng hướng về một điểm</div>
-            <div class="beat-voice">🎙️ "Nhưng có cọ xát..."</div>
+            <div class="beat-title">4. Hai khuôn mặt cùng hướng về một trang giấy</div>
+            <div class="beat-voice">🎙️ "...Nhưng có va chạm..."</div>
             <table class="beat-specs">
               <tr><td class="spec-label">Cỡ cảnh</td><td class="spec-val">Góc hai người (Two-shot)</td></tr>
               <tr><td class="spec-label">Góc máy</td><td class="spec-val">Ngang cằm</td></tr>
               <tr><td class="spec-label">Hướng</td><td class="spec-val">Bắt tương tác hai bên</td></tr>
             </table>
-            <div class="director-tip">💡 <b>Mẹo quay:</b> Bắt biểu cảm của bạn học đang gật gù ngẫm nghĩ, đối chiếu với nụ cười cởi mở đầy năng lượng của anh Việt đang giải thích.</div>
+            <div class="director-tip">💡 <b>Mẹo:</b> Bắt biểu cảm của bạn học đang gật gù ngẫm nghĩ, đối chiếu với nụ cười cởi mở đầy năng lượng của anh Việt đang giải thích.</div>
+            <div class="visual-logic-box">🎯 <b>Ẩn dụ:</b> Sự đồng điệu và thấu hiểu sau khi cởi bỏ định kiến.</div>
+            <div><span class="reusability-tag">🔄 Tái sử dụng: Sự thấu hiểu, thống nhất quan điểm giữa đồng đội.</span></div>
           </div>
         </div>
 
         <div class="beat-card-apple">
-          <div class="beat-img-box" onclick="openLightbox('assets/frames_bai_tap_10/shot5.jpg', '5. Đập tay tán thưởng chốt xong phương án', '09.5s - 12.0s', '...thì mới gọt sắc được thông điệp! 🤝', 'Bắt trọn khoảnh khắc hai bàn tay đập nhẹ vào nhau (High-five) trên mặt bàn, nụ cười đồng thuận rạng rỡ: 'Chốt kịch bản này, bao cuốn!'')">
-            <img src="assets/frames_bai_tap_10/shot5.jpg" alt="Đập tay tán thưởng chốt xong phương án" loading="lazy">
+          <div class="beat-img-box" onclick="openLightbox('assets/frames_bai_tap_10/shot5.jpg', '5. Hai bàn tay đập nhẹ (High-five) trên mặt bàn', '09.5s - 12.0s', '...thì mới gọt sắc được thông điệp!', 'Bắt trọn khoảnh khắc hai bàn tay đập nhẹ vào nhau (High-five) ngay trên cuốn sổ kịch bản, nụ cười đồng thuận rạng rỡ.')">
+            <img src="assets/frames_bai_tap_10/shot5.jpg" alt="Hai bàn tay đập nhẹ (High-five) trên mặt bàn" loading="lazy">
             <span class="beat-badge">Góc thấp (Low Angle)</span>
             <span class="beat-time">09.5s - 12.0s</span>
           </div>
           <div class="beat-content">
-            <div class="beat-title">5. Đập tay tán thưởng chốt xong phương án</div>
-            <div class="beat-voice">🎙️ "...thì mới gọt sắc được thông điệp! 🤝"</div>
+            <div class="beat-title">5. Hai bàn tay đập nhẹ (High-five) trên mặt bàn</div>
+            <div class="beat-voice">🎙️ "...thì mới gọt sắc được thông điệp!"</div>
             <table class="beat-specs">
               <tr><td class="spec-label">Cỡ cảnh</td><td class="spec-val">Góc thấp (Low Angle)</td></tr>
               <tr><td class="spec-label">Góc máy</td><td class="spec-val">Hất lên từ mép bàn</td></tr>
               <tr><td class="spec-label">Hướng</td><td class="spec-val">Chính diện</td></tr>
             </table>
-            <div class="director-tip">💡 <b>Mẹo quay:</b> Bắt trọn khoảnh khắc hai bàn tay đập nhẹ vào nhau (High-five) trên mặt bàn, nụ cười đồng thuận rạng rỡ: 'Chốt kịch bản này, bao cuốn!'</div>
+            <div class="director-tip">💡 <b>Mẹo:</b> Bắt trọn khoảnh khắc hai bàn tay đập nhẹ vào nhau (High-five) ngay trên cuốn sổ kịch bản, nụ cười đồng thuận rạng rỡ.</div>
+            <div class="visual-logic-box">🎯 <b>Ẩn dụ:</b> Chốt xong phương án hoàn hảo, tinh thần đồng đội thăng hoa.</div>
+            <div><span class="reusability-tag">🔄 Tái sử dụng: Chốt thỏa thuận, ăn mừng đồng thuận, hoàn thành hợp tác.</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- KHỐI 4: GỢI Ý BỐI CẢNH QUAY LẠI (TINT) -->
-  <section class="cl-zebra-section cl-zebra--tint" id="sec-reshoot">
-    <div class="cl-container apple-reveal">
-      <span class="cl-badge">04 / BÀI TẬP VỀ NHÀ THỰC CHIẾN</span>
-      <h2 class="title-long">3 Bối Cảnh Thực Tế Để Quay Lại Khi Rời Lớp Học</h2>
-      <p class="cl-lead">Khi đã nắm chắc phản xạ băm nhỏ 5 cỡ cảnh tại lớp, học viên có thể xách máy ra quay lại ở bất kỳ không gian nào dưới đây.</p>
+  <!-- MÀN 4: GỢI Ý BỐI CẢNH TÁI SỬ DỤNG -->
+  <section class="cl-zebra-section cl-zebra--tint apple-reveal">
+    <div class="cl-container">
+      <span class="cl-badge">Mở Rộng Không Gian</span>
+      <h2 class="title-long">3 Bối Cảnh Tái Sử Dụng Minh Họa Ngoài Lớp Học</h2>
+      <p class="cl-lead">Khi quay video cá nhân hoặc video thương hiệu, bạn có thể bê nguyên xi 5 cú máy này ra các không gian sau:</p>
 
       <div class="reshoot-grid">
         
@@ -655,9 +616,9 @@
       <div class="lightbox-info">
         <button class="lightbox-close" onclick="closeLightbox()">✕</button>
         <span class="cl-badge" id="lb-time">00:00 - 02.5s</span>
-        <h3 id="lb-title" style="font-size: 18px; font-weight: 800;">Tiêu đề</h3>
+        <h3 id="lb-title" style="font-size: 18px; font-weight: 800; margin-bottom: 8px;">Tiêu đề</h3>
         <div class="beat-voice" id="lb-voice" style="margin: 8px 0;">Lời thoại</div>
-        <div class="director-tip" id="lb-tip" style="background: rgba(255,255,255,0.06); color:#cbd5e1;">Mẹo</div>
+        <div class="director-tip" id="lb-tip" style="background: rgba(255,255,255,0.06); color:#cbd5e1; margin-top: 12px;">Mẹo</div>
       </div>
     </div>
   </div>
@@ -665,9 +626,10 @@
   <div class="toast" id="toast-msg">Đã sao chép kịch bản voice-over!</div>
 
   <script>
-    // Copy Voiceover text
     function copyVoiceText() {
-      const text = document.getElementById('voice-text').innerText.replace(/^"|"$/g, '').trim();
+      const text = `Ngồi một mình thì tưởng ý tưởng của mình là nhất...
+Đến lúc đem ra trao đổi, người ta chỉ cho vài điểm mới thấy lủng củng.
+...Nhưng có va chạm thì mới gọt sắc được thông điệp!`.replace(/^"|"$/g, '').trim();
       navigator.clipboard.writeText(text).then(() => {
         const toast = document.getElementById('toast-msg');
         toast.classList.add('show');
@@ -675,13 +637,12 @@
       });
     }
 
-    // Lightbox functions
     function openLightbox(imgSrc, title, time, voice, tip) {
       document.getElementById('lb-img').src = imgSrc;
       document.getElementById('lb-title').innerText = title;
       document.getElementById('lb-time').innerText = time;
       document.getElementById('lb-voice').innerText = '🎙️ ' + voice;
-      document.getElementById('lb-tip').innerHTML = '💡 <b>Mẹo quay:</b> ' + tip;
+      document.getElementById('lb-tip').innerHTML = '💡 <b>Mẹo quay & Đạo cụ:</b> ' + tip;
       document.getElementById('lb-modal').classList.add('active');
     }
 
@@ -689,7 +650,6 @@
       document.getElementById('lb-modal').classList.remove('active');
     }
 
-    // Apple reveal animation on scroll
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
