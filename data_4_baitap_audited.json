@@ -2,7 +2,7 @@
   "project": {
     "title": "Hệ thống 4 Bài tập Thực chiến • Băm Cảnh Trám Lớp Marketing PT",
     "mentor": "Nguyễn Đức Việt",
-    "style_guide": "Chuẩn văn phong Ông Giáo chân thật, mộc mạc, tôn trọng, tự trào nhẹ nhàng, kết bài có nụ cười",
+    "style_guide": "Chuẩn văn phong thực chiến chân thật, mộc mạc, tôn trọng, tự trào nhẹ nhàng, kết bài có nụ cười",
     "format": "9:16 Vertical Smartphone Cinematic (Băm 1 hành động gốc thành 5 cú máy ngắn 2.0s - 2.5s)",
     "version": "2.0-Audited-DeFluffed"
   },
@@ -337,13 +337,13 @@
       },
       "root_action": "Học viên đang cắm cúi lướt điện thoại dưới gầm bàn thì nghe thầy giảng chạm trúng tim đen lỗi sai của mình, ngón tay khựng lại, ngẩng phắt mặt nhìn slide ghi chép.",
       "voiceover": {
-        "raw_text": "Ngồi dưới lớp lướt máy, bụng bảo dạ mấy trò này mình biết thừa... Nghe ông giáo bóc đúng cái dở của mình tuần trước, giật thót cả người! Thôi cất máy, ghi vội lại... không mai về lại đâu vào đấy! 😄",
+        "raw_text": "Ngồi dưới lớp lướt máy, bụng bảo dạ mấy trò này mình biết thừa... Nghe bóc đúng cái dở của mình tuần trước, giật thót cả người! Thôi cất máy, ghi vội lại... không mai về lại đâu vào đấy! 😄",
         "formatted_lines": [
           "Ngồi dưới lớp lướt máy, bụng bảo dạ mấy trò này mình biết thừa...",
-          "Nghe ông giáo bóc đúng cái dở của mình tuần trước, giật thót cả người!",
+          "Nghe bóc đúng cái dở của mình tuần trước, giật thót cả người!",
           "Thôi cất máy, ghi vội lại... không mai về lại đâu vào đấy! 😄"
         ],
-        "formatted_html": "Ngồi dưới lớp lướt máy, bụng bảo dạ mấy trò này mình biết thừa...<br>Nghe ông giáo bóc đúng cái dở của mình tuần trước, giật thót cả người!<br>Thôi cất máy, ghi vội lại... không mai về lại đâu vào đấy! 😄"
+        "formatted_html": "Ngồi dưới lớp lướt máy, bụng bảo dạ mấy trò này mình biết thừa...<br>Nghe bóc đúng cái dở của mình tuần trước, giật thót cả người!<br>Thôi cất máy, ghi vội lại... không mai về lại đâu vào đấy! 😄"
       },
       "four_tiers": {
         "t1_safe": {
@@ -360,8 +360,8 @@
         },
         "t25_friction": {
           "label": "Tầng 2.5 • Vị thế & Thể diện (Điểm nghẽn cốt tử)",
-          "quote": "Sợ mở sổ ghi chép cặm cụi thì bị bạn bè nghĩ mình gà mờ. Nghe ông giáo điểm trúng cái lỗi ngớ ngẩn mình vừa làm tuần trước, mặt nóng bừng, lén cất máy rồi vờ như đang chăm chú nghe từ đầu!",
-          "formatted_html": "Sợ mở sổ ghi chép cặm cụi thì bị bạn bè nghĩ mình gà mờ.<br>Nghe ông giáo điểm trúng cái lỗi ngớ ngẩn mình vừa làm tuần trước,<br>mặt nóng bừng, lén cất máy rồi vờ như đang chăm chú nghe từ đầu!",
+          "quote": "Sợ mở sổ ghi chép cặm cụi thì bị bạn bè nghĩ mình gà mờ. Nghe điểm trúng cái lỗi ngớ ngẩn mình vừa làm tuần trước, mặt nóng bừng, lén cất máy rồi vờ như đang chăm chú nghe từ đầu!",
+          "formatted_html": "Sợ mở sổ ghi chép cặm cụi thì bị bạn bè nghĩ mình gà mờ.<br>Nghe điểm trúng cái lỗi ngớ ngẩn mình vừa làm tuần trước,<br>mặt nóng bừng, lén cất máy rồi vờ như đang chăm chú nghe từ đầu!",
           "badge": "Cái cớ giữ thể diện: diễn kịch sành sỏi đến khi bị đánh trúng điểm yếu."
         },
         "t3_raw": {
@@ -390,7 +390,7 @@
           "shot_type": "Cận cảnh (CU)",
           "angle": "Ngang mép bàn",
           "direction": "Trực diện ngón tay",
-          "voice_sync": "Nghe ông giáo bóc đúng cái dở của mình tuần trước...",
+          "voice_sync": "Nghe bóc đúng cái dở của mình tuần trước...",
           "director_note": "Hạ máy sát mép bàn, bắt trọn ngón tay cái đang vuốt màn hình bỗng khựng lại giữa chừng. Một nhịp đứng hình vô cùng đắt giá báo hiệu sự thức tỉnh khi nghe chạm đúng tim đen.",
           "img_path": "assets/frames_bai_tap_04/shot2.jpg"
         },
