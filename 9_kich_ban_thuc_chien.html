@@ -2,2816 +2,977 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🏛️ Master Hub • Tổng Hợp Toàn Bộ Kịch Bản Thực Chiến Lớp Offline | FEDU AI Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>9 Bài Tập Thực Hành Tại Lớp • Bóc Trần Tầng 2.5 & Làm Video Voice-Over Đầu Tiên | VIDEO Offline</title>
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700;800&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+  
   <style>
-    :root {
-      --bg-main: #060911;
-      --bg-surface: #0c121e;
-      --bg-card: #111a2b;
-      --bg-card-hover: #162238;
-      --card-inner: #17243c;
-      --border-subtle: rgba(255, 255, 255, 0.08);
-      --border-accent: rgba(56, 189, 248, 0.35);
-      --border-glow: rgba(56, 189, 248, 0.6);
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --text-dim: #64748b;
-      --cyan: #38bdf8;
-      --cyan-glow: rgba(56, 189, 248, 0.16);
-      --amber: #f59e0b;
-      --amber-glow: rgba(245, 158, 11, 0.16);
-      --emerald: #10b981;
-      --emerald-glow: rgba(16, 185, 129, 0.16);
-      --rose: #f43f5e;
-      --rose-glow: rgba(244, 63, 94, 0.16);
-      --purple: #a855f7;
-      --purple-glow: rgba(168, 85, 247, 0.16);
-      --radius-sm: 8px;
-      --radius-md: 14px;
-      --radius-lg: 20px;
-      --radius-full: 9999px;
-      --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.4);
-      --shadow-hover: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(56, 189, 248, 0.2);
+    @font-face {
+      font-family: 'FD Aeonik Extended';
+      src: url('./fonts/FDAeonikExtended-Bold.woff2') format('woff2'),
+           url('./fonts/FDAeonikExtended-Bold.ttf') format('truetype'),
+           local('FD Aeonik Extended Bold');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'FD Aeonik';
+      src: url('./fonts/FDAeonikRegular.ttf') format('truetype'),
+           local('FD Aeonik Regular');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'FD Aeonik';
+      src: url('./fonts/FDAeonikBold.ttf') format('truetype'),
+           local('FD Aeonik Bold');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Tiempos Text';
+      src: url('./fonts/FDTiemposText-Regular.otf') format('opentype'),
+           local('Tiempos Text Regular');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    
+    :root {
+      --font-display: 'FD Aeonik Extended', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-body: 'FD Aeonik', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-serif: 'Tiempos Text', Georgia, serif;
+      --font-mono: 'JetBrains Mono', monospace;
+
+      --cl-white: #ffffff;
+      --cl-light-tint: #f8fafc;
+      --cl-slate-50: #f8fafc;
+      --cl-slate-100: #f1f5f9;
+      --cl-slate-200: #e2e8f0;
+      --cl-slate-300: #cbd5e1;
+      --cl-slate-400: #94a3b8;
+      --cl-slate-500: #64748b;
+      --cl-slate-600: #475569;
+      --cl-slate-700: #334155;
+      --cl-slate-800: #1e293b;
+      --cl-slate-900: #0f172a;
+      --cl-slate-950: #020617;
+
+      --cl-blue: #0284c7;
+      --cl-blue-dark: #0369a1;
+      --cl-blue-bg: rgba(2, 132, 199, 0.08);
+
+      --cl-purple: #7c3aed;
+      --cl-purple-bg: rgba(124, 58, 237, 0.08);
+
+      --cl-danger: #dc2626;
+      --cl-danger-bg: rgba(220, 38, 38, 0.08);
+
+      --cl-amber: #d97706;
+      --cl-amber-bg: rgba(217, 119, 6, 0.08);
+
+      --cl-success: #16a34a;
+      --cl-success-bg: rgba(22, 163, 74, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
     html {
       scroll-behavior: smooth;
     }
 
     body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: var(--bg-main);
-      background-image: 
-        radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.1) 0%, transparent 65%),
-        radial-gradient(circle at 10% 40%, rgba(168, 85, 247, 0.05) 0%, transparent 45%),
-        radial-gradient(circle at 90% 70%, rgba(16, 185, 129, 0.05) 0%, transparent 45%);
-      background-attachment: fixed;
-      color: var(--text-main);
+      background-color: var(--cl-white);
+      color: var(--cl-slate-900);
+      font-family: var(--font-body);
+      font-size: 16px;
       line-height: 1.6;
-      padding-bottom: 120px;
-      -webkit-font-smoothing: antialiased;
     }
 
-    .container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    /* TOP STICKY BAR */
-    .top-header {
+    /* Top Nav */
+    .top-nav {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(6, 9, 17, 0.92);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border-subtle);
-      padding: 12px 24px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 16px;
-      transition: all 0.2s ease;
+      justify-content: space-between;
+      height: 60px;
+      padding: 0 24px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: saturate(180%) blur(16px);
+      -webkit-backdrop-filter: saturate(180%) blur(16px);
+      border-bottom: 1px solid var(--cl-slate-200);
     }
 
-    .brand-group {
+    .top-nav__brand {
       display: flex;
       align-items: center;
       gap: 12px;
-      text-decoration: none;
     }
 
-    .brand-badge {
-      background: linear-gradient(135deg, #0284c7, #2563eb);
-      color: #fff;
+    .top-nav__badge {
+      font-family: var(--font-display);
       font-size: 11px;
-      font-weight: 800;
-      padding: 5px 12px;
-      border-radius: var(--radius-sm);
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
-    }
-
-    .brand-title {
-      font-size: 15px;
-      font-weight: 800;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .brand-title span {
-      color: var(--cyan);
-    }
-
-    .header-nav {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .nav-link {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      color: var(--text-muted);
-      font-size: 12.5px;
-      font-weight: 600;
-      padding: 7px 14px;
-      border-radius: var(--radius-sm);
-      text-decoration: none;
-      transition: all 0.2s;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .nav-link:hover, .nav-link.active {
-      background: var(--cyan);
-      color: #060911;
-      border-color: var(--cyan);
       font-weight: 700;
+      color: #ffffff;
+      background: var(--cl-slate-900);
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
     }
 
-    .nav-link.highlight {
-      border-color: rgba(56, 189, 248, 0.4);
-      background: var(--cyan-glow);
-      color: var(--cyan);
-    }
-    .nav-link.highlight:hover {
-      background: var(--cyan);
-      color: #060911;
+    .top-nav__title {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--cl-slate-900);
     }
 
-    /* HERO BANNER */
-    .hero {
-      background: linear-gradient(180deg, rgba(17, 26, 43, 0.9) 0%, rgba(12, 18, 30, 0.95) 100%);
-      border: 1px solid rgba(56, 189, 248, 0.25);
-      border-radius: var(--radius-lg);
-      padding: 44px 36px 36px;
-      margin: 24px 0 32px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+    .top-nav__actions {
+      display: flex;
+      gap: 12px;
     }
 
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle at center, rgba(56, 189, 248, 0.08) 0%, transparent 60%);
-      pointer-events: none;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--cyan-glow);
-      color: var(--cyan);
-      border: 1px solid rgba(56, 189, 248, 0.4);
-      padding: 6px 18px;
-      border-radius: var(--radius-full);
+    .btn-nav {
+      font-family: var(--font-mono);
       font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.6px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      border: 1px solid var(--cl-slate-200);
+      color: var(--cl-slate-700);
+      background: #ffffff;
+      transition: all 0.15s ease;
+    }
+
+    .btn-nav:hover {
+      background: var(--cl-slate-100);
+      color: var(--cl-slate-900);
+    }
+
+    /* Hero Section */
+    .hub-hero {
+      padding: 64px 24px 48px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hub-hero__badge {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
       text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--cl-blue);
+      background: var(--cl-blue-bg);
+      padding: 6px 14px;
+      border-radius: 999px;
       margin-bottom: 16px;
     }
 
-    .hero h1 {
-      font-size: clamp(26px, 3.2vw, 38px);
-      font-weight: 900;
-      color: #ffffff;
-      margin-bottom: 14px;
-      line-height: 1.25;
-      letter-spacing: -0.5px;
-    }
-
-    .hero-desc {
-      color: #cbd5e1;
-      font-size: 15.5px;
-      max-width: 880px;
-      margin: 0 auto 28px;
-      line-height: 1.7;
-    }
-
-    .hero-desc b {
-      color: var(--cyan);
-    }
-
-    /* STATS GRID */
-    .stats-bar {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 16px;
-      background: rgba(6, 9, 17, 0.65);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 18px 24px;
-      max-width: 960px;
-      margin: 0 auto;
-    }
-
-    .stat-item {
-      text-align: center;
-      position: relative;
-    }
-
-    .stat-item:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      right: -8px;
-      top: 15%;
-      height: 70%;
-      width: 1px;
-      background: var(--border-subtle);
-    }
-
-    @media (max-width: 768px) {
-      .stat-item:not(:last-child)::after { display: none; }
-    }
-
-    .stat-number {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 30px;
-      font-weight: 800;
-      color: #ffffff;
-      line-height: 1.1;
-    }
-
-    .stat-number span {
-      color: var(--cyan);
-    }
-
-    .stat-label {
-      font-size: 11.5px;
+    .hub-hero__h1 {
+      font-family: var(--font-display);
+      font-size: clamp(30px, 4.5vw, 52px);
       font-weight: 700;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      margin-top: 4px;
-      letter-spacing: 0.5px;
-    }
-
-    /* METHODOLOGY SECTION (3 TẦNG & BĂM CẢNH TRÁM) */
-    .methodology-box {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      padding: 24px 28px;
-      margin-bottom: 32px;
-    }
-
-    .methodology-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      color: var(--cl-slate-950);
       margin-bottom: 20px;
-      cursor: pointer;
-      user-select: none;
     }
 
-    .methodology-title {
-      font-size: 16px;
-      font-weight: 800;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .toggle-icon {
-      font-size: 14px;
-      color: var(--cyan);
-      transition: transform 0.2s ease;
-    }
-
-    .methodology-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
-    }
-
-    .method-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 18px 20px;
-      position: relative;
-      border-top: 4px solid;
-    }
-
-    .method-card.m1 { border-top-color: var(--rose); }
-    .method-card.m2 { border-top-color: var(--amber); }
-    .method-card.m25 { border-top-color: var(--purple); }
-    .method-card.m3 { border-top-color: var(--emerald); }
-    .method-card.m4 { border-top-color: var(--cyan); }
-
-    .method-label {
-      font-size: 11.5px;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .method-card.m1 .method-label { color: var(--rose); }
-    .method-card.m2 .method-label { color: var(--amber); }
-    .method-card.m25 .method-label { color: var(--purple); }
-    .method-card.m3 .method-label { color: var(--emerald); }
-    .method-card.m4 .method-label { color: var(--cyan); }
-
-    .method-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 6px;
-    }
-
-    .method-desc {
-      font-size: 12.5px;
-      color: var(--text-muted);
+    .hub-hero__lead {
+      font-family: var(--font-serif);
+      font-size: clamp(17px, 2.2vw, 22px);
+      font-style: italic;
+      color: var(--cl-slate-700);
+      max-width: 860px;
+      margin: 0 auto 32px;
       line-height: 1.55;
     }
 
-    /* CONTROLS & FILTER BAR */
-    .controls-bar {
-      position: sticky;
-      top: 60px;
-      z-index: 900;
-      background: rgba(6, 9, 17, 0.95);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 12px 18px;
-      margin-bottom: 28px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-    }
-
-    .filter-tabs {
-      display: flex;
-      gap: 8px;
-      overflow-x: auto;
-      padding-bottom: 2px;
-    }
-
-    .filter-tab {
-      white-space: nowrap;
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      color: var(--text-muted);
-      padding: 8px 16px;
-      border-radius: var(--radius-sm);
-      font-size: 12.5px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .filter-tab:hover {
-      background: var(--card-inner);
-      color: #ffffff;
-    }
-
-    .filter-tab.active {
-      background: linear-gradient(135deg, #0284c7, #2563eb);
-      color: #ffffff;
-      border-color: var(--cyan);
-      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
-    }
-
-    .search-box {
-      position: relative;
-      min-width: 280px;
-      flex: 1;
-      max-width: 420px;
-    }
-
-    .search-input {
-      width: 100%;
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      padding: 9px 14px 9px 36px;
-      color: #ffffff;
-      font-size: 13px;
-      outline: none;
-      transition: all 0.2s;
-    }
-
-    .search-input:focus {
-      border-color: var(--cyan);
-      box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
-      background: var(--bg-surface);
-    }
-
-    .search-icon {
-      position: absolute;
-      left: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--text-dim);
-      font-size: 14px;
-      pointer-events: none;
-    }
-
-    /* SCRIPT CARDS GRID */
-    .scripts-grid {
+    /* Formula Banner */
+    .hub-formula-banner {
+      background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+      border: 1px solid #bae6fd;
+      border-radius: 16px;
+      padding: 24px 32px;
+      max-width: 960px;
+      margin: 0 auto 48px;
+      text-align: left;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
     }
 
-    @media (max-width: 960px) {
-      .scripts-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* SCRIPT CARD COMPONENT */
-    .script-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      padding: 22px;
+    .formula-step {
       display: flex;
-      flex-direction: column;
-      gap: 16px;
-      transition: all 0.25s ease;
-      position: relative;
-      overflow: hidden;
-      box-shadow: var(--shadow-card);
+      gap: 14px;
     }
 
-    .script-card:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-hover);
-    }
-
-    /* Card Top: Thumb + Headers */
-    .card-top {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-    }
-
-    .card-thumb-wrap {
-      flex: 0 0 115px;
-      aspect-ratio: 9 / 16;
-      border-radius: var(--radius-sm);
-      overflow: hidden;
-      background: #000;
-      position: relative;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      cursor: pointer;
-    }
-
-    .card-thumb-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .card-thumb-wrap:hover img {
-      transform: scale(1.06);
-    }
-
-    .thumb-badge-duration {
-      position: absolute;
-      bottom: 6px;
-      right: 6px;
-      background: rgba(0, 0, 0, 0.85);
-      color: #fff;
-      font-size: 9px;
-      font-weight: 700;
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-family: 'JetBrains Mono', monospace;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .card-info {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .card-tag-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .code-pill {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 10.5px;
-      font-weight: 800;
-      background: rgba(56, 189, 248, 0.15);
-      color: var(--cyan);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      padding: 2px 8px;
-      border-radius: 4px;
-      text-transform: uppercase;
-    }
-
-    .category-pill {
-      font-size: 10px;
-      font-weight: 800;
-      padding: 2px 8px;
-      border-radius: 4px;
-      text-transform: uppercase;
-      letter-spacing: 0.4px;
-      border: 1px solid;
-    }
-
-    .card-title {
-      font-size: 18px;
-      font-weight: 800;
-      line-height: 1.35;
-      color: #ffffff;
-      margin-top: 2px;
-    }
-
-    .card-title a {
-      color: #ffffff;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .card-title a:hover {
-      color: var(--cyan);
-    }
-
-    .meta-line {
-      font-size: 12px;
-      color: var(--text-muted);
-      line-height: 1.45;
-    }
-
-    .meta-line b {
-      color: var(--text-main);
-    }
-
-    /* 3 Tiers Box inside card */
-    .tiers-box {
-      background: rgba(0, 0, 0, 0.28);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      padding: 12px 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .tier-row {
-      font-size: 12px;
-      line-height: 1.45;
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-    }
-
-    .tier-tag {
-      font-size: 10px;
-      font-weight: 800;
-      padding: 2px 6px;
-      border-radius: 4px;
-      white-space: nowrap;
-      text-transform: uppercase;
-      letter-spacing: 0.3px;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-
-    .tier-tag.t1 { background: var(--rose-glow); color: var(--rose); border: 1px solid rgba(244, 63, 94, 0.3); }
-    .tier-tag.t2 { background: var(--amber-glow); color: var(--amber); border: 1px solid rgba(245, 158, 11, 0.3); }
-    .tier-tag.t25 { background: var(--purple-glow); color: var(--purple); border: 1px solid rgba(168, 85, 247, 0.35); font-weight: 900; }
-    .tier-tag.t3 { background: var(--emerald-glow); color: var(--emerald); border: 1px solid rgba(16, 185, 129, 0.3); }
-
-    .tier-content {
-      color: #cbd5e1;
-      font-size: 12.5px;
-    }
-
-    /* Hook Highlight Quote */
-    .hook-quote {
-      background: linear-gradient(90deg, rgba(56, 189, 248, 0.08) 0%, rgba(0,0,0,0.3) 100%);
-      border-left: 3px solid var(--cyan);
-      padding: 10px 14px;
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-    }
-
-    .hook-label {
-      font-size: 10.5px;
-      font-weight: 800;
-      color: var(--cyan);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 2px;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .hook-text {
-      font-size: 13px;
-      color: #ffffff;
-      font-weight: 600;
-      font-style: italic;
-    }
-
-    /* Accordion 5 Scenes */
-    .accordion-trigger {
-      background: var(--card-inner);
-      border: 1px solid var(--border-subtle);
-      color: var(--text-muted);
-      padding: 7px 12px;
-      border-radius: var(--radius-sm);
-      font-size: 12px;
-      font-weight: 700;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: all 0.2s;
-    }
-
-    .accordion-trigger:hover {
-      background: rgba(56, 189, 248, 0.1);
-      color: #ffffff;
-      border-color: rgba(56, 189, 248, 0.3);
-    }
-
-    .accordion-content {
-      display: none;
-      margin-top: 8px;
-      background: rgba(0, 0, 0, 0.35);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      padding: 10px;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .accordion-content.open {
-      display: flex;
-    }
-
-    .scene-item {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      padding-bottom: 6px;
-      font-size: 12px;
-    }
-    .scene-item:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .scene-badge-line {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 2px;
-    }
-
-    .scene-pill {
-      font-size: 10px;
-      font-weight: 700;
-      color: var(--cyan);
-    }
-
-    .scene-time {
-      font-size: 10px;
-      font-family: 'JetBrains Mono', monospace;
-      color: var(--text-dim);
-    }
-
-    .scene-visual {
-      color: var(--text-muted);
-      font-size: 11.5px;
-      margin-bottom: 2px;
-    }
-
-    .scene-voice {
-      color: #f1f5f9;
-      font-weight: 600;
-      font-size: 12px;
-    }
-
-    /* Card Footer & Action CTA */
-    .card-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      margin-top: auto;
-      padding-top: 14px;
-      border-top: 1px solid var(--border-subtle);
-      flex-wrap: wrap;
-    }
-
-    .btn-view-storyboard {
-      flex: 1;
-      background: linear-gradient(135deg, #0284c7, #2563eb);
-      color: #ffffff !important;
-      font-size: 12.5px;
-      font-weight: 800;
-      padding: 9px 16px;
-      border-radius: var(--radius-sm);
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
-      border: 1px solid rgba(56, 189, 248, 0.5);
-      transition: all 0.2s ease;
-      white-space: nowrap;
-    }
-
-    .btn-view-storyboard:hover {
-      background: var(--cyan);
-      color: #060911 !important;
-      box-shadow: 0 6px 20px rgba(56, 189, 248, 0.6);
-      transform: translateY(-2px);
-    }
-
-    .btn-copy-script {
-      background: var(--card-inner);
-      border: 1px solid var(--border-subtle);
-      color: var(--text-muted);
-      font-size: 12px;
-      font-weight: 700;
-      padding: 8px 12px;
-      border-radius: var(--radius-sm);
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      transition: all 0.2s;
-      white-space: nowrap;
-    }
-
-    .btn-copy-script:hover {
-      background: rgba(255, 255, 255, 0.1);
-      color: #ffffff;
-      border-color: rgba(255, 255, 255, 0.2);
-    }
-
-    /* TOAST NOTIFICATION */
-    .toast {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      background: rgba(16, 185, 129, 0.95);
-      color: #ffffff;
-      padding: 12px 20px;
-      border-radius: var(--radius-sm);
-      font-size: 13.5px;
-      font-weight: 700;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-      display: none;
-      align-items: center;
-      gap: 10px;
-      z-index: 9999;
-      animation: fadeIn 0.3s ease;
-    }
-
-    .toast.show {
-      display: flex;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(12px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* LIGHTBOX MODAL */
-    .lightbox-modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.92);
-      backdrop-filter: blur(10px);
-      z-index: 10000;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .lightbox-modal.active {
-      display: flex;
-    }
-
-    .lightbox-inner {
-      max-width: 460px;
-      width: 100%;
-      aspect-ratio: 9 / 16;
-      background: #000;
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      border: 1px solid var(--border-accent);
-      position: relative;
-    }
-
-    .lightbox-inner img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    .lightbox-close {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background: rgba(0, 0, 0, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: #fff;
+    .formula-step__num {
+      font-family: var(--font-display);
       font-size: 20px;
-      width: 34px;
-      height: 34px;
+      font-weight: 700;
+      color: var(--cl-blue);
+      background: #ffffff;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      cursor: pointer;
-      transition: 0.2s;
+      box-shadow: 0 2px 6px rgba(2, 132, 199, 0.15);
+      flex-shrink: 0;
     }
 
-    .lightbox-close:hover {
-      background: var(--rose);
-    }
-
-    /* FOOTER */
-    footer {
-      margin-top: 80px;
-      border-top: 1px solid var(--border-subtle);
-      padding-top: 36px;
-      text-align: center;
-      color: var(--text-dim);
-      font-size: 13px;
-      line-height: 1.8;
-    }
-
-    footer b {
-      color: var(--text-muted);
-    }
-
-    /* FLOATING ACTIONS */
-    .floating-bar {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(12, 18, 30, 0.94);
-      border: 1px solid var(--border-accent);
-      border-radius: var(--radius-full);
-      padding: 8px 18px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-      z-index: 800;
-    }
-
-    .floating-btn {
-      background: none;
-      border: none;
-      color: var(--text-muted);
-      font-size: 12px;
+    .formula-step__title {
+      font-family: var(--font-display);
+      font-size: 14px;
       font-weight: 700;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      text-decoration: none;
-      padding: 4px 10px;
-      border-radius: var(--radius-full);
-      transition: all 0.2s;
+      color: var(--cl-slate-900);
+      margin-bottom: 4px;
     }
 
-    .floating-btn:hover {
-      background: var(--cyan);
-      color: #060911;
+    .formula-step__desc {
+      font-size: 13.5px;
+      color: var(--cl-slate-600);
+      line-height: 1.5;
+    }
+
+    /* Filter tabs */
+    .hub-filter {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .filter-btn {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--cl-slate-200);
+      background: #ffffff;
+      color: var(--cl-slate-600);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--cl-slate-900);
+      color: #ffffff;
+      border-color: var(--cl-slate-900);
+    }
+
+    /* Grid Section */
+    .hub-grid-section {
+      background: var(--cl-light-tint);
+      border-top: 1px solid var(--cl-slate-200);
+      border-bottom: 1px solid var(--cl-slate-200);
+      padding: 64px 24px;
+    }
+
+    .hub-grid-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hub-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 28px;
+    }
+
+    /* Hub Card */
+    .hub-card {
+      background: #ffffff;
+      border: 1px solid var(--cl-slate-200);
+      border-radius: 16px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hub-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+      border-color: var(--cl-blue);
+    }
+
+    .hub-card__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .hub-card__badge {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--cl-blue-dark);
+      background: var(--cl-blue-bg);
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
+
+    .hub-card__category {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--cl-slate-500);
+    }
+
+    .hub-card__title {
+      font-family: var(--font-display);
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+
+    .hub-card__title a {
+      color: var(--cl-slate-900);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .hub-card__title a:hover {
+      color: var(--cl-blue);
+    }
+
+    .hub-card__question {
+      display: flex;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--cl-slate-700);
+      margin-bottom: 16px;
+      background: #f8fafc;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border-left: 3px solid var(--cl-slate-400);
+    }
+
+    .hub-card__q-icon {
+      flex-shrink: 0;
+    }
+
+    .hub-card__friction-box {
+      font-size: 13.5px;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .friction-row {
+      display: flex;
+      gap: 6px;
+      line-height: 1.45;
+    }
+
+    .friction-tag {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 11.5px;
+      flex-shrink: 0;
+    }
+
+    .friction-row--disguise .friction-tag {
+      color: var(--cl-amber);
+    }
+
+    .friction-row--truth .friction-tag {
+      color: var(--cl-purple);
+    }
+
+    .hub-card__hook-box {
+      background: #fffbeb;
+      border: 1px dashed rgba(217, 119, 6, 0.4);
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-bottom: 20px;
+    }
+
+    .hook-box__label {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--cl-amber);
+      margin-bottom: 4px;
+    }
+
+    .hook-box__quote {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 14.5px;
+      color: var(--cl-slate-800);
+      line-height: 1.45;
+    }
+
+    .hub-card__footer {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding-top: 16px;
+      border-top: 1px solid var(--cl-slate-100);
+    }
+
+    .hub-card__location {
+      font-size: 12.5px;
+      color: var(--cl-slate-500);
+    }
+
+    .hub-card__btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 13.5px;
+      font-weight: 700;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      background: var(--cl-slate-900);
+      color: #ffffff;
+      transition: all 0.15s ease;
+    }
+
+    .hub-card__btn:hover {
+      background: var(--cl-blue);
+      transform: translateX(2px);
+    }
+
+    /* Bottom Section */
+    .hub-footer-section {
+      padding: 64px 24px;
+      max-width: 960px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hub-principles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      text-align: left;
+      margin: 36px 0;
+    }
+
+    .principle-card {
+      background: #ffffff;
+      border: 1px solid var(--cl-slate-200);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .principle-card__num {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--cl-blue);
+      margin-bottom: 8px;
+    }
+
+    .principle-card__title {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--cl-slate-900);
+      margin-bottom: 8px;
+    }
+
+    .principle-card__desc {
+      font-size: 14px;
+      color: var(--cl-slate-600);
+      line-height: 1.55;
+    }
+
+    /* Media queries */
+    @media (max-width: 768px) {
+      .hub-cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .hub-hero {
+        padding: 40px 16px 32px;
+      }
+      .hub-grid-section {
+        padding: 40px 16px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- TOP HEADER -->
-  <header class="top-header">
-    <a href="index.html" class="brand-group">
-      <span class="brand-badge">FEDU OFFLINE 02</span>
-      <div class="brand-title">🏛️ MASTER HUB <span>• 9 KỊCH BẢN THỰC CHIẾN</span></div>
-    </a>
-    <nav class="header-nav">
-      <a href="bai_tap_01_phan_canh_canh_tram.html" class="nav-link highlight">🎯 Bài Tập 01 (Băm Cảnh Trám)</a>
-      <a href="kich_ban_01_ngoi_ca_phe_10h_toi.html" class="nav-link">☕ Kịch Bản 01</a>
-      <a href="chien_luoc_xay_kenh_toc_10_nam.html" class="nav-link">💈 Salon 10 Năm</a>
-      <a href="https://fedu.vn/scene.html" target="_blank" class="nav-link">🌐 Scene Hub</a>
-      <button class="nav-link" onclick="window.print()">📄 In / PDF</button>
-    </nav>
+  <!-- ═══ TOP STICKY BAR ═══ -->
+  <header class="top-nav">
+    <div class="top-nav__brand">
+      <span class="top-nav__badge">VIDEO OFFLINE</span>
+      <span class="top-nav__title">9 Bài Tập Thực Hành Tại Lớp • Bóc Trần Tầng 2.5</span>
+    </div>
+    <div class="top-nav__actions">
+      <a href="#hub-grid" class="btn-nav">Chọn Bài Tập ↓</a>
+      <button class="btn-nav" onclick="window.print()">🖨️ In Danh Mục</button>
+    </div>
   </header>
 
-  <div class="container">
-    
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-badge">⚡ Tổng Kho Kịch Bản & Phân Cảnh Thực Chiến • Lớp Offline Hà Nội</div>
-      <h1>Kho Quản Trị & Tổng Hợp Kịch Bản Thực Chiến Lớp Offline</h1>
-      <p class="hero-desc">
-        Hệ thống <b>9 Kịch Bản Cốt Lõi (Style Trà Đá • Bóc Trần 3 Tầng Sự Thật)</b> & Toàn bộ <b>Bài tập phân cảnh băm nhịp tại lớp</b> của Mentor Nguyễn Đức Việt.<br>
-        Bấm vào từng kịch bản để xem toàn bộ <b>18 Beats AI</b>, góc máy, cỡ cảnh, raccord chống jump-cut và bảng thông số kỹ thuật điện ảnh 9:16.
-      </p>
+  <!-- ═══ HERO SECTION ═══ -->
+  <section class="hub-hero">
+    <span class="hub-hero__badge">GIÁO TRÌNH THỰC CHIẾN TẠI LỚP • VIDEO OFFLINE</span>
+    <h1 class="hub-hero__h1">9 BÀI TẬP THỰC HÀNH TẠI LỚP</h1>
+    <p class="hub-hero__lead">
+      "Đừng cố trở thành diễn viên khi bạn là người làm nghề thật. Dưới đây là cách đưa một vấn đề bình thường trong đời sống & kinh doanh thành video ngắn có người xem và có kết nối sâu sắc, bằng định dạng Voice-Over đầu tiên."
+    </p>
 
-      <div class="stats-bar">
-        <div class="stat-item">
-          <div class="stat-number">15</div>
-          <div class="stat-label">Tổng Kịch Bản & Bài Tập</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">09</div>
-          <div class="stat-label">Kịch Bản Trà Đá Cốt Lõi</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">65<span>+</span></div>
-          <div class="stat-label">Phân Cảnh Băm 3 Beats</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">100<span>%</span></div>
-          <div class="stat-label">Storyboard AI & Ảnh Độc Lập</div>
+    <!-- Formula Banner -->
+    <div class="hub-formula-banner">
+      <div class="formula-step">
+        <div class="formula-step__num">1</div>
+        <div>
+          <div class="formula-step__title">Định Dạng Voice-Over</div>
+          <div class="formula-step__desc">Quay b-roll hành động thật tại lớp Greenhub, thu âm giọng mộc chèn lên. Không sợ ống kính!</div>
         </div>
       </div>
-    </section>
-
-    <!-- METHODOLOGY BOX -->
-    <section class="methodology-box">
-      <div class="methodology-header" onclick="toggleMethodology()">
-        <div class="methodology-title">
-          <span>💡 BẢN ĐỒ TƯ DUY 3 TẦNG SỰ THẬT & CÔNG THỨC BĂM CẢNH TRÁM ĐỘC QUYỀN ANH VIỆT</span>
-        </div>
-        <span class="toggle-icon" id="method-icon">▼ Thu Gọn</span>
-      </div>
-
-      <div class="methodology-grid" id="method-grid">
-        <div class="method-card m1">
-          <div class="method-label">❌ TẦNG 1 • NÓI ĐÃI BÔI (SAFE)</div>
-          <div class="method-title">Lý Do Xã Giao Bề Nổi</div>
-          <div class="method-desc">Lý do an toàn ngoài miệng, đạo lý văn mẫu ai cũng nói được. Người xem lướt qua sau 3 giây vì quá nhạt và sáo rỗng.</div>
-        </div>
-
-        <div class="method-card m2">
-          <div class="method-label">⚠️ TẦNG 2 • CẢM GIÁC THẬT (REAL)</div>
-          <div class="method-title">Bất An Mắt Thấy Tai Nghe</div>
-          <div class="method-desc">Cảm xúc sốt ruột, bất an thực tế: mệt mỏi, thử mãi không xong, mở app chỉ thấy trừ tiền. Người xem bắt đầu thấy quen và gật gù.</div>
-        </div>
-
-        <div class="method-card m25">
-          <div class="method-label">⚡ TẦNG 2.5 • XUNG ĐỘT THỂ DIỆN (FRICTION)</div>
-          <div class="method-title">Cái Cớ & Giằng Xé Nội Tâm</div>
-          <div class="method-desc">Đặc sản tư duy anh Việt: Người lớn phải diễn vở kịch gì trước mặt người quen để bảo vệ lòng tự trọng và giấu đi sự bế tắc?</div>
-        </div>
-
-        <div class="method-card m3">
-          <div class="method-label">✅ TẦNG 3 • SỰ THẬT NGƯỢNG MIỆNG (RAW)</div>
-          <div class="method-title">Chạm Đáy Nỗi Đau Sinh Tồn</div>
-          <div class="method-desc">Áp lực cơm áo gạo tiền, sợ tụt hậu, sợ dẹp tiệm, sợ bạn bè coi thường. Đánh trúng tim đen để kích hoạt hành động ngay lập tức.</div>
-        </div>
-
-        <div class="method-card m4">
-          <div class="method-label">🎬 CÔNG THỨC BĂM 3 TRỤC CẢNH TRÁM</div>
-          <div class="method-title">Khử Căn Bệnh 'Cảnh Trám Chết Dí'</div>
-          <div class="method-desc">1 Hành động gốc $\rightarrow$ Băm 5 cú máy 2s-2.5s. Đổi đồng thời: <b>Cỡ cảnh</b> (MCU $\rightarrow$ CU $\rightarrow$ Macro), <b>Góc máy</b> và <b>Hướng máy</b>.</div>
+      <div class="formula-step">
+        <div class="formula-step__num">2</div>
+        <div>
+          <div class="formula-step__title">Bóc Trần Tầng 2.5</div>
+          <div class="formula-step__desc">Vạch trần cái cớ ngụy trang & sự giằng xé thể diện người lớn để tạo kết nối đồng cảm sâu sắc.</div>
         </div>
       </div>
-    </section>
+      <div class="formula-step">
+        <div class="formula-step__num">3</div>
+        <div>
+          <div class="formula-step__title">Tối Ưu Hook 3 Giây</div>
+          <div class="formula-step__desc">Đảo ngược hành vi ngay câu đầu tiên để người xem khựng ngón tay lại nghe tiếp trọn vẹn.</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- CONTROLS & FILTER BAR -->
-    <div class="controls-bar">
-      <div class="filter-tabs">
-        <button class="filter-tab active" onclick="filterCategory('all', this)">✨ Tất Cả (15)</button>
-        <button class="filter-tab" onclick="filterCategory('core', this)">☕ 9 Kịch Bản Cốt Lõi (Trà Đá)</button>
-        <button class="filter-tab" onclick="filterCategory('exercise', this)">🎯 Bài Tập Thực Hành Tại Lớp</button>
-        <button class="filter-tab" onclick="filterCategory('case', this)">💈 Case Study Học Viên</button>
+  <!-- ═══ 9 CARDS GRID ═══ -->
+  <section class="hub-grid-section" id="hub-grid">
+    <div class="hub-grid-container">
+      <div style="text-align: center; margin-bottom: 32px;">
+        <h2 style="font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--cl-slate-900); margin-bottom: 8px;">
+          BẠN ĐANG GẶP TÌNH HUỐNG NÀO TRONG 9 BÀI TẬP DƯỚI ĐÂY?
+        </h2>
+        <p style="font-size: 15px; color: var(--cl-slate-600);">
+          Chọn đúng bài tập phản ánh nỗi đau thực tế của bạn để vào học kịch bản 5 cảnh & quay ngay tại lớp.
+        </p>
       </div>
 
-      <div class="search-box">
-        <span class="search-icon">🔍</span>
-        <input type="text" id="searchInput" class="search-input" placeholder="Tìm theo từ khóa (cà phê, mặt bằng, tuổi 30, ads, cảnh trám...)" onkeyup="filterSearch()">
+      <div class="hub-cards-grid">
+        
+      <!-- Card 01 -->
+      <article class="hub-card apple-reveal">
+        <div class="hub-card__top">
+          <span class="hub-card__badge">BÀI TẬP 01</span>
+          <span class="hub-card__category">Bối Cảnh Công Cộng • Ngại Ống Kính</span>
+        </div>
+        
+        <h3 class="hub-card__title">
+          <a href="kich_ban_01_ngoi_ca_phe_10h_toi.html">Ngồi Cà Phê Đêm 10 Giờ Tối: Bóc Trần Cái Cớ Bận Rộn</a>
+        </h3>
+
+        <div class="hub-card__question">
+          <span class="hub-card__q-icon">❓</span>
+          <span>Bạn có hay ngồi ngâm ở quán cà phê một mình, mở laptop vờ bận rộn để trốn tránh nỗi bất an?</span>
+        </div>
+
+        <div class="hub-card__friction-box">
+          <div class="friction-row friction-row--disguise">
+            <span class="friction-tag">Cái cớ ngụy trang:</span>
+            <span>Ngồi ngâm cốc cà phê tan hết đá, bấm gõ lạch cạch vờ bận rộn bên laptop.</span>
+          </div>
+          <div class="friction-row friction-row--truth">
+            <span class="friction-tag">Sự thật giằng xé:</span>
+            <span>Sốt ruột vì công việc bế tắc nhưng không dám đứng dậy đối diện với thực tại.</span>
+          </div>
+        </div>
+
+        <div class="hub-card__hook-box">
+          <div class="hook-box__label">⚡ HOOK 3 GIÂY ĐẢO NGƯỢC HÀNH VI</div>
+          <div class="hook-box__quote">"Ly nước tan hết đá từ lâu rồi mà vẫn chưa chịu đứng dậy... nhìn qua thì tưởng bận rộn lắm."</div>
+        </div>
+
+        <div class="hub-card__footer">
+          <div class="hub-card__location">📍 Bối cảnh: <b>Góc bàn cà phê đêm / Bàn gỗ Greenhub</b></div>
+          <a href="kich_ban_01_ngoi_ca_phe_10h_toi.html" class="hub-card__btn">Bắt Đầu Bài Tập 01 ➔</a>
+        </div>
+      </article>
+
+      <!-- Card 02 -->
+      <article class="hub-card apple-reveal">
+        <div class="hub-card__top">
+          <span class="hub-card__badge">BÀI TẬP 02</span>
+          <span class="hub-card__category">Áp Lực Mặt Bằng • Cửa Hàng Vắng Khách</span>
+        </div>
+        
+        <h3 class="hub-card__title">
+          <a href="kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach.html">Tiền Mặt Bằng 20 Triệu & Cửa Hàng Vắng Hoe</a>
+        </h3>
+
+        <div class="hub-card__question">
+          <span class="hub-card__q-icon">❓</span>
+          <span>Cửa hàng mở cả ngày không bóng khách, tiền nhà đến hẹn vẫn phải nộp?</span>
+        </div>
+
+        <div class="hub-card__friction-box">
+          <div class="friction-row friction-row--disguise">
+            <span class="friction-tag">Cái cớ ngụy trang:</span>
+            <span>Cầm giẻ lau đi lau lại kệ hàng cho có việc để làm, ngụy trang sự sốt ruột.</span>
+          </div>
+          <div class="friction-row friction-row--truth">
+            <span class="friction-tag">Sự thật giằng xé:</span>
+            <span>Khách mua trên mạng hết rồi, tự ái người làm chủ không cho phép lên mạng làm trò.</span>
+          </div>
+        </div>
+
+        <div class="hub-card__hook-box">
+          <div class="hook-box__label">⚡ HOOK 3 GIÂY ĐẢO NGƯỢC HÀNH VI</div>
+          <div class="hook-box__quote">"Cái kệ hàng này sáng nay lau đi lau lại đến lần thứ ba rồi... nhìn qua thì tưởng chăm chỉ, nhưng thực ra là đang sốt ruột vì không có khách."</div>
+        </div>
+
+        <div class="hub-card__footer">
+          <div class="hub-card__location">📍 Bối cảnh: <b>Bàn gỗ phòng học Greenhub & Sảnh vách kính</b></div>
+          <a href="kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach.html" class="hub-card__btn">Bắt Đầu Bài Tập 02 ➔</a>
+        </div>
+      </article>
+
+      <!-- Card 03 -->
+      <article class="hub-card apple-reveal">
+        <div class="hub-card__top">
+          <span class="hub-card__badge">BÀI TẬP 03</span>
+          <span class="hub-card__category">Khủng Hoảng Tuổi 30 • Đối Thủ Triệu View</span>
+        </div>
+        
+        <h3 class="hub-card__title">
+          <a href="kich_ban_03_chung_lai_sau_tuoi_30.html">Chững Lại Sau Tuổi 30 & Nhìn Đối Thủ Triệu View</a>
+        </h3>
+
+        <div class="hub-card__question">
+          <span class="hub-card__q-icon">❓</span>
+          <span>Làm nghề chục năm nhưng thấy tụi trẻ mới vào nghề làm video triệu view ầm ầm?</span>
+        </div>
+
+        <div class="hub-card__friction-box">
+          <div class="friction-row friction-row--disguise">
+            <span class="friction-tag">Cái cớ ngụy trang:</span>
+            <span>Lướt trộm video đối thủ, miệng bảo 'nghiên cứu thị trường' nhưng bụng thì lo tụt hậu.</span>
+          </div>
+          <div class="friction-row friction-row--truth">
+            <span class="friction-tag">Sự thật giằng xé:</span>
+            <span>Cái tôi thâm niên quá lớn, sợ người quen chê cười già rồi còn đú đởn làm video.</span>
+          </div>
+        </div>
+
+        <div class="hub-card__hook-box">
+          <div class="hook-box__label">⚡ HOOK 3 GIÂY ĐẢO NGƯỢC HÀNH VI</div>
+          <div class="hook-box__quote">"Cứ bấm vào xem video của đối thủ rồi lại tắt đi... bên ngoài thì bảo là nghiên cứu thị trường, nhưng bên trong là cảm giác bất an của một người sợ bị tụt hậu."</div>
+        </div>
+
+        <div class="hub-card__footer">
+          <div class="hub-card__location">📍 Bối cảnh: <b>Bàn học sổ tay Greenhub & Ban công cây xanh</b></div>
+          <a href="kich_ban_03_chung_lai_sau_tuoi_30.html" class="hub-card__btn">Bắt Đầu Bài Tập 03 ➔</a>
+        </div>
+      </article>
+
+      <!-- Card 04 -->
+      <article class="hub-card apple-reveal">
+        <div class="hub-card__top">
+          <span class="hub-card__badge">BÀI TẬP 04</span>
+          <span class="hub-card__category">Nghiện Chạy Ads • Bế Tắc Chi Phí</span>
+        </div>
+        
+        <h3 class="hub-card__title">
+          <a href="kich_ban_04_tien_quang_cao_an_het_tien_lai.html">Tiền Quảng Cáo Ăn Hết Tiền Lãi: Thoát Khỏi Bẫy Đốt Tiền</a>
+        </h3>
+
+        <div class="hub-card__question">
+          <span class="hub-card__q-icon">❓</span>
+          <span>Cứ 5 phút mở app ads một lần, nạp tiền triệu mà cắn sạch tiền lãi?</span>
+        </div>
+
+        <div class="hub-card__friction-box">
+          <div class="friction-row friction-row--disguise">
+            <span class="friction-tag">Cái cớ ngụy trang:</span>
+            <span>Cầm máy xem biểu đồ CPM làm ra vẻ đang điều hành vĩ mô, nhưng thực chất là đang đánh bạc.</span>
+          </div>
+          <div class="friction-row friction-row--truth">
+            <span class="friction-tag">Sự thật giằng xé:</span>
+            <span>Tiền ads là khoản phạt vì lười xây niềm tin thật. Tắt ads là chết đói.</span>
+          </div>
+        </div>
+
+        <div class="hub-card__hook-box">
+          <div class="hook-box__label">⚡ HOOK 3 GIÂY ĐẢO NGƯỢC HÀNH VI</div>
+          <div class="hook-box__quote">"Cứ 5 phút lại mở app quảng cáo kiểm tra một lần... nhìn qua thì tưởng bận rộn điều hành, nhưng thực ra là đang run vì tiền nạp vào ăn gần hết tiền lãi."</div>
+        </div>
+
+        <div class="hub-card__footer">
+          <div class="hub-card__location">📍 Bối cảnh: <b>Bàn học Greenhub & Ban công đón nắng</b></div>
+          <a href="kich_ban_04_tien_quang_cao_an_het_tien_lai.html" class="hub-card__btn">Bắt Đầu Bài Tập 04 ➔</a>
+        </div>
+      </article>
+
+      <!-- Card 05 -->
+      <article class="hub-card apple-reveal">
+        <div class="hub-card__top">
+          <span class="hub-card__badge">BÀI TẬP 05</span>
+          <span class="hub-card__category">Cạn Khách Quen • Sợ Bán Cho Người Lạ</span>
+        </div>
+        
+        <h3 class="hub-card__title">
+          <a href="kich_ban_05_het_khach_tu_moi_quan_he_quen.html">Hết Khách Người Quen & Nỗi Sợ Chào Hàng Người Lạ</a>
+        </h3>
+
+        <div class="hub-card__question">
+          <span class="hub-card__q-icon">❓</span>
+          <span>Người thân ủng hộ một lần rồi thôi, giờ nhắn tin ai cũng ngượng và sợ bị né?</span>
+        </div>
+
+        <div class="hub-card__friction-box">
+          <div class="friction-row friction-row--disguise">
+            <span class="friction-tag">Cái cớ ngụy trang:</span>
+            <span>Soạn tin nhắn chào bạn bè dài ngoằng rồi lại vội vàng xóa đi vì sợ quê.</span>
+          </div>
+          <div class="friction-row friction-row--truth">
+            <span class="friction-tag">Sự thật giằng xé:</span>
+            <span>Kinh doanh không thể ăn bám người quen. Phải làm video phục vụ hàng triệu người lạ.</span>
+          </div>
+        </div>
+
+        <div class="hub-card__hook-box">
+          <div class="hook-box__label">⚡ HOOK 3 GIÂY ĐẢO NGƯỢC HÀNH VI</div>
+          <div class="hook-box__quote">"Soạn xong cái tin nhắn định gửi cho người quen rồi lại vội vàng xóa đi... sợ người ta nghĩ mình dạo này khó khăn nên mới đi chào mời."</div>
+        </div>
+
+        <div class="hub-card__footer">
+          <div class="hub-card__location">📍 Bối cảnh: <b>Bàn gỗ lớp học & Sảnh lounge vách kính Greenhub</b></div>
+          <a href="kich_ban_05_het_khach_tu_moi_quan_he_quen.html" class="hub-card__btn">Bắt Đầu Bài Tập 05 ➔</a>
+        </div>
+      </article>
+
+      <!-- Card 06 -->
+      <article class="hub-card apple-reveal">
+        <div class="hub-card__top">
+          <span class="hub-card__badge">BÀI TẬP 06</span>
+          <span class="hub-card__category">Bẫy Tự Phụ Nghề • Đối Thủ Làm Ẩu Đông Khách</span>
+        </div>
+        
+        <h3 class="hub-card__title">
+          <a href="kich_ban_06_tay_nghe_tot_nhung_van_vang_khach.html">Tay Nghề Tốt Nhưng Vẫn Vắng Khách: Trách Nhiệm Truyền Thông</a>
+        </h3>
+
+        <div class="hub-card__question">
+          <span class="hub-card__q-icon">❓</span>
+          <span>Làm kỹ tỉ mẩn từng ly nhưng ế ẩm, quán bên cạnh làm ẩu lại đông nhờ marketing?</span>
+        </div>
+
+        <div class="hub-card__friction-box">
+          <div class="friction-row friction-row--disguise">
+            <span class="friction-tag">Cái cớ ngụy trang:</span>
+            <span>Ngồi nắn nót cả ngày trong góc xưởng tự an ủi 'mình có tâm' để trốn tránh làm video.</span>
+          </div>
+          <div class="friction-row friction-row--truth">
+            <span class="friction-tag">Sự thật giằng xé:</span>
+            <span>Người làm tử tế mà im lặng thì khách hàng rơi hết vào tay kẻ làm ẩu.</span>
+          </div>
+        </div>
+
+        <div class="hub-card__hook-box">
+          <div class="hook-box__label">⚡ HOOK 3 GIÂY ĐẢO NGƯỢC HÀNH VI</div>
+          <div class="hook-box__quote">"Ngồi nắn nót từng đường kim mũi chỉ mất cả ngày trời... tự hào là mình làm kỹ, nhưng tối về nhìn sổ doanh thu lại thấy thắt lòng."</div>
+        </div>
+
+        <div class="hub-card__footer">
+          <div class="hub-card__location">📍 Bối cảnh: <b>Bàn gỗ dụng cụ & Ban công vườn Greenhub</b></div>
+          <a href="kich_ban_06_tay_nghe_tot_nhung_van_vang_khach.html" class="hub-card__btn">Bắt Đầu Bài Tập 06 ➔</a>
+        </div>
+      </article>
+
+      <!-- Card 07 -->
+      <article class="hub-card apple-reveal">
+        <div class="hub-card__top">
+          <span class="hub-card__badge">BÀI TẬP 07</span>
+          <span class="hub-card__category">Bão Phá Giá • Tổng Kho & Sàn Livestream</span>
+        </div>
+        
+        <h3 class="hub-card__title">
+          <a href="kich_ban_07_bi_canh_tranh_boi_tong_kho_va_gia_goc.html">Bị Tổng Kho Livestream Phá Giá: Bán Bằng Gương Mặt Uy Tín</a>
+        </h3>
+
+        <div class="hub-card__question">
+          <span class="hub-card__q-icon">❓</span>
+          <span>Báo giá xong khách thả icon cười nhạt rồi gửi link tổng kho rẻ hơn nửa giá?</span>
+        </div>
+
+        <div class="hub-card__friction-box">
+          <div class="friction-row friction-row--disguise">
+            <span class="friction-tag">Cái cớ ngụy trang:</span>
+            <span>Đêm nào cũng xem livestream tổng kho chê 'đồ kém' nhưng ban ngày thì sợ không dám báo giá.</span>
+          </div>
+          <div class="friction-row friction-row--truth">
+            <span class="friction-tag">Sự thật giằng xé:</span>
+            <span>Đua giá là tự sát. Phải bán sự an tâm bằng chính gương mặt và danh dự của mình.</span>
+          </div>
+        </div>
+
+        <div class="hub-card__hook-box">
+          <div class="hook-box__label">⚡ HOOK 3 GIÂY ĐẢO NGƯỢC HÀNH VI</div>
+          <div class="hook-box__quote">"Khách vào nhắn tin hỏi giá, mình báo xong họ chỉ thả đúng một cái icon mặt cười rồi im lặng... nhìn sang livestream tổng kho mới hiểu lý do."</div>
+        </div>
+
+        <div class="hub-card__footer">
+          <div class="hub-card__location">📍 Bối cảnh: <b>Góc bàn học & Khu terrace tầng thượng Greenhub</b></div>
+          <a href="kich_ban_07_bi_canh_tranh_boi_tong_kho_va_gia_goc.html" class="hub-card__btn">Bắt Đầu Bài Tập 07 ➔</a>
+        </div>
+      </article>
+
+      <!-- Card 08 -->
+      <article class="hub-card apple-reveal">
+        <div class="hub-card__top">
+          <span class="hub-card__badge">BÀI TẬP 08</span>
+          <span class="hub-card__category">Làm Lại Cuộc Đời • Vứt Bỏ Sĩ Diện Hão</span>
+        </div>
+        
+        <h3 class="hub-card__title">
+          <a href="kich_ban_08_bat_dau_lai_tu_con_so_0.html">Bắt Đầu Lại Từ Con Số 0: Dẹp Tự Ái Để Đứng Lên</a>
+        </h3>
+
+        <div class="hub-card__question">
+          <span class="hub-card__q-icon">❓</span>
+          <span>Từng có sự nghiệp lớn nhưng thất bại gãy gánh, sợ bạn bè cười chê sa cơ lỡ vận?</span>
+        </div>
+
+        <div class="hub-card__friction-box">
+          <div class="friction-row friction-row--disguise">
+            <span class="friction-tag">Cái cớ ngụy trang:</span>
+            <span>Bật máy quay lên định nói rồi lại tắt đi lần thứ năm vì sợ người quen lướt thấy.</span>
+          </div>
+          <div class="friction-row friction-row--truth">
+            <span class="friction-tag">Sự thật giằng xé:</span>
+            <span>Sĩ diện không nuôi sống được gia đình. Người đàn ông dám đứng lên làm lại mới là bản lĩnh.</span>
+          </div>
+        </div>
+
+        <div class="hub-card__hook-box">
+          <div class="hook-box__label">⚡ HOOK 3 GIÂY ĐẢO NGƯỢC HÀNH VI</div>
+          <div class="hook-box__quote">"Bật máy quay lên rồi lại tắt đi đến lần thứ năm... sợ người quen lướt thấy lại bảo: Dạo này sa cơ lỡ vận hay sao mà phải lên mạng làm trò."</div>
+        </div>
+
+        <div class="hub-card__footer">
+          <div class="hub-card__location">📍 Bối cảnh: <b>Bàn học Greenhub & Ban công đón nắng gió</b></div>
+          <a href="kich_ban_08_bat_dau_lai_tu_con_so_0.html" class="hub-card__btn">Bắt Đầu Bài Tập 08 ➔</a>
+        </div>
+      </article>
+
+      <!-- Card 09 -->
+      <article class="hub-card apple-reveal">
+        <div class="hub-card__top">
+          <span class="hub-card__badge">BÀI TẬP 09</span>
+          <span class="hub-card__category">Chứng Minh Giá Trị • Show Quy Trình Thật</span>
+        </div>
+        
+        <h3 class="hub-card__title">
+          <a href="kich_ban_09_hang_lam_ky_nhung_bi_so_sanh_gia.html">Hàng Làm Kỹ Bị So Sánh Giá Rẻ: Dùng Hình Ảnh Thay Lời Nói</a>
+        </h3>
+
+        <div class="hub-card__question">
+          <span class="hub-card__q-icon">❓</span>
+          <span>Bị khách chê đắt so với hàng chợ, gõ tin nhắn thanh minh mỏi tay khách vẫn bỏ đi?</span>
+        </div>
+
+        <div class="hub-card__friction-box">
+          <div class="friction-row friction-row--disguise">
+            <span class="friction-tag">Cái cớ ngụy trang:</span>
+            <span>Soạn sẵn tin nhắn mẫu dài ngoằng giải thích nguyên vật liệu để copy gửi khách.</span>
+          </div>
+          <div class="friction-row friction-row--truth">
+            <span class="friction-tag">Sự thật giằng xé:</span>
+            <span>Thanh minh bằng lời nói suông có giá 0 đồng. Hãy quay cận cảnh công đoạn khó nhất!</span>
+          </div>
+        </div>
+
+        <div class="hub-card__hook-box">
+          <div class="hook-box__label">⚡ HOOK 3 GIÂY ĐẢO NGƯỢC HÀNH VI</div>
+          <div class="hook-box__quote">"Nhận được tin nhắn: 'Bên kia bán có nửa giá, sao shop bán đắt thế?'... Soạn sẵn một đoạn dài giải thích nguyên vật liệu rồi lại lẳng lặng xóa đi."</div>
+        </div>
+
+        <div class="hub-card__footer">
+          <div class="hub-card__location">📍 Bối cảnh: <b>Bàn gỗ sổ tay & Sảnh vách kính Greenhub</b></div>
+          <a href="kich_ban_09_hang_lam_ky_nhung_bi_so_sanh_gia.html" class="hub-card__btn">Bắt Đầu Bài Tập 09 ➔</a>
+        </div>
+      </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER PRINCIPLES ═══ -->
+  <section class="hub-footer-section">
+    <span class="hub-hero__badge" style="background: rgba(22, 163, 74, 0.08); color: var(--cl-success);">
+      LỜI DẶN DÒ TỪ ANH NGUYỄN VIỆT
+    </span>
+    <h2 style="font-family: var(--font-display); font-size: 28px; font-weight: 700; color: var(--cl-slate-900); margin-top: 12px;">
+      3 NGUYÊN TẮC BẤT BIẾN KHI LÀM VIDEO VOICE-OVER TẠI LỚP
+    </h2>
+
+    <div class="hub-principles-grid">
+      <div class="principle-card">
+        <div class="principle-card__num">01</div>
+        <div class="principle-card__title">Hình Ảnh Thật > Kịch Bản Đẹp</div>
+        <div class="principle-card__desc">
+          Đừng cố tạo dáng sang chảnh. Hãy chĩa máy quay vào đôi bàn tay đang ghi chép, ngón tay đang bấm điện thoại, hay bước chân đi lại trong phòng học. Càng đời thường càng chạm.
+        </div>
+      </div>
+
+      <div class="principle-card">
+        <div class="principle-card__num">02</div>
+        <div class="principle-card__title">Thu Âm Đúng Nhịp Thở Đời</div>
+        <div class="principle-card__desc">
+          Nói như đang ngồi uống trà đá tâm sự với một người bạn thân. Bỏ hết giọng phát thanh viên, bỏ hết đạo lý. Nói đúng sự thật ngượng ngùng trong lòng bạn.
+        </div>
+      </div>
+
+      <div class="principle-card">
+        <div class="principle-card__num">03</div>
+        <div class="principle-card__title">1 Video Hoàn Thành > 10 Kế Hoạch Hoàn Hảo</div>
+        <div class="principle-card__desc">
+          Rào cản lớn nhất là cái tôi sợ phán xét. Hãy bấm máy quay và dựng ngay bài tập đầu tiên tại lớp Greenhub trước khi ra về. Vượt qua ngưỡng tâm lý là bạn đã thắng!
+        </div>
       </div>
     </div>
 
-    <!-- SCRIPT CARDS GRID -->
-    <div class="scripts-grid" id="scriptsGrid">
-
-      <article class="script-card" data-category="core" data-search="ngồi cà phê 10h tối không dám về nhà góc quán cà phê đêm • ánh đèn vàng ấm • ly cà phê tan đá • màn hình laptop chủ kinh doanh nhỏ, người làm nghề cày cuốc trong đêm vì bất an kb 01 10h đêm rồi... ngồi ở góc quán này không phải vì chăm chỉ đâu anh em ạ.">
-        <!-- TOP: THUMB & HEADER -->
-        <div class="card-top">
-          <div class="card-thumb-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_01_ngoi_ca_phe_10h_toi/assets/frames/scene1_beat1.jpg')">
-            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_01_ngoi_ca_phe_10h_toi/assets/frames/scene1_beat1.jpg" alt="Ngồi Cà Phê 10h Tối Không Dám Về Nhà" loading="lazy" onerror="this.src='https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/tu_dot_tien_den_tu_tin_xuat_hien/assets/frames/scene1_beat1.jpg'">
-            <span class="thumb-badge-duration">30 Giây</span>
-          </div>
-
-          <div class="card-info">
-            <div class="card-tag-row">
-              <span class="code-pill">KB 01</span>
-              <span class="category-pill" style="background: #818cf818; color: #818cf8; border-color: #818cf840;">TÂM LÝ & ÁP LỰC CÀY ĐÊM</span>
-            </div>
-            <h3 class="card-title"><a href="kich_ban_01_ngoi_ca_phe_10h_toi.html">Ngồi Cà Phê 10h Tối Không Dám Về Nhà</a></h3>
-            <div class="meta-line">📍 <b>Bối cảnh:</b> Góc quán cà phê đêm • Ánh đèn vàng ấm • Ly cà phê tan đá • Màn hình laptop</div>
-            <div class="meta-line">🎯 <b>Đối tượng:</b> Chủ kinh doanh nhỏ, người làm nghề cày cuốc trong đêm vì bất an</div>
-          </div>
-        </div>
-
-        <!-- 3 TIERS PSYCHOLOGY BOX -->
-        <div class="tiers-box">
-          <div class="tier-row">
-            <span class="tier-tag t1">T1 ĐÃI BÔI</span>
-            <span class="tier-content">"Ra cà phê đêm đổi gió cho dễ tập trung làm việc."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t2">T2 CẢM GIÁC THẬT</span>
-            <span class="tier-content">"Ở nhà nằm một chỗ thấy tội lỗi, ra quán ngồi ngáp vặt cũng đỡ cắn rứt lương tâm."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t25">T2.5 THỂ DIỆN</span>
-            <span class="tier-content" style="color: #e9d5ff;">Mở laptop lên gõ cộc cộc cho người ngoài nhìn vào tưởng mình đang bận rộn dự án lớn, nhưng thực tế tab màn hình chỉ lướt tới lướt lui đồ thị doanh số tụt dốc.</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t3">T3 NGƯỢNG MIỆNG</span>
-            <span class="tier-content" style="color: #6ee7b7;">"Mệt lả người rồi nhưng không dám nghỉ, sợ dừng lại một cái là bạn bè nó vượt mặt hết. Doanh số cả tuần đứng im, nhân viên thì chờ lương."</span>
-          </div>
-        </div>
-
-        <!-- HOOK QUOTE -->
-        <div class="hook-quote">
-          <div class="hook-label">🎙️ Hook Mở Màn Đắt Giá:</div>
-          <div class="hook-text">"10h đêm rồi... ngồi ở góc quán này không phải vì chăm chỉ đâu anh em ạ."</div>
-        </div>
-
-        <!-- QUICK 5 SCENES ACCORDION -->
-        <div class="accordion-box">
-          <div class="accordion-trigger" onclick="toggleAccordion(this)">
-            <span>🎞️ Xem Nhanh 5 Phân Cảnh Băm Nhịp</span>
-            <span class="acc-arrow">▼</span>
-          </div>
-          <div class="accordion-content">
-            
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 1 (Selfie)</span>
-              <span class="scene-time">00:00 - 00:03</span>
-            </div>
-            <div class="scene-visual">🎥 Cầm máy selfie lia góc quán cafe đêm, cười trừ tự sự.</div>
-            <div class="scene-voice">🎙️ &quot;10h đêm rồi... ngồi đây không phải vì chăm đâu anh em ạ.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 2 (Tại bàn)</span>
-              <span class="scene-time">00:03 - 00:07</span>
-            </div>
-            <div class="scene-visual">🎥 Đặt máy xuống bàn cafe, mặt trầm lại kể chuyện.</div>
-            <div class="scene-voice">🎙️ &quot;Ở nhà nằm lướt điện thoại thì thấy tội lỗi, ra đây nhìn vào máy tính cho đỡ bất an.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">B-Roll 1 (Cận xoa trán)</span>
-              <span class="scene-time">00:07 - 00:12</span>
-            </div>
-            <div class="scene-visual">🎥 Bàn tay xoa trán mệt mỏi, màn hình laptop sáng giữa phòng.</div>
-            <div class="scene-voice">🎙️ &quot;Thấy bạn bè kiếm tiền kinh quá, mình mệt lả rồi mà không dám ngủ.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">B-Roll 2 (Góc nghiêng kính)</span>
-              <span class="scene-time">00:12 - 00:16</span>
-            </div>
-            <div class="scene-visual">🎥 Nhìn ra ngoài cửa kính đêm đầy suy tư.</div>
-            <div class="scene-voice">🎙️ &quot;Sợ chỉ cần dừng lại một ngày là bị bỏ lại phía sau.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 3 (Trực diện chốt)</span>
-              <span class="scene-time">00:16 - 00:20</span>
-            </div>
-            <div class="scene-visual">🎥 Nhìn thẳng camera nói chắc nịch.</div>
-            <div class="scene-voice">🎙️ &quot;Nhiều khi cày đêm chẳng phải để giàu lên, mà chỉ để bớt sợ thôi!&quot;</div>
-          </div>
-        
-          </div>
-        </div>
-
-        <!-- CARD FOOTER ACTIONS -->
-        <div class="card-footer">
-          <a href="kich_ban_01_ngoi_ca_phe_10h_toi.html" class="btn-view-storyboard" target="_blank">
-            🎬 Xem Bảng Phân Cảnh 18 Beats AI ➔
-          </a>
-          <button class="btn-copy-script" onclick="copyScriptText('KB 01 • Ngồi Cà Phê 10h Tối Không Dám Về Nhà\nHook: 10h đêm rồi... ngồi ở góc quán này không phải vì chăm chỉ đâu anh em ạ.\n- Cảnh 1: &quot;10h đêm rồi... ngồi đây không phải vì chăm đâu anh em ạ.&quot;\n- Cảnh 2: &quot;Ở nhà nằm lướt điện thoại thì thấy tội lỗi, ra đây nhìn vào máy tính cho đỡ bất an.&quot;\n- Cảnh 3: &quot;Thấy bạn bè kiếm tiền kinh quá, mình mệt lả rồi mà không dám ngủ.&quot;\n- Cảnh 4: &quot;Sợ chỉ cần dừng lại một ngày là bị bỏ lại phía sau.&quot;\n- Cảnh 5: &quot;Nhiều khi cày đêm chẳng phải để giàu lên, mà chỉ để bớt sợ thôi!&quot;\nCTA: Cứ cắm đầu làm theo cách cũ thì chỉ có dẹp tiệm. Muốn sống thì phải thay đổi. Cầm máy lên quay thôi!', 'KB 01')">
-            📋 Copy Thoại
-          </button>
-        </div>
-      </article>
-    
-      <article class="script-card" data-category="core" data-search="tiền mặt bằng & cửa hàng vắng khách cửa hàng mặt phố vắng khách • đồng hồ treo tường chạy • camera an ninh quay cảnh ngáp vặt chủ shop offline, chủ tiệm gánh áp lực tiền nhà 20-30 triệu/tháng kb 02 sáng mở mắt ra là bay mất một triệu tiền mặt bằng... khách thì lướt mạng, mình thì ngồi ngáp vặt.">
-        <!-- TOP: THUMB & HEADER -->
-        <div class="card-top">
-          <div class="card-thumb-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene1_beat1.jpg')">
-            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene1_beat1.jpg" alt="Tiền Mặt Bằng &amp; Cửa Hàng Vắng Khách" loading="lazy" onerror="this.src='https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/tu_dot_tien_den_tu_tin_xuat_hien/assets/frames/scene1_beat1.jpg'">
-            <span class="thumb-badge-duration">30 Giây</span>
-          </div>
-
-          <div class="card-info">
-            <div class="card-tag-row">
-              <span class="code-pill">KB 02</span>
-              <span class="category-pill" style="background: #f43f5e18; color: #f43f5e; border-color: #f43f5e40;">MẶT BẰNG & RETAIL</span>
-            </div>
-            <h3 class="card-title"><a href="kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach.html">Tiền Mặt Bằng &amp; Cửa Hàng Vắng Khách</a></h3>
-            <div class="meta-line">📍 <b>Bối cảnh:</b> Cửa hàng mặt phố vắng khách • Đồng hồ treo tường chạy • Camera an ninh quay cảnh ngáp vặt</div>
-            <div class="meta-line">🎯 <b>Đối tượng:</b> Chủ shop offline, chủ tiệm gánh áp lực tiền nhà 20-30 triệu/tháng</div>
-          </div>
-        </div>
-
-        <!-- 3 TIERS PSYCHOLOGY BOX -->
-        <div class="tiers-box">
-          <div class="tier-row">
-            <span class="tier-tag t1">T1 ĐÃI BÔI</span>
-            <span class="tier-content">"Đi học thêm kỹ năng mới để nâng cấp trải nghiệm cửa hàng."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t2">T2 CẢM GIÁC THẬT</span>
-            <span class="tier-content">"Ngồi ở quán cả ngày ngáp vặt sốt ruột quá, mở app ngân hàng ra chỉ thấy tin nhắn trừ tiền cố định."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t25">T2.5 THỂ DIỆN</span>
-            <span class="tier-content" style="color: #e9d5ff;">Vẫn cố ăn mặc chỉn chu, lau dọn kệ tủ và xếp từng món hàng ngay ngắn để bảo vệ thể diện &#x27;ông chủ&#x27;, nhưng trong lòng nhói đau mỗi lần chuông tin nhắn báo trừ 20 triệu tiền nhà.</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t3">T3 NGƯỢNG MIỆNG</span>
-            <span class="tier-content" style="color: #6ee7b7;">"Mỗi tháng mất đứt hai chục củ tiền nhà. Khách ở trên mạng hết rồi, mình cứ ngồi ôm cái quán thì có mà ăn cám."</span>
-          </div>
-        </div>
-
-        <!-- HOOK QUOTE -->
-        <div class="hook-quote">
-          <div class="hook-label">🎙️ Hook Mở Màn Đắt Giá:</div>
-          <div class="hook-text">"Sáng mở mắt ra là bay mất một triệu tiền mặt bằng... Khách thì lướt mạng, mình thì ngồi ngáp vặt."</div>
-        </div>
-
-        <!-- QUICK 5 SCENES ACCORDION -->
-        <div class="accordion-box">
-          <div class="accordion-trigger" onclick="toggleAccordion(this)">
-            <span>🎞️ Xem Nhanh 5 Phân Cảnh Băm Nhịp</span>
-            <span class="acc-arrow">▼</span>
-          </div>
-          <div class="accordion-content">
-            
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 1 (Selfie)</span>
-              <span class="scene-time">00:00 - 00:03</span>
-            </div>
-            <div class="scene-visual">🎥 Cầm máy selfie lia nhẹ lớp học, cười trừ tự giễu.</div>
-            <div class="scene-voice">🎙️ &quot;Nhiều ông bảo: Quán đang ế, đi học làm gì?&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 2 (Tại bàn)</span>
-              <span class="scene-time">00:03 - 00:07</span>
-            </div>
-            <div class="scene-visual">🎥 Đặt máy xuống bàn, tay mở sổ, nói thẳng thừng.</div>
-            <div class="scene-voice">🎙️ &quot;Thế ngồi ở quán... chủ nhà có bớt tiền cho không?&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">B-Roll 1 (Lướt đt &amp; Gạch sổ)</span>
-              <span class="scene-time">00:07 - 00:12</span>
-            </div>
-            <div class="scene-visual">🎥 Màn hình app doanh thu vắng tanh ➔ Tay gạch số trên sổ.</div>
-            <div class="scene-voice">🎙️ &quot;Tháng nào cũng ném 20 củ tiền nhà ra cửa sổ mà khách vắng tanh.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">B-Roll 2 (Góc cửa sổ)</span>
-              <span class="scene-time">00:12 - 00:16</span>
-            </div>
-            <div class="scene-visual">🎥 Ngồi tựa cằm nhìn ra cửa sổ phòng học đăm chiêu.</div>
-            <div class="scene-voice">🎙️ &quot;Khách ở trên mạng, mình cứ ngồi canh cái cửa thì chờ chết!&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 3 (Trực diện chốt)</span>
-              <span class="scene-time">00:16 - 00:20</span>
-            </div>
-            <div class="scene-visual">🎥 Nhìn thẳng camera nói chắc nịch, gật đầu dứt khoát.</div>
-            <div class="scene-voice">🎙️ &quot;Bỏ cái tôi đi. Học xong về tự quay lấy mà kéo khách!&quot;</div>
-          </div>
-        
-          </div>
-        </div>
-
-        <!-- CARD FOOTER ACTIONS -->
-        <div class="card-footer">
-          <a href="kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach.html" class="btn-view-storyboard" target="_blank">
-            🎬 Xem Bảng Phân Cảnh 18 Beats AI ➔
-          </a>
-          <button class="btn-copy-script" onclick="copyScriptText('KB 02 • Tiền Mặt Bằng & Cửa Hàng Vắng Khách\nHook: Sáng mở mắt ra là bay mất một triệu tiền mặt bằng... Khách thì lướt mạng, mình thì ngồi ngáp vặt.\n- Cảnh 1: &quot;Nhiều ông bảo: Quán đang ế, đi học làm gì?&quot;\n- Cảnh 2: &quot;Thế ngồi ở quán... chủ nhà có bớt tiền cho không?&quot;\n- Cảnh 3: &quot;Tháng nào cũng ném 20 củ tiền nhà ra cửa sổ mà khách vắng tanh.&quot;\n- Cảnh 4: &quot;Khách ở trên mạng, mình cứ ngồi canh cái cửa thì chờ chết!&quot;\n- Cảnh 5: &quot;Bỏ cái tôi đi. Học xong về tự quay lấy mà kéo khách!&quot;\nCTA: Đến lúc này thì cái gì giúp mình kéo được khách về cửa hàng thì phải bắt tay vào học thôi!', 'KB 02')">
-            📋 Copy Thoại
-          </button>
-        </div>
-      </article>
-    
-      <article class="script-card" data-category="core" data-search="chững lại sau tuổi 30 & nhìn đối thủ triệu view bàn làm việc đêm • màn hình soi kênh tiktok đối thủ trẻ • nếp nhăn khóe mắt người làm nghề 30+, người có chuyên môn nhưng ngại xuất hiện video ngắn kb 03 hơn 30 tuổi, làm nghề cả chục năm... nhìn đứa mới vào nghề nó hốt hết khách nhờ video ngắn.">
-        <!-- TOP: THUMB & HEADER -->
-        <div class="card-top">
-          <div class="card-thumb-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_03_chung_lai_sau_tuoi_30/assets/frames/scene1_beat1.jpg')">
-            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_03_chung_lai_sau_tuoi_30/assets/frames/scene1_beat1.jpg" alt="Chững Lại Sau Tuổi 30 &amp; Nhìn Đối Thủ Triệu View" loading="lazy" onerror="this.src='https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/tu_dot_tien_den_tu_tin_xuat_hien/assets/frames/scene1_beat1.jpg'">
-            <span class="thumb-badge-duration">30 Giây</span>
-          </div>
-
-          <div class="card-info">
-            <div class="card-tag-row">
-              <span class="code-pill">KB 03</span>
-              <span class="category-pill" style="background: #f59e0b18; color: #f59e0b; border-color: #f59e0b40;">TUỔI 30 & ĐỐI THỦ TRIỆU VIEW</span>
-            </div>
-            <h3 class="card-title"><a href="kich_ban_03_chung_lai_sau_tuoi_30.html">Chững Lại Sau Tuổi 30 &amp; Nhìn Đối Thủ Triệu View</a></h3>
-            <div class="meta-line">📍 <b>Bối cảnh:</b> Bàn làm việc đêm • Màn hình soi kênh TikTok đối thủ trẻ • Nếp nhăn khóe mắt</div>
-            <div class="meta-line">🎯 <b>Đối tượng:</b> Người làm nghề 30+, người có chuyên môn nhưng ngại xuất hiện video ngắn</div>
-          </div>
-        </div>
-
-        <!-- 3 TIERS PSYCHOLOGY BOX -->
-        <div class="tiers-box">
-          <div class="tier-row">
-            <span class="tier-tag t1">T1 ĐÃI BÔI</span>
-            <span class="tier-content">"Xem video đối thủ để nghiên cứu xu hướng thị trường và hành vi người tiêu dùng."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t2">T2 CẢM GIÁC THẬT</span>
-            <span class="tier-content">"Cay cú vì bọn nó mới vào nghề mà đơn nổ ầm ầm, mình làm cả chục năm tay nghề cứng lại chật vật."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t25">T2.5 THỂ DIỆN</span>
-            <span class="tier-content" style="color: #e9d5ff;">Miệng chê bọn trẻ làm clip nhảm nhí nông cạn để giữ thể diện người có thâm niên, nhưng đêm về lén mở kênh của chúng nó xem từng giây, vừa xem vừa run vì nhận ra thị trường đã bỏ rơi mình.</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t3">T3 NGƯỢNG MIỆNG</span>
-            <span class="tier-content" style="color: #6ee7b7;">"Cái tôi quá lớn, ngại xuất hiện, sợ người quen chê cười. Nếu không dẹp bỏ sĩ diện thì mất hết khách."</span>
-          </div>
-        </div>
-
-        <!-- HOOK QUOTE -->
-        <div class="hook-quote">
-          <div class="hook-label">🎙️ Hook Mở Màn Đắt Giá:</div>
-          <div class="hook-text">"Hơn 30 tuổi, làm nghề cả chục năm... nhìn đứa mới vào nghề nó hốt hết khách nhờ video ngắn."</div>
-        </div>
-
-        <!-- QUICK 5 SCENES ACCORDION -->
-        <div class="accordion-box">
-          <div class="accordion-trigger" onclick="toggleAccordion(this)">
-            <span>🎞️ Xem Nhanh 5 Phân Cảnh Băm Nhịp</span>
-            <span class="acc-arrow">▼</span>
-          </div>
-          <div class="accordion-content">
-            
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 1 (Selfie)</span>
-              <span class="scene-time">00:00 - 00:03</span>
-            </div>
-            <div class="scene-visual">🎥 Cầm máy selfie trong lớp, cười nhẹ nói chân thành.</div>
-            <div class="scene-voice">🎙️ &quot;Hơn 30 tuổi rồi, ngồi học lại từ đầu kể cũng hơi ngại...&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 2 (Tại bàn)</span>
-              <span class="scene-time">00:03 - 00:07</span>
-            </div>
-            <div class="scene-visual">🎥 Hạ máy xuống bàn gõ phím laptop, nét mặt suy tư.</div>
-            <div class="scene-voice">🎙️ &quot;Nhưng không học thì công việc chục năm nay đang chững lại rồi.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">B-Roll 1 (Chống cằm nhìn máy)</span>
-              <span class="scene-time">00:07 - 00:12</span>
-            </div>
-            <div class="scene-visual">🎥 Tay chống cằm nhìn màn hình, thở dài nhẹ.</div>
-            <div class="scene-voice">🎙️ &quot;Lương thì đứng yên, mà chi phí nuôi gia đình thì tăng từng ngày.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">B-Roll 2 (Lia sổ tay)</span>
-              <span class="scene-time">00:12 - 00:16</span>
-            </div>
-            <div class="scene-visual">🎥 Lia máy từ lớp học về cuốn sổ ghi chép.</div>
-            <div class="scene-voice">🎙️ &quot;Tụi trẻ nó bắt trend nhanh quá, mình cứ bảo thủ thì vài năm nữa ai thuê?&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 3 (Trực diện chốt)</span>
-              <span class="scene-time">00:16 - 00:20</span>
-            </div>
-            <div class="scene-visual">🎥 Nhìn thẳng camera nói quyết tâm.</div>
-            <div class="scene-voice">🎙️ &quot;Dẹp cái tự ái đi. Còn sức thì còn phải học để tự nuôi thân!&quot;</div>
-          </div>
-        
-          </div>
-        </div>
-
-        <!-- CARD FOOTER ACTIONS -->
-        <div class="card-footer">
-          <a href="kich_ban_03_chung_lai_sau_tuoi_30.html" class="btn-view-storyboard" target="_blank">
-            🎬 Xem Bảng Phân Cảnh 18 Beats AI ➔
-          </a>
-          <button class="btn-copy-script" onclick="copyScriptText('KB 03 • Chững Lại Sau Tuổi 30 & Nhìn Đối Thủ Triệu View\nHook: Hơn 30 tuổi, làm nghề cả chục năm... nhìn đứa mới vào nghề nó hốt hết khách nhờ video ngắn.\n- Cảnh 1: &quot;Hơn 30 tuổi rồi, ngồi học lại từ đầu kể cũng hơi ngại...&quot;\n- Cảnh 2: &quot;Nhưng không học thì công việc chục năm nay đang chững lại rồi.&quot;\n- Cảnh 3: &quot;Lương thì đứng yên, mà chi phí nuôi gia đình thì tăng từng ngày.&quot;\n- Cảnh 4: &quot;Tụi trẻ nó bắt trend nhanh quá, mình cứ bảo thủ thì vài năm nữa ai thuê?&quot;\n- Cảnh 5: &quot;Dẹp cái tự ái đi. Còn sức thì còn phải học để tự nuôi thân!&quot;\nCTA: Bớt ngại đi, chịu khó học lại từ đầu còn hơn cứ ngồi yên nhìn công việc của mình đi xuống.', 'KB 03')">
-            📋 Copy Thoại
-          </button>
-        </div>
-      </article>
-    
-      <article class="script-card" data-category="core" data-search="tiền quảng cáo ăn hết tiền lãi trình quản lý ads manager đỏ lòm chỉ số chi phí • cafe nguội ngắt • màn hình điện thoại chủ shop online phụ thuộc vào facebook/tiktok ads, chi phí cắn sạch lợi nhuận kb 04 cứ 5 phút tôi lại mở màn hình kiểm tra một lần... tiền nạp thì trừ đều mà đơn không thấy đâu.">
-        <!-- TOP: THUMB & HEADER -->
-        <div class="card-top">
-          <div class="card-thumb-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_04_tien_quang_cao_an_het_tien_lai/assets/frames/scene1_beat1.jpg')">
-            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_04_tien_quang_cao_an_het_tien_lai/assets/frames/scene1_beat1.jpg" alt="Tiền Quảng Cáo Ăn Hết Tiền Lãi" loading="lazy" onerror="this.src='https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/tu_dot_tien_den_tu_tin_xuat_hien/assets/frames/scene1_beat1.jpg'">
-            <span class="thumb-badge-duration">30 Giây</span>
-          </div>
-
-          <div class="card-info">
-            <div class="card-tag-row">
-              <span class="code-pill">KB 04</span>
-              <span class="category-pill" style="background: #ec489918; color: #ec4899; border-color: #ec489940;">TIỀN ADS & BẪY LỖ</span>
-            </div>
-            <h3 class="card-title"><a href="kich_ban_04_tien_quang_cao_an_het_tien_lai.html">Tiền Quảng Cáo Ăn Hết Tiền Lãi</a></h3>
-            <div class="meta-line">📍 <b>Bối cảnh:</b> Trình quản lý Ads Manager đỏ lòm chỉ số chi phí • Cafe nguội ngắt • Màn hình điện thoại</div>
-            <div class="meta-line">🎯 <b>Đối tượng:</b> Chủ shop online phụ thuộc vào Facebook/TikTok Ads, chi phí cắn sạch lợi nhuận</div>
-          </div>
-        </div>
-
-        <!-- 3 TIERS PSYCHOLOGY BOX -->
-        <div class="tiers-box">
-          <div class="tier-row">
-            <span class="tier-tag t1">T1 ĐÃI BÔI</span>
-            <span class="tier-content">"Tối ưu lại chiến dịch quảng cáo và tệp đối tượng cho hiệu quả hơn."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t2">T2 CẢM GIÁC THẬT</span>
-            <span class="tier-content">"Tiền nạp ads ngày nào cũng trừ cả triệu bạc mà không ra đơn, càng chạy càng lỗ."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t25">T2.5 THỂ DIỆN</span>
-            <span class="tier-content" style="color: #e9d5ff;">Đi cafe với bạn bè vẫn khoe doanh thu trăm triệu để giữ uy tín, nhưng giấu tiệt chuyện tiền lãi thực tế sau khi trừ ads không bằng lương đi làm thuê học việc.</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t3">T3 NGƯỢNG MIỆNG</span>
-            <span class="tier-content" style="color: #6ee7b7;">"Lệ thuộc vào quảng cáo như con nghiện, tắt ads là chết đói. Bắt buộc phải tự làm video kéo traffic tự nhiên."</span>
-          </div>
-        </div>
-
-        <!-- HOOK QUOTE -->
-        <div class="hook-quote">
-          <div class="hook-label">🎙️ Hook Mở Màn Đắt Giá:</div>
-          <div class="hook-text">"Cứ 5 phút tôi lại mở màn hình kiểm tra một lần... Tiền nạp thì trừ đều mà đơn không thấy đâu."</div>
-        </div>
-
-        <!-- QUICK 5 SCENES ACCORDION -->
-        <div class="accordion-box">
-          <div class="accordion-trigger" onclick="toggleAccordion(this)">
-            <span>🎞️ Xem Nhanh 5 Phân Cảnh Băm Nhịp</span>
-            <span class="acc-arrow">▼</span>
-          </div>
-          <div class="accordion-content">
-            
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 1 (Selfie bật tắt màn hình)</span>
-              <span class="scene-time">00:00 - 00:03</span>
-            </div>
-            <div class="scene-visual">🎥 Bấm sáng màn hình điện thoại rồi nhìn máy nói.</div>
-            <div class="scene-voice">🎙️ &quot;Cứ 5 phút lại mở app ads một lần... thót hết cả tim!&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 2 (Tại bàn)</span>
-              <span class="scene-time">00:03 - 00:07</span>
-            </div>
-            <div class="scene-visual">🎥 Đặt máy xuống bàn, mặt chán ngán kể thật.</div>
-            <div class="scene-voice">🎙️ &quot;Tiền cắn thì nhanh, mà tin nhắn khách thì vắng ngắt.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">B-Roll 1 (Cận màn hình app ads)</span>
-              <span class="scene-time">00:07 - 00:12</span>
-            </div>
-            <div class="scene-visual">🎥 Cận cảnh ngón tay lướt bảng số liệu chi phí ads đỏ lòm.</div>
-            <div class="scene-voice">🎙️ &quot;Bao nhiêu tiền lãi nạp hết cho Facebook với TikTok rồi còn đâu.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">B-Roll 2 (Góc nghiêng bài giảng)</span>
-              <span class="scene-time">00:12 - 00:16</span>
-            </div>
-            <div class="scene-visual">🎥 Nhìn lên bài giảng cách làm video tự nhiên, đăm chiêu.</div>
-            <div class="scene-voice">🎙️ &quot;Cứ ỷ lại vào nạp tiền chạy ads thì sớm muộn cũng sạch vốn.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 3 (Trực diện chốt)</span>
-              <span class="scene-time">00:16 - 00:20</span>
-            </div>
-            <div class="scene-visual">🎥 Nhìn thẳng camera nói dứt khoát.</div>
-            <div class="scene-voice">🎙️ &quot;Tự vác mặt lên làm video cho khách tin. Hết thời trả tiền mua số rồi!&quot;</div>
-          </div>
-        
-          </div>
-        </div>
-
-        <!-- CARD FOOTER ACTIONS -->
-        <div class="card-footer">
-          <a href="kich_ban_04_tien_quang_cao_an_het_tien_lai.html" class="btn-view-storyboard" target="_blank">
-            🎬 Xem Bảng Phân Cảnh 18 Beats AI ➔
-          </a>
-          <button class="btn-copy-script" onclick="copyScriptText('KB 04 • Tiền Quảng Cáo Ăn Hết Tiền Lãi\nHook: Cứ 5 phút tôi lại mở màn hình kiểm tra một lần... Tiền nạp thì trừ đều mà đơn không thấy đâu.\n- Cảnh 1: &quot;Cứ 5 phút lại mở app ads một lần... thót hết cả tim!&quot;\n- Cảnh 2: &quot;Tiền cắn thì nhanh, mà tin nhắn khách thì vắng ngắt.&quot;\n- Cảnh 3: &quot;Bao nhiêu tiền lãi nạp hết cho Facebook với TikTok rồi còn đâu.&quot;\n- Cảnh 4: &quot;Cứ ỷ lại vào nạp tiền chạy ads thì sớm muộn cũng sạch vốn.&quot;\n- Cảnh 5: &quot;Tự vác mặt lên làm video cho khách tin. Hết thời trả tiền mua số rồi!&quot;\nCTA: Không thể dựa mãi vào việc đi mua quảng cáo, phải tự học cách xuất hiện trước khách hàng thôi!', 'KB 04')">
-            📋 Copy Thoại
-          </button>
-        </div>
-      </article>
-    
-      <article class="script-card" data-category="core" data-search="hết khách từ mối quan hệ quen danh bạ điện thoại • tin nhắn zalo đã nhắn hết một lượt • ánh mắt ngập ngừng người làm dịch vụ, tư vấn, bảo hiểm, bất động sản, bán hàng đa kênh kb 05 lướt danh bạ từ trên xuống dưới mà không biết nhắn cho ai... bán cho người quen hết cửa rồi.">
-        <!-- TOP: THUMB & HEADER -->
-        <div class="card-top">
-          <div class="card-thumb-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_05_het_khach_tu_moi_quan_he_quen/assets/frames/scene1_beat1.jpg')">
-            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_05_het_khach_tu_moi_quan_he_quen/assets/frames/scene1_beat1.jpg" alt="Hết Khách Từ Mối Quan Hệ Quen" loading="lazy" onerror="this.src='https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/tu_dot_tien_den_tu_tin_xuat_hien/assets/frames/scene1_beat1.jpg'">
-            <span class="thumb-badge-duration">30 Giây</span>
-          </div>
-
-          <div class="card-info">
-            <div class="card-tag-row">
-              <span class="code-pill">KB 05</span>
-              <span class="category-pill" style="background: #a855f718; color: #a855f7; border-color: #a855f740;">KHÁCH QUEN & RÀO CẢN</span>
-            </div>
-            <h3 class="card-title"><a href="kich_ban_05_het_khach_tu_moi_quan_he_quen.html">Hết Khách Từ Mối Quan Hệ Quen</a></h3>
-            <div class="meta-line">📍 <b>Bối cảnh:</b> Danh bạ điện thoại • Tin nhắn Zalo đã nhắn hết một lượt • Ánh mắt ngập ngừng</div>
-            <div class="meta-line">🎯 <b>Đối tượng:</b> Người làm dịch vụ, tư vấn, bảo hiểm, bất động sản, bán hàng đa kênh</div>
-          </div>
-        </div>
-
-        <!-- 3 TIERS PSYCHOLOGY BOX -->
-        <div class="tiers-box">
-          <div class="tier-row">
-            <span class="tier-tag t1">T1 ĐÃI BÔI</span>
-            <span class="tier-content">"Mở rộng tệp khách hàng tiềm năng mới ngoài các kênh truyền thống."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t2">T2 CẢM GIÁC THẬT</span>
-            <span class="tier-content">"Anh em bạn bè mua ủng hộ một hai lần đầu rồi thôi, giờ mở lời chào hàng ai cũng lảng đi chỗ khác."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t25">T2.5 THỂ DIỆN</span>
-            <span class="tier-content" style="color: #e9d5ff;">Đăng bài bán hàng lên Facebook cá nhân nhưng phải cài đặt chế độ loại trừ sếp cũ và bạn đại học vì sợ họ xì xào mình đang sa cơ lỡ vận.</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t3">T3 NGƯỢNG MIỆNG</span>
-            <span class="tier-content" style="color: #6ee7b7;">"Cứ dựa vào người quen thì quy mô không bao giờ lớn được. Phải dám xuất hiện trên mạng để bán cho người lạ."</span>
-          </div>
-        </div>
-
-        <!-- HOOK QUOTE -->
-        <div class="hook-quote">
-          <div class="hook-label">🎙️ Hook Mở Màn Đắt Giá:</div>
-          <div class="hook-text">"Lướt danh bạ từ trên xuống dưới mà không biết nhắn cho ai... Bán cho người quen hết cửa rồi."</div>
-        </div>
-
-        <!-- QUICK 5 SCENES ACCORDION -->
-        <div class="accordion-box">
-          <div class="accordion-trigger" onclick="toggleAccordion(this)">
-            <span>🎞️ Xem Nhanh 5 Phân Cảnh Băm Nhịp</span>
-            <span class="acc-arrow">▼</span>
-          </div>
-          <div class="accordion-content">
-            
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 1 (Selfie lướt Zalo)</span>
-              <span class="scene-time">00:00 - 00:03</span>
-            </div>
-            <div class="scene-visual">🎥 Lướt danh bạ Zalo rồi dừng lại, nhìn máy nói.</div>
-            <div class="scene-voice">🎙️ &quot;Định nhắn tin nhờ người quen giới thiệu khách... xong lại ngại.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 2 (Tại bàn)</span>
-              <span class="scene-time">00:03 - 00:07</span>
-            </div>
-            <div class="scene-visual">🎥 Úp điện thoại xuống bàn học, thở dài nhẹ.</div>
-            <div class="scene-voice">🎙️ &quot;Sợ người ta nghĩ mình dạo này ế việc đi nhờ vả.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">B-Roll 1 (Lật sổ trắng)</span>
-              <span class="scene-time">00:07 - 00:12</span>
-            </div>
-            <div class="scene-visual">🎥 Lật sang trang sổ trắng tinh chưa có lịch hẹn nào.</div>
-            <div class="scene-voice">🎙️ &quot;Trước giờ toàn sống nhờ mối quen, giờ cạn mối mới thấy bấp bênh.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">B-Roll 2 (Góc nghiêng máy chiếu)</span>
-              <span class="scene-time">00:12 - 00:16</span>
-            </div>
-            <div class="scene-visual">🎥 Nhìn lên màn hình máy chiếu phòng học tập trung.</div>
-            <div class="scene-voice">🎙️ &quot;Không tiếp cận được khách lạ trên mạng thì tháng sau nhịn đói.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 3 (Trực diện chốt)</span>
-              <span class="scene-time">00:16 - 00:20</span>
-            </div>
-            <div class="scene-visual">🎥 Nhìn thẳng camera nói chắc nịch.</div>
-            <div class="scene-voice">🎙️ &quot;Tự lên mạng làm video mà kiếm khách, khỏi phải đi nhờ vả ai!&quot;</div>
-          </div>
-        
-          </div>
-        </div>
-
-        <!-- CARD FOOTER ACTIONS -->
-        <div class="card-footer">
-          <a href="kich_ban_05_het_khach_tu_moi_quan_he_quen.html" class="btn-view-storyboard" target="_blank">
-            🎬 Xem Bảng Phân Cảnh 18 Beats AI ➔
-          </a>
-          <button class="btn-copy-script" onclick="copyScriptText('KB 05 • Hết Khách Từ Mối Quan Hệ Quen\nHook: Lướt danh bạ từ trên xuống dưới mà không biết nhắn cho ai... Bán cho người quen hết cửa rồi.\n- Cảnh 1: &quot;Định nhắn tin nhờ người quen giới thiệu khách... xong lại ngại.&quot;\n- Cảnh 2: &quot;Sợ người ta nghĩ mình dạo này ế việc đi nhờ vả.&quot;\n- Cảnh 3: &quot;Trước giờ toàn sống nhờ mối quen, giờ cạn mối mới thấy bấp bênh.&quot;\n- Cảnh 4: &quot;Không tiếp cận được khách lạ trên mạng thì tháng sau nhịn đói.&quot;\n- Cảnh 5: &quot;Tự lên mạng làm video mà kiếm khách, khỏi phải đi nhờ vả ai!&quot;\nCTA: Muốn đi đường dài thì phải tự học cách tiếp cận người lạ bằng nội dung tử tế thôi.', 'KB 05')">
-            📋 Copy Thoại
-          </button>
-        </div>
-      </article>
-    
-      <article class="script-card" data-category="core" data-search="tay nghề tốt nhưng vẫn vắng khách xưởng/tiệm làm việc tỉ mỉ • đồ nghề sáng bóng • nhìn sang tiệm đối diện nhộn nhịp thợ thủ công, kỹ thuật viên, chuyên gia có chuyên môn sâu nhưng yếu truyền thông kb 06 làm nghề mười mấy năm, đồ mình làm ra tự tin không thua ai... thế mà quán đối diện làm dở lại đông hơn.">
-        <!-- TOP: THUMB & HEADER -->
-        <div class="card-top">
-          <div class="card-thumb-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_06_tay_nghe_tot_nhung_van_vang_khach/assets/frames/scene1_beat1.jpg')">
-            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_06_tay_nghe_tot_nhung_van_vang_khach/assets/frames/scene1_beat1.jpg" alt="Tay Nghề Tốt Nhưng Vẫn Vắng Khách" loading="lazy" onerror="this.src='https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/tu_dot_tien_den_tu_tin_xuat_hien/assets/frames/scene1_beat1.jpg'">
-            <span class="thumb-badge-duration">30 Giây</span>
-          </div>
-
-          <div class="card-info">
-            <div class="card-tag-row">
-              <span class="code-pill">KB 06</span>
-              <span class="category-pill" style="background: #14b8a618; color: #14b8a6; border-color: #14b8a640;">TAY NGHỀ & MARKETING</span>
-            </div>
-            <h3 class="card-title"><a href="kich_ban_06_tay_nghe_tot_nhung_van_vang_khach.html">Tay Nghề Tốt Nhưng Vẫn Vắng Khách</a></h3>
-            <div class="meta-line">📍 <b>Bối cảnh:</b> Xưởng/tiệm làm việc tỉ mỉ • Đồ nghề sáng bóng • Nhìn sang tiệm đối diện nhộn nhịp</div>
-            <div class="meta-line">🎯 <b>Đối tượng:</b> Thợ thủ công, kỹ thuật viên, chuyên gia có chuyên môn sâu nhưng yếu truyền thông</div>
-          </div>
-        </div>
-
-        <!-- 3 TIERS PSYCHOLOGY BOX -->
-        <div class="tiers-box">
-          <div class="tier-row">
-            <span class="tier-tag t1">T1 ĐÃI BÔI</span>
-            <span class="tier-content">"Tập trung nâng cao chất lượng dịch vụ và tay nghề, hữu xạ tự nhiên hương."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t2">T2 CẢM GIÁC THẬT</span>
-            <span class="tier-content">"Ấm ức vì mình làm kỹ hơn, vật liệu tốt hơn mà quán khác đông hơn nhờ biết làm marketing."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t25">T2.5 THỂ DIỆN</span>
-            <span class="tier-content" style="color: #e9d5ff;">Lấy cái cớ &#x27;người làm nghề chân chính không thích làm màu&#x27; để ru ngủ bản thân trốn tránh việc học quay video, trong khi lòng đau quặn thắt nhìn thợ tay nghề dở hơn hốt hết khách VIP.</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t3">T3 NGƯỢNG MIỆNG</span>
-            <span class="tier-content" style="color: #6ee7b7;">"Tự phụ vào tay nghề là tự sát. Thời buổi này tay nghề tốt chỉ là điều kiện cần, biết làm video xuất hiện mới là điều kiện đủ."</span>
-          </div>
-        </div>
-
-        <!-- HOOK QUOTE -->
-        <div class="hook-quote">
-          <div class="hook-label">🎙️ Hook Mở Màn Đắt Giá:</div>
-          <div class="hook-text">"Làm nghề mười mấy năm, đồ mình làm ra tự tin không thua ai... Thế mà quán đối diện làm dở lại đông hơn."</div>
-        </div>
-
-        <!-- QUICK 5 SCENES ACCORDION -->
-        <div class="accordion-box">
-          <div class="accordion-trigger" onclick="toggleAccordion(this)">
-            <span>🎞️ Xem Nhanh 5 Phân Cảnh Băm Nhịp</span>
-            <span class="acc-arrow">▼</span>
-          </div>
-          <div class="accordion-content">
-            
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 1 (Selfie)</span>
-              <span class="scene-time">00:00 - 00:03</span>
-            </div>
-            <div class="scene-visual">🎥 Cầm máy chỉ vào cuốn sổ kỹ thuật, cười tự tin.</div>
-            <div class="scene-voice">🎙️ &quot;Làm nghề chục năm nay, tay nghề mình chẳng thua ai...&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 2 (Tại bàn)</span>
-              <span class="scene-time">00:03 - 00:07</span>
-            </div>
-            <div class="scene-visual">🎥 Hạ máy xuống bàn, cười nửa miệng nói thẳng.</div>
-            <div class="scene-voice">🎙️ &quot;...Nhưng nhìn đứa khác làm nghề bình thường mà đông nghẹt khách, thấy cay thật!&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">B-Roll 1 (Lướt video triệu view)</span>
-              <span class="scene-time">00:07 - 00:12</span>
-            </div>
-            <div class="scene-visual">🎥 Màn hình điện thoại mở video đối thủ triệu view.</div>
-            <div class="scene-voice">🎙️ &quot;Người ta biết quay video chia sẻ, còn mình cứ ngồi ôm cái xưởng chê người ta làm màu.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">B-Roll 2 (Ghi sổ đăm chiêu)</span>
-              <span class="scene-time">00:12 - 00:16</span>
-            </div>
-            <div class="scene-visual">🎥 Cúi xuống ghi chép sổ bài tập, ánh mắt nghiêm túc.</div>
-            <div class="scene-voice">🎙️ &quot;Làm giỏi mà giấu như mèo giấu thì ai mà biết?&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 3 (Trực diện chốt)</span>
-              <span class="scene-time">00:16 - 00:20</span>
-            </div>
-            <div class="scene-visual">🎥 Nhìn thẳng máy nói dứt khoát.</div>
-            <div class="scene-voice">🎙️ &quot;Dẹp cái tự ái đi. Tay nghề tốt thì vác máy lên quay cho khách thấy!&quot;</div>
-          </div>
-        
-          </div>
-        </div>
-
-        <!-- CARD FOOTER ACTIONS -->
-        <div class="card-footer">
-          <a href="kich_ban_06_tay_nghe_tot_nhung_van_vang_khach.html" class="btn-view-storyboard" target="_blank">
-            🎬 Xem Bảng Phân Cảnh 18 Beats AI ➔
-          </a>
-          <button class="btn-copy-script" onclick="copyScriptText('KB 06 • Tay Nghề Tốt Nhưng Vẫn Vắng Khách\nHook: Làm nghề mười mấy năm, đồ mình làm ra tự tin không thua ai... Thế mà quán đối diện làm dở lại đông hơn.\n- Cảnh 1: &quot;Làm nghề chục năm nay, tay nghề mình chẳng thua ai...&quot;\n- Cảnh 2: &quot;...Nhưng nhìn đứa khác làm nghề bình thường mà đông nghẹt khách, thấy cay thật!&quot;\n- Cảnh 3: &quot;Người ta biết quay video chia sẻ, còn mình cứ ngồi ôm cái xưởng chê người ta làm màu.&quot;\n- Cảnh 4: &quot;Làm giỏi mà giấu như mèo giấu thì ai mà biết?&quot;\n- Cảnh 5: &quot;Dẹp cái tự ái đi. Tay nghề tốt thì vác máy lên quay cho khách thấy!&quot;\nCTA: Giỏi nghề mà giữ trong xưởng thì không ai biết, phải tự đưa nghề của mình ra ánh sáng!', 'KB 06')">
-            📋 Copy Thoại
-          </button>
-        </div>
-      </article>
-    
-      <article class="script-card" data-category="core" data-search="bị cạnh tranh bởi tổng kho & giá gốc cửa hàng bán lẻ • khách cầm điện thoại soi giá sàn • màn hình livestream xả kho giá sốc cửa hàng bán lẻ, đại lý phân phối truyền thống bị tổng kho livestream bóp nghẹt kb 07 khách cầm điện thoại vào hỏi: 'sao trên mạng bán rẻ hơn anh mấy chục ngàn?'...">
-        <!-- TOP: THUMB & HEADER -->
-        <div class="card-top">
-          <div class="card-thumb-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_07_bi_canh_tranh_boi_tong_kho_va_gia_goc/assets/frames/scene1_beat1.jpg')">
-            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_07_bi_canh_tranh_boi_tong_kho_va_gia_goc/assets/frames/scene1_beat1.jpg" alt="Bị Cạnh Tranh Bởi Tổng Kho &amp; Giá Gốc" loading="lazy" onerror="this.src='https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/tu_dot_tien_den_tu_tin_xuat_hien/assets/frames/scene1_beat1.jpg'">
-            <span class="thumb-badge-duration">30 Giây</span>
-          </div>
-
-          <div class="card-info">
-            <div class="card-tag-row">
-              <span class="code-pill">KB 07</span>
-              <span class="category-pill" style="background: #06b6d418; color: #06b6d4; border-color: #06b6d440;">TỔNG KHO & GIÁ RẺ</span>
-            </div>
-            <h3 class="card-title"><a href="kich_ban_07_bi_canh_tranh_boi_tong_kho_va_gia_goc.html">Bị Cạnh Tranh Bởi Tổng Kho &amp; Giá Gốc</a></h3>
-            <div class="meta-line">📍 <b>Bối cảnh:</b> Cửa hàng bán lẻ • Khách cầm điện thoại soi giá sàn • Màn hình livestream xả kho giá sốc</div>
-            <div class="meta-line">🎯 <b>Đối tượng:</b> Cửa hàng bán lẻ, đại lý phân phối truyền thống bị tổng kho livestream bóp nghẹt</div>
-          </div>
-        </div>
-
-        <!-- 3 TIERS PSYCHOLOGY BOX -->
-        <div class="tiers-box">
-          <div class="tier-row">
-            <span class="tier-tag t1">T1 ĐÃI BÔI</span>
-            <span class="tier-content">"Tìm nguồn hàng mới có giá cạnh tranh hơn để tiếp tục bán lẻ."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t2">T2 CẢM GIÁC THẬT</span>
-            <span class="tier-content">"Nhìn tổng kho livestream bán lẻ rẻ hơn cả giá mình nhập buôn số lượng lớn mà bất lực cay đắng."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t25">T2.5 THỂ DIỆN</span>
-            <span class="tier-content" style="color: #e9d5ff;">Cố gồng mình giảm giá 10-15% để giữ chân vài khách lẻ, vừa bán vừa cắn răng chịu lỗ để không bị mang tiếng là bán đắt cắt cổ.</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t3">T3 NGƯỢNG MIỆNG</span>
-            <span class="tier-content" style="color: #6ee7b7;">"Cạnh tranh về giá là cuộc đua xuống đáy. Chỉ có uy tín cá nhân và làm video trực diện mới giữ chân được khách trung thành."</span>
-          </div>
-        </div>
-
-        <!-- HOOK QUOTE -->
-        <div class="hook-quote">
-          <div class="hook-label">🎙️ Hook Mở Màn Đắt Giá:</div>
-          <div class="hook-text">"Khách cầm điện thoại vào hỏi: &#x27;Sao trên mạng bán rẻ hơn anh mấy chục ngàn?&#x27;..."</div>
-        </div>
-
-        <!-- QUICK 5 SCENES ACCORDION -->
-        <div class="accordion-box">
-          <div class="accordion-trigger" onclick="toggleAccordion(this)">
-            <span>🎞️ Xem Nhanh 5 Phân Cảnh Băm Nhịp</span>
-            <span class="acc-arrow">▼</span>
-          </div>
-          <div class="accordion-content">
-            
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 1 (Selfie mở livestream)</span>
-              <span class="scene-time">00:00 - 00:03</span>
-            </div>
-            <div class="scene-visual">🎥 Cầm máy mở livestream tổng kho xả hàng, nói thật lòng.</div>
-            <div class="scene-voice">🎙️ &quot;Tổng kho giờ nó lên livestream bán rẻ như cho thế này...&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 2 (Tại bàn)</span>
-              <span class="scene-time">00:03 - 00:07</span>
-            </div>
-            <div class="scene-visual">🎥 Hạ máy xuống bàn, mặt trầm ngâm chia sẻ.</div>
-            <div class="scene-voice">🎙️ &quot;...Thì đại lý nhập về ăn chênh lệch giá sống bằng niềm tin à?&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">B-Roll 1 (Ghi &#x27;Uy tín cá nhân&#x27;)</span>
-              <span class="scene-time">00:07 - 00:12</span>
-            </div>
-            <div class="scene-visual">🎥 Bàn tay ghi dòng chữ &#x27;Uy tín cá nhân&#x27; vào vở.</div>
-            <div class="scene-voice">🎙️ &quot;Khách bấm một nút là mua tận xưởng, đua giảm giá chỉ có tự sát.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">B-Roll 2 (Góc nghiêng lớp học)</span>
-              <span class="scene-time">00:12 - 00:16</span>
-            </div>
-            <div class="scene-visual">🎥 Nhìn ra không gian lớp học suy ngẫm.</div>
-            <div class="scene-voice">🎙️ &quot;Giờ người ta mua vì tin người bán, chứ không phải vì cái giá rẻ nữa.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 3 (Trực diện chốt)</span>
-              <span class="scene-time">00:16 - 00:20</span>
-            </div>
-            <div class="scene-visual">🎥 Nhìn thẳng camera nói điềm đạm.</div>
-            <div class="scene-voice">🎙️ &quot;Tự xây kênh, lấy sự am hiểu mà giữ khách. Hết thời buôn nước bọt rồi!&quot;</div>
-          </div>
-        
-          </div>
-        </div>
-
-        <!-- CARD FOOTER ACTIONS -->
-        <div class="card-footer">
-          <a href="kich_ban_07_bi_canh_tranh_boi_tong_kho_va_gia_goc.html" class="btn-view-storyboard" target="_blank">
-            🎬 Xem Bảng Phân Cảnh 18 Beats AI ➔
-          </a>
-          <button class="btn-copy-script" onclick="copyScriptText('KB 07 • Bị Cạnh Tranh Bởi Tổng Kho & Giá Gốc\nHook: Khách cầm điện thoại vào hỏi: &#39;Sao trên mạng bán rẻ hơn anh mấy chục ngàn?&#39;...\n- Cảnh 1: &quot;Tổng kho giờ nó lên livestream bán rẻ như cho thế này...&quot;\n- Cảnh 2: &quot;...Thì đại lý nhập về ăn chênh lệch giá sống bằng niềm tin à?&quot;\n- Cảnh 3: &quot;Khách bấm một nút là mua tận xưởng, đua giảm giá chỉ có tự sát.&quot;\n- Cảnh 4: &quot;Giờ người ta mua vì tin người bán, chứ không phải vì cái giá rẻ nữa.&quot;\n- Cảnh 5: &quot;Tự xây kênh, lấy sự am hiểu mà giữ khách. Hết thời buôn nước bọt rồi!&quot;\nCTA: Đua giá rẻ với tổng kho là tự sát! Thứ duy nhất tổng kho không sao chép được là sự tử tế và uy tín của bạn!', 'KB 07')">
-            📋 Copy Thoại
-          </button>
-        </div>
-      </article>
-    
-      <article class="script-card" data-category="core" data-search="bắt đầu lại từ con số 0 góc phòng trọ mới thuê • điện thoại trên chân tripod rẻ tiền • không gian tinh gọn người từng vấp ngã thất bại, phải làm lại từ đầu sau khi mất vốn/dẹp tiệm kb 08 đóng cửa tiệm cũ, trong tay gần như về lại số 0... sợ nhất không phải nghèo, mà là sợ bạn bè cười chê.">
-        <!-- TOP: THUMB & HEADER -->
-        <div class="card-top">
-          <div class="card-thumb-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_08_bat_dau_lai_tu_con_so_0/assets/frames/scene1_beat1.jpg')">
-            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_08_bat_dau_lai_tu_con_so_0/assets/frames/scene1_beat1.jpg" alt="Bắt Đầu Lại Từ Con Số 0" loading="lazy" onerror="this.src='https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/tu_dot_tien_den_tu_tin_xuat_hien/assets/frames/scene1_beat1.jpg'">
-            <span class="thumb-badge-duration">30 Giây</span>
-          </div>
-
-          <div class="card-info">
-            <div class="card-tag-row">
-              <span class="code-pill">KB 08</span>
-              <span class="category-pill" style="background: #10b98118; color: #10b981; border-color: #10b98140;">LÀM LẠI TỪ ĐẦU</span>
-            </div>
-            <h3 class="card-title"><a href="kich_ban_08_bat_dau_lai_tu_con_so_0.html">Bắt Đầu Lại Từ Con Số 0</a></h3>
-            <div class="meta-line">📍 <b>Bối cảnh:</b> Góc phòng trọ mới thuê • Điện thoại trên chân tripod rẻ tiền • Không gian tinh gọn</div>
-            <div class="meta-line">🎯 <b>Đối tượng:</b> Người từng vấp ngã thất bại, phải làm lại từ đầu sau khi mất vốn/dẹp tiệm</div>
-          </div>
-        </div>
-
-        <!-- 3 TIERS PSYCHOLOGY BOX -->
-        <div class="tiers-box">
-          <div class="tier-row">
-            <span class="tier-tag t1">T1 ĐÃI BÔI</span>
-            <span class="tier-content">"Khởi động một dự án kinh doanh mới với kế hoạch bài bản hơn."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t2">T2 CẢM GIÁC THẬT</span>
-            <span class="tier-content">"Từng có thành công nhưng giờ thất bại phải làm lại từ đầu, đi đâu cũng sợ người quen nhìn thấy hỏi han."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t25">T2.5 THỂ DIỆN</span>
-            <span class="tier-content" style="color: #e9d5ff;">Quay video giấu mặt hoặc lấy nick ảo vì sợ đối tác cũ nhìn thấy mình đang phải bắt đầu lại từ đáy vực, không dám thừa nhận mình đã thất bại.</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t3">T3 NGƯỢNG MIỆNG</span>
-            <span class="tier-content" style="color: #6ee7b7;">"Cái sĩ diện hão không nuôi sống được gia đình. Dẹp bỏ tự ái, cầm máy lên quay từ số 0 để lấy lại những gì đã mất."</span>
-          </div>
-        </div>
-
-        <!-- HOOK QUOTE -->
-        <div class="hook-quote">
-          <div class="hook-label">🎙️ Hook Mở Màn Đắt Giá:</div>
-          <div class="hook-text">"Đóng cửa tiệm cũ, trong tay gần như về lại số 0... Sợ nhất không phải nghèo, mà là sợ bạn bè cười chê."</div>
-        </div>
-
-        <!-- QUICK 5 SCENES ACCORDION -->
-        <div class="accordion-box">
-          <div class="accordion-trigger" onclick="toggleAccordion(this)">
-            <span>🎞️ Xem Nhanh 5 Phân Cảnh Băm Nhịp</span>
-            <span class="acc-arrow">▼</span>
-          </div>
-          <div class="accordion-content">
-            
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 1 (Selfie mở sổ mới)</span>
-              <span class="scene-time">00:00 - 00:03</span>
-            </div>
-            <div class="scene-visual">🎥 Cầm máy mở cuốn sổ mới tinh, nói thẳng thắn.</div>
-            <div class="scene-voice">🎙️ &quot;Nghỉ việc cũ ra làm cái mới... nói thật là run vãi đạn!&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 2 (Tại bàn)</span>
-              <span class="scene-time">00:03 - 00:07</span>
-            </div>
-            <div class="scene-visual">🎥 Đặt máy, uống ngụm nước, mắt lo âu.</div>
-            <div class="scene-voice">🎙️ &quot;Tiền tiết kiệm thì vơi dần, đăng bài cũng không dám vì sợ bạn bè xì xào.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">B-Roll 1 (Gạch chân &#x27;Kênh mới&#x27;)</span>
-              <span class="scene-time">00:07 - 00:12</span>
-            </div>
-            <div class="scene-visual">🎥 Bút gạch chân dòng chữ &#x27;Bắt đầu kênh mới&#x27; trong sổ.</div>
-            <div class="scene-voice">🎙️ &quot;Nhưng cứ sợ người ta đánh giá thì tiền nhà ai trả cho mình?&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">B-Roll 2 (Góc nghiêng ánh mắt)</span>
-              <span class="scene-time">00:12 - 00:16</span>
-            </div>
-            <div class="scene-visual">🎥 Nhìn lên bảng giảng bài, ánh mắt dứt khoát hơn.</div>
-            <div class="scene-voice">🎙️ &quot;Ngồi loay hoay nghĩ ngợi không đẻ ra tiền được.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 3 (Trực diện chốt)</span>
-              <span class="scene-time">00:16 - 00:20</span>
-            </div>
-            <div class="scene-visual">🎥 Nhìn thẳng camera nói quyết liệt.</div>
-            <div class="scene-voice">🎙️ &quot;Đã chọn làm lại thì mặt phải dày lên. Cầm máy lên quay thôi!&quot;</div>
-          </div>
-        
-          </div>
-        </div>
-
-        <!-- CARD FOOTER ACTIONS -->
-        <div class="card-footer">
-          <a href="kich_ban_08_bat_dau_lai_tu_con_so_0.html" class="btn-view-storyboard" target="_blank">
-            🎬 Xem Bảng Phân Cảnh 18 Beats AI ➔
-          </a>
-          <button class="btn-copy-script" onclick="copyScriptText('KB 08 • Bắt Đầu Lại Từ Con Số 0\nHook: Đóng cửa tiệm cũ, trong tay gần như về lại số 0... Sợ nhất không phải nghèo, mà là sợ bạn bè cười chê.\n- Cảnh 1: &quot;Nghỉ việc cũ ra làm cái mới... nói thật là run vãi đạn!&quot;\n- Cảnh 2: &quot;Tiền tiết kiệm thì vơi dần, đăng bài cũng không dám vì sợ bạn bè xì xào.&quot;\n- Cảnh 3: &quot;Nhưng cứ sợ người ta đánh giá thì tiền nhà ai trả cho mình?&quot;\n- Cảnh 4: &quot;Ngồi loay hoay nghĩ ngợi không đẻ ra tiền được.&quot;\n- Cảnh 5: &quot;Đã chọn làm lại thì mặt phải dày lên. Cầm máy lên quay thôi!&quot;\nCTA: Sĩ diện có mài ra ăn được đâu! Dẹp bỏ tự ái, cầm điện thoại lên làm lại từ đầu!', 'KB 08')">
-            📋 Copy Thoại
-          </button>
-        </div>
-      </article>
-    
-      <article class="script-card" data-category="core" data-search="hàng làm kỹ nhưng bị so sánh giá xưởng đồ da thủ công / chế tác tỉ mỉ • khách so sánh với hàng chợ công nghiệp chủ xưởng sản xuất, người làm hàng thủ công / kỹ nghệ tâm huyết bị khách chê đắt kb 09 mất 3 ngày gia công từng đường kim mũi chỉ, khách vào phán một câu: 'trên mạng bán có nửa giá'...">
-        <!-- TOP: THUMB & HEADER -->
-        <div class="card-top">
-          <div class="card-thumb-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_09_hang_lam_ky_nhung_bi_so_sanh_gia/assets/frames/scene1_beat1.jpg')">
-            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_09_hang_lam_ky_nhung_bi_so_sanh_gia/assets/frames/scene1_beat1.jpg" alt="Hàng Làm Kỹ Nhưng Bị So Sánh Giá" loading="lazy" onerror="this.src='https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/tu_dot_tien_den_tu_tin_xuat_hien/assets/frames/scene1_beat1.jpg'">
-            <span class="thumb-badge-duration">30 Giây</span>
-          </div>
-
-          <div class="card-info">
-            <div class="card-tag-row">
-              <span class="code-pill">KB 09</span>
-              <span class="category-pill" style="background: #f9731618; color: #f97316; border-color: #f9731640;">LÀM KỸ & BỊ ÉP GIÁ</span>
-            </div>
-            <h3 class="card-title"><a href="kich_ban_09_hang_lam_ky_nhung_bi_so_sanh_gia.html">Hàng Làm Kỹ Nhưng Bị So Sánh Giá</a></h3>
-            <div class="meta-line">📍 <b>Bối cảnh:</b> Xưởng đồ da thủ công / Chế tác tỉ mỉ • Khách so sánh với hàng chợ công nghiệp</div>
-            <div class="meta-line">🎯 <b>Đối tượng:</b> Chủ xưởng sản xuất, người làm hàng thủ công / kỹ nghệ tâm huyết bị khách chê đắt</div>
-          </div>
-        </div>
-
-        <!-- 3 TIERS PSYCHOLOGY BOX -->
-        <div class="tiers-box">
-          <div class="tier-row">
-            <span class="tier-tag t1">T1 ĐÃI BÔI</span>
-            <span class="tier-content">"Giải thích chi tiết về nguyên vật liệu cao cấp và nguồn gốc da nhập khẩu cho khách hiểu."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t2">T2 CẢM GIÁC THẬT</span>
-            <span class="tier-content">"Tức điên khi hàng tâm huyết làm bằng tay bị so sánh với đồ công nghiệp dập khuôn rẻ tiền trên sàn."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t25">T2.5 THỂ DIỆN</span>
-            <span class="tier-content" style="color: #e9d5ff;">Im lặng nuốt cục tức vào trong, cười gượng tiếp khách nhưng trong lòng ấm ức chỉ muốn đuổi khách ra khỏi tiệm vì thấy tay nghề của mình bị coi thường.</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t3">T3 NGƯỢNG MIỆNG</span>
-            <span class="tier-content" style="color: #6ee7b7;">"Khách không có lỗi, lỗi do mình không biết cách làm video phơi bày công sức và sự tỉ mỉ. Phải show toàn bộ quy trình lên video."</span>
-          </div>
-        </div>
-
-        <!-- HOOK QUOTE -->
-        <div class="hook-quote">
-          <div class="hook-label">🎙️ Hook Mở Màn Đắt Giá:</div>
-          <div class="hook-text">"Mất 3 ngày gia công từng đường kim mũi chỉ, khách vào phán một câu: &#x27;Trên mạng bán có nửa giá&#x27;..."</div>
-        </div>
-
-        <!-- QUICK 5 SCENES ACCORDION -->
-        <div class="accordion-box">
-          <div class="accordion-trigger" onclick="toggleAccordion(this)">
-            <span>🎞️ Xem Nhanh 5 Phân Cảnh Băm Nhịp</span>
-            <span class="acc-arrow">▼</span>
-          </div>
-          <div class="accordion-content">
-            
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 1 (Selfie xoay sản phẩm)</span>
-              <span class="scene-time">00:00 - 00:03</span>
-            </div>
-            <div class="scene-visual">🎥 Cầm máy xoay nhẹ sản phẩm mẫu trên tay.</div>
-            <div class="scene-voice">🎙️ &quot;Làm kỹ từng đường kim mũi chỉ, chọn nguyên liệu xịn...&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 2 (Tại bàn)</span>
-              <span class="scene-time">00:03 - 00:07</span>
-            </div>
-            <div class="scene-visual">🎥 Đặt máy xuống bàn, thở dài kể khổ.</div>
-            <div class="scene-voice">🎙️ &quot;...Thế mà cứ báo giá là khách kêu đắt, so với hàng chợ.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">B-Roll 1 (Màn hình tin nhắn im lặng)</span>
-              <span class="scene-time">00:07 - 00:12</span>
-            </div>
-            <div class="scene-visual">🎥 Màn hình điện thoại hiển thị tin nhắn khách xem xong không trả lời.</div>
-            <div class="scene-voice">🎙️ &quot;Nhiều lúc bực, nhưng nghĩ lại khách chê đắt là do lỗi của mình.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">B-Roll 2 (Xem bài giảng quy trình)</span>
-              <span class="scene-time">00:12 - 00:16</span>
-            </div>
-            <div class="scene-visual">🎥 Nhìn lên bài giảng cách quay video quy trình sản phẩm.</div>
-            <div class="scene-voice">🎙️ &quot;Mình chỉ biết báo giá, chứ có cho người ta thấy mình làm vất vả thế nào đâu?&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll 3 (Trực diện chốt)</span>
-              <span class="scene-time">00:16 - 00:20</span>
-            </div>
-            <div class="scene-visual">🎥 Nhìn thẳng camera nói chân thành, dứt khoát.</div>
-            <div class="scene-voice">🎙️ &quot;Thôi khỏi giải thích nhiều. Cầm máy quay từng công đoạn thật lên cho khách tự nhìn!&quot;</div>
-          </div>
-        
-          </div>
-        </div>
-
-        <!-- CARD FOOTER ACTIONS -->
-        <div class="card-footer">
-          <a href="kich_ban_09_hang_lam_ky_nhung_bi_so_sanh_gia.html" class="btn-view-storyboard" target="_blank">
-            🎬 Xem Bảng Phân Cảnh 18 Beats AI ➔
-          </a>
-          <button class="btn-copy-script" onclick="copyScriptText('KB 09 • Hàng Làm Kỹ Nhưng Bị So Sánh Giá\nHook: Mất 3 ngày gia công từng đường kim mũi chỉ, khách vào phán một câu: &#39;Trên mạng bán có nửa giá&#39;...\n- Cảnh 1: &quot;Làm kỹ từng đường kim mũi chỉ, chọn nguyên liệu xịn...&quot;\n- Cảnh 2: &quot;...Thế mà cứ báo giá là khách kêu đắt, so với hàng chợ.&quot;\n- Cảnh 3: &quot;Nhiều lúc bực, nhưng nghĩ lại khách chê đắt là do lỗi của mình.&quot;\n- Cảnh 4: &quot;Mình chỉ biết báo giá, chứ có cho người ta thấy mình làm vất vả thế nào đâu?&quot;\n- Cảnh 5: &quot;Thôi khỏi giải thích nhiều. Cầm máy quay từng công đoạn thật lên cho khách tự nhìn!&quot;\nCTA: Thay vì ngồi bực mình khi bị so sánh, tôi chọn quay lại từng công đoạn thật để khách tự nhìn thấy giá trị!', 'KB 09')">
-            📋 Copy Thoại
-          </button>
-        </div>
-      </article>
-    
-      <article class="script-card" data-category="exercise" data-search="bài tập 01 • băm nhỏ cảnh trám marketing tại lớp lớp học marketing pt • bàn học thực tế • sinh viên soi chỉ số ads và cày laptop học viên lớp offline thực hành quay ngay tại bàn học bằng smartphone cá nhân bài tập 01 nhìn đồ thị ads đăm chiêu, ngón tay cuộn chuột liên tục... 1 hành động băm thành 5 cú máy đắt giá!">
-        <!-- TOP: THUMB & HEADER -->
-        <div class="card-top">
-          <div class="card-thumb-wrap" onclick="openLightbox('assets/frames_bai_tap_01/shot1.jpg')">
-            <img src="assets/frames_bai_tap_01/shot1.jpg" alt="Bài Tập 01 • Băm Nhỏ Cảnh Trám Marketing Tại Lớp" loading="lazy" onerror="this.src='https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/tu_dot_tien_den_tu_tin_xuat_hien/assets/frames/scene1_beat1.jpg'">
-            <span class="thumb-badge-duration">12 Giây</span>
-          </div>
-
-          <div class="card-info">
-            <div class="card-tag-row">
-              <span class="code-pill">BÀI TẬP 01</span>
-              <span class="category-pill" style="background: #38bdf818; color: #38bdf8; border-color: #38bdf840;">BÀI TẬP TẠI LỚP (HOT)</span>
-            </div>
-            <h3 class="card-title"><a href="bai_tap_01_phan_canh_canh_tram.html">Bài Tập 01 • Băm Nhỏ Cảnh Trám Marketing Tại Lớp</a></h3>
-            <div class="meta-line">📍 <b>Bối cảnh:</b> Lớp học Marketing PT • Bàn học thực tế • Sinh viên soi chỉ số Ads và cày laptop</div>
-            <div class="meta-line">🎯 <b>Đối tượng:</b> Học viên lớp Offline thực hành quay ngay tại bàn học bằng smartphone cá nhân</div>
-          </div>
-        </div>
-
-        <!-- 3 TIERS PSYCHOLOGY BOX -->
-        <div class="tiers-box">
-          <div class="tier-row">
-            <span class="tier-tag t1">T1 ĐÃI BÔI</span>
-            <span class="tier-content">"Quay bạn học gõ máy tính để làm cảnh nền chèn vào video marketing."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t2">T2 CẢM GIÁC THẬT</span>
-            <span class="tier-content">"Đặt máy một chỗ quay đơ đơ suốt 8-10 giây, nhìn khung hình lờ đờ, buồn ngủ, khán giả lướt qua sau 1 giây."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t25">T2.5 THỂ DIỆN</span>
-            <span class="tier-content" style="color: #e9d5ff;">Nghĩ mình quay cảnh trám chỉ là phụ nên lười đổi góc, giơ máy lên quay đại một đoạn cho có để nộp bài tập.</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t3">T3 NGƯỢNG MIỆNG</span>
-            <span class="tier-content" style="color: #6ee7b7;">"Cảnh trám chết dí thể hiện tư duy lười biếng. Băm nhỏ 5 cú máy đổi 3 trục mới là vũ khí giữ chân người xem từng giây."</span>
-          </div>
-        </div>
-
-        <!-- HOOK QUOTE -->
-        <div class="hook-quote">
-          <div class="hook-label">🎙️ Hook Mở Màn Đắt Giá:</div>
-          <div class="hook-text">"Nhìn đồ thị Ads đăm chiêu, ngón tay cuộn chuột liên tục... 1 hành động băm thành 5 cú máy đắt giá!"</div>
-        </div>
-
-        <!-- QUICK 5 SCENES ACCORDION -->
-        <div class="accordion-box">
-          <div class="accordion-trigger" onclick="toggleAccordion(this)">
-            <span>🎞️ Xem Nhanh 5 Phân Cảnh Băm Nhịp</span>
-            <span class="acc-arrow">▼</span>
-          </div>
-          <div class="accordion-content">
-            
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">Shot 1 • MCU (Cận ngực)</span>
-              <span class="scene-time">00:00 - 00:02.5</span>
-            </div>
-            <div class="scene-visual">🎥 Mắt đăm chiêu nhìn màn hình, ánh sáng xanh hắt nhẹ lên khuôn mặt.</div>
-            <div class="scene-voice">🎙️ &quot;Mở chiến dịch ra soi từng con số...&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">Shot 2 • CU (Cận cảnh)</span>
-              <span class="scene-time">00:02.5 - 00:05</span>
-            </div>
-            <div class="scene-visual">🎥 Bàn tay gõ phím lách cách, ngón tay đổi phím dứt khoát.</div>
-            <div class="scene-voice">🎙️ &quot;...tiền nạp ads thì cắn đều từng phút...&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">Shot 3 • Macro (Đặc tả)</span>
-              <span class="scene-time">00:05 - 00:07.5</span>
-            </div>
-            <div class="scene-visual">🎥 Màn hình CapCut timeline &amp; bảng báo cáo chi phí Facebook Ads.</div>
-            <div class="scene-voice">🎙️ &quot;...nhưng đơn về thì lẹt đẹt vài ba cái...&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">Shot 4 • OTS (Qua vai)</span>
-              <span class="scene-time">00:07.5 - 00:10</span>
-            </div>
-            <div class="scene-visual">🎥 Góc qua vai thấy cả bạn cùng bàn đang cắm cúi viết kịch bản.</div>
-            <div class="scene-voice">🎙️ &quot;...người ngoài nhìn vào tưởng dân marketing oách lắm...&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">Shot 5 • Low Angle (Hất thấp)</span>
-              <span class="scene-time">00:10 - 00:12.5</span>
-            </div>
-            <div class="scene-visual">🎥 Góc máy đặt sát mặt bàn hất lên, mặt căng thẳng thở hắt ra.</div>
-            <div class="scene-voice">🎙️ &quot;...nhưng thật ra là đang toát mồ hôi hột tìm đường sống!&quot;</div>
-          </div>
-        
-          </div>
-        </div>
-
-        <!-- CARD FOOTER ACTIONS -->
-        <div class="card-footer">
-          <a href="bai_tap_01_phan_canh_canh_tram.html" class="btn-view-storyboard" target="_blank">
-            🎬 Xem Bảng Phân Cảnh 18 Beats AI ➔
-          </a>
-          <button class="btn-copy-script" onclick="copyScriptText('BÀI TẬP 01 • Bài Tập 01 • Băm Nhỏ Cảnh Trám Marketing Tại Lớp\nHook: Nhìn đồ thị Ads đăm chiêu, ngón tay cuộn chuột liên tục... 1 hành động băm thành 5 cú máy đắt giá!\n- Cảnh 1: &quot;Mở chiến dịch ra soi từng con số...&quot;\n- Cảnh 2: &quot;...tiền nạp ads thì cắn đều từng phút...&quot;\n- Cảnh 3: &quot;...nhưng đơn về thì lẹt đẹt vài ba cái...&quot;\n- Cảnh 4: &quot;...người ngoài nhìn vào tưởng dân marketing oách lắm...&quot;\n- Cảnh 5: &quot;...nhưng thật ra là đang toát mồ hôi hột tìm đường sống!&quot;\nCTA: Áp dụng ngay tại bàn: Cắt nhỏ hành động gốc để tiêu diệt tận gốc căn bệnh &#39;cảnh trám chết dí&#39;!', 'BÀI TẬP 01')">
-            📋 Copy Thoại
-          </button>
-        </div>
-      </article>
-    
-      <article class="script-card" data-category="case" data-search="chiến lược & visual storyboard salon tóc 10 năm hải phòng salon tóc khương minh hải phòng • góc gội đầu • ghế cắt tóc • đèn nanlite vàng ấm chủ salon tóc, thợ tóc lâu năm muốn xây kênh tiktok hút tệp khách vip case study 01 mặt tròn cắt gì cho sang? / từng bị tóc cháy khô xơ? (cắt theo điệu nhạc lofi cực sang)">
-        <!-- TOP: THUMB & HEADER -->
-        <div class="card-top">
-          <div class="card-thumb-wrap" onclick="openLightbox('assets/frames_toc_10nam/04_hero_model.jpg')">
-            <img src="assets/frames_toc_10nam/04_hero_model.jpg" alt="Chiến Lược &amp; Visual Storyboard Salon Tóc 10 Năm Hải Phòng" loading="lazy" onerror="this.src='https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/tu_dot_tien_den_tu_tin_xuat_hien/assets/frames/scene1_beat1.jpg'">
-            <span class="thumb-badge-duration">15 Giây / Video</span>
-          </div>
-
-          <div class="card-info">
-            <div class="card-tag-row">
-              <span class="code-pill">CASE STUDY 01</span>
-              <span class="category-pill" style="background: #ec489918; color: #ec4899; border-color: #ec489940;">SALON TÓC VIP</span>
-            </div>
-            <h3 class="card-title"><a href="chien_luoc_xay_kenh_toc_10_nam.html">Chiến Lược &amp; Visual Storyboard Salon Tóc 10 Năm Hải Phòng</a></h3>
-            <div class="meta-line">📍 <b>Bối cảnh:</b> Salon tóc Khương Minh Hải Phòng • Góc gội đầu • Ghế cắt tóc • Đèn Nanlite vàng ấm</div>
-            <div class="meta-line">🎯 <b>Đối tượng:</b> Chủ salon tóc, thợ tóc lâu năm muốn xây kênh TikTok hút tệp khách VIP</div>
-          </div>
-        </div>
-
-        <!-- 3 TIERS PSYCHOLOGY BOX -->
-        <div class="tiers-box">
-          <div class="tier-row">
-            <span class="tier-tag t1">T1 ĐÃI BÔI</span>
-            <span class="tier-content">"Quay video salon tóc theo trào lưu biến hình rầm rộ trên mạng."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t2">T2 CẢM GIÁC THẬT</span>
-            <span class="tier-content">"Khách đến salon toàn hỏi giá rẻ, khách VIP không thấy đâu dù tay nghề thợ 10 năm kinh nghiệm."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t25">T2.5 THỂ DIỆN</span>
-            <span class="tier-content" style="color: #e9d5ff;">Ngại xuất hiện nói chuyện trước ống kính vì sợ mất hình ảnh chủ tiệm đứng đắn.</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t3">T3 NGƯỢNG MIỆNG</span>
-            <span class="tier-content" style="color: #6ee7b7;">"Không cần nói lời nào! Dùng video 15s Zoom-cut nhịp nhạc + mẫu xinh để kéo tệp khách chịu chi."</span>
-          </div>
-        </div>
-
-        <!-- HOOK QUOTE -->
-        <div class="hook-quote">
-          <div class="hook-label">🎙️ Hook Mở Màn Đắt Giá:</div>
-          <div class="hook-text">"Mặt Tròn Cắt Gì Cho Sang? / Từng Bị Tóc Cháy Khô Xơ? (Cắt theo điệu nhạc lofi cực sang)"</div>
-        </div>
-
-        <!-- QUICK 5 SCENES ACCORDION -->
-        <div class="accordion-box">
-          <div class="accordion-trigger" onclick="toggleAccordion(this)">
-            <span>🎞️ Xem Nhanh 4 Phân Cảnh Băm Nhịp</span>
-            <span class="acc-arrow">▼</span>
-          </div>
-          <div class="accordion-content">
-            
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">Cảnh 1 • Hook Tóc Khô</span>
-              <span class="scene-time">00:00 - 00:03</span>
-            </div>
-            <div class="scene-visual">🎥 Cận cảnh bàn tay thợ vuốt lọn tóc xơ rối của khách.</div>
-            <div class="scene-voice">🎙️ (Nhạc Lofi nhẹ) Nhịp bass 1 drop</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">Cảnh 2 • Pha Thuốc Phục Hồi</span>
-              <span class="scene-time">00:03 - 00:07</span>
-            </div>
-            <div class="scene-visual">🎥 Bát thuốc collagen thơm, thìa khuấy mịn, tay đeo găng đen.</div>
-            <div class="scene-voice">🎙️ (Tiếng ASMR khuấy thuốc &amp; chải tóc)</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">Cảnh 3 • Kéo Cắt Tỉa Tỉ Mỉ</span>
-              <span class="scene-time">00:07 - 00:11</span>
-            </div>
-            <div class="scene-visual">🎥 Mũi kéo bén cắt từng ngọn tóc bay trong ánh đèn vàng ấm.</div>
-            <div class="scene-voice">🎙️ (Tiếng kéo rẹt rẹt cực đã tai)</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">Cảnh 4 • Hero Shot Mẫu Xinh</span>
-              <span class="scene-time">00:11 - 00:15</span>
-            </div>
-            <div class="scene-visual">🎥 Mái tóc bồng bềnh, mẫu quay đầu cười tỏa sáng, quạt thổi nhẹ.</div>
-            <div class="scene-voice">🎙️ Hải Phòng • Inbox nhận tư vấn dáng tóc phù hợp</div>
-          </div>
-        
-          </div>
-        </div>
-
-        <!-- CARD FOOTER ACTIONS -->
-        <div class="card-footer">
-          <a href="chien_luoc_xay_kenh_toc_10_nam.html" class="btn-view-storyboard" target="_blank">
-            🎬 Xem Bảng Phân Cảnh 18 Beats AI ➔
-          </a>
-          <button class="btn-copy-script" onclick="copyScriptText('CASE STUDY 01 • Chiến Lược & Visual Storyboard Salon Tóc 10 Năm Hải Phòng\nHook: Mặt Tròn Cắt Gì Cho Sang? / Từng Bị Tóc Cháy Khô Xơ? (Cắt theo điệu nhạc lofi cực sang)\n- Cảnh 1: (Nhạc Lofi nhẹ) Nhịp bass 1 drop\n- Cảnh 2: (Tiếng ASMR khuấy thuốc & chải tóc)\n- Cảnh 3: (Tiếng kéo rẹt rẹt cực đã tai)\n- Cảnh 4: Hải Phòng • Inbox nhận tư vấn dáng tóc phù hợp\nCTA: Chiến lược Quiet Luxury khai thác tay nghề 10 năm và đòn bẩy tâm lý Mẫu Xinh (Halo Effect).', 'CASE STUDY 01')">
-            📋 Copy Thoại
-          </button>
-        </div>
-      </article>
-    
-      <article class="script-card" data-category="case" data-search="kịch bản thực chiến: nguyệt store hải phòng (5 video b-roll theo beat) cửa hàng điện thoại like new hải phòng • bàn test máy • hộp phụ kiện • tem ốc zin cửa hàng điện thoại, bán iphone/ipad like new cần xây dựng niềm tin kiểm định máy zin case study 02 15 pro max like new có zin như lời đồn? (tiếng click mở hộp & soi ốc sắc bén)">
-        <!-- TOP: THUMB & HEADER -->
-        <div class="card-top">
-          <div class="card-thumb-wrap" onclick="openLightbox('assets/kb1_c1.jpg')">
-            <img src="assets/kb1_c1.jpg" alt="Kịch Bản Thực Chiến: Nguyệt Store Hải Phòng (5 Video B-Roll Theo Beat)" loading="lazy" onerror="this.src='https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/tu_dot_tien_den_tu_tin_xuat_hien/assets/frames/scene1_beat1.jpg'">
-            <span class="thumb-badge-duration">18 - 22 Giây / Video</span>
-          </div>
-
-          <div class="card-info">
-            <div class="card-tag-row">
-              <span class="code-pill">CASE STUDY 02</span>
-              <span class="category-pill" style="background: #06b6d418; color: #06b6d4; border-color: #06b6d440;">BÁN LẺ IPHONE LIKE NEW</span>
-            </div>
-            <h3 class="card-title"><a href="kich_ban_nguyet_store_hai_phong.html">Kịch Bản Thực Chiến: Nguyệt Store Hải Phòng (5 Video B-Roll Theo Beat)</a></h3>
-            <div class="meta-line">📍 <b>Bối cảnh:</b> Cửa hàng điện thoại Like New Hải Phòng • Bàn test máy • Hộp phụ kiện • Tem ốc zin</div>
-            <div class="meta-line">🎯 <b>Đối tượng:</b> Cửa hàng điện thoại, bán iPhone/iPad Like New cần xây dựng niềm tin kiểm định máy zin</div>
-          </div>
-        </div>
-
-        <!-- 3 TIERS PSYCHOLOGY BOX -->
-        <div class="tiers-box">
-          <div class="tier-row">
-            <span class="tier-tag t1">T1 ĐÃI BÔI</span>
-            <span class="tier-content">"Đăng ảnh chụp máy lên fanpage và chạy quảng cáo khuyến mãi giảm giá."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t2">T2 CẢM GIÁC THẬT</span>
-            <span class="tier-content">"Khách sợ mua phải máy dựng, ép kính, thay vỏ trôi nổi trên mạng nên nghi ngờ đủ thứ."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t25">T2.5 THỂ DIỆN</span>
-            <span class="tier-content" style="color: #e9d5ff;">Cứ phải thanh minh &#x27;hàng em chuẩn xịn anh ơi&#x27; nhưng càng giải thích khách càng nghi.</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t3">T3 NGƯỢNG MIỆNG</span>
-            <span class="tier-content" style="color: #6ee7b7;">"Show toàn bộ quy trình soi ốc zin, quét 3uTools và vạch khuyết điểm trừ tiền ngay trên video!"</span>
-          </div>
-        </div>
-
-        <!-- HOOK QUOTE -->
-        <div class="hook-quote">
-          <div class="hook-label">🎙️ Hook Mở Màn Đắt Giá:</div>
-          <div class="hook-text">"15 Pro Max Like New Có Zin Như Lời Đồn? (Tiếng click mở hộp &amp; soi ốc sắc bén)"</div>
-        </div>
-
-        <!-- QUICK 5 SCENES ACCORDION -->
-        <div class="accordion-box">
-          <div class="accordion-trigger" onclick="toggleAccordion(this)">
-            <span>🎞️ Xem Nhanh 4 Phân Cảnh Băm Nhịp</span>
-            <span class="acc-arrow">▼</span>
-          </div>
-          <div class="accordion-content">
-            
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">Beat 1 • Cầm Máy</span>
-              <span class="scene-time">00:00 - 00:04</span>
-            </div>
-            <div class="scene-visual">🎥 Tay đeo găng nhấc chiếc iPhone Titan tự nhiên ra khỏi hộp.</div>
-            <div class="scene-voice">🎙️ &quot;15 Pro Max lướt này có thực sự nguyên bản?&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">Beat 2 • Soi Ốc Đáy</span>
-              <span class="scene-time">00:04 - 00:08</span>
-            </div>
-            <div class="scene-visual">🎥 Kính lúp phóng to 2 con ốc đít, ren ốc sắc cạnh chưa từng mở.</div>
-            <div class="scene-voice">🎙️ &quot;Ốc đít chưa một vết tì, gioăng chống nước nguyên vẹn.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">Beat 3 • Quét 3uTools</span>
-              <span class="scene-time">00:08 - 00:13</span>
-            </div>
-            <div class="scene-visual">🎥 Cắm cáp máy tính, màn hình hiện 100% xanh lá điểm linh kiện.</div>
-            <div class="scene-voice">🎙️ &quot;Pin 100%, số lần sạc chuẩn zin, màn hình True Tone đầy đủ.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">Beat 4 • Chốt Đơn &amp; Giao Hàng</span>
-              <span class="scene-time">00:13 - 00:18</span>
-            </div>
-            <div class="scene-visual">🎥 Dán tem bảo hành, đóng gói hỏa tốc giao tận tay khách Hải Phòng.</div>
-            <div class="scene-voice">🎙️ &quot;Nhận hàng kiểm tra ưng ý mới thanh toán!&quot;</div>
-          </div>
-        
-          </div>
-        </div>
-
-        <!-- CARD FOOTER ACTIONS -->
-        <div class="card-footer">
-          <a href="kich_ban_nguyet_store_hai_phong.html" class="btn-view-storyboard" target="_blank">
-            🎬 Xem Bảng Phân Cảnh 18 Beats AI ➔
-          </a>
-          <button class="btn-copy-script" onclick="copyScriptText('CASE STUDY 02 • Kịch Bản Thực Chiến: Nguyệt Store Hải Phòng (5 Video B-Roll Theo Beat)\nHook: 15 Pro Max Like New Có Zin Như Lời Đồn? (Tiếng click mở hộp & soi ốc sắc bén)\n- Cảnh 1: &quot;15 Pro Max lướt này có thực sự nguyên bản?&quot;\n- Cảnh 2: &quot;Ốc đít chưa một vết tì, gioăng chống nước nguyên vẹn.&quot;\n- Cảnh 3: &quot;Pin 100%, số lần sạc chuẩn zin, màn hình True Tone đầy đủ.&quot;\n- Cảnh 4: &quot;Nhận hàng kiểm tra ưng ý mới thanh toán!&quot;\nCTA: Bảo hành lỗi 1 đổi 1 tận nơi Hải Phòng • Nhận hàng check zin mới trả tiền.', 'CASE STUDY 02')">
-            📋 Copy Thoại
-          </button>
-        </div>
-      </article>
-    
-      <article class="script-card" data-category="core" data-search="kịch bản gốc: từ đốt tiền quảng cáo đến tự tin xuất hiện lớp học thực tế • màn hình điện thoại trừ tiền • nụ cười vỡ òa khi tự quay video chủ doanh nghiệp nhỏ, người bán hàng online bế tắc vì phụ thuộc quảng cáo demo gốc cứ 5 phút tôi lại mở màn hình kiểm tra một lần... tiền nạp ăn hết lãi.">
-        <!-- TOP: THUMB & HEADER -->
-        <div class="card-top">
-          <div class="card-thumb-wrap" onclick="openLightbox('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/tu_dot_tien_den_tu_tin_xuat_hien/assets/frames/scene1_beat1.jpg')">
-            <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/tu_dot_tien_den_tu_tin_xuat_hien/assets/frames/scene1_beat1.jpg" alt="Kịch Bản Gốc: Từ Đốt Tiền Quảng Cáo Đến Tự Tin Xuất Hiện" loading="lazy" onerror="this.src='https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/tu_dot_tien_den_tu_tin_xuat_hien/assets/frames/scene1_beat1.jpg'">
-            <span class="thumb-badge-duration">30 Giây</span>
-          </div>
-
-          <div class="card-info">
-            <div class="card-tag-row">
-              <span class="code-pill">DEMO GỐC</span>
-              <span class="category-pill" style="background: #38bdf818; color: #38bdf8; border-color: #38bdf840;">DEMO BỐI CẢNH LỚP</span>
-            </div>
-            <h3 class="card-title"><a href="tu_dot_tien_den_tu_tin_xuat_hien.html">Kịch Bản Gốc: Từ Đốt Tiền Quảng Cáo Đến Tự Tin Xuất Hiện</a></h3>
-            <div class="meta-line">📍 <b>Bối cảnh:</b> Lớp học thực tế • Màn hình điện thoại trừ tiền • Nụ cười vỡ òa khi tự quay video</div>
-            <div class="meta-line">🎯 <b>Đối tượng:</b> Chủ doanh nghiệp nhỏ, người bán hàng online bế tắc vì phụ thuộc quảng cáo</div>
-          </div>
-        </div>
-
-        <!-- 3 TIERS PSYCHOLOGY BOX -->
-        <div class="tiers-box">
-          <div class="tier-row">
-            <span class="tier-tag t1">T1 ĐÃI BÔI</span>
-            <span class="tier-content">"Đi tìm công thức vít ads nghìn đơn từ các khóa học online."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t2">T2 CẢM GIÁC THẬT</span>
-            <span class="tier-content">"Chi phí ads tăng gấp đôi, chạy bao nhiêu nuôi nền tảng bấy nhiêu mà không dám tắt."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t25">T2.5 THỂ DIỆN</span>
-            <span class="tier-content" style="color: #e9d5ff;">Vẫn khoe đơn hàng ngập tràn với gia đình nhưng đêm về mất ngủ vì tài khoản ads bị khóa.</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t3">T3 NGƯỢNG MIỆNG</span>
-            <span class="tier-content" style="color: #6ee7b7;">"Xuất hiện trước ống kính là con đường độc lập tự chủ duy nhất của người làm kinh doanh."</span>
-          </div>
-        </div>
-
-        <!-- HOOK QUOTE -->
-        <div class="hook-quote">
-          <div class="hook-label">🎙️ Hook Mở Màn Đắt Giá:</div>
-          <div class="hook-text">"Cứ 5 phút tôi lại mở màn hình kiểm tra một lần... Tiền nạp ăn hết lãi."</div>
-        </div>
-
-        <!-- QUICK 5 SCENES ACCORDION -->
-        <div class="accordion-box">
-          <div class="accordion-trigger" onclick="toggleAccordion(this)">
-            <span>🎞️ Xem Nhanh 5 Phân Cảnh Băm Nhịp</span>
-            <span class="acc-arrow">▼</span>
-          </div>
-          <div class="accordion-content">
-            
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">Cảnh 1 • Soi Ads</span>
-              <span class="scene-time">00:00 - 00:05</span>
-            </div>
-            <div class="scene-visual">🎥 Cầm điện thoại vuốt màn hình ads, mặt đăm chiêu.</div>
-            <div class="scene-voice">🎙️ &quot;Cứ 5 phút lại mở điện thoại xem tiền trừ...&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">Cảnh 2 • Nhìn Bảng Lỗ</span>
-              <span class="scene-time">00:05 - 00:11</span>
-            </div>
-            <div class="scene-visual">🎥 Bàn làm việc giấy tờ sổ sách ghi chi phí quảng cáo tăng vọt.</div>
-            <div class="scene-voice">🎙️ &quot;Doanh thu thì cao mà tiền lãi chẳng thấy đâu...&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">Cảnh 3 • Đến Lớp Học</span>
-              <span class="scene-time">00:11 - 00:18</span>
-            </div>
-            <div class="scene-visual">🎥 Bước vào phòng học, nhìn thấy bạn bè đang thực hành quay video.</div>
-            <div class="scene-voice">🎙️ &quot;Nhìn mọi người tự tin đứng trước máy quay...&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">Cảnh 4 • Cầm Tripod</span>
-              <span class="scene-time">00:18 - 00:24</span>
-            </div>
-            <div class="scene-visual">🎥 Hai tay cầm chân máy, bấm nút REC đỏ, hít một hơi thật sâu.</div>
-            <div class="scene-voice">🎙️ &quot;...mình nhận ra chỉ có tự xuất hiện mới bền vững.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">Cảnh 5 • Nụ Cười Thật</span>
-              <span class="scene-time">00:24 - 00:30</span>
-            </div>
-            <div class="scene-visual">🎥 Nhìn thẳng ống kính cười tự nhiên, phong thái chủ tiệm đĩnh đạc.</div>
-            <div class="scene-voice">🎙️ &quot;Tự tin xuất hiện, khách hàng tự tìm tới!&quot;</div>
-          </div>
-        
-          </div>
-        </div>
-
-        <!-- CARD FOOTER ACTIONS -->
-        <div class="card-footer">
-          <a href="tu_dot_tien_den_tu_tin_xuat_hien.html" class="btn-view-storyboard" target="_blank">
-            🎬 Xem Bảng Phân Cảnh 18 Beats AI ➔
-          </a>
-          <button class="btn-copy-script" onclick="copyScriptText('DEMO GỐC • Kịch Bản Gốc: Từ Đốt Tiền Quảng Cáo Đến Tự Tin Xuất Hiện\nHook: Cứ 5 phút tôi lại mở màn hình kiểm tra một lần... Tiền nạp ăn hết lãi.\n- Cảnh 1: &quot;Cứ 5 phút lại mở điện thoại xem tiền trừ...&quot;\n- Cảnh 2: &quot;Doanh thu thì cao mà tiền lãi chẳng thấy đâu...&quot;\n- Cảnh 3: &quot;Nhìn mọi người tự tin đứng trước máy quay...&quot;\n- Cảnh 4: &quot;...mình nhận ra chỉ có tự xuất hiện mới bền vững.&quot;\n- Cảnh 5: &quot;Tự tin xuất hiện, khách hàng tự tìm tới!&quot;\nCTA: Không thể dựa mãi vào việc đi mua quảng cáo, phải tự học cách xuất hiện trước khách hàng thôi.', 'DEMO GỐC')">
-            📋 Copy Thoại
-          </button>
-        </div>
-      </article>
-    
-      <article class="script-card" data-category="case" data-search="chiến lược nội dung & 5 kịch bản 2 góc máy: da liễu miu miu phòng khám da liễu • kính soi da • đèn khám y khoa • ca trị mụn thực tế bác sĩ, chủ spa, chuyên gia thẩm mỹ muốn bán liệu trình cao cấp không chèo kéo case study 03 trị mụn 3 năm không khỏi không phải do da bạn yếu, mà do bạn chưa biết điều này...">
-        <!-- TOP: THUMB & HEADER -->
-        <div class="card-top">
-          <div class="card-thumb-wrap" onclick="openLightbox('assets/frames_toc_10nam/01_studio_chair.jpg')">
-            <img src="assets/frames_toc_10nam/01_studio_chair.jpg" alt="Chiến Lược Nội Dung &amp; 5 Kịch Bản 2 Góc Máy: Da Liễu Miu Miu" loading="lazy" onerror="this.src='https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/tu_dot_tien_den_tu_tin_xuat_hien/assets/frames/scene1_beat1.jpg'">
-            <span class="thumb-badge-duration">30 - 45 Giây / Video</span>
-          </div>
-
-          <div class="card-info">
-            <div class="card-tag-row">
-              <span class="code-pill">CASE STUDY 03</span>
-              <span class="category-pill" style="background: #ec489918; color: #ec4899; border-color: #ec489940;">DA LIỄU CHUẨN Y KHOA</span>
-            </div>
-            <h3 class="card-title"><a href="miumiu_dalieu.html">Chiến Lược Nội Dung &amp; 5 Kịch Bản 2 Góc Máy: Da Liễu Miu Miu</a></h3>
-            <div class="meta-line">📍 <b>Bối cảnh:</b> Phòng khám da liễu • Kính soi da • Đèn khám y khoa • Ca trị mụn thực tế</div>
-            <div class="meta-line">🎯 <b>Đối tượng:</b> Bác sĩ, chủ spa, chuyên gia thẩm mỹ muốn bán liệu trình cao cấp không chèo kéo</div>
-          </div>
-        </div>
-
-        <!-- 3 TIERS PSYCHOLOGY BOX -->
-        <div class="tiers-box">
-          <div class="tier-row">
-            <span class="tier-tag t1">T1 ĐÃI BÔI</span>
-            <span class="tier-content">"Đăng ảnh trước sau (Before/After) trị mụn và cam kết khỏi 100%."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t2">T2 CẢM GIÁC THẬT</span>
-            <span class="tier-content">"Khách hàng bị bội thực quảng cáo mỹ phẩm kem trộn nên mất niềm tin vào spa."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t25">T2.5 THỂ DIỆN</span>
-            <span class="tier-content" style="color: #e9d5ff;">Cố tỏ ra là chuyên gia đẳng cấp bằng cách dùng thuật ngữ y khoa khó hiểu làm khách sợ.</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t3">T3 NGƯỢNG MIỆNG</span>
-            <span class="tier-content" style="color: #6ee7b7;">"Bóc trần sự thật ngượng miệng về thói quen tự nặn mụn tại nhà và giải thích cơ chế sinh học mộc mạc."</span>
-          </div>
-        </div>
-
-        <!-- HOOK QUOTE -->
-        <div class="hook-quote">
-          <div class="hook-label">🎙️ Hook Mở Màn Đắt Giá:</div>
-          <div class="hook-text">"Trị mụn 3 năm không khỏi không phải do da bạn yếu, mà do bạn chưa biết điều này..."</div>
-        </div>
-
-        <!-- QUICK 5 SCENES ACCORDION -->
-        <div class="accordion-box">
-          <div class="accordion-trigger" onclick="toggleAccordion(this)">
-            <span>🎞️ Xem Nhanh 4 Phân Cảnh Băm Nhịp</span>
-            <span class="acc-arrow">▼</span>
-          </div>
-          <div class="accordion-content">
-            
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll • Bác Sĩ</span>
-              <span class="scene-time">00:00 - 00:06</span>
-            </div>
-            <div class="scene-visual">🎥 Bác sĩ ngồi bàn tư vấn, áo blouse trắng, ánh mắt thấu hiểu.</div>
-            <div class="scene-voice">🎙️ &quot;Trị mụn 3 năm không khỏi không phải do da bạn yếu...&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">B-Roll • Soi Da</span>
-              <span class="scene-time">00:06 - 00:15</span>
-            </div>
-            <div class="scene-visual">🎥 Kính soi da phóng to cồi mụn viêm và lớp màng ẩm bị bào mòn.</div>
-            <div class="scene-voice">🎙️ &quot;...mà do hàng rào bảo vệ da đã bị kem trộn tàn phá.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">B-Roll • Thao Tác Chuẩn</span>
-              <span class="scene-time">00:15 - 00:25</span>
-            </div>
-            <div class="scene-visual">🎥 Dụng cụ y tế vô trùng, sát khuẩn kỹ càng, gắp cồi nhẹ nhàng.</div>
-            <div class="scene-voice">🎙️ &quot;Ở đây chúng tôi không bán kem thần thánh, chúng tôi phục hồi nền da.&quot;</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">A-Roll • Lời Dặn Dò</span>
-              <span class="scene-time">00:25 - 00:35</span>
-            </div>
-            <div class="scene-visual">🎥 Bác sĩ đưa phác đồ điều trị tận tay bệnh nhân kèm nụ cười an tâm.</div>
-            <div class="scene-voice">🎙️ &quot;Kiên trì 4 tuần, da bạn sẽ tự chữa lành.&quot;</div>
-          </div>
-        
-          </div>
-        </div>
-
-        <!-- CARD FOOTER ACTIONS -->
-        <div class="card-footer">
-          <a href="miumiu_dalieu.html" class="btn-view-storyboard" target="_blank">
-            🎬 Xem Bảng Phân Cảnh 18 Beats AI ➔
-          </a>
-          <button class="btn-copy-script" onclick="copyScriptText('CASE STUDY 03 • Chiến Lược Nội Dung & 5 Kịch Bản 2 Góc Máy: Da Liễu Miu Miu\nHook: Trị mụn 3 năm không khỏi không phải do da bạn yếu, mà do bạn chưa biết điều này...\n- Cảnh 1: &quot;Trị mụn 3 năm không khỏi không phải do da bạn yếu...&quot;\n- Cảnh 2: &quot;...mà do hàng rào bảo vệ da đã bị kem trộn tàn phá.&quot;\n- Cảnh 3: &quot;Ở đây chúng tôi không bán kem thần thánh, chúng tôi phục hồi nền da.&quot;\n- Cảnh 4: &quot;Kiên trì 4 tuần, da bạn sẽ tự chữa lành.&quot;\nCTA: Chiến lược 2 góc máy xóa bỏ hoàn toàn rào cản phòng khám và tạo niềm tin tuyệt đối.', 'CASE STUDY 03')">
-            📋 Copy Thoại
-          </button>
-        </div>
-      </article>
-    
-      <article class="script-card" data-category="exercise" data-search="miss video ads mega prompt (gemini ai studio) môi trường ai studio • tối ưu hóa prompt kịch bản chuyển đổi cao editor, marketer, học viên muốn gen nhanh kịch bản video quảng cáo chuẩn fedu ai tool chỉ 1 click sao chép toàn bộ mega prompt độc quyền chuẩn hóa kịch bản chuyển đổi cao.">
-        <!-- TOP: THUMB & HEADER -->
-        <div class="card-top">
-          <div class="card-thumb-wrap" onclick="openLightbox('assets/frames_bai_tap_01/shot3.jpg')">
-            <img src="assets/frames_bai_tap_01/shot3.jpg" alt="Miss Video Ads Mega Prompt (Gemini AI Studio)" loading="lazy" onerror="this.src='https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/tu_dot_tien_den_tu_tin_xuat_hien/assets/frames/scene1_beat1.jpg'">
-            <span class="thumb-badge-duration">1-Click Copy</span>
-          </div>
-
-          <div class="card-info">
-            <div class="card-tag-row">
-              <span class="code-pill">AI TOOL</span>
-              <span class="category-pill" style="background: #f59e0b18; color: #f59e0b; border-color: #f59e0b40;">MEGA PROMPT GEMINI</span>
-            </div>
-            <h3 class="card-title"><a href="ads.html">Miss Video Ads Mega Prompt (Gemini AI Studio)</a></h3>
-            <div class="meta-line">📍 <b>Bối cảnh:</b> Môi trường AI Studio • Tối ưu hóa prompt kịch bản chuyển đổi cao</div>
-            <div class="meta-line">🎯 <b>Đối tượng:</b> Editor, Marketer, Học viên muốn gen nhanh kịch bản video quảng cáo chuẩn FEDU</div>
-          </div>
-        </div>
-
-        <!-- 3 TIERS PSYCHOLOGY BOX -->
-        <div class="tiers-box">
-          <div class="tier-row">
-            <span class="tier-tag t1">T1 ĐÃI BÔI</span>
-            <span class="tier-content">"Tự viết kịch bản quảng cáo theo cảm tính hoặc copy văn mẫu trên mạng."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t2">T2 CẢM GIÁC THẬT</span>
-            <span class="tier-content">"Viết mãi không ra được kịch bản hay, bí ý tưởng hook giữ chân khách trong 3 giây đầu."</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t25">T2.5 THỂ DIỆN</span>
-            <span class="tier-content" style="color: #e9d5ff;">Dùng ChatGPT với prompt ngô nghê ra toàn kịch bản sáo rỗng &#x27;Chào các bạn, hôm nay tôi sẽ...&#x27;.</span>
-          </div>
-          <div class="tier-row">
-            <span class="tier-tag t3">T3 NGƯỢNG MIỆNG</span>
-            <span class="tier-content" style="color: #6ee7b7;">"Mega Prompt nạp sẵn tư duy bóc trần 3 tầng và cấu trúc nhịp A-Roll/B-Roll không tì vết."</span>
-          </div>
-        </div>
-
-        <!-- HOOK QUOTE -->
-        <div class="hook-quote">
-          <div class="hook-label">🎙️ Hook Mở Màn Đắt Giá:</div>
-          <div class="hook-text">"Chỉ 1 click sao chép toàn bộ Mega Prompt độc quyền chuẩn hóa kịch bản chuyển đổi cao."</div>
-        </div>
-
-        <!-- QUICK 5 SCENES ACCORDION -->
-        <div class="accordion-box">
-          <div class="accordion-trigger" onclick="toggleAccordion(this)">
-            <span>🎞️ Xem Nhanh 3 Phân Cảnh Băm Nhịp</span>
-            <span class="acc-arrow">▼</span>
-          </div>
-          <div class="accordion-content">
-            
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">Setup Context</span>
-              <span class="scene-time">Bước 1</span>
-            </div>
-            <div class="scene-visual">🎥 Nhập thông tin sản phẩm, chân dung khách hàng và nỗi đau cốt lõi.</div>
-            <div class="scene-voice">🎙️ Mega Prompt kích hoạt vai trò Đạo diễn chuyển đổi</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">Bóc Tách 3 Tầng</span>
-              <span class="scene-time">Bước 2</span>
-            </div>
-            <div class="scene-visual">🎥 AI tự động bóc tách Tầng 1 (Đãi bôi) sang Tầng 3 (Ngượng miệng).</div>
-            <div class="scene-voice">🎙️ Sinh ra 3 phương án Hook đắt giá</div>
-          </div>
-        
-          <div class="scene-item">
-            <div class="scene-badge-line">
-              <span class="scene-pill">Băm Phân Cảnh</span>
-              <span class="scene-time">Bước 3</span>
-            </div>
-            <div class="scene-visual">🎥 Xuất bảng phân cảnh 5 nhịp A-Roll/B-Roll khớp từng giây thoại.</div>
-            <div class="scene-voice">🎙️ Sẵn sàng đưa vào CapCut dựng phim</div>
-          </div>
-        
-          </div>
-        </div>
-
-        <!-- CARD FOOTER ACTIONS -->
-        <div class="card-footer">
-          <a href="ads.html" class="btn-view-storyboard" target="_blank">
-            🎬 Xem Bảng Phân Cảnh 18 Beats AI ➔
-          </a>
-          <button class="btn-copy-script" onclick="copyScriptText('AI TOOL • Miss Video Ads Mega Prompt (Gemini AI Studio)\nHook: Chỉ 1 click sao chép toàn bộ Mega Prompt độc quyền chuẩn hóa kịch bản chuyển đổi cao.\n- Cảnh 1: Mega Prompt kích hoạt vai trò Đạo diễn chuyển đổi\n- Cảnh 2: Sinh ra 3 phương án Hook đắt giá\n- Cảnh 3: Sẵn sàng đưa vào CapCut dựng phim\nCTA: Copy vào Google AI Studio hoặc ChatGPT để băm kịch bản video bán hàng trong 3 giây.', 'AI TOOL')">
-            📋 Copy Thoại
-          </button>
-        </div>
-      </article>
-    
-    </div><!-- end scripts-grid -->
-
-    <!-- FOOTER -->
-    <footer>
-      <p><b>FEDU AI STUDIO • KHO QUẢN TRỊ BẢNG PHÂN CẢNH & KỊCH BẢN THỰC CHIẾN 2026</b></p>
-      <p>Hệ thống bài giảng và bài tập thực hành độc quyền dành cho học viên lớp Video Thực Chiến Lớp Offline.</p>
-      <p>Giảng viên: <b>Nguyễn Đức Việt</b> • Hotline / Zalo: <b>0934.688.632</b> • Website: <a href="https://fedu.vn" target="_blank" style="color: var(--cyan); text-decoration: none;">fedu.vn</a></p>
-    </footer>
-
-  </div><!-- end container -->
-
-  <!-- FLOATING QUICK BAR -->
-  <div class="floating-bar">
-    <a href="#top" class="floating-btn">⬆ Đầu Trang</a>
-    <a href="bai_tap_01_phan_canh_canh_tram.html" class="floating-btn">🎯 Bài Tập 01</a>
-    <button class="floating-btn" onclick="copyCurrentUrl()">🔗 Copy Link Hub</button>
-  </div>
-
-  <!-- TOAST NOTIFICATION -->
-  <div class="toast" id="toastBox">
-    <span>✅</span>
-    <span id="toastMsg">Đã sao chép kịch bản vào bộ nhớ tạm!</span>
-  </div>
-
-  <!-- LIGHTBOX MODAL -->
-  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
-    <div class="lightbox-inner">
-      <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
-      <img id="lightboxImg" src="" alt="Storyboard Frame Preview">
+    <div style="margin-top: 32px; font-size: 13px; color: var(--cl-slate-500); font-family: var(--font-mono);">
+      VIDEO OFFLINE COURSE • HỆ THỐNG ĐÀO TẠO VIDEO NGẮN THỰC CHIẾN 3 TẦNG SỰ THẬT
     </div>
-  </div>
+  </section>
 
-  <script>
-    // Toggle methodology box
-    function toggleMethodology() {
-      const grid = document.getElementById('method-grid');
-      const icon = document.getElementById('method-icon');
-      if (grid.style.display === 'none') {
-        grid.style.display = 'grid';
-        icon.textContent = '▼ Thu Gọn';
-      } else {
-        grid.style.display = 'none';
-        icon.textContent = '▶ Mở Rộng';
-      }
-    }
-
-    // Toggle card accordion
-    function toggleAccordion(btn) {
-      const content = btn.nextElementSibling;
-      const arrow = btn.querySelector('.acc-arrow');
-      content.classList.toggle('open');
-      if (content.classList.contains('open')) {
-        arrow.textContent = '▲';
-      } else {
-        arrow.textContent = '▼';
-      }
-    }
-
-    // Filter by Category
-    function filterCategory(cat, tabElem) {
-      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
-      tabElem.classList.add('active');
-
-      const cards = document.querySelectorAll('.script-card');
-      cards.forEach(card => {
-        if (cat === 'all' || card.dataset.category === cat) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-      filterSearch(); // keep search applied
-    }
-
-    // Live search filter
-    function filterSearch() {
-      const query = document.getElementById('searchInput').value.toLowerCase().trim();
-      const activeTab = document.querySelector('.filter-tab.active');
-      const activeCat = activeTab ? activeTab.getAttribute('onclick').match(/'([^']+)'/)[1] : 'all';
-
-      const cards = document.querySelectorAll('.script-card');
-      cards.forEach(card => {
-        const cardCat = card.dataset.category;
-        const searchData = card.dataset.search || '';
-        const matchCat = (activeCat === 'all' || cardCat === activeCat);
-        const matchQuery = !query || searchData.includes(query);
-
-        if (matchCat && matchQuery) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-
-    // Copy script
-    function copyScriptText(text, code) {
-      const decoded = text.replace(/\n/g, '\n');
-      navigator.clipboard.writeText(decoded).then(() => {
-        showToast('Đã sao chép kịch bản ' + code + ' vào bộ nhớ tạm!');
-      }).catch(() => {
-        // fallback
-        const ta = document.createElement('textarea');
-        ta.value = decoded;
-        document.body.appendChild(ta);
-        ta.select();
-        document.execCommand('copy');
-        document.body.removeChild(ta);
-        showToast('Đã sao chép kịch bản ' + code + ' vào bộ nhớ tạm!');
-      });
-    }
-
-    // Copy current URL
-    function copyCurrentUrl() {
-      navigator.clipboard.writeText(window.location.href).then(() => {
-        showToast('Đã sao chép đường link Master Hub!');
-      });
-    }
-
-    // Show Toast
-    function showToast(msg) {
-      const t = document.getElementById('toastBox');
-      const m = document.getElementById('toastMsg');
-      m.textContent = msg;
-      t.classList.add('show');
-      setTimeout(() => {
-        t.classList.remove('show');
-      }, 2500);
-    }
-
-    // Lightbox
-    function openLightbox(src) {
-      const m = document.getElementById('lightboxModal');
-      const img = document.getElementById('lightboxImg');
-      img.src = src;
-      m.classList.add('active');
-    }
-
-    function closeLightbox(e) {
-      if (e.target.id === 'lightboxModal' || e.target.classList.contains('lightbox-close')) {
-        document.getElementById('lightboxModal').classList.remove('active');
-      }
-    }
-  </script>
 </body>
 </html>
