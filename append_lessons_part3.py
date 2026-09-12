@@ -1,0 +1,323 @@
+# -*- coding: utf-8 -*-
+with open("/Users/vietmac/Documents/CODE/offline02/build_lessons_data.py", "a", encoding="utf-8") as f:
+    f.write('''
+    # -------------------------------------------------------------------------
+    # BÀI TẬP 07: BỊ CẠNH TRANH BỞI TỔNG KHO & GIÁ GỐC
+    # -------------------------------------------------------------------------
+    {
+        "id": "07",
+        "file_name": "kich_ban_07_bi_canh_tranh_boi_tong_kho_va_gia_goc.html",
+        "badge_id": "07",
+        "badge_text": "FEDU OFFLINE • BÀI TẬP TẠI LỚP #07",
+        "nav_title": "Bài Tập 07 • Bị Cạnh Tranh Bởi Tổng Kho & Giá Gốc (Chuẩn Tầng 2.5)",
+        "page_title": "Bài Tập 07: Làm Video Bán Đắt Hơn Tổng Kho Mà Khách Vẫn Vui Vẻ Rút Tiền Mua | FEDU Offline",
+        "title_short": "BÀI TẬP QUAY CHO NGƯỜI BỊ TỔNG KHO PHÁ GIÁ",
+        "problem_text": "Tổng kho và các xưởng lớn livestream bán lẻ phá giá tận đáy, bán rẻ hơn cả giá bạn nhập buôn. Khách vào nhắn tin hỏi giá, bạn báo xong họ gửi link tổng kho chê đắt rồi im lặng. Đua giảm giá thì tự sát vì không có biên lợi nhuận, mà giữ nguyên giá thì ế ẩm. Làm sao để làm video ngắn định vị giá trị cao, bán đắt hơn đối thủ mà khách hàng vẫn tin tưởng chọn mua?",
+        "q1": "Mỗi lần báo giá xong bị khách thả icon mặt cười rồi gửi link tổng kho rẻ hơn một nửa, cảm giác trong lòng bạn là gì?",
+        "q2": "Nếu nói rằng 'tôi sẽ tìm nguồn hàng mới rẻ hơn để cạnh tranh', bạn có nhận ra mình đang lao vào cuộc đua xuống đáy mồ không?",
+        "q3": "Tại sao có những thương hiệu bán đắt gấp ba lần tổng kho mà khách hàng vẫn xếp hàng tranh nhau mua?",
+        "q4": "Làm thế nào để đưa gương mặt và uy tín cá nhân lên video để biến nó thành tấm bảo chứng khiến khách không thể mặc cả?",
+        
+        "step1_quote": "Hôm nay mình ngồi tìm kiếm thêm các nguồn hàng mới tận xưởng để có mức giá cạnh tranh hơn cho khách hàng.",
+        "step1_critique": "• <b>Tư duy đua giá chết người:</b> Cố gắng đua giá rẻ với tổng kho là tự sát vì quy mô vốn và chi phí vận hành của bạn không thể bằng họ.<br>• <b>Văn mẫu không tạo ra giá trị khác biệt:</b> Khách hàng chỉ thấy bạn là một người bán buôn bình thường như bao người khác.<br>• <b>Tự đưa mình vào ngõ cụt:</b> Càng tìm nguồn rẻ thì chất lượng càng tệ, mất hết khách ruột.",
+        
+        "step2_quote": "Bất lực thật sự, nhìn tổng kho livestream bán lẻ rẻ hơn cả giá mình nhập sỉ. Khách vào hỏi giá xong quay lưng đi luôn, không biết sống sao...",
+        "step2_critique": "• <b>Thể hiện sự bất lực nản lòng:</b> Làm người mua cảm thấy bạn sắp phá sản và không có năng lực cạnh tranh.<br>• <b>Chưa nhận diện được giá trị thật:</b> Nhầm tưởng rằng khách hàng chỉ quan tâm đến mỗi giá rẻ.<br>• <b>Kéo năng lượng người xem đi xuống:</b> Chỉ toàn sự than vãn bế tắc.",
+        
+        "step3_quote": "Cạnh tranh về giá là cuộc đua xuống đáy mồ. Bọn tổng kho nó bán phá giá thế này thì bóp chết hết dân buôn nhỏ lẻ...",
+        "step3_critique": "• <b>Đổ lỗi cho thị trường:</b> Trách móc đối thủ và sàn thương mại điện tử không giúp doanh nghiệp của bạn tồn tại.<br>• <b>Dùng từ ngữ cay cú:</b> Làm mất đi phong thái đĩnh đạc của một người làm kinh doanh chuyên nghiệp.<br>• <b>Không tìm thấy giải pháp chuyển đổi:</b> Bị kẹt trong sự thù hằn vô nghĩa.",
+        
+        "step4_lead": "Bóc trần thói quen ngồi soi livestream tổng kho cả đêm để thức tỉnh vũ khí tối thượng: Bán sự an tâm bằng chính gương mặt người làm nghề.",
+        "step4_core": "Tổng kho bán sản phẩm vô danh với số lượng lớn, không ai biết chủ kho là ai và khi hàng lỗi thì khách hàng không biết tìm ai kêu cứu. Bạn bán sản phẩm kèm theo sự cam kết, trách nhiệm và danh dự cá nhân. Khách hàng trả tiền cao hơn không phải để mua món hàng, mà để mua sự an tâm tuyệt đối!",
+        "step4_disguise": "Tối nào cũng mở livestream tổng kho ra xem, miệng thì chê bôi 'hàng này lỗi mốt, chất lượng kém', nhưng mắt thì lo sợ sốt vó vì thấy họ chốt hàng ngàn đơn mỗi tối.",
+        "step4_pressure": "Lượng khách hỏi giảm sút nghiêm trọng, tồn kho đọng vốn. Càng ôm hàng thì càng lỗi thời và hao hụt chi phí.",
+        "step4_ego": "Sợ bị so sánh giá, ngại nói giá công khai trên video vì sợ bị ném đá là 'bán đắt', tự ti về quy mô nhỏ lẻ của mình so với tổng kho.",
+        "step4_release": "Đừng bao giờ đua giá rẻ với kẻ nắm nguồn hàng. Hãy đua về sự tận tâm, dịch vụ chăm sóc và trải nghiệm an tâm. Xuất hiện trên video bằng chính gương mặt thật, dám cam kết đền tiền gấp mười nếu hàng kém chất lượng. Người dám đứng ra chịu trách nhiệm luôn có giá trị cao nhất!",
+        
+        "script_scenes": [
+            ("Cảnh 1 (4s)", "Khách vào nhắn tin hỏi giá, mình báo xong họ chỉ thả đúng một cái icon mặt cười rồi im lặng... nhìn sang livestream tổng kho mới hiểu lý do."),
+            ("Cảnh 2 (4s)", "Người ta bán lẻ trên mạng còn rẻ hơn cả giá mình nhập sỉ tại xưởng. Ngồi nhìn đống hàng tồn mà thắt cả ruột, tự hỏi mình đua giá thế nào lại?"),
+            ("Cảnh 3 (5s)", "Nhiều lúc cũng tính hạ giá bán tống bán tháo cho xong. Nhưng nghĩ lại: Hạ giá là bước vào cuộc đua xuống đáy, càng đua càng tự bóp nghẹt mình."),
+            ("Cảnh 4 (5s)", "Tổng kho bán hàng đống hàng triệu cái, nhưng khi lỗi hỏng ai đứng ra chịu trách nhiệm? Cái người ta thiếu không phải là hàng rẻ, mà là một người dám lấy uy tín ra bảo đảm."),
+            ("Cảnh 5 (4s)", "Không đua giá với tổng kho! Mình bán sự an tâm bằng chính gương mặt và danh dự của mình. Làm video thật, cam kết thật, khách hàng thông thái tự biết chọn ai!")
+        ],
+        
+        "hook_old": "Bây giờ tổng kho và sàn thương mại điện tử phá giá ghê quá các bác ạ, làm ăn nhỏ lẻ khó sống thật...",
+        "hook_old_note": "Than phiền về sự phá giá của thị trường, người xem lướt qua ngay vì nghe quá quen tai.",
+        "hook_old_critique": "• <b>Không có hình ảnh kịch tính:</b> Chỉ là một câu than thở bình thường không có điểm nhấn.<br>• <b>Khách tưởng clip kể khổ:</b> Bị vuốt qua ngay trong 2 giây đầu.<br>• <b>Thể hiện sự yếu thế:</b> Tự nhận mình là nạn nhân bị bóp nghẹt.",
+        
+        "hook_new": "Khách vào nhắn tin hỏi giá, mình báo xong họ chỉ thả đúng một cái icon mặt cười rồi im lặng... nhìn sang livestream tổng kho mới hiểu lý do.",
+        "hook_new_note": "Hook tình huống thực tế: Tái hiện cảm giác cay đắng khi bị khách bơ sau khi báo giá",
+        "hook_new_critique": "• <b>Tái hiện chính xác cảm xúc cay đắng:</b> Chi tiết <em>'icon mặt cười rồi im lặng'</em> đánh trúng nỗi đau hàng ngày của dân bán lẻ.<br>• <b>Tạo sự tò mò kịch tính:</b> Người xem muốn biết chủ quán sẽ xử lý tình huống bị ép giá này thế nào.<br>• <b>Khựng ngón tay xem tiếp:</b> Lực kéo tâm lý cực mạnh từ trải nghiệm đời thực.",
+        
+        "scenes": [
+            {
+                "id": "1", "title": "CẢNH 1: BÓC TRẦN TÌNH HUỐNG BÁO GIÁ", "dur": "4 GIÂY",
+                "voice": "Khách vào nhắn tin hỏi giá, mình báo xong họ chỉ thả đúng một cái icon mặt cười rồi im lặng... nhìn sang livestream tổng kho mới hiểu lý do.",
+                "beats": [
+                    ("1.1 Đầu Cảnh", "Đặc tả màn hình tin nhắn khách bơ", "Màn hình điện thoại hiển thị tin nhắn khách thả icon cười nhạt rồi im bặt trên bàn gỗ Greenhub.", "assets/greenhub/IMG_7799.JPG", "Mô tả khoảnh khắc cay đắng rất thật của người làm kinh doanh bán lẻ."),
+                    ("1.2 Cao Trào", "Góc nhìn qua vai xem livestream", "Góc nhìn qua vai lướt thấy livestream tổng kho đang rao giá rẻ như cho không.", "assets/greenhub/IMG_7796.JPG", "Đặc tả áp lực khủng khiếp của bão giá thị trường đè lên vai."),
+                    ("1.3 Mồi Chuyển", "Trung cận khuôn mặt nén tiếng thở dài", "Nét mặt đăm chiêu, nén một tiếng thở dài, ngẩng đầu nhìn khoảng không phòng học Greenhub.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "Mồi chuyển sang câu hỏi tự vấn về con đường cạnh tranh.")
+                ]
+            },
+            {
+                "id": "2", "title": "CẢNH 2: NỖI ĐAU ĐỐNG HÀNG TỒN", "dur": "4 GIÂY",
+                "voice": "Người ta bán lẻ trên mạng còn rẻ hơn cả giá mình nhập sỉ tại xưởng. Ngồi nhìn đống hàng tồn mà thắt cả ruột, tự hỏi mình đua giá thế nào lại?",
+                "beats": [
+                    ("2.1 Đầu Cảnh", "Góc nghiêng bàn làm việc", "Ngồi tại bàn gỗ Greenhub, tay mân mê mẫu sản phẩm được chọn lọc cẩn thận.", "assets/greenhub/IMG_7799.JPG", "Tương phản giữa món hàng tốt được chăm chút và sự thờ ơ của đám đông ham của rẻ."),
+                    ("2.2 Cao Trào", "Trung cảnh trăn trở nhìn sổ nhập hàng", "Lật sổ hóa đơn nhập hàng, con số vốn nằm im gây áp lực nghẹt thở.", "assets/greenhub/IMG_7796.JPG", "Điểm chạm hiện thực khốc liệt: Không thể đua giá rẻ với nguồn hàng lậu hoặc tổng kho."),
+                    ("2.3 Mồi Chuyển", "Đứng dậy bước ra sảnh kính", "Đứng dậy rời bàn học, bước ra khu sảnh vách kính Greenhub nhìn ra xa.", "assets/greenhub/IMG_7812.JPG", "Hành động thể hiện sự thoát ly khỏi bẫy tư duy hạ giá.")
+                ]
+            },
+            {
+                "id": "3", "title": "CẢNH 3: BẪY CUỘC ĐUA XUỐNG ĐÁY", "dur": "5 GIÂY",
+                "voice": "Nhiều lúc cũng tính hạ giá bán tống bán tháo cho xong. Nhưng nghĩ lại: Hạ giá là bước vào cuộc đua xuống đáy, càng đua càng tự bóp nghẹt mình.",
+                "beats": [
+                    ("3.1 Đầu Cảnh", "Trung cảnh tựa tay vách kính", "Đứng bên vách kính Greenhub nhìn dòng người tấp nập dưới đường.", "assets/greenhub/IMG_7812.JPG", "Tĩnh tâm chiêm nghiệm: Hạ giá là tự giết chết danh dự và dịch vụ của mình."),
+                    ("3.2 Cao Trào", "Cận cảnh ánh mắt thấu suốt", "Ánh mắt kiên định, nhận ra chân lý không thể cạnh tranh bằng cái người khác mạnh nhất.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "Khoảnh khắc quyết định: Phải chơi trên sân chơi của sự an tâm và trách nhiệm."),
+                    ("3.3 Mồi Chuyển", "Bước chân ra ban công rộng", "Sải bước đi ra khu vực ban công cây xanh thoáng đãng Greenhub.", "assets/greenhub/IMG_7805.JPG", "Chuyển giao tâm lý sang trạng thái chủ động tấn công bằng giá trị.")
+                ]
+            },
+            {
+                "id": "4", "title": "CẢNH 4: VŨ KHÍ BẢO ĐẢM DANH DỰ", "dur": "5 GIÂY",
+                "voice": "Tổng kho bán hàng đống hàng triệu cái, nhưng khi lỗi hỏng ai đứng ra chịu trách nhiệm? Cái người ta thiếu không phải là hàng rẻ, mà là một người dám lấy uy tín ra bảo đảm.",
+                "beats": [
+                    ("4.1 Đầu Cảnh", "Toàn cảnh ban công vườn cây", "Đứng giữa thiên nhiên ban công Greenhub, phong thái đĩnh đạc và tự tin.", "assets/greenhub/IMG_7805.JPG", "Hình ảnh vững chãi của người dám đứng mũi chịu sào bảo vệ khách hàng."),
+                    ("4.2 Cao Trào", "Trung cảnh giơ điện thoại lên", "Cầm chắc điện thoại đưa lên ngang tầm mắt, khuôn mặt rạng rỡ niềm tin.", "assets/greenhub/IMG_7806.JPG", "Sẵn sàng dùng gương mặt mình làm thương hiệu bảo chứng tuyệt đối."),
+                    ("4.3 Mồi Chuyển", "Cận cảnh nụ cười tự hào", "Nụ cười ấm áp, ánh mắt nhìn thẳng không chút nao núng trước sóng gió thị trường.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "Mồi chuyển sang thông điệp chốt hạ đanh thép.")
+                ]
+            },
+            {
+                "id": "5", "title": "CẢNH 5: BÁN SỰ AN TÂM BẰNG GƯƠNG MẶT", "dur": "4 GIÂY (CHỐT HẠ)",
+                "voice": "Không đua giá với tổng kho! Mình bán sự an tâm bằng chính gương mặt và danh dự của mình. Làm video thật, cam kết thật, khách hàng thông thái tự biết chọn ai!",
+                "beats": [
+                    ("5.1 Đầu Cảnh", "Toàn cảnh terrace tầng thượng", "Toàn cảnh góc rộng khu terrace Greenhub, dáng đứng uy nghi đĩnh đạc.", "assets/greenhub/IMG_7808.JPG", "Khẳng định vị thế vượt trội của người làm kinh doanh chân chính có gương mặt."),
+                    ("5.2 Cao Trào", "A-Roll trực diện đanh thép", "Nói dứt khoát câu chốt vào camera với giọng nói tràn đầy nội lực và sự tin cậy.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "A-Roll chốt hạ định vị thương hiệu cá nhân đắt giá cho học viên tại lớp."),
+                    ("5.3 Mồi Chuyển", "Đặc tả ngón tay lưu video", "Bấm dừng quay, nhìn vào màn hình với nụ cười nhẹ nhõm và tự tin.", "assets/greenhub/IMG_7799.JPG", "Khép lại bài học xuất sắc về cách chiến thắng bão giá thị trường.")
+                ]
+            }
+        ],
+        
+        "wisdom_quote": "Người mua đồ rẻ thường nghi ngờ nhất. Người mua sự an tâm mới là khách hàng trung thành nhất. Đừng cố bán cho người chỉ tìm của rẻ, hãy dùng video ngắn để hút về những người trân trọng sự tử tế của bạn.",
+        "lesson1_title": "Đừng bao giờ đua giá với kẻ không có danh dự",
+        "lesson1_desc": "Tổng kho có thể đổi tên shop sau một đêm khi dính phốt, còn bạn làm ăn lâu dài bằng chính tên tuổi của mình. Uy tín của bạn đắt hơn nhiều lần so với vài đồng chênh lệch.",
+        "lesson2_title": "Gương mặt của bạn là bảo hiểm cho khách hàng",
+        "lesson2_desc": "Khi bạn xuất hiện trên video, khách hàng thấy được người chịu trách nhiệm bằng xương bằng thịt. Đó là lý do họ sẵn sàng trả giá cao hơn để đổi lấy sự yên tâm.",
+        "lesson3_title": "Làm video giải thích cặn kẽ sự khác biệt",
+        "lesson3_desc": "Hãy chỉ rõ cho khách hàng thấy hàng rẻ bị cắt bớt linh kiện ở đâu, chất liệu kém ở điểm nào. Khi khách hàng được giáo dục, họ sẽ tự động tránh xa hàng chợ."
+    },
+
+    # -------------------------------------------------------------------------
+    # BÀI TẬP 08: BẮT ĐẦU LẠI TỪ CON SỐ 0
+    # -------------------------------------------------------------------------
+    {
+        "id": "08",
+        "file_name": "kich_ban_08_bat_dau_lai_tu_con_so_0.html",
+        "badge_id": "08",
+        "badge_text": "FEDU OFFLINE • BÀI TẬP TẠI LỚP #08",
+        "nav_title": "Bài Tập 08 • Bắt Đầu Lại Từ Con Số 0 & Mặt Dày Lên (Chuẩn Tầng 2.5)",
+        "page_title": "Bài Tập 08: Làm Video Cho Người Bắt Đầu Lại Từ Đầu Dẹp Bỏ Tự Ái & Đứng Lên | FEDU Offline",
+        "title_short": "BÀI TẬP QUAY CHO NGƯỜI BẮT ĐẦU LẠI TỪ SỐ 0",
+        "problem_text": "Từng có sự nghiệp, từng kiếm được nhiều tiền và được người khác trọng vọng. Nhưng sau một biến cố lớn hoặc đầu tư thất bại, bạn mất sạch và phải bắt đầu lại từ con số 0. Cầm máy lên quay video kiếm từng đồng thì cái sĩ diện cũ đè nặng, sợ bạn bè người quen nhìn thấy bảo: 'Tưởng oai phong thế nào, dạo này hết thời phải lên mạng làm trò kiếm cơm'. Làm sao để dẹp bỏ tự ái hão, cầm máy lên quay video với khí chất đĩnh đạc của một người đàn ông dám làm lại cuộc đời?",
+        "q1": "Mỗi lần bật camera lên định quay video, khuôn mặt người quen nào hiện lên trong đầu khiến ngón tay bạn run rẩy tắt máy?",
+        "q2": "Nếu nói rằng 'tôi đang tìm thời điểm thích hợp và chuẩn bị kỹ hơn', bạn có dám thừa nhận là mình đang sợ bị người ta chê cười là sa cơ lỡ vận?",
+        "q3": "Cái sĩ diện của những ngày tháng thành công cũ có nuôi sống được gia đình bạn vào ngày mai không?",
+        "q4": "Làm thế nào để xuất hiện trên video ngắn từ con số 0 mà không hề bi lụy, toát lên bản lĩnh của người từng trải qua giông bão?",
+        
+        "step1_quote": "Thất bại chỉ là một thử thách trên con đường thành công. Hôm nay tôi chính thức khởi động lại dự án mới với tinh thần lạc quan.",
+        "step1_critique": "• <b>Văn mẫu hô hào khẩu hiệu sáo rỗng:</b> Nói nghe như sách self-help rẻ tiền, không có tính chân thực.<br>• <b>Cố gồng lên để tỏ ra mạnh mẽ:</b> Người xem thấy ngay sự gượng gạo và giả tạo trong nụ cười.<br>• <b>Không chạm vào nỗi đau thật:</b> Khán giả không cảm nhận được sức nặng của sự mất mát và nỗ lực làm lại.",
+        
+        "step2_quote": "Từng có tất cả mà giờ trắng tay phải làm lại từ việc vặt vãnh nhất, đi ra đường gặp người quen chỉ muốn cúi gằm mặt lảng tránh...",
+        "step2_critique": "• <b>Tâm lý tự ti và nhục nhã:</b> Biến bản thân thành kẻ thất bại thảm hại, tự tước đi hào quang của người có kinh nghiệm.<br>• <b>Kéo năng lượng người xem xuống đáy:</b> Khán giả cảm thấy ngột ngạt và thương hại chứ không nể phục.<br>• <b>Không có khí chất làm chủ:</b> Nghe như lời than vãn của người mất hết ý chí chiến đấu.",
+        
+        "step3_quote": "Mất hết rồi, cái sĩ diện hão không nuôi sống được vợ con. Phải vứt hết liêm sỉ đi, mặt dày lên mà kiếm tiền sống qua ngày...",
+        "step3_critique": "• <b>Dùng từ ngữ hạ thấp nhân phẩm:</b> Từ 'vứt hết liêm sỉ', 'mặt dày' làm hoen ố sự đàng hoàng của người lao động.<br>• <b>Hiểu sai về làm video:</b> Quay video kiếm tiền đàng hoàng là danh giá, không phải là hành vi mất liêm sỉ.<br>• <b>Tạo ác cảm với người thân:</b> Khiến gia đình đau lòng khi thấy bạn nói những lời cay đắng.",
+        
+        "step4_lead": "Bóc trần thói quen bật máy quay lên rồi lại tắt đi đến lần thứ năm vì sợ người quen phát xét để giải phóng dũng khí làm lại cuộc đời.",
+        "step4_core": "Người đàn ông thực sự bản lĩnh không phải là người chưa từng vấp ngã, mà là người dám đứng dậy phủi bụi trên áo và bước tiếp từ đống tro tàn. Bắt đầu lại từ con số 0 với 10 năm kinh nghiệm trong đầu là bạn đã đi trước người mới bắt đầu cả một chặng đường dài. Hãy tự hào về những vết sẹo của mình!",
+        "step4_disguise": "Bật máy lên định quay rồi lại tắt đi, viện cớ 'ánh sáng chưa chuẩn, hôm nay mặt hơi mệt để mai quay', nhưng thực chất là nỗi sợ bị bạn bè cũ bắt gặp lướt thấy video của mình.",
+        "step4_pressure": "Tiền tiết kiệm cạn dần, trách nhiệm gia đình và con cái đè nặng trên vai mỗi ngày. Thời gian không chờ đợi ai.",
+        "step4_ego": "Mắc kẹt trong cái bóng thành công cũ, sợ người ta bàn tán: 'Thằng đó dạo này hết thời rồi, phải đi làm TikToker kiếm từng đồng bạc lẻ'.",
+        "step4_release": "Lao động chân chính bằng chính trí tuệ và mồ hôi của mình thì không có gì phải xấu hổ. Những ai cười bạn hôm nay là những kẻ hèn nhát không bao giờ dám bước ra khỏi vùng an toàn. Cầm máy lên, quay lại hành trình làm lại từ đầu. Đó là câu chuyện truyền cảm hứng đắt giá nhất hành tinh!",
+        
+        "script_scenes": [
+            ("Cảnh 1 (4s)", "Bật máy quay lên rồi lại tắt đi đến lần thứ năm... sợ người quen lướt thấy lại bảo: Dạo này sa cơ lỡ vận hay sao mà phải lên mạng làm trò."),
+            ("Cảnh 2 (4s)", "Từng có sự nghiệp, từng được người ta gọi là ông nọ bà kia. Giờ gãy một cú, phải ngồi làm lại từ con số 0... cảm giác nó thốn đến tận ruột gan."),
+            ("Cảnh 3 (5s)", "Nhiều lúc muốn giấu mình đi, chờ khi nào thành công trở lại mới xuất hiện. Nhưng ngồi nghĩ lại: Cái sĩ diện hão ấy có trả được tiền học cho con không?"),
+            ("Cảnh 4 (5s)", "Người ta chỉ chê cười những kẻ trốn chạy, chứ không ai cười một người dám đứng lên làm lại. Mất tiền là chưa mất gì cả, mất đi tự trọng và ý chí mới là mất hết."),
+            ("Cảnh 5 (4s)", "Vứt bỏ cái tôi cũ sang một bên! Cầm máy lên, đĩnh đạc làm lại từ đầu. Khó khăn chỉ là thuốc thử cho bản lĩnh người có nghề!")
+        ],
+        
+        "hook_old": "Sau biến cố vừa rồi, hôm nay tôi quyết định bắt đầu lại mọi thứ từ con số 0...",
+        "hook_old_note": "Tâm sự dông dài mang hơi hướng kể lể, người xem lướt qua ngay vì không thấy có gì liên quan đến mình.",
+        "hook_old_critique": "• <b>Thiếu chi tiết hành vi đắt giá:</b> Câu nói thuần túy là lời tuyên bố chung chung.<br>• <b>Người xem tưởng video drama:</b> Bị lướt qua trong 2 giây đầu vì thiếu xung đột tâm lý hấp dẫn.<br>• <b>Chưa lột tả được nỗi sợ thể diện:</b> Bỏ lỡ điểm chạm sâu sắc nhất của người làm lại.",
+        
+        "hook_new": "Bật máy quay lên rồi lại tắt đi đến lần thứ năm... sợ người quen lướt thấy lại bảo: Dạo này sa cơ lỡ vận hay sao mà phải lên mạng làm trò.",
+        "hook_new_note": "Hook đảo ngược hành vi: Bóc trần sự sợ hãi mất mặt trước người quen",
+        "hook_new_critique": "• <b>Bóc trần chính xác hành động lặp lại:</b> Chi tiết <em>'bật lên rồi tắt đi lần thứ năm'</em> cực kỳ chân thực, ai từng ngại ống kính đều thấy mình trong đó.<br>• <b>Đánh trúng nỗi sợ lớn nhất:</b> Sợ người quen thấy mình sa cơ lỡ vận là rào cản lớn nhất của người trưởng thành.<br>• <b>Khựng ngón tay xem tiếp:</b> Lập tức tạo được sự tôn trọng và đồng cảm sâu sắc từ người xem.",
+        
+        "scenes": [
+            {
+                "id": "1", "title": "CẢNH 1: BÓC TRẦN HÀNH VI BẬT TẮT MÁY", "dur": "4 GIÂY",
+                "voice": "Bật máy quay lên rồi lại tắt đi đến lần thứ năm... sợ người quen lướt thấy lại bảo: Dạo này sa cơ lỡ vận hay sao mà phải lên mạng làm trò.",
+                "beats": [
+                    ("1.1 Đầu Cảnh", "Đặc tả ngón tay bấm nút quay rồi bấm dừng", "Ngón tay bấm nút REC đỏ trên điện thoại rồi bấm dừng ngay sau 1 giây tại bàn gỗ Greenhub.", "assets/greenhub/IMG_7799.JPG", "Mô tả sự ngập ngừng, tự ti và nỗi sợ bị người quen đánh giá."),
+                    ("1.2 Cao Trào", "Góc nhìn qua vai khuôn mặt đăm chiêu", "Góc nhìn qua vai khuôn mặt nhìn màn hình đen ngẫm nghĩ, trán hơi nhăn lại.", "assets/greenhub/IMG_7796.JPG", "Đặc tả sự giằng xé giữa cái tôi quá khứ và thực tại khó khăn."),
+                    ("1.3 Mồi Chuyển", "Trung cận ánh mắt ngẩng lên", "Ngẩng đầu lên, ánh mắt nhìn ra khoảng trống tĩnh lặng của lớp học Greenhub.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "Mồi chuyển sang dòng hồi tưởng về sự nghiệp đã qua.")
+                ]
+            },
+            {
+                "id": "2", "title": "CẢNH 2: NỖI ĐAU CỦA NGƯỜI TỪNG CÓ TẤT CẢ", "dur": "4 GIÂY",
+                "voice": "Từng có sự nghiệp, từng được người ta gọi là ông nọ bà kia. Giờ gãy một cú, phải ngồi làm lại từ con số 0... cảm giác nó thốn đến tận ruột gan.",
+                "beats": [
+                    ("2.1 Đầu Cảnh", "Cận cảnh bàn tay siết chặt", "Bàn tay đặt trên mặt bàn gỗ Greenhub siết nhẹ lại kiềm chế cảm xúc.", "assets/greenhub/IMG_7799.JPG", "Chi tiết đắt giá thể hiện nỗi đau đớn khi phải buông bỏ vị thế cũ."),
+                    ("2.2 Cao Trào", "Trung cảnh khuôn mặt trầm tĩnh", "Khuôn mặt đĩnh đạc từng trải, không khóc than mà nén nỗi đau vào trong.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "Khí chất của người đàn ông bản lĩnh sau biến cố cuộc đời."),
+                    ("2.3 Mồi Chuyển", "Đứng dậy bước về phía sảnh kính", "Đứng dậy rời bàn học, bước chân chậm mà chắc đi ra khu sảnh kính Greenhub.", "assets/greenhub/IMG_7812.JPG", "Hành động thể hiện sự kiên quyết không gục ngã.")
+                ]
+            },
+            {
+                "id": "3", "title": "CẢNH 3: SỰ THỨC TỈNH TRƯỚC CƠM ÁO GẠO TIỀN", "dur": "5 GIÂY",
+                "voice": "Nhiều lúc muốn giấu mình đi, chờ khi nào thành công trở lại mới xuất hiện. Nhưng ngồi nghĩ lại: Cái sĩ diện hão ấy có trả được tiền học cho con không?",
+                "beats": [
+                    ("3.1 Đầu Cảnh", "Toàn cảnh sảnh kính ngập tràn nắng", "Đứng một mình bên khung cửa kính lớn Greenhub, ánh sáng bao bọc lấy vóc dáng.", "assets/greenhub/IMG_7812.JPG", "Mở rộng không gian tạo sự đối lập giữa quá khứ u tối và tương lai phía trước."),
+                    ("3.2 Cao Trào", "Trung cảnh nhìn ra bầu trời", "Nhìn thẳng ra khoảng trời bao la, ánh mắt bừng sáng sự dũng cảm.", "assets/greenhub/IMG_7813.JPG", "Khoảnh khắc buông bỏ hoàn toàn sự sĩ diện để sống vì người thân yêu."),
+                    ("3.3 Mồi Chuyển", "Bước chân mạnh mẽ ra ban công", "Sải bước chân dứt khoát đi ra khu vực ban công nhiều cây xanh Greenhub.", "assets/greenhub/IMG_7805.JPG", "Chuyển giao năng lượng sang hành động dấn thân không lùi bước.")
+                ]
+            },
+            {
+                "id": "4", "title": "CẢNH 4: BẢN LĨNH NGƯỜI ĐỨNG LÊN", "dur": "5 GIÂY",
+                "voice": "Người ta chỉ chê cười những kẻ trốn chạy, chứ không ai cười một người dám đứng lên làm lại. Mất tiền là chưa mất gì cả, mất đi tự trọng và ý chí mới là mất hết.",
+                "beats": [
+                    ("4.1 Đầu Cảnh", "Toàn cảnh ban công vườn tầng cao", "Đứng giữa thiên nhiên ban công Greenhub, gió thổi lồng lộng qua mái tóc.", "assets/greenhub/IMG_7805.JPG", "Hình ảnh biểu tượng của một chiến binh đang hồi sinh mạnh mẽ."),
+                    ("4.2 Cao Trào", "Trung cảnh giơ máy lên thẳng thắn", "Cầm chắc điện thoại trên tay, giơ ngang mặt với phong thái vô cùng đĩnh đạc.", "assets/greenhub/IMG_7806.JPG", "Vượt qua hoàn toàn nỗi sợ miệng đời, khẳng định giá trị bản thân."),
+                    ("4.3 Mồi Chuyển", "Cận cảnh nụ cười kiên cường", "Nụ cười rạng rỡ của người đã đi qua đáy vực và đang leo lên đỉnh cao mới.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "Mồi chuyển sang cảnh chốt hạ truyền cảm hứng vô tận.")
+                ]
+            },
+            {
+                "id": "5", "title": "CẢNH 5: LÀM LẠI VỚI KHÍ CHẤT NGƯỜI CÓ NGHỀ", "dur": "4 GIÂY (CHỐT HẠ)",
+                "voice": "Vứt bỏ cái tôi cũ sang một bên! Cầm máy lên, đĩnh đạc làm lại từ đầu. Khó khăn chỉ là thuốc thử cho bản lĩnh người có nghề!",
+                "beats": [
+                    ("5.1 Đầu Cảnh", "Toàn cảnh góc rộng terrace", "Toàn cảnh góc rộng khu terrace Greenhub, tư thế hiên ngang đón nắng mới.", "assets/greenhub/IMG_7808.JPG", "Hình tượng một người đàn ông vĩ đại dám bắt đầu lại từ con số 0."),
+                    ("5.2 Cao Trào", "A-Roll trực diện đầy uy lực", "Nói dứt khoát câu chốt vào ống kính máy quay với giọng nói ấm áp và vang dội.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "A-Roll chốt hạ truyền động lực sống cho toàn thể học viên tại lớp."),
+                    ("5.3 Mồi Chuyển", "Đặc tả ngón tay bấm lưu video", "Bấm dừng quay, hít một hơi thật sâu, nụ cười nhẹ nhõm trên môi.", "assets/greenhub/IMG_7799.JPG", "Khép lại bài học hào hùng về bản lĩnh làm lại cuộc đời.")
+                ]
+            }
+        ],
+        
+        "wisdom_quote": "Thất bại không định nghĩa bạn là ai. Cách bạn đứng dậy và đối diện với nó mới định nghĩa phẩm giá của bạn. Khi bạn dám phơi bày hành trình làm lại của mình, bạn không chỉ kiếm được tiền, mà còn truyền cảm hứng cho hàng triệu người đang bế tắc.",
+        "lesson1_title": "Sĩ diện không mua được tương lai",
+        "lesson1_desc": "Hãy cất chiếc áo vest của hào quang cũ vào tủ. Hôm nay bạn là một người học việc mới với tinh thần cởi mở nhất, sẵn sàng học từ những người trẻ nhất.",
+        "lesson2_title": "Hành trình làm lại là nội dung đắt giá nhất",
+        "lesson2_desc": "Khán giả không thích nghe người thành công khoe khoang. Họ muốn đồng hành cùng một người có chuyên môn đang nỗ lực từng ngày để vươn lên từ nghịch cảnh.",
+        "lesson3_title": "Bắt đầu lại với 10 năm kinh nghiệm không phải là số 0",
+        "lesson3_desc": "Bạn có thể mất tiền, mất mối quan hệ, nhưng tri thức, tư duy và bản lĩnh đã ăn vào máu bạn. Đó là bệ phóng giúp bạn trở lại nhanh gấp 5 lần người bình thường."
+    },
+
+    # -------------------------------------------------------------------------
+    # BÀI TẬP 09: HÀNG LÀM KỸ NHƯNG BỊ SO SÁNH GIÁ
+    # -------------------------------------------------------------------------
+    {
+        "id": "09",
+        "file_name": "kich_ban_09_hang_lam_ky_nhung_bi_so_sanh_gia.html",
+        "badge_id": "09",
+        "badge_text": "FEDU OFFLINE • BÀI TẬP TẠI LỚP #09",
+        "nav_title": "Bài Tập 09 • Hàng Làm Kỹ Bị So Sánh Giá Rẻ (Chuẩn Tầng 2.5)",
+        "page_title": "Bài Tập 09: Làm Video Show Quy Trình Thật Khiến Khách Tự Hiểu Giá Trị Không Cần Mặc Cả | FEDU Offline",
+        "title_short": "BÀI TẬP QUAY CHO NGƯỜI LÀM KỸ BỊ SO SÁNH GIÁ",
+        "problem_text": "Làm sản phẩm/dịch vụ thủ công tỉ mẩn từng chi tiết, chọn lọc nguyên vật liệu cao cấp nhất nhưng khi báo giá khách cứ mang đồ công nghiệp rẻ tiền trên sàn ra so sánh rồi chê đắt. Mở miệng ra giải thích thanh minh thì khách bảo mình vẽ chuyện, mà ngồi im thì mất đơn. Làm sao để làm video ngắn quay cận cảnh quy trình thật, khiến khách hàng nhìn thấy là tự hiểu giá trị và không bao giờ mở miệng mặc cả?",
+        "q1": "Mỗi lần nhận được tin nhắn 'sao bên kia bán có nửa giá mà shop bán đắt thế', bạn mất bao nhiêu phút ngồi gõ tin nhắn thanh minh giải thích?",
+        "q2": "Nếu nói rằng 'khách hàng thông thái sẽ tự hiểu', tại sao bạn không thừa nhận là mình đang bất lực vì không biết cách chứng minh bằng hình ảnh?",
+        "q3": "Tại sao một hình ảnh cận cảnh quy trình thật lại có sức thuyết phục gấp một trăm lần lời giải thích bằng văn bản?",
+        "q4": "Làm thế nào để biến công đoạn bẩn nhất, vất vả nhất trong xưởng làm việc thành thước phim đắt giá nhất trên video ngắn?",
+        
+        "step1_quote": "Sản phẩm của bên mình sử dụng nguyên liệu cao cấp nhập khẩu và quy trình kiểm định nghiêm ngặt, khách hàng thông thái sẽ hiểu được giá trị tương xứng.",
+        "step1_critique": "• <b>Văn mẫu tiếp thị rập khuôn:</b> Khách hàng nghe từ 'nguyên liệu cao cấp', 'kiểm định nghiêm ngặt' cả ngàn lần ở mọi nơi, không ai tin.<br>• <b>Mang tính phán xét khách hàng:</b> Ngầm chê khách mua đồ rẻ là 'không thông thái', dễ gây tự ái cho người mua.<br>• <b>Không có bằng chứng trực quan:</b> Nói suông không giải quyết được sự nghi ngờ của khách.",
+        
+        "step2_quote": "Tức điên người khi hàng tâm huyết thức đêm làm kỹ từng khâu lại bị khách mang đồ công nghiệp rẻ tiền trên sàn ra so sánh bảo bán đắt...",
+        "step2_critique": "• <b>Thể hiện sự nóng nảy bực dọc:</b> Biến video thành nơi xả cơn giận cá nhân, khiến khách hàng thấy bạn khó tính và thiếu chuyên nghiệp.<br>• <b>Chưa hiểu tâm lý người mua:</b> Khách so sánh giá là chuyện bình thường vì họ chưa thấy được sự khác biệt bên trong.<br>• <b>Làm mất đi khách hàng tiềm năng:</b> Khách hàng sợ hãi không dám nhắn tin hỏi nữa.",
+        
+        "step3_quote": "Khách hàng bây giờ chỉ ham của rẻ, nói đạo lý với họ làm gì cho mệt. Muốn rẻ thì đi mua đồ lởm mà dùng...",
+        "step3_critique": "• <b>Khinh thường người tiêu dùng:</b> Đổ lỗi cho thị trường và xúc phạm khách hàng là điều tối kỵ trong kinh doanh.<br>• <b>Tự tay đóng sập cánh cửa bán hàng:</b> Không ai muốn mua hàng của một người bán hàng ngạo mạn và coi thường khách.<br>• <b>Mất đi sự đĩnh đạc của người có tâm:</b> Biến bản thân thành kẻ bất mãn.",
+        
+        "step4_lead": "Bóc trần sự bất lực khi soạn sẵn một đoạn tin nhắn dài ngoằng giải thích nguyên liệu rồi lại lẳng lặng xóa đi để thức tỉnh sức mạnh của việc chứng minh bằng hình ảnh.",
+        "step4_core": "Mắt thấy thì tai mới tin. Đừng cố dùng hàng ngàn con chữ để thuyết phục một người đang nhìn vào con số giá tiền. Hãy chĩa máy quay vào công đoạn khó nhất, bẩn nhất, tốn công nhất mà đối thủ làm ẩu không bao giờ dám làm. Khi khách hàng nhìn thấy mồ hôi và sự tỉ mẩn thật, họ sẽ tự thấy mức giá của bạn là quá rẻ!",
+        "step4_disguise": "Soạn sẵn những tin nhắn mẫu dài hàng trang giấy giải thích về da thật, đường may, độ bền để copy-paste gửi cho khách, làm ra vẻ chuyên nghiệp nhưng thực chất là đang bất lực vì khách xem xong vẫn im lặng.",
+        "step4_pressure": "Khách hàng so sánh giá liên tục, tỷ lệ chốt đơn giảm. Trong khi chi phí nguyên vật liệu tốt ngày càng tăng cao.",
+        "step4_ego": "Tự ái của người làm nghề tỉ mẩn, cho rằng 'người hiểu nghề mới xứng đáng mua hàng của tôi', không chịu hạ mình xuống để giải thích bằng ngôn ngữ trực quan bình dân.",
+        "step4_release": "Đừng giải thích bằng lời nữa! Cầm máy lên, quay cận cảnh sự khác biệt giữa hàng làm kỹ và hàng làm ẩu. Cho khách thấy rõ mười công đoạn công phu để làm ra một sản phẩm. Hình ảnh chân thực có sức mạnh gấp triệu lời thanh minh!",
+        
+        "script_scenes": [
+            ("Cảnh 1 (4s)", "Nhận được tin nhắn: 'Bên kia bán có nửa giá, sao shop bán đắt thế?'... Soạn sẵn một đoạn dài giải thích nguyên vật liệu rồi lại lẳng lặng xóa đi."),
+            ("Cảnh 2 (4s)", "Người ta nhìn vào cái giá 500 ngàn hay 1 triệu, chứ người ta đâu có nhìn thấy mình phải ngồi nắn nót tỉ mẩn suốt 8 tiếng đồng hồ."),
+            ("Cảnh 3 (5s)", "Nhiều lúc cũng bực mình tự hỏi: Sao khách cứ ham của rẻ? Nhưng ngồi nghĩ lại: Người ta không ở trong nghề, mình không quay cho người ta thấy thì làm sao người ta biết đồ mình tốt ở chỗ nào?"),
+            ("Cảnh 4 (5s)", "Nói mồm bảo 'hàng em làm kỹ lắm' thì ai chẳng nói được. Đối thủ làm ẩu nó cũng nói y chang như vậy. Thứ duy nhất nói lên sự thật là hành động của đôi bàn tay."),
+            ("Cảnh 5 (4s)", "Không cần thanh minh bằng lời! Chĩa thẳng máy quay vào công đoạn làm thật. Cho khách nhìn thấy tận mắt thế nào là sản phẩm làm có tâm!")
+        ],
+        
+        "hook_old": "Hôm nay em xin chia sẻ vì sao sản phẩm bên em lại có mức giá cao hơn thị trường một chút mọi người nhé...",
+        "hook_old_note": "Văn mẫu thanh minh giải trình, người xem cảm thấy sắp bị bán hàng nên lướt qua ngay.",
+        "hook_old_critique": "• <b>Tạo tâm lý phòng thủ:</b> Người xem biết ngay người nói sắp phân bua để bán giá cao.<br>• <b>Không có yếu tố bất ngờ:</b> Mở màn chậm chạp và nhàm chán.<br>• <b>Bị lướt qua trong 2 giây đầu:</b> Tỷ lệ giữ chân cực kỳ thấp.",
+        
+        "hook_new": "Nhận được tin nhắn: 'Bên kia bán có nửa giá, sao shop bán đắt thế?'... Soạn sẵn một đoạn dài giải thích nguyên vật liệu rồi lại lẳng lặng xóa đi.",
+        "hook_new_note": "Hook tình huống nghẹn ngào: Tái hiện sự bất lực khi cố giải thích bằng lời",
+        "hook_new_critique": "• <b>Đánh trúng tình huống nhức nhối hàng ngày:</b> Bất kỳ ai bán hàng tử tế giá cao đều từng bị khách so sánh giá kiểu này.<br>• <b>Hành động xóa tin nhắn đắt giá:</b> Thể hiện sự bất lực và mệt mỏi khi phải phân bua bằng lời nói suông.<br>• <b>Khựng ngón tay xem tiếp:</b> Người xem tò mò muốn biết cách người này sẽ chứng minh giá trị ra sao mà không cần thanh minh.",
+        
+        "scenes": [
+            {
+                "id": "1", "title": "CẢNH 1: BÓC TRẦN TÌNH HUỐNG CHÊ ĐẮT", "dur": "4 GIÂY",
+                "voice": "Nhận được tin nhắn: 'Bên kia bán có nửa giá, sao shop bán đắt thế?'... Soạn sẵn một đoạn dài giải thích nguyên vật liệu rồi lại lẳng lặng xóa đi.",
+                "beats": [
+                    ("1.1 Đầu Cảnh", "Đặc tả tin nhắn so sánh giá", "Màn hình điện thoại hiển thị tin nhắn khách hỏi giá kèm link đối thủ rẻ hơn một nửa trên bàn gỗ Greenhub.", "assets/greenhub/IMG_7799.JPG", "Mô tả khoảnh khắc nghẹn ngào của người làm kỹ khi bị so sánh khập khiễng."),
+                    ("1.2 Cao Trào", "Cận cảnh ngón tay bấm nút xóa tin", "Ngón tay nhấn giữ nút Backspace xóa sạch đoạn tin nhắn phân bua dài dòng.", "assets/greenhub/IMG_7799.JPG", "Hành động dứt khoát: Nhận ra giải thích bằng chữ là hoàn toàn vô ích."),
+                    ("1.3 Mồi Chuyển", "Trung cận khuôn mặt nén tiếng thở dài", "Đặt điện thoại xuống, nét mặt đượm buồn nhìn sản phẩm tâm huyết trên bàn học Greenhub.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "Mồi chuyển sang suy tư về sự vô hình của công sức bỏ ra.")
+                ]
+            },
+            {
+                "id": "2", "title": "CẢNH 2: NỖI CÔ ĐƠN CỦA ĐÔI BÀN TAY", "dur": "4 GIÂY",
+                "voice": "Người ta nhìn vào cái giá 500 ngàn hay 1 triệu, chứ người ta đâu có nhìn thấy mình phải ngồi nắn nót tỉ mẩn suốt 8 tiếng đồng hồ.",
+                "beats": [
+                    ("2.1 Đầu Cảnh", "Cực cận đôi bàn tay làm việc", "Đôi bàn tay cầm dụng cụ tỉ mẩn gọt dũa từng chi tiết nhỏ trên bàn gỗ Greenhub.", "assets/greenhub/IMG_7799.JPG", "Đặc tả công phu và thời gian khổng lồ đổ vào từng công đoạn."),
+                    ("2.2 Cao Trào", "Góc nghiêng ánh mắt tập trung", "Ánh mắt đăm chiêu chăm chú vào từng đường nét, mồ hôi lấm tấm trên trán.", "assets/greenhub/IMG_7796.JPG", "Tôn vinh sự tận tụy và cái tâm trong sạch của người làm nghề."),
+                    ("2.3 Mồi Chuyển", "Dừng tay đứng dậy bước ra sảnh", "Dừng tay, đặt dụng cụ xuống, đứng dậy bước ra khu vực sảnh kính Greenhub.", "assets/greenhub/IMG_7812.JPG", "Hành động thể hiện sự chuyển hóa tư duy từ trách khách sang tự trách mình.")
+                ]
+            },
+            {
+                "id": "3", "title": "CẢNH 3: KHÁCH KHÔNG CÓ LỖI", "dur": "5 GIÂY",
+                "voice": "Nhiều lúc cũng bực mình tự hỏi: Sao khách cứ ham của rẻ? Nhưng ngồi nghĩ lại: Người ta không ở trong nghề, mình không quay cho người ta thấy thì làm sao người ta biết đồ mình tốt ở chỗ nào?",
+                "beats": [
+                    ("3.1 Đầu Cảnh", "Trung cảnh tựa vách kính tĩnh lặng", "Đứng tựa người bên vách kính lớn Greenhub nhìn ra tán lá xanh mát.", "assets/greenhub/IMG_7812.JPG", "Khoảnh khắc tĩnh tâm thấu hiểu: Khách hàng không có lỗi khi họ không được thấy sự thật."),
+                    ("3.2 Cao Trào", "Góc cận ánh mắt thấu suốt", "Ánh mắt ấm áp, bao dung, nhận trách nhiệm phải truyền thông về phía mình.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "Bước trưởng thành tư duy: Trách nhiệm của người làm kỹ là phải cho khách thấy."),
+                    ("3.3 Mồi Chuyển", "Bước chân ra ban công rộng mở", "Sải bước tự tin đi ra khu vực ban công sân vườn Greenhub đón ánh nắng.", "assets/greenhub/IMG_7805.JPG", "Sẵn sàng đón nhận phương pháp mới để giải phóng sản phẩm.")
+                ]
+            },
+            {
+                "id": "4", "title": "CẢNH 4: HÀNH ĐỘNG THAY CHO LỜI NÓI", "dur": "5 GIÂY",
+                "voice": "Nói mồm bảo 'hàng em làm kỹ lắm' thì ai chẳng nói được. Đối thủ làm ẩu nó cũng nói y chang như vậy. Thứ duy nhất nói lên sự thật là hành động của đôi bàn tay.",
+                "beats": [
+                    ("4.1 Đầu Cảnh", "Toàn cảnh ban công nhiều cây", "Đứng giữa thiên nhiên ban công Greenhub, phong thái đĩnh đạc và chân thành.", "assets/greenhub/IMG_7805.JPG", "Không gian khoáng đạt nâng đỡ cho sự tự tin vào tay nghề thật."),
+                    ("4.2 Cao Trào", "Trung cảnh giơ điện thoại lên", "Cầm chắc điện thoại trên tay, chuẩn bị bấm máy quay quy trình thật.", "assets/greenhub/IMG_7806.JPG", "Vũ khí tối thượng: Dùng hình ảnh thực tế để xóa tan mọi nghi ngờ so sánh giá."),
+                    ("4.3 Mồi Chuyển", "Cận cảnh nụ cười đĩnh đạc", "Nụ cười tự tin, ánh mắt sắc sảo của người thợ bậc thầy chuẩn bị phô diễn tay nghề.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "Mồi chuyển sang thông điệp chốt hạ đầy tự hào.")
+                ]
+            },
+            {
+                "id": "5", "title": "CẢNH 5: CHO THẤY THẾ NÀO LÀ CÓ TÂM", "dur": "4 GIÂY (CHỐT HẠ)",
+                "voice": "Không cần thanh minh bằng lời! Chĩa thẳng máy quay vào công đoạn làm thật. Cho khách nhìn thấy tận mắt thế nào là sản phẩm làm có tâm!",
+                "beats": [
+                    ("5.1 Đầu Cảnh", "Toàn cảnh góc rộng terrace", "Toàn cảnh góc rộng khu terrace tầng thượng Greenhub, tư thế hiên ngang đón nắng.", "assets/greenhub/IMG_7808.JPG", "Khẳng định sự chiến thắng của sự tử tế và chất lượng thật trên thị trường."),
+                    ("5.2 Cao Trào", "A-Roll trực diện đanh thép", "Nói dứt khoát câu chốt vào camera với giọng nói ấm áp, đĩnh đạc và kiên định.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "A-Roll chốt hạ truyền cảm hứng mạnh mẽ cho toàn bộ học viên làm nghề tại lớp."),
+                    ("5.3 Mồi Chuyển", "Đặc tả ngón tay bấm lưu video", "Bấm dừng quay, nụ cười rạng rỡ của người đã tìm ra chìa khóa giải phóng giá trị.", "assets/greenhub/IMG_7799.JPG", "Khép lại chuỗi 9 bài tập thực hành đỉnh cao tại lớp offline.")
+                ]
+            }
+        ],
+        
+        "wisdom_quote": "Lời nói thanh minh của bạn chỉ có giá 0 đồng. Nhưng một thước phim cận cảnh đôi tay bạn miệt mài gọt dũa từng chi tiết có thể bán được với giá hàng triệu đồng. Hãy để công sức thật của bạn tự cất lên tiếng nói.",
+        "lesson1_title": "Dừng ngay việc gõ tin nhắn giải thích dông dài",
+        "lesson1_desc": "Khách hàng mua bằng mắt và cảm xúc. Thay vì gõ 500 từ giải thích về chất lượng, hãy gửi cho khách một video ngắn 20 giây quay quy trình làm công đoạn khó nhất.",
+        "lesson2_title": "Quay công đoạn mà đối thủ sợ nhất",
+        "lesson2_desc": "Đối thủ làm ẩu dùng keo độc hại, nguyên liệu tái chế thì không bao giờ dám quay cận cảnh. Bạn làm tử tế bằng nguyên liệu sạch thì đó chính là vũ khí độc quyền đánh bại họ.",
+        "lesson3_title": "Giá trị cao đến từ sự minh bạch tuyệt đối",
+        "lesson3_desc": "Khi bạn dám cho khách hàng thấy toàn bộ quy trình hậu trường, họ không chỉ mua sản phẩm mà còn trở thành người hâm mộ trung thành bảo vệ thương hiệu cho bạn."
+    }
+]
+
+print("All 9 lessons data completed successfully!")

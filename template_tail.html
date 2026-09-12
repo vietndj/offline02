@@ -1,0 +1,64 @@
+<!-- ═══ LIGHTBOX MODAL ═══ -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-card" onclick="event.stopPropagation()">
+      <button class="lightbox-close-btn" onclick="closeLightbox()">&times;</button>
+      <div class="lightbox-img-pane">
+        <img id="lightbox-img" src="" alt="Frame Preview">
+      </div>
+      <div class="lightbox-info-pane">
+        <div id="lightbox-badge" style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--cl-accent); text-transform: uppercase;"></div>
+        <h3 id="lightbox-title" style="font-family: var(--font-display-long); font-size: 18px; font-weight: 700; color: var(--cl-text-base);"></h3>
+        <p id="lightbox-desc" style="font-size: 14px; color: var(--cl-text-muted); line-height: 1.6;"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ ZERO-JANK OBSERVER & SCRIPTS ═══ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // IntersectionObserver cho Apple Motion (Zero-Jank: unobserve ngay sau khi hiện)
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -40px 0px',
+        threshold: 0.08
+      };
+
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.apple-reveal').forEach(el => observer.observe(el));
+    });
+
+    // Lightbox handlers
+    function openLightbox(imgUrl, title, desc, badge) {
+      document.getElementById('lightbox-img').src = imgUrl;
+      document.getElementById('lightbox-title').innerText = title;
+      document.getElementById('lightbox-desc').innerText = desc;
+      document.getElementById('lightbox-badge').innerText = badge || 'PHÂN CẢNH MICRO-BEAT';
+      document.getElementById('lightbox').classList.add('active');
+    }
+    function closeLightbox(e) {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+
+    // Switch Option Scene 5
+    function switchOpt(opt) {
+      document.querySelectorAll('.opt-switch-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.opt-content-panel').forEach(panel => panel.classList.remove('active'));
+      if(opt === 1) {
+        document.getElementById('btn-opt1').classList.add('active');
+        document.getElementById('content-opt1').classList.add('active');
+      } else {
+        document.getElementById('btn-opt2').classList.add('active');
+        document.getElementById('content-opt2').classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
