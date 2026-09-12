@@ -680,13 +680,61 @@ def build_master_hub():
 
     /* Media queries */
     @media (max-width: 768px) {{
-      .hub-cards-grid {{
-        grid-template-columns: 1fr;
+      .top-nav {{
+        padding: 0 16px;
+        height: 52px;
+      }}
+      .top-nav__title {{
+        display: none;
+      }}
+      .top-nav__actions {{
+        gap: 8px;
+      }}
+      .btn-nav {{
+        padding: 5px 10px;
+        font-size: 11px;
       }}
       .hub-hero {{
-        padding: 40px 16px 32px;
+        padding: 36px 16px 24px;
+      }}
+      .hub-hero__h1 {{
+        font-size: 26px;
+        line-height: 1.25;
+      }}
+      .hub-hero__lead {{
+        font-size: 15px;
+        margin-bottom: 24px;
+      }}
+      .hub-formula-banner {{
+        padding: 18px 16px;
+        gap: 16px;
+        margin-bottom: 28px;
       }}
       .hub-grid-section {{
+        padding: 36px 14px;
+      }}
+      .hub-cards-grid {{
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }}
+      .hub-card {{
+        padding: 20px 16px;
+      }}
+      .hub-card__title {{
+        font-size: 17.5px;
+      }}
+      .hub-card__question {{
+        font-size: 13.5px;
+        padding: 10px 12px;
+      }}
+      .hub-card__hook-box {{
+        padding: 10px 12px;
+      }}
+      .hub-principles-grid {{
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }}
+      .hub-footer-section {{
         padding: 40px 16px;
       }}
     }}
@@ -697,7 +745,7 @@ def build_master_hub():
   <!-- ═══ TOP STICKY BAR ═══ -->
   <header class="top-nav">
     <div class="top-nav__brand">
-      <span class="top-nav__badge">FEDU OFFLINE</span>
+      <span class="top-nav__badge">VIDEO OFFLINE</span>
       <span class="top-nav__title">9 Bài Tập Thực Hành Tại Lớp • Bóc Trần Tầng 2.5</span>
     </div>
     <div class="top-nav__actions">
@@ -794,23 +842,32 @@ def build_master_hub():
     </div>
 
     <div style="margin-top: 32px; font-size: 13px; color: var(--cl-slate-500); font-family: var(--font-mono);">
-      FEDU OFFLINE COURSE • HỆ THỐNG ĐÀO TẠO VIDEO NGẮN THỰC CHIẾN 3 TẦNG SỰ THẬT
+      VIDEO OFFLINE COURSE • HỆ THỐNG ĐÀO TẠO VIDEO NGẮN THỰC CHIẾN 3 TẦNG SỰ THẬT
     </div>
   </section>
 
 </body>
 </html>
 """
-    # Save to both repos
-    out_github = os.path.join(GITHUB_DIR, "9_kich_ban_thuc_chien.html")
-    with open(out_github, "w", encoding="utf-8") as f:
-        f.write(html)
-    print(f"Saved Master Hub to GitHub: {out_github}")
+    # Save to all repos and both filenames
+    COURSE_DIR = "/Users/vietmac/Documents/CODE/course"
+    GITHUB_COURSE_DIR = "/Users/vietmac/Documents/CODE/vietndj.github.io/course"
 
-    out_offline = os.path.join(OFFLINE_DIR, "9_kich_ban_thuc_chien.html")
-    with open(out_offline, "w", encoding="utf-8") as f:
-        f.write(html)
-    print(f"Saved Master Hub to Offline: {out_offline}")
+    destinations = [
+        os.path.join(OFFLINE_DIR, "9_kich_ban_thuc_chien.html"),
+        os.path.join(OFFLINE_DIR, "9-bai-tap-thuc-hanh.html"),
+        os.path.join(GITHUB_DIR, "9_kich_ban_thuc_chien.html"),
+        os.path.join(GITHUB_DIR, "9-bai-tap-thuc-hanh.html"),
+        os.path.join(COURSE_DIR, "9_kich_ban_thuc_chien.html"),
+        os.path.join(COURSE_DIR, "9-bai-tap-thuc-hanh.html"),
+        os.path.join(GITHUB_COURSE_DIR, "9_kich_ban_thuc_chien.html"),
+        os.path.join(GITHUB_COURSE_DIR, "9-bai-tap-thuc-hanh.html")
+    ]
+    for dst in destinations:
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
+        with open(dst, "w", encoding="utf-8") as f:
+            f.write(html)
+        print(f"Saved Master Hub to: {dst}")
 
 if __name__ == "__main__":
     build_master_hub()
