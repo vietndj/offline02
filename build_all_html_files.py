@@ -405,7 +405,7 @@ def generate_lesson_html(data):
       </p>
 
       <!-- Grid 4 Góc Nhìn Tầng 2.5 -->
-      <div class="friction-triad-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+      <div class="friction-triad-grid">
         <div class="friction-card">
           <span class="friction-card__badge">MẮT XÍCH 01</span>
           <h3 class="friction-card__title">Cái Cớ Ngụy Trang</h3>
@@ -469,7 +469,7 @@ def generate_lesson_html(data):
        KHỐI 6: KỊCH BẢN NÓI TRÀ ĐÁ ĐÃ CHỐT (100dvh)
        ═══════════════════════════════════════════════════════════════════ -->
   <section class="cl-zebra-section cl-zebra--tint" id="sec-script">
-    <div class="cl-sec-container apple-reveal">
+    <div class="cl-sec-container cl-sec-container--wide apple-reveal">
       <div class="cl-badge cl-badge--green">KỊCH BẢN THỰC CHIẾN • 20 - 22 GIÂY</div>
       <h2 class="title-short">KỊCH BẢN NÓI TRÀ ĐÁ ĐÃ CHỐT</h2>
       <p class="cl-body">
@@ -481,7 +481,7 @@ def generate_lesson_html(data):
       </div>
 
       <div style="margin-top: 28px;">
-        <a href="#sec-toi-uu-hook" class="cl-btn" style="background: var(--cl-amber); color: #000; font-weight: 800;">⚡ BƯỚC TIẾP THEO: TỐI ƯU HOOK ĐỂ GIẢM THIỆT THÒI TRÊN VIDEO NGẮN ↓</a>
+        <a href="#sec-toi-uu-hook" class="cl-btn" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: #ffffff; font-weight: 700; box-shadow: 0 6px 20px rgba(217, 119, 6, 0.28);">⚡ BƯỚC TIẾP THEO: TỐI ƯU HOOK ĐỂ GIẢM THIỆT THÒI TRÊN VIDEO NGẮN ↓</a>
       </div>
     </div>
     <a href="#sec-toi-uu-hook" class="cl-scroll-hint">
@@ -504,7 +504,7 @@ def generate_lesson_html(data):
       </p>
 
       <!-- BẢNG 2 CỘT SO SÁNH TRỰC DIỆN -->
-      <div class="step-comparison-grid" style="grid-template-columns: 1fr 1fr; margin-top: 0; gap: 24px;">
+      <div class="step-comparison-grid" style="margin-top: 0; gap: 24px;">
         
         <!-- CỘT 1: LÚC CHƯA CÓ HOOK -->
         <div class="step-card" style="border-left: 4px solid var(--cl-danger); background: #ffffff;">
@@ -614,7 +614,7 @@ def generate_lesson_html(data):
 
       <div style="margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap;">
         <a href="9-bai-tap-thuc-hanh.html" class="cl-btn">🏛️ QUAY VỀ MASTER HUB 9 KỊCH BẢN</a>
-        <a href="#sec-de-bai" class="cl-btn" style="background: var(--cl-slate-200); color: var(--cl-slate-900);">↑ VỀ ĐẦU TRANG</a>
+        <a href="#sec-de-bai" class="cl-btn" style="background: var(--cl-tint); color: var(--cl-text-base); border: 1px solid var(--cl-line); box-shadow: none;">↑ VỀ ĐẦU TRANG</a>
       </div>
     </div>
   </section>
@@ -631,7 +631,6 @@ def generate_lesson_html(data):
 <body>
 {body_content}
 {TEMPLATE_TAIL}
-</html>
 """
     return full_html
 
