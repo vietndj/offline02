@@ -13,7 +13,8 @@ GITHUB_DIR = "/Users/vietmac/Documents/CODE/vietndj.github.io"
 CARDS_DATA = [
     {
         "num": "01",
-        "file": "kich_ban_01_ngoi_ca_phe_10h_toi.html",
+        "file": "kichban1.html",
+        "slug_4words": "kb1-ca-phe-dem.html",
         "category": "Bối Cảnh Công Cộng • Ngại Ống Kính",
         "title": "Ngồi Cà Phê Đêm 10 Giờ Tối: Bóc Trần Cái Cớ Bận Rộn",
         "question": "Bạn có hay ngồi ngâm ở quán cà phê một mình, mở laptop vờ bận rộn để trốn tránh nỗi bất an?",
@@ -25,7 +26,8 @@ CARDS_DATA = [
     },
     {
         "num": "02",
-        "file": "kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach.html",
+        "file": "kichban2.html",
+        "slug_4words": "kb2-tien-mat-bang.html",
         "category": "Áp Lực Mặt Bằng • Cửa Hàng Vắng Khách",
         "title": "Tiền Mặt Bằng 20 Triệu & Cửa Hàng Vắng Hoe",
         "question": "Cửa hàng mở cả ngày không bóng khách, tiền nhà đến hẹn vẫn phải nộp?",
@@ -37,7 +39,8 @@ CARDS_DATA = [
     },
     {
         "num": "03",
-        "file": "kich_ban_03_chung_lai_sau_tuoi_30.html",
+        "file": "kichban3.html",
+        "slug_4words": "kb3-chung-tuoi-30.html",
         "category": "Khủng Hoảng Tuổi 30 • Đối Thủ Triệu View",
         "title": "Chững Lại Sau Tuổi 30 & Nhìn Đối Thủ Triệu View",
         "question": "Làm nghề chục năm nhưng thấy tụi trẻ mới vào nghề làm video triệu view ầm ầm?",
@@ -49,7 +52,8 @@ CARDS_DATA = [
     },
     {
         "num": "04",
-        "file": "kich_ban_04_tien_quang_cao_an_het_tien_lai.html",
+        "file": "kichban4.html",
+        "slug_4words": "kb4-dot-tien-ads.html",
         "category": "Nghiện Chạy Ads • Bế Tắc Chi Phí",
         "title": "Tiền Quảng Cáo Ăn Hết Tiền Lãi: Thoát Khỏi Bẫy Đốt Tiền",
         "question": "Cứ 5 phút mở app ads một lần, nạp tiền triệu mà cắn sạch tiền lãi?",
@@ -61,7 +65,8 @@ CARDS_DATA = [
     },
     {
         "num": "05",
-        "file": "kich_ban_05_het_khach_tu_moi_quan_he_quen.html",
+        "file": "kichban5.html",
+        "slug_4words": "kb5-het-khach-quen.html",
         "category": "Cạn Khách Quen • Sợ Bán Cho Người Lạ",
         "title": "Hết Khách Người Quen & Nỗi Sợ Chào Hàng Người Lạ",
         "question": "Người thân ủng hộ một lần rồi thôi, giờ nhắn tin ai cũng ngượng và sợ bị né?",
@@ -73,7 +78,8 @@ CARDS_DATA = [
     },
     {
         "num": "06",
-        "file": "kich_ban_06_tay_nghe_tot_nhung_van_vang_khach.html",
+        "file": "kichban6.html",
+        "slug_4words": "kb6-tay-nghe-gioi.html",
         "category": "Bẫy Tự Phụ Nghề • Đối Thủ Làm Ẩu Đông Khách",
         "title": "Tay Nghề Tốt Nhưng Vẫn Vắng Khách: Trách Nhiệm Truyền Thông",
         "question": "Làm kỹ tỉ mẩn từng ly nhưng ế ẩm, quán bên cạnh làm ẩu lại đông nhờ marketing?",
@@ -85,7 +91,8 @@ CARDS_DATA = [
     },
     {
         "num": "07",
-        "file": "kich_ban_07_bi_canh_tranh_boi_tong_kho_va_gia_goc.html",
+        "file": "kichban7.html",
+        "slug_4words": "kb7-kho-pha-gia.html",
         "category": "Bão Phá Giá • Tổng Kho & Sàn Livestream",
         "title": "Bị Tổng Kho Livestream Phá Giá: Bán Bằng Gương Mặt Uy Tín",
         "question": "Báo giá xong khách thả icon cười nhạt rồi gửi link tổng kho rẻ hơn nửa giá?",
@@ -97,7 +104,8 @@ CARDS_DATA = [
     },
     {
         "num": "08",
-        "file": "kich_ban_08_bat_dau_lai_tu_con_so_0.html",
+        "file": "kichban8.html",
+        "slug_4words": "kb8-tu-so-khong.html",
         "category": "Làm Lại Cuộc Đời • Vứt Bỏ Sĩ Diện Hão",
         "title": "Bắt Đầu Lại Từ Con Số 0: Dẹp Tự Ái Để Đứng Lên",
         "question": "Từng có sự nghiệp lớn nhưng thất bại gãy gánh, sợ bạn bè cười chê sa cơ lỡ vận?",
@@ -109,7 +117,8 @@ CARDS_DATA = [
     },
     {
         "num": "09",
-        "file": "kich_ban_09_hang_lam_ky_nhung_bi_so_sanh_gia.html",
+        "file": "kichban9.html",
+        "slug_4words": "kb9-hang-lam-ky.html",
         "category": "Chứng Minh Giá Trị • Show Quy Trình Thật",
         "title": "Hàng Làm Kỹ Bị So Sánh Giá Rẻ: Dùng Hình Ảnh Thay Lời Nói",
         "question": "Bị khách chê đắt so với hàng chợ, gõ tin nhắn thanh minh mỏi tay khách vẫn bỏ đi?",

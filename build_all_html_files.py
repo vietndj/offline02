@@ -643,46 +643,65 @@ def generate_lesson_html(data):
 """
     return full_html
 
+KICHBAN_NAMES = {
+    "1": "kichban1.html",
+    "2": "kichban2.html",
+    "3": "kichban3.html",
+    "4": "kichban4.html",
+    "5": "kichban5.html",
+    "6": "kichban6.html",
+    "7": "kichban7.html",
+    "8": "kichban8.html",
+    "9": "kichban9.html",
+}
+
+SHORT_4WORDS = {
+    "1": "kb1-ca-phe-dem.html",
+    "2": "kb2-tien-mat-bang.html",
+    "3": "kb3-chung-tuoi-30.html",
+    "4": "kb4-dot-tien-ads.html",
+    "5": "kb5-het-khach-quen.html",
+    "6": "kb6-tay-nghe-gioi.html",
+    "7": "kb7-kho-pha-gia.html",
+    "8": "kb8-tu-so-khong.html",
+    "9": "kb9-hang-lam-ky.html",
+}
+
+GITHUB_ROOT = "/Users/vietmac/Documents/CODE/vietndj.github.io"
+
+def save_to_all_targets(filenames, content):
+    """Lưu nội dung vào tất cả các repo và thư mục đích với các bí danh tên file."""
+    dirs = [OFFLINE_DIR, COURSE_DIR, GITHUB_COURSE_DIR, GITHUB_ROOT]
+    for d in dirs:
+        os.makedirs(d, exist_ok=True)
+        for fname in filenames:
+            dest = os.path.join(d, fname)
+            with open(dest, "w", encoding="utf-8") as f:
+                f.write(content)
+
 def main():
     print("Building all lessons (KB02 - KB09)...")
     for ldata in ALL_LESSONS:
         html = generate_lesson_html(ldata)
+        lid = str(int(ldata["id"]))
         old_name = ldata["file_name"]
         short_name = SHORT_NAMES.get(old_name, old_name)
+        kb_simple = KICHBAN_NAMES.get(lid, f"kichban{lid}.html")
+        kb_4words = SHORT_4WORDS.get(lid, f"kb{lid}.html")
 
-        # 1. Write short name to COURSE_DIR
-        out_course = os.path.join(COURSE_DIR, short_name)
-        with open(out_course, "w", encoding="utf-8") as f:
-            f.write(html)
-        print(f"Saved to course/: {short_name}")
+        # Save to all aliases
+        aliases = list(dict.fromkeys([kb_simple, kb_4words, short_name, old_name]))
+        save_to_all_targets(aliases, html)
+        print(f"Saved Lesson {lid} aliases: {kb_simple}, {kb_4words}, {short_name}")
 
-        # 2. Write short name to GITHUB_COURSE_DIR
-        os.makedirs(GITHUB_COURSE_DIR, exist_ok=True)
-        out_gh_course = os.path.join(GITHUB_COURSE_DIR, short_name)
-        with open(out_gh_course, "w", encoding="utf-8") as f:
-            f.write(html)
-        print(f"Saved to vietndj.github.io/course/: {short_name}")
-
-        # 3. Write short name and old name to OFFLINE_DIR
-        out_offline_short = os.path.join(OFFLINE_DIR, short_name)
-        with open(out_offline_short, "w", encoding="utf-8") as f:
-            f.write(html)
-        out_offline_old = os.path.join(OFFLINE_DIR, old_name)
-        with open(out_offline_old, "w", encoding="utf-8") as f:
-            f.write(html)
-        print(f"Saved to Offline: {short_name} & {old_name}")
-
-    # Also copy bai-01-ca-phe-dem.html
+    # Synchronize Lesson 1 (bai-01-ca-phe-dem.html) with all aliases
     bai01_src = os.path.join(OFFLINE_DIR, "bai-01-ca-phe-dem.html")
     with open(bai01_src, "r", encoding="utf-8") as f:
         bai01_content = f.read()
-    with open(os.path.join(COURSE_DIR, "bai-01-ca-phe-dem.html"), "w", encoding="utf-8") as f:
-        f.write(bai01_content)
-    with open(os.path.join(GITHUB_COURSE_DIR, "bai-01-ca-phe-dem.html"), "w", encoding="utf-8") as f:
-        f.write(bai01_content)
-    with open(os.path.join(OFFLINE_DIR, "kich_ban_01_ngoi_ca_phe_10h_toi.html"), "w", encoding="utf-8") as f:
-        f.write(bai01_content)
-    print("Synchronized bai-01-ca-phe-dem.html to course/ and vietndj.github.io/course/")
+
+    l1_aliases = ["kichban1.html", "kb1-ca-phe-dem.html", "bai-01-ca-phe-dem.html", "kich_ban_01_ngoi_ca_phe_10h_toi.html"]
+    save_to_all_targets(l1_aliases, bai01_content)
+    print("Synchronized Lesson 1 aliases: kichban1.html, kb1-ca-phe-dem.html to all targets")
 
     print("\nAll 9 lessons synchronized successfully in all target directories!")
 
