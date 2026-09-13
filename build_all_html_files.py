@@ -111,7 +111,18 @@ def generate_lesson_html(data):
     scenes_html = ""
     for sc in data["scenes"]:
         beats_html = ""
-        for b_name, b_angle, b_act, b_img, b_note in sc["beats"]:
+        for b_tuple in sc["beats"]:
+            if len(b_tuple) == 6:
+                b_name, b_scale, b_angle, b_act, b_img, b_note = b_tuple
+                specs_rows = f"""
+              <tr><td class="col-label">Cỡ cảnh:</td><td class="col-val">{b_scale}</td></tr>
+              <tr><td class="col-label">Góc máy:</td><td class="col-val">{b_angle}</td></tr>
+              <tr><td class="col-label">Hành động:</td><td class="col-val">{b_act}</td></tr>"""
+            else:
+                b_name, b_angle, b_act, b_img, b_note = b_tuple
+                specs_rows = f"""
+              <tr><td class="col-label">Góc máy:</td><td class="col-val">{b_angle}</td></tr>
+              <tr><td class="col-label">Hành động:</td><td class="col-val">{b_act}</td></tr>"""
             badge_class = "badge-in" if "Đầu" in b_name else ("badge-main" if "Cao" in b_name else "badge-out")
             beats_html += f"""
         <!-- Beat -->
@@ -126,9 +137,7 @@ def generate_lesson_html(data):
               <span class="beat-name">{b_name}</span>
               <span class="beat-angle-desc">{b_angle}</span>
             </div>
-            <table class="beat-specs-table">
-              <tr><td class="col-label">Góc máy:</td><td class="col-val">{b_angle}</td></tr>
-              <tr><td class="col-label">Hành động:</td><td class="col-val">{b_act}</td></tr>
+            <table class="beat-specs-table">{specs_rows}
             </table>
             <div class="beat-director-note">💡 <b>Ghi chú đạo diễn:</b> {b_note}</div>
           </div>
