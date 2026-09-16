@@ -1,5 +1,4 @@
 import os
-import json
 
 questions = [
     {
@@ -123,6 +122,45 @@ html_template = """<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Túi Mù - Bộ Câu Hỏi Offline</title>
     <style>
+        @font-face {
+            font-family: 'SVN-Integral CF';
+            src: url('./assets/fonts/SVN-IntegralCF-Heavy.ttf') format('truetype');
+            font-weight: 900;
+        }
+        @font-face {
+            font-family: 'FD Tiempos Text';
+            src: url('./assets/fonts/FDTiemposText-RegularItalic.woff2') format('woff2');
+            font-style: italic;
+            font-weight: 400;
+        }
+        @font-face {
+            font-family: 'FD Tiempos Text';
+            src: url('./assets/fonts/FDTiemposText-MediumItalic.woff2') format('woff2');
+            font-style: italic;
+            font-weight: 500;
+        }
+        @font-face {
+            font-family: 'FD Tiempos Text';
+            src: url('./assets/fonts/FDTiemposText-SemiboldItalic.woff2') format('woff2');
+            font-style: italic;
+            font-weight: 600;
+        }
+        @font-face {
+            font-family: 'FD Aeonik';
+            src: url('./assets/fonts/FDAeonikRegular.ttf') format('truetype');
+            font-weight: 400;
+        }
+        @font-face {
+            font-family: 'FD Aeonik';
+            src: url('./assets/fonts/FDAeonikMedium.ttf') format('truetype');
+            font-weight: 500;
+        }
+        @font-face {
+            font-family: 'FD Aeonik';
+            src: url('./assets/fonts/FDAeonikBold.ttf') format('truetype');
+            font-weight: 600;
+        }
+        
         :root {
             --bg-color: #ffffff;
             --text-color: #1a1a1a;
@@ -152,27 +190,30 @@ html_template = """<!DOCTYPE html>
             position: relative;
             padding: 40px;
             page-break-after: always;
+            overflow: hidden;
+            border-bottom: 20px solid #f0f0f0; /* Screen separator */
         }
         
         /* Header */
         .header {
             position: relative;
-            height: 180px;
+            height: 200px;
             display: flex;
             align-items: flex-end;
             border-bottom: 1px solid var(--line-color);
-            padding-bottom: 20px;
             margin-bottom: 60px;
         }
         
         .number {
-            font-family: 'Integral CF', sans-serif;
-            font-size: 240px;
+            font-family: 'SVN-Integral CF', sans-serif;
+            font-size: 280px;
             font-weight: 900;
-            line-height: 0.7;
+            line-height: 0.75;
             letter-spacing: -0.05em;
-            color: #404040;
+            color: #3f3f3f;
+            clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
             margin-left: -10px;
+            transform: translateY(18px); /* Shift down to sit exactly on the line */
         }
         
         /* Main Content */
@@ -181,7 +222,7 @@ html_template = """<!DOCTYPE html>
             display: flex;
             flex-direction: column;
             gap: 40px;
-            padding-top: 20px;
+            padding-top: 10px;
         }
         
         .title {
@@ -191,7 +232,7 @@ html_template = """<!DOCTYPE html>
         }
         
         .title-1 {
-            font-family: 'Freight Text Pro', 'Freight Text', 'Tiempos Text', serif;
+            font-family: 'FD Tiempos Text', serif;
             font-style: italic;
             font-weight: 400;
             color: #333333;
@@ -211,20 +252,20 @@ html_template = """<!DOCTYPE html>
         }
         
         .body-left p {
-            font-family: 'Freight Text Pro', 'Freight Text', 'Tiempos Text', serif;
+            font-family: 'FD Tiempos Text', serif;
             font-style: italic;
             font-weight: 600;
-            font-size: 24px;
+            font-size: 26px;
             line-height: 1.5;
             color: #1a1a1a;
             margin-bottom: 24px;
         }
         
         .body-right p {
-            font-family: 'Freight Text Pro', 'Freight Text', 'Tiempos Text', serif;
+            font-family: 'FD Tiempos Text', serif;
             font-style: italic;
             font-weight: 500;
-            font-size: 24px;
+            font-size: 26px;
             line-height: 1.6;
             color: #4a4a4a;
             margin-bottom: 24px;
@@ -242,6 +283,10 @@ html_template = """<!DOCTYPE html>
             color: #888888;
             font-family: 'FD Aeonik', sans-serif;
             font-weight: 500;
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            right: 40px;
         }
         
         .footer-center {
@@ -264,6 +309,12 @@ html_template = """<!DOCTYPE html>
                 width: 100%;
                 height: 100vh;
                 padding: 10mm 15mm;
+                border-bottom: none; /* Remove screen separator when printing */
+            }
+            .footer {
+                bottom: 10mm;
+                left: 15mm;
+                right: 15mm;
             }
         }
     </style>
