@@ -123,9 +123,9 @@ html_template = """<!DOCTYPE html>
     <title>Túi Mù - Bộ Câu Hỏi Offline</title>
     <style>
         @font-face {
-            font-family: 'SVN-Integral CF';
-            src: url('./assets/fonts/SVN-IntegralCF-Heavy.ttf') format('truetype');
-            font-weight: 900;
+            font-family: 'FD Monument Extended';
+            src: url('./assets/fonts/FDMonumentExtended-Bold.ttf') format('truetype');
+            font-weight: bold;
         }
         @font-face {
             font-family: 'FD Tiempos Text';
@@ -184,36 +184,35 @@ html_template = """<!DOCTYPE html>
         
         .page {
             width: 100vw;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             position: relative;
             padding: 40px;
             page-break-after: always;
-            overflow: hidden;
             border-bottom: 20px solid #f0f0f0; /* Screen separator */
         }
         
         /* Header */
         .header {
             position: relative;
-            height: 200px;
+            height: 160px;
             display: flex;
             align-items: flex-end;
             border-bottom: 1px solid var(--line-color);
-            margin-bottom: 60px;
+            margin-bottom: 40px;
         }
         
         .number {
-            font-family: 'SVN-Integral CF', sans-serif;
-            font-size: 280px;
-            font-weight: 900;
+            font-family: 'FD Monument Extended', sans-serif;
+            font-size: 260px;
+            font-weight: bold;
             line-height: 0.75;
             letter-spacing: -0.05em;
             color: #3f3f3f;
             clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
             margin-left: -10px;
-            transform: translateY(18px); /* Shift down to sit exactly on the line */
+            transform: translateY(16px);
         }
         
         /* Main Content */
@@ -221,12 +220,12 @@ html_template = """<!DOCTYPE html>
             flex: 1;
             display: flex;
             flex-direction: column;
-            gap: 40px;
+            gap: 30px;
             padding-top: 10px;
         }
         
         .title {
-            font-size: 64px;
+            font-size: 60px;
             line-height: 1.1;
             letter-spacing: -0.02em;
         }
@@ -247,28 +246,28 @@ html_template = """<!DOCTYPE html>
         .body-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            margin-top: 20px;
+            gap: 60px;
+            margin-top: 10px;
         }
         
         .body-left p {
             font-family: 'FD Tiempos Text', serif;
             font-style: italic;
             font-weight: 600;
-            font-size: 26px;
+            font-size: 24px;
             line-height: 1.5;
             color: #1a1a1a;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
         
         .body-right p {
             font-family: 'FD Tiempos Text', serif;
             font-style: italic;
             font-weight: 500;
-            font-size: 26px;
+            font-size: 24px;
             line-height: 1.6;
             color: #4a4a4a;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             text-align: center;
         }
         
@@ -276,17 +275,14 @@ html_template = """<!DOCTYPE html>
         .footer {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-end;
             border-top: 1px solid var(--line-color);
             padding-top: 20px;
             font-size: 14px;
             color: #888888;
             font-family: 'FD Aeonik', sans-serif;
             font-weight: 500;
-            position: absolute;
-            bottom: 40px;
-            left: 40px;
-            right: 40px;
+            margin-top: auto; /* Pushes footer to the bottom naturally without overlapping */
         }
         
         .footer-center {
@@ -307,14 +303,9 @@ html_template = """<!DOCTYPE html>
             }
             .page {
                 width: 100%;
-                height: 100vh;
+                min-height: 100vh;
                 padding: 10mm 15mm;
                 border-bottom: none; /* Remove screen separator when printing */
-            }
-            .footer {
-                bottom: 10mm;
-                left: 15mm;
-                right: 15mm;
             }
         }
     </style>
