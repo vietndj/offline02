@@ -7,66 +7,106 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='40' x='10' font-family='Arial' font-size='30' font-weight='bold' fill='black'%3EVI%3C/text%3E%3Ccircle cx='55' cy='30' r='10' fill='%23EF4444'/%3E%3Ctext y='80' x='10' font-family='Arial' font-size='30' font-weight='bold' fill='black'%3EDEO%3C/text%3E%3C/svg%3E">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        /* FD System Typography Setup */
+        @font-face { font-family: 'FD Aeonik Extended'; src: url('https://30ngayviral.fedu.vn/fonts/FDAeonikExtended-Bold.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+        @font-face { font-family: 'FD Aeonik'; src: url('https://30ngayviral.fedu.vn/fonts/FDAeonik-SemiBold.woff2') format('woff2'); font-weight: 600; font-display: swap; }
+        @font-face { font-family: 'Tiempos Text'; src: url('https://30ngayviral.fedu.vn/fonts/TiemposText-Regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+        
+        :root {
+            --font-display: 'FD Aeonik Extended', sans-serif;
+            --font-display-long: 'FD Aeonik', sans-serif;
+            --font-body: 'Tiempos Text', serif;
+        }
+
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: var(--font-body);
             background-color: #000;
             color: #f5f5f7;
             overflow-x: hidden;
         }
+
+        /* Apple-style nav items in FD Aeonik */
+        nav, .btn, .badge {
+            font-family: var(--font-display-long);
+        }
+
         .hero-title {
-            font-size: clamp(3rem, 8vw, 6rem);
-            line-height: 1.05;
-            letter-spacing: -0.015em;
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            line-height: 1.1;
+            letter-spacing: 0.02em;
             background: linear-gradient(90deg, #ffb6ff, #b344ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .section-heading {
-            font-size: clamp(2rem, 5vw, 4rem);
-            line-height: 1.1;
-            letter-spacing: -0.005em;
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 4vw, 3.5rem);
+            line-height: 1.15;
+            letter-spacing: 0.01em;
         }
+
         .chip-card {
             background-color: #151516;
             border-radius: 1.5rem;
         }
+
         .scrub-text {
             background: linear-gradient(90deg, #fff 0%, #333 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-size: 200% 100%;
         }
+
+        /* Text Utilities */
+        .txt-body { font-family: var(--font-body); font-size: 1.125rem; line-height: 1.6; }
+        .txt-display-long { font-family: var(--font-display-long); font-weight: 600; }
+        
+        .btn-primary {
+            display: inline-block;
+            background: #fff;
+            color: #000;
+            padding: 16px 32px;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            transform: scale(1.02);
+            background: #f0f0f0;
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-purple-500 selection:text-white">
     <!-- Navbar -->
     <nav class="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-12 text-xs font-semibold tracking-wide text-gray-300">
-                <a href="#" class="hover:text-white transition-colors"></a>
-                <a href="#" class="hover:text-white transition-colors">Mac</a>
-                <a href="#" class="hover:text-white transition-colors">iPad</a>
-                <a href="#" class="hover:text-white transition-colors">iPhone</a>
-                <a href="#" class="hover:text-white transition-colors">Watch</a>
-                <a href="#" class="hover:text-white transition-colors">AirPods</a>
-            </div>
-        </div>
-        <div class="border-t border-white/10 bg-black/90">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-14">
-                <h1 class="text-xl font-semibold">MacBook Pro</h1>
-                <button class="bg-white text-black px-4 py-1 rounded-full font-semibold text-sm hover:bg-gray-200 transition-colors">Mua</button>
-            </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-14">
+            <h1 class="text-xl font-semibold txt-display-long">MacBook Pro</h1>
+            <a href="#buy" class="bg-white text-black px-5 py-1.5 rounded-full font-semibold text-sm hover:bg-gray-200 transition-colors">Mua ngay</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="min-h-screen flex flex-col items-center justify-center pt-32 px-4 text-center relative overflow-hidden" id="hero">
-        <h2 class="text-xl md:text-2xl font-semibold text-gray-400 mb-4 opacity-0 hero-el">MacBook Pro</h2>
-        <h1 class="hero-title font-bold mb-6 opacity-0 hero-el">Không tưởng.<br>Không thể rời mắt.</h1>
-        <p class="text-lg md:text-2xl text-gray-400 max-w-2xl mx-auto font-medium opacity-0 hero-el">Với chip M4, M4 Pro và M4 Max. Đột phá sức mạnh AI. Màn hình Liquid Retina XDR rực rỡ.</p>
-        <div class="mt-12 opacity-0 hero-el scale-110" id="hero-img">
+        <span class="badge text-xs uppercase tracking-widest text-purple-400 mb-6 font-bold border border-purple-500/30 px-3 py-1 rounded-full opacity-0 hero-el">Thiết bị làm nghề</span>
+        <h1 class="hero-title mb-6 opacity-0 hero-el">CỖ MÁY CÀY TIỀN<br>THỰC CHIẾN.</h1>
+        <p class="txt-body text-gray-400 max-w-2xl mx-auto opacity-0 hero-el text-xl">
+            Anh em mình làm nghề, đâu có thời gian ngồi chờ máy load. M4, M4 Pro, M4 Max sinh ra là để bạn quật tung mọi tác vụ từ video 4K đến render 3D nặng trĩu mà không rớt một nhịp nào.
+        </p>
+        <div class="mt-8 opacity-0 hero-el">
+            <a href="#chips" class="btn-primary">Xem sức mạnh thực tế</a>
+        </div>
+        <div class="mt-16 opacity-0 hero-el scale-110" id="hero-img">
             <img src="https://www.apple.com/v/macbook-pro/ax/images/overview/hero/hero_intro_endframe__e6khcva4hkeq_large.jpg" alt="Macbook Pro" class="w-full max-w-5xl mx-auto rounded-3xl shadow-2xl">
         </div>
     </section>
@@ -74,25 +114,25 @@
     <!-- Chip Section -->
     <section class="py-32 px-4 relative z-10" id="chips">
         <div class="max-w-7xl mx-auto">
-            <h2 class="section-heading font-bold text-center mb-20 scrub-text" id="chip-title">Sức mạnh vượt ranh giới.</h2>
+            <h2 class="section-heading text-center mb-20 scrub-text" id="chip-title">TỐC ĐỘ BÀN THỜ.<br>THỜI GIAN LÀ VÀNG BẠC.</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- M4 -->
                 <div class="chip-card p-10 flex flex-col items-center text-center opacity-0 chip-item">
                     <img src="https://www.apple.com/v/macbook-pro/ax/images/overview/hero/icon_m4__b646c2l2j8c2_large.png" alt="M4" class="h-20 mb-6">
-                    <h3 class="text-2xl font-bold mb-3">M4</h3>
-                    <p class="text-gray-400 font-medium">Tốc độ kinh ngạc cho mọi tác vụ hàng ngày và quy trình sáng tạo chuyên nghiệp.</p>
+                    <h3 class="text-3xl font-bold mb-3 txt-display-long">M4</h3>
+                    <p class="txt-body text-gray-400">Đủ trâu bò để bạn cắm mặt dựng CapCut, làm thiết kế 2D và gõ code ầm ầm mà pin vẫn trụ đến cuối ngày.</p>
                 </div>
                 <!-- M4 Pro -->
                 <div class="chip-card p-10 flex flex-col items-center text-center opacity-0 chip-item">
                     <img src="https://www.apple.com/v/macbook-pro/ax/images/overview/hero/icon_m4_pro__ctffnuz15uqu_large.png" alt="M4 Pro" class="h-20 mb-6">
-                    <h3 class="text-2xl font-bold mb-3">M4 Pro</h3>
-                    <p class="text-gray-400 font-medium">Bứt phá hiệu năng cho đồ họa nặng, lập trình và xử lý dữ liệu khổng lồ.</p>
+                    <h3 class="text-3xl font-bold mb-3 txt-display-long">M4 Pro</h3>
+                    <p class="txt-body text-gray-400">Bạn làm production nặng đô? File Ae giật lag? Con chip này sẽ vả chết mọi sự chậm chạp, giữ đúng dòng tiền của bạn.</p>
                 </div>
                 <!-- M4 Max -->
                 <div class="chip-card p-10 flex flex-col items-center text-center opacity-0 chip-item">
                     <img src="https://www.apple.com/v/macbook-pro/ax/images/overview/hero/icon_m4_max__cyr653swd24y_large.png" alt="M4 Max" class="h-20 mb-6">
-                    <h3 class="text-2xl font-bold mb-3">M4 Max</h3>
-                    <p class="text-gray-400 font-medium">Giới hạn không tồn tại. Dựng hình 3D, xử lý video 8K chưa bao giờ mượt đến thế.</p>
+                    <h3 class="text-3xl font-bold mb-3 txt-display-long">M4 Max</h3>
+                    <p class="txt-body text-gray-400">Cỗ xe tăng hạng nặng. Render 3D, nhúng AI hay kéo chục layer video 8K, mọi thứ đều mượt như lụa.</p>
                 </div>
             </div>
         </div>
@@ -102,13 +142,23 @@
     <section class="py-32 bg-white text-black px-4" id="features">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
             <div class="feat-text opacity-0 x-left">
-                <h2 class="section-heading font-bold mb-6">Màn hình tốt nhất<br>từng có trên máy tính xách tay.</h2>
-                <p class="text-xl text-gray-600 font-medium">Liquid Retina XDR. Tỉ lệ tương phản 1.000.000:1. Độ sáng đỉnh 1600 nit. Mỗi chi tiết đều sống động đến ngỡ ngàng.</p>
+                <span class="badge text-xs uppercase tracking-widest text-red-500 mb-4 font-bold block">HIỂN THỊ</span>
+                <h2 class="section-heading mb-6">MẮT BẠN ĐÁNG GIÁ<br>HƠN TIỀN BẠC.</h2>
+                <p class="txt-body text-gray-600 mb-8">
+                    Anh em ngồi máy mười mấy tiếng mỗi ngày, màn hình lởm là hỏng hết mắt. Liquid Retina XDR mang lại màu sắc chuẩn xác nhất lúc bạn xuất file in ấn hoặc làm màu video. Đỡ tốn thời gian cãi nhau với khách vì sai màu.
+                </p>
+                <a href="#buy" class="btn-primary !bg-black !text-white hover:!bg-gray-800">Chốt đơn ngay</a>
             </div>
             <div class="feat-img opacity-0 x-right">
                 <img src="https://www.apple.com/v/macbook-pro/ax/images/overview/display/display_xdr__fbsn9v022we6_large.jpg" alt="Display" class="rounded-3xl shadow-2xl w-full">
             </div>
         </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section id="buy" class="py-32 px-4 text-center">
+        <h2 class="section-heading mb-8">ĐẦU TƯ CHO BẢN THÂN<br>LÀ ĐẦU TƯ LÃI NHẤT.</h2>
+        <a href="#" class="btn-primary">Chọn cấu hình của bạn</a>
     </section>
 
     <script>
@@ -120,7 +170,7 @@
             y: -20,
             opacity: 1,
             duration: 1,
-            stagger: 0.2,
+            stagger: 0.15,
             ease: "power3.out"
         })
         .to("#hero-img", {
