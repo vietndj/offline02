@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Hệ Điều Hành Video 7 Giờ - Apple Mac Style</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #000000;
+    --text: #f5f5f7;
+    --text-muted: #86868b;
+    --accent: #2997ff;
+    --p1: 0; --p2: 0; --p3: 0; --p4: 0;
+  }
+  
+  body, html {
+    margin: 0; padding: 0; 
+    background: var(--bg); color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    overscroll-behavior-y: none;
+    background-color: #000;
+  }
+  
+  h1, h2, h3, p { margin: 0; }
+
+  /* Mạch ngầm lưới nền (Grid background) */
+  .grid-bg {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background-image: 
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 0;
+    pointer-events: none;
+    mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+    -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+  }
+
+  /* Bộ khung cuộn chính */
+  .scrolly-container { position: relative; width: 100%; z-index: 10; }
+
+  /* LỚP NỀN CỐ ĐỊNH (APPLE STICKY CANVAS) */
+  .sticky-canvas {
+    position: sticky; top: 0; left: 0; 
+    width: 100vw; height: 100vh;
+    overflow: hidden; 
+    display: flex; align-items: center; justify-content: center;
+    perspective: 1200px; /* Không gian 3D */
+    z-index: 1;
+  }
+
+  /* Khối ánh sáng trung tâm */
+  .glow-center {
+    position: absolute; width: 80vw; height: 80vw;
+    background: radial-gradient(circle, rgba(41,151,255,0.15) 0%, rgba(0,0,0,0) 60%);
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    opacity: calc(0.3 + var(--p3) * 0.7); /* Sáng rực ở nhịp 3 */
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* BỘ VI XỬ LÝ (CHIP/OS CỐT LÕI) - 3D TRANSFORM THEO SCROLL */
+  .os-core {
+    position: relative; z-index: 5;
+    width: 480px; height: 320px;
+    background: rgba(20, 20, 22, 0.4);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 40px;
+    box-shadow: 
+      0 40px 100px rgba(0,0,0,0.8), 
+      inset 0 1px 1px rgba(255,255,255,0.3),
+      inset 0 0 40px rgba(255,255,255,0.05);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    transform-style: preserve-3d;
+    
+    /* MA THUẬT NỘI SUY APPLE: Xoay 3D tuyến tính theo tỷ lệ phần trăm cuộn */
+    /* Ban đầu nghiêng 3D (như MacBook), cuộn P1 -> Lật thẳng mặt, Cuộn P2 -> Tách lớp, Cuộn P3 -> Phóng to */
+    transform:
+      rotateX(calc(50deg - var(--p1) * 50deg))
+      rotateY(calc(0deg + var(--p2) * -15deg))
+      rotateZ(calc(-20deg + var(--p1) * 20deg))
+      scale(calc(1 + var(--p3) * 0.2 + var(--p4) * 0.5))
+      translateZ(calc(var(--p4) * 300px));
+      
+    transition: transform 0.1s linear;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* Logo OS giữa Chip */
+  .os-logo {
+    font-size: 32px; font-weight: 800; letter-spacing: -1px;
+    background: linear-gradient(180deg, #fff, #888);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    transform: translateZ(20px); /* Nổi 3D lên mặt kính */
+    opacity: calc(1 - var(--p2) * 0.5); /* Mờ đi ở nhịp 2 để nhường chỗ cho 2 trụ cột */
+  }
+
+  /* TRỤ CỘT 1: THỊ GIÁC (Tách lớp bay lên) */
+  .layer-visual {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    border-radius: 40px;
+    border: 2px solid #0071e3;
+    background: rgba(0, 113, 227, 0.05);
+    /* Tách bay lên ở P2, sang trái ở P3 */
+    transform: 
+      translateZ(calc(var(--p2) * 80px))
+      translateX(calc(var(--p3) * -120px));
+    opacity: calc(var(--p2));
+    transition: transform 0.1s linear, opacity 0.1s linear;
+    display: flex; align-items: flex-start; justify-content: flex-start;
+    padding: 30px; box-sizing: border-box;
+  }
+  .layer-visual .tag { color: #0071e3; font-weight: 700; letter-spacing: 1px; font-size: 14px; }
+
+  /* TRỤ CỘT 2: NĂNG LỰC (Tách lớp chìm xuống) */
+  .layer-auth {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    border-radius: 40px;
+    border: 2px solid #f59e0b;
+    background: rgba(245, 158, 11, 0.05);
+    /* Chìm xuống ở P2, sang phải ở P3 */
+    transform: 
+      translateZ(calc(var(--p2) * -80px))
+      translateX(calc(var(--p3) * 120px));
+    opacity: calc(var(--p2));
+    transition: transform 0.1s linear, opacity 0.1s linear;
+    display: flex; align-items: flex-end; justify-content: flex-end;
+    padding: 30px; box-sizing: border-box;
+  }
+  .layer-auth .tag { color: #f59e0b; font-weight: 700; letter-spacing: 1px; font-size: 14px; }
+
+  /* LỚP ĐƯỜNG TRUYỀN DATA (Sáng lên ở P4) */
+  .data-streams {
+    position: absolute; width: 150%; height: 2px; background: linear-gradient(90deg, transparent, #fff, transparent);
+    top: 50%; left: -25%; transform: scaleX(var(--p4));
+    opacity: var(--p4);
+    box-shadow: 0 0 20px #fff;
+  }
+
+  /* LỚP TEXT CUỘN (SCROLL TRACK) */
+  .scroll-track {
+    position: relative; z-index: 20;
+    width: 100%;
+    padding-top: 80vh; 
+    padding-bottom: 50vh;
+  }
+
+  .step {
+    height: 120vh; /* Không gian cuộn dài để hiệu ứng mượt */
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    pointer-events: none; /* Xuyên click xuống dưới */
+  }
+
+  /* Thẻ nội dung - Apple Glassmorphism */
+  .step-content {
+    background: rgba(30, 30, 32, 0.65);
+    backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
+    padding: 48px; border-radius: 32px;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    max-width: 560px; text-align: center;
+    pointer-events: auto;
+    
+    /* Hiệu ứng trượt và rõ dần (Fade up) được tính toán siêu chính xác theo vị trí cuộn */
+    transform: translateY(calc(80px - 80px * var(--local-progress)));
+    opacity: var(--local-progress);
+    transition: opacity 0.1s linear, transform 0.1s linear;
+  }
+
+  .step-content h2 { 
+    font-size: 40px; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 16px; 
+    background: linear-gradient(180deg, #fff 0%, #a1a1a6 100%); 
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .step-content p { 
+    font-size: 21px; line-height: 1.5; color: var(--text-muted); font-weight: 500;
+  }
+
+  /* Màn Intro */
+  .intro {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100vh;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    z-index: 30; pointer-events: none;
+    opacity: calc(1 - var(--p1) * 3); /* Biến mất rất nhanh khi bắt đầu cuộn */
+  }
+  .intro h1 { font-size: 72px; font-weight: 800; letter-spacing: -0.05em; text-align: center; }
+  .intro p { font-size: 24px; color: var(--text-muted); margin-top: 16px; font-weight: 500; }
+  
+  .scroll-indicator {
+    position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+    font-size: 13px; font-weight: 600; letter-spacing: 3px; color: #666;
+    animation: pulse 2s infinite; text-transform: uppercase;
+  }
+  @keyframes pulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
+</style>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+
+<div class="scrolly-container">
+  
+  <!-- LỚP NỀN 3D CỐ ĐỊNH -->
+  <div class="sticky-canvas">
+    <div class="glow-center"></div>
+
+    <div class="intro">
+      <h1>Video OS.</h1>
+      <p>Hệ điều hành chuyên môn 7 giờ.</p>
+      <div class="scroll-indicator">Cuộn để khám phá</div>
+    </div>
+
+    <!-- KHỐI CHIP 3D TƯƠNG TÁC -->
+    <div class="os-core">
+      <div class="os-logo">CI SYSTEM</div>
+      
+      <!-- Lớp 1 tách ra -->
+      <div class="layer-visual">
+        <div class="tag">70% THỊ GIÁC</div>
+      </div>
+      
+      <!-- Lớp 2 tách ra -->
+      <div class="layer-auth">
+        <div class="tag">30% NĂNG LỰC</div>
+      </div>
+
+      <!-- Tia chớp tốc độ -->
+      <div class="data-streams"></div>
+    </div>
+  </div>
+
+  <!-- LỚP CUỘN KIỂM SOÁT TIẾN TRÌNH (BỘ NỘI SUY CSS) -->
+  <div class="scroll-track">
+    <div class="step" data-index="1">
+      <div class="step-content">
+        <h2>0h - 2h: Thỏa Mãn Thị Giác</h2>
+        <p>Bóc tách 3 giây đầu tiên (Hook) và băm nhỏ nhịp điệu (Micro-beats). Khóa chặt điểm nhìn của khán giả, loại bỏ hoàn toàn các khung hình chết.</p>
+      </div>
+    </div>
+    
+    <div class="step" data-index="2">
+      <div class="step-content">
+        <h2>2h - 4h: Phân Tách 2 Trụ Cột</h2>
+        <p>Giải phẫu lõi chuyên môn bằng ma trận 4 tầng nhận thức. Phá vỡ vỏ bọc "văn mẫu AI" rỗng tuếch, nhúng trực tiếp bằng chứng và dữ liệu cá nhân hóa.</p>
+      </div>
+    </div>
+    
+    <div class="step" data-index="3">
+      <div class="step-content">
+        <h2>4h - 6h: Mở Rộng Hệ Thống</h2>
+        <p>2 trụ cột kết hợp tạo ra cỗ máy dựng video siêu tốc. Đồng bộ hóa timeline chuẩn, tự động bẻ 2 dòng phụ đề tiếng Việt chỉ bằng 1 cú click chuột.</p>
+      </div>
+    </div>
+    
+    <div class="step" data-index="4">
+      <div class="step-content">
+        <h2>6h - 7h: Khai Phóng</h2>
+        <p>Tự động hóa hoàn toàn phễu bán hàng (Landing Page) và hệ thống thu tiền VietQR 24/7. Bạn chỉ cần sáng tạo, hệ thống tự lo phần còn lại.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const steps = document.querySelectorAll('.step');
+  const stepContents = document.querySelectorAll('.step-content');
+  const root = document.documentElement;
+
+  // Ngăn Chrome nhớ vị trí cuộn cũ khi load lại trang
+  if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
+  window.scrollTo(0, 0);
+
+  // Động cơ nội suy 120fps (Zero GSAP overhead)
+  function renderFrame() {
+    const vh = window.innerHeight;
+    
+    steps.forEach((step, index) => {
+      const rect = step.getBoundingClientRect();
+      
+      // 1. LOCAL PROGRESS: Dùng để tính toán độ mờ (opacity) và vị trí (translateY) của tấm thẻ chữ
+      // Khi đỉnh tấm thẻ cách đáy màn hình 80% (bắt đầu hiện) -> lên tới 30% (hiện rõ 100%)
+      let localProgress = 0;
+      const startPoint = vh * 0.85; 
+      const endPoint = vh * 0.35;
+      
+      if (rect.top <= startPoint && rect.bottom >= 0) {
+        localProgress = (startPoint - rect.top) / (startPoint - endPoint);
+        localProgress = Math.max(0, Math.min(1, localProgress));
+      } else if (rect.top > startPoint) {
+        localProgress = 0;
+      } else {
+        localProgress = 1;
+      }
+      
+      stepContents[index].style.setProperty('--local-progress', localProgress);
+
+      // 2. GLOBAL PROGRESS: Dùng để điều khiển khối 3D đằng sau
+      // Khối 3D chuyển động liên tục và từ từ suốt hành trình thẻ chữ đi qua màn hình
+      let globalProgress = (vh - rect.top) / vh;
+      globalProgress = Math.max(0, Math.min(1, globalProgress));
+      
+      // Sử dụng easing (Cubic Ease Out) để cảm giác xoay 3D có độ nặng và mượt như Apple
+      const easeOut = 1 - Math.pow(1 - globalProgress, 3);
+      root.style.setProperty(`--p${index + 1}`, easeOut);
+    });
+  }
+
+  // Lắng nghe sự kiện scroll và bám vào VSync của màn hình (RequestAnimationFrame)
+  window.addEventListener('scroll', () => {
+    requestAnimationFrame(renderFrame);
+  }, { passive: true });
+
+  // Khởi chạy frame đầu tiên
+  renderFrame();
+</script>
+</body>
+</html>
