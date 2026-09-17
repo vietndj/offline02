@@ -58,45 +58,45 @@ LESSONS = [
                 "id": "1", "title": "CẢNH 1: BÓC TRẦN HÀNH VI LAU KỆ", "dur": "4 GIÂY",
                 "voice": "Cái kệ hàng này sáng nay lau đi lau lại đến lần thứ ba rồi... nhìn qua thì tưởng chăm chỉ, nhưng thực ra là đang sốt ruột vì không có khách.",
                 "beats": [
-                    ("1.1 Đầu Cảnh", "Trung toàn (Medium Wide Shot)", "Ngang tầm mắt 0° (Eye-level)", "Đứng cạnh chiếc bàn gỗ dài tự nhiên trong phòng học Greenhub, tay cầm khăn lau chậm rãi trên mặt bàn, nắng sớm xiên qua khung kính lớn.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene1_beat1.jpg?v=20260913_greenhub_v1", "Thiết lập không gian phòng học Greenhub mộc mạc (bàn gỗ tự nhiên, trần nan gỗ, ánh nắng sớm). Phong thái điềm đạm nhưng cô đơn."),
-                    ("1.2 Cao Trào", "Cận cảnh (Close-Up / Insert)", "Lệch trục 45° • Góc cao 45°", "Bàn tay cầm khăn miết đi miết lại trên từng thớ vân gỗ tự nhiên, động tác máy móc lặp đi lặp lại trong vô thức.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene1_beat2.jpg?v=20260913_greenhub_v1", "Đổi cỡ cảnh từ Trung toàn sang Cận cảnh và lệch trục 45° tránh jump-cut. Đặc tả chi tiết hành vi ngụy trang: làm việc lặp lại để che giấu nỗi sốt ruột bên trong."),
-                    ("1.3 Mồi Chuyển", "Trung cận (Medium Close-Up)", "Lệch trục 30° • Góc nghiêng 3/4", "Dừng tay lau, đặt hờ chiếc khăn trên mặt bàn, mắt ngước nhìn ra ngoài cửa kính lớn, nét mặt trăn trở suy nghĩ.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene1_beat3.jpg?v=20260913_greenhub_v1", "Chuyển giao cảm xúc từ hành vi cơ học sang trạng thái đối diện với thực tế. Ánh mắt hướng ra xa làm mồi nối (match-cut) sang Cảnh 2 nhìn đường phố và mở app.")
+                    ("1.1 Đầu Cảnh", "Trung toàn (Medium Wide Shot)", "Ngang tầm mắt 0° (Eye-level)", "Đứng cạnh chiếc bàn gỗ dài tự nhiên trong phòng học, tay cầm khăn lau chậm rãi trên mặt bàn, nắng sớm xiên qua khung kính lớn.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene1_beat1.jpg?v=20260913_fedu_face_clone_v3", "Thiết lập không gian phòng học mộc mạc (bàn gỗ tự nhiên, ánh nắng sớm). Phong thái điềm đạm nhưng cô đơn."),
+                    ("1.2 Cao Trào", "Cận cảnh (Close-Up / Insert)", "Lệch trục 45° • Góc cao 45°", "Bàn tay cầm khăn miết đi miết lại trên từng thớ vân gỗ tự nhiên, động tác máy móc lặp đi lặp lại trong vô thức.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene1_beat2.jpg?v=20260913_fedu_face_clone_v3", "Đổi cỡ cảnh từ Trung toàn sang Cận cảnh và lệch trục 45° tránh jump-cut. Đặc tả chi tiết hành vi ngụy trang: lau bàn để che giấu nỗi sốt ruột bên trong."),
+                    ("1.3 Mồi Chuyển", "Trung cận (Medium Close-Up)", "Lệch trục 30° • Góc nghiêng 3/4", "Dừng tay lau, đặt hờ chiếc khăn trên mặt bàn, mắt ngước nhìn ra ngoài cửa kính lớn, nét mặt trăn trở suy nghĩ.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene1_beat3.jpg?v=20260913_fedu_face_clone_v3", "Chuyển giao cảm xúc từ hành vi cơ học sang trạng thái đối diện với thực tế. Ánh mắt hướng ra xa làm mồi nối (match-cut) sang Cảnh 2 nhìn đường phố và mở app.")
                 ]
             },
             {
                 "id": "2", "title": "CẢNH 2: ÁP LỰC 20 TRIỆU TIỀN NHÀ", "dur": "4 GIÂY",
                 "voice": "Ngồi nhìn ra đường thấy người ta đi lại nườm nượp, mà không ai rẽ vào. Mở app ngân hàng ra, tin nhắn nhắc nộp 20 triệu tiền nhà tháng tới đã nằm sẵn ở đó.",
                 "beats": [
-                    ("2.1 Đầu Cảnh", "Qua vai (OTS Medium Shot)", "Lệch trục 45° • Góc cao 25° sau vai", "Ngồi tại bàn gỗ mộc, cầm smartphone ngang ngực, màn hình điện thoại vừa sáng lên hiển thị thông báo tài khoản.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene2_beat1.jpg?v=20260913_greenhub_v1", "Nối cảnh từ ánh mắt nhìn xa ở Cảnh 1 sang tư thế ngồi xem điện thoại. Góc qua vai tạo tính chân thực của người làm chủ ngồi kiểm tra áp lực tài chính."),
-                    ("2.2 Cao Trào", "Đặc tả cực cận (Macro / ECU)", "Lệch trục 45° • Cực cận Top-down 70°", "Đặc tả ngón tay cái trên màn hình smartphone sáng rực thông báo nhắc nợ: 'Tiền nhà tháng này 20,000,000 VND'.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene2_beat2.jpg?v=20260913_greenhub_v1", "Nhảy cỡ cảnh từ OTS sang Cực cận Macro để đẩy xung đột lên đỉnh điểm. Chi tiết áp lực tiền mặt bằng 20 triệu đập vào mắt người xem."),
-                    ("2.3 Mồi Chuyển", "Trung cảnh (Medium Shot)", "Lệch trục 55° • Góc thấp 15°", "Đặt điện thoại xuống mặt bàn gỗ, một tay chống cằm/day thái dương, ánh mắt trĩu nặng nhìn xa xăm ra ngoài cửa kính.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene2_beat3.jpg?v=20260913_greenhub_v1", "Tương phản giữa sự nhộn nhịp bên ngoài và sự tĩnh lặng, cô đơn trong phòng học. Cử chỉ đặt máy và ánh mắt làm mồi nối cho hành động đứng dậy ở Cảnh 3.")
+                    ("2.1 Đầu Cảnh", "Qua vai (OTS Medium Shot)", "Lệch trục 45° • Góc cao 25° sau vai", "Ngồi tại bàn gỗ mộc nhìn về phía lớp học, quay từ góc cao sau lưng bao quát không gian học tập.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene2_beat1.jpg?v=20260913_fedu_face_clone_v3", "Nối cảnh từ ánh mắt nhìn xa ở Cảnh 1 sang tư thế ngồi xem điện thoại. Góc qua vai tạo tính chân thực của người làm chủ ngồi kiểm tra áp lực tài chính."),
+                    ("2.2 Cao Trào", "Trung cận qua vai (OTS Medium Close)", "Lệch trục 30° • Góc qua vai trái 30°", "Góc trung cận qua vai trái, tay vừa cầm sổ bài tập vừa kín đáo nhìn xuống chiếc smartphone trong lòng bàn tay.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene2_beat2.jpg?v=20260913_fedu_face_clone_v3", "Nhảy cỡ cảnh từ OTS toàn sang Trung cận vai. Hé lộ sự phân tâm và bất an ngấm ngầm giữa không khí lớp học."),
+                    ("2.3 Mồi Chuyển", "Cận cảnh tay & điện thoại (Tight Desk Shot)", "Lệch trục 45° • Góc ngang mặt bàn", "Bàn tay với cọc tay áo blazer xám than nhấc chiếc điện thoại lên khỏi mặt bàn cạnh cuốn sổ ghi chép.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene2_beat3.jpg?v=20260913_fedu_face_clone_v3", "Động tác nhấc máy lên làm mồi nối hoàn hảo sang giao diện màn hình Cảnh 3.")
                 ]
             },
             {
-                "id": "3", "title": "CẢNH 3: NỖI OAN ỨC CỦA NGƯỜI LÀM KỸ", "dur": "5 GIÂY",
+                "id": "3", "title": "CẢNH 3: DOANH THU LAO DỐC & RUỘT GAN NHƯ LỬA ĐỐT", "dur": "5 GIÂY",
                 "voice": "Nhiều lúc tự hỏi: Hàng mình làm kỹ, nguồn gốc đàng hoàng, sao người ta cứ lên mạng mua mấy đồ rẻ tiền trôi nổi? Ngồi nghĩ mãi mới ngộ ra: Người ta có biết mình là ai đâu mà mua.",
                 "beats": [
-                    ("3.1 Đầu Cảnh", "Toàn cảnh (Full Wide Shot)", "Lệch trục 45° • Toàn cảnh ngang tầm mắt", "Đứng dậy rời khỏi bàn gỗ, bước về phía khung kính lớn sát trần tràn ngập ánh sáng, hai tay đút nhẹ túi quần.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene3_beat1.jpg?v=20260913_greenhub_v1", "Mở rộng không gian hình ảnh, tạo nhịp thở thư thái sau chuỗi cảnh ngồi bó hẹp. Nhịp bước chân phản ánh luồng suy nghĩ trăn trở."),
-                    ("3.2 Cao Trào", "Cận cảnh góc nghiêng (Close-Up Profile)", "Lệch trục 45° • Góc nghiêng 45°", "Đứng tựa gần vách kính, ánh mắt nhìn ra những tán cây xanh ngoài trời, biểu cảm chiêm nghiệm sâu sắc.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene3_beat2.jpg?v=20260913_greenhub_v1", "Chạm vào khoảnh khắc tỉnh thức đắt giá: Khách hàng mua online không phải vì hàng trôi nổi tốt hơn, mà vì đối thủ biết xuất hiện còn mình thì vô hình."),
-                    ("3.3 Mồi Chuyển", "Trung cận trực diện (Medium Close-Up)", "Lệch trục 45° • Ngang tầm mắt 0°", "Dứt khoát quay người 180 độ đối diện camera, ánh mắt kiên định bừng sáng nhận ra giải pháp: 'Không thể ngồi chờ nữa'.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene3_beat3.jpg?v=20260913_greenhub_v1", "Cú xoay người dứt khoát đổi trục 45° đánh dấu bước ngoặt tư duy: từ bi lụy thụ động sang quyết tâm chủ động. Mồi nối thẳng sang Cảnh 4.")
+                    ("3.1 Đầu Cảnh", "Cận cảnh màn hình POV (Direct UI Close-Up)", "Trực diện 90° • Góc nhìn POV từ trên xuống", "Màn hình điện thoại POV hiển thị trang Analytics: Biểu đồ đỏ cắm dốc, Doanh thu hôm nay: 0 đ (-90%), Đơn hàng: 0.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene3_beat1.jpg?v=20260913_fedu_face_clone_v3", "Bằng chứng số liệu trực quan gây sốc: Cửa hàng hoàn toàn vắng bóng khách mới, doanh thu chạm đáy."),
+                    ("3.2 Cao Trào", "Đặc tả cực cận UI & Ngón tay (Extreme Close-Up UI)", "Lệch trục 45° • Góc nghiêng 45° vào màn hình", "Đặc tả ngón tay cái lướt chậm trong bất lực trên màn hình hiển thị con số đỏ rực: -90%, Doanh thu 0 đ.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene3_beat2.jpg?v=20260913_fedu_face_clone_v3", "Khắc họa cảm giác 'ruột gan như lửa đốt' khi nhìn vào thực tế nghiệt ngã của việc vắng khách."),
+                    ("3.3 Mồi Chuyển", "Trung cận căng thẳng (Medium Close-Up Tension)", "Trực diện • Ngang tầm mắt 0°", "Bàn tay siết chặt thành nắm đấm trên mặt bàn gỗ, tay kia úp điện thoại, nét mặt nhíu chặt suy tư lo âu.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene3_beat3.jpg?v=20260913_fedu_face_clone_v3", "Nắm đấm siết chặt thể hiện sự dồn nén cảm xúc, ánh mắt chuẩn bị hướng ra ngoài cửa sổ ở Cảnh 4.")
                 ]
             },
             {
-                "id": "4", "title": "CẢNH 4: ĐIỂM NGHẼN THỂ DIỆN & QUYẾT ĐỊNH", "dur": "5 GIÂY",
+                "id": "4", "title": "CẢNH 4: ÁP LỰC TIỀN MẶT BẰNG & ĐIỂM NGHẼN THỂ DIỆN", "dur": "5 GIÂY",
                 "voice": "Biết là phải lên mạng làm video để kéo khách, nhưng tự trọng người làm nghề lại kéo chân lại. Ngại người quen thấy, sợ bạn bè bảo: Dạo này ế ẩm hay sao mà phải lên mạng làm trò.",
                 "beats": [
-                    ("4.1 Đầu Cảnh", "Trung toàn (Medium Wide Shot)", "Lệch trục 45° • Góc thấp 15°", "Bước nhanh trở lại chiếc bàn gỗ mộc, đưa tay phải dứt khoát chạm vào chiếc điện thoại đặt trên mặt bàn.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene4_beat1.jpg?v=20260913_greenhub_v1", "Nối tiếp động tác bước chân từ Beat 3.3. Góc máy thấp tạo cảm giác hành động mạnh mẽ, quyết đoán, sẵn sàng đối mặt với rào cản tâm lý."),
-                    ("4.2 Cao Trào", "Cận cảnh A-Roll (Close-Up Eye-Level)", "Lệch trục 45° • Ngang tầm mắt trực diện", "Cầm smartphone ngang ngực, ánh mắt nhìn thẳng ống kính camera với phong thái kiên định, bắt đầu nói câu thoại bẻ gãy rào cản thể diện.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene4_beat2.jpg?v=20260913_greenhub_v1", "Nhảy cỡ cảnh từ Trung toàn sang Cận cảnh A-Roll. Giao tiếp mắt 100% với khán giả, bộc lộ sự giằng xé thể diện nhưng đầy quyết đoán."),
-                    ("4.3 Mồi Chuyển", "Qua vai (OTS Close-Up)", "Lệch trục 30° • Sau vai phải 30°", "Máy quay sau vai nhìn vào màn hình điện thoại đang bật ứng dụng camera 9:16, ngón tay cái đặt lơ lửng ngay trên nút đỏ Ghi hình (REC).", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene4_beat3.jpg?v=20260913_greenhub_v1", "Cú cắt mồi hoàn hảo: Ngón tay chuẩn bị chạm nút ghi hình tạo suspense tột đỉnh, chuẩn bị match-cut sang Cảnh 5 khi video chính thức bắt đầu.")
+                    ("4.1 Đầu Cảnh", "Cận góc nghiêng cửa sổ (Side Profile Close-Up)", "Lệch trục 90° • Góc nghiêng đón nắng cửa sổ", "Ngồi cạnh cửa sổ kính lớn, tay tựa cằm đăm chiêu nhìn ra xa, vệt nắng xiên làm nổi bật đường nét suy tư trĩu nặng.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene4_beat1.jpg?v=20260913_fedu_face_clone_v3", "Khung cảnh lắng đọng, người xem cảm nhận trọn vẹn gánh nặng chi phí cố định 20 triệu/tháng."),
+                    ("4.2 Cao Trào", "Đặc tả cận ánh mắt (Insight Eye Close-Up)", "Lệch trục 45° • Cận cảnh 3/4 khuôn mặt", "Ánh mắt trĩu nặng âu lo, vầng trán nhăn lại sau chuỗi ngày cày cuốc từ sáng đến đêm mà không dám nghỉ ngày nào.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene4_beat2.jpg?v=20260913_fedu_face_clone_v3", "Sức nặng cảm xúc đạt đỉnh: Bỏ việc văn phòng tưởng tự do nhưng bị giam cầm trong áp lực sinh tồn."),
+                    ("4.3 Mồi Chuyển", "Trung cảnh quay người (Medium Turnaround)", "Lệch trục 45° • Góc ngang tầm mắt 3/4", "Dứt khoát quay đầu khỏi khung cửa sổ, ngồi thẳng lưng nhìn về phía trước với ánh mắt kiên định, chuẩn bị hành động.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene4_beat3.jpg?v=20260913_fedu_face_clone_v3", "Chuyển biến tâm lý: Từ trầm tư bế tắc sang quyết định hành động dứt khoát, mồi cho Cảnh 5.")
                 ]
             },
             {
                 "id": "5", "title": "CẢNH 5: BẬT MÁY QUAY & HÀNH ĐỘNG THỰC TẾ", "dur": "4 GIÂY (CHỐT HẠ)",
                 "voice": "Nhưng nghĩ lại, cái sĩ diện hão có nuôi sống được cửa hàng không? Mình bán hàng thật việc thật chứ có lừa ai đâu mà ngại. Mở máy lên, nói đúng chuyện nghề của mình!",
                 "beats": [
-                    ("5.1 Đầu Cảnh", "Cận cảnh Selfie POV (Selfie POV Close-Up)", "Lệch trục 45° • Selfie POV góc cao 15°", "Cầm máy selfie giơ cao, nhìn thẳng vào ống kính điện thoại với nụ cười mộc mạc, bắt đầu cất giọng chia sẻ câu chuyện thật của mình.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene5_beat1.jpg?v=20260913_greenhub_v1", "Đổi vai trò góc máy: Chuyển từ góc nhìn người thứ ba (OTS) sang chính màn hình camera của nhân vật. Tự nhiên, sống động, xóa nhòa khoảng cách với người xem."),
-                    ("5.2 Cao Trào", "Trung toàn động (Medium Wide Handheld)", "Lệch trục 45° • Góc nghiêng 30° theo bước chân", "Vừa cầm máy quay vừa bước đi tự tin trong phòng học Greenhub, một tay đưa ra giới thiệu không gian xưởng gỗ tràn ngập ánh sáng.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene5_beat2.jpg?v=20260913_greenhub_v1", "Cú máy động theo bước chân nhân vật: Năng lượng tràn đầy, giải phóng mọi ức chế tâm lý. Khẳng định vị thế người làm chủ tự tin, thực chiến."),
-                    ("5.3 Mồi Chuyển", "Cận cảnh 3/4 (Close-Up 3/4 Profile)", "Lệch trục 45° • Cận cảnh góc nghiêng 45°", "Hạ điện thoại xuống ngang ngực nhìn lại đoạn clip vừa quay xong, nụ cười nhẹ nhõm, tự hào và tràn đầy niềm tin dưới ánh nắng sớm rực rỡ.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene5_beat3.jpg?v=20260913_greenhub_v1", "Đóng băng cảm xúc tích cực ở khoảnh khắc hoàn thành: Vượt qua nỗi sợ để hành động. Kêu gọi hành động ngầm: Hãy cầm máy lên và quay ngay hôm nay!")
+                    ("5.1 Đầu Cảnh", "Trung cận trực diện (Frontal Medium Close-Up)", "Trực diện 0° • Ngang tầm mắt trung tâm", "Gương mặt anh Việt nằm chính giữa khung hình, ánh mắt chân thành khóa thẳng ống kính máy quay với phong thái điềm đạm.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene5_beat1.jpg?v=20260913_fedu_face_clone_v3", "Tạo kết nối thị giác 1-to-1 chân thành, phong thái người làm chủ điềm tĩnh sau khi đã thấu suốt."),
+                    ("5.2 Cao Trào", "Cận trực diện truyền cảm hứng (Passionate Conviction)", "Trực diện hất nhẹ 5° • Cận cảnh biểu cảm", "Cận cảnh gương mặt dứt khoát, ánh mắt kiên định, miệng nói câu chốt: 'Cái gì giúp mình duy trì cửa hàng thì phải bắt tay vào học thôi!'.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene5_beat2.jpg?v=20260913_fedu_face_clone_v3", "Câu chốt mang tính thức tỉnh: Học không phải vì phong trào, mà học là vũ khí duy nhất để cứu sống cửa hàng."),
+                    ("5.3 Mồi Chuyển", "Trung cận kết thúc (Medium Close-Up Outro Frame)", "Trực diện 0° • Ngang tầm mắt", "Anh Việt mỉm cười nhẹ tự tin, ánh mắt ấm áp kiên định nhìn thẳng camera, khoảng trống bên dưới để chốt thông điệp.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_02_tien_mat_bang_va_cua_hang_vang_khach/assets/frames/scene5_beat3.jpg?v=20260913_fedu_face_clone_v3", "Nụ cười chân thực gieo niềm tin trọn vẹn, khép lại video với năng lượng tích cực và quyết tâm hành động.")
                 ]
             }
         ],
@@ -160,53 +160,157 @@ LESSONS = [
         "hook_new_note": "Hook đảo ngược hành vi: Bóc trần thói quen lướt trộm video đối thủ",
         "hook_new_critique": "• <b>Đánh trúng hành vi vô thức:</b> Bất kỳ ai kinh doanh cũng từng bấm vào xem kênh đối thủ rồi tắt vội vì khó chịu trong lòng.<br>• <b>Bóc trần cái cớ 'nghiên cứu thị trường':</b> Vạch trần sự thật ngượng ngùng khiến người xem giật mình vì bị đọc trúng suy nghĩ thầm kín.<br>• <b>Tạo vị thế đĩnh đạc:</b> Dám thừa nhận sự bất an của mình một cách thẳng thắn giúp video lập tức có được sự tôn trọng và đồng cảm tuyệt đối.",
         
-        "scenes": [
-            {
-                "id": "1", "title": "CẢNH 1: BÓC TRẦN THÓI QUEN LƯỚT ĐỐI THỦ", "dur": "4 GIÂY",
-                "voice": "Cứ bấm vào xem video của đối thủ rồi lại tắt đi... bên ngoài thì bảo là nghiên cứu thị trường, nhưng bên trong là cảm giác bất an của một người sợ bị tụt hậu.",
-                "beats": [
-                    ("1.1 Đầu Cảnh", "Trung cảnh ngang tầm mắt", "Ngồi ở bàn gỗ phòng học Greenhub, cầm điện thoại lướt xem màn hình với vẻ mặt đăm chiêu.", "assets/greenhub/IMG_7796.JPG", "Góc quay chân thực mô tả sự chăm chú nhưng căng thẳng của người đang xem đối thủ."),
-                    ("1.2 Cao Trào", "Đặc tả ngón tay vuốt tắt", "Ngón tay bấm nút tắt màn hình điện thoại dứt khoát, đặt mạnh xuống mặt bàn gỗ.", "assets/greenhub/IMG_7799.JPG", "Hành động thể hiện cảm xúc giằng xé khó chịu khi nhìn đối thủ triệu view."),
-                    ("1.3 Mồi Chuyển", "Cận cảnh ánh mắt suy tư", "Ngả người ra sau ghế, ánh mắt nhìn thẳng vào khoảng không gian phòng học vắng vẻ.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "Mồi chuyển sang trạng thái đối thoại nội tâm của người sau tuổi 30.")
-                ]
-            },
-            {
-                "id": "2", "title": "CẢNH 2: NỖI CHỘT DẠ CỦA NGƯỜI CÓ NGHỀ", "dur": "4 GIÂY",
-                "voice": "Nhìn mấy bạn trẻ mới vào nghề nói năng trôi chảy, hàng triệu lượt xem, đơn hàng nườm nượp... trong lòng vừa không phục, vừa thấy chột dạ.",
-                "beats": [
-                    ("2.1 Đầu Cảnh", "Góc nghiêng 45° qua vai", "Góc nhìn qua vai thấy cuốn sổ tay ghi chép chuyên môn dày cộp đặt cạnh điện thoại.", "assets/greenhub/IMG_7799.JPG", "Tương phản giữa giá trị tri thức tích lũy nhiều năm và sự bùng nổ của video ngắn."),
-                    ("2.2 Cao Trào", "Trung cận trực diện", "Khuôn mặt đĩnh đạc, cái nhíu mày nhẹ thể hiện sự trăn trở của một người có tự trọng nghề nghiệp.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "Diễn xuất tinh tế, không cay cú nông nổi mà là sự suy tư sâu sắc."),
-                    ("2.3 Mồi Chuyển", "Góc nhìn từ xa", "Đứng dậy rời bàn học, bước ra khu vực sảnh kính Greenhub ngập tràn ánh sáng tự nhiên.", "assets/greenhub/IMG_7812.JPG", "Mở rộng không gian hình ảnh để đón nhận góc nhìn mới.")
-                ]
-            },
-            {
-                "id": "3", "title": "CẢNH 3: BẪY TÂM LÝ 'HỮU XẠ TỰ NHIÊN HƯƠNG'", "dur": "5 GIÂY",
-                "voice": "Nhiều lúc tự an ủi: Mình làm nghề chục năm, chuyên môn sâu, hữu xạ tự nhiên hương. Nhưng nhìn lại sổ khách hàng mới giật mình: Người ta giờ chỉ tin những ai dám xuất hiện.",
-                "beats": [
-                    ("3.1 Đầu Cảnh", "Trung cảnh bên vách kính", "Đứng dựa vào khung cửa kính lớn Greenhub, nhìn ra rặng cây xanh mướt bên ngoài.", "assets/greenhub/IMG_7813.JPG", "Không gian tĩnh lặng tạo chiều sâu cho dòng suy ngẫm về sự đổi thay của thời cuộc."),
-                    ("3.2 Cao Trào", "Cận cảnh bàn tay lật sổ tay", "Bàn tay lật chậm rãi từng trang sổ ghi chép khách hàng quen thuộc.", "assets/greenhub/IMG_7799.JPG", "Chi tiết thực tế chứng minh sự suy giảm của tệp khách cũ nếu không mở rộng."),
-                    ("3.3 Mồi Chuyển", "Góc quay ngang bước chân", "Bước chân dứt khoát đi về phía ban công vườn ngoài trời Greenhub.", "assets/greenhub/IMG_7805.JPG", "Hành động thể hiện sự chuyển dịch tâm lý từ ngồi chờ sang hành động.")
-                ]
-            },
-            {
-                "id": "4", "title": "CẢNH 4: PHÁ VỠ CÁI TÔI THỂ DIỆN", "dur": "5 GIÂY",
-                "voice": "Cái tôi của tuổi 30 nặng nề lắm. Muốn cầm máy lên quay nhưng sợ người quen thấy lại bảo già rồi còn đú đởn làm trò. Nhưng ôm cái sĩ diện đó thì nuôi sống ai?",
-                "beats": [
-                    ("4.1 Đầu Cảnh", "Toàn cảnh ban công vườn", "Đứng giữa ban công vườn Greenhub, gió nhẹ thổi qua tán cây, ánh sáng ban ngày trong trẻo.", "assets/greenhub/IMG_7805.JPG", "Bối cảnh ngoài trời thoáng đãng giải phóng năng lượng ngột ngạt."),
-                    ("4.2 Cao Trào", "Trung cảnh cầm máy quay", "Đưa điện thoại lên trước mặt, nhìn thẳng vào camera với phong thái tự tin điềm đạm.", "assets/greenhub/IMG_7806.JPG", "Vượt qua rào cản sợ hãi ống kính, định vị lại vị thế chuyên gia."),
-                    ("4.3 Mồi Chuyển", "Cận cảnh nụ cười nhẹ", "Nụ cười mỉm nhẹ nhàng, buông bỏ hoàn toàn sự tự ái và sĩ diện hão.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "Chuyển giao sang thông điệp chốt hạ tràn đầy năng lượng tích cực.")
-                ]
-            },
-            {
-                "id": "5", "title": "CẢNH 5: BẬT MÁY & KHẲNG ĐỊNH VỊ THẾ", "dur": "4 GIÂY (CHỐT HẠ)",
-                "voice": "Trải nghiệm 10 năm làm nghề là thứ người khác không thể copy được. Không cần làm trò hề, cứ đĩnh đạc nói đúng sự thật nghề của mình!",
-                "beats": [
-                    ("5.1 Đầu Cảnh", "Toàn cảnh góc rộng terrace", "Toàn cảnh không gian sân vườn trên cao Greenhub, dáng đứng vững chãi tự tin.", "assets/greenhub/IMG_7808.JPG", "Khẳng định vị thế người có nghề đĩnh đạc, bản lĩnh và trường tồn."),
-                    ("5.2 Cao Trào", "A-Roll trực diện ống kính", "Nói dứt khoát câu chốt vào camera, ánh mắt sắc sảo và ấm áp.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "A-Roll chốt hạ tạo niềm tin tuyệt đối cho học viên và khách hàng."),
-                    ("5.3 Mồi Chuyển", "Góc cận bàn tay bấm lưu video", "Ngón tay bấm nút hoàn thành video trên điện thoại trong tiếng thở phào nhẹ nhõm.", "assets/greenhub/IMG_7799.JPG", "Khép lại bài tập bằng một hành động thực tế đã được hoàn thành trọn vẹn.")
-                ]
-            }
-        ],
+        "scenes": [           {           'beats': [           (           '1.1 Đầu Cảnh',
+                                                         'Trung toàn (Medium Shot)',
+                                                         'Lệch trục 45° • Ngang tầm mắt 0°',
+                                                         'Ngồi ở bàn gỗ tự nhiên phòng học Greenhub, cầm điện thoại '
+                                                         'lướt xem màn hình với vẻ mặt đăm chiêu, ánh nắng xiên qua '
+                                                         'khung kính lớn.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_03_chung_lai_sau_tuoi_30/assets/frames/scene1_beat1.jpg?v=20260913_faceclone_v1',
+                                                         'Thiết lập bối cảnh phòng học mộc mạc và hành vi ngụy trang: '
+                                                         'giả vờ lướt điện thoại nghiên cứu thị trường.'),
+                                             (           '1.2 Cao Trào',
+                                                         'Cận cảnh (Close-Up Insert)',
+                                                         'Lệch trục 45° • Top-down 50° mặt bàn',
+                                                         'Bàn tay đeo Apple Watch và tay áo blazer đen đặt úp điện '
+                                                         'thoại dứt khoát xuống mặt bàn gỗ sồi bên cạnh cuốn sổ tay '
+                                                         'ghi chép.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_03_chung_lai_sau_tuoi_30/assets/frames/scene1_beat2.jpg?v=20260913_faceclone_v1',
+                                                         'Đổi cỡ cảnh và góc nhìn để nhấn mạnh hành động dứt khoát che '
+                                                         'giấu cảm xúc giằng xé bất an khi thấy đối thủ triệu view.'),
+                                             (           '1.3 Mồi Chuyển',
+                                                         'Trung cận (Medium Close-Up)',
+                                                         'Lệch trục 30° • Góc nghiêng 3/4',
+                                                         'Ngả người tựa lưng vào ghế, mắt ngước nhìn ra ngoài khung '
+                                                         'cửa kính lớn, nét mặt trăn trở suy nghĩ về chặng đường 10 '
+                                                         'năm làm nghề.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_03_chung_lai_sau_tuoi_30/assets/frames/scene1_beat3.jpg?v=20260913_faceclone_v1',
+                                                         'Mồi chuyển cảm xúc từ hành vi cơ học sang đối diện nội tâm. '
+                                                         'Ánh mắt hướng ra xa làm mồi nối sang Cảnh 2.')],
+                        'dur': '4 GIÂY',
+                        'id': '1',
+                        'title': 'CẢNH 1: BÓC TRẦN THÓI QUEN LƯỚT ĐỐI THỦ',
+                        'voice': 'Cứ bấm vào xem video của đối thủ rồi lại tắt đi... bên ngoài thì bảo là nghiên cứu '
+                                 'thị trường, nhưng bên trong là cảm giác bất an của một người sợ bị tụt hậu.'},
+            {           'beats': [           (           '2.1 Đầu Cảnh',
+                                                         'Qua vai (Over-the-Shoulder OTS)',
+                                                         'Lệch trục 45° • Góc cao 25° sau vai',
+                                                         'Góc nhìn qua vai trái thấy cuốn sổ tay da ghi chép chuyên '
+                                                         'môn dày cộp đặt cạnh chiếc điện thoại đang tắt màn hình trên '
+                                                         'bàn gỗ.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_03_chung_lai_sau_tuoi_30/assets/frames/scene2_beat1.jpg?v=20260913_faceclone_v1',
+                                                         'Tương phản thị giác mạnh mẽ giữa giá trị chuyên môn tích lũy '
+                                                         '10 năm và làn sóng video ngắn của giới trẻ.'),
+                                             (           '2.2 Cao Trào',
+                                                         'Cận cảnh chân dung (Close-Up Portrait)',
+                                                         'Lệch trục 45° • Ngang tầm mắt 0°',
+                                                         'Khuôn mặt đĩnh đạc từng trải của Anh Việt, cái nhíu mày nhẹ '
+                                                         'thể hiện sự trăn trở của một người có lòng tự trọng nghề '
+                                                         'nghiệp.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_03_chung_lai_sau_tuoi_30/assets/frames/scene2_beat2.jpg?v=20260913_faceclone_v1',
+                                                         'Đặc tả cận cảnh ánh mắt và biểu cảm: Không cay cú nông nổi '
+                                                         'mà là chiều sâu trăn trở của người làm chuyên môn.'),
+                                             (           '2.3 Mồi Chuyển',
+                                                         'Trung toàn chuyển động (Medium Wide)',
+                                                         'Lệch trục 45° • Bước rời bàn làm việc',
+                                                         'Đứng dậy rời khỏi bàn gỗ, bước chân chậm mà chắc đi dọc theo '
+                                                         'vách kính lớn ngập tràn ánh nắng ban ngày.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_03_chung_lai_sau_tuoi_30/assets/frames/scene2_beat3.jpg?v=20260913_faceclone_v1',
+                                                         'Chuyển dịch không gian từ bàn làm việc chật hẹp ra sảnh kính '
+                                                         'rộng, làm mồi nối dẫn nhập sang Cảnh 3.')],
+                        'dur': '4 GIÂY',
+                        'id': '2',
+                        'title': 'CẢNH 2: NỖI CHỘT DẠ CỦA NGƯỜI CÓ NGHỀ',
+                        'voice': 'Nhìn mấy bạn trẻ mới vào nghề nói năng trôi chảy, hàng triệu lượt xem, đơn hàng nườm '
+                                 'nượp... trong lòng vừa không phục, vừa thấy chột dạ.'},
+            {           'beats': [           (           '3.1 Đầu Cảnh',
+                                                         'Trung cảnh (Medium Shot)',
+                                                         'Lệch trục 45° • Góc nghiêng 3/4 bên vách kính',
+                                                         'Đứng tựa người nhẹ bên khung cửa kính lớn, ánh mắt nhìn ra '
+                                                         'rặng cây xanh mướt và bầu trời ngoài cửa sổ.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_03_chung_lai_sau_tuoi_30/assets/frames/scene3_beat1.jpg?v=20260913_faceclone_v1',
+                                                         'Không gian tĩnh lặng tạo khoảng lắng tâm lý để người xem '
+                                                         "thấm thía nghịch lý 'chuyên môn giỏi nhưng không ai biết'."),
+                                             (           '3.2 Cao Trào',
+                                                         'Cận cảnh ánh mắt (Close-Up Realization)',
+                                                         'Lệch trục 45° • Ánh sáng xiên ngang mặt',
+                                                         'Ánh mắt bừng sáng sự thức tỉnh, vẻ mặt kiên nghị nhận ra '
+                                                         'chân lý: Khách hàng chỉ tin tưởng người dám xuất hiện.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_03_chung_lai_sau_tuoi_30/assets/frames/scene3_beat2.jpg?v=20260913_faceclone_v1',
+                                                         'Khoảnh khắc thức tỉnh tư duy (Mindset Shift) - điểm mấu chốt '
+                                                         'chuyển bại thành thắng trong kịch bản.'),
+                                             (           '3.3 Mồi Chuyển',
+                                                         'Trung cảnh bước đi (Medium Dynamic)',
+                                                         'Lệch trục 30° • Hướng ra cửa ban công',
+                                                         'Xoay người dứt khoát, tay cầm chắc điện thoại, sải bước tự '
+                                                         'tin đi ra phía cửa kính mở ra ban công sân vườn.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_03_chung_lai_sau_tuoi_30/assets/frames/scene3_beat3.jpg?v=20260913_faceclone_v1',
+                                                         'Hành động dứt khoát thể hiện sự chuyển hóa từ suy nghĩ nội '
+                                                         'tâm sang hành động thực tế, dẫn dắt sang Cảnh 4.')],
+                        'dur': '5 GIÂY',
+                        'id': '3',
+                        'title': "CẢNH 3: BẪY TÂM LÝ 'HỮU XẠ TỰ NHIÊN HƯƠNG'",
+                        'voice': 'Nhiều lúc tự an ủi: Mình làm nghề chục năm, chuyên môn sâu, hữu xạ tự nhiên hương. '
+                                 'Nhưng nhìn lại sổ khách hàng mới giật mình: Người ta giờ chỉ tin những ai dám xuất '
+                                 'hiện.'},
+            {           'beats': [           (           '4.1 Đầu Cảnh',
+                                                         'Toàn cảnh ban công (Medium Wide Outdoor)',
+                                                         'Ngang tầm mắt 0° • Ban công nhiều cây xanh',
+                                                         'Đứng giữa không gian ban công vườn tầng cao thoáng đãng, gió '
+                                                         'nhẹ thổi qua tán cây, dáng đứng vững chãi.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_03_chung_lai_sau_tuoi_30/assets/frames/scene4_beat1.jpg?v=20260913_faceclone_v1',
+                                                         'Giải phóng năng lượng ngột ngạt trong phòng kín, đưa nhân '
+                                                         'vật ra thiên nhiên khoáng đạt.'),
+                                             (           '4.2 Cao Trào',
+                                                         'Trung cảnh trực diện (Medium Direct)',
+                                                         'Lệch trục 30° • Ngang mắt 0°',
+                                                         'Cầm chắc điện thoại bằng hai tay giơ ngang tầm mắt, nhìn '
+                                                         'thẳng ống kính với ánh mắt chân thành và dũng cảm.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_03_chung_lai_sau_tuoi_30/assets/frames/scene4_beat2.jpg?v=20260913_faceclone_v1',
+                                                         'Vượt qua rào cản sợ hãi ống kính và nỗi sợ phán xét. Tư thế '
+                                                         'đĩnh đạc của một người làm chủ bản thân.'),
+                                             (           '4.3 Mồi Chuyển',
+                                                         'Cận cảnh nụ cười thương hiệu (Close-Up Smile)',
+                                                         'Lệch trục 30° • Góc nghiêng 30°',
+                                                         'Cận cảnh nụ cười ấm áp, rạng rỡ đặc trưng của Anh Việt, '
+                                                         'buông bỏ hoàn toàn sự tự ái và sĩ diện hão.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_03_chung_lai_sau_tuoi_30/assets/frames/scene4_beat3.jpg?v=20260913_faceclone_v1',
+                                                         'Nụ cười rạng rỡ giải tỏa mọi áp lực tâm lý, truyền cảm hứng '
+                                                         'mạnh mẽ và làm mồi chuyển sang chốt hạ.')],
+                        'dur': '5 GIÂY',
+                        'id': '4',
+                        'title': 'CẢNH 4: PHÁ VỠ CÁI TÔI THỂ DIỆN',
+                        'voice': 'Cái tôi của tuổi 30 nặng nề lắm. Muốn cầm máy lên quay nhưng sợ người quen thấy lại '
+                                 'bảo già rồi còn đú đởn làm trò. Nhưng ôm cái sĩ diện đó thì nuôi sống ai?'},
+            {           'beats': [           (           '5.1 Đầu Cảnh',
+                                                         'Toàn cảnh thiết lập (Wide Establishing)',
+                                                         'Góc rộng ngang mắt • Terrace trên cao',
+                                                         'Toàn cảnh không gian sân vườn trên cao đón nắng sớm, tripod '
+                                                         'gắn điện thoại đã vào vị trí sẵn sàng quay.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_03_chung_lai_sau_tuoi_30/assets/frames/scene5_beat1.jpg?v=20260913_faceclone_v1',
+                                                         'Khẳng định vị thế chuyên nghiệp, đĩnh đạc và bền bỉ của '
+                                                         'người có chuyên môn sâu.'),
+                                             (           '5.2 Cao Trào',
+                                                         'A-Roll trực diện ống kính (Direct A-Roll)',
+                                                         'Lệch trục 0° • Ngang tầm mắt 1:1',
+                                                         'Anh Việt nói dứt khoát câu chốt hạ vào camera với giọng nói '
+                                                         'ấm áp, tự tin và tràn đầy năng lượng thực chiến.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_03_chung_lai_sau_tuoi_30/assets/frames/scene5_beat2.jpg?v=20260913_faceclone_v1',
+                                                         'A-Roll chốt hạ tạo niềm tin tuyệt đối cho học viên và khách '
+                                                         'hàng. Không diễn trò, nói thẳng vào bản chất.'),
+                                             (           '5.3 Mồi Chuyển',
+                                                         'Cận cảnh kết thúc (Close-Up Out-point)',
+                                                         'Lệch trục 45° • Đặc tả nút dừng REC',
+                                                         'Ngón tay bấm nút dừng quay màu đỏ trên màn hình điện thoại, '
+                                                         'phía sau là nụ cười hài lòng nhẹ nhõm.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_03_chung_lai_sau_tuoi_30/assets/frames/scene5_beat3.jpg?v=20260913_faceclone_v1',
+                                                         'Khép lại bài tập bằng một hành động thực tế đã hoàn thành '
+                                                         'trọn vẹn, mở ra lộ trình làm video tự tin.')],
+                        'dur': '4 GIÂY (CHỐT HẠ)',
+                        'id': '5',
+                        'title': 'CẢNH 5: BẬT MÁY & KHẲNG ĐỊNH VỊ THẾ',
+                        'voice': 'Trải nghiệm 10 năm làm nghề là thứ người khác không thể copy được. Không cần làm trò '
+                                 'hề, cứ đĩnh đạc nói đúng sự thật nghề của mình!'}],
         
         "wisdom_quote": "Kinh nghiệm 10 năm làm nghề của bạn không bao giờ lỗi thời. Thứ lỗi thời duy nhất là cách bạn tiếp cận khách hàng. Hãy biến video ngắn thành cánh cổng đưa chuyên môn sâu của bạn đến với hàng triệu người đang cần nó.",
         "lesson1_title": "Đừng so đo view với người làm trò giải trí",
@@ -266,53 +370,152 @@ LESSONS = [
         "hook_new_note": "Hook đảo ngược hành vi: Bóc trần thói quen bấm điện thoại vô thức của dân chạy ads",
         "hook_new_critique": "• <b>Tái hiện chính xác hành vi đời thực:</b> Bất kỳ ai đang chạy ads đều có thói quen mở app kiểm tra trong trạng thái hồi hộp lo lắng.<br>• <b>Bóc trần cái cớ bận rộn:</b> Vạch trần sự thật ngượng ngùng là đang run rẩy sợ lỗ chứ không phải đang oai phong điều hành.<br>• <b>Khựng ngón tay xem tiếp:</b> Đánh trúng tim đen của hàng chục vạn chủ shop và người kinh doanh online.",
         
-        "scenes": [
-            {
-                "id": "1", "title": "CẢNH 1: BÓC TRẦN THÓI QUEN MỞ APP ADS", "dur": "4 GIÂY",
-                "voice": "Cứ 5 phút lại mở app quảng cáo kiểm tra một lần... nhìn qua thì tưởng bận rộn điều hành, nhưng thực ra là đang run vì tiền nạp vào ăn gần hết tiền lãi.",
-                "beats": [
-                    ("1.1 Đầu Cảnh", "Đặc tả ngón tay bấm nút nguồn", "Ngón tay bấm nút nguồn điện thoại sáng màn hình trên mặt bàn gỗ Greenhub rồi lại tắt đi.", "assets/greenhub/IMG_7799.JPG", "Thiết lập thói quen bồn chồn kiểm tra thông báo vô thức của người kinh doanh."),
-                    ("1.2 Cao Trào", "Góc nhìn qua vai (OTS)", "Góc nhìn qua vai màn hình hiển thị biểu đồ chi phí đỏ rực, nét mặt đăm chiêu.", "assets/greenhub/IMG_7796.JPG", "Đặc tả sự thật áp lực tài chính đè nặng lên tâm trí."),
-                    ("1.3 Mồi Chuyển", "Trung cảnh thở dài nhẹ", "Đặt điện thoại xuống bàn, ngả người ra sau thở dài nhìn lên trần gỗ lớp học Greenhub.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "Mồi chuyển sang dòng tâm sự chân thành về sự bế tắc của việc đốt tiền.")
-                ]
-            },
-            {
-                "id": "2", "title": "CẢNH 2: NỖI ĐAU TIỀN ADS ĂN HẾT LÃI", "dur": "4 GIÂY",
-                "voice": "Mấy tháng nay chi phí ads tăng gấp đôi. Tiền nạp vào tài khoản thì trừ đều đặn từng ngày, mà đơn hàng thì cứ lẹt đẹt.",
-                "beats": [
-                    ("2.1 Đầu Cảnh", "Góc cận bàn tay ghi chép", "Bàn tay cầm bút tính toán con số chi phí trên cuốn sổ tay đặt tại bàn học Greenhub.", "assets/greenhub/IMG_7799.JPG", "Hình ảnh thực tế của người làm chủ ngồi đối soát chi phí thực tế."),
-                    ("2.2 Cao Trào", "Cận cảnh con số gạch chân", "Cây bút khoanh tròn vào con số chi phí quảng cáo vượt ngưỡng cho phép.", "assets/greenhub/IMG_7799.JPG", "Điểm chạm đau đớn nhất: Làm quần quật cả tháng chỉ để nuôi nền tảng."),
-                    ("2.3 Mồi Chuyển", "Trung cận ánh mắt ngẩng lên", "Ngẩng đầu nhìn ra khung cửa sổ kính Greenhub, ánh mắt trĩu nặng suy nghĩ.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "Chuyển từ nỗi đau bề mặt sang nhận thức gốc rễ ở cảnh sau.")
-                ]
-            },
-            {
-                "id": "3", "title": "CẢNH 3: BẢN CHẤT CỦA VIỆC THUÊ NIỀM TIN", "dur": "5 GIÂY",
-                "voice": "Nhiều lúc tự an ủi: Thôi ráng tối ưu thêm tệp đối tượng. Nhưng ngồi tính lại mới giật mình: Tiền chạy ads thực chất là khoản tiền phạt vì mình lười không chịu xây niềm tin thật.",
-                "beats": [
-                    ("3.1 Đầu Cảnh", "Trung cảnh đứng dậy", "Đứng dậy rời bàn học, bước ra hành lang kính Greenhub với dáng vẻ trầm tư.", "assets/greenhub/IMG_7812.JPG", "Hành động thể hiện sự thức tỉnh và muốn bứt phá khỏi sự bế tắc."),
-                    ("3.2 Cao Trào", "Góc nghiêng dựa vách kính", "Đứng tựa người bên vách kính, ánh sáng tự nhiên hắt lên khuôn mặt đĩnh đạc.", "assets/greenhub/IMG_7813.JPG", "Khoảnh khắc nhận ra chân lý: Không thể đi thuê niềm tin mãi mãi."),
-                    ("3.3 Mồi Chuyển", "Góc quay bước chân dứt khoát", "Bước chân hướng thẳng ra khu ban công vườn ngập tràn cây xanh Greenhub.", "assets/greenhub/IMG_7805.JPG", "Chuyển tiếp năng lượng từ suy tư sang hành động quyết đoán.")
-                ]
-            },
-            {
-                "id": "4", "title": "CẢNH 4: PHÁ BỎ NỖI SỢ ỐNG KÍNH", "dur": "5 GIÂY",
-                "voice": "Biết là phải tự làm video để kéo traffic tự nhiên, nhưng lại sợ ống kính, ngại người quen phán xét. Cứ tặc lưỡi nạp tiền tiếp cho nhàn, để rồi ôm nợ vào người.",
-                "beats": [
-                    ("4.1 Đầu Cảnh", "Toàn cảnh ban công vườn", "Đứng giữa ban công vườn Greenhub, gió mát lay nhẹ tán lá xanh mướt.", "assets/greenhub/IMG_7805.JPG", "Không gian thiên nhiên trong lành giúp gột rửa sự nặng nề của áp lực tiền bạc."),
-                    ("4.2 Cao Trào", "Trung cảnh giơ máy thử", "Cầm điện thoại đưa lên ngang tầm mắt, tập nhìn thẳng vào camera một cách tự tin.", "assets/greenhub/IMG_7806.JPG", "Mô tả bước vượt ngưỡng tâm lý: Dám đối diện với chính mình trước ống kính."),
-                    ("4.3 Mồi Chuyển", "Cận cảnh nụ cười quyết tâm", "Nụ cười nhẹ nhõm, ánh mắt kiên định không còn chút e dè ngại ngùng.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "Mồi chuyển sang lời hiệu triệu mạnh mẽ ở cảnh chốt hạ.")
-                ]
-            },
-            {
-                "id": "5", "title": "CẢNH 5: TỰ TAY XÂY DỰNG TÀI SẢN", "dur": "4 GIÂY (CHỐT HẠ)",
-                "voice": "Không thể dựa mãi vào việc đi thuê quảng cáo. Tự cầm máy lên, quay thật, nói thật, xây dựng tài sản cho chính mình!",
-                "beats": [
-                    ("5.1 Đầu Cảnh", "Toàn cảnh terrace thoáng đãng", "Toàn cảnh sân vườn trên cao Greenhub, tư thế đứng hiên ngang vững chãi.", "assets/greenhub/IMG_7808.JPG", "Hình ảnh biểu tượng của sự tự do và làm chủ vận mệnh kinh doanh."),
-                    ("5.2 Cao Trào", "A-Roll trực diện đầy uy lực", "Nói thẳng vào ống kính với khẩu khí đĩnh đạc, dứt khoát và chân thành.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "A-Roll chốt hạ truyền cảm hứng mạnh mẽ cho toàn bộ học viên tại lớp."),
-                    ("5.3 Mồi Chuyển", "Đặc tả ngón tay tắt máy hài lòng", "Ngón tay bấm dừng quay video, nhìn lại thành phẩm đầu tiên với nụ cười rạng rỡ.", "assets/greenhub/IMG_7799.JPG", "Khép lại một bài học thức tỉnh sâu sắc về xây dựng kênh cá nhân.")
-                ]
-            }
-        ],
+        "scenes": [           {           'beats': [           (           '1.1 Đầu Cảnh',
+                                                         'Trung cảnh (Medium Shot)',
+                                                         'Lệch trục 45° • Ngang tầm mắt 0°',
+                                                         'Ngồi ở bàn gỗ phòng học Greenhub, hai tay cầm điện thoại '
+                                                         'lướt xem các chỉ số quảng cáo với nét mặt bồn chồn lo âu.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_04_tien_quang_cao_an_het_tien_lai/assets/frames/scene1_beat1.jpg?v=20260913_faceclone_v1',
+                                                         'Thiết lập thói quen bồn chồn mở app kiểm tra chiến dịch vô '
+                                                         'thức của người làm kinh doanh.'),
+                                             (           '1.2 Cao Trào',
+                                                         'Cận cảnh (Close-Up Insert)',
+                                                         'Lệch trục 45° • Top-down 50°',
+                                                         'Màn hình điện thoại hiển thị Ad Manager Dashboard với biểu '
+                                                         'đồ đỏ rực và chi phí tăng vọt, bàn tay căng thẳng cầm máy '
+                                                         'trên bàn gỗ.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_04_tien_quang_cao_an_het_tien_lai/assets/frames/scene1_beat2.jpg?v=20260913_faceclone_v1',
+                                                         'Đặc tả sự thật trần trụi: Áp lực tài chính đè nặng khi chi '
+                                                         'phí quảng cáo ăn mòn lợi nhuận.'),
+                                             (           '1.3 Mồi Chuyển',
+                                                         'Trung cận (Medium Close-Up)',
+                                                         'Lệch trục 30° • Góc nghiêng 3/4',
+                                                         'Đặt điện thoại xuống mặt bàn, ngả người ra sau ghế, nét mặt '
+                                                         'trĩu nặng suy ngẫm về sự bế tắc của việc đốt tiền chạy ads.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_04_tien_quang_cao_an_het_tien_lai/assets/frames/scene1_beat3.jpg?v=20260913_faceclone_v1',
+                                                         'Mồi chuyển cảm xúc từ hành vi lo âu sang đối diện với bài '
+                                                         'toán tài chính ở Cảnh 2.')],
+                        'dur': '4 GIÂY',
+                        'id': '1',
+                        'title': 'CẢNH 1: BÓC TRẦN THÓI QUEN MỞ APP ADS',
+                        'voice': 'Cứ 5 phút lại mở app quảng cáo kiểm tra một lần... nhìn qua thì tưởng bận rộn điều '
+                                 'hành, nhưng thực ra là đang run vì tiền nạp vào ăn gần hết tiền lãi.'},
+            {           'beats': [           (           '2.1 Đầu Cảnh',
+                                                         'Qua vai (Over-the-Shoulder OTS)',
+                                                         'Lệch trục 45° • Góc cao 25° sau vai',
+                                                         'Góc nhìn qua vai trái thấy bàn tay cầm bút tính toán con số '
+                                                         'chi phí thực tế trong cuốn sổ tay đặt tại bàn gỗ.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_04_tien_quang_cao_an_het_tien_lai/assets/frames/scene2_beat1.jpg?v=20260913_faceclone_v1',
+                                                         'Hình ảnh thực tế của người làm chủ ngồi đối soát chi phí: '
+                                                         'Càng chi nhiều ads, biên lợi nhuận càng teo tóp.'),
+                                             (           '2.2 Cao Trào',
+                                                         'Cận cảnh chân dung (Close-Up Portrait)',
+                                                         'Lệch trục 45° • Ngang tầm mắt 0°',
+                                                         'Khuôn mặt đĩnh đạc của Anh Việt, ánh mắt trăn trở sâu sắc '
+                                                         'trước màn hình laptop và bảng số liệu tài chính.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_04_tien_quang_cao_an_het_tien_lai/assets/frames/scene2_beat2.jpg?v=20260913_faceclone_v1',
+                                                         'Điểm chạm đau đớn nhất: Làm quần quật cả tháng nhưng bản '
+                                                         'chất chỉ là làm thuê cho các nền tảng quảng cáo.'),
+                                             (           '2.3 Mồi Chuyển',
+                                                         'Trung toàn chuyển động (Medium Wide)',
+                                                         'Lệch trục 45° • Rời bàn làm việc',
+                                                         'Đứng dậy gấp sổ, sải bước dứt khoát ra hành lang kính ngập '
+                                                         'tràn ánh sáng tự nhiên.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_04_tien_quang_cao_an_het_tien_lai/assets/frames/scene2_beat3.jpg?v=20260913_faceclone_v1',
+                                                         'Hành động dứt khoát thể hiện sự thức tỉnh và quyết tâm tìm '
+                                                         'lối thoát mới.')],
+                        'dur': '4 GIÂY',
+                        'id': '2',
+                        'title': 'CẢNH 2: NỖI ĐAU TIỀN ADS ĂN HẾT LÃI',
+                        'voice': 'Tiền nạp vào thẻ thì đều đặn, nhưng đơn về thì ngày càng thưa. Cuối tháng cộng sổ, '
+                                 'lợi nhuận thực tế chẳng còn bao nhiêu... chỉ béo nền tảng!'},
+            {           'beats': [           (           '3.1 Đầu Cảnh',
+                                                         'Trung cảnh (Medium Shot)',
+                                                         'Lệch trục 45° • Dựa vách kính lớn',
+                                                         'Đứng tựa người bên vách kính lớn nhìn xuống dòng xe cộ hối '
+                                                         'hả trên phố, ánh sáng ban ngày rọi sáng dáng người.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_04_tien_quang_cao_an_het_tien_lai/assets/frames/scene3_beat1.jpg?v=20260913_faceclone_v1',
+                                                         'Khoảng lặng thị giác giúp người xem thấm thía quy luật: '
+                                                         'Không thể đi thuê niềm tin mãi mãi.'),
+                                             (           '3.2 Cao Trào',
+                                                         'Cận cảnh ánh mắt (Close-Up Portrait)',
+                                                         'Lệch trục 45° • Ánh sáng xiên',
+                                                         'Ánh mắt bừng sáng sự thức tỉnh kiên định, nhận ra video ngắn '
+                                                         'chính là mặt bằng số vĩnh viễn không mất tiền thuê.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_04_tien_quang_cao_an_het_tien_lai/assets/frames/scene3_beat2.jpg?v=20260913_faceclone_v1',
+                                                         'Bước chuyển hóa nhận thức cốt lõi: Chuyển từ tư duy đốt tiền '
+                                                         'mua khách sang trao giá trị để giữ khách.'),
+                                             (           '3.3 Mồi Chuyển',
+                                                         'Trung cảnh bước đi (Medium Dynamic)',
+                                                         'Lệch trục 30° • Hướng ra ban công',
+                                                         'Xoay người dứt khoát, bước chân vững chãi tiến ra khu vực '
+                                                         'ban công sân vườn ngập tràn cây xanh.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_04_tien_quang_cao_an_het_tien_lai/assets/frames/scene3_beat3.jpg?v=20260913_faceclone_v1',
+                                                         'Chuyển tiếp năng lượng từ sự trăn trở sang hành động bứt phá '
+                                                         'ở Cảnh 4.')],
+                        'dur': '5 GIÂY',
+                        'id': '3',
+                        'title': 'CẢNH 3: BẢN CHẤT CỦA VIỆC THUÊ NIỀM TIN',
+                        'voice': 'Chạy quảng cáo thực chất là đi thuê mặt bằng, thuê sự chú ý của người khác. Hết tiền '
+                                 'nạp là tắt ngấm. Muốn sống bền thì phải tự xây lấy tài sản của mình.'},
+            {           'beats': [           (           '4.1 Đầu Cảnh',
+                                                         'Toàn cảnh ban công (Medium Wide Outdoor)',
+                                                         'Ngang tầm mắt 0° • Sân vườn trên cao',
+                                                         'Đứng giữa ban công vườn nhiều cây xanh, gió mát lay nhẹ mái '
+                                                         'tóc, hít sâu một hơi đón ánh nắng mới.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_04_tien_quang_cao_an_het_tien_lai/assets/frames/scene4_beat1.jpg?v=20260913_faceclone_v1',
+                                                         'Không gian ngoài trời giải tỏa hoàn toàn áp lực đè nặng, tạo '
+                                                         'bước đệm tâm lý vững chãi.'),
+                                             (           '4.2 Cao Trào',
+                                                         'Trung cảnh trực diện (Medium Direct)',
+                                                         'Lệch trục 30° • Ngang tầm mắt 0°',
+                                                         'Cầm điện thoại đưa lên ngang tầm mắt, hai tay giữ chắc, nhìn '
+                                                         'thẳng vào ống kính một cách tự tin và điềm đạm.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_04_tien_quang_cao_an_het_tien_lai/assets/frames/scene4_beat2.jpg?v=20260913_faceclone_v1',
+                                                         'Hành động vượt ngưỡng tâm lý: Dám đối diện với chính mình '
+                                                         'trước ống kính máy quay.'),
+                                             (           '4.3 Mồi Chuyển',
+                                                         'Cận cảnh nụ cười thương hiệu (Close-Up Smile)',
+                                                         'Lệch trục 30° • Góc nghiêng 30°',
+                                                         'Nụ cười ấm áp, rạng rỡ đặc trưng của Anh Việt, ánh mắt kiên '
+                                                         'định không còn chút e dè ngại ngùng.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_04_tien_quang_cao_an_het_tien_lai/assets/frames/scene4_beat3.jpg?v=20260913_faceclone_v1',
+                                                         'Nụ cười giải tỏa mọi rào cản, mồi chuyển sang lời hiệu triệu '
+                                                         'mạnh mẽ ở cảnh chốt hạ.')],
+                        'dur': '5 GIÂY',
+                        'id': '4',
+                        'title': 'CẢNH 4: PHÁ BỎ NỖI SỢ ỐNG KÍNH',
+                        'voice': 'Nhiều người sợ xuất hiện, sợ nói dở, sợ người quen phán xét... Nhưng so với nỗi sợ '
+                                 'mất trắng tiền lãi hàng tháng, thì việc đứng trước camera có đáng sợ bằng không?'},
+            {           'beats': [           (           '5.1 Đầu Cảnh',
+                                                         'Toàn cảnh thiết lập (Wide Establishing)',
+                                                         'Góc rộng ngang mắt • Terrace trên cao',
+                                                         'Toàn cảnh khu sân vườn trên cao đón nắng sớm, chân máy '
+                                                         'tripod gắn điện thoại đã sẵn sàng ghi hình.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_04_tien_quang_cao_an_het_tien_lai/assets/frames/scene5_beat1.jpg?v=20260913_faceclone_v1',
+                                                         'Hình ảnh biểu tượng của người làm chủ vận mệnh kinh doanh: '
+                                                         'Tự tay làm chủ kênh truyền thông của mình.'),
+                                             (           '5.2 Cao Trào',
+                                                         'A-Roll trực diện ống kính (Direct A-Roll)',
+                                                         'Lệch trục 0° • Ngang tầm mắt 1:1',
+                                                         'Anh Việt nói thẳng vào camera với khẩu khí đĩnh đạc, dứt '
+                                                         'khoát, ánh mắt chân thành và đầy uy lực.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_04_tien_quang_cao_an_het_tien_lai/assets/frames/scene5_beat2.jpg?v=20260913_faceclone_v1',
+                                                         'A-Roll chốt hạ truyền cảm hứng mạnh mẽ: Biến video thành tài '
+                                                         'sản tích lũy trường tồn thay vì đốt tiền nuôi ads.'),
+                                             (           '5.3 Mồi Chuyển',
+                                                         'Cận cảnh kết thúc (Close-Up Out-point)',
+                                                         'Lệch trục 45° • Đặc tả nút dừng REC',
+                                                         'Ngón tay bấm nút dừng quay màu đỏ trên màn hình điện thoại, '
+                                                         'phía sau là nụ cười hài lòng và thở phào nhẹ nhõm.',
+                                                         'https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_04_tien_quang_cao_an_het_tien_lai/assets/frames/scene5_beat3.jpg?v=20260913_faceclone_v1',
+                                                         'Khép lại bài tập bằng thành phẩm thực tế đầu tiên, mở ra '
+                                                         'hành trình làm video bền vững.')],
+                        'dur': '4 GIÂY (CHỐT HẠ)',
+                        'id': '5',
+                        'title': 'CẢNH 5: TỰ TAY XÂY DỰNG TÀI SẢN',
+                        'voice': 'Mỗi video bạn làm ra là một nhân viên bán hàng mẫn cán làm việc 24/7 không đòi tăng '
+                                 'lương. Bớt đốt tiền ads lại, tập trung xây dựng giá trị thật!'}],
         
         "wisdom_quote": "Chạy quảng cáo là bạn đang xây nhà trên đất của người khác. Mỗi video bạn tự tay quay, tự miệng nói chính là một viên gạch xây nên tòa lâu đài uy tín vững chắc của riêng bạn.",
         "lesson1_title": "Dừng ngay việc ngụy trang bằng thuật ngữ kỹ thuật",
@@ -377,45 +580,45 @@ LESSONS = [
                 "id": "1", "title": "CẢNH 1: BÓC TRẦN HÀNH VI XÓA TIN NHẮN", "dur": "4 GIÂY",
                 "voice": "Soạn xong cái tin nhắn định gửi cho người quen rồi lại vội vàng xóa đi... sợ người ta nghĩ mình dạo này khó khăn nên mới đi chào mời.",
                 "beats": [
-                    ("1.1 Đầu Cảnh", "Đặc tả màn hình nhắn tin", "Ngón tay gõ một đoạn tin nhắn chào hàng dài trên màn hình rồi bấm nút xóa liên tục.", "assets/greenhub/IMG_7799.JPG", "Mô tả sự ngập ngừng, lưỡng lự và nỗi sợ mất mặt trước người quen."),
-                    ("1.2 Cao Trào", "Cận cảnh bàn tay úp máy", "Bàn tay úp ngược điện thoại xuống mặt bàn gỗ Greenhub, tiếng thở dài nhẹ.", "assets/greenhub/IMG_7799.JPG", "Hành động thể hiện sự bất lực và xấu hổ khi phải đi nài nỉ người thân."),
-                    ("1.3 Mồi Chuyển", "Trung cảnh khuôn mặt suy ngẫm", "Ngồi tại bàn học Greenhub, mắt nhìn xa xăm ra khoảng trống lớp học tĩnh lặng.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "Chuyển giao cảm xúc sang sự suy ngẫm nghiêm túc về con đường kinh doanh.")
+                    ("1.1 Đầu Cảnh", "Trung cảnh (Medium Shot)", "Lệch trục 45° • Ngang tầm mắt", "Ngồi tại bàn gỗ tự nhiên bên khung cửa sổ, tay bấm soạn tin nhắn chào hàng trên điện thoại rồi ngập ngừng lưỡng lự.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_05_khach_quen_can_dan/assets/frames/scene1_beat1.jpg?v=20260913_faceclone_v1", "Thiết lập bối cảnh phòng làm việc mộc mạc và tâm lý ngượng ngùng khi chào hàng người quen."),
+                    ("1.2 Cao Trào", "Cận cảnh bàn tay & điện thoại (Close-Up Tight Desk)", "Lệch trục 45° • Top-down 45°", "Bàn tay bấm nút xóa liên tục rồi úp ngược điện thoại xuống mặt bàn gỗ, một tiếng thở dài nhẹ.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_05_khach_quen_can_dan/assets/frames/scene1_beat2.jpg?v=20260913_faceclone_v1", "Đặc tả sự ngượng ngùng, xấu hổ và cảm giác bế tắc khi phải nài nỉ người thân ủng hộ."),
+                    ("1.3 Mồi Chuyển", "Trung cận trầm ngâm (Medium Close-Up)", "Lệch trục 30° • Góc nghiêng 3/4", "Ngả người ra sau ghế, mắt nhìn xa xăm ra khoảng trống studio, nhận ra tệp khách quen đã cạn kiệt.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_05_khach_quen_can_dan/assets/frames/scene1_beat3.jpg?v=20260913_faceclone_v1", "Mồi chuyển cảm xúc từ sự bế tắc sang trăn trở về bản chất của các mối quan hệ ở Cảnh 2.")
                 ]
             },
             {
                 "id": "2", "title": "CẢNH 2: BẪY TÌNH CẢM & SỰ THƯƠNG HẠI", "dur": "4 GIÂY",
                 "voice": "Lúc mới mở kinh doanh, anh em bạn bè ủng hộ nhiệt tình lắm. Nhưng người ta chỉ mua một lần vì tình cảm, chứ không ai mua mãi vì thương hại.",
                 "beats": [
-                    ("2.1 Đầu Cảnh", "Góc nhìn qua vai lật danh bạ", "Ngồi ở bàn gỗ Greenhub, ngón tay lướt danh bạ bạn bè trên điện thoại.", "assets/greenhub/IMG_7796.JPG", "Nhắc lại giai đoạn ban đầu thuận lợi nhờ mối quan hệ nhưng nhanh chóng cạn kiệt."),
-                    ("2.2 Cao Trào", "Trung cận ánh mắt chiêm nghiệm", "Khuôn mặt đăm chiêu, thấu hiểu quy luật phũ phàng của thương trường.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "Biểu cảm chín chắn, không oán trách bạn bè mà nhận trách nhiệm về mình."),
-                    ("2.3 Mồi Chuyển", "Đứng dậy bước về phía sảnh kính", "Rời khỏi ghế ngồi, bước chân chậm rãi đi ra phía sảnh vách kính Greenhub.", "assets/greenhub/IMG_7812.JPG", "Hành động thể hiện mong muốn mở rộng tầm mắt ra không gian bên ngoài.")
+                    ("2.1 Đầu Cảnh", "Qua vai lướt danh bạ (OTS Medium Shot)", "Lệch trục 45° • Sau vai trái", "Góc nhìn qua vai thấy tay lướt danh bạ bạn bè trên điện thoại bên bàn làm việc cạnh cửa sổ.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_05_khach_quen_can_dan/assets/frames/scene2_beat1.jpg?v=20260913_faceclone_v1", "Tái hiện giai đoạn ban đầu nhờ cậy mối quan hệ nhưng nhanh chóng rơi vào im lặng."),
+                    ("2.2 Cao Trào", "Cận cảnh khuôn mặt chiêm nghiệm (Insight Face Close-Up)", "Trực diện 0° • Ngang tầm mắt", "Khuôn mặt đăm chiêu, thấu hiểu chân lý phũ phàng: Khách không mua mãi vì thương hại.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_05_khach_quen_can_dan/assets/frames/scene2_beat2.jpg?v=20260913_faceclone_v1", "Biểu cảm chín chắn, không oán trách bạn bè mà nhận trách nhiệm về chính mình."),
+                    ("2.3 Mồi Chuyển", "Trung cảnh đứng dậy (Medium Rise Shot)", "Lệch trục 45° • Ngang hông hất nhẹ 10°", "Đặt điện thoại xuống bàn, dứt khoát đứng dậy bước về phía khung cửa sổ lớn tìm hướng đi mới.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_05_khach_quen_can_dan/assets/frames/scene2_beat3.jpg?v=20260913_faceclone_v1", "Hành động đứng dậy dứt khoát thể hiện mong muốn mở rộng tầm mắt ra thị trường bên ngoài.")
                 ]
             },
             {
                 "id": "3", "title": "CẢNH 3: NHẬN RA CON ĐƯỜNG SAI", "dur": "5 GIÂY",
                 "voice": "Cứ ôm lấy tệp người quen rồi thấy bế tắc. Giờ nhắn tin rủ cà phê người ta cũng ngập ngừng sợ mình bán hàng. Nghĩ lại mới thấy mình đi sai đường.",
                 "beats": [
-                    ("3.1 Đầu Cảnh", "Toàn cảnh sảnh kính rộng mở", "Đứng một mình bên vách kính lớn Greenhub nhìn ra hàng cây xanh mát.", "assets/greenhub/IMG_7812.JPG", "Không gian khoáng đạt tạo sự đối lập với sự tù túng của tệp khách người quen."),
-                    ("3.2 Cao Trào", "Trung cảnh nhìn ra khoảng không", "Tựa tay lên khung cửa kính, ánh mắt bắt đầu bừng sáng sự thấu suốt.", "assets/greenhub/IMG_7813.JPG", "Khoảnh khắc nhận ra: Phải bán cho người lạ thì mới là kinh doanh thực thụ."),
-                    ("3.3 Mồi Chuyển", "Góc quay bước chân ra ban công", "Bước chân tự tin sải bước ra khu ban công nhiều cây xanh Greenhub.", "assets/greenhub/IMG_7805.JPG", "Sẵn sàng đón nhận không gian mới và thử thách mới.")
+                    ("3.1 Đầu Cảnh", "Trung toàn bên khung cửa kính (Medium Wide Profile)", "Lệch trục 90° • Ngang tầm mắt", "Đứng cạnh vách kính lớn nhìn xuống dòng người đông đúc, hai tay chống hông suy ngẫm về thị trường.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_05_khach_quen_can_dan/assets/frames/scene3_beat1.jpg?v=20260913_faceclone_v1", "Không gian khoáng đạt đối lập với sự tù túng chật hẹp của tệp khách người quen."),
+                    ("3.2 Cao Trào", "Cận góc nghiêng đón nắng (Side Profile Close-Up)", "Lệch trục 60° • Ánh sáng xiên", "Ánh mắt bừng sáng thấu suốt qua lớp kính phản chiếu dòng người: Phải phục vụ người lạ!", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_05_khach_quen_can_dan/assets/frames/scene3_beat2.jpg?v=20260913_faceclone_v1", "Khoảnh khắc giác ngộ: Bán hàng cho người lạ ngoài kia mới là kinh doanh thực thụ."),
+                    ("3.3 Mồi Chuyển", "Trung cận quay người cầm máy (Medium Turnaround)", "Lệch trục 45° • Góc ngang 3/4", "Quay người dứt khoát, tay cầm máy quay lên sẵn sàng hành động để tiếp cận khách hàng mới.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_05_khach_quen_can_dan/assets/frames/scene3_beat3.jpg?v=20260913_faceclone_v1", "Chuyển giao năng lượng từ nhận thức sang hành động thực chiến làm video.")
                 ]
             },
             {
                 "id": "4", "title": "CẢNH 4: VƯỢT QUA NỖI SỢ NGƯỜI LẠ", "dur": "5 GIÂY",
                 "voice": "Biết là ngoài kia có hàng triệu khách hàng lạ đang cần sản phẩm của mình, nhưng cái ngại ngùng lại giữ chân lại. Sợ lên mạng nói không hay, sợ người ta chê cười.",
                 "beats": [
-                    ("4.1 Đầu Cảnh", "Toàn cảnh ban công nhiều cây", "Đứng giữa thiên nhiên ban công Greenhub, gió thổi nhẹ tạo cảm giác thư thái.", "assets/greenhub/IMG_7805.JPG", "Giải phóng mọi căng thẳng tâm lý và áp lực thể diện."),
-                    ("4.2 Cao Trào", "Trung cảnh cầm máy tự tin", "Cầm điện thoại đưa lên ngang mặt, ánh nhìn trực diện và chân thành.", "assets/greenhub/IMG_7806.JPG", "Vượt qua rào cản sợ phán xét, sẵn sàng cất tiếng nói."),
-                    ("4.3 Mồi Chuyển", "Cận cảnh ánh mắt kiên định", "Ánh mắt ấm áp, miệng cười nhẹ đầy tự tin của người nắm giữ giá trị thật.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "Mồi chuyển sang thông điệp chốt hạ tràn đầy năng lượng.")
+                    ("4.1 Đầu Cảnh", "Toàn cảnh không gian thoáng đãng (Medium Wide Studio)", "Lệch trục 45° • Ngang tầm ngực", "Đứng giữa không gian studio ngập tràn ánh sáng, hít một hơi thật sâu giải phóng nỗi sợ phán xét.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_05_khach_quen_can_dan/assets/frames/scene4_beat1.jpg?v=20260913_faceclone_v1", "Giải phóng mọi rào cản tâm lý e dè và nỗi sợ người quen chê cười."),
+                    ("4.2 Cao Trào", "Cận cảnh ánh mắt khóa ống kính (Conviction Close-Up)", "Trực diện 0° • Ngang tầm mắt", "Ánh mắt mở to kiên định khóa chặt vào ống kính camera, dũng cảm đối diện với công chúng.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_05_khach_quen_can_dan/assets/frames/scene4_beat2.jpg?v=20260913_faceclone_v1", "Vượt qua nỗi sợ vô hình, sẵn sàng cất lên tiếng nói chân thật của người làm nghề."),
+                    ("4.3 Mồi Chuyển", "Cận cảnh nụ cười đĩnh đạc (Poised Smile Close-Up)", "Lệch trục 15° • Cận cảnh biểu cảm", "Nụ cười ấm áp, phong thái tự tin điềm đạm của người nắm giữ giá trị thật.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_05_khach_quen_can_dan/assets/frames/scene4_beat3.jpg?v=20260913_faceclone_v1", "Mồi chuyển sang thông điệp chốt hạ tràn đầy nội lực ở Cảnh 5.")
                 ]
             },
             {
                 "id": "5", "title": "CẢNH 5: PHỤC VỤ THỊ TRƯỜNG LỚN", "dur": "4 GIÂY (CHỐT HẠ)",
                 "voice": "Kinh doanh đàng hoàng là phục vụ xã hội. Dẹp cái ngại sang một bên, bật máy lên và nói cho người lạ hiểu giá trị thật của mình!",
                 "beats": [
-                    ("5.1 Đầu Cảnh", "Toàn cảnh góc rộng terrace", "Toàn cảnh khu terrace tầng thượng Greenhub, tư thế hiên ngang đĩnh đạc.", "assets/greenhub/IMG_7808.JPG", "Hình ảnh tượng trưng cho sự vươn ra biển lớn của người làm chủ."),
-                    ("5.2 Cao Trào", "A-Roll trực diện đanh thép", "Nói dứt khoát câu chốt vào ống kính máy quay với giọng nói ấm áp đầy nội lực.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "A-Roll chốt hạ tạo niềm tin tuyệt đối cho học viên và người xem."),
-                    ("5.3 Mồi Chuyển", "Đặc tả ngón tay bấm nút hoàn thành", "Ngón tay bấm dừng quay video, nụ cười tự hào trên môi.", "assets/greenhub/IMG_7799.JPG", "Khép lại bài tập bằng một bước ngoặt giải phóng tư duy kinh doanh.")
+                    ("5.1 Đầu Cảnh", "Trung cận trực diện (Frontal Medium Close-Up)", "Trực diện 0° • Ngang tầm mắt", "Ngồi đĩnh đạc tại bàn làm việc, ánh nhìn chân thành kết nối trực tiếp 1-to-1 với người xem.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_05_khach_quen_can_dan/assets/frames/scene5_beat1.jpg?v=20260913_faceclone_v1", "Khẳng định tư thế đĩnh đạc của người làm kinh doanh chân chính."),
+                    ("5.2 Cao Trào", "Cận trực diện truyền cảm hứng (Passionate Conviction)", "Trực diện hất nhẹ 5° • Cận cảnh biểu cảm", "Nói dứt khoát câu chốt vào camera: 'Dẹp cái ngại sang một bên, bật máy lên và nói cho người lạ hiểu giá trị thật!'.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_05_khach_quen_can_dan/assets/frames/scene5_beat2.jpg?v=20260913_faceclone_v1", "A-Roll truyền lửa mạnh mẽ đánh thức hành động thực chiến của học viên."),
+                    ("5.3 Mồi Chuyển", "Trung cận kết thúc (Medium Close-Up Outro Frame)", "Trực diện 0° • Ngang tầm mắt", "Nụ cười rạng rỡ chân thành, phong thái tự tin ấm áp khép lại bài học với năng lượng tích cực.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_05_khach_quen_can_dan/assets/frames/scene5_beat3.jpg?v=20260913_faceclone_v1", "Gieo niềm tin trọn vẹn, khép lại bài học bằng bước ngoặt giải phóng tư duy kinh doanh.")
                 ]
             }
         ],
@@ -480,52 +683,51 @@ LESSONS = [
         
         "scenes": [
             {
-                "id": "1", "title": "CẢNH 1: BÓC TRẦN NGHỊCH LÝ NẮN NÓT", "dur": "4 GIÂY",
+                "id": "1", "title": "CẢNH 1: BÓC TRẦN NGHỊCH LÝ NẮN NÓT", "dur": "4 GIÂY (MỞ ĐẦU)",
                 "voice": "Ngồi nắn nót từng đường kim mũi chỉ mất cả ngày trời... tự hào là mình làm kỹ, nhưng tối về nhìn sổ doanh thu lại thấy thắt lòng.",
                 "beats": [
-                    ("1.1 Đầu Cảnh", "Cực cận ngón tay tỉ mẩn", "Bàn tay cầm bút nắn nót từng nét vẽ thiết kế chi tiết trên mặt bàn gỗ Greenhub.", "assets/greenhub/IMG_7799.JPG", "Đặc tả sự tập trung, tỉ mỉ và tay nghề điêu luyện của người có chuyên môn."),
-                    ("1.2 Cao Trào", "Góc nhìn qua vai sổ doanh thu", "Góc nhìn qua vai thấy cuốn sổ ghi chép doanh thu ít ỏi đặt cạnh sản phẩm công phu.", "assets/greenhub/IMG_7799.JPG", "Nghịch lý đau đớn giữa công sức bỏ ra và giá trị thu về."),
-                    ("1.3 Mồi Chuyển", "Trung cận thở dài trầm tư", "Ngẩng đầu lên, nét mặt đượm buồn nhìn quanh không gian phòng học Greenhub vắng vẻ.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "Mồi chuyển sang dòng suy ngẫm cay đắng về đối thủ cạnh tranh.")
+                    ("1.1 Đầu Cảnh", "Đặc tả chi tiết (Extreme Close-Up)", "Chếch 45° từ trên xuống • Cận cảnh đồ nghề", "Đôi bàn tay thợ mộc tỉ mỉ nắn nót từng đường đục gỗ sắc sảo trên bàn xưởng.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_06_tay_nghe_tot_nhung_van_vang_khach/assets/frames/scene1_beat1.jpg?v=20260913_faceclone_v1", "Đặc tả sự tập trung, tỉ mỉ và tay nghề điêu luyện của người có chuyên môn."),
+                    ("1.2 Cao Trào", "Cực cận mối ghép (Macro Detail)", "Góc nghiêng 30° • Cận cảnh phôi gỗ", "Mối ghép mộng đuôi én tinh xảo, nhẵn bóng không một vết hở cạnh lưỡi đục thép.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_06_tay_nghe_tot_nhung_van_vang_khach/assets/frames/scene1_beat2.jpg?v=20260913_faceclone_v1", "Minh chứng cho đỉnh cao tay nghề nắn nót, chuẩn mực cơ khí mộc truyền thống."),
+                    ("1.3 Mồi Chuyển", "Trung cảnh trầm tư (Medium Shot)", "Ngang tầm mắt • Lệch trục 30°", "Ngồi trước bàn thợ mộc, nét mặt đăm chiêu trầm ngâm giữa xưởng gỗ vắng lặng.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_06_tay_nghe_tot_nhung_van_vang_khach/assets/frames/scene1_beat3.jpg?v=20260913_faceclone_v1", "Mồi chuyển sang nỗi ấm ức khi nhìn thấy đối thủ làm ẩu nhưng đông khách.")
                 ]
             },
             {
                 "id": "2", "title": "CẢNH 2: NỖI ẤM ỨC NHÌN ĐỐI THỦ LÀM ẨU", "dur": "4 GIÂY",
                 "voice": "Nhìn quán đối diện làm ẩu hơn mình gấp mười lần mà khách xếp hàng nườm nượp chỉ vì họ biết làm video... trong lòng vừa ấm ức, vừa tự hỏi mình sai ở đâu.",
                 "beats": [
-                    ("2.1 Đầu Cảnh", "Góc nhìn điện thoại xem đối thủ", "Cầm điện thoại xem video của đối thủ đông nghịt khách bên bàn gỗ Greenhub.", "assets/greenhub/IMG_7796.JPG", "Tái hiện cảm giác ấm ức và không phục của người thợ chân chính."),
-                    ("2.2 Cao Trào", "Cận cảnh cái nhíu mày trăn trở", "Khuôn mặt đăm chiêu, cái nhíu mày sâu sắc tự vấn lương tâm nghề nghiệp.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "Diễn xuất nội tâm sâu sắc, tìm kiếm câu trả lời cho sự bất công của thị trường."),
-                    ("2.3 Mồi Chuyển", "Đứng dậy bước ra sảnh kính", "Đứng dậy rời bàn làm việc, bước ra khu vực sảnh kính Greenhub ngập tràn ánh sáng.", "assets/greenhub/IMG_7812.JPG", "Hành động thể hiện sự chuyển dịch tư duy để tìm lối thoát mới.")
+                    ("2.1 Đầu Cảnh", "Góc nhìn qua vai (Over-the-Shoulder POV)", "Qua vai phải • Chếch xuống điện thoại", "Cầm điện thoại xem video của đối thủ đông nghịt khách bên bàn gỗ đầy phoi bào.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_06_tay_nghe_tot_nhung_van_vang_khach/assets/frames/scene2_beat1.jpg?v=20260913_faceclone_v1", "Tái hiện cảm giác ấm ức và không phục của người thợ làm ăn chân chính."),
+                    ("2.2 Cao Trào", "Cận cảnh nhíu mày trăn trở (Deep Contemplation Close-Up)", "Trực diện 0° • Ngang tầm mắt", "Khuôn mặt đăm chiêu, hàng chân mày nhíu chặt tự vấn lương tâm và nghịch lý thị trường.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_06_tay_nghe_tot_nhung_van_vang_khach/assets/frames/scene2_beat2.jpg?v=20260913_faceclone_v1", "Diễn xuất nội tâm sâu sắc, tìm kiếm câu trả lời cho sự bất công của thời đại số."),
+                    ("2.3 Mồi Chuyển", "Trung cảnh đứng dậy (Medium Standing Up)", "Lệch trục 30° • Ngang tầm ngực", "Đặt điện thoại xuống cạnh đục gỗ, đứng thẳng dậy quyết tâm thay đổi cục diện.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_06_tay_nghe_tot_nhung_van_vang_khach/assets/frames/scene2_beat3.jpg?v=20260913_faceclone_v1", "Hành động thể hiện sự chuyển dịch tư duy từ bế tắc sang tìm kiếm lối thoát.")
                 ]
             },
             {
                 "id": "3", "title": "CẢNH 3: TRÁCH NHIỆM CỦA NGƯỜI LÀM TỬ TẾ", "dur": "5 GIÂY",
                 "voice": "Nhiều lúc tự an ủi: Thôi mình cứ làm có tâm, rồi trời không phụ lòng. Nhưng ngồi nghĩ kỹ mới thấy: Người làm tử tế mà im lặng, thì khách hàng sẽ rơi hết vào tay kẻ làm ẩu.",
                 "beats": [
-                    ("3.1 Đầu Cảnh", "Trung cảnh tựa người bên kính", "Đứng tựa người bên vách kính lớn Greenhub, nhìn ra khoảng trời xanh biếc bên ngoài.", "assets/greenhub/IMG_7813.JPG", "Không gian rộng mở nâng tầm suy nghĩ từ ấm ức cá nhân lên trách nhiệm xã hội."),
-                    ("3.2 Cao Trào", "Góc cận ánh mắt thức tỉnh", "Ánh mắt bừng sáng, không còn oán trách mà nhìn thấy trách nhiệm của chính mình.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "Khoảnh khắc giác ngộ: Im lặng là tiếp tay cho sự ẩu tả trên thị trường."),
-                    ("3.3 Mồi Chuyển", "Bước chân mạnh mẽ ra ban công", "Sải bước dứt khoát đi ra khu vực ban công cây xanh ngoài trời Greenhub.", "assets/greenhub/IMG_7805.JPG", "Chuyển giao năng lượng mạnh mẽ sang hành động thực chiến.")
+                    ("3.1 Đầu Cảnh", "Trung toàn cửa xưởng (Medium Full Shot)", "Góc rộng ngang tầm mắt • Khung cửa", "Đứng tựa người bên khung cửa gỗ xưởng mộc, khoanh tay nhìn ra bầu trời thoáng đãng.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_06_tay_nghe_tot_nhung_van_vang_khach/assets/frames/scene3_beat1.jpg?v=20260913_faceclone_v1", "Không gian rộng mở nâng tầm suy nghĩ từ ấm ức cá nhân lên trách nhiệm nghề nghiệp."),
+                    ("3.2 Cao Trào", "Cận cảnh ánh mắt thức tỉnh (Awakening Eyes Close-Up)", "Cận trực diện • Đón ánh sáng tự nhiên", "Ánh mắt bừng sáng, nhận ra: Người làm tử tế mà im lặng thì khách hàng rơi vào tay kẻ làm ẩu.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_06_tay_nghe_tot_nhung_van_vang_khach/assets/frames/scene3_beat2.jpg?v=20260913_faceclone_v1", "Khoảnh khắc giác ngộ: Không thể tiếp tục trốn tránh việc truyền thông."),
+                    ("3.3 Mồi Chuyển", "Trung cảnh cầm chân máy (Dynamic Grip Medium)", "Lệch trục 25° • Góc ngang thắt lưng", "Dứt khoát cầm chân máy quay lên, quay người bước trở lại bàn mộc với nguồn năng lượng mới.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_06_tay_nghe_tot_nhung_van_vang_khach/assets/frames/scene3_beat3.jpg?v=20260913_faceclone_v1", "Chuyển giao năng lượng mạnh mẽ từ suy nghĩ sang hành động thực chiến.")
                 ]
             },
             {
                 "id": "4", "title": "CẢNH 4: VỨT BỎ TỰ PHỤ NGHỀ NGHIỆP", "dur": "5 GIÂY",
                 "voice": "Cái tôi của người có tay nghề cao lắm. Khinh thường ba cái trò làm video trên mạng, cho là làm màu. Nhưng ôm cái tự phụ đó thì lấy gì trả lương cho thợ?",
                 "beats": [
-                    ("4.1 Đầu Cảnh", "Toàn cảnh ban công nhiều cây", "Đứng giữa giàn cây xanh tươi mát của ban công Greenhub, phong thái tự tại.", "assets/greenhub/IMG_7805.JPG", "Thiên nhiên thoáng đãng giúp rũ bỏ mọi định kiến và sĩ diện hão huyền."),
-                    ("4.2 Cao Trào", "Trung cảnh cầm điện thoại lên", "Cầm chắc máy quay trên tay, góc máy thẳng thắn không chút ngần ngại.", "assets/greenhub/IMG_7806.JPG", "Sự quy phục trước thực tế: Muốn sống với nghề phải biết cách truyền thông nghề."),
-                    ("4.3 Mồi Chuyển", "Cận cảnh nụ cười đĩnh đạc", "Nụ cười tự tin, khí chất của một người thợ lành nghề sẵn sàng chia sẻ.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "Mồi chuyển sang cảnh chốt hạ đầy cảm hứng.")
+                    ("4.1 Đầu Cảnh", "Trung toàn setup máy quay (Medium Full Setup)", "Chếch 30° • Ngang tầm mắt", "Đứng căn chỉnh góc máy và chân tripod đối diện bàn thợ mộc, rũ bỏ sự e dè.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_06_tay_nghe_tot_nhung_van_vang_khach/assets/frames/scene4_beat1.jpg?v=20260913_faceclone_v1", "Vứt bỏ định kiến: Muốn sống được với nghề phải biết cách đưa nghề ra ánh sáng."),
+                    ("4.2 Cao Trào", "Trung cận nhìn màn hình lật (Poised Framing Shot)", "Trực diện 0° • Ngang tầm ngực", "Cầm máy ngắm qua màn hình lật, nụ cười đĩnh đạc tự tin chuẩn bị bấm máy chia sẻ chân thật.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_06_tay_nghe_tot_nhung_van_vang_khach/assets/frames/scene4_beat2.jpg?v=20260913_faceclone_v1", "Sự quy phục trước thực tế: Truyền thông là phụng sự, không phải làm màu hão huyền."),
+                    ("4.3 Mồi Chuyển", "Cận cảnh nụ cười đĩnh đạc (Artisan Poise Close-Up)", "Trực diện 0° • Cận cảnh khuôn mặt", "Nụ cười tự tin, khí chất của một người thợ lành nghề sẵn sàng cất lên tiếng nói chân thật.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_06_tay_nghe_tot_nhung_van_vang_khach/assets/frames/scene4_beat3.jpg?v=20260913_faceclone_v1", "Mồi chuyển sang màn chốt hạ A-Roll đanh thép ở Cảnh 5.")
                 ]
             },
             {
                 "id": "5", "title": "CẢNH 5: CHO THẤY THẾ NÀO LÀ LÀM KỸ", "dur": "4 GIÂY (CHỐT HẠ)",
                 "voice": "Truyền thông không phải là làm màu, mà là trách nhiệm của người có tâm. Đưa máy quay lên, cho người ta thấy thế nào là một sản phẩm làm kỹ thật sự!",
                 "beats": [
-                    ("5.1 Đầu Cảnh", "Toàn cảnh terrace khoáng đạt", "Toàn cảnh góc rộng khu terrace tầng cao Greenhub, tư thế hiên ngang bản lĩnh.", "assets/greenhub/IMG_7808.JPG", "Tôn vinh giá trị của người làm nghề thực thụ trước đất trời."),
-                    ("5.2 Cao Trào", "A-Roll trực diện đanh thép", "Nói thẳng vào camera câu chốt đầy tự hào và bản lĩnh của người làm có tâm.", "assets/greenhub/greenhub_anh_viet_kb02.jpg", "A-Roll truyền lửa mạnh mẽ cho mọi học viên làm nghề tại lớp."),
-                    ("5.3 Mồi Chuyển", "Đặc tả đôi bàn tay cầm máy", "Đôi bàn tay thợ khéo léo bấm lưu video, chuẩn bị đăng tải sản phẩm đầu tiên.", "assets/greenhub/IMG_7799.JPG", "Khép lại một bài học đắt giá về sự kết hợp giữa tay nghề và truyền thông.")
+                    ("5.1 Đầu Cảnh", "Trung cận trực diện bàn thợ (Frontal Medium Close-Up)", "Trực diện 0° • Ngang tầm mắt", "Ngồi đĩnh đạc tại bàn làm mộc, đối diện thẳng vào ống kính máy quay với phong thái chuyên nghiệp.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_06_tay_nghe_tot_nhung_van_vang_khach/assets/frames/scene5_beat1.jpg?v=20260913_faceclone_v1", "Khẳng định tư thế đĩnh đạc và uy tín của người làm nghề có tâm."),
+                    ("5.2 Cao Trào", "Cận trực diện truyền lửa (Passionate Conviction A-Roll)", "Trực diện hất nhẹ 5° • Cận cảnh biểu cảm", "Nói dứt khoát câu chốt vào camera: 'Đưa máy quay lên, cho người ta thấy thế nào là làm kỹ thật sự!'.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_06_tay_nghe_tot_nhung_van_vang_khach/assets/frames/scene5_beat2.jpg?v=20260913_faceclone_v1", "A-Roll truyền lửa mạnh mẽ đánh thức bản lĩnh và trách nhiệm người làm nghề."),
+                    ("5.3 Mồi Chuyển", "Trung cận kết thúc nụ cười ấm (Warm Outro Smile Frame)", "Trực diện 0° • Ngang tầm mắt", "Nụ cười rạng rỡ chân thành, ánh mắt sáng ngời khép lại bài học với khí chất người làm thật.", "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/storyboards/kich_ban_06_tay_nghe_tot_nhung_van_vang_khach/assets/frames/scene5_beat3.jpg?v=20260913_faceclone_v1", "Gieo niềm tin trọn vẹn, khép lại bài học bằng động lực hành động dứt khoát.")
                 ]
             }
         ],
-        
         "wisdom_quote": "Tay nghề của bạn là linh hồn, nhưng video ngắn là đôi cánh. Một linh hồn dù cao đẹp đến mấy nếu không có đôi cánh thì không bao giờ bay đến được với những người đang khao khát nó.",
         "lesson1_title": "Đừng giấu quy trình trong bóng tối",
         "lesson1_desc": "Khách hàng không mua sản phẩm, họ mua công sức và sự tỉ mẩn mà bạn đã đổ vào sản phẩm đó. Hãy quay lại từng công đoạn khó nhất cho họ thấy.",

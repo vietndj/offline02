@@ -148,6 +148,21 @@ def generate_lesson_html(data):
         next_label = f"TIẾP TỤC SANG CẢNH 0{int(sc['id'])+1} →" if int(sc['id']) < 5 else "XEM ĐÚC KẾT BÀI HỌC CUỐI CÙNG →"
         hint_label = f"Cảnh 0{int(sc['id'])+1}" if int(sc['id']) < 5 else "Đúc kết bài học"
 
+        if int(sc["id"]) < 5:
+            scroll_hint_html = f"""
+    <a href="#{next_target}" class="cl-scroll-hint">
+      <span>Cuộn sang {hint_label}</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+    </a>"""
+            end_buttons_html = ""
+        else:
+            scroll_hint_html = ""
+            end_buttons_html = """
+      <div style="margin-top: 36px; display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
+        <a href="9_kich_ban_thuc_chien.html" class="cl-btn">🏛️ QUAY VỀ MASTER HUB 9 KỊCH BẢN</a>
+        <a href="#sec-de-bai" class="cl-btn" style="background: var(--cl-tint); color: var(--cl-text-base); border: 1px solid var(--cl-line); box-shadow: none;">↑ VỀ ĐẦU TRANG</a>
+      </div>"""
+
         scenes_html += f"""
   <!-- ═══════════════════════════════════════════════════════════════════
        KHỐI: PHÂN CẢNH CẢNH {sc['id']} (100dvh)
@@ -165,11 +180,9 @@ def generate_lesson_html(data):
       <div class="beats-3-grid">
         {beats_html}
       </div>
+      {end_buttons_html}
     </div>
-    <a href="#{next_target}" class="cl-scroll-hint">
-      <span>Cuộn sang {hint_label}</span>
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
-    </a>
+    {scroll_hint_html}
   </section>
 """
 
@@ -581,52 +594,7 @@ def generate_lesson_html(data):
   <!-- ═══════════════════════════════════════════════════════════════════
        KHỐI 8 ➔ 12: 5 CẢNH PHÂN CẢNH CHI TIẾT
        ═══════════════════════════════════════════════════════════════════ -->
-  {scenes_html}
-
-  <!-- ═══════════════════════════════════════════════════════════════════
-       KHỐI 13: ĐÚC KẾT BÀI HỌC (100dvh)
-       ═══════════════════════════════════════════════════════════════════ -->
-  <section class="cl-zebra-section cl-zebra--light" id="sec-wisdom">
-    <div class="cl-sec-container cl-sec-container--narrow apple-reveal">
-      <div class="cl-badge">LỜI DẶN DÒ THỰC CHIẾN CỦA ANH VIỆT</div>
-      <h2 class="title-short">ĐÚC KẾT BÀI HỌC</h2>
-
-      <blockquote class="editorial-hook" style="margin-bottom: 24px;">
-        "{data['wisdom_quote']}"
-      </blockquote>
-
-      <div class="takeaways-list">
-        <div class="takeaway-card">
-          <div class="takeaway-num">01</div>
-          <div class="takeaway-content">
-            <h4>{data['lesson1_title']}</h4>
-            <p>{data['lesson1_desc']}</p>
-          </div>
-        </div>
-
-        <div class="takeaway-card">
-          <div class="takeaway-num">02</div>
-          <div class="takeaway-content">
-            <h4>{data['lesson2_title']}</h4>
-            <p>{data['lesson2_desc']}</p>
-          </div>
-        </div>
-
-        <div class="takeaway-card">
-          <div class="takeaway-num">03</div>
-          <div class="takeaway-content">
-            <h4>{data['lesson3_title']}</h4>
-            <p>{data['lesson3_desc']}</p>
-          </div>
-        </div>
-      </div>
-
-      <div style="margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap;">
-        <a href="9_kich_ban_thuc_chien.html" class="cl-btn">🏛️ QUAY VỀ MASTER HUB 9 KỊCH BẢN</a>
-        <a href="#sec-de-bai" class="cl-btn" style="background: var(--cl-tint); color: var(--cl-text-base); border: 1px solid var(--cl-line); box-shadow: none;">↑ VỀ ĐẦU TRANG</a>
-      </div>
-    </div>
-  </section>
+   {scenes_html}
 """
 
     # Assemble HTML
@@ -670,8 +638,8 @@ SHORT_4WORDS = {
 GITHUB_ROOT = "/Users/vietmac/Documents/CODE/vietndj.github.io"
 
 def save_to_all_targets(filenames, content):
-    """Lưu nội dung vào tất cả các repo và thư mục đích với các bí danh tên file."""
-    dirs = [OFFLINE_DIR, COURSE_DIR, GITHUB_COURSE_DIR, GITHUB_ROOT]
+    """Lưu nội dung DUY NHẤT vào repo course/."""
+    dirs = [COURSE_DIR]
     for d in dirs:
         os.makedirs(d, exist_ok=True)
         for fname in filenames:
@@ -684,26 +652,21 @@ def main():
     for ldata in ALL_LESSONS:
         html = generate_lesson_html(ldata)
         lid = str(int(ldata["id"]))
-        old_name = ldata["file_name"]
-        short_name = SHORT_NAMES.get(old_name, old_name)
         kb_simple = KICHBAN_NAMES.get(lid, f"kichban{lid}.html")
-        kb_4words = SHORT_4WORDS.get(lid, f"kb{lid}.html")
 
-        # Save to all aliases
-        aliases = list(dict.fromkeys([kb_simple, kb_4words, short_name, old_name]))
-        save_to_all_targets(aliases, html)
-        print(f"Saved Lesson {lid} aliases: {kb_simple}, {kb_4words}, {short_name}")
+        # Save ONLY to the canonical name (kichban2.html to kichban9.html)
+        save_to_all_targets([kb_simple], html)
+        print(f"Saved Lesson {lid} canonical file: {kb_simple}")
 
-    # Synchronize Lesson 1 (bai-01-ca-phe-dem.html) with all aliases
+    # Synchronize Lesson 1 (bai-01-ca-phe-dem.html) as kichban1.html
     bai01_src = os.path.join(OFFLINE_DIR, "bai-01-ca-phe-dem.html")
     with open(bai01_src, "r", encoding="utf-8") as f:
         bai01_content = f.read()
 
-    l1_aliases = ["kichban1.html", "kb1-ca-phe-dem.html", "bai-01-ca-phe-dem.html", "kich_ban_01_ngoi_ca_phe_10h_toi.html"]
-    save_to_all_targets(l1_aliases, bai01_content)
-    print("Synchronized Lesson 1 aliases: kichban1.html, kb1-ca-phe-dem.html to all targets")
+    save_to_all_targets(["kichban1.html"], bai01_content)
+    print("Synchronized Lesson 1 canonical file: kichban1.html")
 
-    print("\nAll 9 lessons synchronized successfully in all target directories!")
+    print("\nAll 9 lessons synchronized cleanly as kichban1.html - kichban9.html!")
 
 if __name__ == "__main__":
     main()

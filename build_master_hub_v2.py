@@ -863,14 +863,8 @@ def build_master_hub():
     GITHUB_COURSE_DIR = "/Users/vietmac/Documents/CODE/vietndj.github.io/course"
 
     destinations = [
-        os.path.join(OFFLINE_DIR, "9_kich_ban_thuc_chien.html"),
-        os.path.join(OFFLINE_DIR, "9-bai-tap-thuc-hanh.html"),
-        os.path.join(GITHUB_DIR, "9_kich_ban_thuc_chien.html"),
-        os.path.join(GITHUB_DIR, "9-bai-tap-thuc-hanh.html"),
         os.path.join(COURSE_DIR, "9_kich_ban_thuc_chien.html"),
-        os.path.join(COURSE_DIR, "9-bai-tap-thuc-hanh.html"),
-        os.path.join(GITHUB_COURSE_DIR, "9_kich_ban_thuc_chien.html"),
-        os.path.join(GITHUB_COURSE_DIR, "9-bai-tap-thuc-hanh.html")
+        os.path.join(COURSE_DIR, "9-bai-tap-thuc-hanh.html")
     ]
     for dst in destinations:
         os.makedirs(os.path.dirname(dst), exist_ok=True)
