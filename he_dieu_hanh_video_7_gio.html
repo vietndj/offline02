@@ -70,7 +70,6 @@
     backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px);
     transform-style: preserve-3d;
     
-    /* Animation nội suy siêu mượt */
     transform:
       rotateX(calc(45deg - var(--p1) * 45deg))
       rotateY(calc(0deg + var(--p2) * -10deg + var(--p3) * 10deg))
@@ -82,16 +81,15 @@
     display: flex; align-items: center; justify-content: center;
   }
 
-  /* Core Text */
   .os-logo {
     text-align: center;
     transform: translateZ(20px);
-    opacity: calc(1 - var(--p1) * 0.8); /* Mờ đi khi 2 trụ cột hiện lên */
+    opacity: calc(1 - var(--p1) * 0.8);
   }
-  .os-logo h3 { font-size: 24px; color: #888; font-weight: 600; letter-spacing: 2px; }
-  .os-logo h2 { font-size: 42px; font-weight: 800; background: linear-gradient(180deg, #fff, #aaa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .os-logo h3 { font-size: 20px; color: #888; font-weight: 600; letter-spacing: 2px; margin-bottom: 4px; }
+  .os-logo h2 { font-size: 38px; font-weight: 800; background: linear-gradient(180deg, #fff, #aaa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-  /* TRỤ CỘT 1: THỊ GIÁC (Bên trái) */
+  /* TRỤ CỘT 1: CỖ MÁY NÉN THỊ GIÁC (Bên trái) */
   .layer-visual {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
     border-radius: 40px; border: 2px solid var(--visual-color);
@@ -102,12 +100,12 @@
     opacity: calc(var(--p1));
     transition: transform 0.1s linear, opacity 0.1s linear;
     display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;
-    padding: 40px; box-sizing: border-box;
+    padding: 36px; box-sizing: border-box;
   }
-  .layer-visual .tag { color: var(--visual-color); font-weight: 800; letter-spacing: 1px; font-size: 22px; margin-bottom: 8px;}
-  .layer-visual .sub { color: #fff; font-size: 15px; font-weight: 500; opacity: 0.8;}
+  .layer-visual .tag { color: var(--visual-color); font-weight: 800; letter-spacing: 1px; font-size: 20px; margin-bottom: 8px;}
+  .layer-visual .sub { color: #fff; font-size: 14px; font-weight: 500; opacity: 0.8;}
 
-  /* TRỤ CỘT 2: NĂNG LỰC (Bên phải) */
+  /* TRỤ CỘT 2: THÌA NẾM THỬ (Bên phải) */
   .layer-auth {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
     border-radius: 40px; border: 2px solid var(--auth-color);
@@ -118,12 +116,12 @@
     opacity: calc(var(--p2));
     transition: transform 0.1s linear, opacity 0.1s linear;
     display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-end;
-    padding: 40px; box-sizing: border-box; text-align: right;
+    padding: 36px; box-sizing: border-box; text-align: right;
   }
-  .layer-auth .tag { color: var(--auth-color); font-weight: 800; letter-spacing: 1px; font-size: 22px; margin-bottom: 8px;}
-  .layer-auth .sub { color: #fff; font-size: 15px; font-weight: 500; opacity: 0.8;}
+  .layer-auth .tag { color: var(--auth-color); font-weight: 800; letter-spacing: 1px; font-size: 20px; margin-bottom: 8px;}
+  .layer-auth .sub { color: #fff; font-size: 14px; font-weight: 500; opacity: 0.8;}
 
-  /* MAPPING MATRIX (P3) */
+  /* BẾP KÍNH & QUY LUẬT 90/10 (P3) */
   .matrix-layer {
     position: absolute; width: 100%; height: 100%;
     display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
@@ -131,13 +129,13 @@
     opacity: var(--p3); transform: translateZ(calc(var(--p3) * 120px));
     transition: opacity 0.1s linear, transform 0.1s linear;
   }
-  .matrix-item { background: rgba(255,255,255,0.1); border-radius: 12px; padding: 16px; border: 1px solid rgba(255,255,255,0.2); }
-  .matrix-item h4 { color: #fff; font-size: 14px; margin-bottom: 4px; }
-  .matrix-item p { color: #aaa; font-size: 12px; }
+  .matrix-item { background: rgba(255,255,255,0.1); border-radius: 16px; padding: 20px; border: 1px solid rgba(255,255,255,0.2); display: flex; flex-direction: column; justify-content: center;}
+  .matrix-item h4 { color: #fff; font-size: 20px; font-weight: 800; margin-bottom: 8px; }
+  .matrix-item p { color: #aaa; font-size: 14px; line-height: 1.5; font-weight: 500;}
 
-  /* ĐÍCH ĐẾN: U MÊ CHỐT SALE (P4) */
+  /* ĐÍCH ĐẾN: 1000 VIDEO KPI (P4) */
   .final-conversion {
-    position: absolute; width: 200px; height: 200px;
+    position: absolute; width: 220px; height: 220px;
     background: #fff; border-radius: 50%;
     box-shadow: 0 0 80px #fff, 0 0 160px #fff;
     opacity: var(--p4);
@@ -145,7 +143,7 @@
     display: flex; align-items: center; justify-content: center;
     transition: opacity 0.1s linear, transform 0.1s linear;
   }
-  .final-conversion span { color: #000; font-weight: 800; font-size: 24px; text-align: center; }
+  .final-conversion span { color: #000; font-weight: 800; font-size: 20px; text-align: center; line-height: 1.3;}
 
   /* LỚP TEXT CUỘN (SCROLL TRACK) */
   .scroll-track {
@@ -159,12 +157,12 @@
   }
 
   .step-content {
-    background: rgba(30, 30, 32, 0.7);
-    backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
+    background: rgba(20, 20, 22, 0.75);
+    backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px);
     padding: 48px; border-radius: 32px;
     border: 1px solid rgba(255,255,255,0.15);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-    max-width: 640px; text-align: left;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+    max-width: 680px; text-align: left;
     pointer-events: auto;
     
     transform: translateY(calc(80px - 80px * var(--local-progress)));
@@ -172,14 +170,14 @@
     transition: opacity 0.1s linear, transform 0.1s linear;
   }
 
-  .step-content .step-tag { font-size: 14px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; display: block;}
-  .step-content h2 { font-size: 36px; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 20px; color: #fff; line-height: 1.2; }
-  .step-content p { font-size: 18px; line-height: 1.6; color: var(--text-muted); font-weight: 500; margin-bottom: 16px; }
-  .step-content p strong { color: #fff; }
+  .step-content .step-tag { font-size: 13px; font-weight: 800; color: #aaa; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; display: block;}
+  .step-content h2 { font-size: 34px; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 20px; color: #fff; line-height: 1.3; }
+  .step-content p { font-size: 17px; line-height: 1.6; color: var(--text-muted); font-weight: 500; margin-bottom: 16px; }
+  .step-content p strong { color: #fff; font-weight: 700; }
   
   .step-content ul { padding-left: 24px; margin-bottom: 16px; }
-  .step-content li { font-size: 18px; line-height: 1.6; color: var(--text-muted); font-weight: 500; margin-bottom: 8px; }
-  .step-content li strong { color: #fff; }
+  .step-content li { font-size: 17px; line-height: 1.6; color: var(--text-muted); font-weight: 500; margin-bottom: 8px; }
+  .step-content li strong { color: #fff; font-weight: 700; }
 
   /* Màn Intro */
   .intro {
@@ -188,12 +186,12 @@
     z-index: 30; pointer-events: none;
     opacity: calc(1 - var(--p1) * 4);
   }
-  .intro h1 { font-size: 64px; font-weight: 800; letter-spacing: -0.04em; text-align: center; }
-  .intro p { font-size: 24px; color: var(--text-muted); margin-top: 16px; font-weight: 500; text-align: center;}
+  .intro h1 { font-size: 64px; font-weight: 800; letter-spacing: -0.04em; text-align: center; line-height: 1.1; }
+  .intro p { font-size: 22px; color: var(--text-muted); margin-top: 16px; font-weight: 500; text-align: center;}
   
   .scroll-indicator {
     position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
-    font-size: 13px; font-weight: 600; letter-spacing: 3px; color: #666;
+    font-size: 12px; font-weight: 700; letter-spacing: 3px; color: #666;
     animation: pulse 2s infinite; text-transform: uppercase;
   }
   @keyframes pulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
@@ -210,41 +208,45 @@
     <div class="glow-center"></div>
 
     <div class="intro">
-      <h1>Hệ Điều Hành Video</h1>
-      <p>Công Thức Tích Lũy Đủ 7 Giờ Niềm Tin.</p>
-      <div class="scroll-indicator">Cuộn để bóc tách</div>
+      <h1>Hệ Điều Hành<br/>Bếp Kính Michelin</h1>
+      <p>Bóc trần cỗ máy in tiền của Video Chuyên Môn.</p>
+      <div class="scroll-indicator">Cuộn để giải phẫu</div>
     </div>
 
     <!-- KHỐI CHIP 3D TƯƠNG TÁC -->
     <div class="os-core">
       <div class="os-logo">
         <h3>HỆ ĐIỀU HÀNH</h3>
-        <h2>VIDEO CHUYÊN MÔN</h2>
+        <h2>BẾP KÍNH MICHELIN</h2>
       </div>
       
-      <!-- Lớp 1 tách ra: THỊ GIÁC -->
+      <!-- Lớp 1 tách ra: THÌA NẾM THỬ (NĂNG LỰC) -->
       <div class="layer-visual">
-        <div class="tag">TRỤ CỘT 1: THỊ GIÁC</div>
-        <div class="sub">Giữ chân — Chống lướt</div>
+        <div class="tag">TRỤ CỘT 1: THÌA NẾM THỬ</div>
+        <div class="sub">Đâm xuyên thể diện — Không dạy lan man</div>
       </div>
       
-      <!-- Lớp 2 tách ra: NĂNG LỰC -->
+      <!-- Lớp 2 tách ra: CỖ MÁY NÉN (THỊ GIÁC) -->
       <div class="layer-auth">
-        <div class="tag">TRỤ CỘT 2: TRÍ TUỆ</div>
-        <div class="sub">Neo niềm tin — Đóng gói</div>
+        <div class="tag">TRỤ CỘT 2: CỖ MÁY NÉN</div>
+        <div class="sub">Thôi miên thị giác — Nhồi kiến thức</div>
       </div>
 
-      <!-- Lớp 3: Bảng ánh xạ -->
+      <!-- Lớp 3: Bảng ánh xạ Quy luật 90/10 -->
       <div class="matrix-layer">
-        <div class="matrix-item"><h4>Bất Động Sản</h4><p>Quy hoạch + Lật sổ đỏ</p></div>
-        <div class="matrix-item"><h4>Tóc / Salon</h4><p>ASMR + Phản ứng hóa học</p></div>
-        <div class="matrix-item"><h4>Da Liễu</h4><p>Soi da vi mô + Phác đồ</p></div>
-        <div class="matrix-item"><h4>Kinh Doanh</h4><p>Sơ đồ nhấp nháy + Cơ cấu vốn</p></div>
+        <div class="matrix-item">
+          <h4 style="color: #2997ff;">90% Đám Đông</h4>
+          <p>Lười & Không có đồ nghề.<br/>→ Trở thành Nhân viên Marketing cày View miễn phí.</p>
+        </div>
+        <div class="matrix-item">
+          <h4 style="color: #f59e0b;">10% Khách VIP</h4>
+          <p>Sốc vì độ rủi ro & phức tạp.<br/>→ Tự động quỳ gối mang tiền đến thuê chuyên gia.</p>
+        </div>
       </div>
 
       <!-- Lớp 4: Final Conversion -->
       <div class="final-conversion">
-        <span>CHỐT SALE<br>TỰ ĐỘNG</span>
+        <span>KPI<br>1000 VIDEO<br><br><span style="font-size:12px; color:#666;">Hoàn thành > Hoàn hảo</span></span>
       </div>
     </div>
   </div>
@@ -253,50 +255,43 @@
   <div class="scroll-track">
     <div class="step" data-index="1">
       <div class="step-content">
-        <span class="step-tag">Giai đoạn 1</span>
-        <h2>Trụ Cột 1: Thỏa Mãn Thị Giác</h2>
-        <p>Bản chất của một Video Chuyên Môn cuốn hút không nằm ở việc tấu hài hay đu trend nhảm. Nhiệm vụ đầu tiên là kích thích **Dopamine Mục Tiêu** thông qua Cảm giác mượt mà của hình ảnh.</p>
-        <ul>
-          <li><strong>Nhịp điệu (Visual Pacing) trơn tru:</strong> Chuyển cảnh nhanh, tuyệt đối không có khoảng chết.</li>
-          <li><strong>Thanh âm sắc nét:</strong> SFX (hiệu ứng âm thanh) khớp 100% với nhịp hành động.</li>
-        </ul>
-        <p><strong>Kết quả:</strong> Khán giả bị thôi miên, xem quên thời gian và chống lướt tuyệt đối.</p>
+        <span class="step-tag">Giai đoạn 1: Lõi chuyên môn</span>
+        <h2>Trụ Cột 1: Chiếc Thìa Nếm Thử</h2>
+        <p>Khoe mẽ bề mặt bằng thâm niên là tự sát. Khách hàng sẽ bật khiên phòng thủ: <em>"Lại bốc phét lùa gà"</em>.</p>
+        <p>Cách của sát thủ là <strong>Phát tặng trải nghiệm vi mô</strong>. Hãy chiết xuất một giọt tinh túy nhất, sâu nhất của nghề (VD: Vật lý cắt tóc layer, Phác đồ y khoa) đút cho khán giả nếm thử.</p>
+        <p>Khán giả nếm 1 giọt kiến thức cực sâu sẽ "À" lên sảng khoái. Họ tự động rút tiền ra mua mà không cần bạn phải dạy học lan man từ A-Z.</p>
       </div>
     </div>
     
     <div class="step" data-index="2">
       <div class="step-content">
-        <span class="step-tag">Giai đoạn 2</span>
-        <h2>Trụ Cột 2: Bảo Chứng Năng Lực</h2>
-        <p>Thay vì dùng từ "thị uy" có phần trịch thượng, thuật ngữ chuẩn xác ở đây là **Credibility Proof**. Đây là lúc thỏa mãn trí tuệ của người xem.</p>
-        <ul>
-          <li><strong>Kiến thức lõi & Kỹ thuật sâu:</strong> Lượng thông tin phải áp đảo, dồn dập, đập tan mọi "văn mẫu AI" rỗng tuếch.</li>
-          <li><strong>Mục đích cốt lõi:</strong> Không phải để dạy nghề hay hướng dẫn họ tự làm.</li>
-        </ul>
-        <p><strong>Kết quả:</strong> Khán giả gật gù, nể phục trí tuệ của bạn và tự động nảy sinh nhu cầu chốt sale.</p>
+        <span class="step-tag">Giai đoạn 2: Lớp vỏ bọc</span>
+        <h2>Trụ Cột 2: Cỗ Máy Nén (Thị Giác)</h2>
+        <p>Mang thìa nếm thử ra nhưng lại bắt khách nghe thuyết trình 30 phút, họ sẽ ngáp và bỏ đi. Kỷ nguyên này là sân chơi khám phá, không phải cái phễu dồn ép!</p>
+        <p>Bắt buộc phải <strong>BỌC</strong> chuyên môn khổng lồ vào 1 video dưới 2 phút bằng <strong>Cỗ máy nén Thị giác</strong>: Nhịp điệu trơn tru, chuyển cảnh nhanh, SFX khớp nhịp.</p>
+        <p>Thông tin dội bom như súng liên thanh nhưng mắt lại cực kỳ thư giãn. Khán giả rơi vào trạng thái <strong>thôi miên, quên thời gian</strong>, ở trong công viên video của bạn đủ 7 giờ đồng hồ.</p>
       </div>
     </div>
     
     <div class="step" data-index="3">
       <div class="step-content">
-        <span class="step-tag">Giai đoạn 3</span>
-        <h2>Bảng Ánh Xạ (Mapping) Đa Ngành</h2>
-        <p>Lấy khuôn mẫu "7 loại cảnh trám" làm Hệ Điều Hành gốc. Từ đó thay biến số cho từng ngành là ra hàng trăm video chuẩn cấu trúc:</p>
+        <span class="step-tag">Giai đoạn 3: Phân phối</span>
+        <h2>Xây Gian Bếp Kính (Quy Luật 90/10)</h2>
+        <p>Đập bỏ bức tường giấu nghề, phô diễn 100% kỹ thuật giữa phố. Vì sao không sợ mất nghề? Vì mục đích là <strong>Bảo chứng năng lực</strong>, không phải dạy nghề!</p>
         <ul>
-          <li><strong>Bất Động Sản:</strong> Vỏ bọc (Zoom quy hoạch, Flycam) + Lõi (Khung pháp lý, Chu kỳ dòng tiền).</li>
-          <li><strong>Da Liễu / Spa:</strong> Vỏ bọc (Soi da hiển vi, Thao tác vô trùng) + Lõi (Hoạt chất, Phác đồ y khoa).</li>
-          <li><strong>Kinh Doanh:</strong> Vỏ bọc (Lướt bảng tính, Sơ đồ nhấp nháy) + Lõi (Cơ cấu vốn, Phễu chuyển đổi).</li>
+          <li><strong>90% Đám đông:</strong> Đứng ngoài vỗ tay, share điên cuồng. Họ lười và không có đồ nghề. Họ là nhân viên cày view miễn phí.</li>
+          <li><strong>10% Khách VIP:</strong> Nhờ đám đông mà biết tới bạn. Họ bị độ phức tạp làm cho choáng ngợp. Não nảy số: <em>"Nghề này rủi ro quá, mình phải móc tiền thuê ông chuyên gia này cho an toàn!"</em></li>
         </ul>
       </div>
     </div>
     
     <div class="step" data-index="4">
       <div class="step-content">
-        <span class="step-tag">Khóa chốt</span>
-        <h2>Quy Tắc Vàng: U Mê Chuyển Đổi</h2>
-        <p>Khán giả xem video Tóc không phải để tự về nhà lấy kéo cắt. Họ xem video Bất Động Sản không phải để tự đi làm sổ đỏ.</p>
-        <p>Họ xem vì **Video quá mượt (Thỏa mãn thị giác)** và **Kiến thức quá khủng (Bảo chứng năng lực)**.</p>
-        <p>Hai thứ đó gộp lại sinh ra trạng thái <strong>"U mê"</strong>, giúp bạn vượt qua mọi rào cản phòng thủ tâm lý của khách hàng một cách dễ dàng nhất, đạt mốc 7 Giờ Tích Lũy Niềm Tin.</p>
+        <span class="step-tag">Giai đoạn 4: Kỷ luật thực thi</span>
+        <h2>Khóa Chốt: KPI 1.000 Chiếc Thìa</h2>
+        <p>Dân làm nghề hay bị bệnh Cầu Toàn. Nói vấp 1 câu là xóa, giấu nhẹm mâm cỗ trong bếp cho hoàn hảo rồi chết đói.</p>
+        <p>Phải ép não bộ chuyển từ <strong>"Phải Hoàn Hảo"</strong> sang <strong>"Phải Hoàn Thành"</strong>.</p>
+        <p>Bơm liên tục 1.000 chiếc thìa nếm thử ra ngoài đường, kiểu gì cũng vớt được 100 đại gia. Đó là cách đập nát mọi rào cản phòng thủ và thiết lập một đế chế tự động!</p>
       </div>
     </div>
   </div>
