@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Storytelling — Bản Chất Niềm Tin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        /* Tải Font Chuẩn FEDU */
+        @font-face {
+            font-family: 'FD Aeonik Extended';
+            src: url('../k/fonts/FDAeonikExtended-Bold.woff2') format('woff2');
+            font-weight: 700;
+        }
+        @font-face {
+            font-family: 'FD Aeonik';
+            src: url('../k/fonts/FDAeonik-Regular.woff2') format('woff2');
+            font-weight: 400;
+        }
+        @font-face {
+            font-family: 'FD Aeonik';
+            src: url('../k/fonts/FDAeonik-Medium.woff2') format('woff2');
+            font-weight: 500;
+        }
+        @font-face {
+            font-family: 'FD Aeonik';
+            src: url('../k/fonts/FDAeonik-Bold.woff2') format('woff2');
+            font-weight: 600 700;
+        }
+        @font-face {
+            font-family: 'Tiempos Text';
+            src: url('../k/fonts/FDTiemposText-Regular.woff2') format('woff2');
+            font-weight: 400;
+        }
+        @font-face {
+            font-family: 'Tiempos Text';
+            src: url('../k/fonts/FDTiemposText-Medium.woff2') format('woff2');
+            font-weight: 500;
+        }
+        @font-face {
+            font-family: 'Tiempos Text';
+            src: url('../k/fonts/FDTiemposText-RegularItalic.woff2') format('woff2');
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        :root {
+            --font-display-short: 'FD Aeonik Extended', sans-serif;
+            --font-display-long: 'FD Aeonik', sans-serif;
+            --font-body: 'Tiempos Text', serif;
+
+            --apple-dark: #000000;
+            --apple-dark-gray: #111111;
+            --apple-light: #FFFFFF;
+            --apple-light-gray: #F8FAFC;
+            --apple-text-dark: #090d16;
+            --apple-text-body: #0f172a;
+            --apple-text-gray: #86868B;
+            --apple-link: #1a73e8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--apple-dark);
+            color: #fff;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        .cl-badge {
+            font-family: var(--font-display-short);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .headline-hero {
+            font-family: var(--font-display-short);
+            font-size: clamp(40px, 6vw, 72px);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -0.01em;
+            line-height: 1.1;
+        }
+
+        .headline-section {
+            font-family: var(--font-display-short);
+            font-size: clamp(28px, 4vw, 48px);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -0.01em;
+            line-height: 1.2;
+        }
+
+        .apple-card-title {
+            font-family: var(--font-display-long);
+            font-size: clamp(18px, 2.5vw, 24px);
+            font-weight: 600;
+            line-height: 1.35;
+            margin-bottom: 12px;
+        }
+
+        .body-large {
+            font-family: var(--font-body);
+            font-size: 17px;
+            line-height: 1.82;
+            font-weight: 400;
+        }
+
+        .editorial-hook {
+            font-family: var(--font-body);
+            font-style: italic;
+            font-weight: 500;
+            font-size: 19px;
+            line-height: 1.65;
+            border-left: 3px solid var(--apple-link);
+            padding-left: 20px;
+        }
+
+        .spec-number {
+            font-family: var(--font-display-short);
+            font-size: clamp(64px, 10vw, 120px);
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        /* ===== GRADIENT TEXT ===== */
+        .gradient-text {
+            background: linear-gradient(90deg, #b8f3ff, #8b5cf6, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ===== SECTIONS ===== */
+        .section-dark { background: var(--apple-dark); color: #fff; }
+        .section-dark-gray { background: var(--apple-dark-gray); color: #fff; }
+        .section-light { background: var(--apple-light); color: var(--apple-text-body); }
+        .section-light-gray { background: var(--apple-light-gray); color: var(--apple-text-body); }
+
+        .text-gray { color: var(--apple-text-gray); }
+
+        /* ===== BENTO BOX ===== */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .bento-card {
+            background: #1D1D1F;
+            border-radius: 28px;
+            padding: 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .bento-card.light { background: #ffffff; box-shadow: 0 4px 24px rgba(0,0,0,0.04); }
+        .bento-card.tint { background: var(--apple-light-gray); border: 1px solid rgba(0,0,0,0.04); }
+        
+        .bento-card.full { grid-column: 1 / -1; justify-content: center; }
+
+        .quote-box {
+            background: rgba(0,0,0,0.03);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-top: 16px;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .reveal { opacity: 0; transform: translateY(60px); }
+        .reveal-left { opacity: 0; transform: translateX(-60px); }
+        .reveal-right { opacity: 0; transform: translateX(60px); }
+        
+        @media (max-width: 768px) {
+            .bento-grid { grid-template-columns: 1fr; }
+            .bento-card { padding: 32px 24px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- MÀN 1: HERO SECTION -->
+<section class="section-dark min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20 pb-20">
+    <div class="max-w-[800px] mx-auto">
+        <p class="cl-badge text-[#1a73e8] reveal">LOGIC STORYTELLING & BẢN CHẤT NIỀM TIN</p>
+        <h1 class="headline-hero gradient-text mb-8 reveal">BÁN ĐỒ RẺ TIỀN CẦN VIEW,<br>BÁN ĐỒ GIÁ CAO CẦN NIỀM TIN</h1>
+        
+        <p class="body-large text-gray mb-8 reveal">
+            Bạn có thể chốt đơn đồ ăn vặt nhờ đu trend giật gân, nhưng để làm thương hiệu dài hạn và bán chuyên môn, khách hàng chỉ móc hầu bao khi họ thực sự tin tưởng bạn.
+        </p>
+
+        <div class="editorial-hook border-l-0 border-t border-b border-[#333] py-6 text-[#ccc] reveal">
+            <b>Câu hỏi đặt ra là:</b> Niềm tin của một người lạ trên mạng đến từ đâu? Nó không đến từ việc mặc vest đứng trước phông xanh bóng bẩy. <b>Niềm tin đến từ việc em dám nói thật.</b>
+        </div>
+    </div>
+</section>
+
+<!-- MÀN 2 & 3: BENTO DỌC LỆCH PHA (MỔ XẺ 3 TẦNG & VÍ DỤ CÀ PHÊ) -->
+<section class="section-light-gray py-[120px] px-6">
+    <div class="max-w-[1200px] mx-auto mb-16">
+        <p class="cl-badge text-[#1a73e8] reveal">02 / MỔ XẺ 3 TẦNG THỰC TẾ</p>
+        <h2 class="headline-section text-[var(--apple-text-dark)] mb-6 reveal">ANH HỎI THẬT EM, EM HỌC LÀM VIDEO ĐỂ LÀM GÌ?</h2>
+        <p class="body-large text-[#475569] reveal">Nếu anh gặp em buổi đầu, anh hỏi: <i>"Em đi học làm video để làm gì?"</i>.</p>
+    </div>
+
+    <div class="bento-grid">
+        <!-- Tầng 1 -->
+        <div class="bento-card light reveal">
+            <div>
+                <p class="cl-badge text-[#64748b]">TẦNG 1: LỜI NÓI ĐÃI BÔI (GOOGLE CÓ SẴN)</p>
+                <p class="body-large italic text-[#090d16] mb-4">"Dạ em học để xây kênh, để làm video nhiều người biết đến."</p>
+            </div>
+            <p class="body-large text-[#64748b] text-[15px]">
+                Anh nghe xong sẽ lướt qua ngay. Giữa anh và em không có chút kết nối nào. Đây là thứ văn mẫu ngoài miệng, ai cũng gõ Google lấy ra được, không có con người thật của em ở đó.
+            </p>
+        </div>
+
+        <!-- Tầng 2 -->
+        <div class="bento-card light reveal">
+            <div>
+                <p class="cl-badge text-[#15803d]">TẦNG 2: CẢM GIÁC THẬT VI MÔ</p>
+                <p class="body-large italic text-[#090d16] mb-4">"Em thấy trong ngành ai cũng làm video. Em không biết có ăn thua không nhưng em sợ bị bỏ lại cuộc chơi. Em xem video của anh thấy có vẻ đáng tin nên đi học để rút ngắn thời gian."</p>
+            </div>
+            <p class="body-large text-[#15803d] text-[15px]">
+                Anh kết nối với em ngay lập tức. Câu nói sợ bị bỏ lại, muốn rút ngắn thời gian là một trải nghiệm rất nhỏ, rất chi ly mà chỉ người có suy nghĩ thật mới nói ra được.
+            </p>
+        </div>
+
+        <!-- Tầng 3 & 2.5 -->
+        <div class="bento-card light full reveal border-l-[6px] border-[#f59e0b]">
+            <p class="cl-badge text-[#b45309]">TẦNG 3: NỖI SỢ THẦM KÍN & CHIẾC MẶT NẠ GIỮ THỂ DIỆN (TẦNG 2.5)</p>
+            <p class="body-large mb-4">
+                Đến tầng thứ ba là những thứ em không dám nói ra: Em thấy người ta làm được, em cũng đã thức đêm tự mày mò, quay thử, cắt thử trên điện thoại theo hướng dẫn trên mạng. Mất cả tuần trời mà video ra nhìn vẫn dở tệ. Em vừa tức, vừa sốt ruột vì tiền nhà, tiền học con, hóa đơn nó vẫn tới đều mỗi ngày. Em đang rất bế tắc.
+            </p>
+            <p class="body-large mb-4">
+                Nhưng vì lòng tự trọng của người đi làm có vị thế, em không bao giờ thừa nhận mình bất lực. Em sẽ tìm những lý do nghe rất đàng hoàng để ngụy trang:
+            </p>
+            <div class="quote-box body-large text-[#475569] mb-6">
+                • <i>"Bận rộn công việc cơ quan, thời gian đâu mà làm video."</i><br>
+                • <i>"Làm ăn là phải quan hệ thật ngoài đời chứ ai làm trò trên mạng."</i><br>
+                • <i>"Khách của mình toàn khách VIP, lên mạng nói lung tung người ta đánh giá."</i><br>
+                • <i>"Anh già rồi, dốt công nghệ, thôi nhường lớp trẻ nhạy bén."</i>
+            </div>
+            <p class="body-large">
+                Em chủ động nhận mình dốt công nghệ không phải vì em dốt thật, mà đó là <b>cách tốt nhất để không ai bắt bẻ được việc em đang sợ thay đổi</b>. Nếu em đưa đúng cái cớ đó vào video, gọi tên nó một cách bình thản, những người cùng cảnh ngộ sẽ thấy lạnh sống lưng và tin em tuyệt đối.
+            </p>
+        </div>
+
+        <!-- MÀN 3: VÍ DỤ CÀ PHÊ -->
+        <div class="bento-card tint full reveal mt-8">
+            <p class="cl-badge text-[#1a73e8]">03 / VÍ DỤ QUỐC DÂN</p>
+            <h2 class="headline-section text-[var(--apple-text-dark)] mb-6">CHUYỆN XÁCH MÁY TÍNH RA CÀ PHÊ CHẠY DEADLINE</h2>
+            <p class="body-large mb-6">Một ví dụ nữa rất gần gũi mà ai đi làm cũng từng nếm qua: Chuyện ra quán cà phê.</p>
+            
+            <div class="apple-card-title mb-4">4 Nấc Nhận Thức Trong Một Hành Động Quen Thuộc</div>
+            <ul class="body-large space-y-3 mb-8 ml-5 list-disc text-[#475569]">
+                <li><b>Tầng 1 (Văn mẫu Google):</b> <i>"Ra quán cà phê đổi gió lấy cảm hứng, chạy deadline cho tập trung."</i></li>
+                <li><b>Tầng 2 (Hiện trường thật):</b> Thật ra là ở nhà tiếng con khóc, việc gia đình lắt nhắt làm đầu óc ngột ngạt. Phải trốn ra ngoài tìm vài mét vuông tĩnh lặng để thở.</li>
+                <li><b>Tầng 3 (Nỗi bế tắc giấu kín):</b> Ngồi trước cốc nước 2 tiếng đồng hồ không gõ nổi một dòng. Trong đầu bế tắc hoàn toàn, áp lực tiền nong, trách nhiệm của một người chồng, người cha, người con lớn trong nhà đè nặng lên vai.</li>
+                <li><b>Tầng 2.5 (Cái cớ khi về nhà):</b> Tối dắt xe vào nhà, vẫn phải nói cứng với vợ: <i>"Hôm nay anh đi gặp đối tác bàn việc dự án quan trọng."</i></li>
+            </ul>
+
+            <div class="editorial-hook">
+                "Khi em kể lại đúng cái khoảnh khắc ngồi nhìn cốc nước tan hết đá mà màn hình vẫn trắng tinh... em không cần giảng giải đạo lý, người nghe tự thấy chính họ trong đó."
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MÀN 4 & 5: BENTO GRID ĐEN (WOODSMALL & ĐÓNG GÓI) -->
+<section class="section-dark py-[120px] px-6">
+    <div class="max-w-[1200px] mx-auto text-center mb-16">
+        <p class="cl-badge text-emerald-400 reveal">04 / BẢN CHẤT TÂM LÝ HỌC</p>
+        <h2 class="headline-section reveal">MÔ TẢ ĐÚNG BỆNH Ở CẤP ĐỘ VI MÔ LÀ NẮM THUỐC GIẢI</h2>
+    </div>
+
+    <div class="bento-grid">
+        <!-- Woodsmall Quote -->
+        <div class="bento-card reveal">
+            <div>
+                <p class="cl-badge text-gray">ĐỊNH LUẬT WOODSMALL</p>
+            </div>
+            <p class="body-large font-medium italic mt-8 text-[#ccc]">
+                "Nếu bạn có thể mô tả vấn đề của người khác ở cấp độ vi mô chính xác hơn chính họ, họ sẽ mặc định tin rằng bạn đang nắm trong tay thuốc giải."
+            </p>
+        </div>
+
+        <!-- Thợ sửa xe -->
+        <div class="bento-card reveal">
+            <div>
+                <p class="cl-badge text-gray">1. VÍ DỤ ANH THỢ SỬA XE MÁY</p>
+            </div>
+            <p class="body-large text-[#ccc] mt-8">
+                Em dắt xe vào tiệm, anh thợ không hỏi han dông dài. Anh ấy chỉ cúi xuống kéo ga một nhịp, nghe tiếng máy nổ khục khục vài giây rồi bảo: <i>"Xe này hỏng trục cam với đánh lửa trễ rồi."</i>. Em giao xe ngay lập tức, không mặc cả một lời. Vì anh ấy mô tả đúng bệnh ở cấp độ vi mô, em mặc định anh ấy biết cách chữa.
+            </p>
+        </div>
+
+        <!-- Chi phí Ads 80% -->
+        <div class="bento-card full reveal">
+            <p class="cl-badge text-gray mb-6">2. TRẢI NGHIỆM THẬT CỦA ANH VIỆT</p>
+            <div class="apple-card-title text-white mb-4">Cuối Tháng Chi Phí Ads Ngốn 80%</div>
+            <p class="body-large text-[#ccc] mb-4">
+                Ngày xưa lúc anh chưa làm video lên mặt, cuối tháng nhìn báo cáo thấy tiền quảng cáo ngốn mất 80% doanh thu. Trừ hết chi phí, tiền về túi mình chỉ còn vỏn vẹn 10%. Anh làm giáo dục 15 năm mà lúc đó thất vọng, tức giận, nuốt nước bọt khan không nói nên lời. Cứ tưởng làm lớn là lãi nhiều.
+            </p>
+            <p class="body-large text-[#ccc]">
+                Cái cảm giác nuốt nước bọt khan đấy, vì nó nằm trong trải nghiệm thật của anh nên anh mô tả lại rất sống. Và khi người làm chủ nghe anh nói đúng cái khoảnh khắc đó, họ tự tin là anh có giải pháp gỡ cho họ.
+            </p>
+        </div>
+
+        <!-- Nhẫn vàng bọc nilon -->
+        <div class="bento-card full reveal bg-gradient-to-br from-[#1D1D1F] to-[#0a0a0a] border border-[#333]">
+            <div class="text-center">
+                <p class="cl-badge text-pink-400 mb-4">05 / ĐÓNG GÓI THỊ GIÁC</p>
+                <h2 class="headline-section text-white mb-8">NHẪN VÀNG BỌC TÚI NILON THÌ AI TIN LÀ VÀNG THẬT?</h2>
+            </div>
+            <div class="max-w-[800px] mx-auto text-center">
+                <p class="body-large text-[#ccc] mb-6">
+                    Nội dung chân thật của em giống như một <b>chiếc nhẫn vàng</b>.
+                </p>
+                <p class="body-large text-[#ccc] mb-8">
+                    Nhưng nếu em đem chiếc nhẫn vàng đó bọc trong một cái túi nilon nhàu nhĩ rồi đưa cho người ta, người ta sẽ nghi ngờ ngay: <i>"Đồ giả, hoặc đồ đi trộm cắp ở đâu chứ vàng thật ai lại gói thế này!"</i>.
+                </p>
+                <div class="editorial-hook border-l-0 border-t border-b border-[#333] py-6 text-left">
+                    <div class="apple-card-title text-white mb-2 not-italic">Video Chỉn Chu Chính Là Chiếc Hộp Nhung</div>
+                    Kỹ thuật quay dựng, cắt cúp sạch sẽ, chuyển cảnh êm ái không ngắt quãng thị giác, âm thanh rõ ràng và nhạc nền ăn khớp... chính là chiếc hộp nhung sang trọng để xứng tầm với chiếc nhẫn vàng bên trong. Đó là sự tôn trọng tối thiểu dành cho mắt và tai của người xem.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MÀN 6 & 6.5: THE NUMBERS & TRACK HÌNH/TIẾNG -->
+<section class="section-dark-gray py-[120px] px-6">
+    <div class="max-w-[1200px] mx-auto text-center mb-16">
+        <p class="cl-badge text-[#1a73e8] reveal">06 / TẦN SUẤT & ĐỘ DÀI TIẾP XÚC</p>
+        <h2 class="headline-section reveal">MUỐN NGƯỜI TA TIN, PHẢI ĐỂ HỌ GẶP MÌNH ĐỦ 7 TIẾNG</h2>
+        <p class="body-large text-gray mt-6 max-w-[800px] mx-auto reveal">
+            Google đã chứng minh bằng công thức <b>7 - 11 - 4</b>: Một người cần tiếp xúc đủ <b>7 giờ</b>, qua <b>11 điểm chạm</b>, ở <b>4 không gian</b> khác nhau thì mới hình thành niềm tin sâu sắc để mua hàng giá trị cao.
+        </p>
+    </div>
+
+    <!-- The Numbers -->
+    <div class="max-w-[1000px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-16">
+        <div class="reveal">
+            <p class="spec-number text-white">7</p>
+            <p class="body-large text-gray">Giờ xem liên tục</p>
+        </div>
+        <div class="reveal">
+            <p class="spec-number text-white">11</p>
+            <p class="body-large text-gray">Điểm chạm nội dung</p>
+        </div>
+        <div class="reveal">
+            <p class="spec-number text-white">4</p>
+            <p class="body-large text-gray">Không gian khác nhau</p>
+        </div>
+    </div>
+
+    <div class="max-w-[800px] mx-auto bg-[#1D1D1F] p-10 rounded-[28px] reveal mb-24">
+        <div class="apple-card-title text-white mb-4">Mỗi video 1 phút ➔ Cần hàng trăm video</div>
+        <p class="body-large text-[#ccc] mb-4">
+            Video sâu sắc bóc tách tâm lý không thể sản xuất hàng loạt mỗi ngày như bắp cải ngoài chợ. Em không thể ngày nào cũng ngồi triết lý nặng nề.
+        </p>
+        <p class="body-large text-[#ccc] mb-6">
+            <b>Cách làm đúng:</b> Đa dạng hóa định dạng đời sống (tập thể thao, chăm con, góc làm việc, hướng dẫn mẹo nghề, đi dạy...). Những video đời sống này làm theo các nhịp điệu quen thuộc sẽ ăn đề xuất và viral.
+        </p>
+        <div class="editorial-hook border-l-[3px] border-[#1a73e8] py-2 text-white">
+            <b>Video viral đời sống là đòn bẩy kéo người ta vào</b>, để rồi khi họ tò mò, họ sẽ xem tiếp các video sâu sắc của em. Xem đủ 7 tiếng, họ thấy em như người quen trong nhà.
+        </div>
+    </div>
+
+    <!-- MÀN 6.5 -->
+    <div class="max-w-[1200px] mx-auto text-center mb-16">
+        <p class="cl-badge text-emerald-400 reveal">06.5 / CƠ CHẾ THỎA MÃN</p>
+        <h2 class="headline-section reveal">CÁCH KHÁCH HÀNG NGẦM CHẤM ĐIỂM TAY NGHỀ</h2>
+        <p class="body-large text-gray mt-6 max-w-[800px] mx-auto reveal">
+            Để tích lũy đủ 7 tiếng xem liên tục, video của bạn không được là loại "view rỗng" mua vui. Bí mật nằm ở việc tạo ra cảm giác thỏa mãn cho người xem qua 2 phần: Thỏa mãn Thị giác và Thỏa mãn Trí tuệ.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-[1200px] mx-auto">
+        <div class="reveal-left bg-[#1D1D1F] p-10 rounded-[28px] border-t-4 border-emerald-400">
+            <h3 class="apple-card-title text-emerald-400 mb-2">TRACK HÌNH (THỎA MÃN THỊ GIÁC)</h3>
+            <p class="body-large text-white mb-6">Giữ chân - Mắt không mỏi</p>
+            <ul class="text-[#ccc] space-y-4 body-large mb-8">
+                <li>• Nhịp điệu trơn tru</li>
+                <li>• Cắt cúp dứt khoát</li>
+                <li>• Âm thanh, nhạc nền êm ái</li>
+            </ul>
+            <div class="bg-black p-4 rounded-xl body-large text-emerald-400 text-center font-medium mt-auto">
+                Kết quả: Mắt xem êm ru<br>Cuốn theo mạch video
+            </div>
+        </div>
+        
+        <div class="reveal-right bg-[#1D1D1F] p-10 rounded-[28px] border-t-4 border-pink-400">
+            <h3 class="apple-card-title text-pink-400 mb-2">TRACK TIẾNG (THỎA MÃN TRÍ TUỆ)</h3>
+            <p class="body-large text-white mb-6">Thấy được tay nghề thật</p>
+            <ul class="text-[#ccc] space-y-4 body-large mb-8">
+                <li>• Nói đúng khó khăn thực tế</li>
+                <li>• Phân tích cặn kẽ, rõ ràng</li>
+                <li>• Cách làm việc chỉn chu</li>
+            </ul>
+            <div class="bg-black p-4 rounded-xl body-large text-pink-400 text-center font-medium mt-auto">
+                Kết quả: Nghe trúng tim đen<br>Gật gù tin tưởng
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MÀN 7: BỘ CÔNG CỤ -->
+<section class="section-light py-[120px] px-6">
+    <div class="max-w-[1000px] mx-auto">
+        <div class="text-center mb-16">
+            <p class="cl-badge text-[#1a73e8] reveal">07 / CÔNG CỤ THỰC HÀNH</p>
+            <h2 class="headline-section text-[var(--apple-text-dark)] mb-6 reveal">KHO Ý TƯỞNG & BẮT ĐẦU TỪ MỘT VIỆC NHỎ HÔM NAY</h2>
+            <p class="body-large text-[#475569] reveal">
+                Để em không phải mỗi sáng thức dậy vò đầu bứt tai nghĩ xem hôm nay quay cái gì, anh có sẵn 2 công cụ:
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div class="bg-white p-10 rounded-[28px] shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-gray-100 reveal-left flex flex-col justify-between h-full">
+                <div>
+                    <div class="apple-card-title text-[#090d16] mb-4">1. Bóc Tách Kịch Bản 4 Tầng</div>
+                    <p class="body-large text-[#475569] mb-8">
+                        Nhập một hành động đời thường bất kỳ, công cụ tự bóc tách ra các phản xạ giữ thể diện và xuất kịch bản 7 câu. Điểm mấu chốt: <b>Em chỉ chọn cái nào nằm trong trải nghiệm thật của em</b> thì em mới nói thật được.
+                    </p>
+                </div>
+                <a href="./4tang.html" class="inline-block bg-[#1a73e8] text-white px-6 py-3 rounded-full font-medium text-center hover:bg-blue-700 transition">MỞ CÔNG CỤ 4 TẦNG →</a>
+            </div>
+
+            <div class="bg-white p-10 rounded-[28px] shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-gray-100 reveal-right flex flex-col justify-between h-full">
+                <div>
+                    <div class="apple-card-title text-[#090d16] mb-4">2. Kho Định Dạng Quốc Tế</div>
+                    <p class="body-large text-[#475569] mb-8">
+                        Cập nhật các kênh lớn trên thế giới ở mọi ngành nghề. Lướt 10 phút mỗi ngày để nền tảng gợi ý các định dạng phù hợp, có ý tưởng làm liên tục để tích lũy đủ 7 giờ tiếp xúc.
+                    </p>
+                </div>
+                <a href="https://ytuong.fedu.vn" target="_blank" class="inline-block bg-[#1a73e8] text-white px-6 py-3 rounded-full font-medium text-center hover:bg-blue-700 transition">MỞ KHO Ý TƯỞNG →</a>
+            </div>
+        </div>
+
+        <div class="editorial-hook text-center border-l-0 py-8 border-t border-b border-gray-200 reveal">
+            "Chuyển đổi thực sự bắt đầu từ khoảnh khắc: Khi người ta gặp khó khăn trong nghề của em, người đầu tiên họ nghĩ đến để hỏi ý kiến chính là em."
+        </div>
+    </div>
+</section>
+
+<!-- SCRIPT GSAP -->
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+    
+    document.querySelectorAll('.reveal').forEach((el) => {
+        gsap.to(el, {
+            scrollTrigger: {
+                trigger: el,
+                start: 'top 85%',
+            },
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            ease: 'power3.out'
+        });
+    });
+
+    document.querySelectorAll('.reveal-left').forEach((el) => {
+        gsap.to(el, {
+            scrollTrigger: {
+                trigger: el,
+                start: 'top 85%',
+            },
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            ease: 'power3.out'
+        });
+    });
+
+    document.querySelectorAll('.reveal-right').forEach((el) => {
+        gsap.to(el, {
+            scrollTrigger: {
+                trigger: el,
+                start: 'top 85%',
+            },
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            ease: 'power3.out'
+        });
+    });
+</script>
+</body>
+</html>
