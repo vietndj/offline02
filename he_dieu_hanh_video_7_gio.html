@@ -3,14 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Hệ Điều Hành Video 7 Giờ - Apple Mac Style</title>
+<title>Hệ Điều Hành Video Chuyên Môn - Công Thức 7 Giờ</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #000000;
     --text: #f5f5f7;
     --text-muted: #86868b;
-    --accent: #2997ff;
+    --visual-color: #2997ff;
+    --auth-color: #f59e0b;
     --p1: 0; --p2: 0; --p3: 0; --p4: 0;
   }
   
@@ -22,7 +23,7 @@
     background-color: #000;
   }
   
-  h1, h2, h3, p { margin: 0; }
+  h1, h2, h3, p, ul, li { margin: 0; padding: 0; }
 
   /* Mạch ngầm lưới nền (Grid background) */
   .grid-bg {
@@ -31,13 +32,11 @@
       linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
     background-size: 40px 40px;
-    z-index: 0;
-    pointer-events: none;
+    z-index: 0; pointer-events: none;
     mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
     -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
   }
 
-  /* Bộ khung cuộn chính */
   .scrolly-container { position: relative; width: 100%; z-index: 10; }
 
   /* LỚP NỀN CỐ ĐỊNH (APPLE STICKY CANVAS) */
@@ -46,147 +45,151 @@
     width: 100vw; height: 100vh;
     overflow: hidden; 
     display: flex; align-items: center; justify-content: center;
-    perspective: 1200px; /* Không gian 3D */
+    perspective: 1200px;
     z-index: 1;
   }
 
-  /* Khối ánh sáng trung tâm */
   .glow-center {
     position: absolute; width: 80vw; height: 80vw;
-    background: radial-gradient(circle, rgba(41,151,255,0.15) 0%, rgba(0,0,0,0) 60%);
+    background: radial-gradient(circle, rgba(41,151,255,0.1) 0%, rgba(245,158,11,0.05) 30%, rgba(0,0,0,0) 60%);
     top: 50%; left: 50%; transform: translate(-50%, -50%);
-    opacity: calc(0.3 + var(--p3) * 0.7); /* Sáng rực ở nhịp 3 */
-    z-index: 0;
-    pointer-events: none;
+    opacity: calc(0.2 + var(--p4) * 0.8);
+    z-index: 0; pointer-events: none;
   }
 
-  /* BỘ VI XỬ LÝ (CHIP/OS CỐT LÕI) - 3D TRANSFORM THEO SCROLL */
+  /* BỘ VI XỬ LÝ (CHIP/OS CỐT LÕI) */
   .os-core {
     position: relative; z-index: 5;
-    width: 480px; height: 320px;
+    width: 600px; height: 380px;
     background: rgba(20, 20, 22, 0.4);
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 40px;
     box-shadow: 
       0 40px 100px rgba(0,0,0,0.8), 
-      inset 0 1px 1px rgba(255,255,255,0.3),
-      inset 0 0 40px rgba(255,255,255,0.05);
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
+      inset 0 1px 1px rgba(255,255,255,0.3);
+    backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px);
     transform-style: preserve-3d;
     
-    /* MA THUẬT NỘI SUY APPLE: Xoay 3D tuyến tính theo tỷ lệ phần trăm cuộn */
-    /* Ban đầu nghiêng 3D (như MacBook), cuộn P1 -> Lật thẳng mặt, Cuộn P2 -> Tách lớp, Cuộn P3 -> Phóng to */
+    /* Animation nội suy siêu mượt */
     transform:
-      rotateX(calc(50deg - var(--p1) * 50deg))
-      rotateY(calc(0deg + var(--p2) * -15deg))
-      rotateZ(calc(-20deg + var(--p1) * 20deg))
-      scale(calc(1 + var(--p3) * 0.2 + var(--p4) * 0.5))
-      translateZ(calc(var(--p4) * 300px));
+      rotateX(calc(45deg - var(--p1) * 45deg))
+      rotateY(calc(0deg + var(--p2) * -10deg + var(--p3) * 10deg))
+      rotateZ(calc(-15deg + var(--p1) * 15deg))
+      scale(calc(1 + var(--p3) * 0.1 + var(--p4) * 0.3))
+      translateZ(calc(var(--p4) * 200px));
       
     transition: transform 0.1s linear;
     display: flex; align-items: center; justify-content: center;
   }
 
-  /* Logo OS giữa Chip */
+  /* Core Text */
   .os-logo {
-    font-size: 32px; font-weight: 800; letter-spacing: -1px;
-    background: linear-gradient(180deg, #fff, #888);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    transform: translateZ(20px); /* Nổi 3D lên mặt kính */
-    opacity: calc(1 - var(--p2) * 0.5); /* Mờ đi ở nhịp 2 để nhường chỗ cho 2 trụ cột */
+    text-align: center;
+    transform: translateZ(20px);
+    opacity: calc(1 - var(--p1) * 0.8); /* Mờ đi khi 2 trụ cột hiện lên */
   }
+  .os-logo h3 { font-size: 24px; color: #888; font-weight: 600; letter-spacing: 2px; }
+  .os-logo h2 { font-size: 42px; font-weight: 800; background: linear-gradient(180deg, #fff, #aaa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-  /* TRỤ CỘT 1: THỊ GIÁC (Tách lớp bay lên) */
+  /* TRỤ CỘT 1: THỊ GIÁC (Bên trái) */
   .layer-visual {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    border-radius: 40px;
-    border: 2px solid #0071e3;
-    background: rgba(0, 113, 227, 0.05);
-    /* Tách bay lên ở P2, sang trái ở P3 */
+    border-radius: 40px; border: 2px solid var(--visual-color);
+    background: rgba(41, 151, 255, 0.08);
     transform: 
-      translateZ(calc(var(--p2) * 80px))
-      translateX(calc(var(--p3) * -120px));
-    opacity: calc(var(--p2));
+      translateZ(calc(var(--p1) * 60px))
+      translateX(calc(var(--p2) * -180px - var(--p3) * 0px));
+    opacity: calc(var(--p1));
     transition: transform 0.1s linear, opacity 0.1s linear;
-    display: flex; align-items: flex-start; justify-content: flex-start;
-    padding: 30px; box-sizing: border-box;
+    display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;
+    padding: 40px; box-sizing: border-box;
   }
-  .layer-visual .tag { color: #0071e3; font-weight: 700; letter-spacing: 1px; font-size: 14px; }
+  .layer-visual .tag { color: var(--visual-color); font-weight: 800; letter-spacing: 1px; font-size: 22px; margin-bottom: 8px;}
+  .layer-visual .sub { color: #fff; font-size: 15px; font-weight: 500; opacity: 0.8;}
 
-  /* TRỤ CỘT 2: NĂNG LỰC (Tách lớp chìm xuống) */
+  /* TRỤ CỘT 2: NĂNG LỰC (Bên phải) */
   .layer-auth {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    border-radius: 40px;
-    border: 2px solid #f59e0b;
-    background: rgba(245, 158, 11, 0.05);
-    /* Chìm xuống ở P2, sang phải ở P3 */
+    border-radius: 40px; border: 2px solid var(--auth-color);
+    background: rgba(245, 158, 11, 0.08);
     transform: 
-      translateZ(calc(var(--p2) * -80px))
-      translateX(calc(var(--p3) * 120px));
+      translateZ(calc(var(--p1) * -60px + var(--p2) * 60px))
+      translateX(calc(var(--p2) * 180px - var(--p3) * 0px));
     opacity: calc(var(--p2));
     transition: transform 0.1s linear, opacity 0.1s linear;
-    display: flex; align-items: flex-end; justify-content: flex-end;
-    padding: 30px; box-sizing: border-box;
+    display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-end;
+    padding: 40px; box-sizing: border-box; text-align: right;
   }
-  .layer-auth .tag { color: #f59e0b; font-weight: 700; letter-spacing: 1px; font-size: 14px; }
+  .layer-auth .tag { color: var(--auth-color); font-weight: 800; letter-spacing: 1px; font-size: 22px; margin-bottom: 8px;}
+  .layer-auth .sub { color: #fff; font-size: 15px; font-weight: 500; opacity: 0.8;}
 
-  /* LỚP ĐƯỜNG TRUYỀN DATA (Sáng lên ở P4) */
-  .data-streams {
-    position: absolute; width: 150%; height: 2px; background: linear-gradient(90deg, transparent, #fff, transparent);
-    top: 50%; left: -25%; transform: scaleX(var(--p4));
-    opacity: var(--p4);
-    box-shadow: 0 0 20px #fff;
+  /* MAPPING MATRIX (P3) */
+  .matrix-layer {
+    position: absolute; width: 100%; height: 100%;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+    padding: 40px; box-sizing: border-box;
+    opacity: var(--p3); transform: translateZ(calc(var(--p3) * 120px));
+    transition: opacity 0.1s linear, transform 0.1s linear;
   }
+  .matrix-item { background: rgba(255,255,255,0.1); border-radius: 12px; padding: 16px; border: 1px solid rgba(255,255,255,0.2); }
+  .matrix-item h4 { color: #fff; font-size: 14px; margin-bottom: 4px; }
+  .matrix-item p { color: #aaa; font-size: 12px; }
+
+  /* ĐÍCH ĐẾN: U MÊ CHỐT SALE (P4) */
+  .final-conversion {
+    position: absolute; width: 200px; height: 200px;
+    background: #fff; border-radius: 50%;
+    box-shadow: 0 0 80px #fff, 0 0 160px #fff;
+    opacity: var(--p4);
+    transform: translateZ(calc(var(--p4) * 400px));
+    display: flex; align-items: center; justify-content: center;
+    transition: opacity 0.1s linear, transform 0.1s linear;
+  }
+  .final-conversion span { color: #000; font-weight: 800; font-size: 24px; text-align: center; }
 
   /* LỚP TEXT CUỘN (SCROLL TRACK) */
   .scroll-track {
-    position: relative; z-index: 20;
-    width: 100%;
-    padding-top: 80vh; 
-    padding-bottom: 50vh;
+    position: relative; z-index: 20; width: 100%;
+    padding-top: 80vh; padding-bottom: 50vh;
   }
-
   .step {
-    height: 120vh; /* Không gian cuộn dài để hiệu ứng mượt */
+    height: 120vh;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
-    pointer-events: none; /* Xuyên click xuống dưới */
+    pointer-events: none;
   }
 
-  /* Thẻ nội dung - Apple Glassmorphism */
   .step-content {
-    background: rgba(30, 30, 32, 0.65);
+    background: rgba(30, 30, 32, 0.7);
     backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
     padding: 48px; border-radius: 32px;
     border: 1px solid rgba(255,255,255,0.15);
     box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-    max-width: 560px; text-align: center;
+    max-width: 640px; text-align: left;
     pointer-events: auto;
     
-    /* Hiệu ứng trượt và rõ dần (Fade up) được tính toán siêu chính xác theo vị trí cuộn */
     transform: translateY(calc(80px - 80px * var(--local-progress)));
     opacity: var(--local-progress);
     transition: opacity 0.1s linear, transform 0.1s linear;
   }
 
-  .step-content h2 { 
-    font-size: 40px; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 16px; 
-    background: linear-gradient(180deg, #fff 0%, #a1a1a6 100%); 
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  }
-  .step-content p { 
-    font-size: 21px; line-height: 1.5; color: var(--text-muted); font-weight: 500;
-  }
+  .step-content .step-tag { font-size: 14px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; display: block;}
+  .step-content h2 { font-size: 36px; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 20px; color: #fff; line-height: 1.2; }
+  .step-content p { font-size: 18px; line-height: 1.6; color: var(--text-muted); font-weight: 500; margin-bottom: 16px; }
+  .step-content p strong { color: #fff; }
+  
+  .step-content ul { padding-left: 24px; margin-bottom: 16px; }
+  .step-content li { font-size: 18px; line-height: 1.6; color: var(--text-muted); font-weight: 500; margin-bottom: 8px; }
+  .step-content li strong { color: #fff; }
 
   /* Màn Intro */
   .intro {
     position: absolute; top: 0; left: 0; width: 100%; height: 100vh;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     z-index: 30; pointer-events: none;
-    opacity: calc(1 - var(--p1) * 3); /* Biến mất rất nhanh khi bắt đầu cuộn */
+    opacity: calc(1 - var(--p1) * 4);
   }
-  .intro h1 { font-size: 72px; font-weight: 800; letter-spacing: -0.05em; text-align: center; }
-  .intro p { font-size: 24px; color: var(--text-muted); margin-top: 16px; font-weight: 500; }
+  .intro h1 { font-size: 64px; font-weight: 800; letter-spacing: -0.04em; text-align: center; }
+  .intro p { font-size: 24px; color: var(--text-muted); margin-top: 16px; font-weight: 500; text-align: center;}
   
   .scroll-indicator {
     position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
@@ -207,57 +210,93 @@
     <div class="glow-center"></div>
 
     <div class="intro">
-      <h1>Video OS.</h1>
-      <p>Hệ điều hành chuyên môn 7 giờ.</p>
-      <div class="scroll-indicator">Cuộn để khám phá</div>
+      <h1>Hệ Điều Hành Video</h1>
+      <p>Công Thức Tích Lũy Đủ 7 Giờ Niềm Tin.</p>
+      <div class="scroll-indicator">Cuộn để bóc tách</div>
     </div>
 
     <!-- KHỐI CHIP 3D TƯƠNG TÁC -->
     <div class="os-core">
-      <div class="os-logo">CI SYSTEM</div>
-      
-      <!-- Lớp 1 tách ra -->
-      <div class="layer-visual">
-        <div class="tag">70% THỊ GIÁC</div>
+      <div class="os-logo">
+        <h3>HỆ ĐIỀU HÀNH</h3>
+        <h2>VIDEO CHUYÊN MÔN</h2>
       </div>
       
-      <!-- Lớp 2 tách ra -->
+      <!-- Lớp 1 tách ra: THỊ GIÁC -->
+      <div class="layer-visual">
+        <div class="tag">TRỤ CỘT 1: THỊ GIÁC</div>
+        <div class="sub">Giữ chân — Chống lướt</div>
+      </div>
+      
+      <!-- Lớp 2 tách ra: NĂNG LỰC -->
       <div class="layer-auth">
-        <div class="tag">30% NĂNG LỰC</div>
+        <div class="tag">TRỤ CỘT 2: TRÍ TUỆ</div>
+        <div class="sub">Neo niềm tin — Đóng gói</div>
       </div>
 
-      <!-- Tia chớp tốc độ -->
-      <div class="data-streams"></div>
+      <!-- Lớp 3: Bảng ánh xạ -->
+      <div class="matrix-layer">
+        <div class="matrix-item"><h4>Bất Động Sản</h4><p>Quy hoạch + Lật sổ đỏ</p></div>
+        <div class="matrix-item"><h4>Tóc / Salon</h4><p>ASMR + Phản ứng hóa học</p></div>
+        <div class="matrix-item"><h4>Da Liễu</h4><p>Soi da vi mô + Phác đồ</p></div>
+        <div class="matrix-item"><h4>Kinh Doanh</h4><p>Sơ đồ nhấp nháy + Cơ cấu vốn</p></div>
+      </div>
+
+      <!-- Lớp 4: Final Conversion -->
+      <div class="final-conversion">
+        <span>CHỐT SALE<br>TỰ ĐỘNG</span>
+      </div>
     </div>
   </div>
 
-  <!-- LỚP CUỘN KIỂM SOÁT TIẾN TRÌNH (BỘ NỘI SUY CSS) -->
+  <!-- LỚP TEXT CUỘN -->
   <div class="scroll-track">
     <div class="step" data-index="1">
       <div class="step-content">
-        <h2>0h - 2h: Thỏa Mãn Thị Giác</h2>
-        <p>Bóc tách 3 giây đầu tiên (Hook) và băm nhỏ nhịp điệu (Micro-beats). Khóa chặt điểm nhìn của khán giả, loại bỏ hoàn toàn các khung hình chết.</p>
+        <span class="step-tag">Giai đoạn 1</span>
+        <h2>Trụ Cột 1: Thỏa Mãn Thị Giác</h2>
+        <p>Bản chất của một Video Chuyên Môn cuốn hút không nằm ở việc tấu hài hay đu trend nhảm. Nhiệm vụ đầu tiên là kích thích **Dopamine Mục Tiêu** thông qua Cảm giác mượt mà của hình ảnh.</p>
+        <ul>
+          <li><strong>Nhịp điệu (Visual Pacing) trơn tru:</strong> Chuyển cảnh nhanh, tuyệt đối không có khoảng chết.</li>
+          <li><strong>Thanh âm sắc nét:</strong> SFX (hiệu ứng âm thanh) khớp 100% với nhịp hành động.</li>
+        </ul>
+        <p><strong>Kết quả:</strong> Khán giả bị thôi miên, xem quên thời gian và chống lướt tuyệt đối.</p>
       </div>
     </div>
     
     <div class="step" data-index="2">
       <div class="step-content">
-        <h2>2h - 4h: Phân Tách 2 Trụ Cột</h2>
-        <p>Giải phẫu lõi chuyên môn bằng ma trận 4 tầng nhận thức. Phá vỡ vỏ bọc "văn mẫu AI" rỗng tuếch, nhúng trực tiếp bằng chứng và dữ liệu cá nhân hóa.</p>
+        <span class="step-tag">Giai đoạn 2</span>
+        <h2>Trụ Cột 2: Bảo Chứng Năng Lực</h2>
+        <p>Thay vì dùng từ "thị uy" có phần trịch thượng, thuật ngữ chuẩn xác ở đây là **Credibility Proof**. Đây là lúc thỏa mãn trí tuệ của người xem.</p>
+        <ul>
+          <li><strong>Kiến thức lõi & Kỹ thuật sâu:</strong> Lượng thông tin phải áp đảo, dồn dập, đập tan mọi "văn mẫu AI" rỗng tuếch.</li>
+          <li><strong>Mục đích cốt lõi:</strong> Không phải để dạy nghề hay hướng dẫn họ tự làm.</li>
+        </ul>
+        <p><strong>Kết quả:</strong> Khán giả gật gù, nể phục trí tuệ của bạn và tự động nảy sinh nhu cầu chốt sale.</p>
       </div>
     </div>
     
     <div class="step" data-index="3">
       <div class="step-content">
-        <h2>4h - 6h: Mở Rộng Hệ Thống</h2>
-        <p>2 trụ cột kết hợp tạo ra cỗ máy dựng video siêu tốc. Đồng bộ hóa timeline chuẩn, tự động bẻ 2 dòng phụ đề tiếng Việt chỉ bằng 1 cú click chuột.</p>
+        <span class="step-tag">Giai đoạn 3</span>
+        <h2>Bảng Ánh Xạ (Mapping) Đa Ngành</h2>
+        <p>Lấy khuôn mẫu "7 loại cảnh trám" làm Hệ Điều Hành gốc. Từ đó thay biến số cho từng ngành là ra hàng trăm video chuẩn cấu trúc:</p>
+        <ul>
+          <li><strong>Bất Động Sản:</strong> Vỏ bọc (Zoom quy hoạch, Flycam) + Lõi (Khung pháp lý, Chu kỳ dòng tiền).</li>
+          <li><strong>Da Liễu / Spa:</strong> Vỏ bọc (Soi da hiển vi, Thao tác vô trùng) + Lõi (Hoạt chất, Phác đồ y khoa).</li>
+          <li><strong>Kinh Doanh:</strong> Vỏ bọc (Lướt bảng tính, Sơ đồ nhấp nháy) + Lõi (Cơ cấu vốn, Phễu chuyển đổi).</li>
+        </ul>
       </div>
     </div>
     
     <div class="step" data-index="4">
       <div class="step-content">
-        <h2>6h - 7h: Khai Phóng</h2>
-        <p>Tự động hóa hoàn toàn phễu bán hàng (Landing Page) và hệ thống thu tiền VietQR 24/7. Bạn chỉ cần sáng tạo, hệ thống tự lo phần còn lại.</p>
+        <span class="step-tag">Khóa chốt</span>
+        <h2>Quy Tắc Vàng: U Mê Chuyển Đổi</h2>
+        <p>Khán giả xem video Tóc không phải để tự về nhà lấy kéo cắt. Họ xem video Bất Động Sản không phải để tự đi làm sổ đỏ.</p>
+        <p>Họ xem vì **Video quá mượt (Thỏa mãn thị giác)** và **Kiến thức quá khủng (Bảo chứng năng lực)**.</p>
+        <p>Hai thứ đó gộp lại sinh ra trạng thái <strong>"U mê"</strong>, giúp bạn vượt qua mọi rào cản phòng thủ tâm lý của khách hàng một cách dễ dàng nhất, đạt mốc 7 Giờ Tích Lũy Niềm Tin.</p>
       </div>
     </div>
   </div>
@@ -269,19 +308,15 @@
   const stepContents = document.querySelectorAll('.step-content');
   const root = document.documentElement;
 
-  // Ngăn Chrome nhớ vị trí cuộn cũ khi load lại trang
   if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
   window.scrollTo(0, 0);
 
-  // Động cơ nội suy 120fps (Zero GSAP overhead)
   function renderFrame() {
     const vh = window.innerHeight;
     
     steps.forEach((step, index) => {
       const rect = step.getBoundingClientRect();
       
-      // 1. LOCAL PROGRESS: Dùng để tính toán độ mờ (opacity) và vị trí (translateY) của tấm thẻ chữ
-      // Khi đỉnh tấm thẻ cách đáy màn hình 80% (bắt đầu hiện) -> lên tới 30% (hiện rõ 100%)
       let localProgress = 0;
       const startPoint = vh * 0.85; 
       const endPoint = vh * 0.35;
@@ -297,23 +332,18 @@
       
       stepContents[index].style.setProperty('--local-progress', localProgress);
 
-      // 2. GLOBAL PROGRESS: Dùng để điều khiển khối 3D đằng sau
-      // Khối 3D chuyển động liên tục và từ từ suốt hành trình thẻ chữ đi qua màn hình
       let globalProgress = (vh - rect.top) / vh;
       globalProgress = Math.max(0, Math.min(1, globalProgress));
       
-      // Sử dụng easing (Cubic Ease Out) để cảm giác xoay 3D có độ nặng và mượt như Apple
       const easeOut = 1 - Math.pow(1 - globalProgress, 3);
       root.style.setProperty(`--p${index + 1}`, easeOut);
     });
   }
 
-  // Lắng nghe sự kiện scroll và bám vào VSync của màn hình (RequestAnimationFrame)
   window.addEventListener('scroll', () => {
     requestAnimationFrame(renderFrame);
   }, { passive: true });
 
-  // Khởi chạy frame đầu tiên
   renderFrame();
 </script>
 </body>
