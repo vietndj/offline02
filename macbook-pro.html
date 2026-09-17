@@ -1,227 +1,706 @@
 <!DOCTYPE html>
-<html lang="vi" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>MacBook Pro - Clone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacBook Pro — Apple</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='40' x='10' font-family='Arial' font-size='30' font-weight='bold' fill='black'%3EVI%3C/text%3E%3Ccircle cx='55' cy='30' r='10' fill='%23EF4444'/%3E%3Ctext y='80' x='10' font-family='Arial' font-size='30' font-weight='bold' fill='black'%3EDEO%3C/text%3E%3C/svg%3E">
     <style>
-        /* FD System Typography Setup */
-        @font-face { font-family: 'FD Aeonik Extended'; src: url('https://30ngayviral.fedu.vn/fonts/FDAeonikExtended-Bold.woff2') format('woff2'); font-weight: 700; font-display: swap; }
-        @font-face { font-family: 'FD Aeonik'; src: url('https://30ngayviral.fedu.vn/fonts/FDAeonik-SemiBold.woff2') format('woff2'); font-weight: 600; font-display: swap; }
-        @font-face { font-family: 'Tiempos Text'; src: url('https://30ngayviral.fedu.vn/fonts/TiemposText-Regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
-        
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
         :root {
-            --font-display: 'FD Aeonik Extended', sans-serif;
-            --font-display-long: 'FD Aeonik', sans-serif;
-            --font-body: 'Tiempos Text', serif;
+            --apple-dark: #000000;
+            --apple-dark-gray: #111111;
+            --apple-light: #FFFFFF;
+            --apple-light-gray: #F5F5F7;
+            --apple-text-dark: #1D1D1F;
+            --apple-text-gray: #86868B;
+            --apple-link: #2997FF;
+            --apple-buy: #0071E3;
         }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: var(--font-body);
-            background-color: #000;
-            color: #f5f5f7;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--apple-dark);
+            color: #fff;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Apple-style nav items in FD Aeonik */
-        nav, .btn, .badge {
-            font-family: var(--font-display-long);
+        /* ===== NAV ===== */
+        .global-nav {
+            position: fixed; top: 0; width: 100%; z-index: 100;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .global-nav a { color: #ccc; font-size: 12px; transition: color 0.3s; }
+        .global-nav a:hover { color: #fff; }
+
+        .local-nav {
+            position: fixed; top: 44px; width: 100%; z-index: 99;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
         }
 
-        .hero-title {
-            font-family: var(--font-display);
-            text-transform: uppercase;
+        /* ===== TYPOGRAPHY ===== */
+        .headline-hero {
+            font-size: clamp(40px, 7vw, 80px);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.05;
+        }
+        .headline-section {
+            font-size: clamp(32px, 5vw, 64px);
             font-weight: 700;
-            font-size: clamp(2.5rem, 6vw, 5rem);
+            letter-spacing: -0.015em;
             line-height: 1.1;
-            letter-spacing: 0.02em;
-            background: linear-gradient(90deg, #ffb6ff, #b344ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
-
-        .section-heading {
-            font-family: var(--font-display);
-            text-transform: uppercase;
+        .headline-medium {
+            font-size: clamp(24px, 3.5vw, 48px);
             font-weight: 700;
-            font-size: clamp(1.8rem, 4vw, 3.5rem);
+            letter-spacing: -0.01em;
             line-height: 1.15;
-            letter-spacing: 0.01em;
+        }
+        .body-large {
+            font-size: clamp(16px, 2vw, 21px);
+            line-height: 1.5;
+            font-weight: 400;
+        }
+        .body-small {
+            font-size: clamp(14px, 1.5vw, 17px);
+            line-height: 1.5;
+            font-weight: 400;
+        }
+        .spec-number {
+            font-size: clamp(48px, 8vw, 96px);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1;
         }
 
-        .chip-card {
-            background-color: #151516;
-            border-radius: 1.5rem;
-        }
-
-        .scrub-text {
-            background: linear-gradient(90deg, #fff 0%, #333 100%);
+        /* ===== GRADIENT TEXT ===== */
+        .gradient-tagline {
+            background: linear-gradient(90deg, #b8f3ff, #8b5cf6, #f472b6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-size: 200% 100%;
+            background-clip: text;
+        }
+        .gradient-chip {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        /* Text Utilities */
-        .txt-body { font-family: var(--font-body); font-size: 1.125rem; line-height: 1.6; }
-        .txt-display-long { font-family: var(--font-display-long); font-weight: 600; }
-        
-        .btn-primary {
-            display: inline-block;
+        /* ===== SECTIONS ===== */
+        .section-dark { background: var(--apple-dark); color: #fff; }
+        .section-dark-gray { background: var(--apple-dark-gray); color: #fff; }
+        .section-light { background: var(--apple-light); color: var(--apple-text-dark); }
+        .section-light-gray { background: var(--apple-light-gray); color: var(--apple-text-dark); }
+
+        .text-gray { color: var(--apple-text-gray); }
+        .text-link { color: var(--apple-link); }
+
+        /* ===== BENTO BOX ===== */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .bento-card {
+            background: #1D1D1F;
+            border-radius: 24px;
+            padding: 48px 40px;
+            overflow: hidden;
+            position: relative;
+            min-height: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .bento-card.full { grid-column: 1 / -1; min-height: 500px; }
+        .bento-card-light {
             background: #fff;
-            color: #000;
-            padding: 16px 32px;
-            border-radius: 9999px;
-            font-weight: 600;
-            font-size: 1.125rem;
-            transition: all 0.2s ease;
+            color: var(--apple-text-dark);
+        }
+
+        /* ===== COMPARE TABLE ===== */
+        .compare-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .compare-col {
+            text-align: center;
+            padding: 40px 24px;
+            border-radius: 20px;
+            background: #f5f5f7;
+        }
+
+        /* ===== CTA BUTTON ===== */
+        .btn-buy {
+            display: inline-block;
+            background: var(--apple-buy);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 980px;
+            font-size: 17px;
+            font-weight: 500;
             text-decoration: none;
-            cursor: pointer;
+            transition: background 0.3s;
         }
-        .btn-primary:hover {
-            transform: scale(1.02);
-            background: #f0f0f0;
+        .btn-buy:hover { background: #0077ED; }
+        .btn-outline {
+            display: inline-block;
+            color: var(--apple-link);
+            font-size: 21px;
+            font-weight: 400;
+            text-decoration: none;
         }
+        .btn-outline::after { content: ' ›'; }
+
+        /* ===== ANIMATIONS ===== */
+        .reveal { opacity: 0; transform: translateY(60px); }
+        .reveal-scale { opacity: 0; transform: scale(0.9); }
+        .reveal-left { opacity: 0; transform: translateX(-60px); }
+        .reveal-right { opacity: 0; transform: translateX(60px); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .bento-grid { grid-template-columns: 1fr; }
+            .compare-grid { grid-template-columns: 1fr; gap: 16px; }
+            .bento-card { padding: 32px 24px; min-height: 300px; }
+            .bento-card.full { min-height: 360px; }
+        }
+
+        /* ===== CHIP ICONS ===== */
+        .chip-icon {
+            width: 80px; height: 80px;
+            border-radius: 20px;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 14px;
+            margin: 0 auto 16px;
+        }
+
+        /* ===== FOOTNOTES ===== */
+        .footnote { font-size: 12px; color: #86868B; line-height: 1.6; }
     </style>
 </head>
-<body class="antialiased selection:bg-purple-500 selection:text-white">
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-14">
-            <h1 class="text-xl font-semibold txt-display-long">MacBook Pro</h1>
-            <a href="#buy" class="bg-white text-black px-5 py-1.5 rounded-full font-semibold text-sm hover:bg-gray-200 transition-colors">Mua ngay</a>
-        </div>
-    </nav>
+<body>
 
-    <!-- Hero Section -->
-    <section class="min-h-screen flex flex-col items-center justify-center pt-32 px-4 text-center relative overflow-hidden" id="hero">
-        <span class="badge text-xs uppercase tracking-widest text-purple-400 mb-6 font-bold border border-purple-500/30 px-3 py-1 rounded-full opacity-0 hero-el">Thiết bị làm nghề</span>
-        <h1 class="hero-title mb-6 opacity-0 hero-el">CỖ MÁY CÀY TIỀN<br>THỰC CHIẾN.</h1>
-        <p class="txt-body text-gray-400 max-w-2xl mx-auto opacity-0 hero-el text-xl">
-            Anh em mình làm nghề, đâu có thời gian ngồi chờ máy load. M4, M4 Pro, M4 Max sinh ra là để bạn quật tung mọi tác vụ từ video 4K đến render 3D nặng trĩu mà không rớt một nhịp nào.
+<!-- ==================== GLOBAL NAV ==================== -->
+<nav class="global-nav">
+    <div class="max-w-[1024px] mx-auto px-6 flex items-center justify-center gap-8 h-[44px]">
+        <a href="#">🍎</a>
+        <a href="#">Store</a>
+        <a href="#">Mac</a>
+        <a href="#">iPad</a>
+        <a href="#">iPhone</a>
+        <a href="#">Watch</a>
+        <a href="#">AirPods</a>
+        <a href="#">TV & Home</a>
+        <a href="#" class="hidden md:inline">Entertainment</a>
+        <a href="#" class="hidden md:inline">Accessories</a>
+        <a href="#" class="hidden md:inline">Support</a>
+    </div>
+</nav>
+
+<!-- ==================== LOCAL NAV ==================== -->
+<div class="local-nav">
+    <div class="max-w-[1024px] mx-auto px-6 flex items-center justify-between h-[52px]">
+        <div class="flex items-center gap-6">
+            <span class="text-white font-semibold text-[21px] tracking-tight">MacBook Pro</span>
+            <div class="hidden md:flex items-center gap-5 text-[12px] text-[#86868B] ml-4">
+                <a href="#" class="text-white">Overview</a>
+                <a href="#" class="hover:text-white transition">Tech Specs</a>
+                <a href="#" class="hover:text-white transition">Compare</a>
+            </div>
+        </div>
+        <a href="#buy" class="btn-buy text-[14px] !py-2 !px-4">Buy</a>
+    </div>
+</div>
+
+<!-- ==================== SECTION 1: HERO ==================== -->
+<section class="section-dark min-h-screen flex flex-col items-center justify-center text-center px-6 pt-[96px] pb-20" id="hero">
+    <h1 class="headline-hero text-white mb-4 reveal">MacBook Pro</h1>
+    <p class="gradient-tagline text-[clamp(20px,3.5vw,32px)] font-semibold mb-6 reveal">Built for Apple Intelligence. Built for Pro.</p>
+    <p class="body-large text-gray max-w-[680px] mx-auto mb-4 reveal">
+        M5, M5 Pro, and M5 Max. The most advanced series of chips ever built for a pro laptop.
+    </p>
+    <div class="flex flex-wrap items-center justify-center gap-8 mt-2 mb-10 reveal">
+        <span class="body-small text-gray">Up to 24 hours of battery life</span>
+        <span class="body-small text-gray">Liquid Retina XDR display</span>
+    </div>
+    <div class="flex gap-4 mb-12 reveal">
+        <a href="#buy" class="btn-buy">Buy</a>
+        <a href="#" class="btn-outline text-[17px]">Learn more</a>
+    </div>
+    <div class="w-full max-w-[980px] mx-auto reveal-scale">
+        <img src="https://www.apple.com/v/macbook-pro/ax/images/overview/hero/hero_intro_endframe__e6khcva4hkeq_large.jpg"
+             alt="MacBook Pro Hero"
+             class="w-full rounded-xl"
+             loading="eager">
+    </div>
+</section>
+
+<!-- ==================== SECTION 2: CHIP FAMILY ==================== -->
+<section class="section-dark py-[120px] px-6" id="chips">
+    <div class="max-w-[1200px] mx-auto text-center">
+        <h2 class="headline-section mb-4 reveal">M5. M5 Pro. M5 Max.</h2>
+        <p class="body-large text-gray max-w-[680px] mx-auto mb-16 reveal">
+            Next-generation 2nm technology. Phenomenal single- and multithreaded CPU performance. Faster unified memory.
         </p>
-        <div class="mt-8 opacity-0 hero-el">
-            <a href="#chips" class="btn-primary">Xem sức mạnh thực tế</a>
-        </div>
-        <div class="mt-16 opacity-0 hero-el scale-110" id="hero-img">
-            <img src="https://www.apple.com/v/macbook-pro/ax/images/overview/hero/hero_intro_endframe__e6khcva4hkeq_large.jpg" alt="Macbook Pro" class="w-full max-w-5xl mx-auto rounded-3xl shadow-2xl">
-        </div>
-    </section>
 
-    <!-- Chip Section -->
-    <section class="py-32 px-4 relative z-10" id="chips">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="section-heading text-center mb-20 scrub-text" id="chip-title">TỐC ĐỘ BÀN THỜ.<br>THỜI GIAN LÀ VÀNG BẠC.</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- M4 -->
-                <div class="chip-card p-10 flex flex-col items-center text-center opacity-0 chip-item">
-                    <img src="https://www.apple.com/v/macbook-pro/ax/images/overview/hero/icon_m4__b646c2l2j8c2_large.png" alt="M4" class="h-20 mb-6">
-                    <h3 class="text-3xl font-bold mb-3 txt-display-long">M4</h3>
-                    <p class="txt-body text-gray-400">Đủ trâu bò để bạn cắm mặt dựng CapCut, làm thiết kế 2D và gõ code ầm ầm mà pin vẫn trụ đến cuối ngày.</p>
-                </div>
-                <!-- M4 Pro -->
-                <div class="chip-card p-10 flex flex-col items-center text-center opacity-0 chip-item">
-                    <img src="https://www.apple.com/v/macbook-pro/ax/images/overview/hero/icon_m4_pro__ctffnuz15uqu_large.png" alt="M4 Pro" class="h-20 mb-6">
-                    <h3 class="text-3xl font-bold mb-3 txt-display-long">M4 Pro</h3>
-                    <p class="txt-body text-gray-400">Bạn làm production nặng đô? File Ae giật lag? Con chip này sẽ vả chết mọi sự chậm chạp, giữ đúng dòng tiền của bạn.</p>
-                </div>
-                <!-- M4 Max -->
-                <div class="chip-card p-10 flex flex-col items-center text-center opacity-0 chip-item">
-                    <img src="https://www.apple.com/v/macbook-pro/ax/images/overview/hero/icon_m4_max__cyr653swd24y_large.png" alt="M4 Max" class="h-20 mb-6">
-                    <h3 class="text-3xl font-bold mb-3 txt-display-long">M4 Max</h3>
-                    <p class="txt-body text-gray-400">Cỗ xe tăng hạng nặng. Render 3D, nhúng AI hay kéo chục layer video 8K, mọi thứ đều mượt như lụa.</p>
-                </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <!-- M5 -->
+            <div class="bg-[#1D1D1F] rounded-[28px] p-10 text-center reveal">
+                <div class="chip-icon bg-gradient-to-br from-blue-500 to-violet-600 text-white mb-6">M5</div>
+                <h3 class="text-2xl font-bold mb-3">M5 chip</h3>
+                <p class="text-gray body-small">10-core CPU<br>10-core GPU<br>Up to 32GB unified memory</p>
+            </div>
+            <!-- M5 Pro -->
+            <div class="bg-[#1D1D1F] rounded-[28px] p-10 text-center reveal">
+                <div class="chip-icon bg-gradient-to-br from-violet-500 to-fuchsia-600 text-white mb-6">M5 Pro</div>
+                <h3 class="text-2xl font-bold mb-3">M5 Pro chip</h3>
+                <p class="text-gray body-small">14-core CPU<br>20-core GPU<br>Up to 48GB unified memory</p>
+            </div>
+            <!-- M5 Max -->
+            <div class="bg-[#1D1D1F] rounded-[28px] p-10 text-center reveal">
+                <div class="chip-icon bg-gradient-to-br from-fuchsia-500 to-rose-600 text-white mb-6">M5 Max</div>
+                <h3 class="text-2xl font-bold mb-3">M5 Max chip</h3>
+                <p class="text-gray body-small">16-core CPU<br>40-core GPU<br>Up to 128GB unified memory</p>
             </div>
         </div>
-    </section>
 
-    <!-- Features Section -->
-    <section class="py-32 bg-white text-black px-4" id="features">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-            <div class="feat-text opacity-0 x-left">
-                <span class="badge text-xs uppercase tracking-widest text-red-500 mb-4 font-bold block">HIỂN THỊ</span>
-                <h2 class="section-heading mb-6">MẮT BẠN ĐÁNG GIÁ<br>HƠN TIỀN BẠC.</h2>
-                <p class="txt-body text-gray-600 mb-8">
-                    Anh em ngồi máy mười mấy tiếng mỗi ngày, màn hình lởm là hỏng hết mắt. Liquid Retina XDR mang lại màu sắc chuẩn xác nhất lúc bạn xuất file in ấn hoặc làm màu video. Đỡ tốn thời gian cãi nhau với khách vì sai màu.
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-[900px] mx-auto">
+            <div class="reveal">
+                <p class="spec-number gradient-chip">2nm</p>
+                <p class="text-gray body-small mt-2">process technology</p>
+            </div>
+            <div class="reveal">
+                <p class="spec-number gradient-chip">128<span class="text-[0.5em]">GB</span></p>
+                <p class="text-gray body-small mt-2">unified memory</p>
+            </div>
+            <div class="reveal">
+                <p class="spec-number gradient-chip">2x</p>
+                <p class="text-gray body-small mt-2">faster SSD</p>
+            </div>
+            <div class="reveal">
+                <p class="spec-number gradient-chip">40</p>
+                <p class="text-gray body-small mt-2">GPU cores (Max)</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== SECTION 3: PERFORMANCE & AI ==================== -->
+<section class="section-dark-gray py-[120px] px-6" id="performance">
+    <div class="max-w-[1200px] mx-auto">
+        <div class="text-center mb-20">
+            <p class="text-gray body-small uppercase tracking-widest mb-4 reveal">Apple Intelligence</p>
+            <h2 class="headline-section mb-6 reveal">Supercharged by Apple silicon.</h2>
+            <p class="body-large text-gray max-w-[680px] mx-auto reveal">
+                Accelerated by the new Neural Engine. Run advanced Large Language Models right on-device, faster than ever.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+            <div class="reveal-left">
+                <h3 class="headline-medium mb-6">Performance that defies expectations.</h3>
+                <p class="body-large text-gray mb-8">
+                    Whether you're compiling millions of lines of code, rendering complex 3D scenes, or training machine learning models — MacBook Pro handles it all without breaking a sweat.
                 </p>
-                <a href="#buy" class="btn-primary !bg-black !text-white hover:!bg-gray-800">Chốt đơn ngay</a>
+                <div class="grid grid-cols-2 gap-6">
+                    <div>
+                        <p class="text-[48px] font-extrabold text-white">40<span class="text-[24px]">%</span></p>
+                        <p class="text-gray body-small">faster rendering</p>
+                    </div>
+                    <div>
+                        <p class="text-[48px] font-extrabold text-white">10x</p>
+                        <p class="text-gray body-small">faster AI processing</p>
+                    </div>
+                </div>
             </div>
-            <div class="feat-img opacity-0 x-right">
-                <img src="https://www.apple.com/v/macbook-pro/ax/images/overview/display/display_xdr__fbsn9v022we6_large.jpg" alt="Display" class="rounded-3xl shadow-2xl w-full">
+            <div class="reveal-right">
+                <div class="bg-[#1D1D1F] rounded-3xl p-8 aspect-[4/3] flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="w-full max-w-[320px] mx-auto space-y-4">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1"><span>M5 Max</span><span class="text-gray">16-core CPU</span></div>
+                                <div class="h-3 bg-[#333] rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-blue-500 to-violet-500 rounded-full" style="width:100%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1"><span>M5 Pro</span><span class="text-gray">14-core CPU</span></div>
+                                <div class="h-3 bg-[#333] rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-blue-500 to-violet-500 rounded-full" style="width:75%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1"><span>M5</span><span class="text-gray">10-core CPU</span></div>
+                                <div class="h-3 bg-[#333] rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-blue-500 to-violet-500 rounded-full" style="width:52%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1"><span class="text-gray">M4 Max</span><span class="text-gray">Previous gen</span></div>
+                                <div class="h-3 bg-[#333] rounded-full overflow-hidden"><div class="h-full bg-[#555] rounded-full" style="width:65%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer CTA -->
-    <section id="buy" class="py-32 px-4 text-center">
-        <h2 class="section-heading mb-8">ĐẦU TƯ CHO BẢN THÂN<br>LÀ ĐẦU TƯ LÃI NHẤT.</h2>
-        <a href="#" class="btn-primary">Chọn cấu hình của bạn</a>
-    </section>
+<!-- ==================== SECTION 4: DISPLAY ==================== -->
+<section class="section-dark py-[120px] px-6" id="display">
+    <div class="max-w-[1200px] mx-auto text-center">
+        <p class="text-gray body-small uppercase tracking-widest mb-4 reveal">Display</p>
+        <h2 class="headline-section mb-6 reveal">The best display ever<br>in a laptop.</h2>
+        <p class="body-large text-gray max-w-[680px] mx-auto mb-16 reveal">
+            Liquid Retina XDR. A massive canvas that brings your work to life in vivid detail and stunning clarity.
+        </p>
+    </div>
+    <div class="max-w-[1200px] mx-auto mb-16 reveal-scale">
+        <img src="https://www.apple.com/v/macbook-pro/ax/images/overview/display/display_xdr__fbsn9v022we6_large.jpg"
+             alt="MacBook Pro Display"
+             class="w-full rounded-3xl"
+             loading="lazy">
+    </div>
+    <div class="max-w-[900px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div class="reveal">
+            <p class="spec-number text-white">1600</p>
+            <p class="text-gray body-small">nits peak HDR brightness</p>
+        </div>
+        <div class="reveal">
+            <p class="spec-number text-white">1M:1</p>
+            <p class="text-gray body-small">contrast ratio</p>
+        </div>
+        <div class="reveal">
+            <p class="spec-number text-white">120<span class="text-[0.4em]">Hz</span></p>
+            <p class="text-gray body-small">ProMotion adaptive refresh</p>
+        </div>
+    </div>
+</section>
 
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
+<!-- ==================== SECTION 5: BATTERY ==================== -->
+<section class="section-light py-[120px] px-6" id="battery">
+    <div class="max-w-[980px] mx-auto text-center">
+        <p class="text-gray body-small uppercase tracking-widest mb-4 reveal">Battery</p>
+        <h2 class="headline-section text-[#1D1D1F] mb-8 reveal">We can do this all day.</h2>
+        <div class="reveal">
+            <p class="spec-number text-[#1D1D1F] mb-2" id="battery-counter">24</p>
+            <p class="text-gray text-[21px]">hours of video playback</p>
+        </div>
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[680px] mx-auto text-left">
+            <div class="reveal">
+                <p class="text-[#1D1D1F] text-[28px] font-bold mb-2">Fast charge</p>
+                <p class="text-gray body-large">Up to 50% battery in just 30 minutes with MagSafe 3.</p>
+            </div>
+            <div class="reveal">
+                <p class="text-[#1D1D1F] text-[28px] font-bold mb-2">All-day power</p>
+                <p class="text-gray body-large">Apple silicon efficiency means you can leave the charger at home.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-        // Hero Intro
-        const tl = gsap.timeline();
-        tl.to(".hero-el", {
-            y: -20,
-            opacity: 1,
-            duration: 1,
-            stagger: 0.15,
-            ease: "power3.out"
-        })
-        .to("#hero-img", {
-            scale: 1,
-            duration: 1.5,
-            ease: "power2.inOut"
-        }, "-=0.8");
+<!-- ==================== SECTION 6: CAMERA, AUDIO, CONNECTIVITY (BENTO) ==================== -->
+<section class="section-light-gray py-[120px] px-6" id="bento">
+    <div class="max-w-[1200px] mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="headline-section text-[#1D1D1F] mb-6 reveal">Camera. Audio.<br>Connectivity.</h2>
+        </div>
 
-        // Chip Section
-        gsap.to("#chip-title", {
-            backgroundPositionX: "100%",
-            ease: "none",
-            scrollTrigger: {
-                trigger: "#chip-title",
-                start: "top 80%",
-                end: "bottom 40%",
-                scrub: true
-            }
+        <div class="bento-grid">
+            <!-- Camera Card -->
+            <div class="bento-card bento-card-light reveal">
+                <div class="mb-auto">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-400 to-cyan-500 flex items-center justify-center text-white text-2xl mb-6">📷</div>
+                </div>
+                <h3 class="text-[28px] font-bold text-[#1D1D1F] mb-3">12MP Center Stage camera</h3>
+                <p class="text-gray body-large">Look sharp on every video call. Center Stage keeps you perfectly framed, even as you move.</p>
+            </div>
+
+            <!-- Audio Card -->
+            <div class="bento-card bento-card-light reveal">
+                <div class="mb-auto">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center text-white text-2xl mb-6">🔊</div>
+                </div>
+                <h3 class="text-[28px] font-bold text-[#1D1D1F] mb-3">Six-speaker sound system</h3>
+                <p class="text-gray body-large">Spatial Audio with head tracking. Studio-quality three-mic array with directional beamforming.</p>
+            </div>
+
+            <!-- Connectivity Full-Width -->
+            <div class="bento-card bento-card-light full reveal">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-end">
+                    <div>
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-2xl mb-6">⚡</div>
+                        <h3 class="text-[28px] font-bold text-[#1D1D1F] mb-3">All the ports you need</h3>
+                        <p class="text-gray body-large">Thunderbolt 5, HDMI, SDXC card slot, headphone jack, and MagSafe 3 charging.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <span class="inline-block w-3 h-3 rounded-full bg-blue-500"></span>
+                            <span class="text-[#1D1D1F] font-medium">Wi-Fi 7</span>
+                            <span class="text-gray body-small">via the new N1 chip</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="inline-block w-3 h-3 rounded-full bg-violet-500"></span>
+                            <span class="text-[#1D1D1F] font-medium">Bluetooth 6</span>
+                            <span class="text-gray body-small">ultra-low latency</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="inline-block w-3 h-3 rounded-full bg-cyan-500"></span>
+                            <span class="text-[#1D1D1F] font-medium">Thunderbolt 5</span>
+                            <span class="text-gray body-small">up to 120Gb/s</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== SECTION 7: DESIGN ==================== -->
+<section class="section-dark py-[120px] px-6" id="design">
+    <div class="max-w-[1200px] mx-auto text-center">
+        <p class="text-gray body-small uppercase tracking-widest mb-4 reveal">Design</p>
+        <h2 class="headline-section mb-6 reveal">Forged from<br>recycled aluminum.</h2>
+        <p class="body-large text-gray max-w-[580px] mx-auto mb-12 reveal">
+            Available in 14&#8209;inch and 16&#8209;inch. Two stunning finishes.
+        </p>
+        <div class="flex justify-center gap-6 mb-16 reveal">
+            <button onclick="setColor('black')" id="btn-black" class="w-10 h-10 rounded-full bg-[#1D1D1F] border-2 border-white/50 transition hover:scale-110 focus:ring-2 focus:ring-violet-500"></button>
+            <button onclick="setColor('silver')" id="btn-silver" class="w-10 h-10 rounded-full bg-[#E3E4E5] border-2 border-white/20 transition hover:scale-110 focus:ring-2 focus:ring-violet-500"></button>
+        </div>
+        <div class="reveal-scale">
+            <div class="relative max-w-[800px] mx-auto">
+                <img id="design-img-black" src="https://www.apple.com/v/macbook-pro/ax/images/overview/hero/hero_intro_endframe__e6khcva4hkeq_large.jpg"
+                     alt="MacBook Pro Space Black"
+                     class="w-full rounded-2xl transition-opacity duration-700"
+                     loading="lazy">
+                <img id="design-img-silver" src="https://www.apple.com/v/macbook-pro/ax/images/overview/hero/hero_intro_endframe__e6khcva4hkeq_large.jpg"
+                     alt="MacBook Pro Silver"
+                     class="w-full rounded-2xl absolute inset-0 opacity-0 transition-opacity duration-700 brightness-125 contrast-90"
+                     loading="lazy">
+            </div>
+            <div class="mt-8 flex justify-center gap-12">
+                <div>
+                    <p class="text-white text-lg font-semibold" id="color-name">Space Black</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== SECTION 8: COMPARE ==================== -->
+<section class="section-light py-[120px] px-6" id="compare">
+    <div class="max-w-[1200px] mx-auto text-center">
+        <h2 class="headline-section text-[#1D1D1F] mb-4 reveal">Which MacBook Pro<br>is right for you?</h2>
+        <p class="body-large text-gray max-w-[580px] mx-auto mb-16 reveal">
+            Compare models and find the one that fits your workflow.
+        </p>
+
+        <div class="compare-grid">
+            <!-- M5 -->
+            <div class="compare-col reveal">
+                <div class="chip-icon bg-gradient-to-br from-blue-500 to-violet-600 text-white mx-auto mb-4">M5</div>
+                <h3 class="text-[24px] font-bold text-[#1D1D1F] mb-2">MacBook Pro</h3>
+                <p class="text-gray body-small mb-4">with M5 chip</p>
+                <hr class="border-gray-200 mb-4">
+                <div class="text-left space-y-2 text-[14px] text-gray">
+                    <p>10-core CPU</p>
+                    <p>10-core GPU</p>
+                    <p>Up to 32GB unified memory</p>
+                    <p>Up to 2TB SSD</p>
+                    <p>16.8 hours battery (14")</p>
+                    <p>Thunderbolt 4</p>
+                </div>
+                <div class="mt-6">
+                    <p class="text-[#1D1D1F] font-bold text-lg mb-3">From $1,599</p>
+                    <a href="#" class="btn-buy text-[14px] !py-2 !px-5">Buy</a>
+                </div>
+            </div>
+            <!-- M5 Pro -->
+            <div class="compare-col reveal">
+                <div class="chip-icon bg-gradient-to-br from-violet-500 to-fuchsia-600 text-white mx-auto mb-4">M5 Pro</div>
+                <h3 class="text-[24px] font-bold text-[#1D1D1F] mb-2">MacBook Pro</h3>
+                <p class="text-gray body-small mb-4">with M5 Pro chip</p>
+                <hr class="border-gray-200 mb-4">
+                <div class="text-left space-y-2 text-[14px] text-gray">
+                    <p>14-core CPU</p>
+                    <p>20-core GPU</p>
+                    <p>Up to 48GB unified memory</p>
+                    <p>Up to 4TB SSD</p>
+                    <p>24 hours battery (16")</p>
+                    <p>Thunderbolt 5</p>
+                </div>
+                <div class="mt-6">
+                    <p class="text-[#1D1D1F] font-bold text-lg mb-3">From $1,999</p>
+                    <a href="#" class="btn-buy text-[14px] !py-2 !px-5">Buy</a>
+                </div>
+            </div>
+            <!-- M5 Max -->
+            <div class="compare-col reveal">
+                <div class="chip-icon bg-gradient-to-br from-fuchsia-500 to-rose-600 text-white mx-auto mb-4">M5 Max</div>
+                <h3 class="text-[24px] font-bold text-[#1D1D1F] mb-2">MacBook Pro</h3>
+                <p class="text-gray body-small mb-4">with M5 Max chip</p>
+                <hr class="border-gray-200 mb-4">
+                <div class="text-left space-y-2 text-[14px] text-gray">
+                    <p>16-core CPU</p>
+                    <p>40-core GPU</p>
+                    <p>Up to 128GB unified memory</p>
+                    <p>Up to 8TB SSD</p>
+                    <p>24 hours battery (16")</p>
+                    <p>Thunderbolt 5</p>
+                </div>
+                <div class="mt-6">
+                    <p class="text-[#1D1D1F] font-bold text-lg mb-3">From $3,499</p>
+                    <a href="#" class="btn-buy text-[14px] !py-2 !px-5">Buy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== SECTION 9: TRADE-IN ==================== -->
+<section class="section-light-gray py-[80px] px-6" id="buy">
+    <div class="max-w-[680px] mx-auto text-center">
+        <h2 class="headline-medium text-[#1D1D1F] mb-6 reveal">Trade in your current computer.<br>Get credit toward a new MacBook Pro.</h2>
+        <p class="body-large text-gray mb-8 reveal">
+            With Apple Trade In, just give us your eligible computer and get credit toward a new MacBook Pro. It's good for you and the planet.
+        </p>
+        <a href="#" class="btn-outline reveal">Get your trade-in estimate</a>
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="section-light-gray border-t border-gray-300 py-6 px-6">
+    <div class="max-w-[980px] mx-auto">
+        <div class="footnote mb-6">
+            <p>Battery life varies by use and configuration. Testing conducted by Apple in 2025 using preproduction MacBook Pro systems.</p>
+            <p class="mt-2">Apple Intelligence is available on MacBook Pro models with M5 or later chips.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-[12px] text-[#424245] mb-6">
+            <div>
+                <p class="font-semibold mb-2">Shop and Learn</p>
+                <p class="leading-6">Store<br>Mac<br>iPad<br>iPhone<br>Watch<br>AirPods</p>
+            </div>
+            <div>
+                <p class="font-semibold mb-2">Services</p>
+                <p class="leading-6">Apple Music<br>Apple TV+<br>Apple Arcade<br>iCloud<br>Apple Books</p>
+            </div>
+            <div>
+                <p class="font-semibold mb-2">Apple Store</p>
+                <p class="leading-6">Find a Store<br>Genius Bar<br>Today at Apple<br>Apple Camp</p>
+            </div>
+            <div>
+                <p class="font-semibold mb-2">For Business</p>
+                <p class="leading-6">Apple and Business<br>Shop for Business</p>
+            </div>
+            <div>
+                <p class="font-semibold mb-2">About Apple</p>
+                <p class="leading-6">Newsroom<br>Leadership<br>Investors<br>Ethics<br>Contact</p>
+            </div>
+        </div>
+        <div class="border-t border-gray-300 pt-4 flex flex-wrap justify-between items-center text-[12px] text-[#86868B]">
+            <p>Copyright © 2025 Apple Inc. All rights reserved.</p>
+            <div class="flex gap-4">
+                <a href="#" class="hover:underline">Privacy Policy</a>
+                <a href="#" class="hover:underline">Terms of Use</a>
+                <a href="#" class="hover:underline">Site Map</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+// === Reveal Animations ===
+gsap.utils.toArray('.reveal').forEach(el => {
+    gsap.to(el, {
+        opacity: 1, y: 0, duration: 1, ease: 'power3.out',
+        scrollTrigger: { trigger: el, start: 'top 85%', once: true }
+    });
+});
+gsap.utils.toArray('.reveal-scale').forEach(el => {
+    gsap.to(el, {
+        opacity: 1, scale: 1, duration: 1.2, ease: 'power2.out',
+        scrollTrigger: { trigger: el, start: 'top 85%', once: true }
+    });
+});
+gsap.utils.toArray('.reveal-left').forEach(el => {
+    gsap.to(el, {
+        opacity: 1, x: 0, duration: 1, ease: 'power3.out',
+        scrollTrigger: { trigger: el, start: 'top 80%', once: true }
+    });
+});
+gsap.utils.toArray('.reveal-right').forEach(el => {
+    gsap.to(el, {
+        opacity: 1, x: 0, duration: 1, ease: 'power3.out',
+        scrollTrigger: { trigger: el, start: 'top 80%', once: true }
+    });
+});
+
+// === Battery Counter Animation ===
+const counterEl = document.getElementById('battery-counter');
+ScrollTrigger.create({
+    trigger: '#battery',
+    start: 'top 70%',
+    once: true,
+    onEnter: () => {
+        let obj = { val: 0 };
+        gsap.to(obj, {
+            val: 24, duration: 2, ease: 'power2.out',
+            onUpdate: () => { counterEl.textContent = Math.round(obj.val); }
         });
+    }
+});
 
-        gsap.to(".chip-item", {
-            y: -30,
-            opacity: 1,
-            duration: 0.8,
-            stagger: 0.2,
-            scrollTrigger: {
-                trigger: "#chips",
-                start: "top 60%"
-            }
+// === Performance Bar Animation ===
+ScrollTrigger.create({
+    trigger: '#performance',
+    start: 'top 60%',
+    once: true,
+    onEnter: () => {
+        gsap.from('#performance .h-3 > div', {
+            width: 0, duration: 1.5, stagger: 0.2, ease: 'power2.out'
         });
+    }
+});
 
-        // Features Section
-        gsap.to(".feat-text", {
-            x: 20,
-            opacity: 1,
-            duration: 1,
-            scrollTrigger: {
-                trigger: "#features",
-                start: "top 60%"
-            }
-        });
+// === Color Picker ===
+function setColor(color) {
+    const imgBlack = document.getElementById('design-img-black');
+    const imgSilver = document.getElementById('design-img-silver');
+    const colorName = document.getElementById('color-name');
+    const btnBlack = document.getElementById('btn-black');
+    const btnSilver = document.getElementById('btn-silver');
 
-        gsap.to(".feat-img", {
-            x: -20,
-            opacity: 1,
-            duration: 1,
-            scrollTrigger: {
-                trigger: "#features",
-                start: "top 60%"
-            }
-        });
-    </script>
+    if (color === 'silver') {
+        imgBlack.style.opacity = '0';
+        imgSilver.style.opacity = '1';
+        colorName.textContent = 'Silver';
+        btnSilver.style.borderColor = 'rgba(255,255,255,0.8)';
+        btnBlack.style.borderColor = 'rgba(255,255,255,0.2)';
+    } else {
+        imgBlack.style.opacity = '1';
+        imgSilver.style.opacity = '0';
+        colorName.textContent = 'Space Black';
+        btnBlack.style.borderColor = 'rgba(255,255,255,0.8)';
+        btnSilver.style.borderColor = 'rgba(255,255,255,0.2)';
+    }
+}
+</script>
 </body>
 </html>
