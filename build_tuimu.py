@@ -135,12 +135,6 @@ html_template = """<!DOCTYPE html>
         }
         @font-face {
             font-family: 'FD Tiempos Text';
-            src: url('./assets/fonts/FDTiemposText-MediumItalic.woff2') format('woff2');
-            font-style: italic;
-            font-weight: 500;
-        }
-        @font-face {
-            font-family: 'FD Tiempos Text';
             src: url('./assets/fonts/FDTiemposText-SemiboldItalic.woff2') format('woff2');
             font-style: italic;
             font-weight: 600;
@@ -149,11 +143,6 @@ html_template = """<!DOCTYPE html>
             font-family: 'FD Aeonik';
             src: url('./assets/fonts/FDAeonikRegular.ttf') format('truetype');
             font-weight: 400;
-        }
-        @font-face {
-            font-family: 'FD Aeonik';
-            src: url('./assets/fonts/FDAeonikMedium.ttf') format('truetype');
-            font-weight: 500;
         }
         @font-face {
             font-family: 'FD Aeonik';
@@ -178,8 +167,6 @@ html_template = """<!DOCTYPE html>
             font-family: 'FD Aeonik', sans-serif;
             background-color: #f5f5f5;
             color: var(--text-color);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -203,32 +190,36 @@ html_template = """<!DOCTYPE html>
         
         /* Header */
         .header-wrapper {
-            margin: 0 -40px 40px -40px;
-            padding: 0 40px;
+            /* Touch top, left, right edges */
+            margin: -40px -40px 40px -40px;
             border-bottom: 1px solid var(--line-color);
             display: flex;
-            height: 150px;
+            height: 220px; 
+            box-sizing: border-box;
         }
 
         .number-box {
             border-right: 1px solid var(--line-color);
-            padding-right: 30px;
+            padding-right: 40px;
+            padding-left: 20px;
             height: 100%;
             display: flex;
             align-items: flex-start;
             overflow: hidden;
+            box-sizing: border-box;
         }
         
         .number {
             font-family: 'FD Monument Extended', sans-serif;
-            font-size: 320px;
+            font-size: 450px;
             font-weight: bold;
-            line-height: 0.75;
+            line-height: 1;
             letter-spacing: -0.05em;
             color: #3f3f3f;
-            clip-path: polygon(0 0, 100% 0, 100% 75%, 0 92%);
-            margin-top: -80px; 
-            margin-left: -5px;
+            /* Cut bottom diagonally */
+            clip-path: polygon(0 0, 100% 0, 100% 60%, 0 70%);
+            margin-top: -100px; /* Shift up to cut top */
+            margin-left: -20px;
         }
         
         /* Main Content */
@@ -325,7 +316,8 @@ html_template = """<!DOCTYPE html>
         .footer-right {
             font-size: 11px;
             color: #888888;
-            font-family: 'FD Aeonik', sans-serif;
+            font-family: 'FD Ae' \
+            'onik', sans-serif;
         }
         
         @media print {
@@ -348,8 +340,8 @@ html_template = """<!DOCTYPE html>
                 padding: 10mm 15mm;
             }
             .header-wrapper {
-                margin: 0 -15mm 40px -15mm;
-                padding: 0 15mm;
+                margin: -10mm -15mm 40px -15mm;
+                padding: 0;
             }
             .footer-wrapper {
                 margin: auto -15mm 0 -15mm;
