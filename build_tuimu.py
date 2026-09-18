@@ -190,36 +190,27 @@ html_template = """<!DOCTYPE html>
         
         /* Header */
         .header-wrapper {
-            /* Touch top, left, right edges */
             margin: -40px -40px 40px -40px;
+            padding: 0 40px;
             border-bottom: 1px solid var(--line-color);
             display: flex;
-            height: 220px; 
-            box-sizing: border-box;
-        }
-
-        .number-box {
-            border-right: 1px solid var(--line-color);
-            padding-right: 40px;
-            padding-left: 20px;
-            height: 100%;
-            display: flex;
-            align-items: flex-start;
-            overflow: hidden;
+            align-items: flex-end; /* Text sits on the bottom line */
+            height: 180px; 
+            overflow: hidden; /* Crops the top of the text */
             box-sizing: border-box;
         }
         
         .number {
             font-family: 'FD Monument Extended', sans-serif;
-            font-size: 450px;
+            font-size: 380px;
             font-weight: bold;
-            line-height: 1;
+            font-style: italic; /* EXACTLY matches the image */
+            line-height: 0.7;
             letter-spacing: -0.05em;
             color: #3f3f3f;
-            /* Cut bottom diagonally */
-            clip-path: polygon(0 0, 100% 0, 100% 60%, 0 70%);
-            margin-top: -100px; /* Shift up to cut top */
-            margin-left: -20px;
+            margin-bottom: -15px; /* Adjust so it perfectly touches the line */
+            margin-left: -5px; /* Slight visual adjust for italic */
+            /* No clip-path, no border-right, just clean overflow! */
         }
         
         /* Main Content */
@@ -316,8 +307,7 @@ html_template = """<!DOCTYPE html>
         .footer-right {
             font-size: 11px;
             color: #888888;
-            font-family: 'FD Ae' \
-            'onik', sans-serif;
+            font-family: 'FD Aeonik', sans-serif;
         }
         
         @media print {
@@ -341,7 +331,7 @@ html_template = """<!DOCTYPE html>
             }
             .header-wrapper {
                 margin: -10mm -15mm 40px -15mm;
-                padding: 0;
+                padding: 0 15mm;
             }
             .footer-wrapper {
                 margin: auto -15mm 0 -15mm;
@@ -359,9 +349,7 @@ for q in questions:
     html_content += f"""
     <div class="page">
         <div class="header-wrapper">
-            <div class="number-box">
-                <div class="number">{q['num']}</div>
-            </div>
+            <div class="number">{q['num']}</div>
         </div>
         
         <div class="content">
@@ -394,5 +382,3 @@ html_content += """
 
 with open('tui-mu.html', 'w', encoding='utf-8') as f:
     f.write(html_content)
-
-print("Đã tạo file tui-mu.html thành công!")
