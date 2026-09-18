@@ -176,43 +176,59 @@ html_template = """<!DOCTYPE html>
         
         body {
             font-family: 'FD Aeonik', sans-serif;
-            background-color: var(--bg-color);
+            background-color: #f5f5f5;
             color: var(--text-color);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
         .page {
-            width: 100vw;
-            min-height: 100vh;
+            width: 100%;
+            max-width: 1120px;
+            aspect-ratio: 297 / 210;
+            background-color: var(--bg-color);
             display: flex;
             flex-direction: column;
             position: relative;
             padding: 40px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             page-break-after: always;
-            border-bottom: 20px solid #f0f0f0; /* Screen separator */
+            overflow: hidden;
         }
         
         /* Header */
-        .header {
-            position: relative;
-            height: 160px;
-            display: flex;
-            align-items: flex-end;
+        .header-wrapper {
+            margin: 0 -40px 40px -40px;
+            padding: 0 40px;
             border-bottom: 1px solid var(--line-color);
-            margin-bottom: 40px;
+            display: flex;
+            height: 150px;
+        }
+
+        .number-box {
+            border-right: 1px solid var(--line-color);
+            padding-right: 30px;
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+            overflow: hidden;
         }
         
         .number {
             font-family: 'FD Monument Extended', sans-serif;
-            font-size: 260px;
+            font-size: 320px;
             font-weight: bold;
             line-height: 0.75;
             letter-spacing: -0.05em;
             color: #3f3f3f;
-            clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
-            margin-left: -10px;
-            transform: translateY(16px);
+            clip-path: polygon(0 0, 100% 0, 100% 75%, 0 92%);
+            margin-top: -80px; 
+            margin-left: -5px;
         }
         
         /* Main Content */
@@ -220,12 +236,11 @@ html_template = """<!DOCTYPE html>
             flex: 1;
             display: flex;
             flex-direction: column;
-            gap: 30px;
-            padding-top: 10px;
+            gap: 20px;
         }
         
         .title {
-            font-size: 60px;
+            font-size: 54px;
             line-height: 1.1;
             letter-spacing: -0.02em;
         }
@@ -246,7 +261,7 @@ html_template = """<!DOCTYPE html>
         .body-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 80px;
             margin-top: 10px;
         }
         
@@ -254,46 +269,63 @@ html_template = """<!DOCTYPE html>
             font-family: 'FD Tiempos Text', serif;
             font-style: italic;
             font-weight: 600;
-            font-size: 24px;
+            font-size: 20px;
             line-height: 1.5;
             color: #1a1a1a;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
+        }
+        
+        .body-right {
+            margin-top: 50px;
         }
         
         .body-right p {
             font-family: 'FD Tiempos Text', serif;
             font-style: italic;
             font-weight: 500;
-            font-size: 24px;
+            font-size: 20px;
             line-height: 1.6;
             color: #4a4a4a;
-            margin-bottom: 20px;
+            margin-bottom: 8px;
             text-align: center;
         }
         
         /* Footer */
-        .footer {
+        .footer-wrapper {
+            margin: auto -40px 0 -40px;
+            padding: 15px 40px 0 40px;
+            border-top: 1px solid var(--line-color);
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
-            border-top: 1px solid var(--line-color);
-            padding-top: 20px;
-            font-size: 14px;
+            align-items: flex-start;
+        }
+        
+        .footer-left {
+            font-size: 10px;
             color: #888888;
             font-family: 'FD Aeonik', sans-serif;
-            font-weight: 500;
-            margin-top: auto; /* Pushes footer to the bottom naturally without overlapping */
+            text-transform: uppercase;
         }
         
         .footer-center {
             text-align: center;
+            font-size: 11px;
+            color: #333333;
+            font-family: 'FD Aeonik', sans-serif;
+            font-weight: 500;
         }
         
         .footer-center span {
             display: block;
             color: #b0b0b0;
-            font-size: 12px;
-            margin-top: 4px;
+            font-size: 10px;
+            margin-top: 2px;
+        }
+        
+        .footer-right {
+            font-size: 11px;
+            color: #888888;
+            font-family: 'FD Aeonik', sans-serif;
         }
         
         @media print {
@@ -301,11 +333,27 @@ html_template = """<!DOCTYPE html>
                 size: A4 landscape;
                 margin: 0;
             }
+            body {
+                background-color: transparent;
+                padding: 0;
+                display: block;
+            }
             .page {
-                width: 100%;
-                min-height: 100vh;
+                width: 100vw;
+                height: 100vh;
+                max-width: none;
+                aspect-ratio: auto;
+                box-shadow: none;
+                margin-bottom: 0;
                 padding: 10mm 15mm;
-                border-bottom: none; /* Remove screen separator when printing */
+            }
+            .header-wrapper {
+                margin: 0 -15mm 40px -15mm;
+                padding: 0 15mm;
+            }
+            .footer-wrapper {
+                margin: auto -15mm 0 -15mm;
+                padding: 15px 15mm 0 15mm;
             }
         }
     </style>
@@ -318,8 +366,10 @@ html_content = html_template
 for q in questions:
     html_content += f"""
     <div class="page">
-        <div class="header">
-            <div class="number">{q['num']}</div>
+        <div class="header-wrapper">
+            <div class="number-box">
+                <div class="number">{q['num']}</div>
+            </div>
         </div>
         
         <div class="content">
@@ -337,7 +387,7 @@ for q in questions:
             </div>
         </div>
         
-        <div class="footer">
+        <div class="footer-wrapper">
             <div class="footer-left">FAQ</div>
             <div class="footer-center">Nguyễn Đức Việt<span>0934.688.632</span></div>
             <div class="footer-right">2026</div>
