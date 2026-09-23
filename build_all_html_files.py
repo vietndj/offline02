@@ -638,8 +638,8 @@ SHORT_4WORDS = {
 GITHUB_ROOT = "/Users/vietmac/Documents/CODE/vietndj.github.io"
 
 def save_to_all_targets(filenames, content):
-    """Lưu nội dung DUY NHẤT vào repo course/."""
-    dirs = [COURSE_DIR]
+    """Lưu nội dung vào cả course/ và BAI GIANG VIDEO (repo git)."""
+    dirs = [COURSE_DIR, "/Users/vietmac/Documents/CODE/BAI GIANG VIDEO"]
     for d in dirs:
         os.makedirs(d, exist_ok=True)
         for fname in filenames:
