@@ -16,7 +16,7 @@
       "character": {
         "outfit": "Đồ âu may đo (Smart suit)",
         "role": "Nam mentor / học viên marketing nghiêm túc",
-        "image_thumb": "assets/marketing_baitap/viet_bt1_smartsuit.jpg"
+        "image_thumb": "assets/marketing_baitap/viet_bt1_smartsuit.webp"
       },
       "root_action": "Một bạn học viên ngồi cắm cúi trước laptop làm bài tập marketing, mắt dán vào màn hình, gõ phím, cuộn chuột và thở dài.",
       "voiceover": {
@@ -64,7 +64,7 @@
           "direction": "Chếch 45° bên hông trái",
           "voice_sync": "Đứng một chỗ bấm máy thì nhàn thật...",
           "director_note": "Ngồi ké bên cạnh bàn, đưa máy ngang tầm mắt cách một sải tay. Khóa nét tròng kính, lấy ánh sáng xanh màn hình hắt nhẹ lên mặt.",
-          "img_path": "assets/frames_bai_tap_01/shot1.jpg"
+          "img_path": "assets/frames_bai_tap_01/shot1.webp"
         },
         {
           "shot_id": 2,
@@ -75,7 +75,7 @@
           "direction": "Chính diện xuyên mép laptop",
           "voice_sync": "...bấm một cái là xong.",
           "director_note": "Bước sang đối diện, hạ máy ngang mép trên màn hình laptop. Canh đúng lúc bạn nhíu mày nhìn số liệu thì bấm máy, biểu cảm thật này không diễn được đâu.",
-          "img_path": "assets/frames_bai_tap_01/shot2.jpg"
+          "img_path": "assets/frames_bai_tap_01/shot2.webp"
         },
         {
           "shot_id": 3,
@@ -86,7 +86,7 @@
           "direction": "Từ trên xuống chếch phải",
           "voice_sync": "Nhưng lười dịch cái chân, để khung hình đơ ra...",
           "director_note": "Đưa camera sát bàn phím một gang tay, bật zoom 2x chống bóng lưng. Bắt trọn ngón tay nhấn lì nút Backspace xóa dòng chữ vừa gõ — chi tiết bế tắc đắt giá nhất.",
-          "img_path": "assets/frames_bai_tap_01/shot3.jpg"
+          "img_path": "assets/frames_bai_tap_01/shot3.webp"
         },
         {
           "shot_id": 4,
@@ -97,7 +97,7 @@
           "direction": "Sau lưng chếch vai phải",
           "voice_sync": "...thì video dựng lên...",
           "director_note": "Đứng chếch sau vai phải, ghé camera qua khe giữa cổ và vai áo. Lấy nét căng vào đồ thị đỏ lòm trên màn hình, tạo cảm giác nhìn lén vào áp lực thật.",
-          "img_path": "assets/frames_bai_tap_01/shot4.jpg"
+          "img_path": "assets/frames_bai_tap_01/shot4.webp"
         },
         {
           "shot_id": 5,
@@ -108,7 +108,7 @@
           "direction": "Ngang mặt bàn bên phải",
           "voice_sync": "...đến mình xem lại còn lướt vội, trách gì người ta! 😄",
           "director_note": "Đặt cạnh dưới điện thoại chạm hẳn xuống mặt bàn gỗ làm tiền cảnh. Nhắc bạn ngả người ra ghế thở hắt một hơi, kết thúc cú máy tự nhiên nhẹ nhõm.",
-          "img_path": "assets/frames_bai_tap_01/shot5.jpg"
+          "img_path": "assets/frames_bai_tap_01/shot5.webp"
         }
       ]
     },
@@ -121,7 +121,7 @@
       "character": {
         "outfit": "Áo phông cộc tay đen + Quần bò (Casual t-shirt)",
         "role": "Nam học viên trẻ trung, năng động nhưng đang bí từ",
-        "image_thumb": "assets/marketing_baitap/viet_bt2_tshirt.jpg"
+        "image_thumb": "assets/marketing_baitap/viet_bt2_tshirt.webp"
       },
       "root_action": "Bạn học ngồi viết nháp kịch bản video marketing vào sổ tay nhưng bị bí từ, cố nặn từng chữ hoa mỹ rồi ngượng mồm tự gạch xóa tanh bành.",
       "voiceover": {
@@ -170,7 +170,7 @@
           "direction": "Chếch trái 45°",
           "voice_sync": "Cố rặn từng chữ cho nó kêu...",
           "director_note": "Ngồi chéo góc bàn, hướng ống kính vào nửa thân trên và quyển sổ mở rộng. Bắt nhịp đuôi bút bi gõ cộc cộc xuống mặt gỗ tạo âm thanh sốt ruột rất đời.",
-          "img_path": "assets/frames_bai_tap_02/shot1.jpg"
+          "img_path": "assets/frames_bai_tap_02/shot1.webp"
         },
         {
           "shot_id": 2,
@@ -181,7 +181,7 @@
           "direction": "Chính diện (Frontal)",
           "voice_sync": "...viết ra thấy ngượng mồm lại tự tay gạch xóa.",
           "director_note": "Hạ máy ngang ngực hất nhẹ lên mặt, bắt trọn bàn tay xoa thái dương. Người bí ý tưởng hay có thói quen nhíu mày, sờ trán hoặc cắn môi vô thức.",
-          "img_path": "assets/frames_bai_tap_02/shot2.jpg"
+          "img_path": "assets/frames_bai_tap_02/shot2.webp"
         },
         {
           "shot_id": 3,
@@ -192,7 +192,7 @@
           "direction": "Từ trên chúc xuống trang sổ",
           "voice_sync": "Cứ tưởng mình là người khó tính biên tập...",
           "director_note": "Đặt máy cách trang giấy hai mươi phân, góc chúc bảy mươi độ từ trên xuống. Chữ 'triệu view' bị gạch chéo càng mạnh tay thì độ giằng xé nội tâm càng chân thật.",
-          "img_path": "assets/frames_bai_tap_02/shot3.jpg"
+          "img_path": "assets/frames_bai_tap_02/shot3.webp"
         },
         {
           "shot_id": 4,
@@ -203,7 +203,7 @@
           "direction": "Chếch sau sang vai phải",
           "voice_sync": "...hóa ra cầm bút...",
           "director_note": "Đứng sau lưng chếch vai trái, bắt khoảnh khắc mắt liếc sang sổ bạn bên cạnh. Cảnh liếc trộm này cực kỳ đắt vì đánh trúng tâm lý tò mò và bất an trong lớp học.",
-          "img_path": "assets/frames_bai_tap_02/shot4.jpg"
+          "img_path": "assets/frames_bai_tap_02/shot4.webp"
         },
         {
           "shot_id": 5,
@@ -214,7 +214,7 @@
           "direction": "Mặt bàn hất lên cằm",
           "voice_sync": "...mới biết mình nhiễm văn mẫu nặng quá rồi! 😄",
           "director_note": "Đặt máy nằm sát mặt bàn nhìn lên, bắt trọn tiếng thả bút bi cạch một cái. Bạn lắc đầu cười trừ một cái, giải phóng hoàn toàn áp lực gồng chữ trước ống kính.",
-          "img_path": "assets/frames_bai_tap_02/shot5.jpg"
+          "img_path": "assets/frames_bai_tap_02/shot5.webp"
         }
       ]
     },
@@ -227,7 +227,7 @@
       "character": {
         "outfit": "Đồ thể thao polo năng động (Sporty polo)",
         "role": "Nam học viên thực chiến, muốn thử góc máy thực tế",
-        "image_thumb": "assets/marketing_baitap/viet_bt3_sporty.jpg"
+        "image_thumb": "assets/marketing_baitap/viet_bt3_sporty.webp"
       },
       "root_action": "Một bạn sinh viên cầm điện thoại thực hành quay thử bạn cùng nhóm ngay tại bàn học, tay lóng ngóng, xoay ngang xoay dọc ngập ngừng không dám ấn REC.",
       "voiceover": {
@@ -276,7 +276,7 @@
           "direction": "Chếch nghiêng 30°",
           "voice_sync": "Bảo giơ máy lên quay thì ai cũng ngại...",
           "director_note": "Đứng cách bạn nửa mét, quay hai bàn tay đang xoay lúng túng chiếc điện thoại. Động tác xoay ngang rồi xoay dọc lột tả trọn vẹn sự bối rối lúc mới cầm máy.",
-          "img_path": "assets/frames_bai_tap_03/shot1.jpg"
+          "img_path": "assets/frames_bai_tap_03/shot1.webp"
         },
         {
           "shot_id": 2,
@@ -287,7 +287,7 @@
           "direction": "Sau lưng điện thoại",
           "voice_sync": "...sợ rung tay, sợ góc xấu, sợ người ta nhìn chằm chằm.",
           "director_note": "Đưa máy sau lưng điện thoại bạn diễn, canh ngón tay cái ngập ngừng trên màn hình. Điểm chạm ngón tay chuyển chấm đỏ sang nút vuông REC là nhịp bẻ hành động then chốt.",
-          "img_path": "assets/frames_bai_tap_03/shot2.jpg"
+          "img_path": "assets/frames_bai_tap_03/shot2.webp"
         },
         {
           "shot_id": 3,
@@ -298,7 +298,7 @@
           "direction": "Trực diện ống kính",
           "voice_sync": "Cứ đứng ngắm app cho có vẻ chuyên nghiệp...",
           "director_note": "Ghé sát ống kính máy mình vào cụm ba camera của bạn, bật zoom hai chấm năm lần. Khóa nét vào mắt kính camera phản chiếu ánh đèn neon trần lớp học — góc nhìn nghề nghiệp sắc sảo.",
-          "img_path": "assets/frames_bai_tap_03/shot3.jpg"
+          "img_path": "assets/frames_bai_tap_03/shot3.webp"
         },
         {
           "shot_id": 4,
@@ -309,7 +309,7 @@
           "direction": "Từ mắt người quay",
           "voice_sync": "...thôi bấm đại một đúp đi, xấu thì xóa...",
           "director_note": "Góc nhìn chủ quan qua vai người quay, hướng thẳng vào màn hình điện thoại đang bật. Bắt trọn bạn đối diện lấy tay che miệng cười ngượng ngùng — khoảnh khắc đời thực vô giá.",
-          "img_path": "assets/frames_bai_tap_03/shot4.jpg"
+          "img_path": "assets/frames_bai_tap_03/shot4.webp"
         },
         {
           "shot_id": 5,
@@ -320,7 +320,7 @@
           "direction": "Chếch trước 30°",
           "voice_sync": "...ngại gì vết bẩn! 😄",
           "director_note": "Đặt máy từ mặt bàn hất nhẹ ba mươi độ lên ngực áo bạn diễn. Bạn hạ điện thoại xuống vẫy tay cười bảo 'Lại đúp nữa nào!' — kết thúc ấm áp và tràn năng lượng.",
-          "img_path": "assets/frames_bai_tap_03/shot5.jpg"
+          "img_path": "assets/frames_bai_tap_03/shot5.webp"
         }
       ]
     },
@@ -333,7 +333,7 @@
       "character": {
         "outfit": "Sơ mi xanh dài tay xắn gấu cao (Smart casual shirt)",
         "role": "Nam học viên tự tin, tưởng mình biết hết kiến thức",
-        "image_thumb": "assets/marketing_baitap/viet_bt4_shirt.jpg"
+        "image_thumb": "assets/marketing_baitap/viet_bt4_shirt.webp"
       },
       "root_action": "Học viên đang cắm cúi lướt điện thoại dưới gầm bàn thì nghe thầy giảng chạm trúng tim đen lỗi sai của mình, ngón tay khựng lại, ngẩng phắt mặt nhìn slide ghi chép.",
       "voiceover": {
@@ -381,7 +381,7 @@
           "direction": "Chếch phải 45°",
           "voice_sync": "Ngồi dưới lớp lướt máy, bụng bảo dạ mấy trò này mình biết thừa...",
           "director_note": "Đứng chéo bàn, chúc máy ba mươi lăm độ nhìn xuống khoảng tối dưới mép bàn. Ánh sáng màn hình hắt ngược lên cằm làm nổi bật hành vi lén lút bấm máy trong giờ học.",
-          "img_path": "assets/frames_bai_tap_04/shot1.jpg"
+          "img_path": "assets/frames_bai_tap_04/shot1.webp"
         },
         {
           "shot_id": 2,
@@ -392,7 +392,7 @@
           "direction": "Trực diện ngón tay",
           "voice_sync": "Nghe bóc đúng cái dở của mình tuần trước...",
           "director_note": "Hạ máy sát mép bàn, bắt trọn ngón tay cái đang vuốt màn hình bỗng khựng lại giữa chừng. Một nhịp đứng hình vô cùng đắt giá báo hiệu sự thức tỉnh khi nghe chạm đúng tim đen.",
-          "img_path": "assets/frames_bai_tap_04/shot2.jpg"
+          "img_path": "assets/frames_bai_tap_04/shot2.webp"
         },
         {
           "shot_id": 3,
@@ -403,7 +403,7 @@
           "direction": "Chếch trái nhìn bảng",
           "voice_sync": "...giật thót cả người!",
           "director_note": "Đặt máy thấp ngang ngực hất lên hai mươi lăm độ, bắt trọn ánh mắt ngơ ngác ngẩng lên. Đồng tử giãn ra, vẻ sành sỏi biến mất, thay bằng nét giật mình chân thật nhìn lên bảng.",
-          "img_path": "assets/frames_bai_tap_04/shot3.jpg"
+          "img_path": "assets/frames_bai_tap_04/shot3.webp"
         },
         {
           "shot_id": 4,
@@ -414,7 +414,7 @@
           "direction": "Thẳng đứng chúc xuống",
           "voice_sync": "Thôi cất máy, ghi vội lại...",
           "director_note": "Chĩa máy vuông góc tám mươi độ từ trên xuống trang sổ tay. Bắt nét ngòi bút lia nhanh vẽ hai đường gạch chân dưới từ khóa — nét vẽ vội vàng nhưng thật.",
-          "img_path": "assets/frames_bai_tap_04/shot4.jpg"
+          "img_path": "assets/frames_bai_tap_04/shot4.webp"
         },
         {
           "shot_id": 5,
@@ -425,7 +425,7 @@
           "direction": "Chếch nghiêng 30°",
           "voice_sync": "...không mai về lại đâu vào đấy! 😄",
           "director_note": "Quay ngang tầm mắt, bắt động tác úp màn hình điện thoại bỏ vào túi áo. Bạn diễn gật gù tự cười trừ một cái — sự chuyển biến nhận thức trọn vẹn và rất đỗi đời thường.",
-          "img_path": "assets/frames_bai_tap_04/shot5.jpg"
+          "img_path": "assets/frames_bai_tap_04/shot5.webp"
         }
       ]
     }
